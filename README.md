@@ -1,6 +1,6 @@
 # Beyond prompting
 
-Presentazione di Marco Cremaschi per i tre incontri di Vilnius, novembre 2026: strumenti visivi, apprendimento autodiretto e uso responsabile dell’IA. Slide in inglese, note per chi presenta in italiano.
+Presentazione di Marco Cremaschi per i tre incontri di Vilnius, novembre 2026: strumenti visivi, apprendimento autodiretto e uso responsabile dell’IA. Slide in inglese, copioni del relatore in italiano e in inglese semplice.
 
 Il progetto contiene **44 slide: 41 condivise e 3 schede scientifiche di approfondimento**. I tre percorsi selezionano e ordinano lo stesso materiale, con tempi diversi.
 
@@ -56,7 +56,8 @@ Nel sito compilato la rotta è dopo il cancelletto: per esempio `http://localhos
 In `public/materials/` sono disponibili:
 
 - `Accessible_Deck_EN.txt`: equivalente testuale inglese delle slide.
-- `Presenter_Notes_IT.txt`: note italiane per chi presenta.
+- `Presenter_Notes_IT.txt`: copione italiano completo per tutte le 44 slide.
+- `Presenter_Notes_EN.txt`: copione completo in inglese semplice, con frasi brevi, per tutte le 44 slide.
 - `activity-packet.txt` e `facilitator-guide-it.txt`: consegne inglesi e guida italiana alle attività.
 - `Learning_Path_Workbook_EN.txt`, `Prompt_Bank_EN.txt`, `Evidence_Cards_EN.txt` e `Accessibility_Risk_Checklist_IT.txt`: materiali riutilizzabili per il lavoro in aula.
 - `source_index.csv` e `bibliography.bib`: indice delle fonti e bibliografia.
@@ -65,11 +66,20 @@ Le attività funzionano su carta o testo digitale, senza account e senza una dim
 
 Le alternative testuali e i controlli da tastiera aiutano l’accesso, ma non costituiscono una certificazione di accessibilità. Non è stata svolta una verifica diretta con lettore di schermo: preparare i materiali e gli accomodamenti necessari per il gruppo.
 
+## Copioni del relatore
+
+Le note native di Slidev contengono entrambe le lingue: aprire la vista relatore con **P** e leggere la sezione della lingua scelta. I due file `Presenter_Notes_IT.txt` e `Presenter_Notes_EN.txt` permettono anche di prepararsi e leggere una sola lingua fuori dalla presentazione.
+
+Le sezioni **Copione / Script** riportano le parole da pronunciare, comprese consegne, domande e ripresa del lavoro dopo le attività. Le **Azioni / Presenter actions** specificano quando fermarsi, lasciare lavorare il gruppo e riprendere il paragrafo successivo; non vanno lette ad alta voce. Le aggiunte **Solo Forum / Forum only** sono facoltative e riservate al percorso lungo. I riferimenti tecnici e le cautele originali sono separati dal discorso. I tempi includono il lavoro e le risposte dei partecipanti: non richiedono di parlare per l’intera durata della slide.
+
+Per preparare un singolo evento, usare `Presenter_Notes_Forum_IT.txt` / `_EN.txt`, `Presenter_Notes_University_IT.txt` / `_EN.txt` oppure `Presenter_Notes_Teachers_IT.txt` / `_EN.txt`: contengono solo le slide previste, già nell’ordine del relativo percorso, con i tempi. Le aggiunte Forum sono escluse dai copioni dei due incontri brevi. I copioni completi comprendono anche le tre schede scientifiche facoltative.
+
 ## Modificare i contenuti
 
 Modificare i dati sorgente, poi rigenerare gli output:
 
-- `data/slides.json`: testi, tipi di slide, note italiane, fonti e durata per evento.
+- `data/slides.json`: testi, tipi di slide, riferimenti italiani di preparazione, fonti e durata per evento.
+- `data/speaker-notes.json`: parole esatte da pronunciare in italiano e in inglese semplice, azioni separate e aggiunte facoltative per il Forum.
 - `data/sources.json`: citazioni, URL degli originali, localizzatori e limiti delle fonti.
 - `data/flows.json`: ordine delle slide e configurazione dei tre percorsi.
 

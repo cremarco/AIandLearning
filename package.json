@@ -10,6 +10,7 @@
     "export": "slidev export --output exports/EduForum-2026.pdf --with-toc",
     "generate": "node scripts/generate-slides.mjs && node scripts/generate-companions.mjs",
     "check:static": "node scripts/verify-static.mjs",
+    "check:notes": "node scripts/verify-speaker-notes.mjs",
     "check": "node scripts/verify-deck.mjs"
   },
   "dependencies": {

@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
+import { loadSpeakerNotes, scriptSections } from './speaker-notes.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const require = createRequire(import.meta.url)
@@ -11,6 +12,7 @@ const read = name => fs.readFileSync(path.join(root, name), 'utf8')
 const slides = JSON.parse(read('data/slides.json'))
 const flows = JSON.parse(read('data/flows.json'))
 const sources = JSON.parse(read('data/sources.json'))
+const speakerNotes = loadSpeakerNotes(slides)
 const renderer = read('components/DeckSlide.vue')
 const { descriptor, errors } = parse(renderer)
 assert.equal(errors.length, 0, 'DeckSlide.vue must parse')
@@ -213,7 +215,7 @@ const en = [
   'Generated from data/slides.json, data/flows.json, data/sources.json and the DeckSlide.vue renderer.',
   'The 44 slide sections below preserve the English data, custom cards, results, limits, prompts and prepared examples. Renderer-only content and diagram descriptions are included in linear order. Decorative background images are omitted.',
   'Route timeboxes are expressed as elapsed minutes:seconds. The optional reference cards remain available outside the scheduled routes.',
-  'Original Italian presenter notes and complete original-language source metadata are preserved in Presenter_Notes_IT.txt in the same materials folder.',
+  'Read-aloud scripts are in Presenter_Notes_IT.txt (Italian) and Presenter_Notes_EN.txt (simple English), in the same materials folder. Both languages are also included in Slidev presenter notes.',
   '',
   ...routeOverview('en'),
   'ALL 44 SLIDES — PRESENTATION ORDER (STABLE SLIDE IDS)',
@@ -223,16 +225,30 @@ const it = [
   'BEYOND PROMPTING — NOTE DEL RELATORE',
   '',
   'Generato da data/slides.json, data/flows.json, data/sources.json e dal renderer DeckSlide.vue.',
-  'Le note seguenti riproducono il campo notes senza riscriverlo. Il testo inglese completo delle slide, comprese card personalizzate, risultati e limiti, è in Accessible_Deck_EN.txt nella stessa cartella.',
+  'Il COPIONE contiene le parole esatte da pronunciare in italiano. Le AZIONI sono indicazioni per chi presenta: non leggerle ad alta voce. Leggere una sola lingua; la versione inglese semplice è in Presenter_Notes_EN.txt. Le aggiunte Forum sono facoltative e vanno usate solo nel percorso lungo, entro il tempo della slide.',
+  'Le note originali di preparazione e i limiti delle fonti restano separati dal copione. Il testo inglese delle slide è in Accessible_Deck_EN.txt. Tutti questi file sono nella stessa cartella.',
   'I timebox derivano dai dati correnti; le schede di riferimento non aggiungono tempo alle sequenze. I tempi trascorsi sono espressi in minuti:secondi.',
   '',
   ...routeOverview('it'),
   'NOTE PER TUTTE LE 44 SLIDE — ORDINE DI PRESENTAZIONE (ID STABILI)',
   '',
 ]
+const enNotes = [
+  'BEYOND PROMPTING — PRESENTER SCRIPT IN SIMPLE ENGLISH',
+  '',
+  'SCRIPT sections contain the exact words to say. PRESENTER ACTIONS are stage directions: do not read them aloud. Choose one language; do not read both versions. The Italian script is in Presenter_Notes_IT.txt. Optional Forum additions belong to the longer route and must fit the slide timebox.',
+  'Short sentences and everyday English are used where possible. Keep the study limits in the script. Activity time includes the participants’ work and discussion, not continuous speaking. Do not fill silent working time by reading extra text.',
+  'These scripts follow the slides’ stable IDs. The three routes use different orders, shown below. Reference cards are optional detours, not additional scheduled talks.',
+  'Complete original source metadata and background preparation notes are in Presenter_Notes_IT.txt. The English slide text is in Accessible_Deck_EN.txt.',
+  '',
+  ...routeOverview('en'),
+  'ALL 44 SLIDES — PRESENTATION ORDER (STABLE SLIDE IDS)',
+  '',
+]
 for (const slide of slides) {
   en.push(`SLIDE ${slide.id} — ${slide.title}`, ...timing(slide, 'en'), '', ...content(slide), 'Sources:', ...sourceLines(slide.sources), '', '')
-  it.push(`SLIDE ${slide.id} — ${slide.title}`, ...timing(slide, 'it'), '', 'NOTA DEL RELATORE:', slide.notes, '')
+  it.push(`SLIDE ${slide.id} — ${slide.title}`, ...timing(slide, 'it'), '', ...scriptSections(speakerNotes[slide.id], 'it'), 'RIFERIMENTI DI PREPARAZIONE — NON LEGGERE:', slide.notes, '')
+  enNotes.push(`SLIDE ${slide.id} — ${slide.title}`, ...timing(slide, 'en'), '', ...scriptSections(speakerNotes[slide.id], 'en'), 'SOURCES — FOR REFERENCE:', ...sourceLines(slide.sources), '', '')
   for (const [key, label] of [['supplied', 'Fonte fornita nella demo (testo EN)'], ['prompt', 'Prompt esatto (EN)'], ['response', 'Risposta illustrativa preparata (EN)'], ['quote', 'Esempio preparato (EN)'], ['output', 'Prodotto richiesto (EN)']]) {
     if (slide[key]) it.push(`${label}: ${slide[key]}`, '')
   }
@@ -249,6 +265,7 @@ for (const [id, source] of Object.entries(sources)) {
 }
 const english = `${en.join('\n').trim()}\n`
 const italian = `${it.join('\n').trim()}\n`
+const englishNotes = `${enNotes.join('\n').trim()}\n`
 
 // Validate actual strings, not only the count of headings. Layout-only image,
 // tone and span fields are deliberately excluded from the textual equivalent.
@@ -270,13 +287,46 @@ for (const slide of slides) {
     checkedStrings++
   }
   assert.ok(itNormalized.includes(normalize(slide.notes)), `${slide.id}: missing presenter note`)
+  for (const [language, output] of [['it', italian], ['en', englishNotes]]) {
+    const note = speakerNotes[slide.id]
+    assert.ok(output.includes(note[language].trim()), `${slide.id}: missing exact ${language} script`)
+    for (const cue of note.cues[language]) assert.ok(output.includes(cue), `${slide.id}: missing ${language} stage direction`)
+    if (note.forum_extra) assert.ok(output.includes(note.forum_extra[language].trim()), `${slide.id}: missing ${language} Forum addition`)
+  }
 }
 for (const [id, source] of Object.entries(sources)) for (const value of strings(source)) assert.ok(itNormalized.includes(normalize(value)), `${id}: missing source metadata`)
 assert.equal((english.match(/^SLIDE S\d{2} —/gm) || []).length, 44)
 assert.equal((italian.match(/^SLIDE S\d{2} —/gm) || []).length, 44)
+assert.equal((englishNotes.match(/^SLIDE S\d{2} —/gm) || []).length, 44)
 
 const destination = path.join(root, 'public/materials')
 fs.mkdirSync(destination, { recursive: true })
 fs.writeFileSync(path.join(destination, 'Accessible_Deck_EN.txt'), english)
 fs.writeFileSync(path.join(destination, 'Presenter_Notes_IT.txt'), italian)
-console.log(JSON.stringify({ slides: slides.length, sources: Object.keys(sources).length, checkedEnglishStrings: checkedStrings, routes: flows.map(flow => ({ id: flow.id, minutes: flow.minutes, slides: flow.slideIds.length })), outputs: ['public/materials/Accessible_Deck_EN.txt', 'public/materials/Presenter_Notes_IT.txt'] }, null, 2))
+fs.writeFileSync(path.join(destination, 'Presenter_Notes_EN.txt'), englishNotes)
+const routeOutputs = []
+for (const flow of flows) for (const language of ['it', 'en']) {
+  const it = language === 'it'
+  const name = `Presenter_Notes_${flow.name}_${language.toUpperCase()}.txt`
+  const lines = [
+    `BEYOND PROMPTING — ${flow.name.toUpperCase()} — ${it ? 'COPIONE ITALIANO' : 'SIMPLE ENGLISH SCRIPT'}`,
+    flow.event,
+    `${flow.minutes} ${it ? 'minuti' : 'minutes'}; ${flow.slideIds.length} ${it ? 'slide nel percorso' : 'slides in this route'}`,
+    '',
+    it
+      ? 'Le slide e i copioni seguenti sono già nell’ordine di questo evento. Leggere le sezioni Copione; le Azioni non si pronunciano. I tempi comprendono il lavoro e il confronto in aula. Le schede scientifiche fuori percorso sono nel copione completo Presenter_Notes_IT.txt.'
+      : 'The scripts below already follow this event’s slide order. Read the Script sections. Presenter actions are not spoken. Timeboxes include group work and discussion. Optional study cards are in the complete Presenter_Notes_EN.txt file.',
+    '',
+  ]
+  for (const entry of schedules.get(flow.id)) {
+    const slide = byId.get(entry.id)
+    const note = speakerNotes[entry.id]
+    lines.push(`${entry.index}/${flow.slideIds.length} — SLIDE ${slide.id} — ${slide.title}`, `${clock(entry.start)}–${clock(entry.end)}; ${entry.minutes} min`, '', ...scriptSections(note, language, { includeForumExtra: flow.id === 'forum' }), '')
+    if (it) lines.push('PREPARAZIONE — NON LEGGERE:', slide.notes, '')
+    lines.push(it ? 'FONTI — NON LEGGERE:' : 'SOURCES — FOR REFERENCE, NOT TO READ ALOUD:', ...sourceLines(slide.sources), '')
+    assert.ok(lines.join('\n').includes(note[language].trim()), `${flow.id}/${slide.id}: missing route script`)
+  }
+  fs.writeFileSync(path.join(destination, name), `${lines.join('\n').trim()}\n`)
+  routeOutputs.push(`public/materials/${name}`)
+}
+console.log(JSON.stringify({ slides: slides.length, sources: Object.keys(sources).length, scripts: { italian: slides.length, english: slides.length }, checkedEnglishStrings: checkedStrings, routes: flows.map(flow => ({ id: flow.id, minutes: flow.minutes, slides: flow.slideIds.length })), outputs: ['public/materials/Accessible_Deck_EN.txt', 'public/materials/Presenter_Notes_IT.txt', 'public/materials/Presenter_Notes_EN.txt', ...routeOutputs] }, null, 2))
