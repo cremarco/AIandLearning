@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@source "../components";
+@source "../slides.md";
+
+@plugin "daisyui" {
+  themes: false;
+  exclude: rootscrollgutter;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "eduforum";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #fbf8f1;
+  --color-base-200: #f1ece3;
+  --color-base-300: #ddd5ca;
+  --color-base-content: #252326;
+  --color-primary: #a50036;
+  --color-primary-content: #fffaf7;
+  --color-secondary: #ff6900;
+  --color-secondary-content: #271b13;
+  --color-accent: #00b8db;
+  --color-accent-content: #092b35;
+  --color-neutral: #242429;
+  --color-neutral-content: #fbf8f1;
+  --color-info: #087f99;
+  --color-info-content: #ffffff;
+  --color-success: #25734f;
+  --color-success-content: #ffffff;
+  --color-warning: #f5be55;
+  --color-warning-content: #382b12;
+  --color-error: #b32638;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+:root {
+  --deck-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Inter", "Segoe UI", sans-serif;
+  --deck-ink: #252326;
+  --deck-muted: #625c59;
+  --deck-paper: #fbf8f1;
+  --deck-line: #ddd5ca;
+  --deck-red: #a50036;
+  --deck-orange: #ff6900;
+  --deck-cyan: #00b8db;
+  --deck-radius: 20px;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "eduforum-2026",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "slidev --port 3030",
+    "build": "slidev build --base ./ --router-mode hash",
+    "export": "slidev export --output exports/EduForum-2026.pdf --with-toc",
+    "generate": "node scripts/generate-slides.mjs && node scripts/generate-companions.mjs",
+    "check:static": "node scripts/verify-static.mjs",
+    "check": "node scripts/verify-deck.mjs"
+  },
+  "dependencies": {
+    "@slidev/cli": "52.15.2",
+    "@slidev/theme-apple-basic": "0.25.1",
+    "@slidev/types": "52.15.2",
+    "@tailwindcss/vite": "^4.1.0",
+    "daisyui": "^5.7.50",
+    "tailwindcss": "^4.1.0",
+    "vue": "^3.5.33",
+    "vue-router": "5.4.0"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.61.1"
+  }
+}

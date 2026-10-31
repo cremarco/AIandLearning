@@ -1,0 +1,89 @@
+# Beyond prompting
+
+Presentazione di Marco Cremaschi per i tre incontri di Vilnius, novembre 2026: strumenti visivi, apprendimento autodiretto e uso responsabile dell’IA. Slide in inglese, note per chi presenta in italiano.
+
+Il progetto contiene **43 slide: 40 condivise e 3 schede scientifiche di approfondimento**. I tre percorsi selezionano e ordinano lo stesso materiale, con tempi diversi.
+
+## Avvio e distribuzione
+
+Richiede Node.js 22.12 o successivo e pnpm (versione usata: 11.25.0). Dalla cartella del progetto:
+
+```sh
+pnpm install
+pnpm exec playwright install chromium
+pnpm dev
+```
+
+Aprire [localhost:3030](http://localhost:3030). Per creare il sito statico e il PDF:
+
+```sh
+pnpm build
+pnpm export
+```
+
+Il sito viene generato in `dist/`; il PDF in `exports/EduForum-2026.pdf`. Servire `dist/` tramite un server HTTP statico: aprire `dist/index.html` con `file://` non è supportato.
+
+Il **PDF comprende tutte le 43 slide in ordine statico**: non conserva la selezione dei percorsi, i salti interattivi o il funzionamento dei timer. Per questi usare la versione web.
+
+## GitHub Pages
+
+La versione online è pubblicata su [cremarco.github.io/EduForum](https://cremarco.github.io/EduForum/). Il workflow [github-pages.yml](.github/workflows/github-pages.yml) ricrea e pubblica il sito a ogni push su `main`, oppure può essere avviato manualmente da GitHub Actions.
+
+Il workflow installa le versioni bloccate dal lockfile, rigenera note e alternative testuali, adatta il percorso base alla configurazione Pages e pubblica solo `dist/`. La navigazione usa le rotte hash per conservare i percorsi anche dopo un ricaricamento della pagina. PDF e ZIP locali non sono inclusi nel repository o nel sito.
+
+Configurazione di riferimento: [workflow personalizzati per GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## Percorsi e navigazione
+
+Scegliere l’evento dai pulsanti della copertina, oppure aprire un indirizzo diretto:
+
+| Percorso | Durata prevista | Slide nel percorso | URL durante lo sviluppo |
+| --- | --- | --- | --- |
+| Forum | 90 minuti | 40 | `http://localhost:3030/1?flow=forum` |
+| University | 48 minuti | 33 | `http://localhost:3030/1?flow=university` |
+| Teachers | 50 minuti | 32 | `http://localhost:3030/1?flow=teachers` |
+
+Nel sito compilato la rotta è dopo il cancelletto: per esempio `http://localhost:8080/#/1?flow=forum`, adattando host e cartella al proprio server. Senza `flow`, o scegliendo **All slides**, si esplorano tutte le 43 slide. Le durate sono tempi di facilitazione previsti, da adattare al gruppo.
+
+- **Tastiera:** frecce sinistra/destra o Pag↑/Pag↓ seguono il percorso selezionato; Spazio avanza quando il focus non è su un controllo. Tab raggiunge pulsanti e link; Invio/Spazio attiva il pulsante selezionato.
+- **Controlli in basso:** compaiono al passaggio del puntatore o quando ricevono il focus. Offrono Routes, Agenda, stato del percorso, All slides, indietro e avanti.
+- **Agenda:** le quattro card aprono l’inizio del relativo capitolo nel percorso attivo.
+- **Schede scientifiche:** le tre schede finali si aprono dall’attività; **Return to the activity** riporta alla slide S33.
+- **Timer:** partono solo con Start. Pause sospende, Reset ripristina il tempo iniziale e +1 min lo estende. Uscire dalla slide mette il timer in pausa. Il tempo è flessibile e non misura la velocità dei partecipanti.
+
+## Materiali e partecipazione
+
+In `public/materials/` sono disponibili:
+
+- `Accessible_Deck_EN.txt`: equivalente testuale inglese delle slide.
+- `Presenter_Notes_IT.txt`: note italiane per chi presenta.
+- `activity-packet.txt` e `facilitator-guide-it.txt`: consegne inglesi e guida italiana alle attività.
+- `Learning_Path_Workbook_EN.txt`, `Prompt_Bank_EN.txt`, `Evidence_Cards_EN.txt` e `Accessibility_Risk_Checklist_IT.txt`: materiali riutilizzabili per il lavoro in aula.
+- `source_index.csv` e `bibliography.bib`: indice delle fonti e bibliografia.
+
+Le attività funzionano su carta o testo digitale, senza account e senza una dimostrazione live di IA. Un compagno può svolgere il ruolo di coach. Le risposte possono essere orali, scritte o dettate; lettori di schermo, sintesi vocale, traduzione e accomodamenti restano disponibili anche nelle verifiche del ragionamento indipendente.
+
+Le alternative testuali e i controlli da tastiera aiutano l’accesso, ma non costituiscono una certificazione di accessibilità. Non è stata svolta una verifica diretta con lettore di schermo: preparare i materiali e gli accomodamenti necessari per il gruppo.
+
+## Modificare i contenuti
+
+Modificare i dati sorgente, poi rigenerare gli output:
+
+- `data/slides.json`: testi, tipi di slide, note italiane, fonti e durata per evento.
+- `data/sources.json`: citazioni, URL degli originali, localizzatori e limiti delle fonti.
+- `data/flows.json`: ordine delle slide e configurazione dei tre percorsi.
+
+```sh
+node scripts/generate-slides.mjs
+node scripts/generate-companions.mjs
+```
+
+Il primo comando aggiorna `slides.md`, comprese le note e le finestre temporali; il secondo aggiorna gli equivalenti testuali delle slide e delle note. Evitare modifiche manuali a questi file generati. Dopo le modifiche ricreare sito e PDF con `pnpm build` e `pnpm export`.
+
+Le citazioni sotto le slide aprono le fonti originali; le note conservano gli ID e i riferimenti estesi. La S39 collega il dossier di ricerca e i materiali; nelle sue note è presente anche l’archivio Drive. Conservare i limiti di ogni studio e distinguere risultati sperimentali, linee guida e dichiarazioni dei fornitori. Le attività sono proposte didattiche originali informate dalle fonti, non un metodo integrato già validato.
+
+## Aspetto e immagini
+
+Il riferimento è la precedente presentazione AIPP: fondo avorio, tipografia di sistema con SF Pro/Helvetica Neue, accenti bordeaux `#a50036`, arancio `#ff6900` e ciano `#00b8db`, forme 3D e card arrotondate. Tema e layout sono in `styles/`, le card in `components/BentoCard.vue`.
+
+`public/images/` contiene sei nuove immagini generate con il tool integrato image_gen e una grafica ripresa dal progetto AIPP (`profile-aipp.png`). Prompt, provenienza e descrizioni alternative proposte sono in [image-prompts.md](image-prompts.md). Le persone raffigurate nelle nuove immagini sono sintetiche e non rappresentano Marco o partecipanti reali.
