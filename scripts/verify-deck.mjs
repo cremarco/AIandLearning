@@ -5,14 +5,21 @@ import assert from 'node:assert/strict'
 const slides = JSON.parse(readFileSync('data/slides.json'))
 const flows = JSON.parse(readFileSync('data/flows.json'))
 const sources = JSON.parse(readFileSync('data/sources.json'))
-assert.equal(slides.length, 43)
-assert.equal(new Set(slides.map(s => s.id)).size, 43)
+assert.equal(slides.length, 44)
+assert.equal(new Set(slides.map(s => s.id)).size, 44)
+const slidePages = new Map(slides.map((slide, index) => [slide.id, index + 1]))
+function pageFor(id) {
+  assert(slidePages.has(id), `Unknown slide ID: ${id}`)
+  return slidePages.get(id)
+}
+assert.equal(pageFor('S44'), 3, 'Whattadata must follow the speaker profile')
 for (const s of slides) {
   assert(s.notes && s.title && s.body)
   for (const id of s.sources) assert(sources[id], `Missing source ${id}`)
 }
 for (const f of flows) {
   assert.equal(new Set(f.slideIds).size, f.slideIds.length)
+  assert.deepEqual(f.slideIds.slice(0, 4), ['S01', 'S02', 'S44', 'S03'])
   assert.equal(f.slideIds.reduce((n, id) => n + slides.find(s => s.id === id).duration[f.id], 0), f.minutes)
 }
 mkdirSync('qa/slides', { recursive: true })
@@ -62,7 +69,11 @@ try {
     await page.goto(`${base}/1`, { waitUntil: 'networkidle' })
     await page.getByRole('button', { name: `${f.name}, ${f.minutes} minutes`, exact: true }).click()
     await visible('S02')
-    for (const id of f.slideIds.slice(2)) {
+    await page.keyboard.press('ArrowRight')
+    await visible('S44')
+    await page.keyboard.press('ArrowRight')
+    await visible('S03')
+    for (const id of f.slideIds.slice(4)) {
       await page.keyboard.press('ArrowRight')
       await visible(id)
     }
@@ -73,7 +84,7 @@ try {
     await visible(f.slideIds.at(-1))
     flowResults.push({ id: f.id, slides: f.slideIds.length, minutes: f.minutes, navigation: 'passed', reload: 'passed' })
   }
-  await page.goto(`${base}/34?flow=teachers`, { waitUntil: 'networkidle' })
+  await page.goto(`${base}/${pageFor('S34')}?flow=teachers`, { waitUntil: 'networkidle' })
   await visible('S34')
   const timer = page.locator('.deck-slide[data-slide-id="S34"] [aria-label="Activity timer"]')
   const before = await timer.getByRole('timer').innerText()
@@ -92,6 +103,8 @@ try {
   const navigation = page.getByRole('navigation', { name: 'Presentation navigation', exact: true })
   await navigation.getByRole('combobox', { name: 'Choose event route' }).selectOption('university')
   await visible('S02')
+  await page.keyboard.press('ArrowRight')
+  await visible('S44')
   await page.keyboard.press('ArrowRight')
   await visible('S03')
   const mobile = []
@@ -114,12 +127,14 @@ try {
       await controls.getByRole('combobox', { name: 'Choose event route' }).selectOption(flow.id)
       await touch.locator('.slide-S02:visible').waitFor()
       await touch.keyboard.press('ArrowRight')
+      await touch.locator('.slide-S44:visible').waitFor()
+      await touch.keyboard.press('ArrowRight')
       await touch.locator('.slide-S03:visible').waitFor()
     }
-    for (const number of [9, 34]) {
-      await touch.goto(`${base}/${number}?flow=teachers`, { waitUntil: 'networkidle' })
-      await touch.locator(`.slide-S${String(number).padStart(2,'0')}:visible`).waitFor()
-      await touch.screenshot({ path: `qa/mobile/${orientation}-S${String(number).padStart(2,'0')}.png`, animations: 'disabled' })
+    for (const id of ['S44', 'S09', 'S34']) {
+      await touch.goto(`${base}/${pageFor(id)}?flow=teachers`, { waitUntil: 'networkidle' })
+      await touch.locator(`.slide-${id}:visible`).waitFor()
+      await touch.screenshot({ path: `qa/mobile/${orientation}-${id}.png`, animations: 'disabled' })
     }
     mobile.push({ orientation, viewport, navigation: 'passed', stage: 'unobscured', textAlternative: 'available' })
   }

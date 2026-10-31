@@ -99,3 +99,10 @@ Use case: stylized-concept / productivity-visual. Asset type: reusable image bac
 ```text
 Use case: stylized-concept / productivity-visual. Asset type: reusable image background for a polished university learning presentation, wide landscape 16:9. Shared art direction: sophisticated restrained premium photographic/3D editorial style, deep near-black charcoal background, burgundy #a50036, controlled burnt-orange #ff6900 and cyan #00b8db accents, realistic matte and glass materials, tactile detail, soft cinematic side light, no excessive glow. Design for bento crops: one clear subject with separation, uncluttered margins, safe framing so the subject survives a centered crop; restrained dark negative space for slide overlays. No lettering, no numbers, no text, no logos, no watermarks, no interface screenshots. Not a diagram, no claims, no robots, no alarm imagery. Primary request: a quiet sculptural metaphor for responsible choices: a finely balanced dark metal horizontal beam supported on a central translucent glass fulcrum, with a matte burgundy sphere at one side and a small stacked pair of warm-orange and muted-cyan glass discs on the other. The beam is level and physically plausible, precise and calm. High-end museum-object photograph/realistic 3D still life on charcoal background, soft grazing light revealing material textures and stable balance. Single centered subject, cropped safely with room around it, elegant restraint. No justice-scale icon, no courtroom, no robot, no warning signs, no padlocks, no text, no human figure.
 ```
+
+## Whattadata: logo ufficiale
+
+- File: `public/images/whattadata.svg`.
+- Fonte: https://whattadata.it/img/logo/whattadata.svg (consultata il 31 ottobre 2026).
+- Marchio originale, utilizzato per identificare l’organizzazione del relatore; non generato o modificato.
+- Testo alternativo: “Whattadata logo”.

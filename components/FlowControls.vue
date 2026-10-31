@@ -30,7 +30,7 @@ async function chooseRoute(event: Event) {
         {{ option.name }} · {{ option.minutes }} min
       </option>
     </select>
-    <button type="button" class="btn btn-ghost btn-sm flow-agenda" aria-label="Open session agenda" title="Open session agenda" @click.stop="flow.go(3)">Agenda</button>
+    <button type="button" class="btn btn-ghost btn-sm flow-agenda" aria-label="Open session agenda" title="Open session agenda" @click.stop="flow.goId('S03')">Agenda</button>
     <span class="flow-status">
       <span class="flow-name">{{ flow.selected.value?.name || 'All slides' }}</span>
       <span aria-hidden="true"> · </span>{{ flow.progress.value }}

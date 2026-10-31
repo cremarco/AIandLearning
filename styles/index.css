@@ -23,6 +23,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .slidev-layout .deck-slide a:hover { color: var(--deck-ink); }
 .slidev-layout .deck-slide .lead { max-width: 1050px; font-size: 25px; line-height: 1.35; color: var(--deck-muted); }
 .slide-heading { flex-shrink: 0; }
+.company-heading { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.company-logo { display: block; width: 88px; height: 88px; flex-shrink: 0; }
 .bento-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: minmax(0,1fr); gap: 20px; min-height: 0; flex: 1; }
 .bento-grid.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .bento-grid.asymmetric { grid-template-columns: 1.05fr 1fr; grid-template-rows: repeat(2,minmax(0,1fr)); }

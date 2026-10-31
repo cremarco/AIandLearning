@@ -31,14 +31,15 @@ const report = {
   consoleErrors: [],
 }
 
-assert.equal(slides.length, 43, 'Expected 43 physical slides')
-assert.equal(index.size, 43, 'Slide IDs must be unique')
+assert.equal(slides.length, 44, 'Expected 44 physical slides')
+assert.equal(index.size, 44, 'Slide IDs must be unique')
+assert.equal(index.get('S44')?.page, 3, 'Whattadata must follow the speaker profile')
 assert.equal(flows.length, 3, 'Expected three event flows')
 for (const flow of flows) {
   assert(Object.hasOwn(expectedMinutes, flow.id), 'Unexpected flow: ' + flow.id)
   assert.equal(new Set(flow.slideIds).size, flow.slideIds.length, 'Repeated flow slide')
   assert(flow.slideIds.every(id => index.has(id)), 'Unknown slide in ' + flow.id)
-  assert.deepEqual(flow.slideIds.slice(0, 3), ['S01', 'S02', 'S03'])
+  assert.deepEqual(flow.slideIds.slice(0, 4), ['S01', 'S02', 'S44', 'S03'])
   const total = flow.slideIds.reduce((sum, id) => sum + index.get(id).duration[flow.id], 0)
   assert.equal(total, flow.minutes, 'Data total does not match flow minutes')
   assert.equal(total, expectedMinutes[flow.id], 'Unexpected planned duration')
@@ -177,8 +178,12 @@ try {
     await checkVisibleImages('S02')
 
     await page.keyboard.press('ArrowRight')
-    await visible(flow.slideIds[2])
-    assert.equal(flowInURL(page.url()), flow.id, 'Arrow navigation lost flow')
+    await visible('S44')
+    assert.equal(flowInURL(page.url()), flow.id, 'Whattadata navigation lost flow')
+    await checkVisibleImages('S44')
+    await page.keyboard.press('ArrowRight')
+    await visible('S03')
+    assert.equal(flowInURL(page.url()), flow.id, 'Agenda navigation lost flow')
 
     const [from, to] = distinctivePair(flow)
     await navigate(slideURL(profileURL, from, flow.id), from)

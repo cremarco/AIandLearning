@@ -32,9 +32,9 @@ function openChapter(index: number) {
   if (page) flow.go(page)
 }
 const dataset = [
-  { number: 41, title: 'School mathematics', label: 'Bastani et al. · 2025' },
-  { number: 42, title: 'Physics tutor', label: 'Kestin et al. · 2025' },
-  { number: 43, title: 'Writing and transfer', label: 'Fan et al. · 2025' },
+  { id: 'S41', title: 'School mathematics', label: 'Bastani et al. · 2025' },
+  { id: 'S42', title: 'Physics tutor', label: 'Kestin et al. · 2025' },
+  { id: 'S43', title: 'Writing and transfer', label: 'Fan et al. · 2025' },
 ]
 </script>
 
@@ -52,8 +52,9 @@ const dataset = [
     </template>
 
     <template v-else>
-      <header class="slide-heading">
+      <header class="slide-heading" :class="{ 'company-heading': s.type === 'company' }">
         <h1>{{ s.title }}</h1>
+        <img v-if="s.type === 'company'" class="company-logo" :src="image('whattadata.svg')" alt="Whattadata logo" />
       </header>
       <p v-if="lead" class="lead">{{ lead }}</p>
 
@@ -115,7 +116,7 @@ const dataset = [
               <li v-for="line in s.body" :key="line">{{ line }}</li>
             </ol>
             <div v-if="s.id === 'S33'" class="evidence-buttons">
-              <button v-for="card in dataset" :key="card.number" class="btn btn-sm" @click.stop="flow.go(card.number)">{{ card.title }} <DeckIcon name="arrow-up-right" :size="16" /></button>
+              <button v-for="card in dataset" :key="card.id" class="btn btn-sm" @click.stop="flow.goId(card.id)">{{ card.title }} <DeckIcon name="arrow-up-right" :size="16" /></button>
               <a class="material-link" :href="file('Evidence_Cards_EN.txt')" target="_blank" rel="noopener">Printable study cards <DeckIcon name="arrow-up-right" :size="16" /></a>
             </div>
             <p v-if="s.takeaway" class="takeaway">{{ s.takeaway }}</p>
@@ -175,10 +176,11 @@ const dataset = [
         <div class="bento-grid evidence-card-grid">
           <BentoCard v-for="(line, i) in s.body" :key="line" :title="['Design','Participants and task','Finding','Limit'][i]" :body="line" :image="['evidence.png','learning.png','visual-maps.png','responsibility.png'][i]" />
         </div>
-        <button class="btn return-button" @click.stop="flow.go(33)"><DeckIcon name="arrow-left" /> Return to the activity</button>
+        <button class="btn return-button" @click.stop="flow.goId('S33')"><DeckIcon name="arrow-left" /> Return to the activity</button>
       </template>
 
       <template v-else>
+        <p v-if="s.type === 'company'" class="lead">{{ s.message }}</p>
         <div class="bento-grid" :class="{ three: cards.length === 3 }">
           <BentoCard v-for="(card, i) in cards" :key="i" v-bind="card" />
         </div>

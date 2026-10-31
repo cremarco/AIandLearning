@@ -19,10 +19,10 @@ const normalize = value => String(value ?? '').replace(/\s+/g, ' ').trim()
 const textKeys = ['title', 'message', 'body', 'guardrails', 'context', 'results', 'result_note', 'finding', 'limit', 'prompt', 'response', 'supplied', 'quote', 'takeaway', 'output']
 const knownKeys = new Set([...textKeys, 'id', 'number', 'type', 'kind', 'section', 'notes', 'sources', 'duration', 'cards'])
 
-assert.equal(slides.length, 43, 'Expected all 43 slides')
-assert.equal(new Set(slides.map(s => s.id)).size, 43, 'Duplicate slide IDs')
+assert.equal(slides.length, 44, 'Expected all 44 slides')
+assert.equal(new Set(slides.map(s => s.id)).size, 44, 'Duplicate slide IDs')
 slides.forEach((s, index) => {
-  assert.equal(s.id, `S${String(index + 1).padStart(2, '0')}`)
+  assert.match(s.id, /^S\d{2}$/, 'Slide IDs must be stable identifiers')
   assert.equal(s.number, index + 1)
   for (const key of Object.keys(s)) assert.ok(knownKeys.has(key), `Unmapped slide field: ${key}`)
   for (const id of s.sources) assert.ok(sources[id], `${s.id}: unresolved source ${id}`)
@@ -101,8 +101,8 @@ function literalBlocks(node, slide) {
       let target = attr(element, 'href')
       const file = bound(element, 'href').match(/^file\('([^']+)'\)$/)
       if (file) target = `${file[1]} (same materials folder)`
-      const go = directive(element, 'on')?.exp?.content?.match(/flow\.go\((\d+)\)/)
-      if (go) target = `S${String(go[1]).padStart(2, '0')}`
+      const go = directive(element, 'on')?.exp?.content?.match(/flow\.goId\('([^']+)'\)/)
+      if (go) target = go[1]
       if (text) blocks.push(`${text}${target ? `: ${target}` : ''}`)
       return
     }
@@ -117,7 +117,7 @@ const chapterScript = renderer.match(/const chapters = \[([\s\S]*?)\n\]/)?.[1]
 const datasetScript = renderer.match(/const dataset = \[([\s\S]*?)\n\]/)?.[1]
 assert.ok(chapterScript && datasetScript, 'Renderer chapter/card navigation changed')
 const chapters = [...chapterScript.matchAll(/title: '([^']+)'/g)].map(match => match[1])
-const dataset = [...datasetScript.matchAll(/number: (\d+), title: '([^']+)', label: '([^']+)'/g)].map(match => ({ id: `S${match[1]}`, title: match[2], label: match[3] }))
+const dataset = [...datasetScript.matchAll(/id: '(S\d+)', title: '([^']+)', label: '([^']+)'/g)].map(match => ({ id: match[1], title: match[2], label: match[3] }))
 assert.equal(chapters.length, 4)
 assert.equal(dataset.length, 3)
 const evidenceTitles = ['Design', 'Participants and task', 'Finding', 'Limit']
@@ -211,12 +211,12 @@ const en = [
   'Visual tools for self-directed learning with artificial intelligence',
   '',
   'Generated from data/slides.json, data/flows.json, data/sources.json and the DeckSlide.vue renderer.',
-  'The 43 slide sections below preserve the English data, custom cards, results, limits, prompts and prepared examples. Renderer-only content and diagram descriptions are included in linear order. Decorative background images are omitted.',
+  'The 44 slide sections below preserve the English data, custom cards, results, limits, prompts and prepared examples. Renderer-only content and diagram descriptions are included in linear order. Decorative background images are omitted.',
   'Route timeboxes are expressed as elapsed minutes:seconds. The optional reference cards remain available outside the scheduled routes.',
   'Original Italian presenter notes and complete original-language source metadata are preserved in Presenter_Notes_IT.txt in the same materials folder.',
   '',
   ...routeOverview('en'),
-  'ALL 43 SLIDES — NUMERICAL REFERENCE ORDER',
+  'ALL 44 SLIDES — PRESENTATION ORDER (STABLE SLIDE IDS)',
   '',
 ]
 const it = [
@@ -227,7 +227,7 @@ const it = [
   'I timebox derivano dai dati correnti; le schede di riferimento non aggiungono tempo alle sequenze. I tempi trascorsi sono espressi in minuti:secondi.',
   '',
   ...routeOverview('it'),
-  'NOTE PER TUTTE LE 43 SLIDE — ORDINE NUMERICO DI RIFERIMENTO',
+  'NOTE PER TUTTE LE 44 SLIDE — ORDINE DI PRESENTAZIONE (ID STABILI)',
   '',
 ]
 for (const slide of slides) {
@@ -272,8 +272,8 @@ for (const slide of slides) {
   assert.ok(itNormalized.includes(normalize(slide.notes)), `${slide.id}: missing presenter note`)
 }
 for (const [id, source] of Object.entries(sources)) for (const value of strings(source)) assert.ok(itNormalized.includes(normalize(value)), `${id}: missing source metadata`)
-assert.equal((english.match(/^SLIDE S\d{2} —/gm) || []).length, 43)
-assert.equal((italian.match(/^SLIDE S\d{2} —/gm) || []).length, 43)
+assert.equal((english.match(/^SLIDE S\d{2} —/gm) || []).length, 44)
+assert.equal((italian.match(/^SLIDE S\d{2} —/gm) || []).length, 44)
 
 const destination = path.join(root, 'public/materials')
 fs.mkdirSync(destination, { recursive: true })

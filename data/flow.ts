@@ -27,7 +27,12 @@ export function useDeckFlow() {
 
   async function choose(id: string, restart = true) {
     await router.replace({ query: { ...router.currentRoute.value.query, flow: id === 'all' ? undefined : id } })
-    if (restart) await go(2)
+    if (restart) await goId('S02')
+  }
+
+  async function goId(id: string) {
+    const index = slides.findIndex(slide => slide.id === id)
+    if (index >= 0) await go(index + 1)
   }
 
   async function move(direction: number) {
@@ -46,5 +51,5 @@ export function useDeckFlow() {
     if (match) await go(match)
   }
 
-  return { nav, flowId, selected, path, position, progress, currentSlide, minutes, choose, go, move, chapter }
+  return { nav, flowId, selected, path, position, progress, currentSlide, minutes, choose, go, goId, move, chapter }
 }
