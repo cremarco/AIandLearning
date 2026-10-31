@@ -107,6 +107,7 @@ const browser = await chromium.launch({ headless: true })
 const context = await browser.newContext({
   viewport: { width: 1280, height: 720 },
   deviceScaleFactor: 1,
+  colorScheme: 'light',
 })
 const page = await context.newPage()
 page.setDefaultTimeout(12_000)
@@ -156,6 +157,8 @@ let profileTemplate
 try {
   // Root entry is deliberately used; Slidev production establishes its real route.
   await navigate(entry.href, 'S01')
+  assert(await page.locator('html').evaluate(element => element.classList.contains('dark')), 'Presentation must default to dark independently of system appearance')
+  report.theme = 'dark'
   report.entryURL = page.url()
   await checkVisibleImages('S01')
 
@@ -198,12 +201,12 @@ try {
     // Explicit evidence-card detour and return in every event flow.
     await navigate(slideURL(profileURL, 'S33', flow.id), 'S33')
     const activity = await visible('S33')
-    await activity.getByRole('button', { name: 'School mathematics ↗', exact: true }).click()
+    await activity.getByRole('button', { name: 'School mathematics', exact: true }).click()
     await visible('S41')
     assert.equal(flowInURL(page.url()), flow.id, 'Evidence-card detour lost event flow')
     await checkVisibleImages('S41')
     const card = await visible('S41')
-    await card.getByRole('button', { name: '← Return to the activity', exact: true }).click()
+    await card.getByRole('button', { name: 'Return to the activity', exact: true }).click()
     await visible('S33')
     assert.equal(flowInURL(page.url()), flow.id, 'Return to activity lost flow')
     await page.keyboard.press('ArrowRight')

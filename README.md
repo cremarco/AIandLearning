@@ -46,7 +46,7 @@ Scegliere l’evento dai pulsanti della copertina, oppure aprire un indirizzo di
 Nel sito compilato la rotta è dopo il cancelletto: per esempio `http://localhost:8080/#/1?flow=forum`, adattando host e cartella al proprio server. Senza `flow`, o scegliendo **All slides**, si esplorano tutte le 43 slide. Le durate sono tempi di facilitazione previsti, da adattare al gruppo.
 
 - **Tastiera:** frecce sinistra/destra o Pag↑/Pag↓ seguono il percorso selezionato; Spazio avanza quando il focus non è su un controllo. Tab raggiunge pulsanti e link; Invio/Spazio attiva il pulsante selezionato.
-- **Controlli in basso:** compaiono al passaggio del puntatore o quando ricevono il focus. Offrono Routes, Agenda, stato del percorso, All slides, indietro e avanti.
+- **Controlli in basso:** compaiono al passaggio del puntatore o quando ricevono il focus. Offrono un selettore del percorso (incluso All slides), Agenda, stato del percorso, indietro e avanti. Sui dispositivi touch restano visibili sotto la slide e includono Text per aprire la versione testuale.
 - **Agenda:** le quattro card aprono l’inizio del relativo capitolo nel percorso attivo.
 - **Schede scientifiche:** le tre schede finali si aprono dall’attività; **Return to the activity** riporta alla slide S33.
 - **Timer:** partono solo con Start. Pause sospende, Reset ripristina il tempo iniziale e +1 min lo estende. Uscire dalla slide mette il timer in pausa. Il tempo è flessibile e non misura la velocità dei partecipanti.
@@ -84,6 +84,6 @@ Le citazioni sotto le slide aprono le fonti originali; le note conservano gli ID
 
 ## Aspetto e immagini
 
-Il riferimento è la precedente presentazione AIPP: fondo avorio, tipografia di sistema con SF Pro/Helvetica Neue, accenti bordeaux `#a50036`, arancio `#ff6900` e ciano `#00b8db`, forme 3D e card arrotondate. Tema e layout sono in `styles/`, le card in `components/BentoCard.vue`.
+Il tema predefinito è scuro, anche se il sistema operativo è chiaro. Il riferimento resta la presentazione AIPP: tipografia di sistema con SF Pro/Helvetica Neue, forme 3D, card bento e palette bordeaux/arancio/ciano. Il fondo carbone caldo e il testo avorio usano token condivisi; link e focus adottano varianti più luminose degli accenti per preservare il contrasto. Tema e layout sono in `styles/`, le card in `components/BentoCard.vue`.
 
-`public/images/` contiene sei nuove immagini generate con il tool integrato image_gen e una grafica ripresa dal progetto AIPP (`profile-aipp.png`). Prompt, provenienza e descrizioni alternative proposte sono in [image-prompts.md](image-prompts.md). Le persone raffigurate nelle nuove immagini sono sintetiche e non rappresentano Marco o partecipanti reali.
+`public/images/` contiene sette asset generati con il tool integrato image_gen (compresa la variante di copertina scura già generata) e una grafica di riferimento ripresa dal progetto AIPP (`profile-aipp.png`). Prompt, provenienza e descrizioni alternative proposte sono in [image-prompts.md](image-prompts.md). Le persone raffigurate nelle nuove immagini sono sintetiche e non rappresentano Marco o partecipanti reali.

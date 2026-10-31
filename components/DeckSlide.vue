@@ -6,6 +6,7 @@ import BentoCard from './BentoCard.vue'
 import ActivityTimer from './ActivityTimer.vue'
 import FlowPicker from './FlowPicker.vue'
 import SourceLine from './SourceLine.vue'
+import DeckIcon from './DeckIcon.vue'
 
 const props = defineProps<{ id: string }>()
 const s = computed<any>(() => slides.find(slide => slide.id === props.id))
@@ -18,7 +19,6 @@ const lead = computed(() => s.value.type === 'study' ? s.value.finding : ['activ
 const cards = computed(() => s.value.cards || s.value.body.map((body: string, i: number) => ({
   title: body,
   image: ['learning.png', 'visual-maps.png', 'evidence.png', 'inclusion.png'][i % 4],
-  label: String(i + 1).padStart(2, '0'),
 })))
 const chapters = [
   { title: 'Learning decisions and evidence', section: 'evidence', image: 'evidence.png', number: '01' },
@@ -41,21 +41,18 @@ const dataset = [
 <template>
   <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`]" :data-slide-id="s.id">
     <template v-if="s.type === 'cover'">
-      <img class="cover-hero" :src="image('hero-learning.png')" alt="" aria-hidden="true" />
+      <img class="cover-hero" :src="image('hero-dark.png')" alt="" aria-hidden="true" />
       <div class="cover-copy">
-        <p class="cover-meta">Vilnius · November 2026</p>
         <h1 class="cover-title">Beyond<br /><span>prompting</span></h1>
         <p class="cover-subtitle">{{ s.message }}</p>
         <p class="cover-author">Marco Cremaschi<br /><span>University of Milano-Bicocca · Whattadata</span></p>
         <FlowPicker />
+        <p class="cover-meta">Vilnius · November 2026</p>
       </div>
     </template>
 
     <template v-else>
       <header class="slide-heading">
-        <p v-if="s.type === 'activity'" class="eyebrow">Classroom activity · {{ minutes || 'Optional' }}{{ minutes ? ' min' : '' }}</p>
-        <p v-else-if="s.type === 'study'" class="eyebrow">Evidence · {{ s.sources[0] === 'B23' ? 'Visual analytics' : 'Learning with AI' }}</p>
-        <p v-else-if="s.type === 'evidence_card'" class="eyebrow">Study card · optional reference</p>
         <h1>{{ s.title }}</h1>
       </header>
       <p v-if="lead" class="lead">{{ lead }}</p>
@@ -68,15 +65,15 @@ const dataset = [
             <p class="profile-perspective">Design and evaluation<br />of intelligent systems</p>
             <p class="lead">A technological and interdisciplinary perspective</p>
           </div>
-          <img class="profile-art" :src="image('profile-aipp.png')" alt="" aria-hidden="true" />
+          <img class="profile-art" :src="image('hero-dark.png')" alt="" aria-hidden="true" />
         </div>
       </template>
 
       <template v-else-if="s.type === 'agenda'">
         <p class="lead">{{ flow.selected.value?.focus || 'Choose an event on the opening slide, or explore the complete deck' }}</p>
         <div class="bento-grid agenda-bento">
-          <button v-for="(chapter, i) in chapters" :key="chapter.title" class="agenda-button" @click.stop="openChapter(i)">
-            <BentoCard :title="chapter.title" :label="chapter.number" :image="chapter.image" />
+          <button v-for="(chapter, i) in chapters" :key="chapter.title" class="agenda-button" :aria-label="`Open chapter: ${chapter.title}`" @click.stop="openChapter(i)">
+            <BentoCard :title="chapter.title" :label="chapter.number" :image="chapter.image"><DeckIcon class="agenda-arrow" name="arrow-up-right" :size="26" /></BentoCard>
           </button>
         </div>
         <p class="agenda-access">Paper or digital text · no account required · access supports stay available</p>
@@ -118,9 +115,10 @@ const dataset = [
               <li v-for="line in s.body" :key="line">{{ line }}</li>
             </ol>
             <div v-if="s.id === 'S33'" class="evidence-buttons">
-              <button v-for="card in dataset" :key="card.number" class="btn btn-sm" @click.stop="flow.go(card.number)">{{ card.title }} ↗</button>
-              <a class="material-link" :href="file('Evidence_Cards_EN.txt')" target="_blank" rel="noopener">Printable study cards</a>
+              <button v-for="card in dataset" :key="card.number" class="btn btn-sm" @click.stop="flow.go(card.number)">{{ card.title }} <DeckIcon name="arrow-up-right" :size="16" /></button>
+              <a class="material-link" :href="file('Evidence_Cards_EN.txt')" target="_blank" rel="noopener">Printable study cards <DeckIcon name="arrow-up-right" :size="16" /></a>
             </div>
+            <p v-if="s.takeaway" class="takeaway">{{ s.takeaway }}</p>
           </div>
           <aside class="activity-output">
             <h2>Your output</h2>
@@ -160,10 +158,10 @@ const dataset = [
           <BentoCard v-for="(line, i) in s.body" :key="line" :title="line" :image="['evidence.png','visual-maps.png','inclusion.png'][i]" />
         </div>
         <nav class="resource-links resource-row" aria-label="Workshop resources">
-          <a href="https://docs.google.com/document/d/1bga8afM8CtVytu2HqBHhL73TU8YoV4IkxsyA7AZa4cY/edit" target="_blank" rel="noopener">Research dossier ↗</a>
-          <a :href="file('activity-packet.txt')" target="_blank" rel="noopener">Classroom packet ↗</a>
-          <a :href="file('Prompt_Bank_EN.txt')" target="_blank" rel="noopener">Prompt bank ↗</a>
-          <a :href="file('Accessible_Deck_EN.txt')" target="_blank" rel="noopener">Accessible text ↗</a>
+          <a href="https://docs.google.com/document/d/1bga8afM8CtVytu2HqBHhL73TU8YoV4IkxsyA7AZa4cY/edit" target="_blank" rel="noopener">Research dossier <DeckIcon name="arrow-up-right" /></a>
+          <a :href="file('activity-packet.txt')" target="_blank" rel="noopener">Classroom packet <DeckIcon name="arrow-up-right" /></a>
+          <a :href="file('Prompt_Bank_EN.txt')" target="_blank" rel="noopener">Prompt bank <DeckIcon name="arrow-up-right" /></a>
+          <a :href="file('Accessible_Deck_EN.txt')" target="_blank" rel="noopener">Accessible text <DeckIcon name="arrow-up-right" /></a>
         </nav>
       </template>
 
@@ -177,7 +175,7 @@ const dataset = [
         <div class="bento-grid evidence-card-grid">
           <BentoCard v-for="(line, i) in s.body" :key="line" :title="['Design','Participants and task','Finding','Limit'][i]" :body="line" :image="['evidence.png','learning.png','visual-maps.png','responsibility.png'][i]" />
         </div>
-        <button class="btn return-button" @click.stop="flow.go(33)">← Return to the activity</button>
+        <button class="btn return-button" @click.stop="flow.go(33)"><DeckIcon name="arrow-left" /> Return to the activity</button>
       </template>
 
       <template v-else>
@@ -186,7 +184,7 @@ const dataset = [
         </div>
       </template>
 
-      <p v-if="s.takeaway" class="takeaway">{{ s.takeaway }}</p>
+      <p v-if="s.takeaway && s.type !== 'activity'" class="takeaway">{{ s.takeaway }}</p>
       <SourceLine :ids="s.sources.filter((id: string) => id !== 'BIO02').slice(0, 3)" :note="s.type === 'activity' || s.type === 'template' ? 'Original workshop activity, informed by' : undefined" />
     </template>
   </main>

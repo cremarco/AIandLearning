@@ -6,7 +6,7 @@ author: Marco Cremaschi
 info: Visual tools for self-directed learning with artificial intelligence
 canvasWidth: 1280
 aspectRatio: 16/9
-colorSchema: light
+colorSchema: dark
 wakeLock: false
 fonts:
   sans: SF Pro Display, SF Pro Text, Helvetica Neue, sans-serif

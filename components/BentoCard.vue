@@ -29,9 +29,10 @@ const imageUrl = computed(() => props.image
     </figure>
     <div v-if="imageUrl" class="bento-card__scrim" aria-hidden="true" />
     <div class="card-body">
-      <div v-if="label" class="bento-card__label">{{ label }}</div>
+      <div v-if="label && /^\d{2}$/.test(label)" class="bento-card__label">{{ label }}</div>
       <div v-if="value" class="bento-card__value">{{ value }}</div>
-      <h2 class="card-title">{{ title }}</h2>
+      <h2 v-if="title" class="card-title">{{ title }}</h2>
+      <p v-if="label && !/^\d{2}$/.test(label)" class="bento-card__context">{{ label }}</p>
       <p v-if="body" class="bento-card__body">{{ body }}</p>
       <slot />
     </div>

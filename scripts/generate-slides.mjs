@@ -7,7 +7,7 @@ const slides = JSON.parse(readFileSync(path.join(root, 'data/slides.json'), 'utf
 const flows = JSON.parse(readFileSync(path.join(root, 'data/flows.json'), 'utf8'))
 const sources = JSON.parse(readFileSync(path.join(root, 'data/sources.json'), 'utf8'))
 const yaml = value => JSON.stringify(value)
-let output = `---\ntheme: apple-basic\nlayout: default\ntitle: Beyond prompting\nauthor: Marco Cremaschi\ninfo: Visual tools for self-directed learning with artificial intelligence\ncanvasWidth: 1280\naspectRatio: 16/9\ncolorSchema: light\nwakeLock: false\nfonts:\n  sans: SF Pro Display, SF Pro Text, Helvetica Neue, sans-serif\n  provider: none\ntransition: fade\nduration: 90min\ndrawings:\n  persist: false\nmdc: true\npreload: false\n---\n\n`
+let output = `---\ntheme: apple-basic\nlayout: default\ntitle: Beyond prompting\nauthor: Marco Cremaschi\ninfo: Visual tools for self-directed learning with artificial intelligence\ncanvasWidth: 1280\naspectRatio: 16/9\ncolorSchema: dark\nwakeLock: false\nfonts:\n  sans: SF Pro Display, SF Pro Text, Helvetica Neue, sans-serif\n  provider: none\ntransition: fade\nduration: 90min\ndrawings:\n  persist: false\nmdc: true\npreload: false\n---\n\n`
 for (const [index, slide] of slides.entries()) {
   if (index) output += `\n---\nlayout: default\nrouteAlias: ${slide.id.toLowerCase()}\ntitle: ${yaml(slide.title)}\n---\n\n`
   output += `<DeckSlide id="${slide.id}" />\n\n<!--\n${slide.notes}\n\n`

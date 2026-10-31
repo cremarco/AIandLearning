@@ -17,7 +17,7 @@ for (const f of flows) {
 }
 mkdirSync('qa/slides', { recursive: true })
 const browser = await chromium.launch({ headless: true })
-const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 })
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1, colorScheme: 'light' })
 const base = process.env.DECK_URL || 'http://localhost:3030'
 const errors = [], failed = [], layouts = [], flowResults = []
 page.on('pageerror', e => { if (!e.message.includes('Wake Lock permission')) errors.push(e.message) })
@@ -28,6 +28,7 @@ async function visible(id) {
 try {
   await page.goto(`${base}/1`, { waitUntil: 'networkidle' })
   await visible('S01')
+  assert(await page.locator('html').evaluate(el => el.classList.contains('dark')), 'Deck must default to dark even when the operating system is light')
   for (const s of slides) {
     if (s.number > 1) await page.keyboard.press('ArrowRight')
     await visible(s.id)
@@ -88,7 +89,42 @@ try {
   assert.notEqual(paused, await timer.getByRole('timer').innerText())
   await timer.getByRole('button', { name: 'Reset', exact: true }).click()
   assert.equal(before, await timer.getByRole('timer').innerText())
-  const report = { date: '2026-10-31', slides: slides.length, sourceIds: Object.keys(sources).length, flows: flowResults, layouts, timer: 'passed', errors: [...new Set(errors)], failedRequests: failed }
+  const navigation = page.getByRole('navigation', { name: 'Presentation navigation', exact: true })
+  await navigation.getByRole('combobox', { name: 'Choose event route' }).selectOption('university')
+  await visible('S02')
+  await page.keyboard.press('ArrowRight')
+  await visible('S03')
+  const mobile = []
+  mkdirSync('qa/mobile', { recursive: true })
+  const touch = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true, colorScheme: 'light' })
+  touch.on('pageerror', e => errors.push(e.message))
+  touch.on('response', r => { if (r.status() >= 400) failed.push({ status: r.status(), url: r.url() }) })
+  for (const [orientation, viewport] of [['portrait', { width: 390, height: 844 }], ['landscape', { width: 844, height: 390 }]]) {
+    await touch.setViewportSize(viewport)
+    await touch.goto(`${base}/1`, { waitUntil: 'networkidle' })
+    await touch.locator('.slide-S01:visible').waitFor()
+    await touch.screenshot({ path: `qa/mobile/${orientation}-S01.png`, animations: 'disabled' })
+    const controls = touch.getByRole('navigation', { name: 'Presentation navigation', exact: true })
+    const bounds = await controls.boundingBox()
+    const stage = await touch.locator('#slide-container').boundingBox()
+    assert(bounds.x >= 8 && bounds.x + bounds.width <= viewport.width - 8, `${orientation}: navigation must fit the viewport`)
+    assert(stage.y + stage.height <= bounds.y, `${orientation}: navigation must not cover the slides`)
+    assert(await controls.getByRole('link', { name: 'Open accessible text version' }).isVisible(), 'Touch users need the text alternative')
+    for (const flow of flows) {
+      await controls.getByRole('combobox', { name: 'Choose event route' }).selectOption(flow.id)
+      await touch.locator('.slide-S02:visible').waitFor()
+      await touch.keyboard.press('ArrowRight')
+      await touch.locator('.slide-S03:visible').waitFor()
+    }
+    for (const number of [9, 34]) {
+      await touch.goto(`${base}/${number}?flow=teachers`, { waitUntil: 'networkidle' })
+      await touch.locator(`.slide-S${String(number).padStart(2,'0')}:visible`).waitFor()
+      await touch.screenshot({ path: `qa/mobile/${orientation}-S${String(number).padStart(2,'0')}.png`, animations: 'disabled' })
+    }
+    mobile.push({ orientation, viewport, navigation: 'passed', stage: 'unobscured', textAlternative: 'available' })
+  }
+  await touch.close()
+  const report = { date: '2026-10-31', slides: slides.length, sourceIds: Object.keys(sources).length, defaultTheme: 'dark', flows: flowResults, layouts, mobile, routeSelect: 'passed', timer: 'passed', errors: [...new Set(errors)], failedRequests: failed }
   writeFileSync('qa/verification.json', JSON.stringify(report, null, 2))
-  console.log(JSON.stringify({ slides: slides.length, layoutIssues: layouts.filter(r => r.issues.length), brokenImages: layouts.filter(r => r.brokenImages.length), flows: flowResults, timer: 'passed', errors: report.errors, failedRequests: failed }, null, 2))
+  console.log(JSON.stringify({ slides: slides.length, defaultTheme: 'dark', layoutIssues: layouts.filter(r => r.issues.length), brokenImages: layouts.filter(r => r.brokenImages.length), flows: flowResults, mobile, timer: 'passed', errors: report.errors, failedRequests: failed }, null, 2))
 } finally { await browser.close() }

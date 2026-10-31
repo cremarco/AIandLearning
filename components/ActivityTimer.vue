@@ -120,26 +120,26 @@ onBeforeUnmount(clearTicker)
 
 <template>
   <section
-    class="space-y-3 rounded-box border border-base-300 p-4 text-base-content"
+    class="activity-timer"
     role="group"
     aria-label="Activity timer"
     @click.stop
     @keydown.stop
   >
-    <div class="space-y-1">
-      <p class="m-0 text-sm font-semibold">Activity timer</p>
+    <div class="timer-readout">
+      <p class="timer-label">Activity timer</p>
       <p
-        class="m-0 font-mono text-4xl font-semibold leading-none tabular-nums"
+        class="timer-value"
         role="timer"
         aria-live="off"
         :aria-label="timeDescription"
       >
         {{ displayTime }}
       </p>
-      <p class="m-0 text-sm" aria-live="off">{{ stateLabel }}</p>
+      <p class="timer-state" aria-live="off">{{ stateLabel }}</p>
     </div>
 
-    <div class="flex flex-wrap gap-2 sm:flex-nowrap">
+    <div class="timer-actions">
       <button
         type="button"
         class="btn"
@@ -151,7 +151,7 @@ onBeforeUnmount(clearTicker)
       <button type="button" class="btn" aria-label="Add one minute" @click="addMinute()">+1 min</button>
     </div>
 
-    <p class="m-0 text-xs">A flexible timebox, not a test of speed. Keep access support available.</p>
+    <p class="timer-guidance">A flexible timebox, not a test of speed. Keep access support available.</p>
     <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">{{ announcement }}</p>
   </section>
 </template>
