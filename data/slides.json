@@ -165,7 +165,25 @@
       "teachers": 0
     },
     "output": "",
-    "guardrails": []
+    "guardrails": [],
+    "explanation": "By the end, you will have a small activity you can try in your own setting. Its design will show what the learner decides and how you will check understanding.",
+    "cards": [
+      {
+        "title": "Set a learning goal",
+        "body": "Name what the learner should explain or do. Using an AI tool is an action, not the learning goal.",
+        "image": "learning.png"
+      },
+      {
+        "title": "Make the process visible",
+        "body": "Record a first attempt, the help used and the decisions made. Keep a trace that the learner can review.",
+        "image": "visual-maps.png"
+      },
+      {
+        "title": "Plan the check and access",
+        "body": "Choose an observable explanation or task. State the limits of the evidence and keep the access support people need.",
+        "image": "evidence.png"
+      }
+    ]
   },
   {
     "id": "S06",
@@ -195,16 +213,17 @@
     "cards": [
       {
         "title": "Self-direction",
-        "body": "Choosing needs, goals and resources.",
+        "body": "Identify your needs and choose goals and resources. Example: choose a question for a project, then decide which sources to investigate.",
         "image": "learning.png"
       },
       {
         "title": "Self-regulation",
-        "body": "Planning, monitoring and evaluating learning.",
+        "body": "Plan, monitor and evaluate your learning. Example: plan an assigned reading, check what you understand and change your approach when needed.",
         "image": "visual-maps.png"
       }
     ],
-    "takeaway": "Autonomy can include teachers, peers and access support"
+    "takeaway": "Autonomy can include teachers, peers and access support",
+    "explanation": "A learner can plan and check a task set by a teacher. Self-direction also includes choosing the learning question, goals and resources."
   },
   {
     "id": "S07",
@@ -236,19 +255,19 @@
       {
         "label": "01",
         "title": "Plan",
-        "body": "What am I trying to understand?",
+        "body": "Set a goal and choose a first approach. What am I trying to understand?",
         "image": "learning.png"
       },
       {
         "label": "02",
         "title": "Monitor",
-        "body": "What is working? What needs checking?",
+        "body": "Inspect your progress and check uncertain claims. What is working, and what needs changing?",
         "image": "evidence.png"
       },
       {
         "label": "03",
         "title": "Reflect",
-        "body": "What changed? What will I try next?",
+        "body": "Compare your result with the goal. What changed, and what will I try next?",
         "image": "visual-maps.png"
       }
     ],
@@ -284,22 +303,22 @@
     "cards": [
       {
         "title": "Assisted product",
-        "body": "How good is the answer while help is available?",
+        "body": "Check the quality of the answer while help is available, such as an AI-assisted essay.",
         "image": "learning.png"
       },
       {
         "title": "Independent check",
-        "body": "What can the learner explain or do?",
+        "body": "Ask the learner to explain or do the target task without the content answer. Keep access support.",
         "image": "evidence.png"
       },
       {
         "title": "Retention",
-        "body": "What remains after an interval?",
+        "body": "Check what the learner remembers after an interval, beyond the immediate end of the activity.",
         "image": "responsibility.png"
       },
       {
         "title": "Transfer",
-        "body": "What carries over to a new task?",
+        "body": "Ask the learner to use the idea in a different task or case. Check the explanation as well.",
         "image": "visual-maps.png"
       }
     ]
@@ -413,7 +432,24 @@
     },
     "output": "",
     "guardrails": [],
-    "takeaway": "A study supports a bounded claim about a particular comparison"
+    "takeaway": "A study supports a bounded claim about a particular comparison",
+    "cards": [
+      {
+        "title": "AI support",
+        "body": "What did the AI actually do: give answers, ask questions or guide practice? These are different forms of support.",
+        "image": "learning.png"
+      },
+      {
+        "title": "Comparison",
+        "body": "What did the other group receive: no help, a teacher, another tutor or a different lesson?",
+        "image": "visual-maps.png"
+      },
+      {
+        "title": "Outcome",
+        "body": "Was the task completed with help, independently or after a delay? Keep the claim tied to the measure.",
+        "image": "evidence.png"
+      }
+    ]
   },
   {
     "id": "S12",
@@ -600,21 +636,22 @@
     "cards": [
       {
         "title": "Concept map",
-        "body": "Concepts and labelled relationships.",
+        "body": "Connect concepts and label each relationship. Use it to explain how ideas relate, rather than just grouping keywords.",
         "image": "visual-maps.png"
       },
       {
         "title": "Argument map",
-        "body": "Claim, evidence, objections and conditions.",
+        "body": "Separate a claim from its reasons, evidence and objections. Use it to inspect what supports a conclusion.",
         "image": "evidence.png"
       },
       {
         "title": "Learning path",
-        "body": "Decisions, checks and next steps.",
+        "body": "Show the goal, attempts, support and checks. Use it to decide what to do next and why.",
         "image": "learning.png"
       }
     ],
-    "takeaway": "Choose the representation for the task; offer a structured text equivalent"
+    "takeaway": "Choose the representation for the task; offer a structured text equivalent",
+    "explanation": "Choose the form that makes the required reasoning visible. A structured text list can express the same relationships when a diagram creates a barrier."
   },
   {
     "id": "S17",
@@ -646,12 +683,12 @@
     "cards": [
       {
         "title": "Construct a map",
-        "body": "Explain and inspect the relations you create.",
+        "body": "Explain each link instead of copying keywords. Ask which relationship needs a source, a condition or a clearer meaning.",
         "image": "visual-maps.png"
       },
       {
         "title": "Retrieve and rebuild",
-        "body": "Recall the ideas, then check what is missing.",
+        "body": "Put the source aside and rebuild the ideas from memory. Then reopen it to check missing or mistaken relationships.",
         "image": "learning.png"
       }
     ],
@@ -682,7 +719,8 @@
       "teachers": 0
     },
     "output": "One repaired relationship, with its reason",
-    "guardrails": []
+    "guardrails": [],
+    "explanation": "Read each arrow as a claim. Choose one link and add a reason, a condition or a counterexample that changes how strongly you would trust it."
   },
   {
     "id": "S19",
@@ -713,7 +751,40 @@
     },
     "output": "",
     "guardrails": [],
-    "takeaway": "Original workshop template; not a validated psychological scale"
+    "takeaway": "Original workshop template; not a validated psychological scale",
+    "explanation": "Use these six fields to record a learning plan. Show which decisions belong to the learner, what help is allowed and how understanding will be checked.",
+    "cards": [
+      {
+        "title": "Goal and starting point",
+        "body": "What should I learn? What do I know?",
+        "image": "learning.png"
+      },
+      {
+        "title": "First attempt",
+        "body": "Record an approach before asking for content help.",
+        "image": "learning.png"
+      },
+      {
+        "title": "Allowed support",
+        "body": "Choose questions, hints or feedback; state the boundary.",
+        "image": "visual-maps.png"
+      },
+      {
+        "title": "Sources and uncertainty",
+        "body": "Check the source; name what remains uncertain.",
+        "image": "evidence.png"
+      },
+      {
+        "title": "Independent content check",
+        "body": "Explain or apply the idea without the answer.",
+        "image": "responsibility.png"
+      },
+      {
+        "title": "Reflection",
+        "body": "What changed? What will I try next?",
+        "image": "inclusion.png"
+      }
+    ]
   },
   {
     "id": "S20",
@@ -745,21 +816,22 @@
     "cards": [
       {
         "title": "Model the strategy",
-        "body": "Make the reasoning visible.",
+        "body": "Show how you make a decision and check a source. Let the learner see the reasoning behind the answer.",
         "image": "learning.png"
       },
       {
         "title": "Adjust the help",
-        "body": "Observe, guide, then reduce content support.",
+        "body": "Observe the next attempt. Offer a question or hint, then reduce content help when the learner is ready.",
         "image": "visual-maps.png"
       },
       {
         "title": "Preserve access",
-        "body": "Keep the accommodations the learner needs.",
+        "body": "Keep screen readers, dictation, translation and other agreed support. Separate the thinking being checked from barriers to participation.",
         "image": "inclusion.png"
       }
     ],
-    "takeaway": "Reducing content help does not mean removing access support"
+    "takeaway": "Reducing content help does not mean removing access support",
+    "explanation": "Show the reasoning, observe an attempt and adjust the help. Reduce support that supplies the content answer while keeping the accommodations needed to access the task."
   },
   {
     "id": "S21",
@@ -789,21 +861,22 @@
     "cards": [
       {
         "title": "Open the original",
-        "body": "Does the source exist?",
+        "body": "Check the title, authors, date and DOI. A well-formatted citation does not show that the source exists.",
         "image": "evidence.png"
       },
       {
         "title": "Read the passage",
-        "body": "Does it support this claim?",
+        "body": "Find the result that supports the claim. Check who was studied, what was compared and when it was measured.",
         "image": "learning.png"
       },
       {
         "title": "Check its status",
-        "body": "Look for corrections or retractions.",
+        "body": "Look for corrections or retractions on the publisher’s page. Recheck the claim if the source has changed.",
         "image": "responsibility.png"
       }
     ],
-    "takeaway": "A fluent explanation or generated citation is not verification"
+    "takeaway": "A fluent explanation or generated citation is not verification",
+    "explanation": "A reference can look correct and still be false or irrelevant. Open the original, read the supporting passage and check whether the publication has been corrected."
   },
   {
     "id": "S22",
@@ -872,21 +945,22 @@
     "cards": [
       {
         "title": "Language",
-        "body": "Preserve meaning and cultural voice.",
+        "body": "Check whether a rewrite keeps the writer’s meaning and cultural voice. More standard wording is not always a better fit.",
         "image": "inclusion.png"
       },
       {
         "title": "Perspective",
-        "body": "Ask which account or evidence is missing.",
+        "body": "Ask which sources, experiences or interpretations are missing. Compare the account with other relevant evidence.",
         "image": "visual-maps.png"
       },
       {
         "title": "Judgement",
-        "body": "Do not infer a person’s ability from generated text.",
+        "body": "Do not use generated text to infer a person’s ability. People need reasons they can inspect and challenge.",
         "image": "responsibility.png"
       }
     ],
-    "takeaway": "Compare sources and interpretations; prompting cannot guarantee fairness"
+    "takeaway": "Compare sources and interpretations; prompting cannot guarantee fairness",
+    "explanation": "When using a rewrite or generated judgement, compare meaning, uncertainty and voice. Ask whose perspective is absent before accepting the result."
   },
   {
     "id": "S24",
@@ -917,21 +991,22 @@
     "cards": [
       {
         "title": "Public or synthetic",
-        "body": "Use material that does not identify learners.",
+        "body": "Choose examples that do not identify learners. Do not upload diagnoses, identifiable student work or private conversations in a demo.",
         "image": "learning.png"
       },
       {
         "title": "Institutional checks",
-        "body": "Review settings, age and data handling.",
+        "body": "Review the approved setting, account requirements and handling of data. Resolve these choices before asking learners to use a tool.",
         "image": "responsibility.png"
       },
       {
         "title": "Human responsibility",
-        "body": "Keep consequential decisions with people.",
+        "body": "Keep decisions that affect people with responsible staff. Do not ask AI to infer a learner’s diagnosis or emotions.",
         "image": "inclusion.png"
       }
     ],
-    "takeaway": "Avoid uploading diagnoses, identifiable work or private conversations in a demo"
+    "takeaway": "Avoid uploading diagnoses, identifiable work or private conversations in a demo",
+    "explanation": "Use public or made-up material in this workshop. Before real classroom use, follow your institution’s process for accounts, age requirements and data handling."
   },
   {
     "id": "S25",
@@ -962,21 +1037,22 @@
     "cards": [
       {
         "title": "More than one format",
-        "body": "Map or structured list.",
+        "body": "Offer the diagram and a structured text version. Keep the concepts, relationships and reading order available in both.",
         "image": "visual-maps.png"
       },
       {
         "title": "More than one response",
-        "body": "Written, spoken or visual.",
+        "body": "Allow a written, spoken or visual explanation. Judge the reasoning needed for the goal, rather than the format alone.",
         "image": "inclusion.png"
       },
       {
         "title": "The same learning goal",
-        "body": "Keep access accommodations in every check.",
+        "body": "Keep access accommodations during the content check. Ask what the learner understands while removing avoidable barriers.",
         "image": "learning.png"
       }
     ],
-    "takeaway": "Choice of access is not a fixed learning style or a lower intellectual goal"
+    "takeaway": "Choice of access is not a fixed learning style or a lower intellectual goal",
+    "explanation": "Keep the intellectual goal clear while offering different ways to take part. Change the format or access route without removing the reasoning the task is meant to develop."
   },
   {
     "id": "S26",
@@ -1029,7 +1105,8 @@
     },
     "output": "",
     "guardrails": [],
-    "takeaway": "Faster alt text does not by itself establish accuracy or equivalent access"
+    "takeaway": "Faster alt text does not by itself establish accuracy or equivalent access",
+    "explanation": "In an interview study, blind participants described useful AI help and errors. Consider how someone can verify a detail when the description is their route to the image."
   },
   {
     "id": "S28",
@@ -1060,21 +1137,22 @@
     "cards": [
       {
         "title": "Work alone or together",
-        "body": "Individual or pair participation.",
+        "body": "Write your own proposal or discuss it with a partner. You can also use a partner as a coach.",
         "image": "inclusion.png"
       },
       {
         "title": "Choose a format",
-        "body": "Map, list or spoken explanation.",
+        "body": "Use labelled arrows, a structured list or a spoken explanation. Make the decisions and their reasons clear.",
         "image": "visual-maps.png"
       },
       {
         "title": "Ask for a change",
-        "body": "Clarification, more time or a different format.",
+        "body": "Ask for clarification, more time or another format. You do not need to share a diagnosis publicly.",
         "image": "learning.png"
       }
     ],
-    "takeaway": "No public diagnosis or account creation is required"
+    "takeaway": "No public diagnosis or account creation is required",
+    "explanation": "Choose a way to participate that works for you. No account, diagram drawing or personal disclosure is required; the activity focuses on reasoning rather than speed."
   },
   {
     "id": "S29",
@@ -1107,21 +1185,22 @@
     "cards": [
       {
         "title": "CmapTools / Excalidraw",
-        "body": "Make relations visible; keep a text equivalent.",
+        "body": "Draft concepts and label each link. Keep a structured text version so the diagram is not the only way to follow the reasoning.",
         "image": "visual-maps.png"
       },
       {
         "title": "Conversational assistant",
-        "body": "Request a question, hint or critique.",
+        "body": "After a first attempt, ask for one question, hint or critique. Keep responsibility for the answer and for checking it.",
         "image": "learning.png"
       },
       {
         "title": "Source notebook",
-        "body": "Compare claims with supplied passages.",
+        "body": "Supply the study passage and compare it with your claim. Open the original source to check whether it supports the conclusion.",
         "image": "evidence.png"
       }
     ],
-    "takeaway": "Choose by task, access and data conditions; every activity also works on paper"
+    "takeaway": "Choose by task, access and data conditions; every activity also works on paper",
+    "explanation": "Start with the learning action you need, then choose a tool. These are examples of functions; they do not establish that a product improves learning."
   },
   {
     "id": "S30",
@@ -1180,7 +1259,8 @@
       "teachers": 1
     },
     "output": "A learning goal, a support boundary and an observable check",
-    "guardrails": []
+    "guardrails": [],
+    "explanation": "Use this claim: “A better AI-assisted answer proves better understanding.” Design a short activity to test it, or choose a topic from your own teaching."
   },
   {
     "id": "S32",
@@ -1235,7 +1315,8 @@
       "teachers": 2
     },
     "output": "One bounded claim and one limitation",
-    "guardrails": []
+    "guardrails": [],
+    "explanation": "Open one study card. Complete: “This finding suggests …, but it does not establish …”. Connect the claim to your proposed activity."
   },
   {
     "id": "S34",
@@ -1267,7 +1348,40 @@
       "teachers": 5
     },
     "output": "A learning path, using labelled arrows or a structured list",
-    "guardrails": []
+    "guardrails": [],
+    "explanation": "Write one decision per field. Use labelled arrows or a numbered list.",
+    "cards": [
+      {
+        "title": "Goal",
+        "body": "State what the learner should explain or do.",
+        "image": "learning.png"
+      },
+      {
+        "title": "First attempt",
+        "body": "Record the learner’s approach before content help.",
+        "image": "learning.png"
+      },
+      {
+        "title": "Useful support",
+        "body": "Choose a question, hint or feedback boundary.",
+        "image": "visual-maps.png"
+      },
+      {
+        "title": "Source check",
+        "body": "Identify the passage that supports the claim.",
+        "image": "evidence.png"
+      },
+      {
+        "title": "Independent check",
+        "body": "Explain or apply the idea; keep access support.",
+        "image": "responsibility.png"
+      },
+      {
+        "title": "Reflection",
+        "body": "Name what changed and one next step.",
+        "image": "inclusion.png"
+      }
+    ]
   },
   {
     "id": "S35",
@@ -1295,7 +1409,8 @@
     },
     "output": "One revision that adds an observable learner action",
     "guardrails": [],
-    "quote": "Use AI to produce a summary, read it twice, and judge understanding by how clear it feels."
+    "quote": "Use AI to produce a summary, read it twice, and judge understanding by how clear it feels.",
+    "explanation": "Read the recommendation below as a deliberately incomplete example. Replace one passive step with an action that lets you observe what the learner understands."
   },
   {
     "id": "S36",
@@ -1411,7 +1526,25 @@
       "teachers": 1
     },
     "output": "",
-    "guardrails": []
+    "guardrails": [],
+    "explanation": "Use these three decisions when planning your next activity. The links below provide the research dossier, classroom packet, prompt bank and an accessible text version.",
+    "cards": [
+      {
+        "title": "Check the learning",
+        "body": "Assess what the learner can explain or do. Keep the assisted product separate from retention and transfer.",
+        "image": "learning.png"
+      },
+      {
+        "title": "Show the decisions",
+        "body": "Record goals, attempts, support and source checks. Use reflection to decide what to revise or try next.",
+        "image": "visual-maps.png"
+      },
+      {
+        "title": "Keep people and access",
+        "body": "Keep human responsibility for consequential choices. Preserve access support and offer more than one way to participate.",
+        "image": "evidence.png"
+      }
+    ]
   },
   {
     "id": "S40",

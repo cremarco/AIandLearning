@@ -28,7 +28,9 @@ const base = import.meta.env.BASE_URL
 const image = (name: string) => `${base}images/${name}`
 const file = (name: string) => `${base}materials/${name}`
 const minutes = computed(() => s.value.duration[flow.selected.value?.id || 'forum'])
-const lead = computed(() => s.value.type === 'study' ? s.value.finding : ['activity', 'case'].includes(s.value.type) ? s.value.message : '')
+const lead = computed(() => s.value.type === 'study' ? s.value.finding
+  : ['cover', 'profile', 'agenda', 'discussion', 'evidence_card'].includes(s.value.type) ? ''
+  : s.value.explanation || s.value.message)
 const cards = computed(() => s.value.cards || s.value.body.map((body: string, i: number) => ({
   title: body,
   image: ['learning.png', 'visual-maps.png', 'evidence.png', 'inclusion.png'][i % 4],
@@ -115,7 +117,7 @@ const dataset = [
           </template>
         </div>
         <div v-else-if="s.id === 'S34'" class="bento-grid three canvas-grid">
-          <BentoCard v-for="(field, index) in s.body" :key="field" :title="field" :label="String(index + 1).padStart(2, '0')" :image="['learning.png','learning.png','visual-maps.png','evidence.png','responsibility.png','inclusion.png'][index]" />
+          <BentoCard v-for="(card, index) in cards" :key="index" v-bind="card" />
         </div>
         <div v-else class="activity-layout">
           <div class="activity-steps">
@@ -147,7 +149,7 @@ const dataset = [
 
       <template v-else-if="s.type === 'template'">
         <div class="bento-grid three canvas-grid">
-          <BentoCard v-for="(field, index) in s.body" :key="field" :title="field" :image="['learning.png','learning.png','visual-maps.png','evidence.png','responsibility.png','inclusion.png'][index]" :label="String(index + 1).padStart(2, '0')" />
+          <BentoCard v-for="(card, index) in cards" :key="index" v-bind="card" :label="String(index + 1).padStart(2, '0')" />
         </div>
       </template>
 
@@ -169,7 +171,7 @@ const dataset = [
 
       <template v-else-if="s.type === 'summary'">
         <div class="bento-grid three summary-bento">
-          <BentoCard v-for="(line, i) in s.body" :key="line" :title="line" :image="['evidence.png','visual-maps.png','inclusion.png'][i]" />
+          <BentoCard v-for="(card, i) in cards" :key="i" v-bind="card" />
         </div>
         <nav class="resource-links resource-row" aria-label="Workshop resources">
           <a href="https://docs.google.com/document/d/1bga8afM8CtVytu2HqBHhL73TU8YoV4IkxsyA7AZa4cY/edit" target="_blank" rel="noopener">Research dossier <DeckIcon name="arrow-up-right" /></a>
@@ -193,7 +195,6 @@ const dataset = [
       </template>
 
       <template v-else>
-        <p v-if="s.type === 'company'" class="lead">{{ s.message }}</p>
         <div class="bento-grid" :class="{ three: cards.length === 3 }">
           <BentoCard v-for="(card, i) in cards" :key="i" v-bind="card" />
         </div>

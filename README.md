@@ -94,6 +94,8 @@ Il primo comando aggiorna `slides.md`, comprese le note e le finestre temporali;
 
 Le citazioni sotto le slide aprono le fonti originali; le note conservano gli ID e i riferimenti estesi. La S39 collega il dossier di ricerca e i materiali; nelle sue note è presente anche l’archivio Drive. Conservare i limiti di ogni studio e distinguere risultati sperimentali, linee guida e dichiarazioni dei fornitori. Le attività sono proposte didattiche originali informate dalle fonti, non un metodo integrato già validato.
 
+Le slide concettuali mostrano una breve introduzione e card con spiegazioni, esempi o domande guida in inglese semplice. I sei campi del Learning Path Canvas includono indicazioni per la compilazione. Il campo opzionale `explanation` nei dati contiene il testo introduttivo esteso; viene riportato anche nell’equivalente testuale accessibile. I copioni del relatore restano separati dal testo destinato ai partecipanti.
+
 ## Aspetto e immagini
 
 Il tema predefinito è scuro, anche se il sistema operativo è chiaro. Il riferimento resta la presentazione AIPP: tipografia di sistema con SF Pro/Helvetica Neue, forme 3D, card bento e palette bordeaux/arancio/ciano. Il fondo carbone caldo e il testo avorio usano token condivisi; link e focus adottano varianti più luminose degli accenti per preservare il contrasto. Tema e layout sono in `styles/`, le card in `components/BentoCard.vue`.

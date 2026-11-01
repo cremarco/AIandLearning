@@ -21,7 +21,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .slidev-layout .deck-slide li::marker { color: var(--deck-cyan); }
 .slidev-layout .deck-slide a { color: var(--deck-red); text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
 .slidev-layout .deck-slide a:hover { color: var(--deck-ink); }
-.slidev-layout .deck-slide .lead { max-width: 1050px; font-size: 25px; line-height: 1.35; color: var(--deck-muted); }
+.slidev-layout .deck-slide .lead { flex-shrink: 0; max-width: 1050px; font-size: 25px; line-height: 1.35; color: var(--deck-muted); }
 .slide-heading { flex-shrink: 0; }
 .company-heading { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .company-logo { display: block; width: 88px; height: 88px; flex-shrink: 0; }

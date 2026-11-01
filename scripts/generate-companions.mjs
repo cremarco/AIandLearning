@@ -18,7 +18,7 @@ const { descriptor, errors } = parse(renderer)
 assert.equal(errors.length, 0, 'DeckSlide.vue must parse')
 const ast = descriptor.template.ast
 const normalize = value => String(value ?? '').replace(/\s+/g, ' ').trim()
-const textKeys = ['title', 'message', 'body', 'guardrails', 'context', 'results', 'result_note', 'finding', 'limit', 'prompt', 'response', 'supplied', 'quote', 'takeaway', 'output']
+const textKeys = ['title', 'message', 'explanation', 'body', 'guardrails', 'context', 'results', 'result_note', 'finding', 'limit', 'prompt', 'response', 'supplied', 'quote', 'takeaway', 'output']
 const knownKeys = new Set([...textKeys, 'id', 'number', 'type', 'kind', 'section', 'notes', 'sources', 'duration', 'cards'])
 
 assert.equal(slides.length, 44, 'Expected all 44 slides')
@@ -182,6 +182,7 @@ function content(slide) {
   const lines = []
   const field = (label, value) => { if (value) lines.push(`${label}: ${value}`, '') }
   field('Message', slide.message)
+  field('Explanation', slide.explanation)
   if (slide.body.length) {
     lines.push(slide.type === 'evidence_card' ? 'Evidence card:' : 'Content / steps (linear reading order):')
     slide.body.forEach((line, index) => lines.push(`${slide.type === 'evidence_card' ? `${evidenceTitles[index]}:` : `${index + 1}.`} ${line}`))

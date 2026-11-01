@@ -39,7 +39,7 @@ try {
   for (const s of slides) {
     if (s.number > 1) await page.keyboard.press('ArrowRight')
     await visible(s.id)
-    await page.waitForTimeout(140)
+    await page.waitForFunction(() => !document.querySelector('#slide-container [class*="fade-enter"], #slide-container [class*="fade-leave"]'))
     const main = page.locator(`.deck-slide[data-slide-id="${s.id}"]:visible`)
     await main.evaluate(async el => { await Promise.all([...el.querySelectorAll('img')].map(i => i.decode().catch(() => {}))) })
     const result = await main.evaluate(el => {
@@ -50,8 +50,14 @@ try {
         const rect = card.getBoundingClientRect()
         for (const child of card.querySelectorAll('h2, p, .study-stat, [role="timer"]')) {
           const r = child.getBoundingClientRect()
-          if (r.width > 3 && r.height > 3 && r.bottom > rect.bottom - 3) issues.push(`Card overflow: ${child.textContent.trim().slice(0,85)}`)
+          if (r.width > 3 && r.height > 3 && (r.top < rect.top + 3 || r.bottom > rect.bottom - 3)) issues.push(`Card overflow: ${child.textContent.trim().slice(0,85)}`)
         }
+      }
+      const intro = el.querySelector(':scope > .lead')
+      if (intro) {
+        const r = intro.getBoundingClientRect()
+        const next = intro.nextElementSibling?.getBoundingClientRect()
+        if (intro.scrollHeight > intro.clientHeight + 2 || (next && r.bottom > next.top + 2)) issues.push('Intro text overlaps the content')
       }
       for (const child of el.querySelectorAll('h1, h2, p, li, .activity-footer, .resource-row, .return-button')) {
         if (child.closest('.sr-only') || child.classList.contains('sr-only')) continue
@@ -142,4 +148,6 @@ try {
   const report = { date: '2026-10-31', slides: slides.length, sourceIds: Object.keys(sources).length, defaultTheme: 'dark', flows: flowResults, layouts, mobile, routeSelect: 'passed', timer: 'passed', errors: [...new Set(errors)], failedRequests: failed }
   writeFileSync('qa/verification.json', JSON.stringify(report, null, 2))
   console.log(JSON.stringify({ slides: slides.length, defaultTheme: 'dark', layoutIssues: layouts.filter(r => r.issues.length), brokenImages: layouts.filter(r => r.brokenImages.length), flows: flowResults, mobile, timer: 'passed', errors: report.errors, failedRequests: failed }, null, 2))
+  assert.equal(layouts.filter(r => r.issues.length || r.brokenImages.length).length, 0, 'Every slide must fit its canvas and cards')
+  assert.deepEqual(report.errors, [], 'No browser errors')
 } finally { await browser.close() }
