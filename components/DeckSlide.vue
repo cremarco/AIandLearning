@@ -75,12 +75,11 @@ const dataset = [
       <template v-if="s.type === 'profile'">
         <div class="profile-grid">
           <div class="profile-copy">
-            <p class="profile-affiliation">DISCo<br /><strong>University of Milano-Bicocca</strong></p>
-            <p class="profile-affiliation"><strong>Whattadata</strong><br />University spin-off</p>
-            <p class="profile-perspective">Design and evaluation<br />of intelligent systems</p>
-            <p class="lead">A technological and interdisciplinary perspective</p>
+            <p class="profile-role">{{ s.message }}</p>
+            <p class="profile-affiliation">{{ s.body[0] }}</p>
+            <ul class="profile-research"><li v-for="area in s.body.slice(1)" :key="area">{{ area }}</li></ul>
           </div>
-          <img class="profile-art" :src="image('hero-dark.png')" alt="" aria-hidden="true" />
+          <img class="profile-art" :src="image('marco-cremaschi.webp')" alt="Portrait of Marco Cremaschi, from his personal website" />
         </div>
       </template>
 

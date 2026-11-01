@@ -75,12 +75,11 @@ title: "Marco Cremaschi"
 
 ### Azioni del relatore — non leggere ad alta voce
 
-- Indicare le due affiliazioni mentre vengono nominate.
-- Lasciare una breve pausa alla fine.
+- Indicare ruolo e aree di ricerca, poi passare alla slide Whattadata.
 
 ### Copione — parole da pronunciare
 
-Sono Marco Cremaschi, dell’Università di Milano-Bicocca e di Whattadata, uno spin-off universitario. Mi occupo di come progettare sistemi intelligenti e verificare come funzionano, con obiettivi e limiti chiari.
+Sono Marco Cremaschi, ricercatore tenure track all’Università di Milano-Bicocca. Mi occupo di intelligenza artificiale semantica e grafi della conoscenza, salute mentale digitale e sistemi per i dati. Il mio lavoro collega la ricerca alla progettazione e alla valutazione di sistemi reali. Oggi porto questa prospettiva al tema dell’apprendimento con l’intelligenza artificiale.
 
 ### Solo Forum — aggiunta facoltativa da pronunciare
 
@@ -90,12 +89,11 @@ Per questo tema, lo strumento è solo una parte del progetto. Servono anche un c
 
 ### Presenter actions — do not read aloud
 
-- Point to the two affiliations as you name them.
-- Pause briefly at the end.
+- Point to the role and research areas, then move to the Whattadata slide.
 
 ### Script — words to say
 
-I’m Marco Cremaschi, from the University of Milano-Bicocca and Whattadata, a university spin-off. I work on how to design intelligent systems and check how well they work, with clear goals and limits.
+I’m Marco Cremaschi, a tenure-track assistant professor at the University of Milan-Bicocca. I work on semantic AI and knowledge graphs, digital mental health, and data systems. My work connects research with the design and evaluation of real systems. Today, I bring this perspective to learning with AI.
 
 ### Forum only — optional extra words to say
 
@@ -104,18 +102,18 @@ For this topic, the tool is only one part of the design. We also need a clear ta
 
 ## Riferimenti di preparazione — non leggere / Background — do not read aloud
 
-Presentazione ricavata dalla precedente AIPP e verificata sul profilo istituzionale. Il punto di vista è tecnologico: progettare e valutare sistemi intelligenti. Non attribuire al relatore un ruolo clinico o una qualifica di ricerca educativa non documentata. Fonti: https://www.unimib.it/marco-cremaschi e presentazione AIPP, slide2.
+Profilo ripreso dal sito personale pubblico https://cremarco.github.io/cv/, consultato il 1 novembre 2026: ruolo Tenure-Track Assistant Professor (RTT), Università di Milano-Bicocca; aree Semantic AI & knowledge graphs, Digital mental health, Applied data systems. Ritratto autentico del sito, non immagine generata. Le metriche variabili di pubblicazioni e progetti non sono riprodotte. Whattadata è presentata nella slide successiva.
 
 Forum: 1 min; finestra 0.5–1.5 min.
 University: 0.5 min; finestra 0.5–1 min.
 Teachers: 0.5 min; finestra 0.5–1 min.
 
 FONTI
+BIO03: Cremaschi, M. Personal portfolio and researcher profile. Consulted 1 November 2026.
+https://cremarco.github.io/cv/
+Opening profile: Tenure-Track Assistant Professor; University of Milan-Bicocca; three research areas. Profile section: RTT role from 1 October 2026.
 BIO01: Marco Cremaschi — University of Milano-Bicocca institutional profile
 https://www.unimib.it/marco-cremaschi
-
-BIO02: Previous AIPP presenter material
-Materiale personale AIPP, slide2
 
 -->
 

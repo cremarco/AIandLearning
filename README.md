@@ -100,6 +100,8 @@ Le slide concettuali mostrano una breve introduzione e card con spiegazioni, ese
 
 Il tema predefinito è scuro, anche se il sistema operativo è chiaro. Il riferimento resta la presentazione AIPP: tipografia di sistema con SF Pro/Helvetica Neue, forme 3D, card bento e palette bordeaux/arancio/ciano. Il fondo carbone caldo e il testo avorio usano token condivisi; link e focus adottano varianti più luminose degli accenti per preservare il contrasto. Tema e layout sono in `styles/`, le card in `components/BentoCard.vue`.
 
+La slide del relatore riprende il profilo del [sito personale](https://cremarco.github.io/cv/): ritratto autentico, ruolo e aree di ricerca, verificati il 1 novembre 2026. La fotografia è conservata localmente per consentire presentazione ed esportazione anche senza connessione.
+
 `public/images/` contiene sette asset generati con il tool integrato image_gen (compresa la variante di copertina scura già generata) e una grafica di riferimento ripresa dal progetto AIPP (`profile-aipp.png`). Prompt, provenienza e descrizioni alternative proposte sono in [image-prompts.md](image-prompts.md). Le persone raffigurate nelle nuove immagini sono sintetiche e non rappresentano Marco o partecipanti reali.
 
 La slide Whattadata segue la presentazione del relatore in tutti i percorsi. Status e attività sono documentati dal sito ufficiale e dalla scheda istituzionale UniMiB; `public/images/whattadata.svg` è il logo ufficiale. Gli ID delle slide restano stabili quando cambia l’ordine fisico.

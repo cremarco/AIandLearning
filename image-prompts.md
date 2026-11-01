@@ -25,7 +25,7 @@ Use case: style-transfer / stylized-concept. Asset type: premium university pres
 
 ### Variante scura: hero-dark.png
 
-File attivo nel tema scuro: `public/images/hero-dark.png`, usato come grafica decorativa nella presentazione del relatore. La copertina usa un fondo scuro uniforme, senza immagine. È la prima variante già generata, riutilizzata senza modifiche raster. La versione avorio sopra rimane come asset di riferimento.
+Asset conservato: `public/images/hero-dark.png`. La copertina usa un fondo scuro uniforme, senza immagine; la presentazione del relatore usa il ritratto autentico del sito personale. È la prima variante già generata, riutilizzata senza modifiche raster. La versione avorio sopra rimane come asset di riferimento.
 
 Output: `$CODEX_HOME/generated_images/01a19275-6121-7152-b80a-ce7e02b45173/exec-1e2a02f4-edd7-4865-a284-64cbbc2cb14f.png`.
 
@@ -34,6 +34,10 @@ Use case: stylized-concept / productivity-visual. Asset type: reusable image bac
 ```
 
 Input dell’iterazione finale: bozza sopra e copertina AIPP autentica, entrambe ispezionate. Correzione richiesta: sostituzione del fondo scuro con avorio caldo e spostamento delle forme a destra.
+
+### Ritratto del relatore: marco-cremaschi.webp
+
+File: `public/images/marco-cremaschi.webp`. Ritratto autentico ripreso dal sito personale pubblico [Marco Cremaschi](https://cremarco.github.io/cv/), asset `https://cremarco.github.io/cv/assets/profile-CzeXr3uZ.webp`, consultato il 1 novembre 2026. Copia senza modifiche dell’immagine originale, con trasparenza conservata; non generata con IA. Usato nella slide S02, con ruolo e aree di ricerca riportati dal sito.
 
 ## learning.png
 
