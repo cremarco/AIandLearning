@@ -237,9 +237,9 @@ title: "What would count as learning?"
 
 ### Copione — parole da pronunciare
 
-Uno studente usa l’IA, finisce prima e fa meno errori. Che cos’altro mostrerebbe che ha imparato? Potete pensarci, scrivere o parlarne con un compagno.
+Uno studente risolve un problema di matematica con l’IA: risposta corretta e meno tempo. Non sappiamo ancora se sa spiegare il procedimento. Che cosa gli chiedereste di spiegare o provare? Pensateci, scrivete oppure confrontatevi con un compagno.
 
-Grazie. Ci servono prove di ciò che lo studente sa spiegare o fare, non soltanto un prodotto migliore.
+Grazie. Potremmo chiedere il perché di un passaggio o un problema simile senza la risposta dell’IA, mantenendo gli ausili di accesso. Così verifichiamo la comprensione oltre al prodotto consegnato.
 
 ### Solo Forum — aggiunta facoltativa da pronunciare
 
@@ -255,9 +255,9 @@ La vostra verifica riguarda ciò che lo studente sa fare subito, oppure ciò che
 
 ### Script — words to say
 
-A student uses AI, finishes faster, and makes fewer mistakes. What else would show learning? Think, write, or talk with a partner.
+Imagine a student using AI to solve a maths problem. The answer is correct and the student finishes faster. We have not heard the student explain the steps. What would you ask them to explain or try next? Think, write, or talk with a partner.
 
-Thank you. We need evidence of what the student can explain or do, not only a better product.
+Thank you. Ask why one step works, or try a similar problem without the AI answer. Keep access support. This checks more than the submitted product.
 
 ### Forum only — optional extra words to say
 
@@ -266,7 +266,7 @@ Does your check show what the student can do now, or what they will remember lat
 
 ## Riferimenti di preparazione — non leggere / Background — do not read aloud
 
-Domanda iniziale originale, non un test diagnostico. Accogliere due risposte nel Forum, una nei percorsi brevi. Non raccogliere nomi o punteggi. Cercare esempi di spiegazione autonoma, applicazione nuova e controllo differito; non suggerire che ogni assistenza debba essere rimossa, inclusi gli ausili di accesso.
+Scenario didattico illustrativo originale: uno studente usa l’IA per risolvere un problema di matematica e consegna prima una risposta corretta. Non abbiamo ancora osservato se sa spiegare i passaggi. La consegna chiede al pubblico di proporre una verifica della comprensione, per esempio motivare un passaggio o affrontare un problema simile senza la risposta generata. Non è un risultato empirico né un test diagnostico. Accogliere una risposta nei percorsi brevi, due nel Forum; non raccogliere nomi o punteggi. Conservare gli ausili di accesso. Una verifica immediata non dimostra ritenzione duratura; il Forum può distinguere anche un controllo differito.
 
 Forum: 2 min; finestra 2.5–4.5 min.
 University: 1 min; finestra 2–3 min.
