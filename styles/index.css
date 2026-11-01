@@ -28,9 +28,6 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .slidev-layout .type-company .company-heading h1 { font-size: 76px; line-height: 1; }
 .company-logo { display: block; width: 88px; height: 88px; flex-shrink: 0; order: -1; }
 .slidev-layout .deck-slide.type-company > .lead { max-width: 680px; color: #a3e635; font-size: 27px; }
-.company-backdrop { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
-.company-watermark { position: absolute; top: 48px; right: 52px; width: 360px; height: 360px; opacity: .13; }
-.company-cubes { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .company-pillars { display: grid; gap: 24px; width: 600px; max-width: 55%; padding-top: 20px; }
 .company-pillar { display: flex; flex-direction: column; gap: 8px; }
 .slidev-layout .deck-slide .company-pillar h2 { font-size: 28px; line-height: 1.15; }

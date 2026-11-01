@@ -7,6 +7,7 @@ import ActivityTimer from './ActivityTimer.vue'
 import FlowPicker from './FlowPicker.vue'
 import SourceLine from './SourceLine.vue'
 import DeckIcon from './DeckIcon.vue'
+import WhattadataCubes from './WhattadataCubes.vue'
 
 const props = defineProps<{ id: string }>()
 const s = computed<any>(() => slides.find(slide => slide.id === props.id))
@@ -66,10 +67,7 @@ const dataset = [
     </template>
 
     <template v-else>
-      <div v-if="s.type === 'company'" class="company-backdrop" aria-hidden="true">
-        <img class="company-watermark" :src="image('whattadata.svg')" alt="" />
-        <img class="company-cubes" :src="image('whattadata-cubes.png')" alt="" />
-      </div>
+      <WhattadataCubes v-if="s.type === 'company'" />
       <header class="slide-heading" :class="{ 'company-heading': s.type === 'company' }">
         <h1>{{ s.title }}</h1>
         <img v-if="s.type === 'company'" class="company-logo" :src="image('whattadata.svg')" alt="Whattadata logo" />

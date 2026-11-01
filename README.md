@@ -106,4 +106,4 @@ La slide del relatore riprende il profilo del [sito personale](https://cremarco.
 
 La slide Whattadata segue la presentazione del relatore in tutti i percorsi. Status e attività sono documentati dal sito ufficiale e dalla scheda istituzionale UniMiB; `public/images/whattadata.svg` è il logo ufficiale. Gli ID delle slide restano stabili quando cambia l’ordine fisico.
 
-La slide Whattadata usa una composizione dedicata al marchio: logo ufficiale anche sullo sfondo, cubi viola/lime ripresi da AIPP e tre ambiti di attività in testo. Le immagini decorative sono conservate localmente e non richiedono una connessione durante la presentazione.
+La slide Whattadata usa una composizione dedicata al marchio: logo ufficiale accanto al titolo, cubi 3D viola/lime animati in CSS e tre ambiti di attività in testo. Lo sfondo non contiene loghi. Il comando “Pause motion” ferma i cubi anche nella finestra di presentazione sincronizzata; l'animazione si sospende sulle slide inattive o quando la pagina è nascosta e resta statica con movimento ridotto e in stampa. La grafica non richiede una connessione né dipendenze 3D aggiuntive. Il componente è `components/WhattadataCubes.vue`.
