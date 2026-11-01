@@ -271,10 +271,10 @@ try {
   }
 
   // Check every public image, not only the backgrounds reached by this smoke pass.
-  await navigate(entry.href, 'S01')
-  const cover = await visible('S01')
-  const heroURL = await cover.locator('img').first().evaluate(image => image.currentSrc || image.src)
-  const imageBase = new URL('./', heroURL)
+  await navigate(slideURL(profileTemplate, 'S02', flow.id), 'S02')
+  const profile = await visible('S02')
+  const profileImageURL = await profile.locator('img').first().evaluate(image => image.currentSrc || image.src)
+  const imageBase = new URL('./', profileImageURL)
   const imageFiles = (await readdir(join(project, 'public/images')))
     .filter(name => /\.(png|jpe?g|webp|gif|svg|avif)$/i.test(name)).sort()
   for (const name of imageFiles) {

@@ -56,7 +56,6 @@ const dataset = [
 <template>
   <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`]" :data-slide-id="s.id">
     <template v-if="s.type === 'cover'">
-      <img class="cover-hero" :src="image('hero-dark.png')" alt="" aria-hidden="true" />
       <div class="cover-copy">
         <h1 class="cover-title">Beyond<br /><span>prompting</span></h1>
         <p class="cover-subtitle">{{ s.message }}</p>

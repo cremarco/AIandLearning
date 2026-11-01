@@ -25,7 +25,7 @@ Use case: style-transfer / stylized-concept. Asset type: premium university pres
 
 ### Variante scura: hero-dark.png
 
-File attivo nel tema scuro: `public/images/hero-dark.png`, usato in copertina e come grafica decorativa nella presentazione del relatore. È la prima variante già generata, riutilizzata senza modifiche raster. La versione avorio sopra rimane come asset di riferimento.
+File attivo nel tema scuro: `public/images/hero-dark.png`, usato come grafica decorativa nella presentazione del relatore. La copertina usa un fondo scuro uniforme, senza immagine. È la prima variante già generata, riutilizzata senza modifiche raster. La versione avorio sopra rimane come asset di riferimento.
 
 Output: `$CODEX_HOME/generated_images/01a19275-6121-7152-b80a-ce7e02b45173/exec-1e2a02f4-edd7-4865-a284-64cbbc2cb14f.png`.
 
