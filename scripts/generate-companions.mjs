@@ -160,12 +160,12 @@ function routeOverview(language) {
   return lines
 }
 function timing(slide, language) {
-  return flows.map(flow => {
+  return [`${language === 'it' ? 'Pagina' : 'Page'} ${slide.number} / ${slides.length}`, ...flows.map(flow => {
     const entry = schedules.get(flow.id).find(entry => entry.id === slide.id)
     return entry
       ? `${flow.name}: ${entry.minutes} min; ${clock(entry.start)}–${clock(entry.end)}; ${language === 'it' ? 'posizione' : 'position'} ${entry.index}/${flow.slideIds.length}`
       : `${flow.name}: ${language === 'it' ? 'fuori dalla sequenza programmata' : 'outside the scheduled sequence'} (${slide.duration[flow.id]} min)`
-  })
+  })]
 }
 function sourceLines(ids) {
   return ids.flatMap(id => {
@@ -321,7 +321,7 @@ for (const flow of flows) for (const language of ['it', 'en']) {
   for (const entry of schedules.get(flow.id)) {
     const slide = byId.get(entry.id)
     const note = speakerNotes[entry.id]
-    lines.push(`${entry.index}/${flow.slideIds.length} — SLIDE ${slide.id} — ${slide.title}`, `${clock(entry.start)}–${clock(entry.end)}; ${entry.minutes} min`, '', ...scriptSections(note, language, { includeForumExtra: flow.id === 'forum' }), '')
+    lines.push(`${entry.index}/${flow.slideIds.length} — SLIDE ${slide.id} — ${slide.title}`, `${it ? 'Pagina' : 'Page'} ${slide.number} / ${slides.length}`, `${clock(entry.start)}–${clock(entry.end)}; ${entry.minutes} min`, '', ...scriptSections(note, language, { includeForumExtra: flow.id === 'forum' }), '')
     if (it) lines.push('PREPARAZIONE — NON LEGGERE:', slide.notes, '')
     lines.push(it ? 'FONTI — NON LEGGERE:' : 'SOURCES — FOR REFERENCE, NOT TO READ ALOUD:', ...sourceLines(slide.sources), '')
     assert.ok(lines.join('\n').includes(note[language].trim()), `${flow.id}/${slide.id}: missing route script`)

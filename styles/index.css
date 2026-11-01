@@ -93,7 +93,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .map-arrow { display: flex; align-items: center; justify-content: center; color: var(--deck-cyan); font-size: 32px; flex: 0 0 24px; }
 .slidev-layout .deck-slide .prompt-block { padding: 24px 28px; border: 1px solid var(--deck-line); border-radius: var(--deck-radius); background: var(--deck-surface); font-family: var(--deck-font); font-size: 25px; line-height: 1.35; white-space: pre-wrap; }
 .activity-steps .prompt-block { margin-bottom: 16px; }
-.source-line { position: absolute; left: 64px; right: 64px; bottom: 27px; color: var(--deck-muted); font-size: 14px; line-height: 1.4; letter-spacing: 0; }
+.source-line { position: absolute; left: 64px; right: 174px; bottom: 27px; color: var(--deck-muted); font-size: 14px; line-height: 1.4; letter-spacing: 0; }
+.slide-page { position: absolute; right: 57px; bottom: 23px; padding: 3px 7px; border-radius: 6px; background: var(--deck-paper); color: var(--deck-muted); font-size: 16px; line-height: 1.4; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .slidev-layout .deck-slide .source-line a { color: var(--deck-muted); }
 .resource-links { display: flex; gap: 24px; font-size: 22px; }
 .resource-links a,.material-link { display: inline-flex; align-items: center; gap: 6px; }

@@ -6,7 +6,7 @@ Il progetto contiene **44 slide: 41 condivise e 3 schede scientifiche di approfo
 
 ## Avvio e distribuzione
 
-Richiede Node.js 22.12 o successivo e pnpm (versione usata: 11.25.0). Dalla cartella del progetto:
+Richiede Node.js **24.12.0 o successivo** e pnpm (versione usata: 11.25.0). Questo minimo copre le dipendenze bloccate nel lockfile anche su Linux; GitHub Actions usa Node.js 24. Dalla cartella del progetto:
 
 ```sh
 pnpm install
@@ -46,10 +46,11 @@ Scegliere l’evento dai pulsanti della copertina, oppure aprire un indirizzo di
 Nel sito compilato la rotta è dopo il cancelletto: per esempio `http://localhost:8080/#/1?flow=forum`, adattando host e cartella al proprio server. Senza `flow`, o scegliendo **All slides**, si esplorano tutte le 44 slide. Le durate sono tempi di facilitazione previsti, da adattare al gruppo.
 
 - **Tastiera:** frecce sinistra/destra o Pag↑/Pag↓ seguono il percorso selezionato; Spazio avanza quando il focus non è su un controllo. Tab raggiunge pulsanti e link; Invio/Spazio attiva il pulsante selezionato.
+- **Numerazione fisica:** ogni slide mostra sempre il proprio numero da **1 / 44** a **44 / 44**, coerente con il PDF e con i copioni. La numerazione resta fissa quando si cambia percorso; lo stato del percorso indica separatamente la posizione nella selezione attiva.
 - **Controlli in basso:** compaiono al passaggio del puntatore o quando ricevono il focus. Offrono un selettore del percorso (incluso All slides), Agenda, stato del percorso, indietro e avanti. Sui dispositivi touch restano visibili sotto la slide e includono Text per aprire la versione testuale.
 - **Agenda:** le quattro card aprono l’inizio del relativo capitolo nel percorso attivo.
 - **Schede scientifiche:** le tre schede finali si aprono dall’attività; **Return to the activity** riporta alla slide S33.
-- **Timer:** partono solo con Start. Pause sospende, Reset ripristina il tempo iniziale e +1 min lo estende. Uscire dalla slide mette il timer in pausa. Il tempo è flessibile e non misura la velocità dei partecipanti.
+- **Timer:** partono solo con Start. Pause sospende, Reset ripristina il tempo iniziale e +1 min lo estende. I comandi agiscono sulla slide attiva e si sincronizzano tra vista relatore e proiezione. Uscire dalla slide mette il timer in pausa. Il tempo è flessibile e non misura la velocità dei partecipanti.
 
 ## Materiali e partecipazione
 
@@ -68,7 +69,7 @@ Le alternative testuali e i controlli da tastiera aiutano l’accesso, ma non co
 
 ## Copioni del relatore
 
-Le note native di Slidev contengono entrambe le lingue: aprire la vista relatore con **P** e leggere la sezione della lingua scelta. I due file `Presenter_Notes_IT.txt` e `Presenter_Notes_EN.txt` permettono anche di prepararsi e leggere una sola lingua fuori dalla presentazione.
+Le note native di Slidev contengono entrambe le lingue: leggere la sezione della lingua scelta. La scorciatoia **P** è abilitata per aprire e chiudere la vista relatore conservando il parametro `flow` del percorso nell’URL. Nella vista relatore, i controlli nativi indietro/avanti e l’anteprima **Next** seguono il percorso selezionato. I due file `Presenter_Notes_IT.txt` e `Presenter_Notes_EN.txt` permettono anche di prepararsi e leggere una sola lingua fuori dalla presentazione.
 
 Le sezioni **Copione / Script** riportano le parole da pronunciare, comprese consegne, domande e ripresa del lavoro dopo le attività. Le **Azioni / Presenter actions** specificano quando fermarsi, lasciare lavorare il gruppo e riprendere il paragrafo successivo; non vanno lette ad alta voce. Le aggiunte **Solo Forum / Forum only** sono facoltative e riservate al percorso lungo. I riferimenti tecnici e le cautele originali sono separati dal discorso. I tempi includono il lavoro e le risposte dei partecipanti: non richiedono di parlare per l’intera durata della slide.
 

@@ -189,5 +189,6 @@ const dataset = [
       <p v-if="s.takeaway && s.type !== 'activity'" class="takeaway">{{ s.takeaway }}</p>
       <SourceLine :ids="s.sources.filter((id: string) => id !== 'BIO02').slice(0, 3)" :note="s.type === 'activity' || s.type === 'template' ? 'Original workshop activity, informed by' : undefined" />
     </template>
+    <span class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
   </main>
 </template>

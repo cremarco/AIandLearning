@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.25.0",
-  "engines": { "node": ">=22.12.0" },
+  "engines": { "node": ">=24.12.0" },
   "scripts": {
     "dev": "slidev --port 3030",
     "build": "slidev build --base ./ --router-mode hash",
@@ -11,6 +11,7 @@
     "generate": "node scripts/generate-slides.mjs && node scripts/generate-companions.mjs",
     "check:static": "node scripts/verify-static.mjs",
     "check:notes": "node scripts/verify-speaker-notes.mjs",
+    "check:slidev": "node scripts/verify-slidev-integration.mjs",
     "check": "node scripts/verify-deck.mjs"
   },
   "dependencies": {
