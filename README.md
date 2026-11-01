@@ -105,3 +105,5 @@ La slide del relatore riprende il profilo del [sito personale](https://cremarco.
 `public/images/` contiene sette asset generati con il tool integrato image_gen (compresa la variante di copertina scura già generata) e una grafica di riferimento ripresa dal progetto AIPP (`profile-aipp.png`). Prompt, provenienza e descrizioni alternative proposte sono in [image-prompts.md](image-prompts.md). Le persone raffigurate nelle nuove immagini sono sintetiche e non rappresentano Marco o partecipanti reali.
 
 La slide Whattadata segue la presentazione del relatore in tutti i percorsi. Status e attività sono documentati dal sito ufficiale e dalla scheda istituzionale UniMiB; `public/images/whattadata.svg` è il logo ufficiale. Gli ID delle slide restano stabili quando cambia l’ordine fisico.
+
+La slide Whattadata usa una composizione dedicata al marchio: logo ufficiale anche sullo sfondo, cubi viola/lime ripresi da AIPP e tre ambiti di attività in testo. Le immagini decorative sono conservate localmente e non richiedono una connessione durante la presentazione.

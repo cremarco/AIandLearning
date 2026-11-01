@@ -66,6 +66,10 @@ const dataset = [
     </template>
 
     <template v-else>
+      <div v-if="s.type === 'company'" class="company-backdrop" aria-hidden="true">
+        <img class="company-watermark" :src="image('whattadata.svg')" alt="" />
+        <img class="company-cubes" :src="image('whattadata-cubes.png')" alt="" />
+      </div>
       <header class="slide-heading" :class="{ 'company-heading': s.type === 'company' }">
         <h1>{{ s.title }}</h1>
         <img v-if="s.type === 'company'" class="company-logo" :src="image('whattadata.svg')" alt="Whattadata logo" />
@@ -80,6 +84,15 @@ const dataset = [
             <ul class="profile-research"><li v-for="area in s.body.slice(1)" :key="area">{{ area }}</li></ul>
           </div>
           <img class="profile-art" :src="image('marco-cremaschi.webp')" alt="Portrait of Marco Cremaschi, from his personal website" />
+        </div>
+      </template>
+
+      <template v-else-if="s.type === 'company'">
+        <div class="company-pillars">
+          <section v-for="card in cards" :key="card.title" class="company-pillar">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.body }}</p>
+          </section>
         </div>
       </template>
 

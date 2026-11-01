@@ -110,3 +110,7 @@ Use case: stylized-concept / productivity-visual. Asset type: reusable image bac
 - Fonte: https://whattadata.it/img/logo/whattadata.svg (consultata il 31 ottobre 2026).
 - Marchio originale, utilizzato per identificare l’organizzazione del relatore; non generato o modificato.
 - Testo alternativo: “Whattadata logo”.
+
+## Whattadata: logo e cubi
+
+La slide S44 adotta la palette ufficiale viola `#4f46e5` e lime `#a3e635`, con logo ingrandito sullo sfondo e tre ambiti di attività in testo. `public/images/whattadata-cubes.png` è una copia senza modifiche di `../AIPP/public/images/whattadata-bg.png` (1672 × 941, PNG con trasparenza), già presente nella presentazione AIPP del relatore. Il logo ufficiale rimane `public/images/whattadata.svg`, usato come marchio e come elemento decorativo di sfondo. Nessuna nuova immagine generata o modifica raster per questa revisione; trasparenza originale conservata.
