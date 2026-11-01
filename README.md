@@ -47,6 +47,7 @@ Nel sito compilato la rotta è dopo il cancelletto: per esempio `http://localhos
 
 - **Tastiera:** frecce sinistra/destra o Pag↑/Pag↓ seguono il percorso selezionato; Spazio avanza quando il focus non è su un controllo. Tab raggiunge pulsanti e link; Invio/Spazio attiva il pulsante selezionato.
 - **Numerazione fisica:** ogni slide mostra sempre il proprio numero da **1 / 44** a **44 / 44**, coerente con il PDF e con i copioni. La numerazione resta fissa quando si cambia percorso; lo stato del percorso indica separatamente la posizione nella selezione attiva.
+- **Barra di avanzamento:** il bordo inferiore mostra la posizione nel percorso selezionato e si completa sull’ultima slide dell’evento. Le schede scientifiche mantengono la posizione dell’attività da cui si aprono. In All slides e nel PDF segue tutte le 44 slide.
 - **Controlli in basso:** compaiono al passaggio del puntatore o quando ricevono il focus. Offrono un selettore del percorso (incluso All slides), Agenda, stato del percorso, indietro e avanti. Sui dispositivi touch restano visibili sotto la slide e includono Text per aprire la versione testuale.
 - **Agenda:** le quattro card aprono l’inizio del relativo capitolo nel percorso attivo.
 - **Schede scientifiche:** le tre schede finali si aprono dall’attività; **Return to the activity** riporta alla slide S33.

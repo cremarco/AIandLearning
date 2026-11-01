@@ -11,6 +11,19 @@ import DeckIcon from './DeckIcon.vue'
 const props = defineProps<{ id: string }>()
 const s = computed<any>(() => slides.find(slide => slide.id === props.id))
 const flow = useDeckFlow()
+const slideProgress = computed(() => {
+  const selected = flow.nav.isPrintMode.value ? undefined : flow.selected.value
+  // Reference cards are a detour from S33, so they keep the activity's position.
+  const reference = s.value?.type === 'evidence_card'
+  const index = selected?.slideIds.indexOf(reference ? 'S33' : props.id) ?? -1
+  const value = index >= 0 ? index + 1 : s.value.number
+  const max = index >= 0 ? selected!.slideIds.length : slides.length
+  return {
+    value, max,
+    label: index >= 0 ? `${selected!.name} route progress` : 'All slides progress',
+    text: `${reference && index >= 0 ? 'Study reference; activity position: ' : 'Slide '}${value} of ${max}`,
+  }
+})
 const base = import.meta.env.BASE_URL
 const image = (name: string) => `${base}images/${name}`
 const file = (name: string) => `${base}materials/${name}`
@@ -190,5 +203,6 @@ const dataset = [
       <SourceLine :ids="s.sources.filter((id: string) => id !== 'BIO02').slice(0, 3)" :note="s.type === 'activity' || s.type === 'template' ? 'Original workshop activity, informed by' : undefined" />
     </template>
     <span class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
+    <progress class="progress progress-accent slide-progress" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
   </main>
 </template>

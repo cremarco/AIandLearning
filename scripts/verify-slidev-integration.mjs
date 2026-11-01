@@ -23,12 +23,19 @@ async function main(id, presenter = false) {
   await target.waitFor()
   return target
 }
+async function checkProgress(element, value, max, scope) {
+  const bar = element.locator('.slide-progress')
+  assert.equal(await bar.getAttribute('value'), String(value))
+  assert.equal(await bar.getAttribute('max'), String(max))
+  assert.equal(await bar.getAttribute('aria-label'), scope)
+}
 const report = { status: 'running', pageNumbers: [], flows: [], errors }
 try {
   for (const slide of slides) {
     await page.goto(url(slide.id, 'all'), { waitUntil: 'networkidle' })
     const slideElement = await main(slide.id)
     assert.equal(await slideElement.locator('.slide-page').innerText(), `${slide.number} / ${slides.length}`)
+    await checkProgress(slideElement, slide.number, slides.length, 'All slides progress')
     const overlap = await slideElement.evaluate(element => {
       const number = element.querySelector('.slide-page').getBoundingClientRect()
       const sources = element.querySelector('.source-line')?.getBoundingClientRect()
@@ -42,14 +49,15 @@ try {
     const position = flow.slideIds.indexOf('S08')
     const next = flow.slideIds[position + 1]
     await page.goto(url('S08', flow.id), { waitUntil: 'networkidle' })
-    await main('S08')
+    await checkProgress(await main('S08'), position + 1, flow.slideIds.length, `${flow.name} route progress`)
     await page.keyboard.press('p')
     await page.locator('.slidev-presenter').waitFor()
     await main('S08', true)
     assert(page.url().includes(`flow=${flow.id}`), 'P must preserve the selected event')
     await page.locator(`.grid-section.next .slide-${next}`).waitFor()
+    await checkProgress(page.locator(`.grid-section.next .slide-${next}`), position + 2, flow.slideIds.length, `${flow.name} route progress`)
     await page.getByTitle('Go to next slide', { exact: true }).click()
-    await main(next, true)
+    await checkProgress(await main(next, true), position + 2, flow.slideIds.length, `${flow.name} route progress`)
     await page.getByTitle('Go to previous slide', { exact: true }).click()
     await main('S08', true)
     await page.keyboard.press('p')
@@ -58,7 +66,7 @@ try {
     assert(page.url().includes(`flow=${flow.id}`))
 
     await page.goto(url('S40', flow.id, true), { waitUntil: 'networkidle' })
-    await main('S40', true)
+    await checkProgress(await main('S40', true), flow.slideIds.length, flow.slideIds.length, `${flow.name} route progress`)
     // Slidev's IconButton represents its disabled prop with a CSS class.
     assert.match(await page.getByTitle('Go to next slide', { exact: true }).getAttribute('class'), /\bdisabled\b/, 'Native controls must stop at the route end')
     await page.keyboard.press('ArrowRight')
@@ -66,7 +74,7 @@ try {
     assert.equal(await page.locator('.grid-section.next .deck-slide').count(), 0, 'Route end must not preview an optional card')
 
     await page.goto(url('S43', flow.id, true), { waitUntil: 'networkidle' })
-    await main('S43', true)
+    await checkProgress(await main('S43', true), flow.slideIds.indexOf('S33') + 1, flow.slideIds.length, `${flow.name} route progress`)
     await page.getByTitle('Go to previous slide', { exact: true }).click()
     await main('S33', true)
     report.flows.push({ id: flow.id, nextAfterS08: next, presenterShortcut: 'passed', nativeControls: 'passed', nextPreview: 'passed', routeEnd: 'passed', referenceReturn: 'passed' })
