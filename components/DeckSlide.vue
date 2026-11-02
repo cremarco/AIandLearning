@@ -12,6 +12,9 @@ const s = computed<any>(() => slides.find(slide => slide.id === props.id))
 const image = (name: string) => `${import.meta.env.BASE_URL}images/${name}`
 const lead = computed(() => s.value && !['cover', 'profile', 'agenda'].includes(s.value.type) ? s.value.message : '')
 const cards = computed(() => s.value && 'cards' in s.value ? s.value.cards : [])
+const bentoCards = computed(() => s.value?.type === 'brief' && cards.value.length === 3
+  ? [cards.value[1], cards.value[0], cards.value[2]]
+  : cards.value)
 const slideProgress = computed(() => ({
   value: s.value?.number || 1,
   max: slides.length,
@@ -90,8 +93,8 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
       </template>
 
       <template v-else>
-        <div class="bento-grid" :class="{ three: cards.length === 3 }">
-          <BentoCard v-for="(card, i) in cards" :key="i" v-bind="card" />
+        <div class="bento-grid" :class="{ three: bentoCards.length === 3 }">
+          <BentoCard v-for="(card, i) in bentoCards" :key="card.title" v-bind="card" :tone="i === 0 ? 'paper' : i === 2 ? 'accent' : 'surface'" />
         </div>
       </template>
 
