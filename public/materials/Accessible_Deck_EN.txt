@@ -1,2127 +1,1332 @@
-BEYOND PROMPTING — ACCESSIBLE DECK TEXT
-Visual tools for self-directed learning with artificial intelligence
-
-Generated from data/slides.json, data/flows.json, data/sources.json and the DeckSlide.vue renderer.
-The 44 slide sections below preserve the English data, custom cards, results, limits, prompts and prepared examples. Renderer-only content and diagram descriptions are included in linear order. Decorative background images are omitted.
-Route timeboxes are expressed as elapsed minutes:seconds. The optional reference cards remain available outside the scheduled routes.
-Read-aloud scripts are in Presenter_Notes_IT.txt (Italian) and Presenter_Notes_EN.txt (simple English), in the same materials folder. Both languages are also included in Slidev presenter notes.
-
-ORDER AND TIMING OF THE THREE ROUTES
-
-Forum — 90 minutes
-EDU Forum · 11–12 November 2026
-Focus: Responsible AI and visual guidance
-1. S01 — Beyond prompting
-   00:00 to 00:30; 0.5 min
-2. S02 — Marco Cremaschi
-   00:30 to 01:30; 1 min
-3. S44 — Whattadata
-   01:30 to 02:00; 0.5 min
-4. S03 — Today’s route
-   02:00 to 02:30; 0.5 min
-5. S04 — What would count as learning?
-   02:30 to 04:30; 2 min
-6. S05 — Session outcomes
-   04:30 to 05:00; 0.5 min
-7. S06 — Self-direction and self-regulation
-   05:00 to 07:00; 2 min
-8. S07 — The learning regulation cycle
-   07:00 to 09:00; 2 min
-9. S08 — Four different outcomes
-   09:00 to 11:00; 2 min
-10. S09 — Better practice can hide a weaker independent test
-   11:00 to 14:00; 3 min
-11. S10 — A designed tutor improved immediate test performance
-   14:00 to 17:00; 3 min
-12. S11 — The comparison is part of the finding
-   17:00 to 19:00; 2 min
-13. S12 — A better essay did not establish better transfer
-   19:00 to 21:00; 2 min
-14. S13 — More prompting did not improve every school outcome
-   21:00 to 23:00; 2 min
-15. S14 — Emotional support and knowledge are different outcomes
-   23:00 to 25:00; 2 min
-16. S15 — Proactive guidance helped learners interpret visual data
-   25:00 to 27:00; 2 min
-17. S16 — Choose a visual form for the task
-   27:00 to 29:00; 2 min
-18. S17 — Map construction and retrieval
-   29:00 to 31:00; 2 min
-19. S18 — Which link needs evidence?
-   31:00 to 33:00; 2 min
-20. S19 — The Learning Path Canvas
-   33:00 to 35:00; 2 min
-21. S20 — Guidance, fading and access support
-   35:00 to 37:00; 2 min
-22. S21 — Fluent answers and fabricated references
-   37:00 to 39:00; 2 min
-23. S22 — Reflection before accepting AI advice
-   39:00 to 41:00; 2 min
-24. S23 — Language, bias and missing perspectives
-   41:00 to 43:00; 2 min
-25. S24 — Privacy and institutional responsibility
-   43:00 to 45:00; 2 min
-26. S25 — Access support belongs in the learning design
-   45:00 to 47:00; 2 min
-27. S26 — Can someone recover the argument without the diagram?
-   47:00 to 49:00; 2 min
-28. S27 — An image description can invent a consequential detail
-   49:00 to 51:00; 2 min
-29. S28 — Participation choices
-   51:00 to 52:00; 1 min
-30. S29 — Tool roles and selection
-   52:00 to 54:00; 2 min
-31. S30 — A prepared example: check the outcome
-   54:00 to 56:00; 2 min
-32. S31 — Design a responsible study activity
-   56:00 to 57:30; 1.5 min
-33. S32 — Your first attempt
-   57:30 to 60:30; 3 min
-34. S33 — Check what the evidence supports
-   60:30 to 64:30; 4 min
-35. S34 — Build the learning path
-   64:30 to 70:30; 6 min
-36. S35 — Revise a weak study recommendation
-   70:30 to 73:30; 3 min
-37. S36 — Explain the decision without the model answer
-   73:30 to 75:30; 2 min
-38. S37 — Debrief the learning path
-   75:30 to 79:30; 4 min
-39. S38 — One decision, one later check
-   79:30 to 81:30; 2 min
-40. S39 — Keep the learning decisions visible
-   81:30 to 83:30; 2 min
-41. S40 — Questions and discussion
-   83:30 to 90:00; 6.5 min
-
-University — 48 minutes
-Mykolas Romeris University · 10 November 2026
-Focus: Critical reading, writing and evidence
-1. S01 — Beyond prompting
-   00:00 to 00:30; 0.5 min
-2. S02 — Marco Cremaschi
-   00:30 to 01:00; 0.5 min
-3. S44 — Whattadata
-   01:00 to 01:30; 0.5 min
-4. S03 — Today’s route
-   01:30 to 02:00; 0.5 min
-5. S04 — What would count as learning?
-   02:00 to 03:00; 1 min
-6. S06 — Self-direction and self-regulation
-   03:00 to 04:30; 1.5 min
-7. S07 — The learning regulation cycle
-   04:30 to 05:30; 1 min
-8. S08 — Four different outcomes
-   05:30 to 07:00; 1.5 min
-9. S12 — A better essay did not establish better transfer
-   07:00 to 09:00; 2 min
-10. S09 — Better practice can hide a weaker independent test
-   09:00 to 10:30; 1.5 min
-11. S10 — A designed tutor improved immediate test performance
-   10:30 to 12:00; 1.5 min
-12. S15 — Proactive guidance helped learners interpret visual data
-   12:00 to 13:00; 1 min
-13. S14 — Emotional support and knowledge are different outcomes
-   13:00 to 14:00; 1 min
-14. S16 — Choose a visual form for the task
-   14:00 to 15:30; 1.5 min
-15. S17 — Map construction and retrieval
-   15:30 to 16:30; 1 min
-16. S20 — Guidance, fading and access support
-   16:30 to 18:00; 1.5 min
-17. S21 — Fluent answers and fabricated references
-   18:00 to 19:30; 1.5 min
-18. S22 — Reflection before accepting AI advice
-   19:30 to 21:00; 1.5 min
-19. S23 — Language, bias and missing perspectives
-   21:00 to 22:00; 1 min
-20. S24 — Privacy and institutional responsibility
-   22:00 to 23:00; 1 min
-21. S25 — Access support belongs in the learning design
-   23:00 to 24:30; 1.5 min
-22. S26 — Can someone recover the argument without the diagram?
-   24:30 to 25:30; 1 min
-23. S27 — An image description can invent a consequential detail
-   25:30 to 26:30; 1 min
-24. S29 — Tool roles and selection
-   26:30 to 28:00; 1.5 min
-25. S31 — Design a responsible study activity
-   28:00 to 29:00; 1 min
-26. S32 — Your first attempt
-   29:00 to 31:00; 2 min
-27. S33 — Check what the evidence supports
-   31:00 to 33:00; 2 min
-28. S34 — Build the learning path
-   33:00 to 37:00; 4 min
-29. S35 — Revise a weak study recommendation
-   37:00 to 38:00; 1 min
-30. S36 — Explain the decision without the model answer
-   38:00 to 39:00; 1 min
-31. S37 — Debrief the learning path
-   39:00 to 41:30; 2.5 min
-32. S38 — One decision, one later check
-   41:30 to 42:30; 1 min
-33. S39 — Keep the learning decisions visible
-   42:30 to 44:00; 1.5 min
-34. S40 — Questions and discussion
-   44:00 to 48:00; 4 min
-
-Teachers — 50 minutes
-Teacher workshop · 13 November 2026
-Focus: Designing a classroom learning activity
-1. S01 — Beyond prompting
-   00:00 to 00:30; 0.5 min
-2. S02 — Marco Cremaschi
-   00:30 to 01:00; 0.5 min
-3. S44 — Whattadata
-   01:00 to 01:30; 0.5 min
-4. S03 — Today’s route
-   01:30 to 02:00; 0.5 min
-5. S04 — What would count as learning?
-   02:00 to 03:00; 1 min
-6. S06 — Self-direction and self-regulation
-   03:00 to 04:00; 1 min
-7. S07 — The learning regulation cycle
-   04:00 to 05:30; 1.5 min
-8. S08 — Four different outcomes
-   05:30 to 07:00; 1.5 min
-9. S16 — Choose a visual form for the task
-   07:00 to 08:30; 1.5 min
-10. S17 — Map construction and retrieval
-   08:30 to 10:00; 1.5 min
-11. S20 — Guidance, fading and access support
-   10:00 to 12:00; 2 min
-12. S09 — Better practice can hide a weaker independent test
-   12:00 to 14:00; 2 min
-13. S10 — A designed tutor improved immediate test performance
-   14:00 to 15:30; 1.5 min
-14. S13 — More prompting did not improve every school outcome
-   15:30 to 17:30; 2 min
-15. S14 — Emotional support and knowledge are different outcomes
-   17:30 to 18:30; 1 min
-16. S21 — Fluent answers and fabricated references
-   18:30 to 20:00; 1.5 min
-17. S23 — Language, bias and missing perspectives
-   20:00 to 21:00; 1 min
-18. S24 — Privacy and institutional responsibility
-   21:00 to 22:30; 1.5 min
-19. S25 — Access support belongs in the learning design
-   22:30 to 24:00; 1.5 min
-20. S26 — Can someone recover the argument without the diagram?
-   24:00 to 25:30; 1.5 min
-21. S27 — An image description can invent a consequential detail
-   25:30 to 26:30; 1 min
-22. S29 — Tool roles and selection
-   26:30 to 28:00; 1.5 min
-23. S30 — A prepared example: check the outcome
-   28:00 to 29:00; 1 min
-24. S31 — Design a responsible study activity
-   29:00 to 30:00; 1 min
-25. S32 — Your first attempt
-   30:00 to 32:00; 2 min
-26. S33 — Check what the evidence supports
-   32:00 to 34:00; 2 min
-27. S34 — Build the learning path
-   34:00 to 39:00; 5 min
-28. S35 — Revise a weak study recommendation
-   39:00 to 41:00; 2 min
-29. S36 — Explain the decision without the model answer
-   41:00 to 42:30; 1.5 min
-30. S37 — Debrief the learning path
-   42:30 to 44:30; 2 min
-31. S38 — One decision, one later check
-   44:30 to 46:30; 2 min
-32. S39 — Keep the learning decisions visible
-   46:30 to 47:30; 1 min
-33. S40 — Questions and discussion
-   47:30 to 50:00; 2.5 min
-
-References outside the scheduled sequences: S41, S42, S43.
-
-ALL 44 SLIDES — PRESENTATION ORDER (STABLE SLIDE IDS)
+BEYOND PROMPTING — STUDY, UNDERSTAND, ASSESS
+Marco Cremaschi · November 2026
+85 slides in one complete sequence. Participants observe the method; Luca is a fictional student in a teaching scenario.
+Public materials in English. Presenter scripts in Italian.
 
 SLIDE S01 — Beyond prompting
-Page 1 / 44
-Forum: 0.5 min; 00:00–00:30; position 1/41
-University: 0.5 min; 00:00–00:30; position 1/34
-Teachers: 0.5 min; 00:00–00:30; position 1/33
-
-Message: Visual tools for self-directed learning with artificial intelligence
-
-Additional displayed content / linear descriptions / links:
-- Beyond prompting
-- Visual tools for self-directed learning with artificial intelligence
-- Marco Cremaschi University of Milano-Bicocca · Whattadata
-- Vilnius · November 2026
-
-Sources:
-[BIO01] University profile
-Marco Cremaschi — University of Milano-Bicocca institutional profile
+Page 1 / 85
+Visual tools for self-directed learning with artificial intelligence
+[BIO01] Marco Cremaschi — University of Milano-Bicocca institutional profile
 https://www.unimib.it/marco-cremaschi
-[BIO02] AIPP presenter material
-Previous AIPP presenter material
+
+[BIO02] Previous AIPP presenter material
+
 
 
 SLIDE S02 — Marco Cremaschi
-Page 2 / 44
-Forum: 1 min; 00:30–01:30; position 2/41
-University: 0.5 min; 00:30–01:00; position 2/34
-Teachers: 0.5 min; 00:30–01:00; position 2/33
-
-Message: Tenure-Track Assistant Professor
-
-Content / steps (linear reading order):
-1. University of Milan-Bicocca
-2. Semantic AI & knowledge graphs
-3. Digital mental health
-4. Applied data systems
-
-Additional displayed content / linear descriptions / links:
-- Tenure-Track Assistant Professor
-- University of Milan-Bicocca
-
-Sources:
-[BIO03] Personal website
-Cremaschi, M. Personal portfolio and researcher profile. Consulted 1 November 2026.
-Marco Cremaschi — personal portfolio
+Page 2 / 85
+Tenure-track Assistant Professor
+University of Milano-Bicocca
+Semantic AI and knowledge graphs
+Digital mental health
+Applied data systems
+[BIO03] Cremaschi, M. Personal portfolio and researcher profile. Consulted 1 November 2026.
 https://cremarco.github.io/cv/
-[BIO01] University profile
-Marco Cremaschi — University of Milano-Bicocca institutional profile
+Self-authored biographical source; not evidence of learning effectiveness. Dynamic publication and project totals are not reproduced.
+[BIO01] Marco Cremaschi — University of Milano-Bicocca institutional profile
 https://www.unimib.it/marco-cremaschi
 
 
 SLIDE S44 — Whattadata
-Page 3 / 44
-Forum: 0.5 min; 01:30–02:00; position 3/41
-University: 0.5 min; 01:00–01:30; position 3/34
-Teachers: 0.5 min; 01:00–01:30; position 3/33
-
-Message: A spin-off of the University of Milano-Bicocca
-
-Custom cards (linear reading order):
-Card 1
-title: Predictive analytics
-body: Machine-learning models for data-informed decisions
-Card 2
-title: Responsible AI
-body: Design focused on people, evidence and system limits
-Card 3
-title: Modular solutions
-body: Components integrated into existing workflows
-
-Sources:
-[ORG01] Whattadata
-Whattadata (2026, consultato il 31 ottobre). Sito ufficiale: AI, machine learning and data analytics.
-Whattadata — AI, machine learning and data analytics
+Page 3 / 85
+A spin-off of the University of Milano-Bicocca
+Predictive analytics
+Machine learning models for decisions informed by data
+Responsible AI
+Design informed by people, evidence and system limitations
+Modular solutions
+Components integrated into existing processes
+[ORG01] Whattadata (2026, consultato il 31 ottobre). Sito ufficiale: AI, machine learning and data analytics.
 https://whattadata.it/
-[ORG02] University of Milano-Bicocca
-Università degli Studi di Milano-Bicocca (2026). Spin-off e start-up area ICT/Web: Whattadata S.r.l.
-Spin-off e start-up area ICT/Web — Whattadata S.r.l.
+Fonte aziendale per descrivere attività e approccio dichiarati; non prova indipendente di efficacia, sicurezza o conformità.
+[ORG02] Università degli Studi di Milano-Bicocca (2026). Spin-off e start-up area ICT/Web: Whattadata S.r.l.
 https://www.unimib.it/ricerca/valorizzazione-della-ricerca/imprenditorialita-accademica-spin-e-start/spin-e-start-area-ict-web
+La qualifica spin-off non documenta una partecipazione azionaria dell’ateneo né valida risultati didattici o clinici.
 
+SLIDE S03 — Three events, one shared deck
+Page 4 / 85
+University, EDU Forum and teacher workshop · November 2026
+10 November 2026 · Mykolas Romeris University
+11 November 2026 · EDU Forum workshop
+13 November 2026 · Teacher workshop in Druskininkai
+[PROGRAM02] Public lecture workshop 10 November 2026 — LT/EN (2026). Brief della sessione di Marco Cremaschi.
+https://drive.google.com/file/d/1k1Lat3s3KF3onLzJpAX1GY51JGOyyihH/view
+Descrizione programmata dell’evento; non è una prova di efficacia didattica.
+[PROGRAM01] EDU Forum 2026 — Forumo programa 10-02.pdf (2026). Brief della sessione di Marco Cremaschi.
+https://drive.google.com/file/d/1LA6-_Um9lJp_ypreYHBAy17o1JC8bnFw/view
+Descrizione programmata dell’evento; non è una prova di efficacia didattica.
+[PROGRAM03] Workshop Program November 2026 — EN (2026). Brief della sessione di Marco Cremaschi.
+https://drive.google.com/file/d/1aUr91OePxXiAQXzh2ZLHw6pRynbCmVY0/view
+Descrizione programmata dell’evento; non è una prova di efficacia didattica.
 
-SLIDE S03 — Today’s route
-Page 4 / 44
-Forum: 0.5 min; 02:00–02:30; position 4/41
-University: 0.5 min; 01:30–02:00; position 4/34
-Teachers: 0.5 min; 01:30–02:00; position 4/33
+SLIDE S48 — From curiosity to classroom practice
+Page 5 / 85
+11 November 2026 · EDU Forum · 15:45–17:15 · Hall 210
+Who is it for?
+Education researchers, teachers, school leaders, doctoral students and policymakers interested in self-directed learning, online and in blended settings.
+What will we do?
+Use classroom scenarios, learning-path maps and reflective prompts. Examine goals, planning, information organisation, feedback and self-assessment.
+What will you take away?
+Adaptable strategies and visual scaffolds for autonomy, critical thinking, emotional awareness and digital responsibility.
+[PROGRAM01] EDU Forum 2026 — Forumo programa 10-02.pdf (2026). Brief della sessione di Marco Cremaschi.
+https://drive.google.com/file/d/1LA6-_Um9lJp_ypreYHBAy17o1JC8bnFw/view
+Descrizione programmata dell’evento; non è una prova di efficacia didattica.
 
-Message: Connect learning decisions, evidence, visual tools and responsible practice.
+SLIDE S49 — A visual path for learning with AI
+Page 6 / 85
+10 November 2026 · Mykolas Romeris University · Room III-326
+Who is it for?
+University students and teachers. Make initial knowledge and decisions about learning visible.
+What will we do?
+Set a goal, map what we know, plan next steps and check AI suggestions against reliable sources. Use concept maps, reflection and self-assessment.
+What will you take away?
+A reusable activity template and practical tasks for autonomy, critical thinking, uncertainty and managing frustration.
+[PROGRAM02] Public lecture workshop 10 November 2026 — LT/EN (2026). Brief della sessione di Marco Cremaschi.
+https://drive.google.com/file/d/1k1Lat3s3KF3onLzJpAX1GY51JGOyyihH/view
+Descrizione programmata dell’evento; non è una prova di efficacia didattica.
 
-Content / steps (linear reading order):
-1. Learning decisions and evidence
-2. Visual guidance
-3. Risks and inclusive access
-4. Designing a learning activity
+SLIDE S50 — Visual tools for learning with AI
+Page 7 / 85
+13 November 2026 · Teacher workshop · Druskininkai · 13:30–14:20
+Who is it for?
+Teachers across disciplines who want students to use AI while taking responsibility for their learning.
+What will we do?
+Build a visual path: goal, initial knowledge, next steps, source checks and reflection. Adapt concept maps and self-assessment to a subject.
+What will you take away?
+A reusable activity template and practical tasks, with attention to uncertainty, frustration, critical thinking and responsible AI use.
+[PROGRAM03] Workshop Program November 2026 — EN (2026). Brief della sessione di Marco Cremaschi.
+https://drive.google.com/file/d/1aUr91OePxXiAQXzh2ZLHw6pRynbCmVY0/view
+Descrizione programmata dell’evento; non è una prova di efficacia didattica.
 
-Additional displayed content / linear descriptions / links:
-- Paper or digital text · no account required · access supports stay available
-- 1. Learning decisions and evidence
-- 2. Visual guidance
-- 3. Risks and inclusive access
-- 4. Designing a learning activity
+SLIDE S51 — Luca needs to understand GenAI
+Page 8 / 85
+One student’s learning process, from assignment to assessment
+Luca is a second-year computer science student: he can program, but still confuses key concepts of generative models.
+He must study a chapter and explain how a small application generates text.
+We observe his use of tools and the evidence of understanding he keeps.
+You are following the learning method; you do not need to learn programming.
 
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
+SLIDE S52 — The student’s assignment
+Page 9 / 85
+Four connected products, with criteria shared before the task
+1. Read
+Identify concepts, relationships and uncertainties in the chapter.
+2. Represent
+Build a commented diagram of the model.
+3. Create
+Use AI if needed to obtain a text-generation application.
+4. Explain
+Predict a change and correct an error without delegating the answer.
+A working solution is one product; an explanation provides different evidence.
 
-
-SLIDE S04 — What would count as learning?
-Page 5 / 44
-Forum: 2 min; 02:30–04:30; position 5/41
-University: 1 min; 02:00–03:00; position 5/34
-Teachers: 1 min; 02:00–03:00; position 5/33
-
-Message: Illustrative classroom scenario: solving a maths problem with AI.
-
-Content / steps (linear reading order):
-1. What would you ask the student to explain or try next?
-2. Choose one check. Think, write, or discuss with a partner.
-
-Prepared workshop quotation / example: A student uses AI to solve a maths problem. The answer is correct and arrives faster. We have not heard the student explain the steps.
-
-Your output: One observable check of understanding
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
+SLIDE S52E — Assisted performance and learning
+Page 10 / 85
+One study separates what happens during and after assistance
+High-school mathematics, nearly 1,000 students in one Turkish school; not a trial of these tools.
+With AI assistance
+In Bastani and colleagues’ trial, assisted practice performance improved.
+Later, without AI
+The general-chat group performed below the control; instructional safeguards largely mitigated that harm.
+Workshop design choice: keep a brief independent assessment as well.
+[EDU_BASTANI] Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122.
 https://doi.org/10.1073/pnas.2422633122
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-
-
-SLIDE S05 — Session outcomes
-Page 6 / 44
-Forum: 0.5 min; 04:30–05:00; position 6/41
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
-
-Message: Design one learning activity with a clear goal, a visible process and an independent content check.
-
-Explanation: By the end, you will have a small activity you can try in your own setting. Its design will show what the learner decides and how you will check understanding.
-
-Content / steps (linear reading order):
-1. Choose the skill the learner should develop
-2. Make the learning decisions visible
-3. Specify evidence, access options and limits
-
-Custom cards (linear reading order):
-Card 1
-title: Set a learning goal
-body: Name what the learner should explain or do. Using an AI tool is an action, not the learning goal.
-Card 2
-title: Make the process visible
-body: Record a first attempt, the help used and the decisions made. Keep a trace that the learner can review.
-Card 3
-title: Plan the check and access
-body: Choose an observable explanation or task. State the limits of the evidence and keep the access support people need.
-
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[B02] Loyens et al., 2008
-Loyens, S. M. M., Magda, J., & Rikers, R. M. J. P. (2008). Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning. Educational Psychology Review, 20, 411–427.
-Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning
-https://doi.org/10.1007/s10648-008-9082-7
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-
-
-SLIDE S06 — Self-direction and self-regulation
-Page 7 / 44
-Forum: 2 min; 05:00–07:00; position 7/41
-University: 1.5 min; 03:00–04:30; position 6/34
-Teachers: 1 min; 03:00–04:00; position 6/33
-
-Message: Learners can regulate an assigned task while also learning to choose goals and resources.
-
-Explanation: A learner can plan and check a task set by a teacher. Self-direction also includes choosing the learning question, goals and resources.
-
-Content / steps (linear reading order):
-1. Self-directed learning: identify needs, goals and resources
-2. Self-regulated learning: plan, monitor and evaluate learning
-3. Autonomy can include teachers, peers and access support
-
-Custom cards (linear reading order):
-Card 1
-title: Self-direction
-body: Identify your needs and choose goals and resources. Example: choose a question for a project, then decide which sources to investigate.
-Card 2
-title: Self-regulation
-body: Plan, monitor and evaluate your learning. Example: plan an assigned reading, check what you understand and change your approach when needed.
-
-Takeaway: Autonomy can include teachers, peers and access support
-
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[B02] Loyens et al., 2008
-Loyens, S. M. M., Magda, J., & Rikers, R. M. J. P. (2008). Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning. Educational Psychology Review, 20, 411–427.
-Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning
-https://doi.org/10.1007/s10648-008-9082-7
-
-
-SLIDE S07 — The learning regulation cycle
-Page 8 / 44
-Forum: 2 min; 07:00–09:00; position 8/41
-University: 1 min; 04:30–05:30; position 7/34
-Teachers: 1.5 min; 04:00–05:30; position 7/33
-
-Message: Planning, monitoring and reflection guide decisions before, during and after a task.
-
-Content / steps (linear reading order):
-1. Plan: What am I trying to understand?
-2. Monitor: What is working, and what needs checking?
-3. Reflect: What changed, and what will I try next?
-
-Custom cards (linear reading order):
-Card 1
-label: 01
-title: Plan
-body: Set a goal and choose a first approach. What am I trying to understand?
-Card 2
-label: 02
-title: Monitor
-body: Inspect your progress and check uncertain claims. What is working, and what needs changing?
-Card 3
-label: 03
-title: Reflect
-body: Compare your result with the goal. What changed, and what will I try next?
-
-Takeaway: A recurring cycle, not a fixed sequence
-
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R06] EEF, 2025
-Education Endowment Foundation (2025). Promoting Metacognitive Talk — Practitioner Tool.
-Promoting Metacognitive Talk — Practitioner Tool
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-
-
-SLIDE S08 — Four different outcomes
-Page 9 / 44
-Forum: 2 min; 09:00–11:00; position 9/41
-University: 1.5 min; 05:30–07:00; position 8/34
-Teachers: 1.5 min; 05:30–07:00; position 8/33
-
-Message: Assisted performance, unaided performance, retention and transfer answer different questions.
-
-Content / steps (linear reading order):
-1. Assisted task: How good is the product?
-2. Independent content check: What can the learner explain or do?
-3. Retention: What remains after an interval?
-4. Transfer: What carries over to a new task?
-
-Custom cards (linear reading order):
-Card 1
-title: Assisted product
-body: Check the quality of the answer while help is available, such as an AI-assisted essay.
-Card 2
-title: Independent check
-body: Ask the learner to explain or do the target task without the content answer. Keep access support.
-Card 3
-title: Retention
-body: Check what the learner remembers after an interval, beyond the immediate end of the activity.
-Card 4
-title: Transfer
-body: Ask the learner to use the idea in a different task or case. Check the explanation as well.
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A03] Fan et al., 2025
-Fan et al. (2025; online 2024). British Journal of Educational Technology, 56, 489–530.
-Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance
-https://doi.org/10.1111/bjet.13544
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-
-
-SLIDE S09 — Better practice can hide a weaker independent test
-Page 10 / 44
-Forum: 3 min; 11:00–14:00; position 10/41
-University: 1.5 min; 09:00–10:30; position 10/34
-Teachers: 2 min; 12:00–14:00; position 12/33
-
-Message: In one school mathematics RCT, unrestricted AI improved practice but reduced unaided exam performance.
-
-Content / steps (linear reading order):
-1. About 1,000 pupils · one Turkish school · four sessions
-2. GPT Base: practice +48%; unaided exam −17%
-3. GPT Tutor: practice +127%; no significant unaided exam advantage
-4. All percentages are relative to the control group
-
-Study / context: Classroom RCT · about 1,000 pupils · one Turkish school · four sessions
-
-Observed in this study:
-+48% — GPT Base · assisted practice
-−17% — GPT Base · unaided exam
-
-Result note: Relative changes versus control, not percentage points
-
-Finding: GPT Tutor: +127% in practice; no significant unaided exam advantage.
-
-Limit: Immediate outcomes in one setting; long-term retention was not tested.
-
-Additional limits / guardrails from the deck data:
-- Classroom RCT; a single site.
-- Immediate exam, not long-term retention.
-- No significant advantage is not proof of universal equivalence.
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-
-
-SLIDE S10 — A designed tutor improved immediate test performance
-Page 11 / 44
-Forum: 3 min; 14:00–17:00; position 11/41
-University: 1.5 min; 10:30–12:00; position 11/34
-Teachers: 1.5 min; 14:00–15:30; position 13/33
-
-Message: A carefully designed tutor outperformed active classroom instruction in two university physics lessons.
-
-Content / steps (linear reading order):
-1. 194 Harvard students · randomized crossover
-2. Designed AI tutor versus an active classroom lesson
-3. Higher immediate post-test performance
-4. No delayed retention test
-
-Study / context: Randomized crossover · 194 Harvard students · two physics lessons
-
-Observed in this study:
-194 — participants
-2 — physics lessons
-
-Finding: A designed AI tutor outperformed an active classroom lesson on immediate post-tests.
-
-Limit: The comparison involved instructional packages. No delayed retention test; 316 observations are not 316 participants.
-
-Sources:
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-
-
-SLIDE S11 — The comparison is part of the finding
-Page 12 / 44
-Forum: 2 min; 17:00–19:00; position 12/41
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
-
-Message: Different tutors, tasks, controls and measures can produce different outcomes.
-
-Content / steps (linear reading order):
-1. What did the AI actually do?
-2. What did the comparison group receive?
-3. Was the outcome assisted, independent or delayed?
-
-Custom cards (linear reading order):
-Card 1
-title: AI support
-body: What did the AI actually do: give answers, ask questions or guide practice? These are different forms of support.
-Card 2
-title: Comparison
-body: What did the other group receive: no help, a teacher, another tutor or a different lesson?
-Card 3
-title: Outcome
-body: Was the task completed with help, independently or after a delay? Keep the claim tied to the measure.
-
-Takeaway: A study supports a bounded claim about a particular comparison
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-[A09] Weidlich et al., 2025
-Weidlich et al. (2025). Journal of Computer Assisted Learning, 41(5), e70105.
-ChatGPT in Education: An Effect in Search of a Cause
-https://doi.org/10.1111/jcal.70105
-
-
-SLIDE S12 — A better essay did not establish better transfer
-Page 13 / 44
-Forum: 2 min; 19:00–21:00; position 13/41
-University: 2 min; 07:00–09:00; position 9/34
-Teachers: outside the scheduled sequence (0 min)
-
-Message: In one writing experiment, ChatGPT improved the essay without a significant advantage in knowledge or transfer.
-
-Content / steps (linear reading order):
-1. 117 university students · Chinese L1 / English L2
-2. Four conditions: ChatGPT, human expert, analytics, no support
-3. Better assisted essay; no significant knowledge or transfer advantage
-
-Study / context: Randomized writing study · 117 university students · Chinese L1 / English L2
-
-Observed in this study:
-117 — participants
-4 — support conditions
-
-Finding: ChatGPT improved the assisted essay. Knowledge and transfer showed no significant advantage.
-
-Limit: One laboratory task and small groups. “Metacognitive laziness” is an interpretation, not a diagnosis.
-
-Sources:
-[A03] Fan et al., 2025
-Fan et al. (2025; online 2024). British Journal of Educational Technology, 56, 489–530.
-Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance
-https://doi.org/10.1111/bjet.13544
-
-
-SLIDE S13 — More prompting did not improve every school outcome
-Page 14 / 44
-Forum: 2 min; 21:00–23:00; position 14/41
-University: outside the scheduled sequence (0 min)
-Teachers: 2 min; 15:30–17:30; position 14/33
-
-Message: SRL-oriented prompting did not show a clear knowledge or strategy advantage over standard ChatGPT in one school RCT.
-
-Content / steps (linear reading order):
-1. 371 pupils · grades 7–9 · physics and English
-2. Six 45-minute lessons; three AI conditions
-3. No significant advantage in knowledge, strategies, interest or effort
-
-Study / context: Preregistered RCT · 371 pupils · grades 7–9 · six physics/English lessons
-
-Observed in this study:
-371 — pupils
-6 — lessons
-
-Finding: Two prompting approaches showed no significant advantage over standard ChatGPT in the main outcomes.
-
-Limit: All groups used AI. This does not establish equivalence between AI and no AI; knowledge tests were brief.
-
-Sources:
-[A06] Fütterer et al., 2026
-Fütterer et al. (2026). Educational Psychology Review, 38, 42.
-Enhancing School Students’ Self-Regulated Learning through Generative AI Support: A Randomized Controlled Trial
-https://doi.org/10.1007/s10648-026-10133-8
-
-
-SLIDE S14 — Emotional support and knowledge are different outcomes
-Page 15 / 44
-Forum: 2 min; 23:00–25:00; position 15/41
-University: 1 min; 13:00–14:00; position 13/34
-Teachers: 1 min; 17:30–18:30; position 15/33
-
-Message: A supportive tone can affect the experience without demonstrating a knowledge advantage.
-
-Content / steps (linear reading order):
-1. 144 upper-secondary psychology students · three AI conditions
-2. Some emotional and SRL process benefits
-3. No significant knowledge, transfer or follow-up advantage
-
-Study / context: Preregistered RCT · 144 upper-secondary psychology students · three AI conditions
-
-Observed in this study:
-144 — students
-3 — AI conditions
-
-Finding: Some emotional and self-regulation benefits; no significant knowledge or transfer advantage.
-
-Limit: No group without AI. Four-week follow-up was incomplete; this was not clinical emotional understanding.
-
-Sources:
-[A07] Diordiev et al., 2026
-Diordiev, Stenberdt & Makransky (2026). British Journal of Educational Technology, Early View.
-Prompt-based emotional scaffolding in generative AI: Effects on self-regulated learning and socio-emotional outcomes
-https://doi.org/10.1111/bjet.70094
-
-
-SLIDE S15 — Proactive guidance helped learners interpret visual data
-Page 16 / 44
-Forum: 2 min; 25:00–27:00; position 16/41
-University: 1 min; 12:00–13:00; position 12/34
-Teachers: outside the scheduled sequence (0 min)
-
-Message: Proactive AI guidance improved interpretation of visual learning analytics in a specific task
-
-Content / steps (linear reading order):
-1. Proactive AI questions and feedback outperformed passive help and narrative scaffolding in this task
-2. Benefits remained on the immediate test after support removal
-
-Study / context: Randomized online laboratory study · 117 higher-education learners · about one hour
-
-Observed in this study:
-117 — learners
-Immediate — test after support removal
-
-Finding: Proactive AI outperformed passive help and narrative scaffolding; the benefit remained immediately after support removal.
-
-Limit: No delayed retention test; specific visualizations and comprehension tasks, not general critical thinking.
-
-Additional limits / guardrails from the deck data:
-- Randomized online laboratory study with117 higher-education learners
-- Immediate post-removal test, not delayed retention
-- Specific visualizations and comprehension questions; not general critical thinking
-
-Sources:
-[B23] Yan et al., 2025
-Yan, L., Martinez-Maldonado, R., Jin, Y., Echeverria, V., Milesi, M., Fan, J., Zhao, L., Alfredo, R., Li, X., & Gašević, D. (2025). The effects of generative AI agents and scaffolding on enhancing students’ comprehension of visual learning analytics. Computers & Education, 234, 105322.
-The effects of generative AI agents and scaffolding on enhancing students’ comprehension of visual learning analytics
-https://doi.org/10.1016/j.compedu.2025.105322
-
-
-SLIDE S16 — Choose a visual form for the task
-Page 17 / 44
-Forum: 2 min; 27:00–29:00; position 17/41
-University: 1.5 min; 14:00–15:30; position 14/34
-Teachers: 1.5 min; 07:00–08:30; position 9/33
-
-Message: Different representations expose different kinds of reasoning.
-
-Explanation: Choose the form that makes the required reasoning visible. A structured text list can express the same relationships when a diagram creates a barrier.
-
-Content / steps (linear reading order):
-1. Concept map: concepts and labelled relationships
-2. Argument map: claim, reasons, evidence and objections
-3. Learning path: decisions, checks and next steps
-
-Custom cards (linear reading order):
-Card 1
-title: Concept map
-body: Connect concepts and label each relationship. Use it to explain how ideas relate, rather than just grouping keywords.
-Card 2
-title: Argument map
-body: Separate a claim from its reasons, evidence and objections. Use it to inspect what supports a conclusion.
-Card 3
-title: Learning path
-body: Show the goal, attempts, support and checks. Use it to decide what to do next and why.
-
-Takeaway: Choose the representation for the task; offer a structured text equivalent
-
-Sources:
-[B03] Nesbit et al., 2006
-Nesbit, J. C., & Adesope, O. O. (2006). Learning With Concept and Knowledge Maps: A Meta-Analysis. Review of Educational Research, 76(3), 413–448.
-Learning With Concept and Knowledge Maps: A Meta-Analysis
-https://doi.org/10.3102/00346543076003413
-[B13] Dwyer et al., 2012
-Dwyer, C. P., Hogan, M. J., & Stewart, I. (2012). An evaluation of argument mapping as a method of enhancing critical thinking performance in e-learning environments. Metacognition and Learning, 7, 219–244.
-An evaluation of argument mapping as a method of enhancing critical thinking performance in e-learning environments
-https://link.springer.com/article/10.1007/s11409-012-9092-1
-https://doi.org/10.1007/s11409-012-9092-1
-[C08] Novak & Cañas, 2008
-The Theory Underlying Concept Maps and How to Construct and Use Them
-https://cmap.ihmc.us/Publications/ResearchPapers/TheoryUnderlyingConceptMaps.pdf
-[R13] W3C complex images
-W3C Web Accessibility Initiative (2026). Images Tutorial: Complex Images.
-Images Tutorial: Complex Images
-https://www.w3.org/WAI/tutorials/images/complex/
-
-
-SLIDE S17 — Map construction and retrieval
-Page 18 / 44
-Forum: 2 min; 29:00–31:00; position 18/41
-University: 1 min; 15:30–16:30; position 15/34
-Teachers: 1.5 min; 08:30–10:00; position 10/33
-
-Message: A map can support learning, but its presence or polish does not establish learning.
-
-Content / steps (linear reading order):
-1. Map studies vary by task and comparison
-2. Retrieval practice can outperform mapping while viewing the text
-3. Rebuilding relationships from memory is a different activity
-
-Custom cards (linear reading order):
-Card 1
-title: Construct a map
-body: Explain each link instead of copying keywords. Ask which relationship needs a source, a condition or a clearer meaning.
-Card 2
-title: Retrieve and rebuild
-body: Put the source aside and rebuild the ideas from memory. Then reopen it to check missing or mistaken relationships.
-
-Takeaway: A map is an activity, not a guarantee of learning. Avoid fixed “learning style” labels.
-
-Sources:
-[B03] Nesbit et al., 2006
-Nesbit, J. C., & Adesope, O. O. (2006). Learning With Concept and Knowledge Maps: A Meta-Analysis. Review of Educational Research, 76(3), 413–448.
-Learning With Concept and Knowledge Maps: A Meta-Analysis
-https://doi.org/10.3102/00346543076003413
-[B04] Schroeder et al., 2018
-Schroeder, N. L., Nesbit, J. C., Anguiano, C. J., & Adesope, O. O. (2018). Studying and Constructing Concept Maps: a Meta-Analysis. Educational Psychology Review, 30, 431–455.
-Studying and Constructing Concept Maps: a Meta-Analysis
-https://doi.org/10.1007/s10648-017-9403-9
-[B05] Karpicke et al., 2011
-Karpicke, J. D., & Blunt, J. R. (2011). Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping. Science, 331(6018), 772–775.
-Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping
+RCT in high-school mathematics at one Turkish school, with nearly 1,000 students. Separates assisted practice from subsequent unassisted tests; does not evaluate this workshop or these commercial tools.
+
+SLIDE S53 — The assigned chapter
+Page 11 / 85
+Marco Cremaschi · Foundations of Generative Artificial Intelligence
+Chapter: Language Models and Basic Architecture.
+A fictional book created for this workshop, with accurate content and real technical sources.
+The same content is available as PDF and adaptable HTML.
+A common source connects explanations, diagrams and assessment.
+Open the chapter: ./materials/booklet-genai/lettura.html
+Chapter PDF: ./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf
+Cyan cover: Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material.
+The original textbook chapter created for this workshop.
+
+SLIDE S54 — The concepts to connect
+Page 12 / 85
+The chapter’s route, without a programming lecture
+1. Before use
+Training and learned parameters.
+2. During use
+Text → tokens → representations → Transformer blocks.
+3. Generate
+Probabilities → token selection → repetition.
+4. Check
+Context, temperature, retrieved sources and limitations.
+A few precise relationships will help us interpret the demonstration.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+[TECH_TRANSFORMER] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.
+https://arxiv.org/abs/1706.03762
+Original encoder–decoder architecture; the workshop demo uses a later causal decoder.
+
+SLIDE S55 — The first reading difficulty
+Page 13 / 85
+Luca recognises the words, but cannot yet connect them
+Luca wonders: “If changing the text changes the answer, is the model learning again?”
+Chapter concept · paraphrase: During inference, parameters remain fixed. Context enters the representation calculations and changes the next-token distribution.
+Turn “I do not understand” into a precise distinction: parameters and context.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+
+SLIDE S56 — Excalidraw: an initial map
+Page 14 / 85
+Before asking AI, Luca records what he currently thinks
+1. Open the canvas
+Use the free editor, with no account required.
+2. Add four concepts
+Training data, model, context, response.
+3. Connect and label
+Write the relationship on each arrow; add “?” where uncertain.
+Result: An initial representation to keep, even when it contains errors.
+Official Excalidraw editor canvas, with drawing, text and linking tools.
+Editor image from the official website; vendor example.
+[TOOL_EXCALIDRAW] Excalidraw. (2026). Free whiteboard and Excalidraw Plus.
+https://plus.excalidraw.com/
+Free editor without an account; Plus and temporary trials are distinct from the free editor.
+[EDU_MAPS] Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
+https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf
+Theoretical and practical technical report; not an efficacy trial of Excalidraw or AI-generated diagrams.
+
+SLIDE S57 — Uncertain relationships in the first map
+Page 15 / 85
+A constructed teaching example for Luca’s case
+Luca chooses two points to investigate, rather than asking for an explanation of the whole chapter.
+Relationship to check
+Context → “trains again?” → model.
+An incomplete relationship
+Model → “produces” → response, without describing tokens.
+Uncertainties in the map become goals in the study plan.
+[EDU_MAPS] Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
+https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf
+Theoretical and practical technical report; not an efficacy trial of Excalidraw or AI-generated diagrams.
+
+SLIDE S58 — Goblin.tools: a concrete goal
+Page 16 / 85
+Magic ToDo breaks down a task that feels too large
+1. Enter the task
+Name the intended outcome, rather than only “study GenAI”.
+2. Break it down
+Use the breakdown command and review the suggested subtasks.
+Prompt / excerpt: Study the language-model chapter, distinguish training from inference, and prepare a diagram that I can explain.
+Magic ToDo: a study goal and generated subtasks, followed by Luca’s review.
+Real execution of the English Luca scenario; the generated plan is reviewed in the next steps.
+[TOOL_GOBLIN] Goblin Tools. (2026). About Goblin Tools.
+https://goblin.tools/About
+Core web tools are free; mobile apps and some Pro features are paid. Suggestions are not diagnostic measurements.
+[TOOL_GOBLIN_UI] Goblin Tools. (2026). Magic ToDo.
+https://goblin.tools/ToDo
+Granularity and output depend on the task; review the generated plan.
+
+SLIDE S59 — Adjust the level of detail
+Page 17 / 85
+Extra steps help when they clarify the next action
+1. Adjust the breakdown
+Add detail to the step that is blocking progress.
+2. Review the suggestion
+Remove repetition and tasks outside the assignment.
+Too broad
+“Understand the architecture” does not specify where to start.
+Actionable
+“Read the token paragraph and write a two-line example”.
+Adjust granularity to the perceived difficulty; it is not a diagnostic measure.
+[TOOL_GOBLIN_UI] Goblin Tools. (2026). Magic ToDo.
+https://goblin.tools/ToDo
+Granularity and output depend on the task; review the generated plan.
+
+SLIDE S60 — Luca’s selected plan
+Page 18 / 85
+Every block ends with something he can check
+1. Read and annotate
+Record three terms and one uncertain relationship.
+2. Ask and verify
+Check one explanation against the chapter.
+3. Reconstruct
+Revise the diagram and explain it with the chat closed.
+4. Apply
+Use the app, predict a change and compare the outcome.
+Checked boxes record activity; the content of the products provides evidence of understanding.
+
+SLIDE S60A — Activity: choose the next support
+Page 19 / 85
+Five minutes on the method; no GenAI knowledge required
+1. Read the case · 1 minute
+Luca has twenty subtasks but cannot decide which to start.
+2. Decide in pairs · 2 minutes
+Reduce the plan to three actions and add one check of understanding.
+3. Share · 2 minutes
+Name your selection criterion and one decision you would leave to Luca.
+A justified support choice that can transfer to another subject.
+
+SLIDE S61 — Notebook: upload the chapter
+Page 20 / 85
+Start the conversation with an identifiable source
+1. Create a notebook
+Give it a clear name: “GenAI · chapter and study”.
+2. Add a source
+Upload the chapter PDF and check the imported title and content.
+3. Select the material
+For this first question, use only the chapter.
+Result: A study environment with the assigned material as its reference.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+[TOOL_NOTEBOOK_PRICE] Google. (2026). Learn about Gemini Notebook’s plans; Manage your Gemini Notebook usage limits.
+https://support.google.com/gemininotebook/answer/16213268?hl=en
+Standard access is free with an account and variable usage limits. Education eligibility depends on the actual licence.
+
+SLIDE S62 — Ask a focused question
+Page 21 / 85
+Use an uncertainty from the map as the conversation input
+The need is to understand why an answer can change without retraining.
+Prompt / excerpt: Use only the chapter. Explain the difference between learned parameters and context during inference. Identify the relevant passage. If the text is insufficient, say so.
+A precise request enables a precise source check.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+
+SLIDE S63 — Open the citation and read its context
+Page 22 / 85
+The number beside an answer is the start of checking
+1. Open the reference
+Select the citation about parameters.
+2. Check the original
+Columns are interleaved here. Open the chapter HTML.
+3. Compare the wording
+Does “during inference” survive, or become “always”?
+Keep the explanation after checking how it relates to the source.
+Check the original chapter: ./materials/booklet-genai/lettura.html
+Actual Gemini Notebook citation popup for the final English chapter. The PDF extraction interleaves lines from two columns, so the original chapter is needed to check the wording.
+Real citation popup. Here the PDF columns are interleaved; check the original PDF or reading HTML.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+
+SLIDE S64 — Request a graduated explanation
+Page 23 / 85
+One concept at a time, followed by a question for Luca
+Prompt / excerpt: Explain context in three short steps: definition, example, limitation of the example. Preserve the distinction from parameters. Then ask me one question and wait for my answer.
+Result: A segmented explanation to check against the text, followed by the learner’s own attempt.
+If the first step remains unclear, investigate it before adding detail.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+
+SLIDE S65 — Check the analogy as well
+Page 24 / 85
+A metaphor helps when its boundary remains visible
+Back to the source: during ordinary inference, context enters the calculation and parameters are not updated.
+A useful analogy
+Context is like material available on a desk during a task.
+A boundary to state
+The model does not read as a person does; the analogy does not describe its internal calculation.
+Luca should be able to express the concept without the metaphor.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+
+SLIDE S66 — Explore a generated Mind Map
+Page 25 / 85
+Use it for orientation, then investigate one branch
+1. Generate a Mind Map
+Open the result in the Studio panel on desktop.
+2. Expand one branch
+Choose “inference” and inspect the associated concepts.
+3. Select a node
+Ask a focused question, then check its reference to the chapter.
+A topic tree provides orientation; its relationships still need explanation.
+[TOOL_NOTEBOOK_MAP] Google. (2026). Use Mind Maps in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16212283?hl=en
+Generated branching summary, not automatically a concept map with meaningful propositions. Desktop feature with usage limits.
+[EDU_MAPS] Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
+https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf
+Theoretical and practical technical report; not an efficacy trial of Excalidraw or AI-generated diagrams.
+
+SLIDE S67 — Self-check before seeing the solution
+Page 26 / 85
+Close the source, attempt an answer, then reopen it to revise
+Luca answers before reading a solution, then checks and records a correction.
+Prompt / excerpt: Ask one question that distinguishes context from training. Do not reveal the answer immediately. After my attempt, identify one correct point and one to revise, with a chapter reference.
+A generated quiz is useful when it leads to an attempt and revision.
+[TOOL_NOTEBOOK_QUIZ] Google. (2026). Generate Flashcards or Quizzes in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16958963?hl=en
+Generated questions and explanations need checking; learner self-checks differ from teacher collection and analysis.
+[EDU_RETRIEVAL] Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772–775.
 https://doi.org/10.1126/science.1199327
-[B27] Lenski et al., 2024
-Lenski, S., Mustafa, M., & Großschedl, J. (2024). Concept mapping – increased potential as a retrieval-based task. Memory, 32(7), 901–912.
-Concept mapping – increased potential as a retrieval-based task
-https://doi.org/10.1080/09658211.2024.2363463
+Experiments with science texts and specific study conditions. Does not show that concept maps are useless or every generated quiz constitutes effective retrieval practice.
 
+SLIDE S68 — Excalidraw: revise the relationships
+Page 27 / 85
+The second map makes the conceptual change visible
+1. Training
+Data → “contributes to updating” → parameters.
+2. Inference
+Context → “enters calculation with fixed parameters” → probabilities.
+3. Generation
+Distribution → “guides selection of” → next token.
+Read every arrow as a meaningful statement.
+[EDU_MAPS] Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
+https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf
+Theoretical and practical technical report; not an efficacy trial of Excalidraw or AI-generated diagrams.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
 
-SLIDE S18 — Which link needs evidence?
-Page 19 / 44
-Forum: 2 min; 31:00–33:00; position 19/41
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
+SLIDE S69 — Compare the two map versions
+Page 28 / 85
+The important change is in the explanation
+Luca identifies one correct relationship, one revision and one remaining uncertainty.
+Before · teaching example
+“Does context train the model again?”
+After · expected explanation
+“During inference, the calculation input changes without updating parameters”.
+The comparison prepares an independent explanation; it does not replace it.
 
-Message: Add a condition, a source or a counterexample
+SLIDE S70 — Napkin: start with checked text
+Page 29 / 85
+Choose the relationships before generating the visual
+1. Paste the text
+Use a summary checked against the chapter.
+2. Select and generate
+Request a visual for that specific passage.
+Prompt / excerpt: Training updates parameters. During inference, the context text becomes a token sequence. The model calculates probabilities for the next token. A selection rule chooses a token and the process repeats.
+Napkin proposes a representation; it does not certify the text.
+Napkin: selected text and the blue Generate Visual control on its left.
+Generate control in the official guide; the vendor’s example text is unrelated to Luca.
+[TOOL_NAPKIN_GUIDE] Napkin AI. (2026). Visuals generation.
+https://help.napkin.ai/en/articles/15923699-visuals-generation
+Visual choice and represented relationships require human review.
 
-Explanation: Read each arrow as a claim. Choose one link and add a reason, a condition or a counterexample that changes how strongly you would trust it.
+SLIDE S71 — Choose and correct the visual
+Page 30 / 85
+Prefer a representation that preserves the meaning
+1. Review labels and arrows
+Correct terms before choosing colours or icons.
+2. Justify the choice
+Explain why this representation expresses the process.
+Avoid
+One arrow labelled “prompt → training → answer” mixes different processes.
+Look for
+Separate training; show a cycle for token-by-token inference.
+Napkin interface showing alternative generated visual representations.
+Official guide: choosing a visual.
+[TOOL_NAPKIN_GUIDE] Napkin AI. (2026). Visuals generation.
+https://help.napkin.ai/en/articles/15923699-visuals-generation
+Visual choice and represented relationships require human review.
 
-Content / steps (linear reading order):
-1. Fast answers
-2. Understanding
-3. Independence
+SLIDE S72 — A diagram to use during the exercise
+Page 31 / 85
+A short reference with explicit relationships
+1. Text and context
+Are converted into tokens.
+2. Model with fixed parameters
+Processes the tokens and calculates a distribution.
+3. Selection and repetition
+A token is added; the context for the next step changes.
+Result: Export as PNG/PDF in the Free plan, keeping product branding.
+The learner must be able to explain the cycle in their own words.
+[TOOL_NAPKIN] Napkin AI. (2026). Pricing.
+https://www.napkin.ai/pricing.html
+Free: 500 credits/week and branded PNG/PDF export. SVG/PPT export is paid.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
 
-Your output: One repaired relationship, with its reason
+SLIDE S73 — The exercise: a small app with a real model
+Page 32 / 85
+AI may write the solution; Luca must be able to interpret it
+Enter text and inspect its tokens.
+Show five next-token alternatives, probabilities and remaining mass.
+Change temperature and generate a short continuation.
+Compare two tests and explain a difference.
+A real model in the browser, with no paid API.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
 
-Additional displayed content / linear descriptions / links:
-- Intentionally unsupported chain: fast answers imply understanding, which implies independence
+SLIDE S74 — Claude: a complete assignment
+Page 33 / 85
+Specify material, behaviour and checks before generating code
+A reusable teaching request, not the production log of the distributed code.
+Prompt / excerpt: Create an English browser app using a real language model, without a paid API. Use Transformers.js and ONNX Qwen2.5-0.5B-Instruct q4. Show input tokens, five next-token alternatives with probabilities and remaining mass, temperature, and generation up to 24 tokens. Add comparison, reset, loading and error states. Distinguish the explanatory diagram from real data. Explain dependencies, limitations and checks. Use the attached chapter as the conceptual reference.
+A complete prompt defines the task; the solution still needs verification.
+[TOOL_CLAUDE] Anthropic. (2026). Claude pricing.
+https://claude.com/pricing
+Free includes Artifacts with usage limits. Does not establish that Claude produced the code distributed in this workshop.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
 
-Sources:
-[B13] Dwyer et al., 2012
-Dwyer, C. P., Hogan, M. J., & Stewart, I. (2012). An evaluation of argument mapping as a method of enhancing critical thinking performance in e-learning environments. Metacognition and Learning, 7, 219–244.
-An evaluation of argument mapping as a method of enhancing critical thinking performance in e-learning environments
-https://link.springer.com/article/10.1007/s11409-012-9092-1
-https://doi.org/10.1007/s11409-012-9092-1
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
+SLIDE S75 — Open and check the solution
+Page 34 / 85
+A ready interface begins the study of the exercise
+Kit provenance: application developed with Codex. The Claude prompt lets you repeat the task.
+1. Run it
+Load the model and actually generate a token.
+2. Check the data
+Probabilities use the full vocabulary; show the remaining mass.
+3. Keep the revisions
+Record corrections, runtime and model version.
+A plausible result does not replace a functioning test.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+
+SLIDE S75E — A designed tutor can support learning
+Page 35 / 85
+Positive findings concern specific tasks and conditions
+Designed tutor · Kestin 2025
+An RCT with 194 university physics students found better immediate outcomes with the studied tutor than the comparison active class.
+Guided use · Huang 2026
+With 95 students, structured training improved AI-assisted revision of electromagnetism problems.
+Workshop choice: ask for attempts, source checks and revision; then assess independence.
+[EDU_KESTIN] Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458.
 https://doi.org/10.1038/s41598-025-97652-6
+194 eligible university physics students; tutor designed for specific lessons and immediate tests. Does not establish universal or long-term chatbot effectiveness.
+[EDU_HUANG] Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13, 62.
+https://doi.org/10.1186/s40594-026-00652-9
+95 students; immediate AI-assisted revision of electromagnetism questions after structured training. Does not establish durable independent learning.
 
+SLIDE S76 — From input to the first token
+Page 36 / 85
+Observe real data in a short test
+1. Enter the text
+Use a short input and record it.
+2. Read the tokens
+Inspect the actual segmentation: tokens do not necessarily match words.
+3. Calculate and generate
+Compare alternatives and remaining mass, then generate a single token.
+Percentages concern token selection; they do not measure a statement’s truth.
+Real local model run, comparing the same context at two temperatures and then changing context.
+Recorded local inference · Qwen2.5-0.5B-Instruct q4 · English captions and transcript in the kit.
+REAL RECORDING — local inference Qwen2.5-0.5B-Instruct q4
 
-SLIDE S19 — The Learning Path Canvas
-Page 20 / 44
-Forum: 2 min; 33:00–35:00; position 20/41
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
+00:00:00.000  I load the real model from this computer. No remote API is used.
 
-Message: Decisions that can be inspected and revised
+00:00:04.366  I analyze the starting text. Tokens and probabilities come from the model.
 
-Explanation: Use these six fields to record a learning plan. Show which decisions belong to the learner, what help is allowed and how understanding will be checked.
+00:00:07.695  I save A, then change only temperature, from 0.8 to 1.5.
 
-Content / steps (linear reading order):
-1. Goal and starting point
-2. First attempt
-3. Allowed support
-4. Sources and uncertainty
-5. Independent content check
-6. Reflection
+00:00:10.206  Probabilities spread out; the most likely token keeps its top rank.
 
-Custom cards (linear reading order):
-Card 1
-title: Goal and starting point
-body: What should I learn? What do I know?
-Card 2
-title: First attempt
-body: Record an approach before asking for content help.
-Card 3
-title: Allowed support
-body: Choose questions, hints or feedback; state the boundary.
-Card 4
-title: Sources and uncertainty
-body: Check the source; name what remains uncertain.
-Card 5
-title: Independent content check
-body: Explain or apply the idea without the answer.
-Card 6
-title: Reflection
-body: What changed? What will I try next?
+00:00:12.700  Now I change context: France instead of Italy. Temperature returns to 0.8.
 
-Takeaway: Original workshop template; not a validated psychological scale
+00:00:16.153  I sample one token from the full vocabulary. The generated text joins the context.
 
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
+00:00:19.308  I generate a short continuation. I can stop subsequent steps.
+
+00:00:24.959  I reset the results. The model stays loaded in memory.
+
+00:00:27.394  Real recording. High probability does not mean a true fact.
+
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+
+SLIDE S77 — The process represented by the app
+Page 37 / 85
+An explanatory diagram, separate from the calculated values
+1. Input and tokens
+Text is encoded as a sequence.
+2. Representations and position
+Numbers and order information enter the model’s blocks.
+3. Transformer blocks
+Causal attention and transformations process the available information.
+4. Distribution and selection
+Scores become probabilities; selection adds the next token.
+This diagram explains a flow; it does not reveal the model’s thoughts.
+[TECH_TRANSFORMER] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.
+https://arxiv.org/abs/1706.03762
+Original encoder–decoder architecture; the workshop demo uses a later causal decoder.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+
+SLIDE S78 — Change the context, keep the model
+Page 38 / 85
+A recorded comparison with the same model and temperature
+Recorded local inference, 1 November 2026. Only the initial context changes.
+Context A · T = 0.8
+“The capital of Italy is” → next-token candidate “ Rome”: 44.86%.
+Context B · T = 0.8
+“The capital of France is” → next-token candidate “ Paris”: 91.23%.
+These are conditional token probabilities, not factual-accuracy percentages.
+Recorded computations: ./materials/demo-genai/captures/verified-results.json
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+
+SLIDE S79 — Temperature changes the distribution
+Page 39 / 85
+Recorded run · identical input and logits, two temperature settings
+Input: “The capital of Italy is”. Qwen2.5-0.5B-Instruct ONNX q4; local CPU/WASM run.
+T = 0.8 · more concentrated
+“ Rome”: 44.86%; remaining vocabulary outside the top five: 26.51%.
+T = 1.5 · less concentrated
+“ Rome”: 8.06%; remaining vocabulary outside the top five: 79.96%.
+Temperature changes this distribution; it adds no knowledge and does not guarantee truth.
+Recorded computations: ./materials/demo-genai/captures/verified-results.json
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+[TECH_DEMO] Polo Club of Data Science. (2026). Transformer Explainer.
+https://poloclub.github.io/transformer-explainer/
+Complementary resource with a different model and settings from the workshop demo.
+
+SLIDE S79F — Read the formula from the chapter
+Page 40 / 85
+Softmax with temperature · identify the role of each symbol
+1. zᵢ · score
+A number calculated by the model for candidate token i.
+2. T · temperature
+A positive setting that rescales scores before conversion.
+3. pᵢ · probability
+The exponentiated score divided by the sum over all candidates.
+p_i = exp(z_i/T) / sum_j exp(z_j/T), T > 0. Read: exponentiate each score divided by temperature, then divide by the sum over all candidates.
+The denominator makes the probabilities sum to one. Probability is not truth.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+
+SLIDE S79G — A short symbol guide
+Page 41 / 85
+Read the notation before asking for another explanation
+1. i and j · candidates
+i identifies the candidate being considered; j runs over all candidates in the denominator.
+2. exp(a) · a positive weight
+This means e raised to a. Apply it to each score divided by the positive temperature.
+3. Σ · add the weights
+Sum all candidate weights, then divide each weight by this common total.
+The three-candidate example shows the same arithmetic on a deliberately small vocabulary.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+
+SLIDE S79N — Notebook: ask about the formula
+Page 42 / 85
+Explain the symbols, check the source, then make a prediction
+Prompt / excerpt: Use the chapter’s softmax-with-temperature formula. Explain each symbol and the denominator in three short steps. Distinguish a score from a probability. Work through scores [2, 1, 0] at T = 1 and show the sum. Then ask me to predict the effect of increasing T, and wait for my answer.
+Check the cited passage and the arithmetic; an explanation generated by AI still needs review.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+
+SLIDE S79D — Desmos: make the formula observable
+Page 43 / 85
+Three invented scores for a worked example, separate from the real model
+1. Open the free calculator
+Use the copy-ready expressions in the kit. Here x is temperature T > 0.
+2. Compare fixed scores
+Read the three curves at x = 0.5, 1 and 2. Change temperature while keeping scores [2, 1, 0].
+Desmos plots and evaluates the entered mathematics; it does not explain the chapter automatically.
+Expressions for Desmos: ./materials/formula-desmos.txt
+Open Desmos: https://www.desmos.com/calculator?lang=en
+Desmos plots the three softmax probabilities for illustrative scores [2, 1, 0]. The horizontal axis is temperature from 0 to 4; the vertical axis is probability from 0 to 1.
+Real Desmos graph · invented scores for the worked example, separate from Qwen measurements.
+[TOOL_DESMOS] Desmos Studio. (2026). Desmos Graphing Calculator User Guide.
+https://help.desmos.com/hc/en-us/articles/202529279-Desmos-Graphing-Calculator-User-Guide
+Free graphing calculator; no login is needed to use it. An account is needed to save graphs. It evaluates and plots entered expressions; it does not itself provide a source-grounded explanation of the chapter.
+[TOOL_DESMOS_SLIDERS] Desmos Studio. (2026). Sliders and movable points in a graph.
+https://help.desmos.com/hc/en-us/articles/202529069-Sliders-and-Movable-Points-in-a-Graph
+Sliders adjust graph parameters; mathematical domain restrictions still matter.
+
+SLIDE S79T — Check the worked example numerically
+Page 44 / 85
+Fixed scores [2, 1, 0] · probabilities rounded to four decimals
+Before rounding, each distribution sums to 1. Higher T makes these fixed-score probabilities less concentrated.
+T = 0.5
+p₁ = 0.8668 · p₂ = 0.1173 · p₃ = 0.0159
+T = 1
+p₁ = 0.6652 · p₂ = 0.2447 · p₃ = 0.0900
+T = 2
+p₁ = 0.5065 · p₂ = 0.3072 · p₃ = 0.1863
+Ask Luca to explain why the ranking stays the same while concentration changes.
+[TOOL_DESMOS] Desmos Studio. (2026). Desmos Graphing Calculator User Guide.
+https://help.desmos.com/hc/en-us/articles/202529279-Desmos-Graphing-Calculator-User-Guide
+Free graphing calculator; no login is needed to use it. An account is needed to save graphs. It evaluates and plots entered expressions; it does not itself provide a source-grounded explanation of the chapter.
+
+SLIDE S80 — Notebook: study the solution
+Page 45 / 85
+Connect one application function to a chapter concept
+Add a textual solution description, including version and provenance, alongside the chapter.
+Prompt / excerpt: Use the chapter and the solution description. Explain the transition from scores to probabilities in three steps. Identify its connection to the chapter. Then ask me what would change with a higher temperature, without giving the answer.
+Luca reconstructs the step, returning to the code or source when needed.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+
+SLIDE S81 — What Luca must demonstrate independently
+Page 46 / 85
+An explanation, a prediction and an error correction
+1. Explain
+Describe how context contributes to generation.
+2. Predict
+Justify the expected effect of changing temperature.
+3. Correct
+Refute “The most probable token always provides true information”.
+4. Reflect
+Identify one useful support and one remaining uncertainty.
+A brief attempt without chat; then reopen materials to revise mistakes.
+
+SLIDE S82 — The teacher designs the evidence
+Page 47 / 85
+The goal, task and criterion must concern the same knowledge
+Goal
+Understand the roles of context, parameters and token selection.
+Evidence
+An explanation, commented diagram, justified prediction and correction.
+Criteria
+Concepts and relationships; process explanation; application and checking.
+Assess what the learner can justify, alongside the assisted product.
+
+SLIDE S83 — MagicSchool: draft a rubric
+Page 48 / 85
+The teacher provides goals, assignment and constraints
+1. Open Rubric Generator
+Enter goals and assignment, without learner personal data.
+2. Generate a draft
+Check it against the chapter before using it.
+Prompt / excerpt: Prepare a rubric for the attached assignment. Three criteria: concepts and relationships; process explanation; application and checking. Four levels with observable descriptors. Assess GenAI knowledge, without rewarding only polished prose or code. Distinguish the assisted product from the independent explanation.
+[TOOL_MAGIC] MagicSchool. (2026). AI rubric generator.
+https://www.magicschool.ai/tools/rubric-generator
+Vendor documentation of features. Promotional percentages are not used as educational-effectiveness evidence.
+[TOOL_MAGIC_PRICE] MagicSchool. (2026). Pricing and plans.
+https://www.magicschool.ai/pricing
+Free has limits; Plus and institutional licences are distinct.
+
+SLIDE S84 — Review the rubric descriptors
+Page 49 / 85
+A constructed revision example, not automated assessment
+Keep three criteria separate and apply the same rubric to the responses.
+Too general
+“Shows a good understanding of the topic”.
+Observable
+“Distinguishes parameters from context and explains why changing a prompt is not retraining”.
+The rubric stays in the kit without Formative’s paid integrated rubric feature.
+[TOOL_FORMATIVE] Formative. (2026, 4 maggio). What Formative plan is best for me?
+https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Free includes multiple choice, open responses, drawing and teacher feedback. Integrated rubrics, audio/video responses and Luna feedback are paid features.
+
+SLIDE S84A — Rubric: concepts and relationships
+Page 50 / 85
+Criterion 1 · four levels of evidence
+1. 1 · Needs reconstruction
+Confuses training and inference, or treats probabilities as truth.
+2. 2 · Partial
+Names concepts, but incompletely relates parameters and context.
+3. 3 · Coherent
+Distinguishes phases and states correct relationships.
+4. 4 · Justified
+Justifies relationships and identifies conditions and limits in a new example.
+Apply the criterion to meaning in the agreed response mode.
+
+SLIDE S84B — Rubric: process explanation
+Page 51 / 85
+Criterion 2 · make the links between stages explicit
+1. 1 · Absent
+Repeats output without describing the stages.
+2. 2 · Fragmentary
+Describes some stages but leaves gaps or reversals.
+3. 3 · Ordered
+Connects input, tokens, processing, distribution and selection.
+4. 4 · Justified
+Explains the links and separates the diagram from observed data.
+A commented diagram or oral explanation can reveal the same process.
+
+SLIDE S84C — Rubric: application and checking
+Page 52 / 85
+Criterion 3 · predict, test and revise
+1. 1 · Unjustified
+States a conclusion without a prediction or check.
+2. 2 · Incomplete
+Predicts, but changes multiple conditions or does not compare outcomes.
+3. 3 · Controlled
+Varies one condition, compares the outcome and corrects an error.
+4. 4 · Critical
+Justifies revision and recognises sampling, limitations and uncertainty.
+Do not reward a lucky outcome from one generation.
+
+SLIDE S85 — Prepare questions and expected answers
+Page 53 / 85
+The first question checks a fundamental distinction
+Q1 · During ordinary inference, what changes when a new prompt is entered? A: original training data. B: calculation context. C: learned parameters.
+Expected: B, with justification; a correct choice alone provides limited evidence.
+Prompt / excerpt: Generate five chapter-based questions: distinction, explanation, diagram, prediction and transfer. For each, provide the expected answer, a detectable misconception and the rubric criterion. Avoid questions answered by copying a definition.
+A teacher-reviewed teaching example, not a validated test.
+
+SLIDE S85B — Explanation and diagram completion
+Page 54 / 85
+Questions 2 and 3 · observe the connections
+Q2 · Explain
+Why does a token not always match a word? Expected: encoding may split words or represent other sequence elements.
+Q3 · Complete a diagram
+Complete text → tokens → model → distribution → selection. What repeats? Expected: the selected token joins the context and calculation continues.
+Read correctness and explanation without requiring code.
+
+SLIDE S85C — Prediction and transfer
+Page 55 / 85
+Questions 4 and 5 · apply a concept and recognise an error
+Q4 · Predict
+Same input and scores: what changes from T = 0.5 to T = 1.2? Expected: less concentrated probabilities, without a guarantee about one sampled token.
+Q5 · Correct an error
+“The most probable alternative will be true”. Refute using a new example. Expected: token plausibility differs from content truth.
+Keep the initial prediction, test outcome and justified revision.
+
+SLIDE S86 — Formative: set up the assessment
+Page 56 / 85
+One collection point, with clear instructions and available criteria
+1. Create the activity
+State the goal and when materials are allowed or chat must be closed.
+2. Add five questions
+Use multiple choice, open response and drawing in the Free plan.
+3. Prepare the review
+Key for Q1; teacher review for explanations and diagrams.
+Use the standalone kit rubric; no premium integration is needed.
+Formative: opening the Responses view for an assessment; vendor example.
+Official guide screenshot; vendor example data.
+[TOOL_FORMATIVE] Formative. (2026, 4 maggio). What Formative plan is best for me?
+https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Free includes multiple choice, open responses, drawing and teacher feedback. Integrated rubrics, audio/video responses and Luna feedback are paid features.
+
+SLIDE S87 — Choose the format for the evidence
+Page 57 / 85
+Three response types, three opportunities to observe
+Multiple choice + reason
+Identify a distinction and inspect the reasoning.
+Open response
+Observe explanations, predictions and corrections.
+Drawing + commentary
+Make the sequence and relationships visible.
+Integrated audio/video responses are paid features; agree alternatives when needed.
+[TOOL_FORMATIVE] Formative. (2026, 4 maggio). What Formative plan is best for me?
+https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Free includes multiple choice, open responses, drawing and teacher feedback. Integrated rubrics, audio/video responses and Luna feedback are paid features.
+
+SLIDE S88 — Read three simulated responses
+Page 58 / 85
+Invented examples for discussing teacher judgement
+Profile A · complete product
+The app works, but the explanation says every prompt updates parameters.
+Profile B · vocabulary present
+Names tokens and probabilities, but omits the link between distribution and selection.
+Profile C · coherent explanation
+Distinguishes phases, justifies a prediction and recognises the limit of one generation.
+Read differences criterion by criterion before summarising with a grade.
+
+SLIDE S89 — Feedback that specifies the next action
+Page 59 / 85
+Teacher-written examples address the observed difficulty
+For profile A
+Revisit parameters versus context. Correct the arrow and explain why.
+For profile B
+Add the selection rule between distribution and token. Explain the link.
+For profile C
+Transfer your explanation to a new context and identify what remains uncertain.
+Teacher-written feedback in the Free plan, followed by a new learner attempt.
+[TOOL_FORMATIVE_RESP] Formative. (2026). View and score responses.
+https://help.formative.com/en/articles/6198532-view-and-score-responses
+Operational documentation, rather than independent evidence of effectiveness.
+[TOOL_FORMATIVE] Formative. (2026, 4 maggio). What Formative plan is best for me?
+https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Free includes multiple choice, open responses, drawing and teacher feedback. Integrated rubrics, audio/video responses and Luna feedback are paid features.
+
+SLIDE S89A — Activity: adapt an assessment
+Page 60 / 85
+Five minutes on your subject and an access barrier
+1. Choose a goal · 1 minute
+Name a concept you teach or study.
+2. Design evidence · 2 minutes
+Write a task and observable criterion, allowing AI to produce the initial product.
+3. Remove a barrier · 2 minutes
+Offer an equivalent access or response option; share the reason for your choice.
+A reusable example with a coherent goal, evidence and support.
+
+SLIDE S90 — Accessibility and learning differences
+Page 61 / 85
+Start with the barrier in the actual task, with the learner
+Reading and fatigue
+Adaptable text, read aloud, segments and pauses.
+Writing the response
+Dictation, review or another agreed response mode.
+Organisation and calculation
+A visible plan, glossary, diagrams and goal-aligned supports.
+Dyslexia and other specific learning difficulties vary; attention needs are distinct. No typeface or tool fits everyone.
+[ACC_AID] Associazione Italiana Dislessia. (n.d.). Compensatory tools [English translation of webpage title].
+https://www.aiditalia.org/gli-strumenti-compensativi
+Information about supports to adapt to the learner and task; not diagnosis or treatment advice.
+[ACC_CAST] CAST. (2024). Universal Design for Learning Guidelines, version 3.0.
+https://udlguidelines.cast.org/
+Design guidance; not a clinical prescription or guarantee of individual benefit.
+
+SLIDE S91 — Edge: another way to read the same chapter
+Page 62 / 85
+Access to the text and understanding require separate checks
+1. Open the chapter HTML
+Use Reading mode on a supported page or selected passage.
+2. Adapt and listen
+Try text preferences and Read aloud; adjust the speed.
+3. Check usefulness
+Pause at the paragraph and explain the relationship you read.
+Read aloud supports access; understanding still needs a learner attempt.
+Official Microsoft Edge Reading mode screenshot, highlighting the Read aloud command in the toolbar.
+Official Microsoft guide: Read aloud control; vendor example content unrelated to Luca.
+[ACC_EDGE] Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
+https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge
+Controls and availability vary by version, language and page; test the actual chapter HTML.
+
+SLIDE S92 — Notebook: short segments and a glossary
+Page 63 / 85
+Adapt presentation while checking that meaning is preserved
+Compare each segment with the original; choose the appropriate detail with the learner.
+Prompt / excerpt: Rewrite this paragraph in three short segments. Define token, context and parameters. Preserve the condition “during inference” and flag each simplification. Do not remove essential relationships.
+A brief explanation helps when it preserves the concept’s conditions.
+[ACC_COGA] World Wide Web Consortium. (2021). Making content usable for people with cognitive and learning disabilities: Objective 3, Use clear and understandable content.
+https://www.w3.org/WAI/WCAG2/supplemental/objectives/o3-clear-content/
+Supplemental cognitive-accessibility guidance, rather than an additional normative WCAG AA requirement.
+[TOOL_NOTEBOOK] Google. (2026). Use chat in Gemini Notebook.
+https://support.google.com/gemininotebook/answer/16179559?hl=en
+Select sources and focus the request. A citation does not guarantee correctness. The product also offers agentic features outside this demonstration.
+
+SLIDE S93 — Dictation: express and review an answer
+Page 64 / 85
+Speech produces text that the learner must check
+1. Configure Dictation
+On Mac: System Settings → Keyboard → Dictation; choose language and activation.
+2. Dictate into the answer field
+Explain the role of context.
+3. Read and revise
+Check technical terms, negations and punctuation before submitting.
+Windows offers voice typing; check availability and settings on the actual device.
+[ACC_MAC] Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.
+https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27
+Configuration, languages and audio processing depend on device and settings.
+[ACC_WINDOWS] Microsoft. (s.d.). Use voice typing to talk instead of type on your PC.
+https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc
+Windows alternative; requires a supported setup, microphone and the connectivity stated in the guide.
+
+SLIDE S94 — An accessible assessment of the same goal
+Page 65 / 85
+Change the mode while preserving the evidence sought
+Goal: explain the generation process, rather than writing speed.
+Possible agreed responses: reviewed text, oral explanation or commented diagram.
+Clear instructions, advance criteria and supports aligned with the task.
+Apply the same conceptual criteria, using response arrangements appropriate to the educational context.
+[ACC_CAST] CAST. (2024). Universal Design for Learning Guidelines, version 3.0.
+https://udlguidelines.cast.org/
+Design guidance; not a clinical prescription or guarantee of individual benefit.
+[ACC_AID] Associazione Italiana Dislessia. (n.d.). Compensatory tools [English translation of webpage title].
+https://www.aiditalia.org/gli-strumenti-compensativi
+Information about supports to adapt to the learner and task; not diagnosis or treatment advice.
+
+SLIDE S95 — Reuse the learning path in another subject
+Page 66 / 85
+Keep the sequence; change the content and evidence
+1. Start with a source and a goal
+For example: understand a historical interpretation from an assigned chapter.
+2. Make ideas visible
+Record an initial explanation, uncertainties and a manageable plan.
+3. Use tools, then check
+Compare a generated explanation with the source and revise relationships.
+4. Demonstrate and reflect
+Explain a new example independently; identify the next learning step.
+Choose a tool for a specific need and decide what evidence it should leave.
+
+SLIDE S96 — The evidence collected along the way
+Page 67 / 85
+A product and an explanation answer different assessment needs
+Learning process
+Initial map, selected plan, checked passage and revised map.
+Assisted product
+Diagram, application, recorded tests and revision history.
+Demonstrated knowledge
+Independent explanation, prediction, error correction and reflection.
+Compare these records before deciding what the learner needs next.
+
+SLIDE S97 — Free tools for planning and source-based study
+Page 68 / 85
+Resource list · accounts and limits checked 1 November 2026
+Goblin.tools · free web core
+Break down a task. Use Magic ToDo; paid mobile apps and Pro are optional.
+Gemini Notebook · free Standard
+Study selected sources and check citations. Google account; variable usage limits.
+Excalidraw · free editor
+Build and revise relationships. No account required for the editor.
+Free access does not always mean no account or unlimited AI use.
+Goblin.tools: https://goblin.tools/ToDo
+Gemini Notebook: https://notebook.google.com/
+Excalidraw: https://excalidraw.com/
+[TOOL_GOBLIN] Goblin Tools. (2026). About Goblin Tools.
+https://goblin.tools/About
+Core web tools are free; mobile apps and some Pro features are paid. Suggestions are not diagnostic measurements.
+[TOOL_NOTEBOOK_PRICE] Google. (2026). Learn about Gemini Notebook’s plans; Manage your Gemini Notebook usage limits.
+https://support.google.com/gemininotebook/answer/16213268?hl=en
+Standard access is free with an account and variable usage limits. Education eligibility depends on the actual licence.
+[TOOL_EXCALIDRAW] Excalidraw. (2026). Free whiteboard and Excalidraw Plus.
+https://plus.excalidraw.com/
+Free editor without an account; Plus and temporary trials are distinct from the free editor.
+
+SLIDE S97B — Free tools for visualisation and the exercise
+Page 69 / 85
+Use the free features actually needed by the learning task
+Napkin Free · account required
+Turn checked text into a visual. 500 AI credits/week; PNG/PDF exports with branding.
+Claude Free · account required
+Ask for a complete solution and explanation; Artifacts within usage limits.
+Transformers.js + Qwen · local demo
+Run the model in a browser without a paid API. Download and device requirements apply.
+A temporary premium trial is not a continuing free plan.
+Napkin plans: https://www.napkin.ai/pricing.html
+Claude plans: https://claude.com/pricing
+Transformers.js: https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+[TOOL_NAPKIN] Napkin AI. (2026). Pricing.
+https://www.napkin.ai/pricing.html
+Free: 500 credits/week and branded PNG/PDF export. SVG/PPT export is paid.
+[TOOL_CLAUDE] Anthropic. (2026). Claude pricing.
+https://claude.com/pricing
+Free includes Artifacts with usage limits. Does not establish that Claude produced the code distributed in this workshop.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+
+SLIDE S97C — Free access supports already available
+Page 70 / 85
+Select a support with the learner and check the actual task
+Edge Reading mode / Read aloud
+Read the chapter HTML; adapt available text and voice settings. Browser and page support vary.
+macOS Dictation / Windows voice typing
+Produce text by voice, then review. Microphone, language and device settings matter.
+Adaptable HTML and text materials
+Reflow, enlarge and personalise the same content; no learner account needed.
+Edge guide: https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge
+Mac dictation: https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27
+Windows voice typing: https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc
+[ACC_EDGE] Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
+https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge
+Controls and availability vary by version, language and page; test the actual chapter HTML.
+[ACC_MAC] Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.
+https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27
+Configuration, languages and audio processing depend on device and settings.
+[ACC_WINDOWS] Microsoft. (s.d.). Use voice typing to talk instead of type on your PC.
+https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc
+Windows alternative; requires a supported setup, microphone and the connectivity stated in the guide.
+
+SLIDE S97M — Tools for understanding formulas
+Page 71 / 85
+Free options first, with a clearly labelled paid extension
+Notebook Standard · free with account
+Ask about symbols and conditions in the selected chapter; check citations and calculations.
+Desmos Graphing Calculator · free
+Evaluate expressions and explore graphs. No login to use; account needed to save graphs.
+Wolfram|Alpha Pro · paid extension
+Step-by-step solutions for supported problems. Basic is free with sign-in but excludes step-by-step solutions.
+Explanation, calculation and visual exploration are different supports.
+Notebook: https://support.google.com/gemininotebook/answer/16213268?hl=en
+Desmos guide: https://help.desmos.com/hc/en-us/articles/202529279-Desmos-Graphing-Calculator-User-Guide
+Wolfram|Alpha plans: https://www.wolframalpha.com/pro/pricing/
+[TOOL_NOTEBOOK_PRICE] Google. (2026). Learn about Gemini Notebook’s plans; Manage your Gemini Notebook usage limits.
+https://support.google.com/gemininotebook/answer/16213268?hl=en
+Standard access is free with an account and variable usage limits. Education eligibility depends on the actual licence.
+[TOOL_DESMOS] Desmos Studio. (2026). Desmos Graphing Calculator User Guide.
+https://help.desmos.com/hc/en-us/articles/202529279-Desmos-Graphing-Calculator-User-Guide
+Free graphing calculator; no login is needed to use it. An account is needed to save graphs. It evaluates and plots entered expressions; it does not itself provide a source-grounded explanation of the chapter.
+[TOOL_WOLFRAM_PRICE] Wolfram Alpha LLC. (2026). Wolfram|Alpha Pro pricing plans.
+https://www.wolframalpha.com/pro/pricing/
+Basic is free with sign-in and does not include step-by-step solutions. Pro includes step-by-step solutions for supported problems; plan, region and problem coverage matter.
+
+SLIDE S97P — Paid options: what would the upgrade add?
+Page 72 / 85
+Optional alternatives · the demonstrated path remains free
+Notebook paid tiers / Claude Pro
+Higher usage limits and plan-specific features. Compare with Standard / Free first.
+Napkin Plus / Pro
+Additional credits, SVG/PPT export and branding options. Free PNG/PDF remains available.
+MindMeister Personal / Pro
+Unlimited maps and additional exports. Its Free plan allows three maps; Excalidraw is another free option.
+Compare features, quotas, account requirements and eligibility before choosing.
+Notebook plans: https://support.google.com/gemininotebook/answer/16213268?hl=en
+Claude plans: https://claude.com/pricing
+Napkin plans: https://www.napkin.ai/pricing.html
+MindMeister plans: https://www.mindmeister.com/pricing
+[TOOL_NOTEBOOK_PRICE] Google. (2026). Learn about Gemini Notebook’s plans; Manage your Gemini Notebook usage limits.
+https://support.google.com/gemininotebook/answer/16213268?hl=en
+Standard access is free with an account and variable usage limits. Education eligibility depends on the actual licence.
+[TOOL_CLAUDE] Anthropic. (2026). Claude pricing.
+https://claude.com/pricing
+Free includes Artifacts with usage limits. Does not establish that Claude produced the code distributed in this workshop.
+[TOOL_NAPKIN] Napkin AI. (2026). Pricing.
+https://www.napkin.ai/pricing.html
+Free: 500 credits/week and branded PNG/PDF export. SVG/PPT export is paid.
+[TOOL_MINDMEISTER] MindMeister. (2026). Pricing.
+https://www.mindmeister.com/pricing
+Free allows three maps; Personal/Pro add unlimited maps and plan-specific exports.
+
+SLIDE S97Q — Paid options for study and access
+Page 73 / 85
+Describe the added function and the available free alternative
+RemNote Pro / Pro with AI · freemium
+Advanced PDF, image-occlusion and AI features vary by plan. Free notes and flashcards are also available.
+Read&Write by Everway · licensed suite
+Reading and writing supports, with platform/language differences. Free access for eligible K–12 teachers is conditional.
+Check eligibility and actual language support; an institutional licence is not free access for everyone.
+RemNote plans: https://www.remnote.com/pricing
+Read&Write pricing: https://www.everway.com/products/read-and-write-education/pricing/
+[TOOL_REMNOTE] RemNote. (2026). Pricing.
+https://www.remnote.com/pricing
+Free notes and flashcards; advanced PDF, image-occlusion and AI features depend on plan.
+[TOOL_READWRITE] Everway. (2026). Read&Write education pricing.
+https://www.everway.com/products/read-and-write-education/pricing/
+Normally licensed; free access for eligible K–12 teachers is conditional. Languages and functions vary by platform.
+
+SLIDE S98 — Free tools for teachers and assessment
+Page 74 / 85
+Generation, collection and judgement are separate functions
+MagicSchool Free · account required
+Draft questions and criteria within usage limits; teacher review remains essential.
+Formative Free Teacher · teacher account
+Multiple choice, open response, drawing and teacher feedback; standalone rubric in the kit.
+Google Forms · teacher Google account
+Quiz keys and feedback; manual review for explanations. A free alternative for collecting responses.
+MagicSchool plans: https://www.magicschool.ai/pricing
+Formative comparison: https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Google Forms quiz guide: https://support.google.com/docs/answer/7032287?hl=en
+[TOOL_MAGIC_PRICE] MagicSchool. (2026). Pricing and plans.
+https://www.magicschool.ai/pricing
+Free has limits; Plus and institutional licences are distinct.
+[TOOL_FORMATIVE] Formative. (2026, 4 maggio). What Formative plan is best for me?
+https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Free includes multiple choice, open responses, drawing and teacher feedback. Integrated rubrics, audio/video responses and Luna feedback are paid features.
+[TOOL_FORMS] Google. (2026). Create and mark quizzes with Google Forms.
+https://support.google.com/docs/answer/7032287?hl=en
+Quiz keys and feedback; open explanations need manual review. Teacher account required.
+
+SLIDE S98P — Teacher tools: optional paid features
+Page 75 / 85
+Check the feature, rather than assuming the whole product is free
+MagicSchool Plus / institutional plans
+Higher generation capacity and plan-specific history or management features.
+Formative paid plans
+Integrated rubrics, audio/video responses and Luna hints/feedback; Free Teacher supports the demonstrated collection.
+Wayground Starter and paid plans
+An alternative for quizzes and reports. Starter limits and premium features vary by region.
+Always label Free, freemium, temporary trial and paid licence separately.
+MagicSchool plans: https://www.magicschool.ai/pricing
+Formative comparison: https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Wayground Starter: https://help.wayground.com/support/solutions/articles/158000404038-wayground-starter-basic-plan
+[TOOL_MAGIC_PRICE] MagicSchool. (2026). Pricing and plans.
+https://www.magicschool.ai/pricing
+Free has limits; Plus and institutional licences are distinct.
+[TOOL_FORMATIVE] Formative. (2026, 4 maggio). What Formative plan is best for me?
+https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me
+Free includes multiple choice, open responses, drawing and teacher feedback. Integrated rubrics, audio/video responses and Luna feedback are paid features.
+[TOOL_WAYGROUND] Wayground. (2026). Wayground Starter (Basic) plan.
+https://help.wayground.com/support/solutions/articles/158000404038-wayground-starter-basic-plan
+Limits and features vary by region; distinguish Starter from premium trials.
+
+SLIDE S99 — Bibliography: AI and learning
+Page 76 / 85
+Empirical studies · read the outcome and setting alongside the result
+Assisted practice, immediate learning and independent performance are different outcomes.
+Bastani et al. · 2025
+Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122.
+https://doi.org/10.1073/pnas.2422633122
+Kestin et al. · 2025
+Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458.
+https://doi.org/10.1038/s41598-025-97652-6
+[EDU_BASTANI] Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122.
+https://doi.org/10.1073/pnas.2422633122
+RCT in high-school mathematics at one Turkish school, with nearly 1,000 students. Separates assisted practice from subsequent unassisted tests; does not evaluate this workshop or these commercial tools.
+[EDU_KESTIN] Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458.
+https://doi.org/10.1038/s41598-025-97652-6
+194 eligible university physics students; tutor designed for specific lessons and immediate tests. Does not establish universal or long-term chatbot effectiveness.
+
+SLIDE S99B — Bibliography: guided use and retrieval
+Page 77 / 85
+Two complementary reasons for asking the learner to attempt and revise
+These studies inform design choices; they do not validate this complete workshop or a commercial tool.
+Huang et al. · 2026
+Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13, 62.
+https://doi.org/10.1186/s40594-026-00652-9
+Karpicke & Blunt · 2011
+Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772–775.
+https://doi.org/10.1126/science.1199327
+[EDU_HUANG] Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13, 62.
+https://doi.org/10.1186/s40594-026-00652-9
+95 students; immediate AI-assisted revision of electromagnetism questions after structured training. Does not establish durable independent learning.
+[EDU_RETRIEVAL] Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772–775.
+https://doi.org/10.1126/science.1199327
+Experiments with science texts and specific study conditions. Does not show that concept maps are useless or every generated quiz constitutes effective retrieval practice.
+
+SLIDE S100 — Bibliography: regulation, maps and AI literacy
+Page 78 / 85
+Theoretical and competency frameworks
+Frameworks organise design decisions; they are not experimental evidence of tool effectiveness.
+Panadero · 2017
+Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. Frontiers in Psychology, 8, 422.
 https://doi.org/10.3389/fpsyg.2017.00422
-[B02] Loyens et al., 2008
-Loyens, S. M. M., Magda, J., & Rikers, R. M. J. P. (2008). Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning. Educational Psychology Review, 20, 411–427.
-Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning
-https://doi.org/10.1007/s10648-008-9082-7
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
+Novak & Cañas · 2008
+Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
+https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf
+UNESCO · 2024
+Miao, F., Shiohira, K., & Lao, N. (2024). AI competency framework for students. UNESCO.
+https://www.unesco.org/en/articles/ai-competency-framework-students
+[EDU_SRL] Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. Frontiers in Psychology, 8, 422.
+https://doi.org/10.3389/fpsyg.2017.00422
+Theoretical review of six self-regulated learning models, not validation of this workshop; self-direction and self-regulation are related but distinct.
+[EDU_MAPS] Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
+https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf
+Theoretical and practical technical report; not an efficacy trial of Excalidraw or AI-generated diagrams.
+[EDU_UNESCO] Miao, F., Shiohira, K., & Lao, N. (2024). AI competency framework for students. UNESCO.
+https://www.unesco.org/en/articles/ai-competency-framework-students
+Competency framework, rather than experimental evidence of learning gains.
 
-
-SLIDE S20 — Guidance, fading and access support
-Page 21 / 44
-Forum: 2 min; 35:00–37:00; position 21/41
-University: 1.5 min; 16:30–18:00; position 16/34
-Teachers: 2 min; 10:00–12:00; position 11/33
-
-Message: Reduce content help when appropriate while preserving access to the task.
-
-Explanation: Show the reasoning, observe an attempt and adjust the help. Reduce support that supplies the content answer while keeping the accommodations needed to access the task.
-
-Content / steps (linear reading order):
-1. Model a strategy and observe the learner’s response
-2. Adjust and gradually reduce content support
-3. Keep the access accommodations the learner needs
-
-Custom cards (linear reading order):
-Card 1
-title: Model the strategy
-body: Show how you make a decision and check a source. Let the learner see the reasoning behind the answer.
-Card 2
-title: Adjust the help
-body: Observe the next attempt. Offer a question or hint, then reduce content help when the learner is ready.
-Card 3
-title: Preserve access
-body: Keep screen readers, dictation, translation and other agreed support. Separate the thinking being checked from barriers to participation.
-
-Takeaway: Reducing content help does not mean removing access support
-
-Sources:
-[B12] van de Pol et al., 2010
-van de Pol, J., Volman, M., & Beishuizen, J. (2010). Scaffolding in Teacher–Student Interaction: A Decade of Research. Educational Psychology Review, 22, 271–296.
-Scaffolding in Teacher–Student Interaction: A Decade of Research
-https://link.springer.com/article/10.1007/s10648-010-9127-6
-https://doi.org/10.1007/s10648-010-9127-6
-[A04] Darvishi et al., 2024
-Darvishi et al. (2024). Computers & Education, 210, 104967.
-Impact of AI assistance on student agency
-https://doi.org/10.1016/j.compedu.2023.104967
-[A14] Risko et al., 2016
-Risko & Gilbert (2016). Trends in Cognitive Sciences, 20(9), 676–688.
-Cognitive Offloading
-https://doi.org/10.1016/j.tics.2016.07.002
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
+SLIDE S100B — Bibliography: accessible learning materials
+Page 79 / 85
+Guidance for options, clear content and individual support
+Use these references to discuss barriers and supports with the learner.
+CAST · UDL 3.0
+CAST. (2024). Universal Design for Learning Guidelines, version 3.0.
 https://udlguidelines.cast.org/
-
-
-SLIDE S21 — Fluent answers and fabricated references
-Page 22 / 44
-Forum: 2 min; 37:00–39:00; position 22/41
-University: 1.5 min; 18:00–19:30; position 17/34
-Teachers: 1.5 min; 18:30–20:00; position 16/33
-
-Message: Verify the source and its relevance, not just the form of the citation.
-
-Explanation: A reference can look correct and still be false or irrelevant. Open the original, read the supporting passage and check whether the publication has been corrected.
-
-Content / steps (linear reading order):
-1. Open the original source
-2. Check title, author, date and DOI
-3. Find the passage that supports the claim
-
-Custom cards (linear reading order):
-Card 1
-title: Open the original
-body: Check the title, authors, date and DOI. A well-formatted citation does not show that the source exists.
-Card 2
-title: Read the passage
-body: Find the result that supports the claim. Check who was studied, what was compared and when it was measured.
-Card 3
-title: Check its status
-body: Look for corrections or retractions on the publisher’s page. Recheck the claim if the source has changed.
-
-Takeaway: A fluent explanation or generated citation is not verification
-
-Sources:
-[A17] Walters et al., 2023
-Walters & Wilder (2023). Scientific Reports, 13, 14045.
-Fabrication and errors in the bibliographic citations generated by ChatGPT
-https://doi.org/10.1038/s41598-023-41032-5
-[A19] Retraction notice, 2026
-Wang & Fan (2025), retraction 22 aprile 2026.
-RETRACTED ARTICLE: The effect of ChatGPT on students’ learning performance, learning perception, and higher-order thinking: insights from a meta-analysis
-https://doi.org/10.1057/s41599-026-07310-z
-https://doi.org/10.1057/s41599-025-04787-y
-
-
-SLIDE S22 — Reflection before accepting AI advice
-Page 23 / 44
-Forum: 2 min; 39:00–41:00; position 23/41
-University: 1.5 min; 19:30–21:00; position 18/34
-Teachers: outside the scheduled sequence (0 min)
-
-Message: A short reflection intervention reduced acceptance of wrong advice in one immediate decision experiment.
-
-Content / steps (linear reading order):
-1. 342 university students · one Chinese university
-2. Wrong-advice acceptance: 62.4% with free chat; 39.7% with reflection
-3. Immediate task outcome; no evidence of lasting transfer
-
-Study / context: Randomized experiment · 342 students · one Chinese university
-
-Observed in this study:
-62.4% — wrong-advice acceptance · free chat
-39.7% — wrong-advice acceptance · reflection
-
-Finding: Reflection prompts reduced acceptance of wrong advice in this immediate task.
-
-Limit: A specific short decision task. Lasting transfer was not established.
-
-Sources:
-[A16] Ren, 2026
-Ren (2026). Frontiers in Psychology, 17, 1926110.
-College students' metacognitive awareness of generative-AI reliance: an experimental study of decision confidence and attribution bias
-https://doi.org/10.3389/fpsyg.2026.1926110
-[A05] Lee et al., 2025
-Lee et al. (2025). CHI '25, Article 1121.
-The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers
-https://doi.org/10.1145/3706598.3713778
-
-
-SLIDE S23 — Language, bias and missing perspectives
-Page 24 / 44
-Forum: 2 min; 41:00–43:00; position 24/41
-University: 1 min; 21:00–22:00; position 19/34
-Teachers: 1 min; 20:00–21:00; position 17/33
-
-Message: A polished rewrite can remove a voice or narrow the available perspectives.
-
-Explanation: When using a rewrite or generated judgement, compare meaning, uncertainty and voice. Ask whose perspective is absent before accepting the result.
-
-Content / steps (linear reading order):
-1. Whose language or perspective is missing?
-2. Compare meaning, uncertainty and cultural voice
-3. Do not infer a person’s ability from a generated judgement
-
-Custom cards (linear reading order):
-Card 1
-title: Language
-body: Check whether a rewrite keeps the writer’s meaning and cultural voice. More standard wording is not always a better fit.
-Card 2
-title: Perspective
-body: Ask which sources, experiences or interpretations are missing. Compare the account with other relevant evidence.
-Card 3
-title: Judgement
-body: Do not use generated text to infer a person’s ability. People need reasons they can inspect and challenge.
-
-Takeaway: Compare sources and interpretations; prompting cannot guarantee fairness
-
-Sources:
-[R15] Hofmann et al., 2024
-Hofmann, V., Kalluri, P. R., Jurafsky, D., & King, S. (2024). AI generates covertly racist decisions about people based on their dialect.
-AI generates covertly racist decisions about people based on their dialect
-https://www.nature.com/articles/s41586-024-07856-5
-https://doi.org/10.1038/s41586-024-07856-5
-[R21] Miao et al., 2024
-Miao, F., Shiohira, K., & Lao, N.; UNESCO (2024). AI competency framework for students.
-AI competency framework for students
-https://www.unesco.org/en/articles/ai-competency-framework-students?hub=66973
-
-
-SLIDE S24 — Privacy and institutional responsibility
-Page 25 / 44
-Forum: 2 min; 43:00–45:00; position 25/41
-University: 1 min; 22:00–23:00; position 20/34
-Teachers: 1.5 min; 21:00–22:30; position 18/33
-
-Message: Choose the data and the setting before opening a tool.
-
-Explanation: Use public or made-up material in this workshop. Before real classroom use, follow your institution’s process for accounts, age requirements and data handling.
-
-Content / steps (linear reading order):
-1. Use public or synthetic material for the activity
-2. Check institutional rules, account settings and age requirements
-3. Keep responsibility for consequential decisions with people
-
-Custom cards (linear reading order):
-Card 1
-title: Public or synthetic
-body: Choose examples that do not identify learners. Do not upload diagnoses, identifiable student work or private conversations in a demo.
-Card 2
-title: Institutional checks
-body: Review the approved setting, account requirements and handling of data. Resolve these choices before asking learners to use a tool.
-Card 3
-title: Human responsibility
-body: Keep decisions that affect people with responsible staff. Do not ask AI to infer a learner’s diagnosis or emotions.
-
-Takeaway: Avoid uploading diagnoses, identifiable work or private conversations in a demo
-
-Sources:
-[R02] UNESCO, 2023
-Miao, F., & Holmes, W.; UNESCO (2023). Guidance for generative AI in education and research.
-Guidance for generative AI in education and research
-https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research?hub=66973
-[R03] European Commission, 2026
-European Commission, DG EAC (2026). Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators, revised edition.
-Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators, revised edition
-https://op.europa.eu/en/publication-detail/-/publication/f692aa0b-17a7-11f1-8870-01aa75ed71a1/
-https://doi.org/10.2766/7967834
-[R19] UNESCO, 2025
-UNESCO (2025). AI and education: Protecting the rights of learners.
-AI and education: Protecting the rights of learners
-https://www.unesco.org/en/articles/ai-and-education-protecting-rights-learners?hub=66911
-
-
-SLIDE S25 — Access support belongs in the learning design
-Page 26 / 44
-Forum: 2 min; 45:00–47:00; position 26/41
-University: 1.5 min; 23:00–24:30; position 21/34
-Teachers: 1.5 min; 22:30–24:00; position 19/33
-
-Message: Preserve the learning goal while offering more than one route to participate.
-
-Explanation: Keep the intellectual goal clear while offering different ways to take part. Change the format or access route without removing the reasoning the task is meant to develop.
-
-Content / steps (linear reading order):
-1. Map or structured list
-2. Written or spoken response
-3. Independent content check with access accommodations
-
-Custom cards (linear reading order):
-Card 1
-title: More than one format
-body: Offer the diagram and a structured text version. Keep the concepts, relationships and reading order available in both.
-Card 2
-title: More than one response
-body: Allow a written, spoken or visual explanation. Judge the reasoning needed for the goal, rather than the format alone.
-Card 3
-title: The same learning goal
-body: Keep access accommodations during the content check. Ask what the learner understands while removing avoidable barriers.
-
-Takeaway: Choice of access is not a fixed learning style or a lower intellectual goal
-
-Sources:
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
+W3C WAI · clear content
+World Wide Web Consortium. (2021). Making content usable for people with cognitive and learning disabilities: Objective 3, Use clear and understandable content.
+https://www.w3.org/WAI/WCAG2/supplemental/objectives/o3-clear-content/
+AID · compensatory tools
+Associazione Italiana Dislessia. (n.d.). Compensatory tools [English translation of webpage title].
+https://www.aiditalia.org/gli-strumenti-compensativi
+[ACC_CAST] CAST. (2024). Universal Design for Learning Guidelines, version 3.0.
 https://udlguidelines.cast.org/
-[R12] W3C WAI
-W3C Web Accessibility Initiative (2022). Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations.
-Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations
-https://www.w3.org/WAI/teach-advocate/accessible-presentations/
-[R20] W3C cognitive guidance
-W3C WAI (2021). Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks.
-Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks
-https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/
+Design guidance; not a clinical prescription or guarantee of individual benefit.
+[ACC_COGA] World Wide Web Consortium. (2021). Making content usable for people with cognitive and learning disabilities: Objective 3, Use clear and understandable content.
+https://www.w3.org/WAI/WCAG2/supplemental/objectives/o3-clear-content/
+Supplemental cognitive-accessibility guidance, rather than an additional normative WCAG AA requirement.
+[ACC_AID] Associazione Italiana Dislessia. (n.d.). Compensatory tools [English translation of webpage title].
+https://www.aiditalia.org/gli-strumenti-compensativi
+Information about supports to adapt to the learner and task; not diagnosis or treatment advice.
 
+SLIDE S101 — Technical bibliography: model and instructions
+Page 80 / 85
+Foundational research behind the chapter’s distinctions
+The original Transformer paper describes an encoder–decoder; the demo uses a later causal decoder.
+Vaswani et al. · 2017
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.
+https://arxiv.org/abs/1706.03762
+Ouyang et al. · 2022
+Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C. L., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike, J., & Lowe, R. (2022). Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35, 27730–27744.
+https://arxiv.org/abs/2203.02155
+[TECH_TRANSFORMER] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.
+https://arxiv.org/abs/1706.03762
+Original encoder–decoder architecture; the workshop demo uses a later causal decoder.
+[TECH_INSTRUCT] Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C. L., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike, J., & Lowe, R. (2022). Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35, 27730–27744.
+https://arxiv.org/abs/2203.02155
+InstructGPT method, rather than a complete description of every instruction-tuned model.
 
-SLIDE S26 — Can someone recover the argument without the diagram?
-Page 27 / 44
-Forum: 2 min; 47:00–49:00; position 27/41
-University: 1 min; 24:30–25:30; position 22/34
-Teachers: 1.5 min; 24:00–25:30; position 20/33
+SLIDE S101B — Technical bibliography: retrieval and visual explanation
+Page 81 / 85
+Research references for two different kinds of support
+Transformer Explainer is a complementary live resource; its GPT-2 model differs from the workshop’s Qwen demo.
+Lewis et al. · 2020
+Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33, 9459–9474.
+https://arxiv.org/abs/2005.11401
+Cho et al. · CHI 2026
+Cho, A., Kim, G. C., Karpekov, A., Lee, S., Helbling, A., Hoover, B., Wang, Z. J., Kahng, M., & Chau, D. H. (2026). Transformer Explainer: Learning LLM Transformers with interactive visual explanation and experimentation. Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, Article 7, 1–21.
+https://doi.org/10.1145/3772318.3791725
+[TECH_RAG] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33, 9459–9474.
+https://arxiv.org/abs/2005.11401
+Foundational RAG research, not documentation of Notebook’s internal implementation.
+[TECH_EXPLAINER] Cho, A., Kim, G. C., Karpekov, A., Lee, S., Helbling, A., Hoover, B., Wang, Z. J., Kahng, M., & Chau, D. H. (2026). Transformer Explainer: Learning LLM Transformers with interactive visual explanation and experimentation. Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, Article 7, 1–21.
+https://doi.org/10.1145/3772318.3791725
+Complete CHI 2026 paper; arXiv v2, August 2026. Interactive resource uses GPT-2, which differs from the workshop’s Qwen model.
 
-Message: Describe the reasoning, not only the appearance
+SLIDE S102 — Web resources: model, runtime and tool guides
+Page 82 / 85
+Official documentation for repeating the demonstrated operations
+Tool documentation and plan links are also attached to the relevant resource pages.
+Qwen · model card
+Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Hugging Face · Transformers.js
+Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Transformer Explainer · demo
+Polo Club of Data Science. (2026). Transformer Explainer.
+https://poloclub.github.io/transformer-explainer/
+[TECH_QWEN] Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+Small model with limited answer quality. ONNX quantisation affects precision and runtime requirements.
+[TECH_JS] Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
+https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes
+Documented Qwen ONNX q4 example. Runtime performance depends on browser, device and configuration.
+[TECH_DEMO] Polo Club of Data Science. (2026). Transformer Explainer.
+https://poloclub.github.io/transformer-explainer/
+Complementary resource with a different model and settings from the workshop demo.
 
-Content / steps (linear reading order):
-1. Label the relationships
-2. Describe the structure in text
-3. Check reading order, contrast and captions
+SLIDE S102B — Web resources: access, dictation and media
+Page 83 / 85
+Operational guides for checking the actual environment
+Check the controls in the browser and operating system used for the activity.
+Microsoft · Reading mode
+Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
+https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge
+Apple · Dictation
+Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.
+https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27
+Microsoft · voice typing
+Microsoft. (s.d.). Use voice typing to talk instead of type on your PC.
+https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc
+[ACC_EDGE] Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
+https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge
+Controls and availability vary by version, language and page; test the actual chapter HTML.
+[ACC_MAC] Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.
+https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27
+Configuration, languages and audio processing depend on device and settings.
+[ACC_WINDOWS] Microsoft. (s.d.). Use voice typing to talk instead of type on your PC.
+https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc
+Windows alternative; requires a supported setup, microphone and the connectivity stated in the guide.
 
-Your output: One barrier and one change that preserves the argument
-
-Additional displayed content / linear descriptions / links:
-- Visual: Fast answers → Understanding → Independence
-- Text: The chain assumes that fast answers lead to understanding, which then leads to independence.
-- Activity 2: inspect and repair the argument: activity-packet.txt (same materials folder)
-
-Sources:
-[R12] W3C WAI
-W3C Web Accessibility Initiative (2022). Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations.
-Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations
-https://www.w3.org/WAI/teach-advocate/accessible-presentations/
-[R13] W3C complex images
-W3C Web Accessibility Initiative (2026). Images Tutorial: Complex Images.
-Images Tutorial: Complex Images
-https://www.w3.org/WAI/tutorials/images/complex/
-[R14] WCAG 2.2
-W3C (2024). Web Content Accessibility Guidelines (WCAG) 2.2.
-Web Content Accessibility Guidelines (WCAG) 2.2
+SLIDE S102C — Web resources: accessible formats and media
+Page 84 / 85
+Standards and guidance for the reusable materials
+For documents, preserve selectable text, structure, reading order and an equivalent reflow version.
+A checklist supports review; actual navigation, reading and media use still need inspection.
+W3C · WCAG 2.2
+World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2.
 https://www.w3.org/TR/WCAG22/
-[R20] W3C cognitive guidance
-W3C WAI (2021). Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks.
-Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks
-https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/
-
-
-SLIDE S27 — An image description can invent a consequential detail
-Page 28 / 44
-Forum: 2 min; 49:00–51:00; position 28/41
-University: 1 min; 25:30–26:30; position 23/34
-Teachers: 1 min; 25:30–26:30; position 21/33
-
-Message: Who can verify the description?
-
-Explanation: In an interview study, blind participants described useful AI help and errors. Consider how someone can verify a detail when the description is their route to the image.
-
-Content / steps (linear reading order):
-1. In an ASSETS interview study, blind participants described benefits and errors in generative AI
-2. An example added an unsupported guide-dog role and confused objects held
-
-Takeaway: Faster alt text does not by itself establish accuracy or equivalent access
-
-Additional displayed content / linear descriptions / links:
-- Blind people’s experiences with generative AI — A useful answer can still be wrong — In an ASSETS interview study, blind participants described benefits and errors in generative AI
-- The invented detail — An example added an unsupported guide-dog role and confused objects held
-- The design question — What route lets the person check the description?
-
-Sources:
-[R16] Adnin & Das, 2024
-Adnin, R., & Das, M. (2024). “I look at it as the king of knowledge”: How Blind People Use and Understand Generative AI Tools.
-“I look at it as the king of knowledge”: How Blind People Use and Understand Generative AI Tools
-https://doi.org/10.1145/3663548.3675631
-
-
-SLIDE S28 — Participation choices
-Page 29 / 44
-Forum: 1 min; 51:00–52:00; position 29/41
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
-
-Message: No account, diagram drawing or personal disclosure is required.
-
-Explanation: Choose a way to participate that works for you. No account, diagram drawing or personal disclosure is required; the activity focuses on reasoning rather than speed.
-
-Content / steps (linear reading order):
-1. Work alone or with a partner
-2. Use a map, a structured list or a spoken explanation
-3. Ask for clarification, more time or a different format
-
-Custom cards (linear reading order):
-Card 1
-title: Work alone or together
-body: Write your own proposal or discuss it with a partner. You can also use a partner as a coach.
-Card 2
-title: Choose a format
-body: Use labelled arrows, a structured list or a spoken explanation. Make the decisions and their reasons clear.
-Card 3
-title: Ask for a change
-body: Ask for clarification, more time or another format. You do not need to share a diagnosis publicly.
-
-Takeaway: No public diagnosis or account creation is required
-
-Sources:
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-[R12] W3C WAI
-W3C Web Accessibility Initiative (2022). Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations.
-Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations
-https://www.w3.org/WAI/teach-advocate/accessible-presentations/
-[R20] W3C cognitive guidance
-W3C WAI (2021). Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks.
-Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks
-https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/
-
-
-SLIDE S29 — Tool roles and selection
-Page 30 / 44
-Forum: 2 min; 52:00–54:00; position 30/41
-University: 1.5 min; 26:30–28:00; position 24/34
-Teachers: 1.5 min; 26:30–28:00; position 22/33
-
-Message: Select tools for a learning function, then verify access and data conditions.
-
-Explanation: Start with the learning action you need, then choose a tool. These are examples of functions; they do not establish that a product improves learning.
-
-Content / steps (linear reading order):
-1. Paper or text editor: record and revise the learning path
-2. Conversational assistant: question, hint or critique
-3. Source notebook: compare claims with supplied passages
-
-Custom cards (linear reading order):
-Card 1
-title: CmapTools / Excalidraw
-body: Draft concepts and label each link. Keep a structured text version so the diagram is not the only way to follow the reasoning.
-Card 2
-title: Conversational assistant
-body: After a first attempt, ask for one question, hint or critique. Keep responsibility for the answer and for checking it.
-Card 3
-title: Source notebook
-body: Supply the study passage and compare it with your claim. Open the original source to check whether it supports the conclusion.
-
-Takeaway: Choose by task, access and data conditions; every activity also works on paper
-
-Sources:
-[C16] Google documentation
-NotebookLM / documentazione attuale: Gemini Notebook
-https://support.google.com/gemininotebook/answer/16164461?hl=en
-[C17] UW–Madison accessibility review
-Google NotebookLM Accessibility and Usability Information
-https://kb.wisc.edu/157699
-[C19] IHMC CmapTools
-IHMC CmapTools
-https://cmap.ihmc.us/cmaptools/
-[C20] Excalidraw
-Excalidraw, lavagna gratuita e progetto open source
-https://github.com/excalidraw/excalidraw
-[C31] OpenAI learning guide
-ChatGPT — percorso di studio guidato da materiali del corso
-https://learn.chatgpt.com/use-cases/build-exam-study-system
-
-
-SLIDE S30 — A prepared example: check the outcome
-Page 31 / 44
-Forum: 2 min; 54:00–56:00; position 31/41
-University: outside the scheduled sequence (0 min)
-Teachers: 1 min; 28:00–29:00; position 23/33
-
-Message: Prepared illustration, not an observed live AI response
-
-Content / steps (linear reading order):
-1. Prepare a public source and a clearly labelled illustrative response
-2. Show how to check one claim against the passage
-3. Keep a text version and an offline route
-
-Supplied study: Kestin et al.2025 · study cardS42: immediate post-tests with194 students; no delayed retention test
-
-Prompt: My claim is: “An AI tutor improves long-term retention.” Ask one question that helps me check it against the supplied study.
-
-Illustrative response — prepared example, not a live result: Which delayed test did the study include? Its reported post-test was immediate.
-
-Takeaway: Check the original source. A good prompt still needs verification.
-
-Additional displayed content / linear descriptions / links:
-- Kestin et al.2025 · study cardS42: immediate post-tests with194 students; no delayed retention test
-- Prompt — My claim is: “An AI tutor improves long-term retention.” Ask one question that helps me check it against the supplied study.
-- Prepared example · not a live result — Illustrative response — Which delayed test did the study include? Its reported post-test was immediate.
-
-Sources:
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-[A17] Walters et al., 2023
-Walters & Wilder (2023). Scientific Reports, 13, 14045.
-Fabrication and errors in the bibliographic citations generated by ChatGPT
-https://doi.org/10.1038/s41598-023-41032-5
-
-
-SLIDE S31 — Design a responsible study activity
-Page 32 / 44
-Forum: 1.5 min; 56:00–57:30; position 32/41
-University: 1 min; 28:00–29:00; position 25/34
-Teachers: 1 min; 29:00–30:00; position 24/33
-
-Message: Your institution is considering AI for independent study
-
-Explanation: Use this claim: “A better AI-assisted answer proves better understanding.” Design a short activity to test it, or choose a topic from your own teaching.
-
-Content / steps (linear reading order):
-1. Choose a familiar topic
-2. Design one small learning activity
-3. Specify what you would observe before expanding it
-
-Your output: A learning goal, a support boundary and an observable check
-
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[B02] Loyens et al., 2008
-Loyens, S. M. M., Magda, J., & Rikers, R. M. J. P. (2008). Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning. Educational Psychology Review, 20, 411–427.
-Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning
-https://doi.org/10.1007/s10648-008-9082-7
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-
-
-SLIDE S32 — Your first attempt
-Page 33 / 44
-Forum: 3 min; 57:30–60:30; position 33/41
-University: 2 min; 29:00–31:00; position 26/34
-Teachers: 2 min; 30:00–32:00; position 25/33
-
-Message: Record your own goal and initial approach before receiving content help.
-
-Content / steps (linear reading order):
-1. By the end, the learner will be able to …
-2. My first approach is …
-3. I would look for evidence of …
-
-Your output: A first proposal before asking for content help
-
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-
-
-SLIDE S33 — Check what the evidence supports
-Page 34 / 44
-Forum: 4 min; 60:30–64:30; position 34/41
-University: 2 min; 31:00–33:00; position 27/34
-Teachers: 2 min; 32:00–34:00; position 26/33
-
-Message: Choose a finding that is relevant to your activity
-
-Explanation: Open one study card. Complete: “This finding suggests …, but it does not establish …”. Connect the claim to your proposed activity.
-
-Content / steps (linear reading order):
-1. Who took part? What was the comparison?
-2. What outcome was actually measured?
-3. This suggests …; it does not establish …
-
-Your output: One bounded claim and one limitation
-
-Additional displayed content / linear descriptions / links:
-- School mathematics — Bastani et al. · 2025; see S41
-- Physics tutor — Kestin et al. · 2025; see S42
-- Writing and transfer — Fan et al. · 2025; see S43
-- Printable study cards: Evidence_Cards_EN.txt (same materials folder)
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-[A03] Fan et al., 2025
-Fan et al. (2025; online 2024). British Journal of Educational Technology, 56, 489–530.
-Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance
-https://doi.org/10.1111/bjet.13544
-[A09] Weidlich et al., 2025
-Weidlich et al. (2025). Journal of Computer Assisted Learning, 41(5), e70105.
-ChatGPT in Education: An Effect in Search of a Cause
-https://doi.org/10.1111/jcal.70105
-
-
-SLIDE S34 — Build the learning path
-Page 35 / 44
-Forum: 6 min; 64:30–70:30; position 35/41
-University: 4 min; 33:00–37:00; position 28/34
-Teachers: 5 min; 34:00–39:00; position 27/33
-
-Message: Which decisions stay with the learner?
-
-Explanation: Write one decision per field. Use labelled arrows or a numbered list.
-
-Content / steps (linear reading order):
-1. Goal
-2. First attempt
-3. Useful support
-4. Source check
-5. Independent check
-6. Reflection
-
-Custom cards (linear reading order):
-Card 1
-title: Goal
-body: State what the learner should explain or do.
-Card 2
-title: First attempt
-body: Record the learner’s approach before content help.
-Card 3
-title: Useful support
-body: Choose a question, hint or feedback boundary.
-Card 4
-title: Source check
-body: Identify the passage that supports the claim.
-Card 5
-title: Independent check
-body: Explain or apply the idea; keep access support.
-Card 6
-title: Reflection
-body: Name what changed and one next step.
-
-Your output: A learning path, using labelled arrows or a structured list
-
-Sources:
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[B02] Loyens et al., 2008
-Loyens, S. M. M., Magda, J., & Rikers, R. M. J. P. (2008). Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning. Educational Psychology Review, 20, 411–427.
-Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning
-https://doi.org/10.1007/s10648-008-9082-7
-[B12] van de Pol et al., 2010
-van de Pol, J., Volman, M., & Beishuizen, J. (2010). Scaffolding in Teacher–Student Interaction: A Decade of Research. Educational Psychology Review, 22, 271–296.
-Scaffolding in Teacher–Student Interaction: A Decade of Research
-https://link.springer.com/article/10.1007/s10648-010-9127-6
-https://doi.org/10.1007/s10648-010-9127-6
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-
-
-SLIDE S35 — Revise a weak study recommendation
-Page 36 / 44
-Forum: 3 min; 70:30–73:30; position 36/41
-University: 1 min; 37:00–38:00; position 29/34
-Teachers: 2 min; 39:00–41:00; position 28/33
-
-Message: Prepared illustration · deliberately incomplete
-
-Explanation: Read the recommendation below as a deliberately incomplete example. Replace one passive step with an action that lets you observe what the learner understands.
-
-Content / steps (linear reading order):
-1. What is missing?
-2. Add a source check, an explanation or a new application
-
-Prepared workshop quotation / example: Use AI to produce a summary, read it twice, and judge understanding by how clear it feels.
-
-Your output: One revision that adds an observable learner action
-
-Sources:
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-[B05] Karpicke et al., 2011
-Karpicke, J. D., & Blunt, J. R. (2011). Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping. Science, 331(6018), 772–775.
-Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping
-https://doi.org/10.1126/science.1199327
-[B18] Deslauriers et al., 2019
-Deslauriers, L., McCarty, L. S., Miller, K., Callaghan, K., & Kestin, G. (2019). Measuring actual learning versus feeling of learning in response to being actively engaged in the classroom. PNAS, 116(39), 19251–19257.
-Measuring actual learning versus feeling of learning in response to being actively engaged in the classroom
-https://doi.org/10.1073/pnas.1821936116
-[A17] Walters et al., 2023
-Walters & Wilder (2023). Scientific Reports, 13, 14045.
-Fabrication and errors in the bibliographic citations generated by ChatGPT
-https://doi.org/10.1038/s41598-023-41032-5
-
-
-SLIDE S36 — Explain the decision without the model answer
-Page 37 / 44
-Forum: 2 min; 73:30–75:30; position 37/41
-University: 1 min; 38:00–39:00; position 30/34
-Teachers: 1.5 min; 41:00–42:30; position 29/33
-
-Message: Check the target content while keeping access accommodations.
-
-Content / steps (linear reading order):
-1. Close or turn over the content answer
-2. Explain one decision and its reason
-3. Name a limit or apply the idea to a new case
-
-Your output: A reasoned explanation, in a written or spoken format
-
-Takeaway: Keep screen readers, dictation, translation and approved accommodations
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-[R12] W3C WAI
-W3C Web Accessibility Initiative (2022). Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations.
-Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations
-https://www.w3.org/WAI/teach-advocate/accessible-presentations/
-
-
-SLIDE S37 — Debrief the learning path
-Page 38 / 44
-Forum: 4 min; 75:30–79:30; position 38/41
-University: 2.5 min; 39:00–41:30; position 31/34
-Teachers: 2 min; 42:30–44:30; position 30/33
-
-Message: Evaluate the decisions and evidence, not the appearance of the output.
-
-Content / steps (linear reading order):
-1. What did the support help you do?
-2. What did you still have to decide?
-3. What would show retention or transfer?
-4. Who might be excluded?
-
-Your output: One change to your activity after the discussion
-
-Sources:
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-
-
-SLIDE S38 — One decision, one later check
-Page 39 / 44
-Forum: 2 min; 79:30–81:30; position 39/41
-University: 1 min; 41:30–42:30; position 32/34
-Teachers: 2 min; 44:30–46:30; position 31/33
-
-Message: Try one bounded activity and decide what evidence would justify repeating or changing it.
-
-Content / steps (linear reading order):
-1. Name a familiar learning goal
-2. Choose a later recall or transfer task
-3. Ask learners what helped and what created barriers
-
-Your output: A small follow-up you can try in your setting
-
-Sources:
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-[R03] European Commission, 2026
-European Commission, DG EAC (2026). Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators, revised edition.
-Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators, revised edition
-https://op.europa.eu/en/publication-detail/-/publication/f692aa0b-17a7-11f1-8870-01aa75ed71a1/
-https://doi.org/10.2766/7967834
-
-
-SLIDE S39 — Keep the learning decisions visible
-Page 40 / 44
-Forum: 2 min; 81:30–83:30; position 40/41
-University: 1.5 min; 42:30–44:00; position 33/34
-Teachers: 1 min; 46:30–47:30; position 32/33
-
-Message: Research, prompts and printable materials
-
-Explanation: Use these three decisions when planning your next activity. The links below provide the research dossier, classroom packet, prompt bank and an accessible text version.
-
-Content / steps (linear reading order):
-1. Separate the product from the evidence of learning
-2. Make decisions visible and revisable
-3. Keep human judgement and access support
-
-Custom cards (linear reading order):
-Card 1
-title: Check the learning
-body: Assess what the learner can explain or do. Keep the assisted product separate from retention and transfer.
-Card 2
-title: Show the decisions
-body: Record goals, attempts, support and source checks. Use reflection to decide what to revise or try next.
-Card 3
-title: Keep people and access
-body: Keep human responsibility for consequential choices. Preserve access support and offer more than one way to participate.
-
-Additional displayed content / linear descriptions / links:
-- Research dossier: https://docs.google.com/document/d/1bga8afM8CtVytu2HqBHhL73TU8YoV4IkxsyA7AZa4cY/edit
-- Classroom packet: activity-packet.txt (same materials folder)
-- Prompt bank: Prompt_Bank_EN.txt (same materials folder)
-- Accessible text: Accessible_Deck_EN.txt (same materials folder)
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-
-
-SLIDE S40 — Questions and discussion
-Page 41 / 44
-Forum: 6.5 min; 83:30–90:00; position 41/41
-University: 4 min; 44:00–48:00; position 34/34
-Teachers: 2.5 min; 47:30–50:00; position 33/33
-
-Message: Which learning decision will you make visible?
-
-Content / steps (linear reading order):
-1. Which goal needs support?
-2. Which claim needs evidence?
-3. Which barrier needs another route?
-
-Additional displayed content / linear descriptions / links:
-- Which learning decision will you make visible?
-- Marco Cremaschi · University of Milano-Bicocca · Whattadata
-
-Sources:
-[A09] Weidlich et al., 2025
-Weidlich et al. (2025). Journal of Computer Assisted Learning, 41(5), e70105.
-ChatGPT in Education: An Effect in Search of a Cause
-https://doi.org/10.1111/jcal.70105
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-
-
-SLIDE S41 — Evidence card: school mathematics
-Page 42 / 44
-Forum: outside the scheduled sequence (0 min)
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
-
-Message: Assisted practice and independent exam performance can diverge.
-
-Evidence card:
-Design: Bastani et al. (2025), PNAS · classroom RCT
-Participants and task: About 1,000 pupils, one Turkish school, four sessions
-Finding: Base: practice +48%, unaided exam −17%; Tutor: practice +127%, no significant exam advantage
-Limit: Relative changes vs control; immediate outcomes, not long-term retention
-
-Additional displayed content / linear descriptions / links:
-- Return to the activity: S33
-
-Sources:
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-
-
-SLIDE S42 — Evidence card: a designed physics tutor
-Page 43 / 44
-Forum: outside the scheduled sequence (0 min)
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
-
-Message: A designed AI tutor improved the immediate test in a specific university comparison.
-
-Evidence card:
-Design: Kestin et al. (2025), Scientific Reports · randomized crossover
-Participants and task: 194 Harvard students, two introductory physics lessons
-Finding: Designed tutor versus active classroom instruction: higher immediate post-test performance
-Limit: Different instructional packages; no delayed retention test
-
-Additional displayed content / linear descriptions / links:
-- Return to the activity: S33
-
-Sources:
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-
-
-SLIDE S43 — Evidence card: writing and transfer
-Page 44 / 44
-Forum: outside the scheduled sequence (0 min)
-University: outside the scheduled sequence (0 min)
-Teachers: outside the scheduled sequence (0 min)
-
-Message: An improved assisted essay did not establish a knowledge or transfer advantage.
-
-Evidence card:
-Design: Fan et al. (2025), BJET · randomized experiment
-Participants and task: 117 university students, Chinese L1 / English L2, four conditions
-Finding: ChatGPT improved the essay; no significant knowledge or transfer advantage
-Limit: One laboratory task and small groups; not a diagnosis of cognitive harm
-
-Additional displayed content / linear descriptions / links:
-- Return to the activity: S33
-
-Sources:
-[A03] Fan et al., 2025
-Fan et al. (2025; online 2024). British Journal of Educational Technology, 56, 489–530.
-Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance
-https://doi.org/10.1111/bjet.13544
-
-
-COMPLETE SOURCE INDEX
-
-[A04] Darvishi et al., 2024
-Darvishi et al. (2024). Computers & Education, 210, 104967.
-Impact of AI assistance on student agency
-https://doi.org/10.1016/j.compedu.2023.104967
-
-[R03] European Commission, 2026
-European Commission, DG EAC (2026). Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators, revised edition.
-Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators, revised edition
-https://op.europa.eu/en/publication-detail/-/publication/f692aa0b-17a7-11f1-8870-01aa75ed71a1/
-https://doi.org/10.2766/7967834
-
-[A17] Walters et al., 2023
-Walters & Wilder (2023). Scientific Reports, 13, 14045.
-Fabrication and errors in the bibliographic citations generated by ChatGPT
-https://doi.org/10.1038/s41598-023-41032-5
-
-[A06] Fütterer et al., 2026
-Fütterer et al. (2026). Educational Psychology Review, 38, 42.
-Enhancing School Students’ Self-Regulated Learning through Generative AI Support: A Randomized Controlled Trial
-https://doi.org/10.1007/s10648-026-10133-8
-
-[B04] Schroeder et al., 2018
-Schroeder, N. L., Nesbit, J. C., Anguiano, C. J., & Adesope, O. O. (2018). Studying and Constructing Concept Maps: a Meta-Analysis. Educational Psychology Review, 30, 431–455.
-Studying and Constructing Concept Maps: a Meta-Analysis
-https://doi.org/10.1007/s10648-017-9403-9
-
-[A14] Risko et al., 2016
-Risko & Gilbert (2016). Trends in Cognitive Sciences, 20(9), 676–688.
-Cognitive Offloading
-https://doi.org/10.1016/j.tics.2016.07.002
-
-[A09] Weidlich et al., 2025
-Weidlich et al. (2025). Journal of Computer Assisted Learning, 41(5), e70105.
-ChatGPT in Education: An Effect in Search of a Cause
-https://doi.org/10.1111/jcal.70105
-
-[R06] EEF, 2025
-Education Endowment Foundation (2025). Promoting Metacognitive Talk — Practitioner Tool.
-Promoting Metacognitive Talk — Practitioner Tool
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-
-[B12] van de Pol et al., 2010
-van de Pol, J., Volman, M., & Beishuizen, J. (2010). Scaffolding in Teacher–Student Interaction: A Decade of Research. Educational Psychology Review, 22, 271–296.
-Scaffolding in Teacher–Student Interaction: A Decade of Research
-https://link.springer.com/article/10.1007/s10648-010-9127-6
-https://doi.org/10.1007/s10648-010-9127-6
-
-[R04] EEF, 2025
-Education Endowment Foundation (2025). Metacognition and Self-Regulated Learning, Second Edition.
-Metacognition and Self-Regulated Learning, Second Edition
-https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition
-
-[R14] WCAG 2.2
-W3C (2024). Web Content Accessibility Guidelines (WCAG) 2.2.
-Web Content Accessibility Guidelines (WCAG) 2.2
+W3C WAI · accessible media
+World Wide Web Consortium. (s.d.). Making audio and video media accessible.
+https://www.w3.org/WAI/media/av/
+[ACC_WCAG] World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2.
 https://www.w3.org/TR/WCAG22/
+Following guidance alone does not certify whole-artifact conformance.
+[ACC_MEDIA] World Wide Web Consortium. (s.d.). Making audio and video media accessible.
+https://www.w3.org/WAI/media/av/
+Captions, transcripts and descriptions need checking against the actual media.
 
-[B27] Lenski et al., 2024
-Lenski, S., Mustafa, M., & Großschedl, J. (2024). Concept mapping – increased potential as a retrieval-based task. Memory, 32(7), 901–912.
-Concept mapping – increased potential as a retrieval-based task
-https://doi.org/10.1080/09658211.2024.2363463
-
-[A07] Diordiev et al., 2026
-Diordiev, Stenberdt & Makransky (2026). British Journal of Educational Technology, Early View.
-Prompt-based emotional scaffolding in generative AI: Effects on self-regulated learning and socio-emotional outcomes
-https://doi.org/10.1111/bjet.70094
-
-[C20] Excalidraw
-Excalidraw, lavagna gratuita e progetto open source
-https://github.com/excalidraw/excalidraw
-
-[B23] Yan et al., 2025
-Yan, L., Martinez-Maldonado, R., Jin, Y., Echeverria, V., Milesi, M., Fan, J., Zhao, L., Alfredo, R., Li, X., & Gašević, D. (2025). The effects of generative AI agents and scaffolding on enhancing students’ comprehension of visual learning analytics. Computers & Education, 234, 105322.
-The effects of generative AI agents and scaffolding on enhancing students’ comprehension of visual learning analytics
-https://doi.org/10.1016/j.compedu.2025.105322
-
-[R02] UNESCO, 2023
-Miao, F., & Holmes, W.; UNESCO (2023). Guidance for generative AI in education and research.
-Guidance for generative AI in education and research
-https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research?hub=66973
-
-[C08] Novak & Cañas, 2008
-The Theory Underlying Concept Maps and How to Construct and Use Them
-https://cmap.ihmc.us/Publications/ResearchPapers/TheoryUnderlyingConceptMaps.pdf
-
-[A19] Retraction notice, 2026
-Wang & Fan (2025), retraction 22 aprile 2026.
-RETRACTED ARTICLE: The effect of ChatGPT on students’ learning performance, learning perception, and higher-order thinking: insights from a meta-analysis
-https://doi.org/10.1057/s41599-026-07310-z
-https://doi.org/10.1057/s41599-025-04787-y
-
-[C30] Chrome Live Caption
-Chrome Live Caption — sottotitoli locali per audio nel browser
-https://support.google.com/chrome/answer/10538231?hl=en
-
-[A03] Fan et al., 2025
-Fan et al. (2025; online 2024). British Journal of Educational Technology, 56, 489–530.
-Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance
-https://doi.org/10.1111/bjet.13544
-
-[C31] OpenAI learning guide
-ChatGPT — percorso di studio guidato da materiali del corso
-https://learn.chatgpt.com/use-cases/build-exam-study-system
-
-[BIO02] AIPP presenter material
-Previous AIPP presenter material
-
-[R13] W3C complex images
-W3C Web Accessibility Initiative (2026). Images Tutorial: Complex Images.
-Images Tutorial: Complex Images
-https://www.w3.org/WAI/tutorials/images/complex/
-
-[R16] Adnin & Das, 2024
-Adnin, R., & Das, M. (2024). “I look at it as the king of knowledge”: How Blind People Use and Understand Generative AI Tools.
-“I look at it as the king of knowledge”: How Blind People Use and Understand Generative AI Tools
-https://doi.org/10.1145/3663548.3675631
-
-[B13] Dwyer et al., 2012
-Dwyer, C. P., Hogan, M. J., & Stewart, I. (2012). An evaluation of argument mapping as a method of enhancing critical thinking performance in e-learning environments. Metacognition and Learning, 7, 219–244.
-An evaluation of argument mapping as a method of enhancing critical thinking performance in e-learning environments
-https://link.springer.com/article/10.1007/s11409-012-9092-1
-https://doi.org/10.1007/s11409-012-9092-1
-
-[C16] Google documentation
-NotebookLM / documentazione attuale: Gemini Notebook
-https://support.google.com/gemininotebook/answer/16164461?hl=en
-
-[R15] Hofmann et al., 2024
-Hofmann, V., Kalluri, P. R., Jurafsky, D., & King, S. (2024). AI generates covertly racist decisions about people based on their dialect.
-AI generates covertly racist decisions about people based on their dialect
-https://www.nature.com/articles/s41586-024-07856-5
-https://doi.org/10.1038/s41586-024-07856-5
-
-[R20] W3C cognitive guidance
-W3C WAI (2021). Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks.
-Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks
-https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/
-
-[A02] Kestin et al., 2025
-Kestin et al. (2025). Scientific Reports, 15, 17458.
-AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting
-https://doi.org/10.1038/s41598-025-97652-6
-
-[BIO01] University profile
-Marco Cremaschi — University of Milano-Bicocca institutional profile
-https://www.unimib.it/marco-cremaschi
-
-[A16] Ren, 2026
-Ren (2026). Frontiers in Psychology, 17, 1926110.
-College students' metacognitive awareness of generative-AI reliance: an experimental study of decision confidence and attribution bias
-https://doi.org/10.3389/fpsyg.2026.1926110
-
-[A20] Soderstrom et al., 2015
-Soderstrom & Bjork (2015). Perspectives on Psychological Science, 10(2), 176–199.
-Learning Versus Performance: An Integrative Review
-https://doi.org/10.1177/1745691615569000
-
-[B05] Karpicke et al., 2011
-Karpicke, J. D., & Blunt, J. R. (2011). Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping. Science, 331(6018), 772–775.
-Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping
-https://doi.org/10.1126/science.1199327
-
-[B18] Deslauriers et al., 2019
-Deslauriers, L., McCarty, L. S., Miller, K., Callaghan, K., & Kestin, G. (2019). Measuring actual learning versus feeling of learning in response to being actively engaged in the classroom. PNAS, 116(39), 19251–19257.
-Measuring actual learning versus feeling of learning in response to being actively engaged in the classroom
-https://doi.org/10.1073/pnas.1821936116
-
-[R10] CAST UDL 3.0
-CAST (2024). Universal Design for Learning Guidelines version 3.0.
-Universal Design for Learning Guidelines version 3.0
-https://udlguidelines.cast.org/
-
-[A01] Bastani et al., 2025
-Bastani et al. (2025). PNAS, 122(26), e2422633122.
-Generative AI without guardrails can harm learning: Evidence from high school mathematics
-https://doi.org/10.1073/pnas.2422633122
-
-[B03] Nesbit et al., 2006
-Nesbit, J. C., & Adesope, O. O. (2006). Learning With Concept and Knowledge Maps: A Meta-Analysis. Review of Educational Research, 76(3), 413–448.
-Learning With Concept and Knowledge Maps: A Meta-Analysis
-https://doi.org/10.3102/00346543076003413
-
-[C17] UW–Madison accessibility review
-Google NotebookLM Accessibility and Usability Information
-https://kb.wisc.edu/157699
-
-[A05] Lee et al., 2025
-Lee et al. (2025). CHI '25, Article 1121.
-The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers
-https://doi.org/10.1145/3706598.3713778
-
-[R12] W3C WAI
-W3C Web Accessibility Initiative (2022). Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations.
-Making Events Accessible: Checklist for Meetings, Conferences, Training, and Presentations
-https://www.w3.org/WAI/teach-advocate/accessible-presentations/
-
-[R19] UNESCO, 2025
-UNESCO (2025). AI and education: Protecting the rights of learners.
-AI and education: Protecting the rights of learners
-https://www.unesco.org/en/articles/ai-and-education-protecting-rights-learners?hub=66911
-
-[B02] Loyens et al., 2008
-Loyens, S. M. M., Magda, J., & Rikers, R. M. J. P. (2008). Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning. Educational Psychology Review, 20, 411–427.
-Self-Directed Learning in Problem-Based Learning and its Relationships with Self-Regulated Learning
-https://doi.org/10.1007/s10648-008-9082-7
-
-[B01] Panadero, 2017
-Panadero, E. (2017). A Review of Self-regulated Learning: Six Models and Four Directions for Research. Frontiers in Psychology, 8, 422.
-A Review of Self-regulated Learning: Six Models and Four Directions for Research
-https://doi.org/10.3389/fpsyg.2017.00422
-
-[C19] IHMC CmapTools
-IHMC CmapTools
-https://cmap.ihmc.us/cmaptools/
-
-[R21] Miao et al., 2024
-Miao, F., Shiohira, K., & Lao, N.; UNESCO (2024). AI competency framework for students.
-AI competency framework for students
-https://www.unesco.org/en/articles/ai-competency-framework-students?hub=66973
-
-[ORG01] Whattadata
-Whattadata (2026, consultato il 31 ottobre). Sito ufficiale: AI, machine learning and data analytics.
-Whattadata — AI, machine learning and data analytics
-https://whattadata.it/
-
-[ORG02] University of Milano-Bicocca
-Università degli Studi di Milano-Bicocca (2026). Spin-off e start-up area ICT/Web: Whattadata S.r.l.
-Spin-off e start-up area ICT/Web — Whattadata S.r.l.
-https://www.unimib.it/ricerca/valorizzazione-della-ricerca/imprenditorialita-accademica-spin-e-start/spin-e-start-area-ict-web
-
-[BIO03] Personal website
-Cremaschi, M. Personal portfolio and researcher profile. Consulted 1 November 2026.
-Marco Cremaschi — personal portfolio
-https://cremarco.github.io/cv/
+SLIDE S103 — Materials and next questions
+Page 85 / 85
+Take the learning path, then adapt one activity to your context
+Deck, chapter PDF and adaptable HTML; Italian presenter script.
+Prompts, initial and revised maps, exercise and model application.
+Assessment questions, rubric, simulated responses, feedback and references.
+Which learning goal, evidence and access support would you choose first?
+Reading version and kit: ./materials/kit.html
+Chapter HTML: ./materials/booklet-genai/lettura.html
+Chapter PDF: ./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf
+Model application: ./materials/demo-genai/index.html

@@ -1,0 +1,61 @@
+{
+  "S53": {
+    "src": "images/tools/book-cover.png",
+    "alt": "Cyan cover: Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material.",
+    "caption": "The original textbook chapter created for this workshop."
+  },
+  "S56": {
+    "src": "images/tools/excalidraw-1.png",
+    "alt": "Official Excalidraw editor canvas, with drawing, text and linking tools.",
+    "caption": "Editor image from the official website; vendor example.",
+    "source": "https://plus.excalidraw.com/"
+  },
+  "S58": {
+    "src": "images/tools/goblin-real.jpg",
+    "alt": "Magic ToDo: a study goal and generated subtasks, followed by Luca’s review.",
+    "caption": "Real execution of the English Luca scenario; the generated plan is reviewed in the next steps."
+  },
+  "S70": {
+    "src": "images/tools/napkin-2.png",
+    "alt": "Napkin: selected text and the blue Generate Visual control on its left.",
+    "caption": "Generate control in the official guide; the vendor’s example text is unrelated to Luca.",
+    "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
+  },
+  "S71": {
+    "src": "images/tools/napkin-3.png",
+    "alt": "Napkin interface showing alternative generated visual representations.",
+    "caption": "Official guide: choosing a visual.",
+    "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
+  },
+  "S86": {
+    "src": "images/tools/formative-1.png",
+    "alt": "Formative: opening the Responses view for an assessment; vendor example.",
+    "caption": "Official guide screenshot; vendor example data.",
+    "source": "https://help.formative.com/en/articles/6198532-view-and-score-responses"
+  },
+  "S76": {
+    "type": "video",
+    "src": "materials/demo-genai/demo-reale.mp4",
+    "poster": "materials/demo-genai/captures/next-token-panel.png",
+    "captions": "materials/demo-genai/demo-reale.en.vtt",
+    "alt": "Real local model run, comparing the same context at two temperatures and then changing context.",
+    "caption": "Recorded local inference · Qwen2.5-0.5B-Instruct q4 · English captions and transcript in the kit.",
+    "transcript": "REAL RECORDING — local inference Qwen2.5-0.5B-Instruct q4\n\n00:00:00.000  I load the real model from this computer. No remote API is used.\n\n00:00:04.366  I analyze the starting text. Tokens and probabilities come from the model.\n\n00:00:07.695  I save A, then change only temperature, from 0.8 to 1.5.\n\n00:00:10.206  Probabilities spread out; the most likely token keeps its top rank.\n\n00:00:12.700  Now I change context: France instead of Italy. Temperature returns to 0.8.\n\n00:00:16.153  I sample one token from the full vocabulary. The generated text joins the context.\n\n00:00:19.308  I generate a short continuation. I can stop subsequent steps.\n\n00:00:24.959  I reset the results. The model stays loaded in memory.\n\n00:00:27.394  Real recording. High probability does not mean a true fact.\n"
+  },
+  "S79D": {
+    "src": "images/tools/desmos-real.jpg",
+    "alt": "Desmos plots the three softmax probabilities for illustrative scores [2, 1, 0]. The horizontal axis is temperature from 0 to 4; the vertical axis is probability from 0 to 1.",
+    "caption": "Real Desmos graph · invented scores for the worked example, separate from Qwen measurements."
+  },
+  "S63": {
+    "src": "images/tools/notebook-citation.jpg",
+    "alt": "Actual Gemini Notebook citation popup for the final English chapter. The PDF extraction interleaves lines from two columns, so the original chapter is needed to check the wording.",
+    "caption": "Real citation popup. Here the PDF columns are interleaved; check the original PDF or reading HTML."
+  },
+  "S91": {
+    "src": "images/tools/edge-read-aloud.png",
+    "alt": "Official Microsoft Edge Reading mode screenshot, highlighting the Read aloud command in the toolbar.",
+    "caption": "Official Microsoft guide: Read aloud control; vendor example content unrelated to Luca.",
+    "source": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge"
+  }
+}

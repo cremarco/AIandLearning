@@ -1,0 +1,37 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.366
+I load the real model from this computer. No remote API is used.
+
+2
+00:00:04.366 --> 00:00:07.695
+I analyze the starting text. Tokens and probabilities come from the model.
+
+3
+00:00:07.695 --> 00:00:10.206
+I save A, then change only temperature, from 0.8 to 1.5.
+
+4
+00:00:10.206 --> 00:00:12.700
+Probabilities spread out; the most likely token keeps its top rank.
+
+5
+00:00:12.700 --> 00:00:16.153
+Now I change context: France instead of Italy. Temperature returns to 0.8.
+
+6
+00:00:16.153 --> 00:00:19.308
+I sample one token from the full vocabulary. The generated text joins the context.
+
+7
+00:00:19.308 --> 00:00:24.959
+I generate a short continuation. I can stop subsequent steps.
+
+8
+00:00:24.959 --> 00:00:27.394
+I reset the results. The model stays loaded in memory.
+
+9
+00:00:27.394 --> 00:00:29.797
+Real recording. High probability does not mean a true fact.

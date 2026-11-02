@@ -1,2 +1,2 @@
 import './index.css'
-import './extra.css'
+import './workshop.css'

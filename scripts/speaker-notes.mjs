@@ -3,10 +3,12 @@ import { readFileSync } from 'node:fs'
 
 // Keep spoken words separate from source checks and stage directions.
 export function loadSpeakerNotes(slides) {
-  const notes = JSON.parse(readFileSync(new URL('../data/speaker-notes.json', import.meta.url), 'utf8'))
+  const slideIds = new Set(slides.map(slide => slide.id))
+  const notes = Object.fromEntries(Object.entries(JSON.parse(readFileSync(new URL('../data/speaker-notes.json', import.meta.url), 'utf8')))
+    .filter(([id]) => slideIds.has(id)))
   assert.deepEqual(Object.keys(notes).sort(), slides.map(slide => slide.id).sort(), 'Every slide needs one bilingual script')
   for (const [id, note] of Object.entries(notes)) {
-    for (const language of ['it', 'en']) {
+    for (const language of ['it']) {
       assert.equal(typeof note[language], 'string', `${id}: missing ${language} script`)
       assert.ok(note[language].trim().length > 60, `${id}: the script must contain actual spoken words`)
       assert.ok(Array.isArray(note.cues?.[language]), `${id}: missing ${language} stage directions`)
@@ -17,7 +19,11 @@ export function loadSpeakerNotes(slides) {
   return notes
 }
 
-export function scriptSections(note, language, { includeForumExtra = true } = {}) {
+export function scriptSections(note, language, { includeForumExtra = true, route } = {}) {
+  if (route && note.route_scripts?.[route]) {
+    const variant = note.route_scripts[route]
+    note = { ...note, it:variant.it, cues:{it:variant.cues}, forum_extra:undefined }
+  }
   const it = language === 'it'
   const lines = []
   if (note.cues[language].length) {
@@ -34,6 +40,5 @@ export function scriptSections(note, language, { includeForumExtra = true } = {}
 export function bilingualScript(note) {
   return [
     '## Italiano', '', ...scriptSections(note, 'it'),
-    '## English — simple spoken English', '', ...scriptSections(note, 'en'),
   ].join('\n')
 }

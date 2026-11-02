@@ -3,15 +3,14 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.25.0",
-  "engines": { "node": ">=24.12.0" },
+  "engines": {
+    "node": ">=24.12.0"
+  },
   "scripts": {
-    "dev": "slidev --port 3030",
+    "dev": "slidev --port 3047",
     "build": "slidev build --base ./ --router-mode hash",
-    "export": "slidev export --output exports/EduForum-2026.pdf --with-toc",
-    "generate": "node scripts/generate-slides.mjs && node scripts/generate-companions.mjs",
-    "check:static": "node scripts/verify-static.mjs",
-    "check:notes": "node scripts/verify-speaker-notes.mjs",
-    "check:slidev": "node scripts/verify-slidev-integration.mjs",
+    "export": "node scripts/export-deck.mjs",
+    "generate": "node scripts/generate-maps.mjs && node scripts/integrate-workshop.mjs && node scripts/generate-slides.mjs && node scripts/generate-companions.mjs",
     "check": "node scripts/verify-deck.mjs"
   },
   "dependencies": {

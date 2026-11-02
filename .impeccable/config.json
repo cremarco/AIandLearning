@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "public/materials/demo-genai/index.html"
+        ],
+        "createdAt": "2026-11-01T22:34:24.975Z",
+        "reason": "Codex: false positive verificato; nessuna proprietà gradient/background-clip:text nell’HTML o nel CSS della demo, tutti i testi usano colori pieni."
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "public/materials/demo-genai/README.html"
+        ],
+        "createdAt": "2026-11-01T22:36:34.839Z",
+        "reason": "Codex: false positive verificato; documento HTML senza gradient/background-clip:text e con testi a colore pieno nel foglio style.css."
+      }
+    ]
+  }
+}

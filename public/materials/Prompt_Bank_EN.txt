@@ -1,25 +1,37 @@
-PROMPT BANK — ENGLISH
-Original workshop instructions, not validated prompts or a record of live tool tests.
+BEYOND PROMPTING — STUDY, UNDERSTAND, ASSESS
+Marco Cremaschi · November 2026
+85 slides in one complete sequence. Participants observe the method; Luca is a fictional student in a teaching scenario.
+Public materials in English. Presenter scripts in Italian.
 
-Access agreement
-Keep assistive technology and approved accommodations in every activity, including independent checks. A learner may respond orally, in writing or through an equivalent structured representation. Do not infer a diagnosis or lower the intellectual goal.
+S58 · Goblin.tools: a concrete goal
+Study the language-model chapter, distinguish training from inference, and prepare a diagram that I can explain.
 
-Planning: “Help me plan how to learn [topic]. First ask what I already know and what I need to be able to do. Offer two possible next steps and explain the trade-off. Do not choose my goal for me.”
+S62 · Ask a focused question
+Use only the chapter. Explain the difference between learned parameters and context during inference. Identify the relevant passage. If the text is insufficient, say so.
 
-Scaffold: “I have tried [attempt]. Do not provide the full solution yet. Ask one question that helps me identify the next step. If I am missing essential background knowledge, explain that point briefly.”
+S64 · Request a graduated explanation
+Explain context in three short steps: definition, example, limitation of the example. Preserve the distinction from parameters. Then ask me one question and wait for my answer.
 
-Map critique: “Here are my concepts and labelled relations: [text]. Identify one ambiguous relation and one missing condition. Do not add factual claims unless you mark them as suggestions that need checking.”
+S67 · Self-check before seeing the solution
+Ask one question that distinguishes context from training. Do not reveal the answer immediately. After my attempt, identify one correct point and one to revise, with a chapter reference.
 
-Verification: “For each factual claim, distinguish information supported by the supplied source from your inference. Point to the exact passage when available. If the source does not establish the claim, say so.”
+S70 · Napkin: start with checked text
+Training updates parameters. During inference, the context text becomes a token sequence. The model calculates probabilities for the next token. A selection rule chooses a token and the process repeats.
 
-Alternative explanation: “Give a plausible counterargument to my position. State which evidence would help distinguish the two explanations. Do not treat agreement with me as the goal.”
+S74 · Claude: a complete assignment
+Create an English browser app using a real language model, without a paid API. Use Transformers.js and ONNX Qwen2.5-0.5B-Instruct q4. Show input tokens, five next-token alternatives with probabilities and remaining mass, temperature, and generation up to 24 tokens. Add comparison, reset, loading and error states. Distinguish the explanatory diagram from real data. Explain dependencies, limitations and checks. Use the attached chapter as the conceptual reference.
 
-Reflection: “Ask me to explain the idea in my own words and apply it to a new case. Give feedback after my attempt, and identify what I should verify independently.”
+S79N · Notebook: ask about the formula
+Use the chapter’s softmax-with-temperature formula. Explain each symbol and the denominator in three short steps. Distinguish a score from a probability. Work through scores [2, 1, 0] at T = 1 and show the sum. Then ask me to predict the effect of increasing T, and wait for my answer.
 
-Accessible version: “Rewrite this explanation in clear, structured language. Preserve the key concepts and uncertainty. Provide headings and an ordered list equivalent to the diagram. Do not infer a disability or reduce the intellectual goal.”
+S80 · Notebook: study the solution
+Use the chapter and the solution description. Explain the transition from scores to probabilities in three steps. Identify its connection to the chapter. Then ask me what would change with a higher temperature, without giving the answer.
 
-Independent check (access supports retained)
-“Pause answer-generating assistance. Ask me to explain the reasoning or apply it to a new example. Keep screen readers, text-to-speech, dictation, translation and approved accommodations available. Accept an oral or written response.”
+S83 · MagicSchool: draft a rubric
+Prepare a rubric for the attached assignment. Three criteria: concepts and relationships; process explanation; application and checking. Four levels with observable descriptors. Assess GenAI knowledge, without rewarding only polished prose or code. Distinguish the assisted product from the independent explanation.
 
-Verification reminder
-Open the original source. Check whether the exact passage supports the claim. Prompts do not guarantee accurate facts, references, translations or accessible output.
+S85 · Prepare questions and expected answers
+Generate five chapter-based questions: distinction, explanation, diagram, prediction and transfer. For each, provide the expected answer, a detectable misconception and the rubric criterion. Avoid questions answered by copying a definition.
+
+S92 · Notebook: short segments and a glossary
+Rewrite this paragraph in three short segments. Define token, context and parameters. Preserve the condition “during inference” and flag each simplification. Do not remove essential relationships.

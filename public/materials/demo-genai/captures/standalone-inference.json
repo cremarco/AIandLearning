@@ -1,0 +1,53 @@
+{
+  "loadSeconds": 4.9575,
+  "inferSeconds": 0.5542999999970197,
+  "device": "wasm",
+  "run": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "dtype": "q4",
+    "device": "wasm",
+    "input": "The capital of Italy is",
+    "context": "The capital of Italy is",
+    "tokenIds": [
+      785,
+      6722,
+      315,
+      15344,
+      374
+    ],
+    "temperature": 0.8,
+    "top": [
+      {
+        "id": 21718,
+        "probability": 0.44863134074761896,
+        "token": " Rome"
+      },
+      {
+        "id": 7407,
+        "probability": 0.10354569908589849,
+        "token": " located"
+      },
+      {
+        "id": 1304,
+        "probability": 0.07680967440768416,
+        "token": " __"
+      },
+      {
+        "id": 264,
+        "probability": 0.05702697138432474,
+        "token": " a"
+      },
+      {
+        "id": 279,
+        "probability": 0.04888142441738123,
+        "token": " the"
+      }
+    ],
+    "remaining": 0.26510488995709247,
+    "entropyBits": 3.4968716703343294,
+    "output": "",
+    "time": "2026-11-01T22:50:54.223Z",
+    "inferSeconds": 0.5542999999970197
+  },
+  "probabilitySum": 0.9999999999999706
+}

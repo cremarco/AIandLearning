@@ -1,0 +1,19 @@
+REAL RECORDING — local inference Qwen2.5-0.5B-Instruct q4
+
+00:00:00.000  I load the real model from this computer. No remote API is used.
+
+00:00:04.366  I analyze the starting text. Tokens and probabilities come from the model.
+
+00:00:07.695  I save A, then change only temperature, from 0.8 to 1.5.
+
+00:00:10.206  Probabilities spread out; the most likely token keeps its top rank.
+
+00:00:12.700  Now I change context: France instead of Italy. Temperature returns to 0.8.
+
+00:00:16.153  I sample one token from the full vocabulary. The generated text joins the context.
+
+00:00:19.308  I generate a short continuation. I can stop subsequent steps.
+
+00:00:24.959  I reset the results. The model stays loaded in memory.
+
+00:00:27.394  Real recording. High probability does not mean a true fact.

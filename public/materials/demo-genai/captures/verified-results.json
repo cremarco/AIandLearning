@@ -1,0 +1,199 @@
+{
+  "verifiedAt": "2026-11-01T22:49:47.339Z",
+  "backend": "Chromium CPU/WASM",
+  "a": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "dtype": "q4",
+    "device": "wasm",
+    "input": "The capital of Italy is",
+    "context": "The capital of Italy is",
+    "tokenIds": [
+      785,
+      6722,
+      315,
+      15344,
+      374
+    ],
+    "temperature": 0.8,
+    "top": [
+      {
+        "id": 21718,
+        "probability": 0.44863134074761896,
+        "token": " Rome"
+      },
+      {
+        "id": 7407,
+        "probability": 0.10354569908589849,
+        "token": " located"
+      },
+      {
+        "id": 1304,
+        "probability": 0.07680967440768416,
+        "token": " __"
+      },
+      {
+        "id": 264,
+        "probability": 0.05702697138432474,
+        "token": " a"
+      },
+      {
+        "id": 279,
+        "probability": 0.04888142441738123,
+        "token": " the"
+      }
+    ],
+    "remaining": 0.26510488995709247,
+    "entropyBits": 3.4968716703343294,
+    "output": "",
+    "time": "2026-11-01T22:49:22.007Z",
+    "inferSeconds": 0.678
+  },
+  "b": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "dtype": "q4",
+    "device": "wasm",
+    "input": "The capital of Italy is",
+    "context": "The capital of Italy is",
+    "tokenIds": [
+      785,
+      6722,
+      315,
+      15344,
+      374
+    ],
+    "temperature": 1.5,
+    "top": [
+      {
+        "id": 21718,
+        "probability": 0.08057262035830588,
+        "token": " Rome"
+      },
+      {
+        "id": 7407,
+        "probability": 0.036862387819735866,
+        "token": " located"
+      },
+      {
+        "id": 1304,
+        "probability": 0.031434135604745964,
+        "token": " __"
+      },
+      {
+        "id": 264,
+        "probability": 0.026817761664703087,
+        "token": " a"
+      },
+      {
+        "id": 279,
+        "probability": 0.024701486219421455,
+        "token": " the"
+      }
+    ],
+    "remaining": 0.7996116083330878,
+    "entropyBits": 9.823421515598325,
+    "output": "",
+    "time": "2026-11-01T22:49:24.595Z",
+    "inferSeconds": 0.678
+  },
+  "c": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "dtype": "q4",
+    "device": "wasm",
+    "input": "The capital of France is",
+    "context": "The capital of France is",
+    "tokenIds": [
+      785,
+      6722,
+      315,
+      9625,
+      374
+    ],
+    "temperature": 0.8,
+    "top": [
+      {
+        "id": 12095,
+        "probability": 0.9123463258205815,
+        "token": " Paris"
+      },
+      {
+        "id": 264,
+        "probability": 0.01859683051014365,
+        "token": " a"
+      },
+      {
+        "id": 279,
+        "probability": 0.015273774724494985,
+        "token": " the"
+      },
+      {
+        "id": 7407,
+        "probability": 0.010846923123046975,
+        "token": " located"
+      },
+      {
+        "id": 1304,
+        "probability": 0.006575168414734072,
+        "token": " __"
+      }
+    ],
+    "remaining": 0.03636097740699884,
+    "entropyBits": 0.8248631102801469,
+    "output": "",
+    "time": "2026-11-01T22:49:30.582Z",
+    "inferSeconds": 0.7363000000044704
+  },
+  "d": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "dtype": "q4",
+    "device": "wasm",
+    "input": "The capital of France is",
+    "context": "The capital of France is Paris. Paris has",
+    "tokenIds": [
+      785,
+      6722,
+      315,
+      9625,
+      374,
+      12095,
+      13,
+      12095,
+      702
+    ],
+    "temperature": 0.8,
+    "top": [
+      {
+        "id": 264,
+        "probability": 0.6125114428395958,
+        "token": " a"
+      },
+      {
+        "id": 220,
+        "probability": 0.1130376680540332,
+        "token": " "
+      },
+      {
+        "id": 1657,
+        "probability": 0.0861422692089758,
+        "token": " many"
+      },
+      {
+        "id": 458,
+        "probability": 0.0690220429109445,
+        "token": " an"
+      },
+      {
+        "id": 279,
+        "probability": 0.033135556097565994,
+        "token": " the"
+      }
+    ],
+    "remaining": 0.08615102088888471,
+    "entropyBits": 2.2407454993051896,
+    "output": " Paris. Paris has",
+    "time": "2026-11-01T22:49:38.470Z",
+    "inferSeconds": 0.6105
+  },
+  "probabilitySum": 1.00000000000002,
+  "stoppedCount": 5,
+  "errors": []
+}

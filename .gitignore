@@ -23,8 +23,15 @@ test-results/
 blob-report/
 .impeccable/review/
 .impeccable/build/
+/output/review/
+/demo-genai/captures/
+/booklet-genai/build/*.png
+/booklet-genai/build/*.txt
 *.log
 pnpm-debug.log*
+
+# Downloaded model weights are restored with prepare-model.mjs
+/public/materials/demo-genai/models/
 
 # Local environment configuration (keep example files versioned)
 .env

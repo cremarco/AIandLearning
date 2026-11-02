@@ -1,0 +1,20 @@
+SOFTMAX WITH TEMPERATURE — WORKED EXAMPLE
+
+Illustrative scores [2, 1, 0]. These are not measurements from Qwen.
+
+p_i = exp(z_i/T) / sum_j exp(z_j/T), T > 0
+
+Desmos Graphing Calculator: https://www.desmos.com/calculator?lang=en
+Use x for temperature. Paste one LaTeX expression into each expression row:
+
+f(x)=\frac{e^{2/x}}{e^{2/x}+e^{1/x}+1}\left\{x>0\right\}
+g(x)=\frac{e^{1/x}}{e^{2/x}+e^{1/x}+1}\left\{x>0\right\}
+h(x)=\frac{1}{e^{2/x}+e^{1/x}+1}\left\{x>0\right\}
+
+Set the X range from 0 to 4 and Y range from 0 to 1. Label the axes Temperature T and Probability.
+At T = 0.5: 0.8668, 0.1173, 0.0159.
+At T = 1: 0.6652, 0.2447, 0.0900.
+At T = 2: 0.5065, 0.3072, 0.1863.
+Values are rounded. The unrounded distributions sum to one.
+
+First predict how concentration changes; then compare values. Explain why the ranking remains the same when only a positive temperature changes.

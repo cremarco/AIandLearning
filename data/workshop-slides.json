@@ -1,0 +1,3042 @@
+[
+  {
+    "id": "S51",
+    "number": 8,
+    "type": "workshop",
+    "kind": "scenario",
+    "section": "scenario",
+    "stage": "Scenario",
+    "title": "Luca needs to understand GenAI",
+    "message": "One student’s learning process, from assignment to assessment",
+    "body": [
+      "Luca is a second-year computer science student: he can program, but still confuses key concepts of generative models.",
+      "He must study a chapter and explain how a small application generates text.",
+      "We observe his use of tools and the evidence of understanding he keeps."
+    ],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "decision": "You are following the learning method; you do not need to learn programming."
+  },
+  {
+    "id": "S52",
+    "number": 9,
+    "type": "workshop",
+    "kind": "scenario",
+    "section": "scenario",
+    "stage": "Scenario",
+    "title": "The student’s assignment",
+    "message": "Four connected products, with criteria shared before the task",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Read",
+        "text": "Identify concepts, relationships and uncertainties in the chapter."
+      },
+      {
+        "title": "Represent",
+        "text": "Build a commented diagram of the model."
+      },
+      {
+        "title": "Create",
+        "text": "Use AI if needed to obtain a text-generation application."
+      },
+      {
+        "title": "Explain",
+        "text": "Predict a change and correct an error without delegating the answer."
+      }
+    ],
+    "decision": "A working solution is one product; an explanation provides different evidence."
+  },
+  {
+    "id": "S52E",
+    "number": 10,
+    "type": "workshop",
+    "kind": "evidence",
+    "section": "scenario",
+    "stage": "Why this learning path",
+    "title": "Assisted performance and learning",
+    "message": "One study separates what happens during and after assistance",
+    "body": [
+      "High-school mathematics, nearly 1,000 students in one Turkish school; not a trial of these tools."
+    ],
+    "sources": [
+      "EDU_BASTANI"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "With AI assistance",
+        "text": "In Bastani and colleagues’ trial, assisted practice performance improved."
+      },
+      {
+        "label": "Later, without AI",
+        "text": "The general-chat group performed below the control; instructional safeguards largely mitigated that harm."
+      }
+    ],
+    "decision": "Workshop design choice: keep a brief independent assessment as well."
+  },
+  {
+    "id": "S53",
+    "number": 11,
+    "type": "workshop",
+    "kind": "book",
+    "section": "scenario",
+    "stage": "Scenario · material",
+    "title": "The assigned chapter",
+    "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
+    "body": [
+      "Chapter: Language Models and Basic Architecture.",
+      "A fictional book created for this workshop, with accurate content and real technical sources.",
+      "The same content is available as PDF and adaptable HTML."
+    ],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "links": [
+      {
+        "label": "Open the chapter",
+        "url": "./materials/booklet-genai/lettura.html"
+      },
+      {
+        "label": "Chapter PDF",
+        "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf"
+      }
+    ],
+    "decision": "A common source connects explanations, diagrams and assessment."
+  },
+  {
+    "id": "S54",
+    "number": 12,
+    "type": "workshop",
+    "kind": "diagram",
+    "section": "scenario",
+    "stage": "Scenario · material",
+    "title": "The concepts to connect",
+    "message": "The chapter’s route, without a programming lecture",
+    "body": [],
+    "sources": [
+      "TECH_QWEN",
+      "TECH_TRANSFORMER"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Before use",
+        "text": "Training and learned parameters."
+      },
+      {
+        "title": "During use",
+        "text": "Text → tokens → representations → Transformer blocks."
+      },
+      {
+        "title": "Generate",
+        "text": "Probabilities → token selection → repetition."
+      },
+      {
+        "title": "Check",
+        "text": "Context, temperature, retrieved sources and limitations."
+      }
+    ],
+    "decision": "A few precise relationships will help us interpret the demonstration."
+  },
+  {
+    "id": "S55",
+    "number": 13,
+    "type": "workshop",
+    "kind": "excerpt",
+    "section": "scenario",
+    "stage": "Learner · identify uncertainty",
+    "title": "The first reading difficulty",
+    "message": "Luca recognises the words, but cannot yet connect them",
+    "body": [
+      "Luca wonders: “If changing the text changes the answer, is the model learning again?”"
+    ],
+    "sources": [
+      "TECH_QWEN",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "prompt": "During inference, parameters remain fixed. Context enters the representation calculations and changes the next-token distribution.",
+    "decision": "Turn “I do not understand” into a precise distinction: parameters and context.",
+    "promptLabel": "Chapter concept · paraphrase"
+  },
+  {
+    "id": "S56",
+    "number": 14,
+    "type": "workshop",
+    "kind": "tool",
+    "section": "study",
+    "stage": "Learner · represent",
+    "title": "Excalidraw: an initial map",
+    "message": "Before asking AI, Luca records what he currently thinks",
+    "body": [],
+    "sources": [
+      "TOOL_EXCALIDRAW",
+      "EDU_MAPS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "An initial representation to keep, even when it contains errors.",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "excalidraw",
+    "steps": [
+      {
+        "title": "Open the canvas",
+        "text": "Use the free editor, with no account required."
+      },
+      {
+        "title": "Add four concepts",
+        "text": "Training data, model, context, response."
+      },
+      {
+        "title": "Connect and label",
+        "text": "Write the relationship on each arrow; add “?” where uncertain."
+      }
+    ],
+    "result": "An initial representation to keep, even when it contains errors."
+  },
+  {
+    "id": "S57",
+    "number": 15,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "study",
+    "stage": "Learner · represent",
+    "title": "Uncertain relationships in the first map",
+    "message": "A constructed teaching example for Luca’s case",
+    "body": [
+      "Luca chooses two points to investigate, rather than asking for an explanation of the whole chapter."
+    ],
+    "sources": [
+      "EDU_MAPS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "excalidraw",
+    "comparison": [
+      {
+        "label": "Relationship to check",
+        "text": "Context → “trains again?” → model."
+      },
+      {
+        "label": "An incomplete relationship",
+        "text": "Model → “produces” → response, without describing tokens."
+      }
+    ],
+    "decision": "Uncertainties in the map become goals in the study plan."
+  },
+  {
+    "id": "S58",
+    "number": 16,
+    "type": "workshop",
+    "kind": "tool",
+    "section": "study",
+    "stage": "Learner · plan",
+    "title": "Goblin.tools: a concrete goal",
+    "message": "Magic ToDo breaks down a task that feels too large",
+    "body": [],
+    "sources": [
+      "TOOL_GOBLIN",
+      "TOOL_GOBLIN_UI"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "A draft plan to adapt to the chapter and available time.",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "goblin",
+    "prompt": "Study the language-model chapter, distinguish training from inference, and prepare a diagram that I can explain.",
+    "steps": [
+      {
+        "title": "Enter the task",
+        "text": "Name the intended outcome, rather than only “study GenAI”."
+      },
+      {
+        "title": "Break it down",
+        "text": "Use the breakdown command and review the suggested subtasks."
+      }
+    ],
+    "result": "A draft plan to adapt to the chapter and available time."
+  },
+  {
+    "id": "S59",
+    "number": 17,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "study",
+    "stage": "Learner · plan",
+    "title": "Adjust the level of detail",
+    "message": "Extra steps help when they clarify the next action",
+    "body": [],
+    "sources": [
+      "TOOL_GOBLIN_UI"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "goblin",
+    "comparison": [
+      {
+        "label": "Too broad",
+        "text": "“Understand the architecture” does not specify where to start."
+      },
+      {
+        "label": "Actionable",
+        "text": "“Read the token paragraph and write a two-line example”."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adjust the breakdown",
+        "text": "Add detail to the step that is blocking progress."
+      },
+      {
+        "title": "Review the suggestion",
+        "text": "Remove repetition and tasks outside the assignment."
+      }
+    ],
+    "decision": "Adjust granularity to the perceived difficulty; it is not a diagnostic measure."
+  },
+  {
+    "id": "S60",
+    "number": 18,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · plan",
+    "title": "Luca’s selected plan",
+    "message": "Every block ends with something he can check",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "goblin",
+    "steps": [
+      {
+        "title": "Read and annotate",
+        "text": "Record three terms and one uncertain relationship."
+      },
+      {
+        "title": "Ask and verify",
+        "text": "Check one explanation against the chapter."
+      },
+      {
+        "title": "Reconstruct",
+        "text": "Revise the diagram and explain it with the chat closed."
+      },
+      {
+        "title": "Apply",
+        "text": "Use the app, predict a change and compare the outcome."
+      }
+    ],
+    "decision": "Checked boxes record activity; the content of the products provides evidence of understanding."
+  },
+  {
+    "id": "S60A",
+    "number": 19,
+    "type": "workshop",
+    "kind": "activity",
+    "section": "study",
+    "stage": "Audience · activity 1",
+    "title": "Activity: choose the next support",
+    "message": "Five minutes on the method; no GenAI knowledge required",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 5,
+      "teachers": 0,
+      "university": 0
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Read the case · 1 minute",
+        "text": "Luca has twenty subtasks but cannot decide which to start."
+      },
+      {
+        "title": "Decide in pairs · 2 minutes",
+        "text": "Reduce the plan to three actions and add one check of understanding."
+      },
+      {
+        "title": "Share · 2 minutes",
+        "text": "Name your selection criterion and one decision you would leave to Luca."
+      }
+    ],
+    "decision": "A justified support choice that can transfer to another subject."
+  },
+  {
+    "id": "S61",
+    "number": 20,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · understand",
+    "title": "Notebook: upload the chapter",
+    "message": "Start the conversation with an identifiable source",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK",
+      "TOOL_NOTEBOOK_PRICE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "A study environment with the assigned material as its reference.",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "steps": [
+      {
+        "title": "Create a notebook",
+        "text": "Give it a clear name: “GenAI · chapter and study”."
+      },
+      {
+        "title": "Add a source",
+        "text": "Upload the chapter PDF and check the imported title and content."
+      },
+      {
+        "title": "Select the material",
+        "text": "For this first question, use only the chapter."
+      }
+    ],
+    "result": "A study environment with the assigned material as its reference."
+  },
+  {
+    "id": "S62",
+    "number": 21,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · understand",
+    "title": "Ask a focused question",
+    "message": "Use an uncertainty from the map as the conversation input",
+    "body": [
+      "The need is to understand why an answer can change without retraining."
+    ],
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "prompt": "Use only the chapter. Explain the difference between learned parameters and context during inference. Identify the relevant passage. If the text is insufficient, say so.",
+    "decision": "A precise request enables a precise source check."
+  },
+  {
+    "id": "S63",
+    "number": 22,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · verify",
+    "title": "Open the citation and read its context",
+    "message": "The number beside an answer is the start of checking",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "steps": [
+      {
+        "title": "Open the reference",
+        "text": "Select the citation for the statement about parameters."
+      },
+      {
+        "title": "Read before and after",
+        "text": "Check conditions and meaning in the original paragraph."
+      },
+      {
+        "title": "Compare the wording",
+        "text": "Does the answer retain “during inference”, or has it become “always”?"
+      }
+    ],
+    "decision": "Keep the explanation after checking how it relates to the source."
+  },
+  {
+    "id": "S64",
+    "number": 23,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · understand",
+    "title": "Request a graduated explanation",
+    "message": "One concept at a time, followed by a question for Luca",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "A segmented explanation to check against the text, followed by the learner’s own attempt.",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "prompt": "Explain context in three short steps: definition, example, limitation of the example. Preserve the distinction from parameters. Then ask me one question and wait for my answer.",
+    "result": "A segmented explanation to check against the text, followed by the learner’s own attempt.",
+    "decision": "If the first step remains unclear, investigate it before adding detail."
+  },
+  {
+    "id": "S65",
+    "number": 24,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "study",
+    "stage": "Learner · understand",
+    "title": "Check the analogy as well",
+    "message": "A metaphor helps when its boundary remains visible",
+    "body": [
+      "Back to the source: during ordinary inference, context enters the calculation and parameters are not updated."
+    ],
+    "sources": [
+      "TECH_QWEN"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "comparison": [
+      {
+        "label": "A useful analogy",
+        "text": "Context is like material available on a desk during a task."
+      },
+      {
+        "label": "A boundary to state",
+        "text": "The model does not read as a person does; the analogy does not describe its internal calculation."
+      }
+    ],
+    "decision": "Luca should be able to express the concept without the metaphor."
+  },
+  {
+    "id": "S66",
+    "number": 25,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · organise",
+    "title": "Explore a generated Mind Map",
+    "message": "Use it for orientation, then investigate one branch",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK_MAP",
+      "EDU_MAPS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "steps": [
+      {
+        "title": "Generate a Mind Map",
+        "text": "Open the result in the Studio panel on desktop."
+      },
+      {
+        "title": "Expand one branch",
+        "text": "Choose “inference” and inspect the associated concepts."
+      },
+      {
+        "title": "Select a node",
+        "text": "Ask a focused question, then check its reference to the chapter."
+      }
+    ],
+    "decision": "A topic tree provides orientation; its relationships still need explanation."
+  },
+  {
+    "id": "S67",
+    "number": 26,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "study",
+    "stage": "Learner · check",
+    "title": "Self-check before seeing the solution",
+    "message": "Close the source, attempt an answer, then reopen it to revise",
+    "body": [
+      "Luca answers before reading a solution, then checks and records a correction."
+    ],
+    "sources": [
+      "TOOL_NOTEBOOK_QUIZ",
+      "EDU_RETRIEVAL"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "prompt": "Ask one question that distinguishes context from training. Do not reveal the answer immediately. After my attempt, identify one correct point and one to revise, with a chapter reference.",
+    "decision": "A generated quiz is useful when it leads to an attempt and revision."
+  },
+  {
+    "id": "S68",
+    "number": 27,
+    "type": "workshop",
+    "kind": "diagram",
+    "section": "study",
+    "stage": "Learner · reconstruct",
+    "title": "Excalidraw: revise the relationships",
+    "message": "The second map makes the conceptual change visible",
+    "body": [],
+    "sources": [
+      "EDU_MAPS",
+      "TECH_QWEN"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "excalidraw",
+    "steps": [
+      {
+        "title": "Training",
+        "text": "Data → “contributes to updating” → parameters."
+      },
+      {
+        "title": "Inference",
+        "text": "Context → “enters calculation with fixed parameters” → probabilities."
+      },
+      {
+        "title": "Generation",
+        "text": "Distribution → “guides selection of” → next token."
+      }
+    ],
+    "decision": "Read every arrow as a meaningful statement."
+  },
+  {
+    "id": "S69",
+    "number": 28,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "study",
+    "stage": "Learner · reflect",
+    "title": "Compare the two map versions",
+    "message": "The important change is in the explanation",
+    "body": [
+      "Luca identifies one correct relationship, one revision and one remaining uncertainty."
+    ],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "excalidraw",
+    "comparison": [
+      {
+        "label": "Before · teaching example",
+        "text": "“Does context train the model again?”"
+      },
+      {
+        "label": "After · expected explanation",
+        "text": "“During inference, the calculation input changes without updating parameters”."
+      }
+    ],
+    "decision": "The comparison prepares an independent explanation; it does not replace it."
+  },
+  {
+    "id": "S70",
+    "number": 29,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "study",
+    "stage": "Learner · summarise",
+    "title": "Napkin: start with checked text",
+    "message": "Choose the relationships before generating the visual",
+    "body": [],
+    "sources": [
+      "TOOL_NAPKIN_GUIDE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "napkin",
+    "prompt": "Training updates parameters. During inference, the context text becomes a token sequence. The model calculates probabilities for the next token. A selection rule chooses a token and the process repeats.",
+    "steps": [
+      {
+        "title": "Paste the text",
+        "text": "Use a summary checked against the chapter."
+      },
+      {
+        "title": "Select and generate",
+        "text": "Request a visual for that specific passage."
+      }
+    ],
+    "decision": "Napkin proposes a representation; it does not certify the text."
+  },
+  {
+    "id": "S71",
+    "number": 30,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "study",
+    "stage": "Learner · summarise",
+    "title": "Choose and correct the visual",
+    "message": "Prefer a representation that preserves the meaning",
+    "body": [],
+    "sources": [
+      "TOOL_NAPKIN_GUIDE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "napkin",
+    "comparison": [
+      {
+        "label": "Avoid",
+        "text": "One arrow labelled “prompt → training → answer” mixes different processes."
+      },
+      {
+        "label": "Look for",
+        "text": "Separate training; show a cycle for token-by-token inference."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Review labels and arrows",
+        "text": "Correct terms before choosing colours or icons."
+      },
+      {
+        "title": "Justify the choice",
+        "text": "Explain why this representation expresses the process."
+      }
+    ]
+  },
+  {
+    "id": "S72",
+    "number": 31,
+    "type": "workshop",
+    "kind": "diagram",
+    "section": "study",
+    "stage": "Learner · summarise",
+    "title": "A diagram to use during the exercise",
+    "message": "A short reference with explicit relationships",
+    "body": [],
+    "sources": [
+      "TOOL_NAPKIN",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "Export as PNG/PDF in the Free plan, keeping product branding.",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "napkin",
+    "steps": [
+      {
+        "title": "Text and context",
+        "text": "Are converted into tokens."
+      },
+      {
+        "title": "Model with fixed parameters",
+        "text": "Processes the tokens and calculates a distribution."
+      },
+      {
+        "title": "Selection and repetition",
+        "text": "A token is added; the context for the next step changes."
+      }
+    ],
+    "result": "Export as PNG/PDF in the Free plan, keeping product branding.",
+    "decision": "The learner must be able to explain the cycle in their own words."
+  },
+  {
+    "id": "S73",
+    "number": 32,
+    "type": "workshop",
+    "kind": "scenario",
+    "section": "exercise",
+    "stage": "Learner · apply",
+    "title": "The exercise: a small app with a real model",
+    "message": "AI may write the solution; Luca must be able to interpret it",
+    "body": [
+      "Enter text and inspect its tokens.",
+      "Show five next-token alternatives, probabilities and remaining mass.",
+      "Change temperature and generate a short continuation.",
+      "Compare two tests and explain a difference."
+    ],
+    "sources": [
+      "TECH_QWEN",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "decision": "A real model in the browser, with no paid API."
+  },
+  {
+    "id": "S74",
+    "number": 33,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "exercise",
+    "stage": "Learner · obtain a solution",
+    "title": "Claude: a complete assignment",
+    "message": "Specify material, behaviour and checks before generating code",
+    "body": [
+      "A reusable teaching request, not the production log of the distributed code."
+    ],
+    "sources": [
+      "TOOL_CLAUDE",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "claude",
+    "prompt": "Create an English browser app using a real language model, without a paid API. Use Transformers.js and ONNX Qwen2.5-0.5B-Instruct q4. Show input tokens, five next-token alternatives with probabilities and remaining mass, temperature, and generation up to 24 tokens. Add comparison, reset, loading and error states. Distinguish the explanatory diagram from real data. Explain dependencies, limitations and checks. Use the attached chapter as the conceptual reference.",
+    "decision": "A complete prompt defines the task; the solution still needs verification."
+  },
+  {
+    "id": "S75",
+    "number": 34,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "exercise",
+    "stage": "Learner · check the solution",
+    "title": "Open and check the solution",
+    "message": "A ready interface begins the study of the exercise",
+    "body": [
+      "Kit provenance: application developed with Codex. The Claude prompt lets you repeat the task."
+    ],
+    "sources": [
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "claude",
+    "steps": [
+      {
+        "title": "Run it",
+        "text": "Load the model and actually generate a token."
+      },
+      {
+        "title": "Check the data",
+        "text": "Probabilities use the full vocabulary; show the remaining mass."
+      },
+      {
+        "title": "Keep the revisions",
+        "text": "Record corrections, runtime and model version."
+      }
+    ],
+    "decision": "A plausible result does not replace a functioning test."
+  },
+  {
+    "id": "S75E",
+    "number": 35,
+    "type": "workshop",
+    "kind": "evidence",
+    "section": "exercise",
+    "stage": "Why guided use matters",
+    "title": "A designed tutor can support learning",
+    "message": "Positive findings concern specific tasks and conditions",
+    "body": [],
+    "sources": [
+      "EDU_KESTIN",
+      "EDU_HUANG"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Designed tutor · Kestin 2025",
+        "text": "An RCT with 194 university physics students found better immediate outcomes with the studied tutor than the comparison active class."
+      },
+      {
+        "label": "Guided use · Huang 2026",
+        "text": "With 95 students, structured training improved AI-assisted revision of electromagnetism problems."
+      }
+    ],
+    "decision": "Workshop choice: ask for attempts, source checks and revision; then assess independence."
+  },
+  {
+    "id": "S76",
+    "number": 36,
+    "type": "workshop",
+    "kind": "app",
+    "section": "exercise",
+    "stage": "Learner · observe",
+    "title": "From input to the first token",
+    "message": "Observe real data in a short test",
+    "body": [],
+    "sources": [
+      "TECH_QWEN",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Enter the text",
+        "text": "Use a short input and record it."
+      },
+      {
+        "title": "Read the tokens",
+        "text": "Inspect the actual segmentation: tokens do not necessarily match words."
+      },
+      {
+        "title": "Calculate and generate",
+        "text": "Compare alternatives and remaining mass, then generate a single token."
+      }
+    ],
+    "decision": "Percentages concern token selection; they do not measure a statement’s truth."
+  },
+  {
+    "id": "S77",
+    "number": 37,
+    "type": "workshop",
+    "kind": "diagram",
+    "section": "exercise",
+    "stage": "Learner · explain",
+    "title": "The process represented by the app",
+    "message": "An explanatory diagram, separate from the calculated values",
+    "body": [],
+    "sources": [
+      "TECH_TRANSFORMER",
+      "TECH_QWEN"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Input and tokens",
+        "text": "Text is encoded as a sequence."
+      },
+      {
+        "title": "Representations and position",
+        "text": "Numbers and order information enter the model’s blocks."
+      },
+      {
+        "title": "Transformer blocks",
+        "text": "Causal attention and transformations process the available information."
+      },
+      {
+        "title": "Distribution and selection",
+        "text": "Scores become probabilities; selection adds the next token."
+      }
+    ],
+    "decision": "This diagram explains a flow; it does not reveal the model’s thoughts."
+  },
+  {
+    "id": "S78",
+    "number": 38,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "exercise",
+    "stage": "Learner · predict",
+    "title": "Change the context, keep the model",
+    "message": "A recorded comparison with the same model and temperature",
+    "body": [
+      "Recorded local inference, 1 November 2026. Only the initial context changes."
+    ],
+    "sources": [
+      "TECH_QWEN"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Context A · T = 0.8",
+        "text": "“The capital of Italy is” → next-token candidate “ Rome”: 44.86%."
+      },
+      {
+        "label": "Context B · T = 0.8",
+        "text": "“The capital of France is” → next-token candidate “ Paris”: 91.23%."
+      }
+    ],
+    "decision": "These are conditional token probabilities, not factual-accuracy percentages.",
+    "links": [
+      {
+        "label": "Recorded computations",
+        "url": "./materials/demo-genai/captures/verified-results.json"
+      }
+    ]
+  },
+  {
+    "id": "S79",
+    "number": 39,
+    "type": "workshop",
+    "kind": "app",
+    "section": "exercise",
+    "stage": "Learner · predict",
+    "title": "Temperature changes the distribution",
+    "message": "Recorded run · identical input and logits, two temperature settings",
+    "body": [
+      "Input: “The capital of Italy is”. Qwen2.5-0.5B-Instruct ONNX q4; local CPU/WASM run."
+    ],
+    "sources": [
+      "TECH_JS",
+      "TECH_DEMO"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "T = 0.8 · more concentrated",
+        "text": "“ Rome”: 44.86%; remaining vocabulary outside the top five: 26.51%."
+      },
+      {
+        "label": "T = 1.5 · less concentrated",
+        "text": "“ Rome”: 8.06%; remaining vocabulary outside the top five: 79.96%."
+      }
+    ],
+    "decision": "Temperature changes this distribution; it adds no knowledge and does not guarantee truth.",
+    "links": [
+      {
+        "label": "Recorded computations",
+        "url": "./materials/demo-genai/captures/verified-results.json"
+      }
+    ]
+  },
+  {
+    "id": "S79F",
+    "number": 40,
+    "type": "workshop",
+    "kind": "formula",
+    "section": "exercise",
+    "stage": "Learner · understand a formula",
+    "title": "Read the formula from the chapter",
+    "message": "Softmax with temperature · identify the role of each symbol",
+    "body": [],
+    "sources": [
+      "TECH_JS",
+      "TECH_QWEN"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "formula": true,
+    "formulaLatex": "p_i = \\frac{\\exp(z_i/T)}{\\sum_j \\exp(z_j/T)}, \\qquad T>0",
+    "steps": [
+      {
+        "title": "zᵢ · score",
+        "text": "A number calculated by the model for candidate token i."
+      },
+      {
+        "title": "T · temperature",
+        "text": "A positive setting that rescales scores before conversion."
+      },
+      {
+        "title": "pᵢ · probability",
+        "text": "The exponentiated score divided by the sum over all candidates."
+      }
+    ],
+    "decision": "The denominator makes the probabilities sum to one. Probability is not truth."
+  },
+  {
+    "id": "S79G",
+    "number": 41,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "exercise",
+    "stage": "Learner · read mathematical notation",
+    "title": "A short symbol guide",
+    "message": "Read the notation before asking for another explanation",
+    "body": [],
+    "sources": [
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "i and j · candidates",
+        "text": "i identifies the candidate being considered; j runs over all candidates in the denominator."
+      },
+      {
+        "title": "exp(a) · a positive weight",
+        "text": "This means e raised to a. Apply it to each score divided by the positive temperature."
+      },
+      {
+        "title": "Σ · add the weights",
+        "text": "Sum all candidate weights, then divide each weight by this common total."
+      }
+    ],
+    "decision": "The three-candidate example shows the same arithmetic on a deliberately small vocabulary."
+  },
+  {
+    "id": "S79N",
+    "number": 42,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "exercise",
+    "stage": "Learner · understand a formula",
+    "title": "Notebook: ask about the formula",
+    "message": "Explain the symbols, check the source, then make a prediction",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "prompt": "Use the chapter’s softmax-with-temperature formula. Explain each symbol and the denominator in three short steps. Distinguish a score from a probability. Work through scores [2, 1, 0] at T = 1 and show the sum. Then ask me to predict the effect of increasing T, and wait for my answer.",
+    "decision": "Check the cited passage and the arithmetic; an explanation generated by AI still needs review."
+  },
+  {
+    "id": "S79D",
+    "number": 43,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "exercise",
+    "stage": "Learner · explore a formula",
+    "title": "Desmos: make the formula observable",
+    "message": "Three invented scores for a worked example, separate from the real model",
+    "body": [],
+    "sources": [
+      "TOOL_DESMOS",
+      "TOOL_DESMOS_SLIDERS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "desmos",
+    "prompt": "f(x)=e^(2/x)/(e^(2/x)+e^(1/x)+1) {x>0}\ng(x)=e^(1/x)/(e^(2/x)+e^(1/x)+1) {x>0}\nh(x)=1/(e^(2/x)+e^(1/x)+1) {x>0}",
+    "steps": [
+      {
+        "title": "Enter the functions",
+        "text": "Open the free Graphing Calculator. Here x represents temperature T > 0."
+      },
+      {
+        "title": "Read selected values",
+        "text": "Compare f, g and h at x = 0.5, 1 and 2; keep the scores fixed."
+      }
+    ],
+    "decision": "Desmos plots and evaluates the entered mathematics; it does not explain the chapter automatically.",
+    "links": [
+      {
+        "label": "Open Desmos",
+        "url": "https://www.desmos.com/calculator"
+      }
+    ]
+  },
+  {
+    "id": "S79T",
+    "number": 44,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "exercise",
+    "stage": "Learner · verify a formula",
+    "title": "Check the worked example numerically",
+    "message": "Fixed scores [2, 1, 0] · probabilities rounded to four decimals",
+    "body": [
+      "Before rounding, each distribution sums to 1. Higher T makes these fixed-score probabilities less concentrated."
+    ],
+    "sources": [
+      "TOOL_DESMOS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "desmos",
+    "comparison": [
+      {
+        "label": "T = 0.5",
+        "text": "p₁ = 0.8668 · p₂ = 0.1173 · p₃ = 0.0159"
+      },
+      {
+        "label": "T = 1",
+        "text": "p₁ = 0.6652 · p₂ = 0.2447 · p₃ = 0.0900"
+      },
+      {
+        "label": "T = 2",
+        "text": "p₁ = 0.5065 · p₂ = 0.3072 · p₃ = 0.1863"
+      }
+    ],
+    "decision": "Ask Luca to explain why the ranking stays the same while concentration changes."
+  },
+  {
+    "id": "S80",
+    "number": 45,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "exercise",
+    "stage": "Learner · understand the solution",
+    "title": "Notebook: study the solution",
+    "message": "Connect one application function to a chapter concept",
+    "body": [
+      "Add a textual solution description, including version and provenance, alongside the chapter."
+    ],
+    "sources": [
+      "TOOL_NOTEBOOK",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "prompt": "Use the chapter and the solution description. Explain the transition from scores to probabilities in three steps. Identify its connection to the chapter. Then ask me what would change with a higher temperature, without giving the answer.",
+    "decision": "Luca reconstructs the step, returning to the code or source when needed."
+  },
+  {
+    "id": "S81",
+    "number": 46,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "exercise",
+    "stage": "Learner · demonstrate",
+    "title": "What Luca must demonstrate independently",
+    "message": "An explanation, a prediction and an error correction",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Explain",
+        "text": "Describe how context contributes to generation."
+      },
+      {
+        "title": "Predict",
+        "text": "Justify the expected effect of changing temperature."
+      },
+      {
+        "title": "Correct",
+        "text": "Refute “The most probable token always provides true information”."
+      },
+      {
+        "title": "Reflect",
+        "text": "Identify one useful support and one remaining uncertainty."
+      }
+    ],
+    "decision": "A brief attempt without chat; then reopen materials to revise mistakes."
+  },
+  {
+    "id": "S82",
+    "number": 47,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · design",
+    "title": "The teacher designs the evidence",
+    "message": "The goal, task and criterion must concern the same knowledge",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Goal",
+        "text": "Understand the roles of context, parameters and token selection."
+      },
+      {
+        "label": "Evidence",
+        "text": "An explanation, commented diagram, justified prediction and correction."
+      },
+      {
+        "label": "Criteria",
+        "text": "Concepts and relationships; process explanation; application and checking."
+      }
+    ],
+    "decision": "Assess what the learner can justify, alongside the assisted product."
+  },
+  {
+    "id": "S83",
+    "number": 48,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "teachers",
+    "stage": "Teacher · prepare",
+    "title": "MagicSchool: draft a rubric",
+    "message": "The teacher provides goals, assignment and constraints",
+    "body": [],
+    "sources": [
+      "TOOL_MAGIC",
+      "TOOL_MAGIC_PRICE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "prompt": "Prepare a rubric for the attached assignment. Three criteria: concepts and relationships; process explanation; application and checking. Four levels with observable descriptors. Assess GenAI knowledge, without rewarding only polished prose or code. Distinguish the assisted product from the independent explanation.",
+    "steps": [
+      {
+        "title": "Open Rubric Generator",
+        "text": "Enter goals and assignment, without learner personal data."
+      },
+      {
+        "title": "Generate a draft",
+        "text": "Check it against the chapter before using it."
+      }
+    ]
+  },
+  {
+    "id": "S84",
+    "number": 49,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "teachers",
+    "stage": "Teacher · review",
+    "title": "Review the rubric descriptors",
+    "message": "A constructed revision example, not automated assessment",
+    "body": [
+      "Keep three criteria separate and apply the same rubric to the responses."
+    ],
+    "sources": [
+      "TOOL_FORMATIVE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "comparison": [
+      {
+        "label": "Too general",
+        "text": "“Shows a good understanding of the topic”."
+      },
+      {
+        "label": "Observable",
+        "text": "“Distinguishes parameters from context and explains why changing a prompt is not retraining”."
+      }
+    ],
+    "decision": "The rubric stays in the kit without Formative’s paid integrated rubric feature."
+  },
+  {
+    "id": "S84A",
+    "number": 50,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · criteria",
+    "title": "Rubric: concepts and relationships",
+    "message": "Criterion 1 · four levels of evidence",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "steps": [
+      {
+        "title": "1 · Needs reconstruction",
+        "text": "Confuses training and inference, or treats probabilities as truth."
+      },
+      {
+        "title": "2 · Partial",
+        "text": "Names concepts, but incompletely relates parameters and context."
+      },
+      {
+        "title": "3 · Coherent",
+        "text": "Distinguishes phases and states correct relationships."
+      },
+      {
+        "title": "4 · Justified",
+        "text": "Justifies relationships and identifies conditions and limits in a new example."
+      }
+    ],
+    "decision": "Apply the criterion to meaning in the agreed response mode."
+  },
+  {
+    "id": "S84B",
+    "number": 51,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · criteria",
+    "title": "Rubric: process explanation",
+    "message": "Criterion 2 · make the links between stages explicit",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "steps": [
+      {
+        "title": "1 · Absent",
+        "text": "Repeats output without describing the stages."
+      },
+      {
+        "title": "2 · Fragmentary",
+        "text": "Describes some stages but leaves gaps or reversals."
+      },
+      {
+        "title": "3 · Ordered",
+        "text": "Connects input, tokens, processing, distribution and selection."
+      },
+      {
+        "title": "4 · Justified",
+        "text": "Explains the links and separates the diagram from observed data."
+      }
+    ],
+    "decision": "A commented diagram or oral explanation can reveal the same process."
+  },
+  {
+    "id": "S84C",
+    "number": 52,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · criteria",
+    "title": "Rubric: application and checking",
+    "message": "Criterion 3 · predict, test and revise",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "steps": [
+      {
+        "title": "1 · Unjustified",
+        "text": "States a conclusion without a prediction or check."
+      },
+      {
+        "title": "2 · Incomplete",
+        "text": "Predicts, but changes multiple conditions or does not compare outcomes."
+      },
+      {
+        "title": "3 · Controlled",
+        "text": "Varies one condition, compares the outcome and corrects an error."
+      },
+      {
+        "title": "4 · Critical",
+        "text": "Justifies revision and recognises sampling, limitations and uncertainty."
+      }
+    ],
+    "decision": "Do not reward a lucky outcome from one generation."
+  },
+  {
+    "id": "S85",
+    "number": 53,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · questions",
+    "title": "Prepare questions and expected answers",
+    "message": "The first question checks a fundamental distinction",
+    "body": [
+      "Q1 · During ordinary inference, what changes when a new prompt is entered? A: original training data. B: calculation context. C: learned parameters.",
+      "Expected: B, with justification; a correct choice alone provides limited evidence."
+    ],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "prompt": "Generate five chapter-based questions: distinction, explanation, diagram, prediction and transfer. For each, provide the expected answer, a detectable misconception and the rubric criterion. Avoid questions answered by copying a definition.",
+    "decision": "A teacher-reviewed teaching example, not a validated test."
+  },
+  {
+    "id": "S85B",
+    "number": 54,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · questions",
+    "title": "Explanation and diagram completion",
+    "message": "Questions 2 and 3 · observe the connections",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "comparison": [
+      {
+        "label": "Q2 · Explain",
+        "text": "Why does a token not always match a word? Expected: encoding may split words or represent other sequence elements."
+      },
+      {
+        "label": "Q3 · Complete a diagram",
+        "text": "Complete text → tokens → model → distribution → selection. What repeats? Expected: the selected token joins the context and calculation continues."
+      }
+    ],
+    "decision": "Read correctness and explanation without requiring code."
+  },
+  {
+    "id": "S85C",
+    "number": 55,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "teachers",
+    "stage": "Teacher · questions",
+    "title": "Prediction and transfer",
+    "message": "Questions 4 and 5 · apply a concept and recognise an error",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "magicschool",
+    "comparison": [
+      {
+        "label": "Q4 · Predict",
+        "text": "Same input and scores: what changes from T = 0.5 to T = 1.2? Expected: less concentrated probabilities, without a guarantee about one sampled token."
+      },
+      {
+        "label": "Q5 · Correct an error",
+        "text": "“The most probable alternative will be true”. Refute using a new example. Expected: token plausibility differs from content truth."
+      }
+    ],
+    "decision": "Keep the initial prediction, test outcome and justified revision."
+  },
+  {
+    "id": "S86",
+    "number": 56,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "teachers",
+    "stage": "Teacher · collect",
+    "title": "Formative: set up the assessment",
+    "message": "One collection point, with clear instructions and available criteria",
+    "body": [],
+    "sources": [
+      "TOOL_FORMATIVE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "formative",
+    "steps": [
+      {
+        "title": "Create the activity",
+        "text": "State the goal and when materials are allowed or chat must be closed."
+      },
+      {
+        "title": "Add five questions",
+        "text": "Use multiple choice, open response and drawing in the Free plan."
+      },
+      {
+        "title": "Prepare the review",
+        "text": "Key for Q1; teacher review for explanations and diagrams."
+      }
+    ],
+    "decision": "Use the standalone kit rubric; no premium integration is needed."
+  },
+  {
+    "id": "S87",
+    "number": 57,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "teachers",
+    "stage": "Teacher · collect",
+    "title": "Choose the format for the evidence",
+    "message": "Three response types, three opportunities to observe",
+    "body": [],
+    "sources": [
+      "TOOL_FORMATIVE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "formative",
+    "comparison": [
+      {
+        "label": "Multiple choice + reason",
+        "text": "Identify a distinction and inspect the reasoning."
+      },
+      {
+        "label": "Open response",
+        "text": "Observe explanations, predictions and corrections."
+      },
+      {
+        "label": "Drawing + commentary",
+        "text": "Make the sequence and relationships visible."
+      }
+    ],
+    "decision": "Integrated audio/video responses are paid features; agree alternatives when needed."
+  },
+  {
+    "id": "S88",
+    "number": 58,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "teachers",
+    "stage": "Teacher · interpret",
+    "title": "Read three simulated responses",
+    "message": "Invented examples for discussing teacher judgement",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "formative",
+    "comparison": [
+      {
+        "label": "Profile A · complete product",
+        "text": "The app works, but the explanation says every prompt updates parameters."
+      },
+      {
+        "label": "Profile B · vocabulary present",
+        "text": "Names tokens and probabilities, but omits the link between distribution and selection."
+      },
+      {
+        "label": "Profile C · coherent explanation",
+        "text": "Distinguishes phases, justifies a prediction and recognises the limit of one generation."
+      }
+    ],
+    "decision": "Read differences criterion by criterion before summarising with a grade."
+  },
+  {
+    "id": "S89",
+    "number": 59,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "teachers",
+    "stage": "Teacher · give feedback",
+    "title": "Feedback that specifies the next action",
+    "message": "Teacher-written examples address the observed difficulty",
+    "body": [],
+    "sources": [
+      "TOOL_FORMATIVE_RESP",
+      "TOOL_FORMATIVE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "formative",
+    "comparison": [
+      {
+        "label": "For profile A",
+        "text": "Revisit parameters versus context. Correct the arrow and explain why."
+      },
+      {
+        "label": "For profile B",
+        "text": "Add the selection rule between distribution and token. Explain the link."
+      },
+      {
+        "label": "For profile C",
+        "text": "Transfer your explanation to a new context and identify what remains uncertain."
+      }
+    ],
+    "decision": "Teacher-written feedback in the Free plan, followed by a new learner attempt."
+  },
+  {
+    "id": "S89A",
+    "number": 60,
+    "type": "workshop",
+    "kind": "activity",
+    "section": "teachers",
+    "stage": "Audience · activity 2",
+    "title": "Activity: adapt an assessment",
+    "message": "Five minutes on your subject and an access barrier",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 5,
+      "teachers": 0,
+      "university": 0
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Choose a goal · 1 minute",
+        "text": "Name a concept you teach or study."
+      },
+      {
+        "title": "Design evidence · 2 minutes",
+        "text": "Write a task and observable criterion, allowing AI to produce the initial product."
+      },
+      {
+        "title": "Remove a barrier · 2 minutes",
+        "text": "Offer an equivalent access or response option; share the reason for your choice."
+      }
+    ],
+    "decision": "A reusable example with a coherent goal, evidence and support."
+  },
+  {
+    "id": "S90",
+    "number": 61,
+    "type": "workshop",
+    "kind": "accessibility",
+    "section": "accessibility",
+    "stage": "Learner and teacher · access",
+    "title": "Accessibility and learning differences",
+    "message": "Start with the barrier in the actual task, with the learner",
+    "body": [],
+    "sources": [
+      "ACC_AID",
+      "ACC_CAST"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Reading and fatigue",
+        "text": "Adaptable text, read aloud, segments and pauses."
+      },
+      {
+        "label": "Writing the response",
+        "text": "Dictation, review or another agreed response mode."
+      },
+      {
+        "label": "Organisation and calculation",
+        "text": "A visible plan, glossary, diagrams and goal-aligned supports."
+      }
+    ],
+    "decision": "Dyslexia and other specific learning difficulties vary; attention needs are distinct. No typeface or tool fits everyone."
+  },
+  {
+    "id": "S91",
+    "number": 62,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "accessibility",
+    "stage": "Learner · access reading",
+    "title": "Edge: another way to read the same chapter",
+    "message": "Access to the text and understanding require separate checks",
+    "body": [],
+    "sources": [
+      "ACC_EDGE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "edge",
+    "steps": [
+      {
+        "title": "Open the chapter HTML",
+        "text": "Use Reading mode on a supported page or selected passage."
+      },
+      {
+        "title": "Adapt and listen",
+        "text": "Try text preferences and Read aloud; adjust the speed."
+      },
+      {
+        "title": "Check usefulness",
+        "text": "Pause at the paragraph and explain the relationship you read."
+      }
+    ],
+    "decision": "Read aloud supports access; understanding still needs a learner attempt."
+  },
+  {
+    "id": "S92",
+    "number": 63,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "accessibility",
+    "stage": "Learner · understand",
+    "title": "Notebook: short segments and a glossary",
+    "message": "Adapt presentation while checking that meaning is preserved",
+    "body": [
+      "Compare each segment with the original; choose the appropriate detail with the learner."
+    ],
+    "sources": [
+      "ACC_COGA",
+      "TOOL_NOTEBOOK"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "notebook",
+    "prompt": "Rewrite this paragraph in three short segments. Define token, context and parameters. Preserve the condition “during inference” and flag each simplification. Do not remove essential relationships.",
+    "decision": "A brief explanation helps when it preserves the concept’s conditions."
+  },
+  {
+    "id": "S93",
+    "number": 64,
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "accessibility",
+    "stage": "Learner · express",
+    "title": "Dictation: express and review an answer",
+    "message": "Speech produces text that the learner must check",
+    "body": [],
+    "sources": [
+      "ACC_MAC",
+      "ACC_WINDOWS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "tool": "dictation",
+    "steps": [
+      {
+        "title": "Configure Dictation",
+        "text": "On Mac: System Settings → Keyboard → Dictation; choose language and activation."
+      },
+      {
+        "title": "Dictate into the answer field",
+        "text": "Explain the role of context."
+      },
+      {
+        "title": "Read and revise",
+        "text": "Check technical terms, negations and punctuation before submitting."
+      }
+    ],
+    "decision": "Windows offers voice typing; check availability and settings on the actual device."
+  },
+  {
+    "id": "S94",
+    "number": 65,
+    "type": "workshop",
+    "kind": "assessment",
+    "section": "accessibility",
+    "stage": "Teacher · assess",
+    "title": "An accessible assessment of the same goal",
+    "message": "Change the mode while preserving the evidence sought",
+    "body": [
+      "Goal: explain the generation process, rather than writing speed.",
+      "Possible agreed responses: reviewed text, oral explanation or commented diagram.",
+      "Clear instructions, advance criteria and supports aligned with the task."
+    ],
+    "sources": [
+      "ACC_CAST",
+      "ACC_AID"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "decision": "Apply the same conceptual criteria, using response arrangements appropriate to the educational context."
+  },
+  {
+    "id": "S95",
+    "number": 66,
+    "type": "workshop",
+    "kind": "diagram",
+    "section": "transfer",
+    "stage": "Transfer",
+    "title": "Reuse the learning path in another subject",
+    "message": "Keep the sequence; change the content and evidence",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "steps": [
+      {
+        "title": "Start with a source and a goal",
+        "text": "For example: understand a historical interpretation from an assigned chapter."
+      },
+      {
+        "title": "Make ideas visible",
+        "text": "Record an initial explanation, uncertainties and a manageable plan."
+      },
+      {
+        "title": "Use tools, then check",
+        "text": "Compare a generated explanation with the source and revise relationships."
+      },
+      {
+        "title": "Demonstrate and reflect",
+        "text": "Explain a new example independently; identify the next learning step."
+      }
+    ],
+    "decision": "Choose a tool for a specific need and decide what evidence it should leave."
+  },
+  {
+    "id": "S96",
+    "number": 67,
+    "type": "workshop",
+    "kind": "compare",
+    "section": "transfer",
+    "stage": "Reflection",
+    "title": "The evidence collected along the way",
+    "message": "A product and an explanation answer different assessment needs",
+    "body": [],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Learning process",
+        "text": "Initial map, selected plan, checked passage and revised map."
+      },
+      {
+        "label": "Assisted product",
+        "text": "Diagram, application, recorded tests and revision history."
+      },
+      {
+        "label": "Demonstrated knowledge",
+        "text": "Independent explanation, prediction, error correction and reflection."
+      }
+    ],
+    "decision": "Compare these records before deciding what the learner needs next."
+  },
+  {
+    "id": "S97",
+    "number": 68,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · study",
+    "title": "Free tools for planning and source-based study",
+    "message": "Resource list · accounts and limits checked 1 November 2026",
+    "body": [],
+    "sources": [
+      "TOOL_GOBLIN",
+      "TOOL_NOTEBOOK_PRICE",
+      "TOOL_EXCALIDRAW"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Goblin.tools · free web core",
+        "text": "Break down a task. Use Magic ToDo; paid mobile apps and Pro are optional."
+      },
+      {
+        "label": "Gemini Notebook · free Standard",
+        "text": "Study selected sources and check citations. Google account; variable usage limits."
+      },
+      {
+        "label": "Excalidraw · free editor",
+        "text": "Build and revise relationships. No account required for the editor."
+      }
+    ],
+    "links": [
+      {
+        "label": "Goblin.tools",
+        "url": "https://goblin.tools/ToDo"
+      },
+      {
+        "label": "Gemini Notebook",
+        "url": "https://notebook.google.com/"
+      },
+      {
+        "label": "Excalidraw",
+        "url": "https://excalidraw.com/"
+      }
+    ],
+    "decision": "Free access does not always mean no account or unlimited AI use."
+  },
+  {
+    "id": "S97B",
+    "number": 69,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · study",
+    "title": "Free tools for visualisation and the exercise",
+    "message": "Use the free features actually needed by the learning task",
+    "body": [],
+    "sources": [
+      "TOOL_NAPKIN",
+      "TOOL_CLAUDE",
+      "TECH_JS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Napkin Free · account required",
+        "text": "Turn checked text into a visual. 500 AI credits/week; PNG/PDF exports with branding."
+      },
+      {
+        "label": "Claude Free · account required",
+        "text": "Ask for a complete solution and explanation; Artifacts within usage limits."
+      },
+      {
+        "label": "Transformers.js + Qwen · local demo",
+        "text": "Run the model in a browser without a paid API. Download and device requirements apply."
+      }
+    ],
+    "links": [
+      {
+        "label": "Napkin plans",
+        "url": "https://www.napkin.ai/pricing.html"
+      },
+      {
+        "label": "Claude plans",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "label": "Transformers.js",
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes"
+      }
+    ],
+    "decision": "A temporary premium trial is not a continuing free plan."
+  },
+  {
+    "id": "S97C",
+    "number": 70,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · access",
+    "title": "Free access supports already available",
+    "message": "Select a support with the learner and check the actual task",
+    "body": [],
+    "sources": [
+      "ACC_EDGE",
+      "ACC_MAC",
+      "ACC_WINDOWS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Edge Reading mode / Read aloud",
+        "text": "Read the chapter HTML; adapt available text and voice settings. Browser and page support vary."
+      },
+      {
+        "label": "macOS Dictation / Windows voice typing",
+        "text": "Produce text by voice, then review. Microphone, language and device settings matter."
+      },
+      {
+        "label": "Adaptable HTML and text materials",
+        "text": "Reflow, enlarge and personalise the same content; no learner account needed."
+      }
+    ],
+    "links": [
+      {
+        "label": "Edge guide",
+        "url": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge"
+      },
+      {
+        "label": "Mac dictation",
+        "url": "https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27"
+      },
+      {
+        "label": "Windows voice typing",
+        "url": "https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc"
+      }
+    ]
+  },
+  {
+    "id": "S97M",
+    "number": 71,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · formulas",
+    "title": "Tools for understanding formulas",
+    "message": "Free options first, with a clearly labelled paid extension",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK_PRICE",
+      "TOOL_DESMOS",
+      "TOOL_WOLFRAM_PRICE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Notebook Standard · free with account",
+        "text": "Ask about symbols and conditions in the selected chapter; check citations and calculations."
+      },
+      {
+        "label": "Desmos Graphing Calculator · free",
+        "text": "Evaluate expressions and explore graphs. No login to use; account needed to save graphs."
+      },
+      {
+        "label": "Wolfram|Alpha Pro · paid extension",
+        "text": "Step-by-step solutions for supported problems. Basic is free with sign-in but excludes step-by-step solutions."
+      }
+    ],
+    "links": [
+      {
+        "label": "Notebook",
+        "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+      },
+      {
+        "label": "Desmos guide",
+        "url": "https://help.desmos.com/hc/en-us/articles/202529279-Desmos-Graphing-Calculator-User-Guide"
+      },
+      {
+        "label": "Wolfram|Alpha plans",
+        "url": "https://www.wolframalpha.com/pro/pricing/"
+      }
+    ],
+    "decision": "Explanation, calculation and visual exploration are different supports."
+  },
+  {
+    "id": "S97P",
+    "number": 72,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · paid options",
+    "title": "Paid options: what would the upgrade add?",
+    "message": "Optional alternatives · the demonstrated path remains free",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK_PRICE",
+      "TOOL_CLAUDE",
+      "TOOL_NAPKIN",
+      "TOOL_MINDMEISTER"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "Notebook paid tiers / Claude Pro",
+        "text": "Higher usage limits and plan-specific features. Compare with Standard / Free first."
+      },
+      {
+        "label": "Napkin Plus / Pro",
+        "text": "Additional credits, SVG/PPT export and branding options. Free PNG/PDF remains available."
+      },
+      {
+        "label": "MindMeister Personal / Pro",
+        "text": "Unlimited maps and additional exports. Its Free plan allows three maps; Excalidraw is another free option."
+      }
+    ],
+    "links": [
+      {
+        "label": "Notebook plans",
+        "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+      },
+      {
+        "label": "Claude plans",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "label": "Napkin plans",
+        "url": "https://www.napkin.ai/pricing.html"
+      },
+      {
+        "label": "MindMeister plans",
+        "url": "https://www.mindmeister.com/pricing"
+      }
+    ],
+    "decision": "Compare features, quotas, account requirements and eligibility before choosing."
+  },
+  {
+    "id": "S97Q",
+    "number": 73,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · paid options",
+    "title": "Paid options for study and access",
+    "message": "Describe the added function and the available free alternative",
+    "body": [],
+    "sources": [
+      "TOOL_REMNOTE",
+      "TOOL_READWRITE"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "RemNote Pro / Pro with AI · freemium",
+        "text": "Advanced PDF, image-occlusion and AI features vary by plan. Free notes and flashcards are also available."
+      },
+      {
+        "label": "Read&Write by Everway · licensed suite",
+        "text": "Reading and writing supports, with platform/language differences. Free access for eligible K–12 teachers is conditional."
+      }
+    ],
+    "links": [
+      {
+        "label": "RemNote plans",
+        "url": "https://www.remnote.com/pricing"
+      },
+      {
+        "label": "Read&Write pricing",
+        "url": "https://www.everway.com/products/read-and-write-education/pricing/"
+      }
+    ],
+    "decision": "Check eligibility and actual language support; an institutional licence is not free access for everyone."
+  },
+  {
+    "id": "S98",
+    "number": 74,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · teachers",
+    "title": "Free tools for teachers and assessment",
+    "message": "Generation, collection and judgement are separate functions",
+    "body": [],
+    "sources": [
+      "TOOL_MAGIC_PRICE",
+      "TOOL_FORMATIVE",
+      "TOOL_FORMS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "MagicSchool Free · account required",
+        "text": "Draft questions and criteria within usage limits; teacher review remains essential."
+      },
+      {
+        "label": "Formative Free Teacher · teacher account",
+        "text": "Multiple choice, open response, drawing and teacher feedback; standalone rubric in the kit."
+      },
+      {
+        "label": "Google Forms · teacher Google account",
+        "text": "Quiz keys and feedback; manual review for explanations. A free alternative for collecting responses."
+      }
+    ],
+    "links": [
+      {
+        "label": "MagicSchool plans",
+        "url": "https://www.magicschool.ai/pricing"
+      },
+      {
+        "label": "Formative comparison",
+        "url": "https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me"
+      },
+      {
+        "label": "Google Forms quiz guide",
+        "url": "https://support.google.com/docs/answer/7032287?hl=en"
+      }
+    ]
+  },
+  {
+    "id": "S98P",
+    "number": 75,
+    "type": "workshop",
+    "kind": "catalog",
+    "section": "resources",
+    "stage": "Resources · teachers",
+    "title": "Teacher tools: optional paid features",
+    "message": "Check the feature, rather than assuming the whole product is free",
+    "body": [],
+    "sources": [
+      "TOOL_MAGIC_PRICE",
+      "TOOL_FORMATIVE",
+      "TOOL_WAYGROUND"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "comparison": [
+      {
+        "label": "MagicSchool Plus / institutional plans",
+        "text": "Higher generation capacity and plan-specific history or management features."
+      },
+      {
+        "label": "Formative paid plans",
+        "text": "Integrated rubrics, audio/video responses and Luna hints/feedback; Free Teacher supports the demonstrated collection."
+      },
+      {
+        "label": "Wayground Starter and paid plans",
+        "text": "An alternative for quizzes and reports. Starter limits and premium features vary by region."
+      }
+    ],
+    "links": [
+      {
+        "label": "MagicSchool plans",
+        "url": "https://www.magicschool.ai/pricing"
+      },
+      {
+        "label": "Formative comparison",
+        "url": "https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me"
+      },
+      {
+        "label": "Wayground Starter",
+        "url": "https://help.wayground.com/support/solutions/articles/158000404038-wayground-starter-basic-plan"
+      }
+    ],
+    "decision": "Always label Free, freemium, temporary trial and paid licence separately."
+  },
+  {
+    "id": "S99",
+    "number": 76,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Bibliography · empirical research",
+    "title": "Bibliography: AI and learning",
+    "message": "Empirical studies · read the outcome and setting alongside the result",
+    "body": [],
+    "sources": [
+      "EDU_BASTANI",
+      "EDU_KESTIN"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Bastani et al. · 2025",
+        "citation": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122.",
+        "url": "https://doi.org/10.1073/pnas.2422633122"
+      },
+      {
+        "label": "Kestin et al. · 2025",
+        "citation": "Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458.",
+        "url": "https://doi.org/10.1038/s41598-025-97652-6"
+      }
+    ],
+    "decision": "Assisted practice, immediate learning and independent performance are different outcomes."
+  },
+  {
+    "id": "S99B",
+    "number": 77,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Bibliography · empirical research",
+    "title": "Bibliography: guided use and retrieval",
+    "message": "Two complementary reasons for asking the learner to attempt and revise",
+    "body": [],
+    "sources": [
+      "EDU_HUANG",
+      "EDU_RETRIEVAL"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Huang et al. · 2026",
+        "citation": "Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13, 62.",
+        "url": "https://doi.org/10.1186/s40594-026-00652-9"
+      },
+      {
+        "label": "Karpicke & Blunt · 2011",
+        "citation": "Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772–775.",
+        "url": "https://doi.org/10.1126/science.1199327"
+      }
+    ],
+    "decision": "These studies inform design choices; they do not validate this complete workshop or a commercial tool."
+  },
+  {
+    "id": "S100",
+    "number": 78,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Bibliography · educational frameworks",
+    "title": "Bibliography: regulation, maps and AI literacy",
+    "message": "Theoretical and competency frameworks",
+    "body": [],
+    "sources": [
+      "EDU_SRL",
+      "EDU_MAPS",
+      "EDU_UNESCO"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Panadero · 2017",
+        "citation": "Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. Frontiers in Psychology, 8, 422.",
+        "url": "https://doi.org/10.3389/fpsyg.2017.00422"
+      },
+      {
+        "label": "Novak & Cañas · 2008",
+        "citation": "Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.",
+        "url": "https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf"
+      },
+      {
+        "label": "UNESCO · 2024",
+        "citation": "Miao, F., Shiohira, K., & Lao, N. (2024). AI competency framework for students. UNESCO.",
+        "url": "https://www.unesco.org/en/articles/ai-competency-framework-students"
+      }
+    ],
+    "decision": "Frameworks organise design decisions; they are not experimental evidence of tool effectiveness."
+  },
+  {
+    "id": "S100B",
+    "number": 79,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Bibliography · accessibility",
+    "title": "Bibliography: accessible learning materials",
+    "message": "Guidance for options, clear content and individual support",
+    "body": [],
+    "sources": [
+      "ACC_CAST",
+      "ACC_COGA",
+      "ACC_AID"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "CAST · UDL 3.0",
+        "citation": "CAST. (2024). Universal Design for Learning Guidelines, version 3.0.",
+        "url": "https://udlguidelines.cast.org/"
+      },
+      {
+        "label": "W3C WAI · clear content",
+        "citation": "World Wide Web Consortium. (2021). Making content usable for people with cognitive and learning disabilities: Objective 3, Use clear and understandable content.",
+        "url": "https://www.w3.org/WAI/WCAG2/supplemental/objectives/o3-clear-content/"
+      },
+      {
+        "label": "AID · compensatory tools",
+        "citation": "Associazione Italiana Dislessia. (n.d.). Compensatory tools [English translation of webpage title].",
+        "url": "https://www.aiditalia.org/gli-strumenti-compensativi"
+      }
+    ],
+    "decision": "Use these references to discuss barriers and supports with the learner."
+  },
+  {
+    "id": "S101",
+    "number": 80,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Bibliography · GenAI",
+    "title": "Technical bibliography: model and instructions",
+    "message": "Foundational research behind the chapter’s distinctions",
+    "body": [],
+    "sources": [
+      "TECH_TRANSFORMER",
+      "TECH_INSTRUCT"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Vaswani et al. · 2017",
+        "citation": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "label": "Ouyang et al. · 2022",
+        "citation": "Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C. L., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike, J., & Lowe, R. (2022). Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35, 27730–27744.",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ],
+    "decision": "The original Transformer paper describes an encoder–decoder; the demo uses a later causal decoder."
+  },
+  {
+    "id": "S101B",
+    "number": 81,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Bibliography · GenAI",
+    "title": "Technical bibliography: retrieval and visual explanation",
+    "message": "Research references for two different kinds of support",
+    "body": [],
+    "sources": [
+      "TECH_RAG",
+      "TECH_EXPLAINER"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Lewis et al. · 2020",
+        "citation": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33, 9459–9474.",
+        "url": "https://arxiv.org/abs/2005.11401"
+      },
+      {
+        "label": "Cho et al. · CHI 2026",
+        "citation": "Cho, A., Kim, G. C., Karpekov, A., Lee, S., Helbling, A., Hoover, B., Wang, Z. J., Kahng, M., & Chau, D. H. (2026). Transformer Explainer: Learning LLM Transformers with interactive visual explanation and experimentation. Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, Article 7, 1–21.",
+        "url": "https://doi.org/10.1145/3772318.3791725"
+      }
+    ],
+    "decision": "Transformer Explainer is a complementary live resource; its GPT-2 model differs from the workshop’s Qwen demo."
+  },
+  {
+    "id": "S102",
+    "number": 82,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Web resources · technical",
+    "title": "Web resources: model, runtime and tool guides",
+    "message": "Official documentation for repeating the demonstrated operations",
+    "body": [
+      "Tool documentation and plan links are also attached to the relevant resource pages."
+    ],
+    "sources": [
+      "TECH_QWEN",
+      "TECH_JS",
+      "TECH_DEMO"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Qwen · model card",
+        "citation": "Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct"
+      },
+      {
+        "label": "Hugging Face · Transformers.js",
+        "citation": "Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).",
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes"
+      },
+      {
+        "label": "Transformer Explainer · demo",
+        "citation": "Polo Club of Data Science. (2026). Transformer Explainer.",
+        "url": "https://poloclub.github.io/transformer-explainer/"
+      }
+    ]
+  },
+  {
+    "id": "S102B",
+    "number": 83,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Web resources · accessibility",
+    "title": "Web resources: access, dictation and media",
+    "message": "Operational guides for checking the actual environment",
+    "body": [],
+    "sources": [
+      "ACC_EDGE",
+      "ACC_MAC",
+      "ACC_WINDOWS"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "Microsoft · Reading mode",
+        "citation": "Microsoft. (n.d.). Use Reading mode in Microsoft Edge.",
+        "url": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge"
+      },
+      {
+        "label": "Apple · Dictation",
+        "citation": "Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.",
+        "url": "https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27"
+      },
+      {
+        "label": "Microsoft · voice typing",
+        "citation": "Microsoft. (s.d.). Use voice typing to talk instead of type on your PC.",
+        "url": "https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc"
+      }
+    ],
+    "decision": "Check the controls in the browser and operating system used for the activity."
+  },
+  {
+    "id": "S102C",
+    "number": 84,
+    "type": "workshop",
+    "kind": "references",
+    "section": "resources",
+    "stage": "Web resources · accessibility",
+    "title": "Web resources: accessible formats and media",
+    "message": "Standards and guidance for the reusable materials",
+    "body": [
+      "For documents, preserve selectable text, structure, reading order and an equivalent reflow version."
+    ],
+    "sources": [
+      "ACC_WCAG",
+      "ACC_MEDIA"
+    ],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "references": [
+      {
+        "label": "W3C · WCAG 2.2",
+        "citation": "World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
+        "url": "https://www.w3.org/TR/WCAG22/"
+      },
+      {
+        "label": "W3C WAI · accessible media",
+        "citation": "World Wide Web Consortium. (s.d.). Making audio and video media accessible.",
+        "url": "https://www.w3.org/WAI/media/av/"
+      }
+    ],
+    "decision": "A checklist supports review; actual navigation, reading and media use still need inspection."
+  },
+  {
+    "id": "S103",
+    "number": 85,
+    "type": "workshop",
+    "kind": "closing",
+    "section": "resources",
+    "stage": "Materials · discussion",
+    "title": "Materials and next questions",
+    "message": "Take the learning path, then adapt one activity to your context",
+    "body": [
+      "Deck, chapter PDF and adaptable HTML; Italian presenter script.",
+      "Prompts, initial and revised maps, exercise and model application.",
+      "Assessment questions, rubric, simulated responses, feedback and references."
+    ],
+    "sources": [],
+    "duration": {
+      "forum": 0.8,
+      "university": 0.6,
+      "teachers": 0.7
+    },
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
+    "links": [
+      {
+        "label": "Reading version and kit",
+        "url": "./materials/index.html"
+      },
+      {
+        "label": "Chapter HTML",
+        "url": "./materials/booklet-genai/lettura.html"
+      },
+      {
+        "label": "Chapter PDF",
+        "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf"
+      },
+      {
+        "label": "Model application",
+        "url": "./materials/demo-genai/"
+      }
+    ],
+    "decision": "Which learning goal, evidence and access support would you choose first?"
+  }
+]

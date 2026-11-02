@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A learning lab: tokens, probabilities and temperature with a real language model in your browser.">
+  <title>One token at a time · GenAI lab</title>
+  <link rel="stylesheet" href="vendor/daisyui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#laboratorio" class="skip">Skip to the lab</a>
+  <header>
+    <div><h1>One token at a time</h1><p>Explore how a language model continues a text.</p></div>
+    <a href="README.html" class="guide-link">Guide, limits and sources</a>
+  </header>
+  <main id="laboratorio">
+    <section class="model-state" aria-labelledby="model-title">
+      <div><h2 id="model-title">Qwen2.5 · 0.5B Instruct</h2><p>Real q4 model · runs on this computer · no paid API</p></div>
+      <button type="button" class="btn" id="load">Load the model</button>
+      <p id="status" role="status" aria-live="polite">First load: about 786 MB to read. Your text stays in this browser.</p>
+      <progress id="load-progress" class="progress" max="100" value="0" aria-label="Model loading" hidden></progress>
+    </section>
+
+    <div class="workspace">
+      <section aria-labelledby="input-title" class="input-section">
+        <h2 id="input-title">The context to continue</h2>
+        <label for="prompt">Starting text</label>
+        <textarea class="textarea" id="prompt" rows="4" maxlength="600">The capital of Italy is</textarea>
+        <p class="help">Direct completion, with no hidden chat instructions. Up to 96 input tokens.</p>
+        <div class="examples" aria-label="Example texts">
+          <button type="button" class="btn btn-sm" data-example="The capital of Italy is">Italy</button>
+          <button type="button" class="btn btn-sm" data-example="The capital of France is">France</button>
+          <button type="button" class="btn btn-sm" data-example="A language model generates">Models</button>
+        </div>
+        <div class="temperature-line"><label for="temperature">Temperature</label><output for="temperature" id="temperature-value">0.80</output></div>
+        <input type="range" class="range" min="0.2" max="1.8" value="0.8" step="0.1" id="temperature" aria-describedby="temperature-help">
+        <p class="help" id="temperature-help">Lower: more concentrated probabilities. Higher: more spread out. Temperature does not check correctness.</p>
+        <p class="prediction"><strong>Before running:</strong> what continuation do you expect? If you change only temperature, will the most likely token change?</p>
+        <div class="actions"><button type="button" class="btn btn-primary" id="analyze" disabled>Analyze the next token</button><button type="button" class="btn" id="reset">Reset</button></div>
+        <h3>Input tokens <span id="token-count">—</span></h3>
+        <div id="tokens" class="tokens" aria-label="Input tokens"><p>Load the model and analyze some text.</p></div>
+        <p class="help">A token can be a word, part of a word or punctuation. Spaces are displayed as “·”.</p>
+      </section>
+
+      <section aria-labelledby="output-title" class="output-section">
+        <div class="section-heading"><h2 id="output-title">The next token</h2><span id="position">No run yet</span></div>
+        <p class="help" id="distribution-context">Probabilities will be normalized over the full model vocabulary.</p>
+        <ol id="probabilities" aria-label="Five most likely tokens"><li class="empty">Analyze the text to see real alternatives.</li></ol>
+        <div class="remaining"><span>All other tokens</span><strong id="remaining">—</strong></div>
+        <p class="help" id="entropy">Displayed probabilities are rounded; their sum may differ slightly from 100%.</p>
+        <div class="generation-controls">
+          <button type="button" class="btn" id="one" disabled>Generate 1 token</button>
+          <label for="max-tokens">Continuation</label>
+          <input class="input" id="max-tokens" type="number" min="1" max="24" value="8" aria-label="Maximum new tokens">
+          <button type="button" class="btn" id="generate" disabled>Generate</button>
+          <button type="button" class="btn" id="stop" disabled>Stop</button>
+        </div>
+        <p class="help">Sampling from the full vocabulary after temperature-scaled softmax; no top-k or top-p filter.</p>
+        <div class="continuation" aria-labelledby="continuation-title"><h3 id="continuation-title">Completed text</h3><p id="completion">The text will appear here.</p></div>
+        <button type="button" class="btn" id="save" disabled>Save for comparison</button>
+      </section>
+    </div>
+
+    <section class="comparisons" aria-labelledby="comparison-title">
+      <div class="section-heading"><h2 id="comparison-title">Compare two runs</h2><button type="button" class="btn btn-sm" id="download" disabled>Download real data</button></div>
+      <p class="help">Save A, change one condition, then save B. Results stay only on this page until reset.</p>
+      <div id="comparison-results"><p>No saved results.</p></div>
+    </section>
+    <footer><p><strong>Learning limit:</strong> a small model may produce incorrect or incomplete sentences. High probability means a likely continuation for the model, not a true fact.</p><p>Learning material by Marco Cremaschi · implemented with Codex · <a href="provenienza.md">provenance and revisions</a></p></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

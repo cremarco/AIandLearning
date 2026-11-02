@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const folder=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const run=(command,args)=>{
+ const p=spawnSync(command,args,{cwd:folder,encoding:'utf8'});
+ if(p.error)throw p.error;
+ if(p.status!==0||/warning:/i.test(p.stderr))throw new Error(`${command} failed: ${p.stderr}`);
+ if(p.stdout)process.stdout.write(p.stdout);
+};
+run(process.execPath,['scripts/genera.mjs']);
+fs.mkdirSync(path.join(folder,'build'),{recursive:true});
+run(process.env.BOOKLET_TYPST||'typst',['compile','--ignore-system-fonts','--font-path','assets/fonts','--pdf-standard','ua-1','main.typ','build/Fondamenti_GenAI_Cremaschi.pdf']);
+const target=path.resolve(folder,'../public/materials/booklet-genai');
+fs.mkdirSync(target,{recursive:true});
+for(const filename of ['lettura.html','lettura.css','lettura.js'])fs.copyFileSync(path.join(folder,filename),path.join(target,filename));
+fs.cpSync(path.join(folder,'assets'),path.join(target,'assets'),{recursive:true});
+for(const dest of [path.join(folder,'Fondamenti_GenAI_Cremaschi.pdf'),path.join(target,'Fondamenti_GenAI_Cremaschi.pdf')])fs.copyFileSync(path.join(folder,'build/Fondamenti_GenAI_Cremaschi.pdf'),dest);
+console.log('Built PDF/UA-1 target and copied the English reading edition to public/materials/booklet-genai.');

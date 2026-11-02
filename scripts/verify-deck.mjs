@@ -1,153 +1,94 @@
-import { chromium } from 'playwright-chromium'
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import assert from 'node:assert/strict'
-
-const slides = JSON.parse(readFileSync('data/slides.json'))
-const flows = JSON.parse(readFileSync('data/flows.json'))
-const sources = JSON.parse(readFileSync('data/sources.json'))
-assert.equal(slides.length, 44)
-assert.equal(new Set(slides.map(s => s.id)).size, 44)
-const slidePages = new Map(slides.map((slide, index) => [slide.id, index + 1]))
-function pageFor(id) {
-  assert(slidePages.has(id), `Unknown slide ID: ${id}`)
-  return slidePages.get(id)
+import fs from 'node:fs'
+import path from 'node:path'
+import { launchBrowser } from './browser.mjs'
+import { loadSpeakerNotes } from './speaker-notes.mjs'
+const root=path.resolve(import.meta.dirname,'..')
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'))
+const slides=read('data/slides.json'),flows=read('data/flows.json'),sources=read('data/sources.json'),notes=loadSpeakerNotes(slides)
+assert.equal(slides.length,85,'The single complete path must contain all 85 slides')
+assert.equal(new Set(slides.map(s=>s.id)).size,slides.length)
+for(let i=0;i<slides.length;i++){
+ const s=slides[i];assert.equal(s.number,i+1)
+ for(const id of s.sources)assert(sources[id],`${s.id}: missing source ${id}`)
+ for(const lang of ['it'])assert(notes[s.id][lang].length>60,`${s.id}: real speaker script`)
 }
-assert.equal(pageFor('S44'), 3, 'Whattadata must follow the speaker profile')
-for (const s of slides) {
-  assert(s.notes && s.title && s.body)
-  for (const id of s.sources) assert(sources[id], `Missing source ${id}`)
+for(let n=51;n<=103;n++)assert(slides.some(s=>s.id===`S${n}`),`Missing planned step S${n}`)
+assert.equal(flows.length,1,'Only one presentation path may be configured')
+assert.equal(flows[0].id,'all','The complete path must use the all identifier')
+assert.deepEqual(flows[0].slideIds,slides.map(s=>s.id),'The complete path must contain every slide exactly once in source order')
+const base=process.env.DECK_URL||'http://localhost:3047/'
+const browser=await launchBrowser({headless:true})
+const page=await browser.newPage({viewport:{width:1280,height:720}})
+page.setDefaultTimeout(15000)
+const errors=[],issues=[];page.on('pageerror',e=>errors.push(e.message))
+fs.mkdirSync(path.join(root,'output/review/slides'),{recursive:true})
+const report={status:'running',slides:[],flows:[],navigation:[],issues,errors}
+const pathControls='.flow-controls, .flow-picker, [data-flow]'
+async function assertNoPathControls(){
+ assert.equal(await page.locator(pathControls).count(),0,'Route buttons, selectors and the custom navigation bar must be removed')
 }
-for (const f of flows) {
-  assert.equal(new Set(f.slideIds).size, f.slideIds.length)
-  assert.deepEqual(f.slideIds.slice(0, 4), ['S01', 'S02', 'S44', 'S03'])
-  assert.equal(f.slideIds.reduce((n, id) => n + slides.find(s => s.id === id).duration[f.id], 0), f.minutes)
-}
-mkdirSync('qa/slides', { recursive: true })
-const browser = await chromium.launch({ headless: true })
-const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1, colorScheme: 'light' })
-const base = process.env.DECK_URL || 'http://localhost:3030'
-const errors = [], failed = [], layouts = [], flowResults = []
-page.on('pageerror', e => { if (!e.message.includes('Wake Lock permission')) errors.push(e.message) })
-page.on('response', r => { if (r.status() >= 400) failed.push({ status: r.status(), url: r.url() }) })
-async function visible(id) {
-  await page.locator(`.deck-slide[data-slide-id="${id}"]:visible`).waitFor()
-}
-try {
-  await page.goto(`${base}/1`, { waitUntil: 'networkidle' })
-  await visible('S01')
-  assert(await page.locator('html').evaluate(el => el.classList.contains('dark')), 'Deck must default to dark even when the operating system is light')
-  for (const s of slides) {
-    if (s.number > 1) await page.keyboard.press('ArrowRight')
-    await visible(s.id)
-    await page.waitForFunction(() => !document.querySelector('#slide-container [class*="fade-enter"], #slide-container [class*="fade-leave"]'))
-    const main = page.locator(`.deck-slide[data-slide-id="${s.id}"]:visible`)
-    await main.evaluate(async el => { await Promise.all([...el.querySelectorAll('img')].map(i => i.decode().catch(() => {}))) })
-    const result = await main.evaluate(el => {
-      const root = el.getBoundingClientRect(), issues = [], brokenImages = []
-      if (Math.abs(root.height - 720) > 2) issues.push(`Canvas height ${root.height}`)
-      for (const image of el.querySelectorAll('img')) if (!image.complete || !image.naturalWidth) brokenImages.push(image.src)
-      for (const card of el.querySelectorAll('.bento-card, .activity-output')) {
-        const rect = card.getBoundingClientRect()
-        for (const child of card.querySelectorAll('h2, p, .study-stat, [role="timer"]')) {
-          const r = child.getBoundingClientRect()
-          if (r.width > 3 && r.height > 3 && (r.top < rect.top + 3 || r.bottom > rect.bottom - 3)) issues.push(`Card overflow: ${child.textContent.trim().slice(0,85)}`)
-        }
-      }
-      const intro = el.querySelector(':scope > .lead')
-      if (intro) {
-        const r = intro.getBoundingClientRect()
-        const next = intro.nextElementSibling?.getBoundingClientRect()
-        if (intro.scrollHeight > intro.clientHeight + 2 || (next && r.bottom > next.top + 2)) issues.push('Intro text overlaps the content')
-      }
-      for (const child of el.querySelectorAll('h1, h2, p, li, .activity-footer, .resource-row, .return-button')) {
-        if (child.closest('.sr-only') || child.classList.contains('sr-only')) continue
-        const r = child.getBoundingClientRect()
-        if (r.width < 3 || r.height < 3) continue
-        if (r.right > root.right + 2 || r.left < root.left - 2 || r.bottom > root.bottom - 12) issues.push(`Canvas overflow: ${child.textContent.trim().slice(0,85)}`)
-      }
-      return { id: el.dataset.slideId, title: el.querySelector('h1')?.textContent, issues: [...new Set(issues)], brokenImages }
-    })
-    layouts.push(result)
-    await main.screenshot({ path: `qa/slides/${s.id}.png`, animations: 'disabled' })
-  }
-  writeFileSync('qa/layout-pass.json', JSON.stringify(layouts, null, 2))
-  for (const f of flows) {
-    await page.goto(`${base}/1`, { waitUntil: 'networkidle' })
-    await page.getByRole('button', { name: `${f.name}, ${f.minutes} minutes`, exact: true }).click()
-    await visible('S02')
-    await page.keyboard.press('ArrowRight')
-    await visible('S44')
-    await page.keyboard.press('ArrowRight')
-    await visible('S03')
-    for (const id of f.slideIds.slice(4)) {
-      await page.keyboard.press('ArrowRight')
-      await visible(id)
-    }
-    await page.keyboard.press('ArrowRight')
-    await visible(f.slideIds.at(-1))
-    assert(page.url().includes(`flow=${f.id}`), 'Route choice should persist in the URL')
-    await page.reload({ waitUntil: 'networkidle' })
-    await visible(f.slideIds.at(-1))
-    flowResults.push({ id: f.id, slides: f.slideIds.length, minutes: f.minutes, navigation: 'passed', reload: 'passed' })
-  }
-  await page.goto(`${base}/${pageFor('S34')}?flow=teachers`, { waitUntil: 'networkidle' })
-  await visible('S34')
-  const timer = page.locator('.deck-slide[data-slide-id="S34"] [aria-label="Activity timer"]')
-  const before = await timer.getByRole('timer').innerText()
-  await timer.getByRole('button', { name: 'Start', exact: true }).click()
-  await page.waitForTimeout(1150)
-  const running = await timer.getByRole('timer').innerText()
-  assert.notEqual(before, running, 'Timer should count down after Start')
-  await timer.getByRole('button', { name: 'Pause', exact: true }).click()
-  const paused = await timer.getByRole('timer').innerText()
-  await page.waitForTimeout(500)
-  assert.equal(paused, await timer.getByRole('timer').innerText())
-  await timer.getByRole('button', { name: 'Add one minute', exact: true }).click()
-  assert.notEqual(paused, await timer.getByRole('timer').innerText())
-  await timer.getByRole('button', { name: 'Reset', exact: true }).click()
-  assert.equal(before, await timer.getByRole('timer').innerText())
-  const navigation = page.getByRole('navigation', { name: 'Presentation navigation', exact: true })
-  await navigation.getByRole('combobox', { name: 'Choose event route' }).selectOption('university')
-  await visible('S02')
+async function checkKeyboardPath(legacyQuery){
+ const url=new URL(base)
+ if(legacyQuery)url.searchParams.set('flow','teachers')
+ else url.searchParams.delete('flow')
+ await page.goto(url.href,{waitUntil:'networkidle'})
+ await page.locator(`#slide-container .slide-${slides[0].id}:visible`).waitFor()
+ await page.waitForFunction(()=>!new URL(location.href).searchParams.has('flow'))
+ await assertNoPathControls()
+ const visited=[slides[0].id]
+ for(const s of slides.slice(1)){
   await page.keyboard.press('ArrowRight')
-  await visible('S44')
-  await page.keyboard.press('ArrowRight')
-  await visible('S03')
-  const mobile = []
-  mkdirSync('qa/mobile', { recursive: true })
-  const touch = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true, colorScheme: 'light' })
-  touch.on('pageerror', e => errors.push(e.message))
-  touch.on('response', r => { if (r.status() >= 400) failed.push({ status: r.status(), url: r.url() }) })
-  for (const [orientation, viewport] of [['portrait', { width: 390, height: 844 }], ['landscape', { width: 844, height: 390 }]]) {
-    await touch.setViewportSize(viewport)
-    await touch.goto(`${base}/1`, { waitUntil: 'networkidle' })
-    await touch.locator('.slide-S01:visible').waitFor()
-    await touch.screenshot({ path: `qa/mobile/${orientation}-S01.png`, animations: 'disabled' })
-    const controls = touch.getByRole('navigation', { name: 'Presentation navigation', exact: true })
-    const bounds = await controls.boundingBox()
-    const stage = await touch.locator('#slide-container').boundingBox()
-    assert(bounds.x >= 8 && bounds.x + bounds.width <= viewport.width - 8, `${orientation}: navigation must fit the viewport`)
-    assert(stage.y + stage.height <= bounds.y, `${orientation}: navigation must not cover the slides`)
-    assert(await controls.getByRole('link', { name: 'Open accessible text version' }).isVisible(), 'Touch users need the text alternative')
-    for (const flow of flows) {
-      await controls.getByRole('combobox', { name: 'Choose event route' }).selectOption(flow.id)
-      await touch.locator('.slide-S02:visible').waitFor()
-      await touch.keyboard.press('ArrowRight')
-      await touch.locator('.slide-S44:visible').waitFor()
-      await touch.keyboard.press('ArrowRight')
-      await touch.locator('.slide-S03:visible').waitFor()
-    }
-    for (const id of ['S44', 'S09', 'S34']) {
-      await touch.goto(`${base}/${pageFor(id)}?flow=teachers`, { waitUntil: 'networkidle' })
-      await touch.locator(`.slide-${id}:visible`).waitFor()
-      await touch.screenshot({ path: `qa/mobile/${orientation}-${id}.png`, animations: 'disabled' })
-    }
-    mobile.push({ orientation, viewport, navigation: 'passed', stage: 'unobscured', textAlternative: 'available' })
-  }
-  await touch.close()
-  const report = { date: '2026-10-31', slides: slides.length, sourceIds: Object.keys(sources).length, defaultTheme: 'dark', flows: flowResults, layouts, mobile, routeSelect: 'passed', timer: 'passed', errors: [...new Set(errors)], failedRequests: failed }
-  writeFileSync('qa/verification.json', JSON.stringify(report, null, 2))
-  console.log(JSON.stringify({ slides: slides.length, defaultTheme: 'dark', layoutIssues: layouts.filter(r => r.issues.length), brokenImages: layouts.filter(r => r.brokenImages.length), flows: flowResults, mobile, timer: 'passed', errors: report.errors, failedRequests: failed }, null, 2))
-  assert.equal(layouts.filter(r => r.issues.length || r.brokenImages.length).length, 0, 'Every slide must fit its canvas and cards')
-  assert.deepEqual(report.errors, [], 'No browser errors')
-} finally { await browser.close() }
+  await page.locator(`#slide-container .slide-${s.id}:visible`).waitFor()
+  visited.push(s.id)
+ }
+ assert.deepEqual(visited,slides.map(s=>s.id),'Keyboard navigation must preserve the complete slide sequence')
+ await page.keyboard.press('ArrowRight')
+ await page.locator(`#slide-container .slide-${slides.at(-1).id}:visible`).waitFor()
+ await page.keyboard.press('ArrowLeft')
+ await page.locator(`#slide-container .slide-${slides.at(-2).id}:visible`).waitFor()
+ await page.keyboard.press('ArrowRight')
+ await page.locator(`#slide-container .slide-${slides.at(-1).id}:visible`).waitFor()
+ await assertNoPathControls()
+ report.navigation.push({entry:legacyQuery?'legacy ?flow=teachers':'default',visited,lastSlideStable:true,previousAndNext:true,pathControls:0})
+}
+try{
+ for(const s of slides){
+  await page.goto(new URL(String(s.number),base).href,{waitUntil:'networkidle'})
+  const main=page.locator(`#slide-container .slide-${s.id}:visible`);await main.waitFor()
+  await assertNoPathControls()
+  if(s.id==='S01'||s.id==='S03')assert.equal(await main.locator('button, select, [role="button"]').count(),0,`${s.id}: cover and programme must be static, without route buttons or selectors`)
+  assert.equal(await main.locator('.slide-page').innerText(),`${s.number} / ${slides.length}`)
+  const result=await main.evaluate(async el=>{
+   const imgs=[...el.querySelectorAll('img')];await Promise.all(imgs.map(i=>i.decode().catch(()=>{})))
+   const broken=imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)
+   const bounds=el.getBoundingClientRect()
+   const clipped=[...el.querySelectorAll('h1,h2,p,blockquote,li,figcaption,svg text,.workshop-context')].filter(x=>{
+    const r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(r.bottom>bounds.bottom-40||r.right>bounds.right-20||r.left<bounds.left-1)
+   }).map(x=>x.textContent.trim().slice(0,100))
+   const stage=el.querySelector('.workshop-stage')
+   const crowded=stage&&stage.scrollHeight>stage.clientHeight+4?{scroll:stage.scrollHeight,client:stage.clientHeight}:null
+   const bottom=el.querySelector('.workshop-context')?.getBoundingClientRect().top
+   const collisions=bottom?[...el.querySelectorAll('.workshop-copy p,.procedure-list li')].filter(x=>x.getBoundingClientRect().bottom>bottom-4).map(x=>x.textContent.slice(0,60)):[]
+   return {broken,clipped,crowded,collisions}
+  })
+  if(result.broken.length||result.clipped.length||result.crowded||result.collisions.length)issues.push({id:s.id,...result})
+  if(process.env.CAPTURE!=='0')await main.screenshot({path:path.join(root,`output/review/slides/${String(s.number).padStart(2,'0')}-${s.id}.png`)})
+  report.slides.push(s.id)
+ }
+ await checkKeyboardPath(false)
+ await checkKeyboardPath(true)
+ report.flows.push('all')
+ await page.goto(new URL('materials/lettura.html',base).href,{waitUntil:'networkidle'})
+ assert.equal(await page.locator('html').getAttribute('lang'),'en')
+ assert.equal(await page.locator('section.slide').count(),slides.length)
+ await page.locator('#larger').click();assert.equal(await page.locator('html').evaluate(el=>getComputedStyle(el).getPropertyValue('--size')),'22px')
+ await page.locator('#spacing').click();assert.equal(await page.locator('#spacing').getAttribute('aria-pressed'),'true')
+ await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Reading mode must reflow on narrow screens')
+ await page.emulateMedia({reducedMotion:'reduce'});await page.goto(new URL('8',base).href,{waitUntil:'networkidle'});await page.locator('.slide-S51:visible').waitFor()
+ assert.deepEqual(errors,[],'No browser exceptions')
+ report.status=issues.length?'needs-refinement':'passed'
+ fs.writeFileSync(path.join(root,'output/review/deck-check.json'),JSON.stringify(report,null,2))
+ console.log(JSON.stringify({slides:report.slides.length,flows:report.flows,navigation:report.navigation.map(n=>({...n,visited:n.visited.length})),issues,errors},null,2))
+ assert.equal(issues.length,0,'Review and resolve layout findings')
+}finally{await browser.close()}
