@@ -8,30 +8,42 @@ __pycache__/
 *.py[cod]
 *.tsbuildinfo
 
-# Builds and slide exports
-dist/
-dist-pages/
-exports/
-delivery/
+# Generated websites, exports and delivery archives
+/dist/
+/dist-pages/
+/exports/
+/delivery/
 
-# Temporary files, screenshots and verification reports
-qa/
-tmp/
-temp/
+# Local review output and automated-test artifacts
+/output/
+/qa/
+/tmp/
+/temp/
 playwright-report/
 test-results/
 blob-report/
-.impeccable/review/
-.impeccable/build/
-/output/review/
+coverage/
+.nyc_output/
 /demo-genai/captures/
-/booklet-genai/build/*.png
-/booklet-genai/build/*.txt
+
+# Booklet previews and reports; retain the canonical PDF used by the kit
+/booklet-genai/build/*
+!/booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf
+
+# Design-tool caches; keep .impeccable/config.json versioned
+/.impeccable/hook.cache.json
+/.impeccable/review/
+/.impeccable/build/
+
+# Downloaded model files (restored with prepare-model.mjs)
+/public/materials/demo-genai/models/
+
+# Local logs
 *.log
 pnpm-debug.log*
-
-# Downloaded model weights are restored with prepare-model.mjs
-/public/materials/demo-genai/models/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Local environment configuration (keep example files versioned)
 .env

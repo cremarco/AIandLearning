@@ -14,4 +14,4 @@ Manual screen-reader status: attempted, not verified. On 2 November 2026, after 
 
 Independent veraPDF/PAC validation and a manual NVDA reading session were not performed. Do not report those checks or a VoiceOver reading test as passed.
 
-The rebuilt canonical PDF and the copies at `Fondamenti_GenAI_Cremaschi.pdf` and `../public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf` have identical SHA-256 hashes. The file served at the requested localhost URL was downloaded and its hash matched the canonical PDF. Current structure counts, content checks and hashes are recorded in `build/pdf-check.json`.
+The rebuilt canonical PDF and the public copy at `../public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf` have identical SHA-256 hashes. The file served at the requested localhost URL was downloaded and its hash matched the canonical PDF. Current structure counts, content checks and hashes are recorded in `build/pdf-check.json`.

@@ -2,31 +2,58 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import { launchBrowser } from './browser.mjs'
-import { loadSpeakerNotes } from './speaker-notes.mjs'
+import { checkData, slides } from './check-data.mjs'
 const root=path.resolve(import.meta.dirname,'..')
-const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'))
-const slides=read('data/slides.json'),flows=read('data/flows.json'),sources=read('data/sources.json'),notes=loadSpeakerNotes(slides)
-assert.equal(slides.length,84,'The single complete path must contain all 84 slides')
-assert.equal(new Set(slides.map(s=>s.id)).size,slides.length)
-for(let i=0;i<slides.length;i++){
- const s=slides[i];assert.equal(s.number,i+1)
- for(const id of s.sources)assert(sources[id],`${s.id}: missing source ${id}`)
- for(const lang of ['it'])assert(notes[s.id][lang].length>60,`${s.id}: real speaker script`)
-}
-for(let n=51;n<=103;n++)assert(slides.some(s=>s.id===`S${n}`),`Missing planned step S${n}`)
-assert.equal(flows.length,1,'Only one presentation path may be configured')
-assert.equal(flows[0].id,'all','The complete path must use the all identifier')
-assert.deepEqual(flows[0].slideIds,slides.map(s=>s.id),'The complete path must contain every slide exactly once in source order')
+checkData()
 const base=process.env.DECK_URL||'http://localhost:3047/'
 const browser=await launchBrowser({headless:true})
 const page=await browser.newPage({viewport:{width:1280,height:720}})
 page.setDefaultTimeout(15000)
 const errors=[],issues=[];page.on('pageerror',e=>errors.push(e.message))
 fs.mkdirSync(path.join(root,'output/review/slides'),{recursive:true})
-const report={status:'running',slides:[],flows:[],navigation:[],issues,errors}
+const report={status:'running',slides:[],flows:[],navigation:[],ui:{},issues,errors}
 const pathControls='.flow-controls, .flow-picker, [data-flow]'
 async function assertNoPathControls(){
  assert.equal(await page.locator(pathControls).count(),0,'Route buttons, selectors and the custom navigation bar must be removed')
+}
+async function checkNativeUI(){
+ const event=slides.find(s=>s.type==='brief'),luca=slides.find(s=>s.character)
+ await page.goto(new URL(String(event.number),base).href,{waitUntil:'networkidle'})
+ const next=page.getByRole('button',{name:'Go to next slide',exact:true})
+ await next.focus()
+ await page.waitForFunction(()=>{
+  const button=document.activeElement
+  if(button?.getAttribute('title')!=='Go to next slide')return false
+  for(let el=button;el;el=el.parentElement){
+   const style=getComputedStyle(el)
+   if(style.display==='none'||style.visibility==='hidden'||Number(style.opacity)<.99)return false
+  }
+  return true
+ })
+ await next.click()
+ await page.locator(`#slide-container .slide-${slides[event.number].id}:visible`).waitFor()
+ await page.getByRole('button',{name:'Go to previous slide',exact:true}).click()
+ const main=page.locator(`#slide-container .slide-${event.id}:visible`)
+ await main.waitFor()
+ await main.locator('.slide-audience [tabindex="0"]').focus()
+ await page.keyboard.press('Tab')
+ await page.keyboard.press('Shift+Tab')
+ await page.waitForFunction(()=>{
+  const tooltip=document.activeElement?.closest('.tooltip')
+  return tooltip&&document.activeElement.matches(':focus-visible')&&getComputedStyle(tooltip,'::before').opacity==='1'
+ })
+ report.ui.nativeToolbar=true;report.ui.keyboardTooltip=true
+ await page.goto(new URL(`presenter/${luca.number}`,base).href,{waitUntil:'networkidle'})
+ const expressions=page.locator('.luca-reaction')
+ await expressions.nth(1).waitFor()
+ assert.deepEqual(await expressions.evaluateAll(elements=>elements.map(el=>el.dataset.expression)),['happy','worried'],'Presenter Next must preview the next click independently of the current frame')
+ report.ui.presenterPreview=true
+ await page.goto(new URL('print?print=true',base).href,{waitUntil:'networkidle'})
+ assert.equal(await page.locator('.print-slide-container').count(),slides.length)
+ const printedLuca=page.locator(`#print-container .slide-${luca.id} .luca-reaction`)
+ assert.equal(await printedLuca.getAttribute('data-expression'),'happy')
+ assert(await printedLuca.locator('button').isDisabled(),'The custom print route must remain static without a Slidev slide context')
+ report.ui.staticPrint=true
 }
 async function checkKeyboardPath(legacyQuery){
  const url=new URL(base)
@@ -43,7 +70,7 @@ async function checkKeyboardPath(legacyQuery){
    await page.keyboard.press('ArrowRight')
    const current=page.locator(`#slide-container .slide-${previous.id}:visible`)
    await current.waitFor()
-   if(previous.character)assert.equal(await current.locator('.luca-reaction').getAttribute('data-expression'),'worried','The first advance must change Luca’s expression without leaving the slide')
+   if(previous.character)assert.equal(await current.locator('.luca-reaction').getAttribute('data-expression'),'worried','The first advance must change Andrea’s expression without leaving the slide')
   }
   await page.keyboard.press('ArrowRight')
   await page.locator(`#slide-container .slide-${s.id}:visible`).waitFor()
@@ -71,6 +98,7 @@ try{
    const broken=imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)
    const bounds=el.getBoundingClientRect()
    const clipped=[...el.querySelectorAll('h1,h2,p,blockquote,li,figcaption,svg text,.workshop-context')].filter(x=>{
+    if(x.closest('.sr-only'))return false
     const r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(r.bottom>bounds.bottom-40||r.right>bounds.right-20||r.left<bounds.left-1)
    }).map(x=>x.textContent.trim().slice(0,100))
    const stage=el.querySelector('.workshop-stage')
@@ -85,6 +113,7 @@ try{
  }
  await checkKeyboardPath(false)
  await checkKeyboardPath(true)
+ await checkNativeUI()
  report.flows.push('all')
  await page.goto(new URL('materials/lettura.html',base).href,{waitUntil:'networkidle'})
  assert.equal(await page.locator('html').getAttribute('lang'),'en')
@@ -96,6 +125,6 @@ try{
  assert.deepEqual(errors,[],'No browser exceptions')
  report.status=issues.length?'needs-refinement':'passed'
  fs.writeFileSync(path.join(root,'output/review/deck-check.json'),JSON.stringify(report,null,2))
- console.log(JSON.stringify({slides:report.slides.length,flows:report.flows,navigation:report.navigation.map(n=>({...n,visited:n.visited.length})),issues,errors},null,2))
+ console.log(JSON.stringify({slides:report.slides.length,flows:report.flows,navigation:report.navigation.map(n=>({...n,visited:n.visited.length})),ui:report.ui,issues,errors},null,2))
  assert.equal(issues.length,0,'Review and resolve layout findings')
 }finally{await browser.close()}

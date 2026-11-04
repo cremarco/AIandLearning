@@ -1,4 +1,6 @@
-export const EMPHASIS_TERMS_KEY = 'eduforum.emphasisTerms'
+import type { ComputedRef, InjectionKey } from 'vue'
+
+export const EMPHASIS_TERMS_KEY: InjectionKey<ComputedRef<readonly EmphasisTerm[]>> = Symbol('eduforum.emphasisTerms')
 
 export type EmphasisTerm = string | { text: string; tone: 'critical' }
 export type TextPart = { text: string; emphasized: boolean; tone?: 'critical' }

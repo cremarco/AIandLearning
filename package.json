@@ -11,7 +11,11 @@
     "build": "slidev build --base ./ --router-mode hash",
     "export": "node scripts/export-deck.mjs",
     "generate": "node scripts/generate-maps.mjs && node scripts/integrate-workshop.mjs && node scripts/generate-slides.mjs && node scripts/generate-companions.mjs",
-    "check": "node scripts/verify-deck.mjs"
+    "check": "node scripts/check-data.mjs && node scripts/audit-assets.mjs && node scripts/check-links.mjs && node demo-genai/tests/math.test.mjs",
+    "check:browser": "node scripts/verify-deck.mjs && node scripts/check-motion.mjs",
+    "check:all": "pnpm check && pnpm check:browser",
+    "booklet:build": "node booklet-genai/scripts/build.mjs",
+    "kit": "node scripts/package-kit.mjs --build"
   },
   "dependencies": {
     "@slidev/cli": "52.15.2",

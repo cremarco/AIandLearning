@@ -16,10 +16,10 @@ const epoch = new Date(process.env.SOURCE_DATE_EPOCH
   ? Number(process.env.SOURCE_DATE_EPOCH) * 1000 : '2026-11-02T00:00:00Z')
 const rootFiles = [
   'README.md', 'package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml',
-  'vite.config.ts', 'slides.md', 'global-top.vue', 'custom-nav-controls.vue',
-  'brief-workshop.md', 'piano-presentazione.md',
+  'vite.config.ts', 'slides.md', 'global-top.vue',
+  'brief-workshop.md',
 ]
-const trees = ['data', 'components', 'styles', 'setup', 'scripts', 'public', 'dist',
+const trees = ['data', 'components', 'utils', 'assets', 'styles', 'setup', 'scripts', 'public', 'dist',
   'booklet-genai/template', 'booklet-genai/bibliografia', 'booklet-genai/assets',
   'booklet-genai/scripts', 'demo-genai/tests']
 const extraFiles = [
@@ -27,22 +27,18 @@ const extraFiles = [
   'booklet-genai/README.md', 'booklet-genai/verification.md', 'booklet-genai/lettura.html',
   'booklet-genai/voiceover-attempt.json',
   'booklet-genai/lettura.css', 'booklet-genai/lettura.js',
-  'booklet-genai/Fondamenti_GenAI_Cremaschi.pdf',
   'booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf',
   'booklet-genai/build/pdf-check.json', 'booklet-genai/build/reading-check.json',
   'exports/EduForum-2026.pdf', 'exports/Foundations_of_Generative_AI.pdf',
   'demo-genai/serve.mjs', 'demo-genai/VERIFICATION.md',
-  'demo-genai/model-config.json', 'demo-genai/model-metadata.json',
-  'demo-genai/transformers-package.json',
 ]
 const required = [
-  ...rootFiles, 'data/slides.json', 'data/speaker-notes.json', 'dist/index.html',
+  ...rootFiles, 'data/slides.json', 'dist/index.html',
   'exports/EduForum-2026.pdf', 'exports/Foundations_of_Generative_AI.pdf',
   'booklet-genai/main.typ', 'booklet-genai/contenuti.mjs',
   'booklet-genai/voiceover-attempt.json',
   'booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf',
   'public/materials/kit.html', 'public/materials/lettura.html',
-  'public/materials/Presenter_Notes_IT.txt',
   'public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf',
   'public/materials/demo-genai/index.html', 'public/materials/demo-genai/app.js',
   'public/materials/demo-genai/model-manifest.json',
@@ -78,7 +74,7 @@ function denied(relative) {
   if (excludedPrefixes.some(prefix => (relative + '/').startsWith(prefix))) return 'model weights are intentionally omitted'
   if (/\.(?:onnx|bin|safetensors|pt|pth|pem|key|p12|pfx|map)$/i.test(relative)) return 'weight, credential or source-map file'
   if (/^(?:id_rsa|id_ed25519)(?:\.|$)/.test(path.basename(relative))) return 'credential filename'
-  if (/^Presenter_Notes_(?!IT\.txt$)/.test(path.basename(relative))) return 'single deck: only the main Italian presenter script is delivered'
+  if (/^Presenter_Notes_/.test(path.basename(relative)) || path.basename(relative) === 'facilitator-guide-it.txt') return 'presenter notes have been removed'
   return null
 }
 function eligible(relative) {
@@ -135,11 +131,13 @@ async function staleCopies() {
   const pairs = [
     ['booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf', 'exports/Foundations_of_Generative_AI.pdf'],
     ['booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf', 'public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf'],
-    ['public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf', 'dist/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf'],
-    ['public/materials/demo-genai/app.js', 'dist/materials/demo-genai/app.js'],
-    ['public/materials/demo-genai/model-manifest.json', 'dist/materials/demo-genai/model-manifest.json'],
-    ['public/materials/lettura.html', 'dist/materials/lettura.html'],
   ]
+  // Check every public resource, including shared reader JS/CSS and image changes.
+  for (const entry of await fs.readdir(path.join(root, 'public'), { recursive: true, withFileTypes: true })) {
+    if (!entry.isFile()) continue
+    const relative = path.relative(root, path.join(entry.parentPath, entry.name)).split(path.sep).join('/')
+    if (!denied(relative)) pairs.push([relative, relative.replace(/^public\//, 'dist/')])
+  }
   const stale = []
   for (const [source, copy] of pairs) {
     if (!await exists(source) || !await exists(copy)) { stale.push({ source, copy, reason: 'missing copy' }); continue }
@@ -176,7 +174,7 @@ server.listen(port,'127.0.0.1',()=>{console.log('Presentation: http://127.0.0.1:
 `
 const startGuide = `# EduForum materials
 
-This folder contains the complete English presentation, fictional textbook chapter, tool materials and editable sources. The presenter script is in Italian. All slides follow one sequence, with no event-route selection.
+This folder contains the complete English presentation, fictional textbook chapter, tool materials and editable sources. All slides follow one sequence, with no event-route selection.
 
 ## Read or present
 
@@ -253,7 +251,7 @@ function inspectZip(filename, entries) {
   const expected = entries.map(entry => archiveRoot + '/' + entry.path).sort(compare)
   if (JSON.stringify(actual) !== JSON.stringify(expected)) throw Error('ZIP content differs from the allowlist.')
   if (actual.some(name => /(?:^|\/)(?:models|node_modules|\.git|\.env[^/]*)(?:\/|$)|\.(?:onnx|safetensors|bin|pem|key|p12|pfx)$/i.test(name))) throw Error('Forbidden weight, dependency or credential path found in ZIP.')
-  if (actual.some(name => /^Presenter_Notes_(?!IT\.txt$)/.test(path.basename(name)) || /^EduForum-2026-(?:Forum|University|Teachers)\.pdf$/.test(path.basename(name)))) throw Error('Obsolete event-route notes or PDFs found in the single-deck ZIP.')
+  if (actual.some(name => /^Presenter_Notes_/.test(path.basename(name)) || /^EduForum-2026-(?:Forum|University|Teachers)\.pdf$/.test(path.basename(name)))) throw Error('Removed presenter notes or obsolete event PDFs found in the single-deck ZIP.')
   return { crc: 'passed', listing: 'matches exact allowlist', forbiddenPaths: 0 }
 }
 async function selfTest() {
@@ -275,6 +273,14 @@ const args = process.argv.slice(2)
 if (args.some(arg => !['--build', '--plan', '--self-test', '--help'].includes(arg))) throw Error('Use --plan, --build or --self-test.')
 if (args.includes('--help')) { console.log('node scripts/package-kit.mjs --plan    Read-only delivery plan (default)\nnode scripts/package-kit.mjs --self-test    ZIP writer/verifier checks\nnode scripts/package-kit.mjs --build    Package the FINAL_BUILD_READY snapshot'); process.exit(0) }
 if (args.includes('--self-test')) { await selfTest(); process.exit(0) }
+// Refresh the one delivery alias rather than requiring a manual PDF copy.
+if (args.includes('--build')) {
+  await fs.mkdir(path.join(root, 'exports'), { recursive: true })
+  await fs.copyFile(
+    path.join(root, 'booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf'),
+    path.join(root, 'exports/Foundations_of_Generative_AI.pdf'),
+  )
+}
 const selection = await collect()
 const stale = await staleCopies()
 const groups = {}

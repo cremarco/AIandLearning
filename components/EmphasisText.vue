@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed, inject, type ComputedRef } from 'vue'
+import { computed, inject } from 'vue'
 import { EMPHASIS_TERMS_KEY, splitEmphasis, type EmphasisTerm } from '../utils/emphasis'
 
 const props = withDefaults(defineProps<{ text?: string; terms?: readonly EmphasisTerm[] }>(), { text: '' })
-const inherited = inject<ComputedRef<readonly EmphasisTerm[]>>(EMPHASIS_TERMS_KEY, computed(() => []))
+const inherited = inject(EMPHASIS_TERMS_KEY, computed(() => []))
 const parts = computed(() => splitEmphasis(props.text, props.terms || inherited.value))
 </script>
 

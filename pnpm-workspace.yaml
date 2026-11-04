@@ -1,6 +1,9 @@
 allowBuilds:
   esbuild: true
   playwright-chromium: false
+# Presenting and checking should work offline; install dependencies explicitly.
+verifyDepsBeforeRun: warn
+updateNotifier: false
 overrides:
   '@shikijs/vitepress-twoslash': 4.2.0
   floating-vue: 5.2.2

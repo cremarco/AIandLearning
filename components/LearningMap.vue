@@ -2,7 +2,7 @@
 defineProps<{ revised?: boolean }>()
 </script>
 <template>
-  <svg class="learning-map" viewBox="0 0 1080 260" role="img" :aria-label="revised ? 'Revised map: training data update parameters; context and parameters contribute to generation. Parameters stay fixed in inference.' : 'Initial map: Luca links context to model with the uncertain relation trains again and cannot yet explain how a response is produced.'">
+  <svg class="learning-map" viewBox="0 0 1080 260" role="img" :aria-label="revised ? 'Revised map: training data update parameters; context and parameters contribute to generation. Parameters stay fixed in inference.' : 'Initial map: Andrea links context to model with the uncertain relation trains again and cannot yet explain how a response is produced.'">
     <defs><marker :id="revised?'arrow-correct':'arrow-initial'" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="currentColor" /></marker></defs>
     <g class="map-shapes" fill="none" stroke="currentColor" stroke-width="1.5">
       <rect x="0" y="95" width="214" height="90" rx="8"/><rect x="422" y="95" width="214" height="90" rx="8"/><rect x="854" y="95" width="224" height="90" rx="8"/>

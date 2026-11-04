@@ -5,8 +5,12 @@
 .slidev-layout .deck-slide .workshop-lead { font-size:25px; color:var(--deck-muted); line-height:1.32; max-width:1080px; }
 .workshop-stage { display:flex; flex:1; min-height:0; gap:38px; align-items:center; }
 .workshop-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:22px; }
+.kind-audience-legend .comparison { gap:64px; }
+.kind-audience-legend .comparison section { gap:24px; }
+.kind-audience-legend .audience-icon { width:64px; height:64px; }
 .has-character .workshop-stage { gap:48px; }
-.has-character .workshop-copy { max-width:720px; }
+.has-character .workshop-copy { position:relative; z-index:1; flex:0 1 720px; max-width:720px; }
+.has-character > :not(.workshop-stage) { position:relative; z-index:1; width:720px; }
 .slidev-layout .workshop-body { display:flex; flex-direction:column; gap:18px; }
 .slidev-layout .workshop-body p { font-size:25px; line-height:1.36; }
 .slidev-layout .workshop-content h2 { font-size:27px; line-height:1.15; font-weight:700; }
@@ -21,7 +25,6 @@
 .slidev-layout .workshop-result h2 { color:var(--deck-ink); font-size:21px; }
 .slidev-layout .workshop-result p { font-size:25px; line-height:1.3; }
 .slidev-layout .deck-slide .workshop-decision { padding-top:14px; border-top:1px solid var(--deck-line); font-size:23px; font-weight:650; line-height:1.3; }
-.workshop-context { display:flex; justify-content:space-between; gap:20px; font-size:16px; letter-spacing:.01em; line-height:1.2; color:var(--deck-muted); }
 .comparison { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:38px; }
 .comparison.three { grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
 .comparison section { display:flex; flex-direction:column; gap:17px; padding-top:18px; border-top:2px solid var(--deck-line); }
@@ -35,6 +38,9 @@
 .has-media .procedure-list { gap:18px; }
 .slidev-layout .has-media .workshop-prompt { padding:16px 18px; }
 .workshop-links { display:flex; flex-wrap:wrap; gap:12px; }
+.kind-access .workshop-stage { gap:72px; }
+.kind-access .workshop-media { order:1; width:38%; }
+.kind-access .workshop-media img { max-height:400px; image-rendering:pixelated; }
 .reference-list { width:100%; display:flex; flex-direction:column; gap:24px; align-self:flex-start; padding-top:10px; }
 .reference-list article { display:grid; grid-template-columns:205px minmax(0,1fr); gap:7px 24px; border-top:1px solid var(--deck-line); padding-top:16px; }
 .slidev-layout .reference-list h2 { grid-row:span 2; font-size:22px; color:var(--deck-ink); }
@@ -80,8 +86,12 @@
 .workshop-prompt p {white-space:pre-line;overflow-wrap:anywhere;}
 .video-print-poster {display:none!important;}
 @media print {.workshop-media .video-print-poster {display:block!important;}}
-.kind-book .workshop-media {width:40%;--media-paper:transparent;}
-.kind-book .workshop-media img {max-height:340px;}
+.kind-book { display:grid; grid-template-columns:minmax(0, 430px) minmax(0, 1fr); grid-template-rows:auto auto minmax(0, 1fr); gap:20px 48px; }
+.kind-book .workshop-heading { grid-area:1 / 1; }
+.kind-book .workshop-lead { grid-area:2 / 1; }
+.kind-book .workshop-stage { display:contents; }
+.kind-book .workshop-copy { grid-area:3 / 1; align-self:center; }
+.kind-book .workshop-media { grid-area:1 / 2 / 4 / 3; width:100%; align-self:center; --media-paper:transparent; --book-page-width:300px; --book-page-height:calc(var(--book-page-width) * 254 / 180); --book-caption-height:40px; --book-caption-size:18px; }
 .slide-S63 .workshop-media img {max-height:325px;}
 .slide-S70 .workshop-media {width:50%;}
 .slide-S52E .workshop-media {order:1;width:29%;align-self:center;gap:8px;}

@@ -14,7 +14,7 @@
 
 #v(9pt)
 
-#text(size: 9.5pt, fill: muted)[A fictional book and an original teaching chapter created for the Beyond prompting workshop. The technical sources are real; Luca is a character in a simulated learning scenario.]
+#text(size: 9.5pt, fill: muted)[A fictional book and an original teaching chapter created for the Beyond prompting workshop. The technical sources are real; Andrea is a character in a simulated learning scenario.]
 
 #v(8pt)
 
@@ -82,7 +82,7 @@
 
 == Generative models and language models <modelli>
 
-Luca is a second-year computer science student. He can program, but uses words such as “model”, “token” and “attention” without clearly connecting them. His assignment is to build a small text-generation application and explain how it works. He may use AI to help write the code. In the assessment, he will also have to interpret a variation and correct a conceptual error.
+Andrea is a second-year computer science student. He can program, but uses words such as “model”, “token” and “attention” without clearly connecting them. His assignment is to build a small text-generation application and explain how it works. He may use AI to help write the code. In the assessment, he will also have to interpret a variation and correct a conceptual error.
 
 A generative AI system produces content conditioned on an input: for example, text from an instruction or an image from a description. “Generative” describes the activity, not a single architecture. This chapter focuses on autoregressive language models based on Transformer decoders. It therefore does not describe every generative system or every component of a commercial assistant.
 
@@ -96,11 +96,11 @@ The model must be distinguished from the application around it. An assistant may
 
 Parameters are numerical values used in the model’s transformations. Before training, they do not already represent an encyclopaedia organised into readable entries. During pretraining, the system compares its predicted distribution with the tokens actually present in examples, then changes the parameters to reduce an aggregate error. The text supplies the learning signal; optimisation updates the values.
 
-Consider a concrete case. While studying, Luca writes, “In this chapter, X means Y.” This information may influence the answer through the conversation context. That does not mean the application updates the model’s weights after every message. Any later use of data by a service is a separate matter governed by its settings and terms.
+Consider a concrete case. While studying, Andrea writes, “In this chapter, X means Y.” This information may influence the answer through the conversation context. That does not mean the application updates the model’s weights after every message. Any later use of data by a service is a separate matter governed by its settings and terms.
 
 Pretraining may be followed by stages that orient the model towards instructions and desired behaviour. One documented example is training with demonstrations and human preferences, as described for InstructGPT @ouyang2022. “Instruct” identifies a model adapted to instructions; it does not guarantee truthful answers, freedom from bias or success in every task. Procedures can differ between model families.
 
-Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context. Training a new version changes the model itself. To compare experiments, Luca therefore records the model name, input, settings and results.
+Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context. Training a new version changes the model itself. To compare experiments, Andrea therefore records the model name, input, settings and results.
 
 #figure(table(columns: (1fr, 1.5fr), table.header([Intervention], [What changes]), [Training or fine-tuning], [The model’s parameters.], [A new message in the context], [Information available to the current inference.], [Document retrieval], [External passages supplied as context.]), kind: table, supplement: [Table], caption: [Three different interventions])
 
@@ -128,7 +128,7 @@ A token’s identifier retrieves an initial numerical representation called an e
 
 Order matters: “the dog chases the cat” and “the cat chases the dog” use almost the same elements but express different relationships. The model needs information about position. The original Transformer uses positional encodings; later models also use other methods. For example, the Qwen2.5 model card describes RoPE. Do not copy every detail of the 2017 diagram and attribute it to every current LLM.#footnote[Reference: Qwen2.5-0.5B-Instruct architecture and configuration. #link("https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct")[huggingface.co/Qwen/Qwen2.5-0.5B-Instruct]]
 
-Luca can think of the initial representation as the starting point of the calculation. The analogy is useful only while it avoids becoming a false explanation: a vector is not a readable definition, and one coordinate does not generally correspond to one isolated human property. Understanding the flow requires identifying the information that enters and the transformations it undergoes.
+Andrea can think of the initial representation as the starting point of the calculation. The analogy is useful only while it avoids becoming a false explanation: a vector is not a readable definition, and one coordinate does not generally correspond to one isolated human property. Understanding the flow requires identifying the information that enters and the transformations it undergoes.
 
 #representation-stages([An identifier, an initial vector and a contextual representation have different roles], "A token ID is a vocabulary index. It is used to retrieve an initial learned embedding vector. Decoder blocks then transform representations using permitted context. This conceptual diagram uses no invented real token IDs or numerical embedding values.")
 
@@ -218,7 +218,7 @@ Checks should match the question. For a formula, verify definitions and conditio
 
 The small lab model is chosen to make a real browser execution observable. It is not a benchmark for every LLM’s performance. Quantisation, numerical precision, device and decoding procedure can influence outcomes. Reading the model card and recording settings makes comparison more informative.
 
-The exercise’s educational purpose is to connect observations with explanations. Luca separates what he measured, what he infers and what still needs checking. One run supplies a case to interpret; a comparison under controlled conditions supports a more precise conclusion.
+The exercise’s educational purpose is to connect observations with explanations. Andrea separates what he measured, what he infers and what still needs checking. One run supplies a case to interpret; a comparison under controlled conditions supports a more precise conclusion.
 
 #check([Correct the error])[“If a token has 80% probability, the answer has an 80% probability of being true.” Rewrite this statement to specify what the value actually measures.]
 
@@ -252,7 +252,7 @@ Experiment 1: keep context fixed and change temperature. Experiment 2: keep temp
 
 == Studying an AI-generated solution <studio>
 
-A complete solution can shorten the time needed to obtain an artefact. To turn it into an opportunity to study, Luca separates the program into functions: acquire text, tokenize, run the model, calculate probabilities, select a token and update the interface. He connects each function to a chapter passage and an observation he can check.
+A complete solution can shorten the time needed to obtain an artefact. To turn it into an opportunity to study, Andrea separates the program into functions: acquire text, tokenize, run the model, calculate probabilities, select a token and update the interface. He connects each function to a chapter passage and an observation he can check.
 
 He can ask an assistant grounded in the material for a graduated explanation: first one sentence, then the relationship between components, and finally the code detail he does not understand. Source, explanation and analogy should remain distinguishable. A program is not understood simply because its explanation sounds familiar.
 

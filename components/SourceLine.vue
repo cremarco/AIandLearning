@@ -1,12 +1,19 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import sources from '../data/sources.json'
-defineProps<{ ids?: string[] }>()
+
+type Source = { label?: string; title?: string; url?: string; showInFooter?: boolean }
+const catalogue: Record<string, Source> = sources
+const props = defineProps<{ ids?: string[] }>()
+const visibleSources = computed(() => (props.ids || [])
+  .map(id => ({ id, ...catalogue[id] }))
+  .filter(source => source.showInFooter !== false))
 </script>
 
 <template>
-  <footer class="source-line">
-    <template v-for="(id, index) in ids" :key="id">
-      <a class="link" :href="sources[id]?.url" target="_blank" rel="noopener" :title="sources[id]?.title">{{ sources[id]?.label || id }}</a><span v-if="index < ids.length - 1"> · </span>
+  <footer v-if="visibleSources.length" class="source-line">
+    <template v-for="(source, index) in visibleSources" :key="source.id">
+      <a class="link" :href="source.url" target="_blank" rel="noopener" :title="source.title">{{ source.label || source.id }}</a><span v-if="index < visibleSources.length - 1"> · </span>
     </template>
   </footer>
 </template>

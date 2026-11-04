@@ -9,7 +9,7 @@ function hasFocusedControl() {
 
 export default defineShortcutsSetup((_nav, base) => {
   const nav = useNav()
-  // The shared bridge owns navigation. Only guard Space so activating a
+  // Slidev owns navigation. Only guard Space so activating a
   // focused control cannot also advance or rewind the presentation.
   const shortcuts = base.map(shortcut => {
     if (shortcut.name !== 'next_space' && shortcut.name !== 'prev_space') return shortcut

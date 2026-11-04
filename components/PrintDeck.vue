@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
-import slides from '../data/slides.json'
+import { slides } from '../utils/deck'
 import DeckSlide from './DeckSlide.vue'
 onMounted(()=>document.documentElement.classList.add('workshop-print'))
 onUnmounted(()=>document.documentElement.classList.remove('workshop-print'))

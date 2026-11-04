@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, provide } from 'vue'
-import slides from '../data/slides.json'
+import { getSlide, slides } from '../utils/deck'
+import { imageUrl as image } from '../utils/assets'
 import highlights from '../data/highlights.json'
 import { EMPHASIS_TERMS_KEY, type EmphasisTerm } from '../utils/emphasis'
 import EmphasisText from './EmphasisText.vue'
@@ -8,49 +9,50 @@ import BentoCard from './BentoCard.vue'
 import SourceLine from './SourceLine.vue'
 import WhattadataCubes from './WhattadataCubes.vue'
 import SlideAudience from './SlideAudience.vue'
+import CoverBackground from './CoverBackground.vue'
 import WorkshopSlide from './WorkshopSlide.vue'
 
 const props = defineProps<{ id: string }>()
 provide(EMPHASIS_TERMS_KEY, computed(() => (highlights as Record<string, EmphasisTerm[]>)[props.id] || []))
-const s = computed<any>(() => slides.find(slide => slide.id === props.id))
-const image = (name: string) => `${import.meta.env.BASE_URL}images/${name}`
-const lead = computed(() => s.value && !['cover', 'profile', 'agenda'].includes(s.value.type) ? s.value.message : '')
-const cards = computed(() => s.value && 'cards' in s.value ? s.value.cards : [])
-const bentoCards = computed(() => s.value?.type === 'brief' && cards.value.length === 3
-  ? [cards.value[1], cards.value[0], cards.value[2]].map((card, index) => ({
+const s = computed(() => getSlide(props.id))
+const lead = computed(() => s.value && !['cover', 'profile'].includes(s.value.type) ? s.value.message : '')
+const cards = computed(() => s.value?.cards || [])
+const sourceIds = computed(() => s.value?.sources.filter(id => id !== 'BIO02').slice(0, 3) || [])
+const bentoCards = computed(() => {
+  const slide = s.value
+  if (slide?.type !== 'brief' || cards.value.length !== 3) return cards.value
+  return [cards.value[1], cards.value[0], cards.value[2]].map((card, index) => ({
     ...card,
-    backgroundImage: index === 0 && s.value.cardBackground ? image(s.value.cardBackground) : undefined,
+    backgroundImage: index === 0 && slide.cardBackground ? image(slide.cardBackground) : undefined,
   }))
-  : cards.value)
+})
 const slideProgress = computed(() => ({
   value: s.value?.number || 1,
   max: slides.length,
   label: 'Progress through all slides',
   text: `Slide ${s.value?.number} of ${slides.length}`,
 }))
-const eventNames: Record<string, string> = { S48:'Forum', S49:'University', S50:'Teachers' }
-const agendaItems = slides.filter(slide => slide.type === 'brief')
-  .map(slide => ({ title:eventNames[slide.id] || slide.title,
-    timing:slide.message.split(' · ')[0], detail:slide.title }))
-  .sort((a, b) => Number(a.timing.split(' ')[0]) - Number(b.timing.split(' ')[0]))
-  .map((item, index) => ({ ...item, number:String(index + 1).padStart(2, '0') }))
 </script>
 
 <template>
   <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '']" :data-slide-id="s.id">
-    <SlideAudience :audience="s.audience" />
+    <SlideAudience v-if="s.type !== 'cover'" :audience="s.audience" />
+    <span v-if="s.todo" class="badge badge-warning absolute left-16 top-4 z-10 h-7 gap-2 text-sm font-medium" role="note">
+      <strong>TODO</strong>{{ s.todo }}
+    </span>
     <template v-if="s.type === 'cover'">
+      <CoverBackground />
+      <img class="cover-university-logo" :src="image('universities/milano-bicocca.png')" alt="Università degli Studi di Milano-Bicocca" />
       <div class="cover-copy">
         <h1 class="cover-title">Beyond<br /><span>prompting</span></h1>
         <p class="cover-subtitle"><EmphasisText :text="s.message" /></p>
-        <p class="cover-author">Marco Cremaschi<br /><span>University of Milano-Bicocca · Whattadata</span></p>
-        <p class="cover-meta">Vilnius · November 2026</p>
+        <p class="cover-author">Marco Cremaschi<br /><span>University of Milano-Bicocca · Whattadata</span><br /><a class="link link-hover cover-email" href="mailto:marco.cremaschi@unimib.it">marco.cremaschi@unimib.it</a></p>
       </div>
     </template>
 
     <template v-else-if="s.type === 'workshop'">
       <WorkshopSlide :slide="s" />
-      <SourceLine :ids="s.sources.filter((id: string) => id !== 'BIO02').slice(0, 3)" />
+      <SourceLine :ids="sourceIds" />
     </template>
 
     <template v-else>
@@ -88,17 +90,6 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
         </div>
       </template>
 
-      <template v-else-if="s.type === 'agenda'">
-        <div class="agenda-route grid md:grid-cols-3">
-          <section v-for="chapter in agendaItems" :key="chapter.title" class="agenda-step">
-            <span class="agenda-step-meta"><span>{{ chapter.number }}</span><span>{{ chapter.timing }}</span></span>
-            <strong>{{ chapter.title }}</strong>
-            <span class="agenda-step-detail">{{ chapter.detail }}</span>
-          </section>
-        </div>
-        <p class="agenda-access">November 2026 · Audiences, activities and outcomes · Original programmes</p>
-      </template>
-
       <template v-else>
         <div class="bento-grid" :class="{ three: bentoCards.length === 3 }">
           <BentoCard v-for="(card, i) in bentoCards" :key="card.title" v-bind="card" :tone="i === 0 ? 'paper' : i === 2 ? 'accent' : 'surface'" />
@@ -106,7 +97,7 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
       </template>
 
       <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
-      <SourceLine :ids="s.sources.filter((id: string) => id !== 'BIO02').slice(0, 3)" />
+      <SourceLine :ids="sourceIds" />
     </template>
     <span class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
     <progress class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />

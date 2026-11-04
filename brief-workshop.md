@@ -61,27 +61,3 @@ Porteranno con sé un modello di attività riutilizzabile e compiti pratici per 
 Il relatore fornirà in anticipo modelli visuali, schede ed esempi. Gli esempi preparati permetteranno di svolgere le attività senza un account personale o accesso diretto all’IA. È richiesto di portare un computer.
 
 **Programma originale:** [Workshop Program November 2026 — EN](https://drive.google.com/file/d/1aUr91OePxXiAQXzh2ZLHw6pRynbCmVY0/view).
-
-## Piano per la presentazione — aggiornato il 1 novembre 2026
-
-Il [piano dettagliato consolidato](piano-presentazione.md) raccoglie tutte le scelte concordate e sostituisce le scalette precedenti.
-
-- **Pubblico:** partecipanti non informatici; Marco mostra il percorso di uno studente di informatica, che studia GenAI e architettura di base. Il pubblico segue il metodo e il suo trasferimento didattico.
-- **Lingua:** materiali, libro, esempi e slide in inglese; note del relatore solo in italiano.
-- **Scenario:** Luca parte da un capitolo fittizio firmato Marco Cremaschi, costruisce un piano, usa i tool per capire e rappresentare i concetti e studia una soluzione prodotta dall'IA.
-- **Libro:** sorgenti e impaginazione in Typst nella futura cartella `booklet-genai/` del progetto, nello stile del booklet CVeDI; PDF semanticamente strutturato e versione HTML di lettura con contenuto equivalente.
-- **Esercizio:** piccola applicazione con modello reale; richiesta riproducibile in Claude e applicazione distribuita realizzata con Codex, con provenienza dichiarata, poi compresa e verificata dallo studente.
-- **Slide:** autoesplicative anche senza il parlato, con passaggi operativi, input, schermate, risultati e decisioni. Inventario iniziale di 60 slide, ampliabile per la leggibilità.
-- **Stile dei tool:** mini-sezioni con identità visiva dei rispettivi prodotti, screenshot autentici e orientamento narrativo comune.
-- **Layout e animazioni:** applicare Impeccable; motion funzionale, avanzamento controllabile, alternativa con movimento ridotto e contenuto completo in PDF e lettura HTML.
-- **Video:** brevi registrazioni reali, con comandi, sottotitoli, trascrizioni e sequenze statiche equivalenti.
-- **Docenti:** MagicSchool per bozze di domande e criteri, Formative per raccolta delle risposte, lettura delle difficoltà e feedback.
-- **Accessibilità e DSA:** supporti nello scenario e cinque slide dedicate a barriere, lettura vocale, testo personalizzabile, segmentazione, dettatura e modalità di verifica coerenti con gli obiettivi. Riferimenti CAST, W3C WAI e AID.
-- **Scelta dei tool:** privilegiare strumenti e funzioni gratuite nelle demo e nella riproduzione del percorso. Le liste finali includono anche strumenti a pagamento, specificando differenze, valore aggiunto, alternative gratuite e limiti; distinguere piani free, freemium, trial e abbonamenti.
-- **Applicazione del criterio economico:** demo nei piani gratuiti dei tool concordati; rubrica di valutazione in un documento separato e visuali Napkin esportate in PNG/PDF. Nel catalogo finale includere anche piani premium, MindMeister, RemNote e Read&Write, con condizioni e agevolazioni dichiarate.
-- **Chiusura:** tool gratuiti e a pagamento, bibliografia educativa, riferimenti tecnici GenAI, sitografia e kit riutilizzabile in tutti e tre i percorsi.
-- **Durate:** 90 minuti per il Forum e 50 per i docenti; per l'università, copione di prova da 30 minuti, con durata effettiva dell'intervento ancora da confermare.
-
-**Stato:** realizzati 84 slide condivise, capitolo illustrato di 19 pagine in Typst e kit dimostrativo, con materiali in inglese e note del relatore in italiano. Verifica finale documentata nel progetto.
-
-**Aggiornamento operativo:** per ora un solo percorso con tutte le 84 slide, senza pulsanti o selettore di percorso. Copione italiano completo; le selezioni per evento sono sospese.

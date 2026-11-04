@@ -38,8 +38,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Generate slide notes and text alternatives
+      - name: Generate slides and text alternatives
         run: pnpm generate
+
+      - name: Check content and local assets
+        run: pnpm check
 
       - name: Build Slidev
         env:

@@ -1,0 +1,38 @@
+{
+  "mode": "built-in image_gen",
+  "created": "2026-11-04",
+  "slideId": "S51",
+  "purpose": "Remove the cream textbook from Luca, keeping the happy and worried states aligned, with transparent backgrounds.",
+  "states": [
+    {
+      "state": "happy",
+      "file": "../../../public/images/luca/luca-happy-v2.webp",
+      "original": "originals/luca-happy-v2.png",
+      "prompt": "Use case: precise-object-edit.\nThe attached local image is the EDIT TARGET: the happy portrait of Luca used in a presentation.\nRemove the closed cream book completely. Reconstruct the T-shirt, teal hoodie and natural relaxed hands where the book was. Keep his hands loosely together at waist height without holding any object. No replacement prop.\nPreserve the exact character identity, smiling expression, face, eyes, nose, hair outline, head position, shoulders, upper body, clothing colors, comic linework and cel shading. Keep the exact 1024x1536 portrait canvas, camera angle, character scale and placement. Alter only the area of the book and any fingers that must be naturally adjusted to no longer grip it. Do not redesign the rest of the image.\nPreserve genuinely transparent background, with no backdrop, no halo, no glow, no text, no logo, no watermark. Opaque fills within the character. This will be paired with a worried-expression version; maintain registration.",
+      "source": "/Users/marco/.codex/generated_images/01a1a87c-cba9-7c23-a6f2-08211479c025/exec-fe1b2873-0cd4-4a69-8cbb-a0a11c60087c.png",
+      "transparentBackground": true
+    },
+    {
+      "state": "worried",
+      "retiredOutput": "public/images/luca/luca-worried-v2.webp",
+      "original": "originals/luca-worried-v2.png",
+      "prompt": "Use case: identity-preserve / precise-object-edit.\nImage 1 is the EDIT TARGET: the happy Luca portrait with the book already removed. Image 2 is ONLY an expression reference: original worried Luca with one blue sweat drop.\nMake a matching worried state for Image 1. Copy the worried expression and blue sweat drop from Image 2: raised anxious eyebrows, wider natural-sized eyes, slightly open tense mouth, faint blush, ONE small blue comic sweat drop beside the viewer-right temple.\nPreserve Image 1 exactly everywhere outside the facial-expression details and the single sweat drop: same hair contour, head and face identity/proportions, shoulders, hoodie folds and seams, reconstructed T-shirt, empty loosely-together hands at waist height, all fingers, body pose, exact 1024x1536 canvas and pixel registration. Keep NO BOOK and NO other held object. Do not restore the book from Image 2.\nRetain refined comic ink and cel shading. Preserve genuinely transparent alpha background. No text, backdrop, glow, halo, watermark or additional objects.",
+      "source": "/Users/marco/.codex/generated_images/01a1a87c-cba9-7c23-a6f2-08211479c025/exec-7f31a044-fbef-4046-bef9-2f91a1be7124.png",
+      "transparentBackground": true
+    }
+  ],
+  "runtimeEncoding": {
+    "source": "originals/luca-happy-v2.png",
+    "output": "../../../public/images/luca/luca-happy-v2.webp",
+    "encoder": "cwebp",
+    "settings": "-q 92 -m 6 -alpha_q 100 -exact",
+    "command": "cwebp -q 92 -m 6 -alpha_q 100 -exact assets/illustrations/luca/originals/luca-happy-v2.png -o public/images/luca/luca-happy-v2.webp",
+    "originalRuntimeBytes": 1287408,
+    "runtimeBytes": 216690,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "alphaVerification": "Decoded alpha channel byte-identical to original PNG; visual comparison at slide scale preserved facial details and book typography."
+  }
+}

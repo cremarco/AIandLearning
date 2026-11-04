@@ -1,16 +1,7 @@
 <script setup lang="ts">
-import { useIsSlideActive, useNav } from '@slidev/client'
-import { computed, onScopeDispose, ref } from 'vue'
+import { useSlideMotion } from '../utils/slide-motion'
 
-const isActive = useIsSlideActive()
-const nav = useNav()
-const visible = ref(typeof document !== 'undefined' && !document.hidden)
-const updateVisibility = () => { visible.value = !document.hidden }
-if (typeof document !== 'undefined') {
-  document.addEventListener('visibilitychange', updateVisibility)
-  onScopeDispose(() => document.removeEventListener('visibilitychange', updateVisibility))
-}
-const running = computed(() => isActive.value && visible.value && !nav.isPrintMode.value)
+const { running } = useSlideMotion()
 const faces = ['front', 'back', 'right', 'left', 'top', 'bottom']
 // One large module and smaller satellites make the modular theme visible.
 // Sizes are in Slidev's 1280px canvas coordinates, so the whole scene scales.

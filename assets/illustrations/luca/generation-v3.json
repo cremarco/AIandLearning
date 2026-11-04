@@ -1,0 +1,27 @@
+{
+  "mode": "built-in image_gen",
+  "created": "2026-11-04",
+  "slideId": "S51",
+  "state": "worried",
+  "file": "../../../public/images/luca/luca-worried-heavy-book-v3.webp",
+  "original": "originals/luca-worried-heavy-book-v3.png",
+  "editTarget": "originals/luca-worried-v2.png",
+  "coverReference": "../../../public/images/book/pages/page-01.webp",
+  "source": "/Users/marco/.codex/generated_images/01a1a874-bef1-7ec0-97a8-0e742f9e217a/exec-8972000e-752b-402a-8fef-4e01203cc247.png",
+  "transparentBackground": true,
+  "prompt": "Use case: identity-preserve / precise-object-edit / compositing.\nImage 1 is the EDIT TARGET: the worried portrait of Luca from an educational Slidev presentation. Image 2 is the EXACT BOOK COVER reference and supporting insert.\nChange ONLY Luca's lower torso, arms and hands as needed to make him visibly hold an enormous, extremely thick and heavy textbook in both arms. This is his worried state after seeing his assignment. Preserve his exact recognizable face, worried expression, brown curly hair outline, head size and location, one blue comic sweat drop, teal zip hoodie and white T-shirt, comic ink and cel shading. Keep the exact 1024x1536 portrait canvas and the original character registration, especially the entire head and shoulders.\nThe textbook is very substantial: an exaggerated heavy academic tome, around 15 cm thick, with a broad cream page block showing hundreds upon hundreds of tightly packed pages. Hold it upright, slightly tilted, at the lower chest and waist. Let both hands support its heavy bottom and side with a convincing strained grip, elbows bent under its weight. Keep the face completely unobstructed. Fit the entire heavy book, fingers and hands inside the canvas with a small safe margin. The book should be conspicuously heavy, not a slim notebook and not floating.\nIts front cover MUST faithfully reproduce reference Image 2: deep midnight navy cover, cyan and cream flowing paper-wave graphic, white title \"Foundations of Generative Artificial Intelligence\", smaller \"Language Models and Basic Architecture\", author \"Marco Cremaschi\", and small cyan \"BEYOND PROMPTING / 2026\". Preserve the reference layout and graphic as a cover surface, naturally mapped onto the slight perspective of the actual book. It must clearly be the same book, not a generic cream cover. Match the illustrated rendering of Luca while keeping the supplied cover legible and recognizable.\nGenuinely transparent background with actual alpha. No scene, backdrop, gradient haze, glow, halo, floor, shadow outside the subject, framing, watermarks, extra characters, or additional props. Do not change the happy portrait or add text anywhere outside the book cover.",
+  "runtimeEncoding": {
+    "source": "originals/luca-worried-heavy-book-v3.png",
+    "output": "../../../public/images/luca/luca-worried-heavy-book-v3.webp",
+    "encoder": "cwebp",
+    "settings": "-q 92 -m 6 -alpha_q 100 -exact",
+    "command": "cwebp -q 92 -m 6 -alpha_q 100 -exact assets/illustrations/luca/originals/luca-worried-heavy-book-v3.png -o public/images/luca/luca-worried-heavy-book-v3.webp",
+    "originalRuntimeBytes": 1295534,
+    "runtimeBytes": 317252,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "alphaVerification": "Decoded alpha channel byte-identical to original PNG; visual comparison at slide scale preserved facial details and book typography."
+  }
+}
