@@ -1,0 +1,41 @@
+/* daisyUI semantic tokens follow the reader's color and text-size preferences. */
+body {
+  --control-surface:#f0eee8;
+  --color-base-100:var(--paper);
+  --color-base-200:var(--control-surface);
+  --color-base-300:var(--line);
+  --color-base-content:var(--ink);
+  --color-primary:var(--accent);
+  --color-primary-content:var(--paper);
+  --color-secondary:#c2410c;
+  --color-secondary-content:#fffaf7;
+  --color-accent:var(--accent);
+  --color-accent-content:var(--paper);
+  --color-neutral:var(--ink);
+  --color-neutral-content:var(--paper);
+  --color-info:#0369a1;
+  --color-info-content:#ffffff;
+  --color-success:#15803d;
+  --color-success-content:#ffffff;
+  --color-warning:#b45309;
+  --color-warning-content:#ffffff;
+  --color-error:#be123c;
+  --color-error-content:#ffffff;
+  --radius-selector:.75rem;
+  --radius-field:.75rem;
+  --radius-box:.75rem;
+  --size-selector:.25rem;
+  --size-field:max(.275rem,calc(var(--size) * .22));
+  --fontsize:var(--size);
+  --border:1px;
+  --depth:0;
+  --noise:0;
+  color-scheme:light;
+}
+body.dark {
+  --control-surface:#26343f;
+  --color-secondary:#fdba74;
+  --color-secondary-content:var(--paper);
+  color-scheme:dark;
+}
+button { font-family:inherit; }

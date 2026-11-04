@@ -6,7 +6,7 @@ import { loadSpeakerNotes } from './speaker-notes.mjs'
 const root=path.resolve(import.meta.dirname,'..')
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'))
 const slides=read('data/slides.json'),flows=read('data/flows.json'),sources=read('data/sources.json'),notes=loadSpeakerNotes(slides)
-assert.equal(slides.length,85,'The single complete path must contain all 85 slides')
+assert.equal(slides.length,84,'The single complete path must contain all 84 slides')
 assert.equal(new Set(slides.map(s=>s.id)).size,slides.length)
 for(let i=0;i<slides.length;i++){
  const s=slides[i];assert.equal(s.number,i+1)
@@ -38,6 +38,13 @@ async function checkKeyboardPath(legacyQuery){
  await assertNoPathControls()
  const visited=[slides[0].id]
  for(const s of slides.slice(1)){
+  const previous=slides[visited.length-1]
+  for(let click=0;click<(previous.clicks||0);click++){
+   await page.keyboard.press('ArrowRight')
+   const current=page.locator(`#slide-container .slide-${previous.id}:visible`)
+   await current.waitFor()
+   if(previous.character)assert.equal(await current.locator('.luca-reaction').getAttribute('data-expression'),'worried','The first advance must change Luca’s expression without leaving the slide')
+  }
   await page.keyboard.press('ArrowRight')
   await page.locator(`#slide-container .slide-${s.id}:visible`).waitFor()
   visited.push(s.id)
@@ -57,7 +64,7 @@ try{
   await page.goto(new URL(String(s.number),base).href,{waitUntil:'networkidle'})
   const main=page.locator(`#slide-container .slide-${s.id}:visible`);await main.waitFor()
   await assertNoPathControls()
-  if(s.id==='S01'||s.id==='S03')assert.equal(await main.locator('button, select, [role="button"]').count(),0,`${s.id}: cover and programme must be static, without route buttons or selectors`)
+  if(s.id==='S01')assert.equal(await main.locator('button, select, [role="button"]').count(),0,`${s.id}: cover must be static, without route buttons or selectors`)
   assert.equal(await main.locator('.slide-page').innerText(),`${s.number} / ${slides.length}`)
   const result=await main.evaluate(async el=>{
    const imgs=[...el.querySelectorAll('img')];await Promise.all(imgs.map(i=>i.decode().catch(()=>{})))
@@ -85,7 +92,7 @@ try{
  await page.locator('#larger').click();assert.equal(await page.locator('html').evaluate(el=>getComputedStyle(el).getPropertyValue('--size')),'22px')
  await page.locator('#spacing').click();assert.equal(await page.locator('#spacing').getAttribute('aria-pressed'),'true')
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Reading mode must reflow on narrow screens')
- await page.emulateMedia({reducedMotion:'reduce'});await page.goto(new URL('8',base).href,{waitUntil:'networkidle'});await page.locator('.slide-S51:visible').waitFor()
+ await page.emulateMedia({reducedMotion:'reduce'});await page.goto(new URL(String(slides.find(s=>s.id==='S51').number),base).href,{waitUntil:'networkidle'});await page.locator('.slide-S51:visible').waitFor()
  assert.deepEqual(errors,[],'No browser exceptions')
  report.status=issues.length?'needs-refinement':'passed'
  fs.writeFileSync(path.join(root,'output/review/deck-check.json'),JSON.stringify(report,null,2))

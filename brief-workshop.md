@@ -82,6 +82,6 @@ Il [piano dettagliato consolidato](piano-presentazione.md) raccoglie tutte le sc
 - **Chiusura:** tool gratuiti e a pagamento, bibliografia educativa, riferimenti tecnici GenAI, sitografia e kit riutilizzabile in tutti e tre i percorsi.
 - **Durate:** 90 minuti per il Forum e 50 per i docenti; per l'università, copione di prova da 30 minuti, con durata effettiva dell'intervento ancora da confermare.
 
-**Stato:** realizzati 85 slide condivise, capitolo illustrato di 19 pagine in Typst e kit dimostrativo, con materiali in inglese e note del relatore in italiano. Verifica finale documentata nel progetto.
+**Stato:** realizzati 84 slide condivise, capitolo illustrato di 19 pagine in Typst e kit dimostrativo, con materiali in inglese e note del relatore in italiano. Verifica finale documentata nel progetto.
 
-**Aggiornamento operativo:** per ora un solo percorso con tutte le 85 slide, senza pulsanti o selettore di percorso. Copione italiano completo; le selezioni per evento sono sospese.
+**Aggiornamento operativo:** per ora un solo percorso con tutte le 84 slide, senza pulsanti o selettore di percorso. Copione italiano completo; le selezioni per evento sono sospese.

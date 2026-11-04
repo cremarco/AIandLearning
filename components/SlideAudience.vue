@@ -11,7 +11,7 @@ const label = computed(() => ({
 </script>
 
 <template>
-  <div class="slide-audience tooltip tooltip-bottom tooltip-end" :data-tip="label"
+  <div class="slide-audience tooltip tooltip-bottom tooltip-end rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" :data-tip="label"
     role="img" :aria-label="label" tabindex="0">
     <span v-if="audience !== 'teacher'" class="audience-icon" aria-hidden="true"
       :style="{ maskImage: `url(${base}icons/heroicons/academic-cap.svg)` }" />

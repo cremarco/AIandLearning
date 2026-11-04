@@ -6,7 +6,7 @@ defineProps<{ ids?: string[] }>()
 <template>
   <footer class="source-line">
     <template v-for="(id, index) in ids" :key="id">
-      <a :href="sources[id]?.url" target="_blank" rel="noopener" :title="sources[id]?.title">{{ sources[id]?.label || id }}</a><span v-if="index < ids.length - 1"> · </span>
+      <a class="link" :href="sources[id]?.url" target="_blank" rel="noopener" :title="sources[id]?.title">{{ sources[id]?.label || id }}</a><span v-if="index < ids.length - 1"> · </span>
     </template>
   </footer>
 </template>

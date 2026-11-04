@@ -1,10 +1,12 @@
-/* Reading surfaces share orientation; product colours stay local to each slide. */
+/* One reading palette follows the learning path across every tool. */
 .slidev-layout .deck-slide.type-workshop { gap:0; padding:48px 64px 82px; --tool-accent:var(--deck-cyan); }
 .workshop-content { display:flex; flex-direction:column; height:100%; gap:17px; min-height:0; }
 .slidev-layout .workshop-heading h1 { font-size:46px; max-width:1100px; line-height:1.07; }
 .slidev-layout .deck-slide .workshop-lead { font-size:25px; color:var(--deck-muted); line-height:1.32; max-width:1080px; }
 .workshop-stage { display:flex; flex:1; min-height:0; gap:38px; align-items:center; }
 .workshop-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:22px; }
+.has-character .workshop-stage { gap:48px; }
+.has-character .workshop-copy { max-width:720px; }
 .slidev-layout .workshop-body { display:flex; flex-direction:column; gap:18px; }
 .slidev-layout .workshop-body p { font-size:25px; line-height:1.36; }
 .slidev-layout .workshop-content h2 { font-size:27px; line-height:1.15; font-weight:700; }
@@ -12,20 +14,20 @@
 .prompt-label { display:block; color:var(--deck-muted); font-size:17px; margin-bottom:10px; font-weight:650; }
 .slidev-layout .workshop-content .procedure-list { display:flex; flex-direction:column; gap:23px; padding:0; list-style:none; }
 .slidev-layout .procedure-list li { display:flex; gap:20px; margin:0; padding:0; }
-.step-number { flex:0 0 40px; font-size:27px; color:var(--tool-accent); font-variant-numeric:tabular-nums; font-weight:750; }
+.step-number { flex:0 0 40px; font-size:27px; color:var(--deck-control-line); font-variant-numeric:tabular-nums; font-weight:750; }
 .procedure-list li div { display:flex; flex-direction:column; gap:6px; }
 .slidev-layout .procedure-list p { font-size:24px; line-height:1.3; }
 .workshop-result { padding-top:17px; border-top:1px solid var(--deck-line); display:flex; flex-direction:column; gap:8px; }
-.slidev-layout .workshop-result h2 { color:var(--tool-accent); font-size:21px; }
+.slidev-layout .workshop-result h2 { color:var(--deck-ink); font-size:21px; }
 .slidev-layout .workshop-result p { font-size:25px; line-height:1.3; }
 .slidev-layout .deck-slide .workshop-decision { padding-top:14px; border-top:1px solid var(--deck-line); font-size:23px; font-weight:650; line-height:1.3; }
 .workshop-context { display:flex; justify-content:space-between; gap:20px; font-size:16px; letter-spacing:.01em; line-height:1.2; color:var(--deck-muted); }
 .comparison { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:38px; }
 .comparison.three { grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
-.comparison section { display:flex; flex-direction:column; gap:17px; padding-top:18px; border-top:2px solid var(--tool-accent); }
+.comparison section { display:flex; flex-direction:column; gap:17px; padding-top:18px; border-top:2px solid var(--deck-line); }
 .slidev-layout .comparison p { font-size:25px; line-height:1.35; }
 .workshop-media { display:flex; flex-direction:column; gap:10px; width:54%; flex-shrink:0; align-self:stretch; justify-content:center; min-height:0; }
-.workshop-media img,.workshop-media video { display:block; object-fit:contain; width:100%; max-height:345px; background:var(--media-paper,#fff); }
+.workshop-media img,.workshop-media video { display:block; object-fit:contain; width:100%; max-height:345px; background:var(--media-paper,var(--color-white)); }
 .slidev-layout .deck-slide .workshop-media figcaption { font-size:14px; line-height:1.3; color:var(--deck-muted); }
 .has-media .workshop-copy { gap:16px; }
 .slidev-layout .has-media .workshop-copy :where(p) { font-size:23px; }
@@ -33,30 +35,38 @@
 .has-media .procedure-list { gap:18px; }
 .slidev-layout .has-media .workshop-prompt { padding:16px 18px; }
 .workshop-links { display:flex; flex-wrap:wrap; gap:12px; }
-.workshop-links .btn { font-size:19px; }
 .reference-list { width:100%; display:flex; flex-direction:column; gap:24px; align-self:flex-start; padding-top:10px; }
 .reference-list article { display:grid; grid-template-columns:205px minmax(0,1fr); gap:7px 24px; border-top:1px solid var(--deck-line); padding-top:16px; }
-.slidev-layout .reference-list h2 { grid-row:span 2; font-size:22px; color:var(--tool-accent); }
+.slidev-layout .reference-list h2 { grid-row:span 2; font-size:22px; color:var(--deck-ink); }
 .slidev-layout .reference-list p { font-size:22px; line-height:1.28; }
 .slidev-layout .reference-list a { font-size:17px; overflow-wrap:anywhere; line-height:1.2; }
 .pipeline { display:flex; width:100%; align-items:stretch; gap:18px; }
 .workshop-stage:has(.pipeline) { flex-direction:column; justify-content:center; gap:30px; }
-.deck-slide .pipeline-step.btn { flex:1; min-height:140px; padding:18px; display:flex; flex-direction:column; gap:12px; white-space:normal; font-size:24px; line-height:1.16; }
-.pipeline-step span { font-size:18px; color:var(--deck-muted); }
-.deck-slide .pipeline-step.current { background:var(--deck-cyan); color:#07191d; border-color:var(--deck-cyan); }
-.deck-slide .pipeline-step.current span { color:#18373b; }
 .slidev-layout .pipeline-caption { min-height:90px; font-size:27px; line-height:1.34; width:100%; }
 .pipeline-static { display:none; }
-/* Product-specific local reading palettes. No imitation of live product chrome. */
-.slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation) { color-scheme:light; --deck-paper:#fff; --deck-ink:#202124; --deck-muted:#4b5260; --deck-line:#cfd3db; --deck-surface:#f6f7f9; --deck-raised:#eef0f4; --deck-red:#3548a4; --deck-control-line:#aab1bc; --color-base-300:#d8dce4; }
-.slidev-layout .deck-slide.tool-excalidraw { --deck-paper:#fbfaff; --tool-accent:#5d45b5; --deck-cyan:#5d45b5; --tool-prompt:#f1edff; }
-.slidev-layout .deck-slide.tool-goblin { --deck-paper:#f8faf6; --tool-accent:#386b38; --deck-cyan:#386b38; --tool-prompt:#edf3e9; }
-.slidev-layout .deck-slide.tool-notebook { --deck-paper:#f7f9fe; --tool-accent:#214eae; --deck-cyan:#214eae; --tool-prompt:#e8eefc; }
-.slidev-layout .deck-slide.tool-napkin { --deck-paper:#fffdf7; --tool-accent:#364dc5; --deck-cyan:#364dc5; --tool-prompt:#f4f2ec; }
-.slidev-layout .deck-slide.tool-claude { --deck-paper:#faf8f3; --deck-ink:#302c27; --deck-muted:#62594f; --tool-accent:#a24b31; --deck-cyan:#a24b31; --tool-prompt:#f0ece3; }
-.slidev-layout .deck-slide.tool-magicschool { --deck-paper:#fcfaff; --tool-accent:#7237ad; --deck-cyan:#7237ad; --tool-prompt:#f1e9fa; }
-.slidev-layout .deck-slide.tool-formative { --deck-paper:#f6faf9; --tool-accent:#086a56; --deck-cyan:#086a56; --tool-prompt:#e7f3ef; }
-.slidev-layout .deck-slide:is(.tool-edge,.tool-dictation) { --tool-accent:#005c9b; --deck-cyan:#005c9b; --tool-prompt:#edf4fa; }
+/* Cream surfaces keep screenshots legible; tool brands live in the source imagery. */
+.slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation,.tool-desmos) {
+  color-scheme:light;
+  --deck-paper:var(--color-stone-50);
+  --deck-ink:var(--color-zinc-950);
+  --deck-muted:var(--color-stone-600);
+  --deck-line:var(--color-stone-300);
+  --deck-surface:var(--color-stone-100);
+  --deck-raised:var(--color-stone-200);
+  --deck-emphasis:var(--color-teal-800);
+  --deck-critical:var(--color-orange-800);
+  --deck-link:var(--color-stone-600);
+  --deck-red:var(--deck-link);
+  --deck-cyan:var(--deck-emphasis);
+  --deck-wine:var(--color-stone-200);
+  --deck-control-line:var(--color-stone-500);
+  --deck-selection:var(--color-teal-800);
+  --deck-selection-content:var(--color-stone-50);
+  --tool-accent:var(--deck-emphasis);
+  --tool-prompt:var(--color-stone-100);
+  --color-base-300:var(--color-stone-300);
+  --color-accent:var(--deck-emphasis);
+}
 @media print { .pipeline-step.btn { pointer-events:none; } .pipeline-caption { display:none; } .pipeline-static { display:block; } .workshop-media video { display:none; } }
 @media (prefers-reduced-motion:reduce) { .pipeline-step { transition:none!important; } }
 .map-composition {display:flex;flex-direction:column;gap:32px;width:100%;}
@@ -67,10 +77,14 @@
 .softmax-formula math {font-size:49px;color:var(--deck-cyan);}
 .slidev-layout .softmax-formula p {font-size:25px;text-align:center;line-height:1.35;}
 .kind-formula .procedure-list {flex:1;}
-.slidev-layout .deck-slide.tool-desmos {color-scheme:light;--deck-paper:#fff;--deck-ink:#202124;--deck-muted:#4b5260;--deck-line:#cdd8cd;--deck-surface:#f5f8f5;--deck-raised:#eaf2e9;--deck-red:#17692c;--deck-cyan:#17692c;--tool-accent:#17692c;--tool-prompt:#edf5ec;--deck-control-line:#9daf9d;--color-base-300:#d1dfd0;}
 .workshop-prompt p {white-space:pre-line;overflow-wrap:anywhere;}
 .video-print-poster {display:none!important;}
 @media print {.workshop-media .video-print-poster {display:block!important;}}
 .kind-book .workshop-media {width:40%;--media-paper:transparent;}
 .kind-book .workshop-media img {max-height:340px;}
 .slide-S63 .workshop-media img {max-height:325px;}
+.slide-S70 .workshop-media {width:50%;}
+.slide-S52E .workshop-media {order:1;width:29%;align-self:center;gap:8px;}
+.slide-S52E .workshop-media img {max-height:340px;}
+.slide-S52E .comparison {grid-template-columns:minmax(0,1fr);gap:20px;}
+.slide-S52E .comparison section {gap:8px;padding-top:12px;}

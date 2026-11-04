@@ -2,7 +2,9 @@
 
 An original teaching chapter by Marco Cremaschi, presented as an explicitly fictional book for the **Beyond prompting** workshop. The chapter, examples, exercises and reading interface are in English. The scientific publications and technical documentation are real.
 
-The standalone project preserves the reference booklet’s 170 × 240 mm format, mirrored margins, two 66 mm columns, Sora headings, DM Sans 11/13.5 pt body, cyan accent, native text and semantic references. It does not modify or depend on the CVeDI repository at build time.
+The standalone project uses a 170 × 240 mm format, mirrored margins, a 130 mm single-column measure, Sora headings, DM Sans 10.5/14 pt body, and restrained teal and cyan accents. Running heads, mirrored folios, a linked contents page and consistent figure, table and checkpoint styles support navigation. It does not modify or depend on the CVeDI repository at build time.
+
+The cover combines an original illustration generated with the built-in imagegen tool and native, selectable Typst typography. Its artwork and complete generation prompt are in `assets/cover/`; `generation.json` records the tool and date. The illustration is a decorative page background, while the title, subtitle and author remain document text.
 
 ## Files
 
@@ -10,6 +12,7 @@ The standalone project preserves the reference booklet’s 170 × 240 mm format,
 - `main.typ`, `capitolo-genai.typ`, `template/`: editable Typst sources.
 - `bibliografia/riferimenti.bib`: native author–date citations and APA references.
 - `assets/fonts/`: Sora and DM Sans with their SIL Open Font Licenses.
+- `assets/cover/`: generated cover artwork and generation provenance.
 - `build/Fondamenti_GenAI_Cremaschi.pdf`: print edition.
 - `lettura.html`, `lettura.css`, `lettura.js`: equivalent reflow reading edition, using locally bundled daisyUI and fonts.
 - `build/reading-check.json`: browser test results for reflow and reader controls.
@@ -30,7 +33,7 @@ Serve the project over HTTP, then open `/materials/booklet-genai/lettura.html`. 
 
 ## Verification scope
 
-The final PDF is tagged, declares `en-GB`, and passes Typst’s PDF/UA-1 export checks. Its tables have native header cells, conceptual figures have full text alternatives, and all five displayed formulas have spoken-language alternatives. All 19 rendered physical pages and the complete extracted text were inspected for page fit, headings and continuation.
+The current 20-page PDF is tagged, declares `en-GB`, and passes Typst’s PDF/UA-1 export checks without warnings. Its tables have native header cells, conceptual figures have full text alternatives, and all five displayed formulas have spoken-language alternatives. All rendered physical pages were inspected for page fit, headings and continuation. The layout review also checked the 13 contents links, 111 chapter and study-resource content blocks against the shared source, and text bounds on every interior page. The HTML reading edition and shared chapter text were preserved.
 
 The visual material comprises five native diagrams (including a causal mask and a probability comparison), three authentic screenshot crops with provenance and English captions, and the worked softmax example. The Notebook/Desmos procedure connects formula explanation to an independent numerical and graphical check. The three-token example is explicitly illustrative; recorded Qwen measurements are identified separately.
 

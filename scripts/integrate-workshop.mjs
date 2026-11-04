@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 const read = (p, fallback) => fs.existsSync(p) ? JSON.parse(fs.readFileSync(p,'utf8')) : fallback
 const write=(p,d)=>fs.writeFileSync(p,JSON.stringify(d,null,2)+'\n')
-const introIds=['S01','S02','S44','S03','S48','S49','S50']
+const introIds=['S01','S02','S44','S48','S49','S50']
 const intro=read('data/opening-slides.json',read('data/slides.json',[])).filter(s=>introIds.includes(s.id)).sort((a,b)=>introIds.indexOf(a.id)-introIds.indexOf(b.id))
 const media=read('data/media.json',{})
 const overrides=read('data/editorial-overrides.json',{})

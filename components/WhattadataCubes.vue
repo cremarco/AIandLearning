@@ -67,16 +67,16 @@ const cubes = [
   transform-style: preserve-3d;
 }
 .cube-violet {
-  --face: #6554ee;
-  --face-lit: #b0a3ff;
-  --face-shade: #362487;
-  --edge: #b4a6ff70;
+  --face: var(--color-violet-500);
+  --face-lit: var(--color-violet-300);
+  --face-shade: var(--color-violet-800);
+  --edge: color-mix(in srgb, var(--color-violet-300) 45%, transparent);
 }
 .cube-lime {
-  --face: #b5ed3e;
-  --face-lit: #e5ffa0;
-  --face-shade: #6d941e;
-  --edge: #e5ffa080;
+  --face: var(--color-lime-400);
+  --face-lit: var(--color-lime-200);
+  --face-shade: var(--color-lime-700);
+  --edge: color-mix(in srgb, var(--color-lime-200) 50%, transparent);
 }
 .brand-cube {
   width: 100%;

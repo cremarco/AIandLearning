@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, provide } from 'vue'
 import slides from '../data/slides.json'
+import highlights from '../data/highlights.json'
+import { EMPHASIS_TERMS_KEY, type EmphasisTerm } from '../utils/emphasis'
+import EmphasisText from './EmphasisText.vue'
 import BentoCard from './BentoCard.vue'
 import SourceLine from './SourceLine.vue'
 import WhattadataCubes from './WhattadataCubes.vue'
@@ -8,12 +11,16 @@ import SlideAudience from './SlideAudience.vue'
 import WorkshopSlide from './WorkshopSlide.vue'
 
 const props = defineProps<{ id: string }>()
+provide(EMPHASIS_TERMS_KEY, computed(() => (highlights as Record<string, EmphasisTerm[]>)[props.id] || []))
 const s = computed<any>(() => slides.find(slide => slide.id === props.id))
 const image = (name: string) => `${import.meta.env.BASE_URL}images/${name}`
 const lead = computed(() => s.value && !['cover', 'profile', 'agenda'].includes(s.value.type) ? s.value.message : '')
 const cards = computed(() => s.value && 'cards' in s.value ? s.value.cards : [])
 const bentoCards = computed(() => s.value?.type === 'brief' && cards.value.length === 3
-  ? [cards.value[1], cards.value[0], cards.value[2]]
+  ? [cards.value[1], cards.value[0], cards.value[2]].map((card, index) => ({
+    ...card,
+    backgroundImage: index === 0 && s.value.cardBackground ? image(s.value.cardBackground) : undefined,
+  }))
   : cards.value)
 const slideProgress = computed(() => ({
   value: s.value?.number || 1,
@@ -35,7 +42,7 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
     <template v-if="s.type === 'cover'">
       <div class="cover-copy">
         <h1 class="cover-title">Beyond<br /><span>prompting</span></h1>
-        <p class="cover-subtitle">{{ s.message }}</p>
+        <p class="cover-subtitle"><EmphasisText :text="s.message" /></p>
         <p class="cover-author">Marco Cremaschi<br /><span>University of Milano-Bicocca · Whattadata</span></p>
         <p class="cover-meta">Vilnius · November 2026</p>
       </div>
@@ -55,7 +62,7 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
       <p v-if="s.type === 'brief'" class="lead">
         <strong>{{ s.message.split(' · ')[0] }}</strong> · {{ s.message.split(' · ').slice(1).join(' · ') }}
       </p>
-      <p v-else-if="lead" class="lead">{{ lead }}</p>
+      <p v-else-if="lead" class="lead"><EmphasisText :text="lead" /></p>
 
       <template v-if="s.type === 'profile'">
         <div class="profile-grid">
@@ -67,7 +74,7 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
               <img class="profile-university-logo" :src="image('universities/bergamo.png')" alt="Universities degli Studi di Bergamo" width="96" height="96" />
               <img class="profile-university-logo profile-university-logo--cattolica" :src="image('universities/cattolica.png')" alt="Universities Cattolica del Sacro Cuore" width="96" height="96" />
             </div>
-            <ul class="profile-research"><li v-for="area in s.body.slice(1)" :key="area">{{ area }}</li></ul>
+            <ul class="profile-research"><li v-for="area in s.body.slice(1)" :key="area"><EmphasisText :text="area" /></li></ul>
           </div>
         </div>
       </template>
@@ -76,7 +83,7 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
         <div class="company-pillars">
           <section v-for="card in cards" :key="card.title" class="company-pillar">
             <h2>{{ card.title }}</h2>
-            <p>{{ card.body }}</p>
+            <p><EmphasisText :text="card.body" /></p>
           </section>
         </div>
       </template>
@@ -98,10 +105,10 @@ const agendaItems = slides.filter(slide => slide.type === 'brief')
         </div>
       </template>
 
-      <p v-if="s.takeaway" class="takeaway">{{ s.takeaway }}</p>
+      <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
       <SourceLine :ids="s.sources.filter((id: string) => id !== 'BIO02').slice(0, 3)" />
     </template>
     <span class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
-    <progress class="progress progress-accent slide-progress" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
+    <progress class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
   </main>
 </template>

@@ -1,21 +1,20 @@
 {
-  "pages": 19,
+  "pages": 20,
   "language": "en-GB",
   "tagged": true,
   "roles": {
-    "": 0,
     "/Document": 1,
-    "/P": 140,
-    "/H1": 2,
-    "/H2": 14,
-    "/L": 6,
-    "/LI": 32,
-    "/Lbl": 40,
-    "/LBody": 32,
-    "/Link": 29,
-    "/Div": 11,
+    "/Span": 58,
+    "/P": 131,
+    "/H1": 3,
+    "/H2": 13,
+    "/L": 5,
+    "/LI": 22,
+    "/Lbl": 30,
+    "/LBody": 22,
+    "/Link": 32,
+    "/Div": 61,
     "/Caption": 10,
-    "/Span": 18,
     "/Table": 3,
     "/THead": 3,
     "/TR": 14,
@@ -42,8 +41,8 @@
       "Learning objectives"
     ],
     [
-      "/H2",
-      "Chapter contents"
+      "/H1",
+      "Contents"
     ],
     [
       "/H2",
@@ -122,7 +121,7 @@
       "References"
     ]
   ],
-  "pdfSha256": "fd360b8d7346abe82e5377f202234653ab04d5b6a7bbeacd4cdf36d1e46daf6c",
+  "pdfSha256": "d4f06c8a46123222c68d6ed529f5a12085dc92f9333074e58916c0665f3215cf",
   "copiesMatch": true,
   "screenshotOriginsMatch": true,
   "compiler": "Typst0.15.1 with --pdf-standard ua-1, no warnings",
@@ -142,27 +141,21 @@
     "evidence": "output/review/voiceover-attempt.json"
   },
   "finalDocumentationAudit": {
-    "date": "2026-11-02",
-    "canonicalPdfSha256": "fd360b8d7346abe82e5377f202234653ab04d5b6a7bbeacd4cdf36d1e46daf6c",
+    "date": "2026-11-04",
+    "canonicalPdfSha256": "d4f06c8a46123222c68d6ed529f5a12085dc92f9333074e58916c0665f3215cf",
     "deliveredCopies": [
       {
         "path": "booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
-        "sha256": "fd360b8d7346abe82e5377f202234653ab04d5b6a7bbeacd4cdf36d1e46daf6c",
+        "sha256": "d4f06c8a46123222c68d6ed529f5a12085dc92f9333074e58916c0665f3215cf",
         "matchesCanonical": true
       },
       {
         "path": "public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
-        "sha256": "fd360b8d7346abe82e5377f202234653ab04d5b6a7bbeacd4cdf36d1e46daf6c",
-        "matchesCanonical": true
-      },
-      {
-        "path": "exports/Foundations_of_Generative_AI.pdf",
-        "sha256": "fd360b8d7346abe82e5377f202234653ab04d5b6a7bbeacd4cdf36d1e46daf6c",
+        "sha256": "d4f06c8a46123222c68d6ed529f5a12085dc92f9333074e58916c0665f3215cf",
         "matchesCanonical": true
       }
     ],
     "readingAssetsMatch": true,
-    "readingAssetFiles": 12,
     "coverage": {
       "sections": 10,
       "glossaryTerms": 16,
@@ -171,6 +164,44 @@
       "screenshots": 3,
       "formulas": 5
     },
-    "pdfRebuilt": false
+    "pdfRebuilt": true
+  },
+  "layoutReview": {
+    "date": "2026-11-04",
+    "renderedAndVisuallyReviewedPages": 20,
+    "columns": 1,
+    "bodySizePt": 10.5,
+    "bodyLeadingPt": 14,
+    "cover": {
+      "asset": "assets/cover/language-emergence.png",
+      "provenance": "assets/cover/generation.json",
+      "mode": "built-in imagegen",
+      "nativeSelectableTypography": true,
+      "decorativeBackground": true
+    },
+    "tocLinks": 13,
+    "tocDestinationPages": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20
+    ],
+    "tocPagesMatchPrintedNumbers": true,
+    "checkedContentBlocks": 111,
+    "missingContent": [],
+    "outOfBoundsText": [],
+    "servedUrl": "http://localhost:3047/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "servedPdfMatchesCanonical": true,
+    "htmlReadingEditionChanged": false,
+    "screenReaderRetested": false
   }
 }

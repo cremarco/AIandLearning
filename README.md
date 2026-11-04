@@ -1,13 +1,13 @@
 # Beyond prompting
 
-An English presentation by Marco Cremaschi for three November 2026 events in Lithuania. **One complete path of 85 slides** follows Luca, a fictional computer science student, from a chapter about generative AI to an independent explanation and a teacher’s assessment. Presenter scripts are **Italian only**.
+An English presentation by Marco Cremaschi for three November 2026 events in Lithuania. **One complete path of 84 slides** follows Luca, a fictional computer science student, from a chapter about generative AI to an independent explanation and a teacher’s assessment. Presenter scripts are **Italian only**.
 
 The audience observes how tools support learning; no programming knowledge is required. The main path uses free features. Final catalogues also include premium alternatives, with plan conditions and official links.
 
 ## Open the materials
 
 - `exports/EduForum-2026.pdf`: complete static deck with references and semantic tags.
-- `booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf`: 19-page English fictional textbook chapter.
+- `booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf`: 20-page English fictional textbook chapter with an illustrated cover and linked contents.
 - `public/materials/kit.html`: material index, chapter, prompts, maps, assessment and app.
 - `public/materials/lettura.html`: reflow reading version of all slides, with text preferences.
 - `public/materials/Presenter_Notes_IT.txt`: full Italian script.
@@ -38,7 +38,7 @@ node node_modules/@slidev/cli/bin/slidev.mjs --port 3047
 
 ## One complete path
 
-All 85 slides appear once in source order, including the three event briefs, participant activities, assessment, accessibility and final resources. Event selection and shorter paths are not part of the current presentation. Tool links and teaching interactions remain available.
+All 84 slides appear once in source order, including the three event briefs, participant activities, assessment, accessibility and final resources. Event selection and shorter paths are not part of the current presentation. Tool links and teaching interactions remain available.
 
 The generated kit provides the single full Italian script. Earlier event-specific speech variants remain only in the source metadata and are not published as separate scripts. The presentation has no global countdown timer.
 
@@ -60,7 +60,7 @@ The distributed application was implemented with **Codex**. The Claude slide con
 
 The slide catalogues and bibliography distinguish empirical learning studies, educational frameworks, technical research and product documentation. Product screenshots identify vendor examples. Learner maps, teacher responses and rubric examples are constructed teaching materials unless explicitly labelled as real recorded execution.
 
-Goblin.tools, Gemini Notebook and Desmos have recorded executions for this scenario. The Notebook uses the final 19-page English chapter. Its citation example also shows a real extraction issue with a two-column PDF; the workshop checks the original paragraph in the reading edition. The recorded account has Plus access, while the demonstrated features are selected from Standard; no higher quota is presented as a free allowance.
+Goblin.tools, Gemini Notebook and Desmos have recorded executions for this scenario. The Notebook recording uses the earlier 19-page, two-column English chapter; the downloadable edition now has 20 pages and a single-column layout. The recorded citation example shows an extraction issue with that earlier PDF; the workshop checks the original paragraph in the reading edition. The recorded account has Plus access, while the demonstrated features are selected from Standard; no higher quota is presented as a free allowance.
 
 ## Authoring and verification
 

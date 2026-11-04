@@ -1,16 +1,22 @@
 #import "template/layout.typ": *
 
-#set list(spacing: 3pt)
+#set list(spacing: 7pt)
 
-#set enum(spacing: 2pt)
+#set enum(spacing: 6pt)
+
+#kicker[CHAPTER 01 / A LEARNING PATH]
+
+#v(14pt)
 
 = Language Models and Basic Architecture <capitolo>
 
-#text(size: 15pt)[Understand a language model by observing its input, its main transformations and the token it produces.]
+#text(size: 13pt, fill: muted)[Understand a language model by observing its input, its main transformations and the token it produces.]
 
-#v(10pt)
+#v(9pt)
 
-A fictional book and an original teaching chapter created for the Beyond prompting workshop. The technical sources are real; Luca is a character in a simulated learning scenario.
+#text(size: 9.5pt, fill: muted)[A fictional book and an original teaching chapter created for the Beyond prompting workshop. The technical sources are real; Luca is a character in a simulated learning scenario.]
+
+#v(8pt)
 
 #heading(level: 2, numbering: none)[Learning objectives]
 
@@ -24,27 +30,47 @@ A fictional book and an original teaching chapter created for the Beyond prompti
 
 - Check an AI-generated solution through explanations, controlled experiments and error correction.
 
-#heading(level: 2, numbering: none)[Chapter contents]
+#pagebreak()
 
-1. #link(<modelli>)[Generative models and language models]
+#kicker[CHAPTER 01 / NAVIGATION]
 
-2. #link(<addestramento>)[Data, parameters and training]
+#v(12pt)
 
-3. #link(<token>)[Tokens and text]
+#heading(level: 1, numbering: none, outlined: false)[Contents]
 
-4. #link(<rappresentazioni>)[Representations and position]
+#v(4pt)
 
-5. #link(<decoder>)[The Transformer decoder]
+#contents-entry([Generative models and language models], <modelli>, "01")
 
-6. #link(<probabilita>)[Probabilities and temperature]
+#contents-entry([Data, parameters and training], <addestramento>, "02")
 
-7. #link(<generazione>)[Generation, context and retrieval]
+#contents-entry([Tokens and text], <token>, "03")
 
-8. #link(<affidabilita>)[Reliability and limitations]
+#contents-entry([Representations and position], <rappresentazioni>, "04")
 
-9. #link(<laboratorio>)[Lab with a real model]
+#contents-entry([The Transformer decoder], <decoder>, "05")
 
-10. #link(<studio>)[Studying an AI-generated solution]
+#contents-entry([Probabilities and temperature], <probabilita>, "06")
+
+#contents-entry([Generation, context and retrieval], <generazione>, "07")
+
+#contents-entry([Reliability and limitations], <affidabilita>, "08")
+
+#contents-entry([Lab with a real model], <laboratorio>, "09")
+
+#contents-entry([Studying an AI-generated solution], <studio>, "10")
+
+#v(13pt)
+
+#kicker[STUDY RESOURCES]
+
+#v(5pt)
+
+#contents-entry([Glossary], <glossario>, "A")
+
+#contents-entry([Assessment and expected answers], <verifica>, "B")
+
+#contents-entry([References], <bibliografia>, "C")
 
 #pagebreak()
 
@@ -53,8 +79,6 @@ A fictional book and an original teaching chapter created for the Beyond prompti
 #set list(spacing: 5pt)
 
 #set enum(spacing: 5pt)
-
-#set page(columns: 2, margin: body-margins, footer-descent: 35mm + 8pt + 17pt)
 
 == Generative models and language models <modelli>
 
@@ -78,7 +102,7 @@ Pretraining may be followed by stages that orient the model towards instructions
 
 Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context. Training a new version changes the model itself. To compare experiments, Luca therefore records the model name, input, settings and results.
 
-#figure(table(columns: (1fr, 1.5fr), inset: 6pt, stroke: 0.4pt + muted, table.header([Intervention], [What changes]), [Training or fine-tuning], [The model’s parameters.], [A new message in the context], [Information available to the current inference.], [Document retrieval], [External passages supplied as context.]), kind: table, supplement: [Table], caption: [Three different interventions])
+#figure(table(columns: (1fr, 1.5fr), table.header([Intervention], [What changes]), [Training or fine-tuning], [The model’s parameters.], [A new message in the context], [Information available to the current inference.], [Document retrieval], [External passages supplied as context.]), kind: table, supplement: [Table], caption: [Three different interventions])
 
 #comparison-flows([Training changes parameters; inference and retrieval use the available model], "Three conceptual flows. Training uses examples and prediction error to update parameters, producing a changed model. Inference uses input and fixed model parameters to calculate an output distribution and select output. RAG retrieves passages for a question and supplies them as context to inference. Retrieval is not itself a parameter update.")
 
@@ -96,7 +120,7 @@ Context length is measured in tokens. Different languages, writing conventions a
 
 #check([Quick experiment])[Compare a sentence, the same sentence with different capitalisation, and the same sentence with an extra space. Record the actual IDs. Do not infer a general rule from one example.]
 
-#figure(image("assets/screens/tokens-strip.png", width: 100%, alt: "Five token tiles: The, space capital, space of, space Italy, space is. Their IDs are 785, 6722, 315, 15344 and 374. Authentic crop of the local learning application, implemented with Codex."), scope: "parent", placement: auto, caption: [Recorded tokenizer output for “The capital of Italy is”: five tokens, with IDs 785, 6722, 315, 15344 and 374. The middle dot marks a preceding space. This is output from the actual Qwen tokenizer, not an invented segmentation.])
+#figure(image("assets/screens/tokens-strip.png", width: 100%, alt: "Five token tiles: The, space capital, space of, space Italy, space is. Their IDs are 785, 6722, 315, 15344 and 374. Authentic crop of the local learning application, implemented with Codex."), caption: [Recorded tokenizer output for “The capital of Italy is”: five tokens, with IDs 785, 6722, 315, 15344 and 374. The middle dot marks a preceding space. This is output from the actual Qwen tokenizer, not an invented segmentation.])
 
 == Representations and position <rappresentazioni>
 
@@ -142,19 +166,19 @@ Always choosing the highest-probability token is greedy selection. Sampling from
 
 The demo displays five alternatives and “rest of the vocabulary”. The first five probabilities do not generally sum to one. Renormalising only those five without saying so would suggest that they are the only possibilities. Calculate the distribution over the full vocabulary first, then select the alternatives to display.
 
-#figure(image("assets/screens/next-token-distribution.png", width: 100%, alt: "Authentic next-token distribution from the local app, implemented with Codex and run with Chromium CPU/WASM. Rome is the leading continuation at 44.86 percent. The next four alternatives total about 28.62 percent; the remaining vocabulary holds 26.51 percent. This is a recorded real-model run, separate from the illustrative three-token example."), scope: "parent", placement: auto, caption: [A recorded Qwen2.5-0.5B-Instruct q4 run, context “The capital of Italy is”, T = 0.8. The next-token alternatives are “ Rome” 44.86%, “ located” 10.35%, “ \_\_” 7.68%, “ a” 5.70% and “ the” 4.89%. Other tokens hold 26.51%. Values are normalised over 151,936 entries and rounded; they are continuation probabilities, not truth scores.])
+#figure(image("assets/screens/next-token-distribution.png", width: 100%, alt: "Authentic next-token distribution from the local app, implemented with Codex and run with Chromium CPU/WASM. Rome is the leading continuation at 44.86 percent. The next four alternatives total about 28.62 percent; the remaining vocabulary holds 26.51 percent. This is a recorded real-model run, separate from the illustrative three-token example."), caption: [A recorded Qwen2.5-0.5B-Instruct q4 run, context “The capital of Italy is”, T = 0.8. The next-token alternatives are “ Rome” 44.86%, “ located” 10.35%, “ \_\_” 7.68%, “ a” 5.70% and “ the” 4.89%. Other tokens hold 26.51%. Values are normalised over 151,936 entries and rounded; they are continuation probabilities, not truth scores.])
 
 === A worked three-token example
 
 For this calculation only, imagine a vocabulary of three tokens, A, B and C, with fixed logits 2, 1 and 0. These are illustrative scores, not measurements from Qwen. At T = 1 the denominator is exp(2) + exp(1) + exp(0), approximately 11.1073. Token A therefore receives approximately 7.3891 / 11.1073 = 0.6652, or 66.52%.
 
-#figure(table(columns: (0.6fr, 1fr, 1fr, 1fr), inset: 3pt, stroke: 0.4pt + muted, table.header([T], [Token A], [Token B], [Token C]), [0.5], [86.68%], [11.73%], [1.59%], [1], [66.52%], [24.47%], [9.00%], [2], [50.65%], [30.72%], [18.63%]), kind: table, supplement: [Table], caption: [Illustrative softmax probabilities for fixed logits (2, 1, 0)])
+#figure(table(columns: (0.6fr, 1fr, 1fr, 1fr), table.header([T], [Token A], [Token B], [Token C]), [0.5], [86.68%], [11.73%], [1.59%], [1], [66.52%], [24.47%], [9.00%], [2], [50.65%], [30.72%], [18.63%]), kind: table, supplement: [Table], caption: [Illustrative softmax probabilities for fixed logits (2, 1, 0)])
 
 Only temperature changes between rows. A remains the most probable token, while its share decreases as temperature rises. The values are rounded to two decimal places, so a displayed row may differ from 100% by 0.01 percentage points. In the real-model app, calculate over the complete vocabulary; do not substitute this three-token example.
 
 #temperature-bars([Temperature redistributes probability at fixed illustrative logits; it does not change which token has the highest score], "Three probability bars, with segments ordered A, B and C. At temperature 0.5 their shares are 86.68, 11.73 and 1.59 percent. At temperature one they are 66.52, 24.47 and 9.00 percent. At temperature two they are 50.65, 30.72 and 18.63 percent. These values are illustrative, not Qwen model measurements.")
 
-#figure(image("assets/screens/temperature-run-b.png", width: 100%, alt: "Authentic crop of run B in the local app. Temperature is 1.5, input is The capital of Italy is, and the leading saved token Rome has probability 8.06 percent. The figure records a probability comparison, not a factual accuracy assessment."), scope: "parent", placement: auto, caption: [A second recorded run keeps the real input and logits fixed and uses T = 1.5. “ Rome” has probability 8.06%, compared with 44.86% at T = 0.8. Ranking is unchanged; probability outside the top five rises from 26.51% to 79.96%. Both runs use the local Qwen q4 app, implemented with Codex.])
+#figure(image("assets/screens/temperature-run-b.png", width: 100%, alt: "Authentic crop of run B in the local app. Temperature is 1.5, input is The capital of Italy is, and the leading saved token Rome has probability 8.06 percent. The figure records a probability comparison, not a factual accuracy assessment."), caption: [A second recorded run keeps the real input and logits fixed and uses T = 1.5. “ Rome” has probability 8.06%, compared with 44.86% at T = 0.8. Ranking is unchanged; probability outside the top five rises from 26.51% to 79.96%. Both runs use the local Qwen q4 app, implemented with Codex.])
 
 === Explain with Notebook, check with Desmos
 
@@ -224,6 +248,8 @@ Experiment 1: keep context fixed and change temperature. Experiment 2: keep temp
 
 #check([Annotated submission])[Submit the program, two recorded comparisons and an explanation of the process. Include an error found in the first solution and the check that revealed it. If you found no errors, describe at least one check capable of detecting them.]
 
+#pagebreak()
+
 == Studying an AI-generated solution <studio>
 
 A complete solution can shorten the time needed to obtain an artefact. To turn it into an opportunity to study, Luca separates the program into functions: acquire text, tokenize, run the model, calculate probabilities, select a token and update the interface. He connects each function to a chapter passage and an observation he can check.
@@ -243,7 +269,11 @@ Choose text, speech or diagrams to fit the objective. Support access with readin
 
 #pagebreak()
 
-== Glossary <glossario>
+#kicker[STUDY RESOURCE A]
+
+#v(10pt)
+
+#heading(level: 2, numbering: none)[Glossary] <glossario>
 
 *Generative AI.* Systems that produce content conditioned on an input.
 
@@ -279,7 +309,11 @@ Choose text, speech or diagrams to fit the objective. Support access with readin
 
 #pagebreak()
 
-== Assessment and expected answers <verifica>
+#kicker[STUDY RESOURCE B]
+
+#v(10pt)
+
+#heading(level: 2, numbering: none)[Assessment and expected answers] <verifica>
 
 Before reading the expected answers, try to respond independently. The teacher may change the example while retaining the same relationship to explain.
 
@@ -295,23 +329,21 @@ Before reading the expected answers, try to respond independently. The teacher m
 
 #pagebreak()
 
-#set page(columns: 1, margin: margins, footer-descent: 17pt)
+#set text(size: 9pt, variations: (opsz: 9))
 
-#set text(size: 8pt, variations: (opsz: 9))
+#set par(justify: false, leading: 3pt)
 
-#set par(justify: false, leading: 2pt)
-
-#bibliography("bibliografia/riferimenti.bib", style: "apa", title: [References])
+#bibliography("bibliografia/riferimenti.bib", style: "apa", title: [References]) <bibliografia>
 
 #v(16pt)
 
-#text(size: 14pt, weight: 700)[Further resources]
+#text(size: 12pt, weight: 700, fill: teal)[Further resources]
 
 The technical documentation is linked in the relevant chapter notes. Pages checked on 1 November 2026. For an additional interactive visualisation, explore #link("https://poloclub.github.io/transformer-explainer/")[Transformer Explainer].
 
 #v(16pt)
 
-#text(size: 14pt, weight: 700)[Edition and use]
+#text(size: 12pt, weight: 700, fill: teal)[Edition and use]
 
 Original teaching text by Marco Cremaschi, prepared with AI assistance. The book and scenario are fictional; no real ISBN or publisher is implied. Conceptual examples are illustrative; lab measurements come from model executions. Sora and DM Sans are distributed under the SIL Open Font License, included in the source files.
 

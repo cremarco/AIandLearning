@@ -37,7 +37,7 @@ Buongiorno e benvenuti. Oggi andremo oltre la scrittura dei prompt. Ci chiederem
 
 Titolo comune per i tre eventi a Vilnius, novembre2026. Il Forum si svolge11–12novembre; incontroMRU10novembre e docenti13novembre. La presentazione segue un percorso unico con tutte le slide, senza selettori o varianti attive per evento. Il pacchetto didattico è una proposta informata dalle fonti, non un metodo clinico o un protocollo unitario già validato.
 
-Percorso unico: slide 1 di 85, senza selezione per evento.
+Percorso unico: slide 1 di 84, senza selezione per evento.
 
 FONTI
 BIO01: Marco Cremaschi — University of Milano-Bicocca institutional profile
@@ -76,7 +76,7 @@ Per questo tema, lo strumento è solo una parte del progetto. Servono anche un c
 
 Profilo ripreso dal sito personale pubblico https://cremarco.github.io/cv/, consultato il 1 novembre 2026: ruolo Tenure-Track Assistant Professor (RTT), Università di Milano-Bicocca; aree Semantic AI & knowledge graphs, Digital mental health, Applied data systems. Ritratto autentico del sito, non immagine generata. Le metriche variabili di pubblicazioni e progetti non sono riprodotte. Whattadata è presentata nella slide successiva.
 
-Percorso unico: slide 2 di 85, senza selezione per evento.
+Percorso unico: slide 2 di 84, senza selezione per evento.
 
 FONTI
 BIO03: Cremaschi, M. Personal portfolio and researcher profile. Consulted 1 November 2026.
@@ -112,7 +112,7 @@ Whattadata è uno spin-off dell’Università di Milano-Bicocca. Porta la ricerc
 
 Whattadata è uno spin-off dell’Università degli Studi di Milano-Bicocca. Presentare in circa 30 secondi il collegamento tra ricerca universitaria e strumenti di IA e analisi dei dati per le organizzazioni. I tre ambiti sintetizzano i servizi descritti dal sito ufficiale e dalla scheda istituzionale UniMiB: analisi predittiva, IA etica e soluzioni modulari. Responsible AI descrive l’approccio progettuale dichiarato, non una certificazione o una garanzia di assenza di rischi. La slide presenta il contesto professionale del relatore; non costituisce evidenza di efficacia didattica o clinica. Logo ufficiale da https://whattadata.it/img/logo/whattadata.svg . Fonti consultate il 31 ottobre 2026.
 
-Percorso unico: slide 3 di 85, senza selezione per evento.
+Percorso unico: slide 3 di 84, senza selezione per evento.
 
 FONTI
 ORG01: Whattadata (2026, consultato il 31 ottobre). Sito ufficiale: AI, machine learning and data analytics.
@@ -121,44 +121,6 @@ Sezioni Introduction, Services e Academic origin; logo /img/logo/whattadata.svg.
 ORG02: Università degli Studi di Milano-Bicocca (2026). Spin-off e start-up area ICT/Web: Whattadata S.r.l.
 https://www.unimib.it/ricerca/valorizzazione-della-ricerca/imprenditorialita-accademica-spin-e-start/spin-e-start-area-ict-web
 Scheda Whattadata S.r.l.; status spin-off e servizi: analisi predittiva, IA etica, soluzioni modulari. Pagina aggiornata il 19 ottobre 2026.
--->
-
----
-layout: default
-routeAlias: s03
-title: "Three events, one shared deck"
----
-
-<DeckSlide id="S03" />
-
-<!--
-## Italiano
-
-### Azioni del relatore — non leggere ad alta voce
-
-- Indicare le date e aprire il brief pertinente.
-
-### Copione — parole da pronunciare
-
-Questa presentazione raccoglie i tre incontri di novembre. Il 10 novembre saremo all’Università Mykolas Romeris; l’11 novembre terrò il workshop nell’ambito dell’EDU Forum; il 13 novembre lavoreremo con i docenti a Druskininkai. Le tre slide successive presentano destinatari, attività e risultati attesi. I collegamenti in fondo rimandano ai programmi originali.
-
-
-## Riferimenti di preparazione — non leggere ad alta voce
-
-Indice dei tre brief conservati nella presentazione. Ogni pulsante apre il brief corrispondente. Il Forum si svolge l’11–12 novembre; il workshop di Marco è l’11 novembre. Il programma universitario del 10 novembre comprende due relatori.
-
-Percorso unico: slide 4 di 85, senza selezione per evento.
-
-FONTI
-PROGRAM02: Public lecture workshop 10 November 2026 — LT/EN (2026). Brief della sessione di Marco Cremaschi.
-https://drive.google.com/file/d/1k1Lat3s3KF3onLzJpAX1GY51JGOyyihH/view
-Pagina 2/2, sessione 02 di Marco Cremaschi, Beyond prompting: visual tools for self-directed learning with artificial intelligence. L’orario 12:30–14:10 riguarda l’intero incontro con due relatori, non la sola sessione di Marco.
-PROGRAM01: EDU Forum 2026 — Forumo programa 10-02.pdf (2026). Brief della sessione di Marco Cremaschi.
-https://drive.google.com/file/d/1LA6-_Um9lJp_ypreYHBAy17o1JC8bnFw/view
-Pagina 3/5, workshop Marco Cremaschi, 11 novembre, 15:45–17:15, Hall 210. Titolo originale: From Curiosity to Classroom Practice: Responsible Artificial Intelligence and Visual Psychological Guidance for Self-Directed Learning.
-PROGRAM03: Workshop Program November 2026 — EN (2026). Brief della sessione di Marco Cremaschi.
-https://drive.google.com/file/d/1aUr91OePxXiAQXzh2ZLHw6pRynbCmVY0/view
-Pagine 1/6 e 4/6: Beyond prompting: visual tools for self-directed learning with artificial intelligence, Marco Cremaschi, 13 novembre, 13:30–14:20, 50 minuti.
 -->
 
 ---
@@ -185,7 +147,7 @@ Questo workshop pratico di 90 minuti esplora come integrare responsabilmente l�
 
 Brief dell’evento, tradotto e sintetizzato in italiano dal programma condiviso. Pagina 3/5, workshop Marco Cremaschi, 11 novembre, 15:45–17:15, Hall 210. Titolo originale: From Curiosity to Classroom Practice: Responsible Artificial Intelligence and Visual Psychological Guidance for Self-Directed Learning. Testo esteso in italiano: Questo workshop pratico di 90 minuti esplora come integrare responsabilmente l’intelligenza artificiale nell’istruzione scolastica per sostenere l’apprendimento autodiretto in ambienti online e misti. Si rivolge a ricercatori in educazione, docenti, dirigenti scolastici, dottorandi e decisori pubblici interessati a passare dalla discussione generale sull’IA ad applicazioni concrete in classe. Il workshop unisce conoscenze sui sistemi di IA fondate sulle evidenze ed esempi tratti dall’insegnamento, dalla formazione e dal lavoro interdisciplinare su IA, educazione e psicologia. Al centro vi è la guida psicologica visuale: supporti visuali, mappe dei percorsi di apprendimento, domande di riflessione e strumenti basati su scenari, per usare l’IA conservando autonomia, pensiero critico, consapevolezza emotiva e responsabilità digitale. I partecipanti lavoreranno su scenari di classe, esaminando come l’IA possa sostenere la definizione degli obiettivi, la pianificazione, l’organizzazione delle informazioni, il feedback, l’autovalutazione e la riflessione. Affronteranno bias, allucinazioni, eccessiva sicurezza, privacy e dipendenza inappropriata dall’IA, con attenzione alle misure pratiche e alla mediazione del docente. Al termine avranno sviluppato strategie pratiche ed elementi di guida visuale adattabili, per un uso dell’IA responsabile, centrato sulla persona e attento al contesto.
 
-Percorso unico: slide 5 di 85, senza selezione per evento.
+Percorso unico: slide 4 di 84, senza selezione per evento.
 
 FONTI
 PROGRAM01: EDU Forum 2026 — Forumo programa 10-02.pdf (2026). Brief della sessione di Marco Cremaschi.
@@ -217,7 +179,7 @@ Costruiremo un percorso visuale di apprendimento: definiremo un obiettivo, rappr
 
 Brief dell’evento, tradotto e sintetizzato in italiano dal programma condiviso. Pagina 2/2, sessione 02 di Marco Cremaschi, Beyond prompting: visual tools for self-directed learning with artificial intelligence. L’orario 12:30–14:10 riguarda l’intero incontro con due relatori, non la sola sessione di Marco. Testo esteso in italiano: Costruiremo un percorso visuale di apprendimento: definiremo un obiettivo, rappresenteremo le conoscenze pregresse, pianificheremo i passi successivi, confronteremo i suggerimenti dell’IA con fonti affidabili e rifletteremo sull’apprendimento. Le attività in piccoli gruppi useranno mappe concettuali, riflessione e autovalutazione per sostenere l’autonomia e il pensiero critico degli studenti, riconoscere l’incertezza, gestire la frustrazione ed evitare un’eccessiva dipendenza dall’IA. I partecipanti porteranno con sé un modello di attività riutilizzabile e compiti pratici. I modelli visuali, le schede e gli esempi saranno forniti in anticipo. Gli esempi IA già preparati permetteranno la partecipazione anche senza un account personale o un accesso in diretta a uno strumento IA.
 
-Percorso unico: slide 6 di 85, senza selezione per evento.
+Percorso unico: slide 5 di 84, senza selezione per evento.
 
 FONTI
 PROGRAM02: Public lecture workshop 10 November 2026 — LT/EN (2026). Brief della sessione di Marco Cremaschi.
@@ -249,7 +211,7 @@ Questo workshop pratico di 50 minuti esplora come i docenti possano aiutare gli 
 
 Brief dell’evento, tradotto e sintetizzato in italiano dal programma condiviso. Pagine 1/6 e 4/6: Beyond prompting: visual tools for self-directed learning with artificial intelligence, Marco Cremaschi, 13 novembre, 13:30–14:20, 50 minuti. Testo esteso in italiano: Questo workshop pratico di 50 minuti esplora come i docenti possano aiutare gli studenti a usare l’IA per l’apprendimento autodiretto, mantenendo la responsabilità del proprio apprendimento. A partire da una domanda collegata al curricolo, i partecipanti costruiranno un semplice percorso visuale: definire un obiettivo, valutare ciò che già sanno, pianificare i passi successivi, confrontare i suggerimenti dell’IA con fonti affidabili e riflettere su ciò che hanno imparato. In piccoli gruppi, i docenti proveranno mappe concettuali, attività di riflessione e domande di autovalutazione adattabili alle diverse discipline. Discuteranno come riconoscere l’incertezza, gestire la frustrazione ed evitare di affidarsi eccessivamente alle risposte generate dall’IA. Porteranno con sé un modello di attività riutilizzabile e compiti pratici per sostenere autonomia, pensiero critico e uso responsabile dell’IA. Il relatore fornirà in anticipo modelli visuali, schede ed esempi. Gli esempi preparati permetteranno di svolgere le attività senza un account personale o accesso diretto all’IA. È richiesto di portare un computer.
 
-Percorso unico: slide 7 di 85, senza selezione per evento.
+Percorso unico: slide 6 di 84, senza selezione per evento.
 
 FONTI
 PROGRAM03: Workshop Program November 2026 — EN (2026). Brief della sessione di Marco Cremaschi.
@@ -261,6 +223,7 @@ Pagine 1/6 e 4/6: Beyond prompting: visual tools for self-directed learning with
 layout: default
 routeAlias: s51
 title: "Luca needs to understand GenAI"
+clicks: 1
 ---
 
 <DeckSlide id="S51" />
@@ -277,7 +240,7 @@ Seguiamo Luca, uno studente immaginario al secondo anno di informatica. Sa scriv
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 8 di 85, senza selezione per evento.
+Percorso unico: slide 7 di 84, senza selezione per evento.
 -->
 
 ---
@@ -300,7 +263,7 @@ La consegna contiene quattro azioni collegate. Luca legge, costruisce uno schema
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 9 di 85, senza selezione per evento.
+Percorso unico: slide 8 di 84, senza selezione per evento.
 -->
 
 ---
@@ -323,7 +286,7 @@ Questa distinzione ha una ragione empirica. Bastani e colleghi hanno confrontato
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 10 di 85, senza selezione per evento.
+Percorso unico: slide 9 di 84, senza selezione per evento.
 
 FONTI
 EDU_BASTANI: Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122.
@@ -351,7 +314,7 @@ Questo è il libro assegnato a Luca: Foundations of Generative Artificial Intell
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 11 di 85, senza selezione per evento.
+Percorso unico: slide 10 di 84, senza selezione per evento.
 -->
 
 ---
@@ -374,7 +337,7 @@ Non serve conoscere ogni formula per seguire il caso. Ci basta distinguere quell
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 12 di 85, senza selezione per evento.
+Percorso unico: slide 11 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -405,7 +368,7 @@ Ecco un passaggio che può bloccare lo studente. Le parole sono leggibili, ma la
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 13 di 85, senza selezione per evento.
+Percorso unico: slide 12 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -436,7 +399,7 @@ Apro Excalidraw e inserisco quattro concetti. Non cerco una mappa bella o comple
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 14 di 85, senza selezione per evento.
+Percorso unico: slide 13 di 84, senza selezione per evento.
 
 FONTI
 TOOL_EXCALIDRAW: Excalidraw. (2026). Free whiteboard and Excalidraw Plus.
@@ -467,7 +430,7 @@ Leggiamo la mappa come una spiegazione. La freccia più interessante sostiene ch
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 15 di 85, senza selezione per evento.
+Percorso unico: slide 14 di 84, senza selezione per evento.
 
 FONTI
 EDU_MAPS: Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
@@ -495,7 +458,7 @@ Qui il problema è organizzativo. Inserisco in Magic ToDo un obiettivo che conti
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 16 di 85, senza selezione per evento.
+Percorso unico: slide 15 di 84, senza selezione per evento.
 
 FONTI
 TOOL_GOBLIN: Goblin Tools. (2026). About Goblin Tools.
@@ -526,7 +489,7 @@ Aumento il dettaglio soltanto sul punto che blocca Luca. Un passo come comprende
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 17 di 85, senza selezione per evento.
+Percorso unico: slide 16 di 84, senza selezione per evento.
 
 FONTI
 TOOL_GOBLIN_UI: Goblin Tools. (2026). Magic ToDo.
@@ -554,7 +517,7 @@ Il piano corretto è breve e contiene punti di controllo. Dopo la lettura rimang
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 18 di 85, senza selezione per evento.
+Percorso unico: slide 17 di 84, senza selezione per evento.
 -->
 
 ---
@@ -577,7 +540,7 @@ Adesso lavoriamo cinque minuti sul metodo. Luca dispone di venti sotto-attività
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 19 di 85, senza selezione per evento.
+Percorso unico: slide 18 di 84, senza selezione per evento.
 -->
 
 ---
@@ -600,7 +563,7 @@ Creo un notebook e carico il capitolo. Prima di fare domande controllo che il fi
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 20 di 85, senza selezione per evento.
+Percorso unico: slide 19 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK: Google. (2026). Use chat in Gemini Notebook.
@@ -631,7 +594,7 @@ Copio il dubbio della mappa in una richiesta circoscritta. Chiedo la distinzione
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 21 di 85, senza selezione per evento.
+Percorso unico: slide 20 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK: Google. (2026). Use chat in Gemini Notebook.
@@ -659,7 +622,7 @@ Seleziono la citazione e leggo il paragrafo, non soltanto la frase evidenziata. 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 22 di 85, senza selezione per evento.
+Percorso unico: slide 21 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK: Google. (2026). Use chat in Gemini Notebook.
@@ -687,7 +650,7 @@ Chiedo tre passi: una definizione, un esempio e il limite dell’esempio. Aggiun
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 23 di 85, senza selezione per evento.
+Percorso unico: slide 22 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK: Google. (2026). Use chat in Gemini Notebook.
@@ -715,7 +678,7 @@ La metafora del materiale sul tavolo può rendere più accessibile la distinzion
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 24 di 85, senza selezione per evento.
+Percorso unico: slide 23 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -743,7 +706,7 @@ La Mind Map di Notebook offre una vista ramificata del materiale. Espando un sol
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 25 di 85, senza selezione per evento.
+Percorso unico: slide 24 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK_MAP: Google. (2026). Use Mind Maps in Gemini Notebook.
@@ -774,7 +737,7 @@ Per l’autoverifica nascondo la spiegazione e chiedo prima un tentativo. La ric
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 26 di 85, senza selezione per evento.
+Percorso unico: slide 25 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK_QUIZ: Google. (2026). Generate Flashcards or Quizzes in Gemini Notebook.
@@ -805,7 +768,7 @@ Torno alla mappa iniziale e modifico le relazioni, mantenendo una copia preceden
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 27 di 85, senza selezione per evento.
+Percorso unico: slide 26 di 84, senza selezione per evento.
 
 FONTI
 EDU_MAPS: Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. Technical Report IHMC CmapTools 2006-01, Rev. 01-2008. Florida Institute for Human and Machine Cognition.
@@ -836,7 +799,7 @@ Affianco le due versioni. Il miglioramento grafico è secondario. Ci interessa c
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 28 di 85, senza selezione per evento.
+Percorso unico: slide 27 di 84, senza selezione per evento.
 -->
 
 ---
@@ -859,7 +822,7 @@ In Napkin inserisco un testo già verificato. Il vantaggio di farlo ora è che s
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 29 di 85, senza selezione per evento.
+Percorso unico: slide 28 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NAPKIN_GUIDE: Napkin AI. (2026). Visuals generation.
@@ -887,7 +850,7 @@ Tra le proposte scelgo quella che distingue l’addestramento dall’uso del mod
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 30 di 85, senza selezione per evento.
+Percorso unico: slide 29 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NAPKIN_GUIDE: Napkin AI. (2026). Visuals generation.
@@ -915,7 +878,7 @@ Lo schema finale rimane accanto all’esercizio. Leggiamo tre passaggi: il testo
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 31 di 85, senza selezione per evento.
+Percorso unico: slide 30 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NAPKIN: Napkin AI. (2026). Pricing.
@@ -946,7 +909,7 @@ Ecco l’esercizio. Luca deve ottenere una piccola applicazione che renda osserv
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 32 di 85, senza selezione per evento.
+Percorso unico: slide 31 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -977,7 +940,7 @@ Questa è una richiesta riutilizzabile in Claude: specifica il modello, i contro
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 33 di 85, senza selezione per evento.
+Percorso unico: slide 32 di 84, senza selezione per evento.
 
 FONTI
 TOOL_CLAUDE: Anthropic. (2026). Claude pricing.
@@ -1008,7 +971,7 @@ Prima di parlare di comprensione controllo la soluzione. Deve caricare il modell
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 34 di 85, senza selezione per evento.
+Percorso unico: slide 33 di 84, senza selezione per evento.
 
 FONTI
 TECH_JS: Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
@@ -1036,7 +999,7 @@ Esistono anche risultati positivi. Kestin e colleghi studiano un tutor progettat
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 35 di 85, senza selezione per evento.
+Percorso unico: slide 34 di 84, senza selezione per evento.
 
 FONTI
 EDU_KESTIN: Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458.
@@ -1067,7 +1030,7 @@ Nell’applicazione inserisco un testo breve e guardo la segmentazione effettiva
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 36 di 85, senza selezione per evento.
+Percorso unico: slide 35 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -1098,7 +1061,7 @@ Leggo lo schema dall’input alla scelta del token. Le rappresentazioni numerich
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 37 di 85, senza selezione per evento.
+Percorso unico: slide 36 di 84, senza selezione per evento.
 
 FONTI
 TECH_TRANSFORMER: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.
@@ -1129,7 +1092,7 @@ Cambiamo soltanto il contesto, mantenendo modello e temperatura a zero virgola o
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 38 di 85, senza selezione per evento.
+Percorso unico: slide 37 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -1157,7 +1120,7 @@ Manteniamo lo stesso input, The capital of Italy is, e gli stessi punteggi calco
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 39 di 85, senza selezione per evento.
+Percorso unico: slide 38 di 84, senza selezione per evento.
 
 FONTI
 TECH_JS: Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
@@ -1188,7 +1151,7 @@ Nel capitolo compare questa formula. Non vi chiedo di studiarla: osserviamo come
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 40 di 85, senza selezione per evento.
+Percorso unico: slide 39 di 84, senza selezione per evento.
 
 FONTI
 TECH_JS: Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
@@ -1219,7 +1182,7 @@ Leggiamo anche i simboli che di solito vengono saltati. La lettera i identifica 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 41 di 85, senza selezione per evento.
+Percorso unico: slide 40 di 84, senza selezione per evento.
 
 FONTI
 TECH_JS: Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).
@@ -1251,7 +1214,7 @@ La richiesta al tool parte dalla formula del capitolo. Chiedo una spiegazione de
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 42 di 85, senza selezione per evento.
+Percorso unico: slide 41 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK: Google. (2026). Use chat in Gemini Notebook.
@@ -1279,7 +1242,7 @@ In Desmos inserisco tre funzioni, una per ciascuna probabilità dell’esempio. 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 43 di 85, senza selezione per evento.
+Percorso unico: slide 42 di 84, senza selezione per evento.
 
 FONTI
 TOOL_DESMOS: Desmos Studio. (2026). Desmos Graphing Calculator User Guide.
@@ -1310,7 +1273,7 @@ Controlliamo i valori numerici. La probabilità del primo candidato diminuisce q
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 44 di 85, senza selezione per evento.
+Percorso unico: slide 43 di 84, senza selezione per evento.
 
 FONTI
 TOOL_DESMOS: Desmos Studio. (2026). Desmos Graphing Calculator User Guide.
@@ -1338,7 +1301,7 @@ Aggiungo una descrizione testuale della soluzione con versione e provenienza, co
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 45 di 85, senza selezione per evento.
+Percorso unico: slide 44 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK: Google. (2026). Use chat in Gemini Notebook.
@@ -1369,7 +1332,7 @@ Chiudo la chat e chiedo quattro azioni brevi. Luca spiega un passaggio, prevede 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 46 di 85, senza selezione per evento.
+Percorso unico: slide 45 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1392,7 +1355,7 @@ Passiamo al docente. La prima scelta non riguarda il tool: riguarda ciò che vog
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 47 di 85, senza selezione per evento.
+Percorso unico: slide 46 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1415,7 +1378,7 @@ Apro Rubric Generator e fornisco obiettivi e consegna. Specifico i tre criteri e
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 48 di 85, senza selezione per evento.
+Percorso unico: slide 47 di 84, senza selezione per evento.
 
 FONTI
 TOOL_MAGIC: MagicSchool. (2026). AI rubric generator.
@@ -1446,7 +1409,7 @@ Una bozza può contenere espressioni come buona comprensione o risposta completa
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 49 di 85, senza selezione per evento.
+Percorso unico: slide 48 di 84, senza selezione per evento.
 
 FONTI
 TOOL_FORMATIVE: Formative. (2026, 4 maggio). What Formative plan is best for me?
@@ -1474,7 +1437,7 @@ Il primo criterio riguarda concetti e relazioni. Al livello iniziale troviamo co
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 50 di 85, senza selezione per evento.
+Percorso unico: slide 49 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1497,7 +1460,7 @@ Il secondo criterio riguarda il processo. Ripetere una risposta del modello non 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 51 di 85, senza selezione per evento.
+Percorso unico: slide 50 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1520,7 +1483,7 @@ Il terzo criterio rende osservabile l’applicazione. Una previsione isolata è 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 52 di 85, senza selezione per evento.
+Percorso unico: slide 51 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1543,7 +1506,7 @@ Chiedo una bozza di cinque quesiti con risposte attese, errori rilevabili e coll
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 53 di 85, senza selezione per evento.
+Percorso unico: slide 52 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1566,7 +1529,7 @@ La seconda domanda controlla che la parola token non sia soltanto un’etichetta
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 54 di 85, senza selezione per evento.
+Percorso unico: slide 53 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1589,7 +1552,7 @@ Gli ultimi quesiti richiedono applicazione. Il quarto chiede una previsione sull
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 55 di 85, senza selezione per evento.
+Percorso unico: slide 54 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1612,7 +1575,7 @@ Creo un’attività in Formative e aggiungo un’introduzione breve. Indico espl
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 56 di 85, senza selezione per evento.
+Percorso unico: slide 55 di 84, senza selezione per evento.
 
 FONTI
 TOOL_FORMATIVE: Formative. (2026, 4 maggio). What Formative plan is best for me?
@@ -1640,7 +1603,7 @@ Il formato deve aiutare a vedere la conoscenza che ci interessa. La scelta multi
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 57 di 85, senza selezione per evento.
+Percorso unico: slide 56 di 84, senza selezione per evento.
 
 FONTI
 TOOL_FORMATIVE: Formative. (2026, 4 maggio). What Formative plan is best for me?
@@ -1668,7 +1631,7 @@ Queste tre risposte sono inventate per la dimostrazione. Il primo studente prese
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 58 di 85, senza selezione per evento.
+Percorso unico: slide 57 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1691,7 +1654,7 @@ Scrivo un feedback che nomina il punto da rivedere e chiede una nuova azione. Al
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 59 di 85, senza selezione per evento.
+Percorso unico: slide 58 di 84, senza selezione per evento.
 
 FONTI
 TOOL_FORMATIVE_RESP: Formative. (2026). View and score responses.
@@ -1722,7 +1685,7 @@ Prendiamo un secondo spazio di cinque minuti. Scegliete una conoscenza della vos
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 60 di 85, senza selezione per evento.
+Percorso unico: slide 59 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1745,7 +1708,7 @@ Ritorniamo allo stesso capitolo e alla stessa verifica guardando le barriere di 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 61 di 85, senza selezione per evento.
+Percorso unico: slide 60 di 84, senza selezione per evento.
 
 FONTI
 ACC_AID: Associazione Italiana Dislessia. (n.d.). Compensatory tools [English translation of webpage title].
@@ -1776,7 +1739,7 @@ Apro la versione HTML del capitolo e, dove disponibile, la modalità di lettura 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 62 di 85, senza selezione per evento.
+Percorso unico: slide 61 di 84, senza selezione per evento.
 
 FONTI
 ACC_EDGE: Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
@@ -1804,7 +1767,7 @@ Sul medesimo paragrafo chiedo una segmentazione e un piccolo glossario. Indico l
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 63 di 85, senza selezione per evento.
+Percorso unico: slide 62 di 84, senza selezione per evento.
 
 FONTI
 ACC_COGA: World Wide Web Consortium. (2021). Making content usable for people with cognitive and learning disabilities: Objective 3, Use clear and understandable content.
@@ -1835,7 +1798,7 @@ Nel campo di risposta uso la dettatura predisposta sul Mac, con lingua inglese e
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 64 di 85, senza selezione per evento.
+Percorso unico: slide 63 di 84, senza selezione per evento.
 
 FONTI
 ACC_MAC: Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.
@@ -1866,7 +1829,7 @@ Esplicito l’obiettivo: in questa prova voglio osservare la spiegazione del pro
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 65 di 85, senza selezione per evento.
+Percorso unico: slide 64 di 84, senza selezione per evento.
 
 FONTI
 ACC_CAST: CAST. (2024). Universal Design for Learning Guidelines, version 3.0.
@@ -1897,7 +1860,7 @@ Per trasferire il percorso cambiamo il contenuto, conservando le decisioni. In s
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 66 di 85, senza selezione per evento.
+Percorso unico: slide 65 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1920,7 +1883,7 @@ Alla fine disponiamo di tre gruppi di evidenze. Il percorso documenta idee inizi
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 67 di 85, senza selezione per evento.
+Percorso unico: slide 66 di 84, senza selezione per evento.
 -->
 
 ---
@@ -1943,7 +1906,7 @@ Qui trovate i primi tre strumenti del percorso, organizzati per funzione. Il sit
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 68 di 85, senza selezione per evento.
+Percorso unico: slide 67 di 84, senza selezione per evento.
 
 FONTI
 TOOL_GOBLIN: Goblin Tools. (2026). About Goblin Tools.
@@ -1977,7 +1940,7 @@ Per Napkin ci bastano una visuale breve e l’esportazione PNG o PDF con il marc
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 69 di 85, senza selezione per evento.
+Percorso unico: slide 68 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NAPKIN: Napkin AI. (2026). Pricing.
@@ -2011,7 +1974,7 @@ Le opzioni di accesso comprendono funzioni già disponibili nel browser o nel si
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 70 di 85, senza selezione per evento.
+Percorso unico: slide 69 di 84, senza selezione per evento.
 
 FONTI
 ACC_EDGE: Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
@@ -2045,7 +2008,7 @@ Aggiungiamo al catalogo i supporti per le formule. Notebook può aiutare a legge
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 71 di 85, senza selezione per evento.
+Percorso unico: slide 70 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK_PRICE: Google. (2026). Learn about Gemini Notebook’s plans; Manage your Gemini Notebook usage limits.
@@ -2079,7 +2042,7 @@ Queste possibilità a pagamento completano il catalogo. Per Notebook e Claude un
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 72 di 85, senza selezione per evento.
+Percorso unico: slide 71 di 84, senza selezione per evento.
 
 FONTI
 TOOL_NOTEBOOK_PRICE: Google. (2026). Learn about Gemini Notebook’s plans; Manage your Gemini Notebook usage limits.
@@ -2116,7 +2079,7 @@ RemNote combina note e ripasso e dispone anche di un piano gratuito. Le versioni
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 73 di 85, senza selezione per evento.
+Percorso unico: slide 72 di 84, senza selezione per evento.
 
 FONTI
 TOOL_REMNOTE: RemNote. (2026). Pricing.
@@ -2147,7 +2110,7 @@ Per i docenti distinguiamo tre funzioni. Un tool prepara bozze; un altro raccogl
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 74 di 85, senza selezione per evento.
+Percorso unico: slide 73 di 84, senza selezione per evento.
 
 FONTI
 TOOL_MAGIC_PRICE: MagicSchool. (2026). Pricing and plans.
@@ -2181,7 +2144,7 @@ Nel catalogo indichiamo anche le funzioni che richiedono un pagamento: maggiori 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 75 di 85, senza selezione per evento.
+Percorso unico: slide 74 di 84, senza selezione per evento.
 
 FONTI
 TOOL_MAGIC_PRICE: MagicSchool. (2026). Pricing and plans.
@@ -2215,7 +2178,7 @@ Queste sono le fonti complete dei primi due studi discussi. I collegamenti perme
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 76 di 85, senza selezione per evento.
+Percorso unico: slide 75 di 84, senza selezione per evento.
 
 FONTI
 EDU_BASTANI: Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122.
@@ -2246,7 +2209,7 @@ Qui trovate lo studio recente sulla revisione assistita dopo formazione e il lav
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 77 di 85, senza selezione per evento.
+Percorso unico: slide 76 di 84, senza selezione per evento.
 
 FONTI
 EDU_HUANG: Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13, 62.
@@ -2277,7 +2240,7 @@ Questi riferimenti aiutano a organizzare le scelte educative: autoregolazione, m
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 78 di 85, senza selezione per evento.
+Percorso unico: slide 77 di 84, senza selezione per evento.
 
 FONTI
 EDU_SRL: Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. Frontiers in Psychology, 8, 422.
@@ -2311,7 +2274,7 @@ Per accessibilità e supporti ho usato le linee guida CAST, le indicazioni W3C s
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 79 di 85, senza selezione per evento.
+Percorso unico: slide 78 di 84, senza selezione per evento.
 
 FONTI
 ACC_CAST: CAST. (2024). Universal Design for Learning Guidelines, version 3.0.
@@ -2345,7 +2308,7 @@ La bibliografia tecnica parte dal lavoro originale sul Transformer e dal lavoro 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 80 di 85, senza selezione per evento.
+Percorso unico: slide 79 di 84, senza selezione per evento.
 
 FONTI
 TECH_TRANSFORMER: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.
@@ -2376,7 +2339,7 @@ Questi riferimenti riguardano il recupero di informazioni a supporto della gener
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 81 di 85, senza selezione per evento.
+Percorso unico: slide 80 di 84, senza selezione per evento.
 
 FONTI
 TECH_RAG: Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33, 9459–9474.
@@ -2407,7 +2370,7 @@ Queste risorse servono a chi vuole ripetere o approfondire la parte tecnica. La 
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 82 di 85, senza selezione per evento.
+Percorso unico: slide 81 di 84, senza selezione per evento.
 
 FONTI
 TECH_QWEN: Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.
@@ -2441,7 +2404,7 @@ Le guide operative aiutano a predisporre lettura vocale e dettatura sul disposit
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 83 di 85, senza selezione per evento.
+Percorso unico: slide 82 di 84, senza selezione per evento.
 
 FONTI
 ACC_EDGE: Microsoft. (n.d.). Use Reading mode in Microsoft Edge.
@@ -2475,7 +2438,7 @@ Per chi prepara i materiali, qui trovate standard web e indicazioni sui media ac
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 84 di 85, senza selezione per evento.
+Percorso unico: slide 83 di 84, senza selezione per evento.
 
 FONTI
 ACC_WCAG: World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2.
@@ -2506,5 +2469,5 @@ Il kit raccoglie i materiali per riprendere il percorso: presentazione, capitolo
 
 Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.
 
-Percorso unico: slide 85 di 85, senza selezione per evento.
+Percorso unico: slide 84 di 84, senza selezione per evento.
 -->

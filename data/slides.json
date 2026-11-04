@@ -91,41 +91,13 @@
     "links": []
   },
   {
-    "id": "S03",
-    "number": 4,
-    "type": "agenda",
-    "kind": "roadmap",
-    "section": "opening",
-    "title": "Three events, one shared deck",
-    "message": "University, EDU Forum and teacher workshop · November 2026",
-    "body": [
-      "10 November 2026 · Mykolas Romeris University",
-      "11 November 2026 · EDU Forum workshop",
-      "13 November 2026 · Teacher workshop in Druskininkai"
-    ],
-    "notes": "Indice dei tre brief conservati nella presentazione. Ogni pulsante apre il brief corrispondente. Il Forum si svolge l’11–12 novembre; il workshop di Marco è l’11 novembre. Il programma universitario del 10 novembre comprende due relatori.",
-    "sources": [
-      "PROGRAM02",
-      "PROGRAM01",
-      "PROGRAM03"
-    ],
-    "duration": {
-      "forum": 9.44,
-      "university": 3.37,
-      "teachers": 5.71
-    },
-    "output": "",
-    "guardrails": [],
-    "audience": "both",
-    "links": []
-  },
-  {
     "id": "S48",
-    "number": 5,
+    "number": 4,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
     "title": "From curiosity to classroom practice",
+    "cardBackground": "events/forum-classroom-bento-cvedi-transparent-v2.webp",
     "message": "11 November 2026 · EDU Forum · 15:45–17:15 · Hall 210",
     "body": [],
     "cards": [
@@ -159,11 +131,12 @@
   },
   {
     "id": "S49",
-    "number": 6,
+    "number": 5,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
     "title": "A visual path for learning with AI",
+    "cardBackground": "events/university-learning-bento-cvedi-transparent-v2.webp",
     "message": "10 November 2026 · Mykolas Romeris University · Room III-326",
     "body": [],
     "cards": [
@@ -197,11 +170,12 @@
   },
   {
     "id": "S50",
-    "number": 7,
+    "number": 6,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
     "title": "Visual tools for learning with AI",
+    "cardBackground": "events/teachers-workshop-bento-cvedi-transparent-v2.webp",
     "message": "13 November 2026 · Teacher workshop · Druskininkai · 13:30–14:20",
     "body": [],
     "cards": [
@@ -235,7 +209,7 @@
   },
   {
     "id": "S51",
-    "number": 8,
+    "number": 7,
     "type": "workshop",
     "kind": "scenario",
     "section": "scenario",
@@ -258,11 +232,18 @@
     "audience": "both",
     "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
     "decision": "You are following the learning method; you do not need to learn programming.",
+    "clicks": 1,
+    "character": {
+      "happy": "images/luca/luca-happy-v1.webp",
+      "worried": "images/luca/luca-worried-v1.webp",
+      "happyAlt": "Luca smiles confidently, holding his textbook.",
+      "worriedAlt": "Luca looks startled by the assignment, with a blue comic sweat drop beside his head."
+    },
     "links": []
   },
   {
     "id": "S52",
-    "number": 9,
+    "number": 8,
     "type": "workshop",
     "kind": "scenario",
     "section": "scenario",
@@ -303,7 +284,7 @@
   },
   {
     "id": "S52E",
-    "number": 10,
+    "number": 9,
     "type": "workshop",
     "kind": "evidence",
     "section": "scenario",
@@ -336,11 +317,17 @@
       }
     ],
     "decision": "Workshop design choice: keep a brief independent assessment as well.",
+    "media": {
+      "src": "images/papers/bastani-2025-first-page.png",
+      "alt": "First page of Bastani and colleagues’ published PNAS paper, Generative AI without guardrails can harm learning: Evidence from high school mathematics.",
+      "caption": "Bastani et al. · PNAS · 2025 · p. 1.",
+      "source": "https://doi.org/10.1073/pnas.2422633122"
+    },
     "links": []
   },
   {
     "id": "S53",
-    "number": 11,
+    "number": 10,
     "type": "workshop",
     "kind": "book",
     "section": "scenario",
@@ -350,7 +337,7 @@
     "body": [
       "Chapter: Language Models and Basic Architecture.",
       "A fictional book created for this workshop, with accurate content and real technical sources.",
-      "The same content is available as PDF and adaptable HTML."
+      "The chapter is available as a PDF."
     ],
     "sources": [],
     "duration": {
@@ -364,24 +351,36 @@
     "notes": "Sequenza didattica originale del workshop. Le risposte e le scelte dello studente sono esempi costruiti, salvo risultati di esecuzione espressamente indicati come registrati.",
     "links": [
       {
-        "label": "Open the chapter",
-        "url": "./materials/booklet-genai/lettura.html"
-      },
-      {
         "label": "Chapter PDF",
         "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf"
       }
     ],
     "decision": "A common source connects explanations, diagrams and assessment.",
     "media": {
-      "src": "images/tools/book-cover.png",
-      "alt": "Cyan cover: Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material.",
+      "src": "images/book/pages/page-01.webp",
+      "alt": "Cover of Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material.",
       "caption": "The original textbook chapter created for this workshop."
+    },
+    "book": {
+      "cover": "images/book/pages/page-01.webp",
+      "sheets": [
+        {
+          "front": "images/book/pages/page-02.webp",
+          "back": "images/book/pages/page-03.webp"
+        },
+        {
+          "front": "images/book/pages/page-04.webp",
+          "back": "images/book/pages/page-05.webp"
+        }
+      ],
+      "portrait": "images/book/marco-jobs-v1.webp",
+      "author": "Marco Cremaschi",
+      "portraitAlt": "Marco Cremaschi in a black mock turtleneck and thin round glasses, with his hand at his chin; a black-and-white portrait based on his photograph."
     }
   },
   {
     "id": "S54",
-    "number": 12,
+    "number": 11,
     "type": "workshop",
     "kind": "diagram",
     "section": "scenario",
@@ -425,7 +424,7 @@
   },
   {
     "id": "S55",
-    "number": 13,
+    "number": 12,
     "type": "workshop",
     "kind": "excerpt",
     "section": "scenario",
@@ -455,7 +454,7 @@
   },
   {
     "id": "S56",
-    "number": 14,
+    "number": 13,
     "type": "workshop",
     "kind": "tool",
     "section": "study",
@@ -502,7 +501,7 @@
   },
   {
     "id": "S57",
-    "number": 15,
+    "number": 14,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -541,7 +540,7 @@
   },
   {
     "id": "S58",
-    "number": 16,
+    "number": 15,
     "type": "workshop",
     "kind": "tool",
     "section": "study",
@@ -584,7 +583,7 @@
   },
   {
     "id": "S59",
-    "number": 17,
+    "number": 16,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -630,7 +629,7 @@
   },
   {
     "id": "S60",
-    "number": 18,
+    "number": 17,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -672,7 +671,7 @@
   },
   {
     "id": "S60A",
-    "number": 19,
+    "number": 18,
     "type": "workshop",
     "kind": "activity",
     "section": "study",
@@ -709,7 +708,7 @@
   },
   {
     "id": "S61",
-    "number": 20,
+    "number": 19,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -750,7 +749,7 @@
   },
   {
     "id": "S62",
-    "number": 21,
+    "number": 20,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -779,7 +778,7 @@
   },
   {
     "id": "S63",
-    "number": 22,
+    "number": 21,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -829,7 +828,7 @@
   },
   {
     "id": "S64",
-    "number": 23,
+    "number": 22,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -857,7 +856,7 @@
   },
   {
     "id": "S65",
-    "number": 24,
+    "number": 23,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -895,7 +894,7 @@
   },
   {
     "id": "S66",
-    "number": 25,
+    "number": 24,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -936,7 +935,7 @@
   },
   {
     "id": "S67",
-    "number": 26,
+    "number": 25,
     "type": "workshop",
     "kind": "assessment",
     "section": "study",
@@ -966,7 +965,7 @@
   },
   {
     "id": "S68",
-    "number": 27,
+    "number": 26,
     "type": "workshop",
     "kind": "diagram",
     "section": "study",
@@ -1008,7 +1007,7 @@
   },
   {
     "id": "S69",
-    "number": 28,
+    "number": 27,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -1044,7 +1043,7 @@
   },
   {
     "id": "S70",
-    "number": 29,
+    "number": 28,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -1087,7 +1086,7 @@
   },
   {
     "id": "S71",
-    "number": 30,
+    "number": 29,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -1138,7 +1137,7 @@
   },
   {
     "id": "S72",
-    "number": 31,
+    "number": 30,
     "type": "workshop",
     "kind": "diagram",
     "section": "study",
@@ -1180,7 +1179,7 @@
   },
   {
     "id": "S73",
-    "number": 32,
+    "number": 31,
     "type": "workshop",
     "kind": "scenario",
     "section": "exercise",
@@ -1211,7 +1210,7 @@
   },
   {
     "id": "S74",
-    "number": 33,
+    "number": 32,
     "type": "workshop",
     "kind": "procedure",
     "section": "exercise",
@@ -1241,7 +1240,7 @@
   },
   {
     "id": "S75",
-    "number": 34,
+    "number": 33,
     "type": "workshop",
     "kind": "procedure",
     "section": "exercise",
@@ -1283,7 +1282,7 @@
   },
   {
     "id": "S75E",
-    "number": 35,
+    "number": 34,
     "type": "workshop",
     "kind": "evidence",
     "section": "exercise",
@@ -1319,7 +1318,7 @@
   },
   {
     "id": "S76",
-    "number": 36,
+    "number": 35,
     "type": "workshop",
     "kind": "app",
     "section": "exercise",
@@ -1368,7 +1367,7 @@
   },
   {
     "id": "S77",
-    "number": 37,
+    "number": 36,
     "type": "workshop",
     "kind": "diagram",
     "section": "exercise",
@@ -1412,7 +1411,7 @@
   },
   {
     "id": "S78",
-    "number": 38,
+    "number": 37,
     "type": "workshop",
     "kind": "compare",
     "section": "exercise",
@@ -1454,7 +1453,7 @@
   },
   {
     "id": "S79",
-    "number": 39,
+    "number": 38,
     "type": "workshop",
     "kind": "app",
     "section": "exercise",
@@ -1497,7 +1496,7 @@
   },
   {
     "id": "S79F",
-    "number": 40,
+    "number": 39,
     "type": "workshop",
     "kind": "formula",
     "section": "exercise",
@@ -1539,7 +1538,7 @@
   },
   {
     "id": "S79G",
-    "number": 41,
+    "number": 40,
     "type": "workshop",
     "kind": "procedure",
     "section": "exercise",
@@ -1578,7 +1577,7 @@
   },
   {
     "id": "S79N",
-    "number": 42,
+    "number": 41,
     "type": "workshop",
     "kind": "procedure",
     "section": "exercise",
@@ -1605,7 +1604,7 @@
   },
   {
     "id": "S79D",
-    "number": 43,
+    "number": 42,
     "type": "workshop",
     "kind": "procedure",
     "section": "exercise",
@@ -1657,7 +1656,7 @@
   },
   {
     "id": "S79T",
-    "number": 44,
+    "number": 43,
     "type": "workshop",
     "kind": "compare",
     "section": "exercise",
@@ -1699,7 +1698,7 @@
   },
   {
     "id": "S80",
-    "number": 45,
+    "number": 44,
     "type": "workshop",
     "kind": "procedure",
     "section": "exercise",
@@ -1729,7 +1728,7 @@
   },
   {
     "id": "S81",
-    "number": 46,
+    "number": 45,
     "type": "workshop",
     "kind": "assessment",
     "section": "exercise",
@@ -1770,7 +1769,7 @@
   },
   {
     "id": "S82",
-    "number": 47,
+    "number": 46,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -1807,7 +1806,7 @@
   },
   {
     "id": "S83",
-    "number": 48,
+    "number": 47,
     "type": "workshop",
     "kind": "procedure",
     "section": "teachers",
@@ -1844,7 +1843,7 @@
   },
   {
     "id": "S84",
-    "number": 49,
+    "number": 48,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -1882,7 +1881,7 @@
   },
   {
     "id": "S84A",
-    "number": 50,
+    "number": 49,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -1924,7 +1923,7 @@
   },
   {
     "id": "S84B",
-    "number": 51,
+    "number": 50,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -1966,7 +1965,7 @@
   },
   {
     "id": "S84C",
-    "number": 52,
+    "number": 51,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -2008,7 +2007,7 @@
   },
   {
     "id": "S85",
-    "number": 53,
+    "number": 52,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -2036,7 +2035,7 @@
   },
   {
     "id": "S85B",
-    "number": 54,
+    "number": 53,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -2070,7 +2069,7 @@
   },
   {
     "id": "S85C",
-    "number": 55,
+    "number": 54,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -2104,7 +2103,7 @@
   },
   {
     "id": "S86",
-    "number": 56,
+    "number": 55,
     "type": "workshop",
     "kind": "procedure",
     "section": "teachers",
@@ -2150,7 +2149,7 @@
   },
   {
     "id": "S87",
-    "number": 57,
+    "number": 56,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -2190,7 +2189,7 @@
   },
   {
     "id": "S88",
-    "number": 58,
+    "number": 57,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -2228,7 +2227,7 @@
   },
   {
     "id": "S89",
-    "number": 59,
+    "number": 58,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -2269,7 +2268,7 @@
   },
   {
     "id": "S89A",
-    "number": 60,
+    "number": 59,
     "type": "workshop",
     "kind": "activity",
     "section": "teachers",
@@ -2306,7 +2305,7 @@
   },
   {
     "id": "S90",
-    "number": 61,
+    "number": 60,
     "type": "workshop",
     "kind": "accessibility",
     "section": "accessibility",
@@ -2346,7 +2345,7 @@
   },
   {
     "id": "S91",
-    "number": 62,
+    "number": 61,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -2392,7 +2391,7 @@
   },
   {
     "id": "S92",
-    "number": 63,
+    "number": 62,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -2422,7 +2421,7 @@
   },
   {
     "id": "S93",
-    "number": 64,
+    "number": 63,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -2463,7 +2462,7 @@
   },
   {
     "id": "S94",
-    "number": 65,
+    "number": 64,
     "type": "workshop",
     "kind": "assessment",
     "section": "accessibility",
@@ -2493,7 +2492,7 @@
   },
   {
     "id": "S95",
-    "number": 66,
+    "number": 65,
     "type": "workshop",
     "kind": "diagram",
     "section": "transfer",
@@ -2534,7 +2533,7 @@
   },
   {
     "id": "S96",
-    "number": 67,
+    "number": 66,
     "type": "workshop",
     "kind": "compare",
     "section": "transfer",
@@ -2571,7 +2570,7 @@
   },
   {
     "id": "S97",
-    "number": 68,
+    "number": 67,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2625,7 +2624,7 @@
   },
   {
     "id": "S97B",
-    "number": 69,
+    "number": 68,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2679,7 +2678,7 @@
   },
   {
     "id": "S97C",
-    "number": 70,
+    "number": 69,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2732,7 +2731,7 @@
   },
   {
     "id": "S97M",
-    "number": 71,
+    "number": 70,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2786,7 +2785,7 @@
   },
   {
     "id": "S97P",
-    "number": 72,
+    "number": 71,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2845,7 +2844,7 @@
   },
   {
     "id": "S97Q",
-    "number": 73,
+    "number": 72,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2890,7 +2889,7 @@
   },
   {
     "id": "S98",
-    "number": 74,
+    "number": 73,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2943,7 +2942,7 @@
   },
   {
     "id": "S98P",
-    "number": 75,
+    "number": 74,
     "type": "workshop",
     "kind": "catalog",
     "section": "resources",
@@ -2997,7 +2996,7 @@
   },
   {
     "id": "S99",
-    "number": 76,
+    "number": 75,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3035,7 +3034,7 @@
   },
   {
     "id": "S99B",
-    "number": 77,
+    "number": 76,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3073,7 +3072,7 @@
   },
   {
     "id": "S100",
-    "number": 78,
+    "number": 77,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3117,7 +3116,7 @@
   },
   {
     "id": "S100B",
-    "number": 79,
+    "number": 78,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3161,7 +3160,7 @@
   },
   {
     "id": "S101",
-    "number": 80,
+    "number": 79,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3199,7 +3198,7 @@
   },
   {
     "id": "S101B",
-    "number": 81,
+    "number": 80,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3237,7 +3236,7 @@
   },
   {
     "id": "S102",
-    "number": 82,
+    "number": 81,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3282,7 +3281,7 @@
   },
   {
     "id": "S102B",
-    "number": 83,
+    "number": 82,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3326,7 +3325,7 @@
   },
   {
     "id": "S102C",
-    "number": 84,
+    "number": 83,
     "type": "workshop",
     "kind": "references",
     "section": "resources",
@@ -3366,7 +3365,7 @@
   },
   {
     "id": "S103",
-    "number": 85,
+    "number": 84,
     "type": "workshop",
     "kind": "closing",
     "section": "resources",

@@ -362,7 +362,7 @@ Aggiornare i controlli che oggi assumono sette slide e la fine del percorso sui 
 
 ## Estensioni realizzate il 2 novembre
 
-I materiali del pubblico sono in inglese e i copioni solo in italiano, anche nelle versioni brevi. Il deck comprende 85 slide condivise. Il capitolo Typst di 19 pagine include cinque schemi nativi, tre screenshot autentici della demo, la formula softmax con temperatura, un esempio numerico esplicitamente illustrativo e il relativo percorso Notebook–Desmos.
+I materiali del pubblico sono in inglese e i copioni solo in italiano, anche nelle versioni brevi. Il deck comprende 84 slide condivise. Il capitolo Typst di 19 pagine include cinque schemi nativi, tre screenshot autentici della demo, la formula softmax con temperatura, un esempio numerico esplicitamente illustrativo e il relativo percorso Notebook–Desmos.
 
 Le slide S79F, S79G, S79N, S79D e S79T collegano lettura della formula, legenda dei simboli, spiegazione sul capitolo, grafico Desmos e verifica numerica. La lista finale comprende anche Wolfram|Alpha Pro, con distinzione dal piano Basic. Le funzioni copiate in Desmos sono fornite in LaTeX nel kit perché la copia deve essere riproducibile nell’editor matematico.
 
@@ -376,4 +376,4 @@ Prova VoiceOver autorizzata e tentata: attivazione osservata, ma output vocale/d
 
 ### Aggiornamento del 2 novembre — percorso unico
 
-Su richiesta del relatore, per ora la presentazione attiva segue un solo percorso con tutte le 85 slide in ordine. Rimossi i pulsanti della copertina, il selettore dei percorsi e la barra di navigazione personalizzata. Il programma dei tre incontri resta una slide informativa. Si avanza con tastiera o scorrimento e si usa il copione italiano completo. Le precedenti selezioni per evento e i relativi budget sopra descritti sono sospesi; non sono opzioni attive.
+Su richiesta del relatore, per ora la presentazione attiva segue un solo percorso con tutte le 84 slide in ordine. Rimossi i pulsanti della copertina, il selettore dei percorsi e la barra di navigazione personalizzata. I tre brief degli eventi restano nella presentazione; la slide riepilogativa dei tre incontri è stata rimossa. Si avanza con tastiera o scorrimento e si usa il copione italiano completo. Le precedenti selezioni per evento e i relativi budget sopra descritti sono sospesi; non sono opzioni attive.
