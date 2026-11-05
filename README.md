@@ -54,6 +54,8 @@ INCLUDE_MODEL_WEIGHTS=1 pnpm build
 
 The portable ZIP always excludes weights. Its bundled server shares one prepared model between the source app and compiled deck. The archive contains editable source, the compiled deck, PDFs, runtime, recordings, licences, and a SHA-256 manifest. Packaging rejects stale material copies. It refreshes the exported textbook PDF from the canonical booklet build.
 
+Motion uses a brief 180 ms slide transition, a 680 ms ChatGPT logo focus, and action-driven feedback for skill selection, Andrea’s reaction and table focus. Text stays visible by default; rapid skill selections cancel the previous effect. The existing slide-motion lifecycle stops work outside the active slide or hidden browser tab. Reduced-motion preferences remove spatial effects while retaining short color/opacity feedback, and print output stays static.
+
 ## Materials
 
 - `public/materials/kit.html`: chapter, prompts, activities, assessment and app.

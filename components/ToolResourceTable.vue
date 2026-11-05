@@ -43,5 +43,9 @@ defineProps<{ table: ToolTable; label: string }>()
 .tool-resource-table tbody td:last-child { color:var(--deck-muted); }
 .tool-resource-table tbody tr:last-child :is(th,td) { border-bottom:0; }
 .tool-resource-name :deep(.tool-logo) { width:24px; height:24px; padding:2px; border-radius:4px; }
+/* Keep the selected tool or shortcut aligned with its explanation. */
+.tool-resource-table tbody tr { transition:background-color var(--deck-motion-feedback) var(--deck-motion-ease); }
+.tool-resource-table tbody tr:has(:focus-visible) { background:var(--deck-surface); }
+@media (hover:hover) { .tool-resource-table tbody tr:hover { background:var(--deck-surface); } }
 @media print { .tool-resource-table-wrap { overflow:visible; } }
 </style>

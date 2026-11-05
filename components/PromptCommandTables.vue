@@ -54,5 +54,9 @@ const columns = computed(() => {
 .command-video-trigger:is(:hover,:focus-visible) .command-token { text-decoration:underline; text-underline-offset:4px; }
 .command-video-icon { width:16px; height:16px; flex:none; }
 .slidev-layout .command-video-hint { grid-column:1 / -1; color:var(--deck-muted); font-size:16px; }
+/* Keep the selected tool or shortcut aligned with its explanation. */
+.command-table tbody tr { transition:background-color var(--deck-motion-feedback) var(--deck-motion-ease); }
+.command-table tbody tr:has(:focus-visible) { background:var(--deck-surface); }
+@media (hover:hover) { .command-table tbody tr:hover { background:var(--deck-surface); } }
 @media print { .command-video-icon,.command-video-hint,.shortcut-video-dialog { display:none; } }
 </style>

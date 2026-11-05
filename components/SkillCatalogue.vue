@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, onScopeDispose, ref, watch } from 'vue'
+import { useSlideMotion } from '../utils/slide-motion'
 import research from '../data/skills-research.json'
 import { assetUrl } from '../utils/assets'
 
@@ -7,6 +8,31 @@ const props = defineProps<{ ids: string[] }>()
 const index = ref(0)
 const skills = computed(() => props.ids.map(id => research.skills.find(skill => skill.id === id)).filter(Boolean))
 const selected = computed(() => skills.value[index.value] || skills.value[0])
+const detail = ref<HTMLElement>()
+const { running } = useSlideMotion()
+let update = 0
+let animation: Animation | undefined
+const cancelMotion = () => { animation?.cancel(); animation = undefined }
+
+// New text is present immediately. Only an explicit selection receives motion.
+watch(() => selected.value?.id, async (_id, previous) => {
+  const version = ++update
+  cancelMotion()
+  if (!previous || !running.value) return
+  await nextTick()
+  const element = detail.value
+  if (!element || version !== update || !running.value || !element.animate) return
+  const style = getComputedStyle(element)
+  animation = element.animate([
+    { transform: 'translateX(8px)', opacity: .92 },
+    { transform: 'translateX(0)', opacity: 1 },
+  ], {
+    duration: parseFloat(style.getPropertyValue('--deck-motion-change')) || 220,
+    easing: style.getPropertyValue('--deck-motion-ease').trim() || 'ease-out',
+  })
+})
+watch(running, allowed => { if (!allowed) cancelMotion() })
+onScopeDispose(cancelMotion)
 </script>
 
 <template>
@@ -23,7 +49,7 @@ const selected = computed(() => skills.value[index.value] || skills.value[0])
         <p>{{ selected.requirements }}</p>
       </div>
     </nav>
-    <section v-if="selected" class="skill-detail" :data-skill="selected.id" aria-live="polite">
+    <section v-if="selected" ref="detail" class="skill-detail" :data-skill="selected.id" aria-live="polite">
       <h2>{{ selected.summary }}</h2>
       <div class="chat chat-end skill-prompt">
         <div class="chat-header">{{ selected.executionStatus === 'executed' ? 'Tested request · excerpt' : 'Example request · not executed' }}</div>
@@ -44,7 +70,7 @@ const selected = computed(() => skills.value[index.value] || skills.value[0])
 .skill-catalogue nav { min-width:0; }
 .slidev-layout .skill-menu { width:100%; padding:0; gap:6px; background:none; font-size:22px; }
 .slidev-layout .skill-menu li { padding:0; margin:0; }
-.slidev-layout .skill-menu button { min-height:48px; padding:9px 12px; border-radius:6px; line-height:1.2; overflow-wrap:anywhere; color:var(--deck-ink); }
+.slidev-layout .skill-menu button { min-height:48px; padding:9px 12px; border-radius:6px; line-height:1.2; overflow-wrap:anywhere; color:var(--deck-ink); transition:color var(--deck-motion-feedback) var(--deck-motion-ease), background-color var(--deck-motion-feedback) var(--deck-motion-ease); }
 .slidev-layout .skill-menu button.menu-active { color:var(--deck-cyan); background:var(--deck-surface); font-weight:700; }
 .skill-host { display:flex; flex-direction:column; gap:10px; margin-top:20px; padding-inline:12px; }
 .slidev-layout .skill-host p { font-size:18px; line-height:1.25; color:var(--deck-muted); }

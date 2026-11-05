@@ -28,16 +28,13 @@ const logo = imageUrl('tools/chatgpt-logo.svg')
 .slidev-layout .chatgpt-intro h1 { font-size:76px; line-height:1.02; max-width:620px; text-wrap:balance; }
 .slidev-layout .chatgpt-intro-message { color:var(--deck-muted); font-size:27px; max-width:590px; line-height:1.4; }
 .slidev-layout .chatgpt-intro-preview { padding-top:12px; font-size:19px; color:var(--deck-cyan); }
-.is-active .chatgpt-logo { animation:chatgpt-arrive 4.4s cubic-bezier(.22,.8,.25,1) both; }
-.is-active .chatgpt-intro-copy { animation:chatgpt-copy 1s .2s ease-out both; }
-@keyframes chatgpt-arrive {
-  0% { opacity:0; transform:translateY(24px) rotate(-30deg) scale(.78); }
-  30% { opacity:1; transform:translateY(-10px) rotate(5deg) scale(1.04); }
-  65% { opacity:1; transform:translateY(4px) rotate(-2deg) scale(.99); }
-  100% { opacity:1; transform:translateY(0) rotate(0) scale(1); }
+/* The title stays readable while the mark resolves into focus. */
+.is-active .chatgpt-logo { animation:chatgpt-resolve var(--deck-motion-focus) var(--deck-motion-ease); }
+@keyframes chatgpt-resolve {
+  from { filter:blur(2px); transform:rotate(-8deg) scale(.96); }
+  to { filter:blur(0); transform:rotate(0) scale(1); }
 }
-@keyframes chatgpt-copy { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
 @media (prefers-reduced-motion:reduce), print {
-  .is-active .chatgpt-logo, .is-active .chatgpt-intro-copy { animation:none; }
+  .is-active .chatgpt-logo { animation:none; filter:none; transform:none; }
 }
 </style>
