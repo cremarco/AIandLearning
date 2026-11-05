@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Pagina-1" id="SS9fD4rlmHypLx4ZrYjS">
+    <mxGraphModel dx="774" dy="552" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wN95iaNpDTZc-VJIqowJ-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Prompt + context" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="wN95iaNpDTZc-VJIqowJ-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Inference&lt;br&gt;fixed weights" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="wN95iaNpDTZc-VJIqowJ-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Next token&lt;br&gt;then repeat" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="wN95iaNpDTZc-VJIqowJ-4" edge="1" parent="1" source="wN95iaNpDTZc-VJIqowJ-1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="wN95iaNpDTZc-VJIqowJ-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="240" as="sourcePoint" />
+            <mxPoint x="420" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wN95iaNpDTZc-VJIqowJ-5" edge="1" parent="1" source="wN95iaNpDTZc-VJIqowJ-2" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="wN95iaNpDTZc-VJIqowJ-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="240" as="sourcePoint" />
+            <mxPoint x="420" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wN95iaNpDTZc-VJIqowJ-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="§1.2 + §1.7: new context ≠ new weights" vertex="1">
+          <mxGeometry height="30" width="580" x="110" y="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

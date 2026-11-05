@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.767
+Place the context before inference. Its content changes between requests.
+
+00:00:04.767 --> 00:00:09.524
+Add inference: the model uses its learned parameters to predict the next token.
+
+00:00:09.524 --> 00:00:14.530
+Complete the path from context to inference to the next token.
+
+00:00:14.530 --> 00:00:19.375
+Arrange the three concepts in reading order.
+
+00:00:19.375 --> 00:00:24.212
+Connect context to inference. The arrow means input to the model, not retraining.
+
+00:00:24.212 --> 00:00:29.136
+Connect inference to the next token. Generation appends that token and repeats.
+
+00:00:29.136 --> 00:00:37.510
+Check sections 1.2 and 1.7: prompt and context feed inference with fixed weights, followed by next-token generation.

@@ -3758,6 +3758,51 @@
     "decision": "Recognising the revealed answer is different from recalling it unaided."
   },
   {
+    "type": "workshop",
+    "section": "study",
+    "body": [
+      "Book §1.2: Does adding a definition to a prompt update the model’s weights? Explain why before revealing the answer."
+    ],
+    "audience": "both",
+    "id": "S67SPACED",
+    "kind": "compare",
+    "stage": "Learner · spaced practice",
+    "title": "Keep checked cards in a review routine",
+    "message": "Andrea reuses questions from the same book, then answers before revealing.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_ANKI",
+      "TOOL_ANKIWEB",
+      "TOOL_KNOWT"
+    ],
+    "comparison": [
+      {
+        "label": "Anki / AnkiWeb",
+        "text": "Create or import checked cards in free Anki Desktop; sync and review in AnkiWeb with an account. Rate recall honestly to schedule the next review."
+      },
+      {
+        "label": "Knowt",
+        "text": "Create a set from checked questions and use its study modes, including spaced repetition. An account is required; free AI features have limits."
+      }
+    ],
+    "decision": "The downloadable cards are prepared examples; these account-based workflows were not executed in this session.",
+    "links": [
+      {
+        "label": "Book cards · TSV",
+        "url": "./materials/study-tools/book-cards.tsv",
+        "download": true
+      },
+      {
+        "label": "AnkiWeb",
+        "url": "https://ankiweb.net/"
+      },
+      {
+        "label": "Knowt",
+        "url": "https://knowt.com/"
+      }
+    ]
+  },
+  {
     "id": "S67NOTES",
     "number": 0,
     "type": "workshop",
@@ -4011,6 +4056,78 @@
     ],
     "result": "Export as PNG/PDF in the Free plan, keeping product branding.",
     "decision": "The learner must be able to explain the cycle in their own words."
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72REBUILD",
+    "kind": "compare",
+    "stage": "Learner · reconstruct and explain",
+    "title": "Rebuild the map and explain every arrow",
+    "message": "Close the book, reconstruct one relationship, then reopen §§1.2 and 1.7 to check it.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_DRAWIO",
+      "TOOL_EXCALIDRAW",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "comparison": [
+      {
+        "label": "draw.io",
+        "text": "Build a precise flow: prompt and context → inference with fixed weights → next token. Label what each arrow means."
+      },
+      {
+        "label": "Excalidraw",
+        "text": "Sketch how retrieved passages enter the prompt context. Add the boundary: RAG does not retrain the weights."
+      },
+      {
+        "label": "MindMeister",
+        "text": "Alternative for a branching mind map. Basic requires an account and allows three maps per person, including maps shared with you."
+      }
+    ],
+    "decision": "Compare your reconstruction with the AI visual: identify one missing relationship and justify a correction."
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72DRAWIO",
+    "kind": "tool-demo",
+    "stage": "draw.io · recorded book test",
+    "tool": "drawio",
+    "title": "draw.io: build the inference path",
+    "message": "A student-built flow from the workshop book.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_DRAWIO",
+      "TOOL_DEMO_DRAWIO"
+    ],
+    "prompt": "Using book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.",
+    "promptLabel": "Recorded task",
+    "decision": "New context changes the input; ordinary inference keeps the learned parameters fixed."
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72EXCALIDRAW",
+    "kind": "tool-demo",
+    "stage": "Excalidraw · recorded book test",
+    "tool": "excalidraw",
+    "title": "Excalidraw: explain the RAG arrow",
+    "message": "A freehand reconstruction of a relationship in §1.7.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_EXCALIDRAW",
+      "TOOL_DEMO_EXCALIDRAW"
+    ],
+    "prompt": "Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.",
+    "promptLabel": "Recorded task",
+    "decision": "Explain why an irrelevant retrieved passage can still produce an unreliable answer."
   },
   {
     "id": "S82",
@@ -4749,6 +4866,64 @@
     }
   },
   {
+    "type": "workshop",
+    "section": "resources",
+    "body": [],
+    "audience": "both",
+    "id": "S97STUDY",
+    "kind": "tool-table",
+    "stage": "Resources · free tools",
+    "title": "Free tools for maps and review",
+    "message": "Choose a drawing surface or a review routine for the same book.",
+    "sources": [
+      "TOOL_DRAWIO",
+      "TOOL_EXCALIDRAW",
+      "TOOL_ANKI",
+      "TOOL_ANKIWEB",
+      "TOOL_KNOWT",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "toolTable": {
+      "headers": [
+        "Tool",
+        "Use",
+        "Access and limits"
+      ],
+      "rows": [
+        {
+          "tool": "draw.io",
+          "purpose": "Build labelled flows and diagrams",
+          "access": "Free editor; no account required.",
+          "url": "https://app.diagrams.net/"
+        },
+        {
+          "tool": "Excalidraw",
+          "purpose": "Sketch and explain relationships",
+          "access": "Free local canvas; save an editable copy.",
+          "url": "https://excalidraw.com/"
+        },
+        {
+          "tool": "Anki / AnkiWeb",
+          "purpose": "Review checked cards over time",
+          "access": "Desktop + web free; web account. Official iOS app paid.",
+          "url": "https://apps.ankiweb.net/"
+        },
+        {
+          "tool": "Knowt",
+          "purpose": "Flashcards and spaced practice",
+          "access": "Free study modes; account. AI usage limits.",
+          "url": "https://knowt.com/"
+        },
+        {
+          "tool": "MindMeister Basic",
+          "purpose": "Organise concepts in mind maps",
+          "access": "Account; 3 maps/person, including shared maps.",
+          "url": "https://www.mindmeister.com/"
+        }
+      ]
+    }
+  },
+  {
     "id": "S97P",
     "type": "workshop",
     "kind": "tool-table",
@@ -4767,7 +4942,8 @@
       "TOOL_WOLFRAM_PRICE",
       "TOOL_MAGIC_PRICE",
       "TOOL_FORMATIVE",
-      "TOOL_WAYGROUND"
+      "TOOL_WAYGROUND",
+      "TOOL_MINDMEISTER_LIMIT"
     ],
     "toolTable": {
       "headers": [
@@ -4791,7 +4967,7 @@
         {
           "tool": "MindMeister Personal / Pro",
           "purpose": "Unlimited maps; more exports",
-          "access": "Free plan: three maps.",
+          "access": "Basic: 3 maps/person, including shared maps.",
           "url": "https://www.mindmeister.com/pricing"
         },
         {

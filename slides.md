@@ -1095,6 +1095,14 @@ title: "Practise recall with flashcards"
 
 ---
 layout: default
+routeAlias: s67spaced
+title: "Keep checked cards in a review routine"
+---
+
+<DeckSlide id="S67SPACED" />
+
+---
+layout: default
 routeAlias: s67notes
 title: "Save a checked response as a note"
 ---
@@ -1180,6 +1188,30 @@ title: "A diagram to use during the exercise"
 ---
 
 <DeckSlide id="S72" />
+
+---
+layout: default
+routeAlias: s72rebuild
+title: "Rebuild the map and explain every arrow"
+---
+
+<DeckSlide id="S72REBUILD" />
+
+---
+layout: default
+routeAlias: s72drawio
+title: "draw.io: build the inference path"
+---
+
+<DeckSlide id="S72DRAWIO" />
+
+---
+layout: default
+routeAlias: s72excalidraw
+title: "Excalidraw: explain the RAG arrow"
+---
+
+<DeckSlide id="S72EXCALIDRAW" />
 
 ---
 layout: default
@@ -1356,6 +1388,14 @@ title: "Free tools"
 ---
 
 <DeckSlide id="S97" />
+
+---
+layout: default
+routeAlias: s97study
+title: "Free tools for maps and review"
+---
+
+<DeckSlide id="S97STUDY" />
 
 ---
 layout: default

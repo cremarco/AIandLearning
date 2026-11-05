@@ -1,0 +1,27 @@
+draw.io — recorded book test
+
+BOOK
+Foundations of Generative Artificial Intelligence, sections 1.2, 1.7.
+
+RECORDED TASK
+Using book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.
+
+00:00:00.000 Place the context before inference. Its content changes between requests.
+00:00:04.767 Add inference: the model uses its learned parameters to predict the next token.
+00:00:09.524 Complete the path from context to inference to the next token.
+00:00:14.530 Arrange the three concepts in reading order.
+00:00:19.375 Connect context to inference. The arrow means input to the model, not retraining.
+00:00:24.212 Connect inference to the next token. Generation appends that token and repeats.
+00:00:29.136 Check sections 1.2 and 1.7: prompt and context feed inference with fixed weights, followed by next-token generation.
+
+OBSERVED RESULT
+Built three labelled nodes and two attached directional connectors; added the source distinction and downloaded the editable diagram.
+
+CHECKS AGAINST THE BOOK
+Prompt/context precedes inference.
+Inference explicitly uses fixed weights.
+Next-token generation follows inference.
+The source note states new context is not new weights.
+
+EDITABLE ARTIFACT
+book-context-inference.drawio

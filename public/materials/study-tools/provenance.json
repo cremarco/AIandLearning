@@ -1,0 +1,751 @@
+{
+  "recorded": "2026-11-05",
+  "outputSize": {
+    "width": 1440,
+    "height": 900
+  },
+  "method": "Edited real @Browser captures of manual drawing, labelling and source checking. All videos and posters are 1440 x 900. Source proportions are preserved with padding. Captured scenes retain their timing with two-second reading holds and a final three-second hold; navigation and unsuccessful selector/export attempts are omitted. No reconstructed UI, synthetic drawing or AI-generated map is presented as a live action. Silent video with optional English captions.",
+  "sourceBook": {
+    "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+  },
+  "scope": "Two manual web-editor tasks completed. AnkiWeb, Knowt and MindMeister required login; the user selected accessible demos only. No learning-outcome measurement.",
+  "artifactMethod": {
+    "drawio": "Downloaded through File > Save as > Download.",
+    "excalidraw": "Selected all visible elements and copied through the UI. The copied element JSON was wrapped in the documented scene-file container. Direct disk export did not complete in this browser."
+  },
+  "cards": "Four hand-authored, book-checked TSV examples. No Anki or Knowt import/review execution is claimed.",
+  "notExecuted": [
+    {
+      "key": "ankiweb",
+      "name": "Anki / AnkiWeb",
+      "url": "https://ankiweb.net/account/login",
+      "status": "not-executed",
+      "accepted": false,
+      "reason": "Login reached; no credentials/session. User chose accessible demos only.",
+      "video": null
+    },
+    {
+      "key": "knowt",
+      "name": "Knowt",
+      "url": "https://knowt.com/",
+      "status": "not-executed",
+      "accepted": false,
+      "reason": "Login entry reached; no authenticated session. User chose accessible demos only.",
+      "video": null
+    },
+    {
+      "key": "mindmeister",
+      "name": "MindMeister",
+      "url": "https://www.mindmeister.com/app",
+      "status": "not-executed",
+      "accepted": false,
+      "reason": "Redirected to account login; no authenticated session. User chose accessible demos only.",
+      "video": null
+    }
+  ],
+  "clips": [
+    {
+      "key": "drawio",
+      "slideId": "S72DRAWIO",
+      "status": "executed",
+      "browser": "@Browser",
+      "url": "https://app.diagrams.net/",
+      "width": 1440,
+      "height": 900,
+      "durationSeconds": 37.51,
+      "captureFrameCount": 37,
+      "scenes": [
+        {
+          "phase": "move-context",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T20:17:52.490Z",
+          "caption": "Place the context before inference. Its content changes between requests."
+        },
+        {
+          "phase": "inference",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T20:18:00.793Z",
+          "caption": "Add inference: the model uses its learned parameters to predict the next token."
+        },
+        {
+          "phase": "next-token",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T20:18:08.782Z",
+          "caption": "Complete the path from context to inference to the next token."
+        },
+        {
+          "phase": "position-output",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T20:18:24.141Z",
+          "caption": "Arrange the three concepts in reading order."
+        },
+        {
+          "phase": "connect-context",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T20:18:32.321Z",
+          "caption": "Connect context to inference. The arrow means input to the model, not retraining."
+        },
+        {
+          "phase": "connect-output",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T20:18:43.078Z",
+          "caption": "Connect inference to the next token. Generation appends that token and repeats."
+        },
+        {
+          "phase": "verified-final",
+          "browserTabId": "11",
+          "startedAt": "2026-11-05T21:20:28.666Z",
+          "caption": "Check sections 1.2 and 1.7: prompt and context feed inference with fixed weights, followed by next-token generation."
+        }
+      ],
+      "sourceFrames": [
+        {
+          "phase": "move-context",
+          "sha256": "c0d847a540ddbef2391b2d9192b8834f19ef603815da30581819a65d5128bcd0",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 0
+        },
+        {
+          "phase": "move-context",
+          "sha256": "998829096f1fb9b15b5acabb66814b58ee384512efe5651a2cfcd62f8d81182a",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 2.638
+        },
+        {
+          "phase": "move-context",
+          "sha256": "998829096f1fb9b15b5acabb66814b58ee384512efe5651a2cfcd62f8d81182a",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 3.185
+        },
+        {
+          "phase": "move-context",
+          "sha256": "998829096f1fb9b15b5acabb66814b58ee384512efe5651a2cfcd62f8d81182a",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 3.723
+        },
+        {
+          "phase": "move-context",
+          "sha256": "998829096f1fb9b15b5acabb66814b58ee384512efe5651a2cfcd62f8d81182a",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 4.265
+        },
+        {
+          "phase": "inference",
+          "sha256": "998829096f1fb9b15b5acabb66814b58ee384512efe5651a2cfcd62f8d81182a",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 4.767
+        },
+        {
+          "phase": "inference",
+          "sha256": "2ef4802cfc960ebb027373359bd7cc0c7dd1f9276200981528cd235f630effe6",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 7.407
+        },
+        {
+          "phase": "inference",
+          "sha256": "2ef4802cfc960ebb027373359bd7cc0c7dd1f9276200981528cd235f630effe6",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 7.948
+        },
+        {
+          "phase": "inference",
+          "sha256": "2ef4802cfc960ebb027373359bd7cc0c7dd1f9276200981528cd235f630effe6",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 8.486
+        },
+        {
+          "phase": "inference",
+          "sha256": "2ef4802cfc960ebb027373359bd7cc0c7dd1f9276200981528cd235f630effe6",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 9.021
+        },
+        {
+          "phase": "next-token",
+          "sha256": "2ef4802cfc960ebb027373359bd7cc0c7dd1f9276200981528cd235f630effe6",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 9.524
+        },
+        {
+          "phase": "next-token",
+          "sha256": "3376a1df0790420cf76ee9bdb9abe96c59a756a35cec43a0aab210a4093a628c",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 12.307
+        },
+        {
+          "phase": "next-token",
+          "sha256": "3376a1df0790420cf76ee9bdb9abe96c59a756a35cec43a0aab210a4093a628c",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 12.853
+        },
+        {
+          "phase": "next-token",
+          "sha256": "3376a1df0790420cf76ee9bdb9abe96c59a756a35cec43a0aab210a4093a628c",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 13.458
+        },
+        {
+          "phase": "next-token",
+          "sha256": "3376a1df0790420cf76ee9bdb9abe96c59a756a35cec43a0aab210a4093a628c",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 14.027
+        },
+        {
+          "phase": "position-output",
+          "sha256": "3376a1df0790420cf76ee9bdb9abe96c59a756a35cec43a0aab210a4093a628c",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 14.53
+        },
+        {
+          "phase": "position-output",
+          "sha256": "5a5ee021be4fb2ab049a86a2ee24d16cb8d305fd23cb2eaa69ec6d06eb8d3ff8",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 17.271
+        },
+        {
+          "phase": "position-output",
+          "sha256": "5a5ee021be4fb2ab049a86a2ee24d16cb8d305fd23cb2eaa69ec6d06eb8d3ff8",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 17.799
+        },
+        {
+          "phase": "position-output",
+          "sha256": "5a5ee021be4fb2ab049a86a2ee24d16cb8d305fd23cb2eaa69ec6d06eb8d3ff8",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 18.338
+        },
+        {
+          "phase": "position-output",
+          "sha256": "5a5ee021be4fb2ab049a86a2ee24d16cb8d305fd23cb2eaa69ec6d06eb8d3ff8",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 18.873
+        },
+        {
+          "phase": "connect-context",
+          "sha256": "5a5ee021be4fb2ab049a86a2ee24d16cb8d305fd23cb2eaa69ec6d06eb8d3ff8",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 19.375
+        },
+        {
+          "phase": "connect-context",
+          "sha256": "8c9b67f385f7857d5b9efe531efd2df95522d97ae4fa74173dde6172b0d426df",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 22.008
+        },
+        {
+          "phase": "connect-context",
+          "sha256": "8c9b67f385f7857d5b9efe531efd2df95522d97ae4fa74173dde6172b0d426df",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 22.563
+        },
+        {
+          "phase": "connect-context",
+          "sha256": "8c9b67f385f7857d5b9efe531efd2df95522d97ae4fa74173dde6172b0d426df",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 23.097
+        },
+        {
+          "phase": "connect-context",
+          "sha256": "8c9b67f385f7857d5b9efe531efd2df95522d97ae4fa74173dde6172b0d426df",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 23.71
+        },
+        {
+          "phase": "connect-output",
+          "sha256": "099d1693d797bc7e6c8a65c77f15835d9474e3bb46aae627f842e4fed0f0691e",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 24.212
+        },
+        {
+          "phase": "connect-output",
+          "sha256": "4362585d899b697ae6f03dde85256b64d8d5747670e6a62efe2c2fc2cb7ac360",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 26.894
+        },
+        {
+          "phase": "connect-output",
+          "sha256": "4362585d899b697ae6f03dde85256b64d8d5747670e6a62efe2c2fc2cb7ac360",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 27.473
+        },
+        {
+          "phase": "connect-output",
+          "sha256": "4362585d899b697ae6f03dde85256b64d8d5747670e6a62efe2c2fc2cb7ac360",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 28.102
+        },
+        {
+          "phase": "connect-output",
+          "sha256": "4362585d899b697ae6f03dde85256b64d8d5747670e6a62efe2c2fc2cb7ac360",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 28.633
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 29.136
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 31.221
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 31.855
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 32.394
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 32.936
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 33.471
+        },
+        {
+          "phase": "verified-final",
+          "sha256": "508d510ecf8e813cc138e6894590ea6c90c0a0594b949598fcb99b8a19bc6ed7",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 34.008
+        }
+      ],
+      "task": "Using book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.",
+      "observed": "Built three labelled nodes and two attached directional connectors; added the source distinction and downloaded the editable diagram.",
+      "tests": [
+        "Prompt/context precedes inference.",
+        "Inference explicitly uses fixed weights.",
+        "Next-token generation follows inference.",
+        "The source note states new context is not new weights."
+      ],
+      "videoSha256": "4d40a5af7f25066cfedc7fe61657e76b39936c3b1f03495e8953d3205d394f93",
+      "posterSha256": "3d2b459db6465d6d39079aca8092450051aa3e0b8ed1ff4cd0088f78da446d4d",
+      "artifact": "book-context-inference.drawio",
+      "artifactSha256": "d5b4cc88b38da95e6ec3eb1211e96c99d69ec177075a266442e0d6a1e99fba86"
+    },
+    {
+      "key": "excalidraw",
+      "slideId": "S72EXCALIDRAW",
+      "status": "executed",
+      "browser": "@Browser",
+      "url": "https://excalidraw.com/",
+      "width": 1440,
+      "height": 900,
+      "durationSeconds": 26.956,
+      "captureFrameCount": 27,
+      "scenes": [
+        {
+          "phase": "draw-context",
+          "browserTabId": "12",
+          "startedAt": "2026-11-05T21:18:48.331Z",
+          "caption": "Rebuild the book relationship with a hand-drawn box for retrieved passages."
+        },
+        {
+          "phase": "label-context",
+          "browserTabId": "12",
+          "startedAt": "2026-11-05T21:18:55.502Z",
+          "caption": "Retrieved passages become part of the prompt context: section 1.7."
+        },
+        {
+          "phase": "explain-arrow",
+          "browserTabId": "12",
+          "startedAt": "2026-11-05T21:19:03.737Z",
+          "caption": "Label the arrow: retrieval adds selected passages to the context."
+        },
+        {
+          "phase": "book-check",
+          "browserTabId": "12",
+          "startedAt": "2026-11-05T21:19:12.875Z",
+          "caption": "Add the source check: RAG changes context, not model weights. Retrieval can still fail."
+        },
+        {
+          "phase": "final",
+          "browserTabId": "12",
+          "startedAt": "2026-11-05T21:20:24.974Z",
+          "caption": "Explain each arrow aloud and check it against section 1.7 before comparing with an AI visual."
+        }
+      ],
+      "sourceFrames": [
+        {
+          "phase": "draw-context",
+          "sha256": "69b9ea4549baa63713efbd28f0a0b54b11e631d76763c27df05b0cd280ba1a61",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 0
+        },
+        {
+          "phase": "draw-context",
+          "sha256": "5c7d2658ac28615de973a669982b578e99b8116b2487cf8cab3a8d4a9f3d7b93",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 2.52
+        },
+        {
+          "phase": "draw-context",
+          "sha256": "52b3aab2a22cbd0834a4b6d6869113599cda2b29ff1c98461608df2c4107b780",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 3.055
+        },
+        {
+          "phase": "draw-context",
+          "sha256": "5c7d2658ac28615de973a669982b578e99b8116b2487cf8cab3a8d4a9f3d7b93",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 3.604
+        },
+        {
+          "phase": "draw-context",
+          "sha256": "52b3aab2a22cbd0834a4b6d6869113599cda2b29ff1c98461608df2c4107b780",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 4.132
+        },
+        {
+          "phase": "label-context",
+          "sha256": "52b3aab2a22cbd0834a4b6d6869113599cda2b29ff1c98461608df2c4107b780",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 4.634
+        },
+        {
+          "phase": "label-context",
+          "sha256": "7a0d53f447626c85157208f837932d3d33f09a5b4d1efb4b108bb358ee56d93b",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 7.154
+        },
+        {
+          "phase": "label-context",
+          "sha256": "7a0d53f447626c85157208f837932d3d33f09a5b4d1efb4b108bb358ee56d93b",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 7.693
+        },
+        {
+          "phase": "label-context",
+          "sha256": "7a0d53f447626c85157208f837932d3d33f09a5b4d1efb4b108bb358ee56d93b",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 8.233
+        },
+        {
+          "phase": "label-context",
+          "sha256": "7a0d53f447626c85157208f837932d3d33f09a5b4d1efb4b108bb358ee56d93b",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 8.758
+        },
+        {
+          "phase": "explain-arrow",
+          "sha256": "7a0d53f447626c85157208f837932d3d33f09a5b4d1efb4b108bb358ee56d93b",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 9.26
+        },
+        {
+          "phase": "explain-arrow",
+          "sha256": "a8351a323178f6fe658772da31eb958894f7d0cfd10387d4b596ec16469e7690",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 11.791
+        },
+        {
+          "phase": "explain-arrow",
+          "sha256": "a8351a323178f6fe658772da31eb958894f7d0cfd10387d4b596ec16469e7690",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 12.318
+        },
+        {
+          "phase": "explain-arrow",
+          "sha256": "a8351a323178f6fe658772da31eb958894f7d0cfd10387d4b596ec16469e7690",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 12.85
+        },
+        {
+          "phase": "explain-arrow",
+          "sha256": "a8351a323178f6fe658772da31eb958894f7d0cfd10387d4b596ec16469e7690",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 13.384
+        },
+        {
+          "phase": "book-check",
+          "sha256": "a8351a323178f6fe658772da31eb958894f7d0cfd10387d4b596ec16469e7690",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 13.887
+        },
+        {
+          "phase": "book-check",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 16.223
+        },
+        {
+          "phase": "book-check",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 16.747
+        },
+        {
+          "phase": "book-check",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 17.282
+        },
+        {
+          "phase": "book-check",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 17.821
+        },
+        {
+          "phase": "final",
+          "sha256": "c7dbc6ba4c8046a8f6f68fe6459ca7b99ff6fdd53bbbc48c3337ce432feb091a",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 18.323
+        },
+        {
+          "phase": "final",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 20.67
+        },
+        {
+          "phase": "final",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 21.2
+        },
+        {
+          "phase": "final",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 21.816
+        },
+        {
+          "phase": "final",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 22.356
+        },
+        {
+          "phase": "final",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 22.898
+        },
+        {
+          "phase": "final",
+          "sha256": "a62ec15357ad5ee22b4710f8e9358fb44cb49ca9047823aa03171e245113a154",
+          "sourceSize": [
+            1280,
+            720
+          ],
+          "atSeconds": 23.447
+        }
+      ],
+      "task": "Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.",
+      "observed": "Drew and labelled two nodes, connected them with an adds-to arrow, and annotated fixed weights plus the possibility of irrelevant retrieval.",
+      "tests": [
+        "Retrieved passages feed prompt context.",
+        "The arrow is explicitly labelled adds to.",
+        "The source note preserves fixed weights.",
+        "The note states that retrieval may be irrelevant."
+      ],
+      "videoSha256": "7959ccf994e31b93dd30b0e00de0921aa7e064d1a8ac51a65efd5d5ebab080dc",
+      "posterSha256": "b8bc1dde3f7490363046113e17cb7e994e01843bedde18552dc31823464b8932",
+      "artifact": "book-rag.excalidraw",
+      "artifactSha256": "9e3727b5d4b6bbfdf5e332adf0b034cc5266032fa64da6bcb48548dfee991bd5"
+    }
+  ]
+}

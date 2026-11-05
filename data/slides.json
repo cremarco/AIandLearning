@@ -4743,8 +4743,54 @@
     "links": []
   },
   {
+    "type": "workshop",
+    "section": "study",
+    "body": [
+      "Book §1.2: Does adding a definition to a prompt update the model’s weights? Explain why before revealing the answer."
+    ],
+    "audience": "both",
+    "id": "S67SPACED",
+    "kind": "compare",
+    "stage": "Learner · spaced practice",
+    "title": "Keep checked cards in a review routine",
+    "message": "Andrea reuses questions from the same book, then answers before revealing.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_ANKI",
+      "TOOL_ANKIWEB",
+      "TOOL_KNOWT"
+    ],
+    "comparison": [
+      {
+        "label": "Anki / AnkiWeb",
+        "text": "Create or import checked cards in free Anki Desktop; sync and review in AnkiWeb with an account. Rate recall honestly to schedule the next review."
+      },
+      {
+        "label": "Knowt",
+        "text": "Create a set from checked questions and use its study modes, including spaced repetition. An account is required; free AI features have limits."
+      }
+    ],
+    "decision": "The downloadable cards are prepared examples; these account-based workflows were not executed in this session.",
+    "links": [
+      {
+        "label": "Book cards · TSV",
+        "url": "./materials/study-tools/book-cards.tsv",
+        "download": true
+      },
+      {
+        "label": "AnkiWeb",
+        "url": "https://ankiweb.net/"
+      },
+      {
+        "label": "Knowt",
+        "url": "https://knowt.com/"
+      }
+    ],
+    "number": 136
+  },
+  {
     "id": "S67NOTES",
-    "number": 136,
+    "number": 137,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4776,7 +4822,7 @@
   },
   {
     "id": "S67REPORTS",
-    "number": 137,
+    "number": 138,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4808,7 +4854,7 @@
   },
   {
     "id": "S67AUDIO",
-    "number": 138,
+    "number": 139,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4840,7 +4886,7 @@
   },
   {
     "id": "S67VIDEO",
-    "number": 139,
+    "number": 140,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4872,7 +4918,7 @@
   },
   {
     "id": "S67INFO",
-    "number": 140,
+    "number": 141,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4904,7 +4950,7 @@
   },
   {
     "id": "S67SLIDES",
-    "number": 141,
+    "number": 142,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4936,7 +4982,7 @@
   },
   {
     "id": "S67TABLES",
-    "number": 142,
+    "number": 143,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4968,7 +5014,7 @@
   },
   {
     "id": "S67SHARE",
-    "number": 143,
+    "number": 144,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -5000,7 +5046,7 @@
   },
   {
     "id": "S70",
-    "number": 144,
+    "number": 145,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -5037,7 +5083,7 @@
   },
   {
     "id": "S71",
-    "number": 145,
+    "number": 146,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -5082,7 +5128,7 @@
   },
   {
     "id": "S72",
-    "number": 146,
+    "number": 147,
     "type": "workshop",
     "kind": "diagram",
     "section": "study",
@@ -5117,8 +5163,112 @@
     "links": []
   },
   {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72REBUILD",
+    "kind": "compare",
+    "stage": "Learner · reconstruct and explain",
+    "title": "Rebuild the map and explain every arrow",
+    "message": "Close the book, reconstruct one relationship, then reopen §§1.2 and 1.7 to check it.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_DRAWIO",
+      "TOOL_EXCALIDRAW",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "comparison": [
+      {
+        "label": "draw.io",
+        "text": "Build a precise flow: prompt and context → inference with fixed weights → next token. Label what each arrow means."
+      },
+      {
+        "label": "Excalidraw",
+        "text": "Sketch how retrieved passages enter the prompt context. Add the boundary: RAG does not retrain the weights."
+      },
+      {
+        "label": "MindMeister",
+        "text": "Alternative for a branching mind map. Basic requires an account and allows three maps per person, including maps shared with you."
+      }
+    ],
+    "decision": "Compare your reconstruction with the AI visual: identify one missing relationship and justify a correction.",
+    "number": 148,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72DRAWIO",
+    "kind": "tool-demo",
+    "stage": "draw.io · recorded book test",
+    "tool": "drawio",
+    "title": "draw.io: build the inference path",
+    "message": "A student-built flow from the workshop book.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_DRAWIO",
+      "TOOL_DEMO_DRAWIO"
+    ],
+    "prompt": "Using book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.",
+    "promptLabel": "Recorded task",
+    "decision": "New context changes the input; ordinary inference keeps the learned parameters fixed.",
+    "media": {
+      "type": "video",
+      "src": "materials/study-tools/drawio.mp4",
+      "poster": "materials/study-tools/drawio-poster.jpg",
+      "captions": "materials/study-tools/drawio.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "draw.io: real manual web-editor task using the workshop book.",
+      "caption": "Recorded book test · 38 s",
+      "source": "https://app.diagrams.net/",
+      "transcript": "draw.io — recorded book test\n\nBOOK\nFoundations of Generative Artificial Intelligence, sections 1.2, 1.7.\n\nRECORDED TASK\nUsing book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.\n\n00:00:00.000 Place the context before inference. Its content changes between requests.\n00:00:04.767 Add inference: the model uses its learned parameters to predict the next token.\n00:00:09.524 Complete the path from context to inference to the next token.\n00:00:14.530 Arrange the three concepts in reading order.\n00:00:19.375 Connect context to inference. The arrow means input to the model, not retraining.\n00:00:24.212 Connect inference to the next token. Generation appends that token and repeats.\n00:00:29.136 Check sections 1.2 and 1.7: prompt and context feed inference with fixed weights, followed by next-token generation.\n\nOBSERVED RESULT\nBuilt three labelled nodes and two attached directional connectors; added the source distinction and downloaded the editable diagram.\n\nCHECKS AGAINST THE BOOK\nPrompt/context precedes inference.\nInference explicitly uses fixed weights.\nNext-token generation follows inference.\nThe source note states new context is not new weights.\n\nEDITABLE ARTIFACT\nbook-context-inference.drawio\n"
+    },
+    "number": 149,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72EXCALIDRAW",
+    "kind": "tool-demo",
+    "stage": "Excalidraw · recorded book test",
+    "tool": "excalidraw",
+    "title": "Excalidraw: explain the RAG arrow",
+    "message": "A freehand reconstruction of a relationship in §1.7.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_EXCALIDRAW",
+      "TOOL_DEMO_EXCALIDRAW"
+    ],
+    "prompt": "Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.",
+    "promptLabel": "Recorded task",
+    "decision": "Explain why an irrelevant retrieved passage can still produce an unreliable answer.",
+    "media": {
+      "type": "video",
+      "src": "materials/study-tools/excalidraw.mp4",
+      "poster": "materials/study-tools/excalidraw-poster.jpg",
+      "captions": "materials/study-tools/excalidraw.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": false,
+      "alt": "Excalidraw: real manual web-editor task using the workshop book.",
+      "caption": "Recorded book test · 27 s",
+      "source": "https://excalidraw.com/",
+      "transcript": "Excalidraw — recorded book test\n\nBOOK\nFoundations of Generative Artificial Intelligence, sections 1.7.\n\nRECORDED TASK\nUsing book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.\n\n00:00:00.000 Rebuild the book relationship with a hand-drawn box for retrieved passages.\n00:00:04.634 Retrieved passages become part of the prompt context: section 1.7.\n00:00:09.260 Label the arrow: retrieval adds selected passages to the context.\n00:00:13.887 Add the source check: RAG changes context, not model weights. Retrieval can still fail.\n00:00:18.323 Explain each arrow aloud and check it against section 1.7 before comparing with an AI visual.\n\nOBSERVED RESULT\nDrew and labelled two nodes, connected them with an adds-to arrow, and annotated fixed weights plus the possibility of irrelevant retrieval.\n\nCHECKS AGAINST THE BOOK\nRetrieved passages feed prompt context.\nThe arrow is explicitly labelled adds to.\nThe source note preserves fixed weights.\nThe note states that retrieval may be irrelevant.\n\nEDITABLE ARTIFACT\nbook-rag.excalidraw\n"
+    },
+    "number": 150,
+    "links": []
+  },
+  {
     "id": "S82",
-    "number": 147,
+    "number": 151,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5149,7 +5299,7 @@
   },
   {
     "id": "S83",
-    "number": 148,
+    "number": 152,
     "type": "workshop",
     "kind": "procedure",
     "section": "teachers",
@@ -5180,7 +5330,7 @@
   },
   {
     "id": "S84",
-    "number": 149,
+    "number": 153,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5212,7 +5362,7 @@
   },
   {
     "id": "S84A",
-    "number": 150,
+    "number": 154,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5248,7 +5398,7 @@
   },
   {
     "id": "S84B",
-    "number": 151,
+    "number": 155,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5284,7 +5434,7 @@
   },
   {
     "id": "S84C",
-    "number": 152,
+    "number": 156,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5320,7 +5470,7 @@
   },
   {
     "id": "S85",
-    "number": 153,
+    "number": 157,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5342,7 +5492,7 @@
   },
   {
     "id": "S85B",
-    "number": 154,
+    "number": 158,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5370,7 +5520,7 @@
   },
   {
     "id": "S85C",
-    "number": 155,
+    "number": 159,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5398,7 +5548,7 @@
   },
   {
     "id": "S86",
-    "number": 156,
+    "number": 160,
     "type": "workshop",
     "kind": "procedure",
     "section": "teachers",
@@ -5438,7 +5588,7 @@
   },
   {
     "id": "S87",
-    "number": 157,
+    "number": 161,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5472,7 +5622,7 @@
   },
   {
     "id": "S88",
-    "number": 158,
+    "number": 162,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5504,7 +5654,7 @@
   },
   {
     "id": "S89",
-    "number": 159,
+    "number": 163,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5539,7 +5689,7 @@
   },
   {
     "id": "S89A",
-    "number": 160,
+    "number": 164,
     "type": "workshop",
     "kind": "activity",
     "section": "teachers",
@@ -5570,7 +5720,7 @@
   },
   {
     "id": "S90",
-    "number": 161,
+    "number": 165,
     "type": "workshop",
     "kind": "accessibility",
     "section": "accessibility",
@@ -5604,7 +5754,7 @@
   },
   {
     "id": "S91",
-    "number": 162,
+    "number": 166,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -5644,7 +5794,7 @@
   },
   {
     "id": "S92",
-    "number": 163,
+    "number": 167,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -5668,7 +5818,7 @@
   },
   {
     "id": "S93",
-    "number": 164,
+    "number": 168,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -5703,7 +5853,7 @@
   },
   {
     "id": "S94",
-    "number": 165,
+    "number": 169,
     "type": "workshop",
     "kind": "assessment",
     "section": "accessibility",
@@ -5727,7 +5877,7 @@
   },
   {
     "id": "S95",
-    "number": 166,
+    "number": 170,
     "type": "workshop",
     "kind": "diagram",
     "section": "transfer",
@@ -5762,7 +5912,7 @@
   },
   {
     "id": "S96",
-    "number": 167,
+    "number": 171,
     "type": "workshop",
     "kind": "compare",
     "section": "transfer",
@@ -5884,7 +6034,67 @@
         }
       ]
     },
-    "number": 168,
+    "number": 172,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "resources",
+    "body": [],
+    "audience": "both",
+    "id": "S97STUDY",
+    "kind": "tool-table",
+    "stage": "Resources · free tools",
+    "title": "Free tools for maps and review",
+    "message": "Choose a drawing surface or a review routine for the same book.",
+    "sources": [
+      "TOOL_DRAWIO",
+      "TOOL_EXCALIDRAW",
+      "TOOL_ANKI",
+      "TOOL_ANKIWEB",
+      "TOOL_KNOWT",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "toolTable": {
+      "headers": [
+        "Tool",
+        "Use",
+        "Access and limits"
+      ],
+      "rows": [
+        {
+          "tool": "draw.io",
+          "purpose": "Build labelled flows and diagrams",
+          "access": "Free editor; no account required.",
+          "url": "https://app.diagrams.net/"
+        },
+        {
+          "tool": "Excalidraw",
+          "purpose": "Sketch and explain relationships",
+          "access": "Free local canvas; save an editable copy.",
+          "url": "https://excalidraw.com/"
+        },
+        {
+          "tool": "Anki / AnkiWeb",
+          "purpose": "Review checked cards over time",
+          "access": "Desktop + web free; web account. Official iOS app paid.",
+          "url": "https://apps.ankiweb.net/"
+        },
+        {
+          "tool": "Knowt",
+          "purpose": "Flashcards and spaced practice",
+          "access": "Free study modes; account. AI usage limits.",
+          "url": "https://knowt.com/"
+        },
+        {
+          "tool": "MindMeister Basic",
+          "purpose": "Organise concepts in mind maps",
+          "access": "Account; 3 maps/person, including shared maps.",
+          "url": "https://www.mindmeister.com/"
+        }
+      ]
+    },
+    "number": 173,
     "links": []
   },
   {
@@ -5906,7 +6116,8 @@
       "TOOL_WOLFRAM_PRICE",
       "TOOL_MAGIC_PRICE",
       "TOOL_FORMATIVE",
-      "TOOL_WAYGROUND"
+      "TOOL_WAYGROUND",
+      "TOOL_MINDMEISTER_LIMIT"
     ],
     "toolTable": {
       "headers": [
@@ -5930,7 +6141,7 @@
         {
           "tool": "MindMeister Personal / Pro",
           "purpose": "Unlimited maps; more exports",
-          "access": "Free plan: three maps.",
+          "access": "Basic: 3 maps/person, including shared maps.",
           "url": "https://www.mindmeister.com/pricing"
         },
         {
@@ -5971,7 +6182,7 @@
         }
       ]
     },
-    "number": 169,
+    "number": 174,
     "links": []
   },
   {
@@ -6115,7 +6326,7 @@
         "download": true
       }
     ],
-    "number": 170
+    "number": 175
   },
   {
     "id": "S102",
@@ -6195,7 +6406,7 @@
         "shortTitle": "Making audio and video accessible"
       }
     ],
-    "number": 171,
+    "number": 176,
     "links": []
   },
   {
@@ -6217,6 +6428,6 @@
         "url": "mailto:marco.cremaschi@unimib.it"
       }
     ],
-    "number": 172
+    "number": 177
   }
 ]

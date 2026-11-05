@@ -1,6 +1,6 @@
 BEYOND PROMPTING — STUDY, UNDERSTAND, ASSESS
 Marco Cremaschi · November 2026
-172 slides in one complete sequence. Participants observe the method; Andrea is a fictional student in a teaching scenario.
+177 slides in one complete sequence. Participants observe the method; Andrea is a fictional student in a teaching scenario.
 Public materials in English.
 
 S53DETAILQUIZ · /quiz
@@ -272,6 +272,12 @@ Explain context in three short steps: definition, example, limitation of the exa
 
 S70 · Napkin: start with checked text
 Training updates parameters. During inference, the context text becomes a token sequence. The model calculates probabilities for the next token. A selection rule chooses a token and the process repeats.
+
+S72DRAWIO · draw.io: build the inference path
+Using book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.
+
+S72EXCALIDRAW · Excalidraw: explain the RAG arrow
+Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.
 
 S83 · MagicSchool: draft a rubric
 Prepare a rubric for the attached assignment. Three criteria: concepts and relationships; process explanation; application and checking. Four levels with observable descriptors. Assess GenAI knowledge, without rewarding only polished prose or code. Distinguish the assisted product from the independent explanation.

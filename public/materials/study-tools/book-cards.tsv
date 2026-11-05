@@ -1,0 +1,4 @@
+Does adding a definition to a prompt update the weights during ordinary inference?	No. It changes the context used for the calculation; the learned parameters stay fixed. Book §1.2.
+What does RAG add to the generation process?	It retrieves selected passages and supplies them as context. This does not retrain the model weights. Book §1.7.
+Can a retrieved passage guarantee a correct answer?	No. Retrieval can miss the relevant passage, include an irrelevant one, or be misinterpreted. Check the cited evidence. Book §1.7.
+What changes after a next token is selected?	The token is appended to the context and the inference cycle repeats; the learned weights remain fixed. Book §1.7.

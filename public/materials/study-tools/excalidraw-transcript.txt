@@ -1,0 +1,25 @@
+Excalidraw — recorded book test
+
+BOOK
+Foundations of Generative Artificial Intelligence, sections 1.7.
+
+RECORDED TASK
+Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.
+
+00:00:00.000 Rebuild the book relationship with a hand-drawn box for retrieved passages.
+00:00:04.634 Retrieved passages become part of the prompt context: section 1.7.
+00:00:09.260 Label the arrow: retrieval adds selected passages to the context.
+00:00:13.887 Add the source check: RAG changes context, not model weights. Retrieval can still fail.
+00:00:18.323 Explain each arrow aloud and check it against section 1.7 before comparing with an AI visual.
+
+OBSERVED RESULT
+Drew and labelled two nodes, connected them with an adds-to arrow, and annotated fixed weights plus the possibility of irrelevant retrieval.
+
+CHECKS AGAINST THE BOOK
+Retrieved passages feed prompt context.
+The arrow is explicitly labelled adds to.
+The source note preserves fixed weights.
+The note states that retrieval may be irrelevant.
+
+EDITABLE ARTIFACT
+book-rag.excalidraw
