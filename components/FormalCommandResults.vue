@@ -2,7 +2,8 @@
 import { computed, ref } from 'vue'
 import type { PromptCommand } from '../utils/deck'
 import { assetUrl } from '../utils/assets'
-import PromptBlock from './PromptBlock.vue'
+import CommandTag from './CommandTag.vue'
+import EmphasisText from './EmphasisText.vue'
 
 const props = defineProps<{ commands: PromptCommand[] }>()
 const selectedIndex = ref(0)
@@ -11,31 +12,43 @@ const result = computed(() => selected.value?.result)
 </script>
 
 <template>
-  <div class="formal-command-results grid grid-cols-1 md:grid-cols-[380px_minmax(0,1fr)]">
-    <nav aria-label="Recorded formal actions">
-      <ul class="menu menu-vertical formal-command-menu">
-        <li v-for="(command, index) in commands" :key="command.command">
-          <button type="button" :class="{ 'menu-active': selectedIndex === index }" :aria-pressed="selectedIndex === index" @click.stop="selectedIndex = index">
-            {{ command.command }}
-          </button>
-        </li>
-      </ul>
-      <PromptBlock v-if="selected?.command === 'Study' && result" class="formal-prompt" label="Prompt after selecting Study" :text="result.instruction" />
-      <template v-else>
-        <p class="formal-instruction-label">Action</p>
-        <p class="formal-instruction">{{ result?.instruction }}</p>
-      </template>
-    </nav>
-    <section v-if="result" class="formal-command-output" :data-command="selected.command" :data-result-status="result.status" aria-live="polite">
-      <h2>{{ result.label }}</h2>
-      <p v-if="result.text" class="formal-response">{{ result.text }}</p>
-      <img v-else class="formal-result-image" :src="assetUrl(result.media.src)" :alt="result.media.alt" />
-      <p class="formal-result-caption">{{ result.media.caption }}</p>
-      <div class="formal-result-links">
-        <a class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener">Open original capture</a>
-        <a v-if="result.inputCapture" class="link" :href="assetUrl(result.inputCapture)" target="_blank" rel="noopener">Study selection and prompt</a>
+  <div class="formal-command-results" :class="selected?.command === 'Study' ? 'formal-study-chat' : 'grid grid-cols-1 md:grid-cols-[380px_minmax(0,1fr)]'">
+    <section v-if="selected?.command === 'Study' && result" class="formal-study-conversation" :data-command="selected.command" :data-result-status="result.status" aria-label="Recorded Study conversation" aria-live="polite">
+      <div class="chat chat-end">
+        <div class="chat-header">You · Prompt after selecting Study</div>
+        <div class="chat-bubble max-w-[850px] bg-base-200 text-base-content"><CommandTag text="/Study" class="mr-2" /><EmphasisText :text="result.instruction" /></div>
+      </div>
+      <div class="chat chat-start">
+        <div class="chat-header">ChatGPT · {{ result.label }}</div>
+        <div class="chat-bubble max-w-[1060px]"><EmphasisText :text="result.text" /></div>
+        <div class="chat-footer formal-study-evidence">
+          <p>{{ result.media.caption }}</p>
+        </div>
       </div>
     </section>
+    <template v-else>
+      <nav aria-label="Recorded formal actions">
+        <ul v-if="commands.length > 1" class="menu menu-vertical formal-command-menu">
+          <li v-for="(command, index) in commands" :key="command.command">
+            <button type="button" :class="{ 'menu-active': selectedIndex === index }" :aria-pressed="selectedIndex === index" @click.stop="selectedIndex = index">
+              <CommandTag :text="command.command" />
+            </button>
+          </li>
+        </ul>
+        <p class="formal-instruction-label">Action</p>
+        <CommandTag v-if="selected" :text="selected.command" class="mt-2" />
+        <p class="formal-instruction">{{ result?.instruction }}</p>
+      </nav>
+      <section v-if="result" class="formal-command-output" :data-command="selected.command" :data-result-status="result.status" aria-live="polite">
+        <h2>{{ result.label }}</h2>
+        <p v-if="result.text" class="formal-response">{{ result.text }}</p>
+        <img v-else class="formal-result-image" :src="assetUrl(result.media.src)" :alt="result.media.alt" />
+        <p class="formal-result-caption">{{ result.media.caption }}</p>
+        <div class="formal-result-links">
+          <a v-if="selected.command !== 'Study'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener">Open original capture</a>
+        </div>
+      </section>
+    </template>
   </div>
 </template>
 
@@ -48,8 +61,12 @@ const result = computed(() => selected.value?.result)
 .slidev-layout .formal-command-menu button.menu-active { color:var(--deck-cyan); background:var(--deck-surface); font-weight:700; }
 .slidev-layout .formal-instruction-label { margin-top:20px; font-size:16px; color:var(--deck-muted); }
 .slidev-layout .formal-instruction { margin-top:7px; font-size:18px; line-height:1.3; }
-.formal-prompt { margin-top:12px; font-size:16px; }
-.formal-prompt :deep(.prompt-label) { font-size:15px; margin-bottom:7px; }
+.formal-study-conversation { width:100%; display:flex; flex-direction:column; gap:12px; }
+.formal-study-conversation .chat { padding-block:0; row-gap:6px; }
+.formal-study-conversation .chat-header { font-size:17px; line-height:1.25; font-weight:650; color:var(--deck-cyan); }
+.formal-study-conversation .chat-end .chat-header { color:var(--deck-muted); }
+.formal-study-conversation .chat-bubble { padding:12px 20px; white-space:pre-line; font-size:21px; line-height:1.3; }
+.formal-study-conversation .formal-study-evidence { display:flex; flex-direction:column; gap:6px; padding-top:3px; color:var(--deck-muted); font-size:16px; line-height:1.25; }
 .formal-command-output { display:flex; min-width:0; flex-direction:column; gap:13px; padding-top:4px; }
 .slidev-layout .formal-command-output h2 { font-size:23px; color:var(--deck-cyan); }
 .slidev-layout .formal-response { white-space:pre-line; font-size:22px; line-height:1.3; }

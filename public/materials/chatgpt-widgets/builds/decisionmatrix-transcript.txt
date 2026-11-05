@@ -1,0 +1,11 @@
+/decisionmatrix — prompt and widget generation
+
+PROMPT
+/decisionmatrix Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 The original prompt is sent in ChatGPT.
+00:00:04.578 ChatGPT generates the response and builds the widget.
+00:00:21.395 The generated widget is ready to use.
+
+GENERATED RESULT
+Decision Matrix: Training vs. InferenceUniversity level · Based on §1.2, Table 1 and Figure 1 of the attached chapterUse this matrix to identify what changes in three different interventions.CriterionTrainingInferenceRetrieval (RAG)Updates parameters?YesNoNoUses existing model?During optimizationYesYesChanges available context?Training examples supply learning signalsInput may changeRetrieved passages suppliedMain resultChanged modelSelected outputGenerated answerApply the matrix1. A model's weights are optimized to reduce prediction error.Reveal classification2. A new prompt produces a different answer with fixed weights.Reveal classification3. External documents are retrieved and supplied to generation.Reveal classificationKey takeaway: Training changes parameters; ordinary inference uses fixed parameters; retrieval supplies external information as context.

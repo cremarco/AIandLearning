@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import type { CommandCategory, PromptCommand } from '../utils/deck'
+import { getShortcutVideo } from '../utils/shortcut-videos'
+import CommandTag from './CommandTag.vue'
+import PromptVideoDialog from './PromptVideoDialog.vue'
+const player = ref<InstanceType<typeof PromptVideoDialog>>()
 const props = withDefaults(defineProps<{ commands: PromptCommand[]; category?: CommandCategory }>(), { category: 'informal' })
 const labels = computed(() => props.category === 'formal-web'
   ? { column: 'Menu action', description: 'What it does', table: 'Formal ChatGPT web actions' }
   : props.category === 'formal-desktop'
     ? { column: 'Official command', description: 'What it does', table: 'Formal desktop slash commands' }
-    : { column: 'Informal shortcut', description: 'What you can ask for', table: 'Informal prompt shortcuts' })
+    : { column: 'Tested prompt label', description: 'Observed interactive output', table: 'Tested interactive prompt labels' })
 const columns = computed(() => {
   const middle = Math.ceil(props.commands.length / 2)
   return [props.commands.slice(0, middle), props.commands.slice(middle)]
@@ -20,12 +24,19 @@ const columns = computed(() => {
         <thead><tr><th scope="col">{{ labels.column }}</th><th scope="col">{{ labels.description }}</th></tr></thead>
         <tbody>
           <tr v-for="row in rows" :key="row.command">
-            <th scope="row"><span v-if="category === 'formal-web'">{{ row.command }}</span><code v-else>{{ row.command }}</code></th>
+            <th scope="row">
+              <button v-if="getShortcutVideo(row.command)" class="btn btn-link command-video-trigger" type="button" :aria-label="`Play ${row.command} video`" @click.stop="player?.open(row.command)">
+                <CommandTag :text="row.command" /><span aria-hidden="true" class="command-video-icon">▶</span>
+              </button>
+              <CommandTag v-else :text="row.command" />
+            </th>
             <td>{{ row.description }}</td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p v-if="category === 'informal'" class="command-video-hint">Select a shortcut to watch its prompt and widget generation.</p>
+    <PromptVideoDialog ref="player" />
   </div>
 </template>
 
@@ -35,6 +46,10 @@ const columns = computed(() => {
 .slidev-layout .command-table :is(th,td) { padding:5px 10px; border-bottom:1px solid var(--deck-line); vertical-align:top; text-align:left; }
 .slidev-layout .command-table thead th { color:var(--deck-muted); font-size:17px; font-weight:500; padding-top:0; padding-bottom:13px; }
 .slidev-layout .command-table tbody th { width:43%; font-weight:600; }
-.slidev-layout .command-table code { background:none; color:var(--deck-cyan); padding:0; font-size:18px; white-space:nowrap; }
 .slidev-layout .command-table tbody tr:last-child :is(th,td) { border-bottom:0; }
+.slidev-layout .command-table .command-video-trigger { display:inline-flex; align-items:center; gap:8px; min-height:24px; height:auto; margin:0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:var(--deck-cyan); font:inherit; text-decoration:none; }
+.command-video-trigger:hover .command-token { text-decoration:underline; text-underline-offset:4px; }
+.command-video-icon { font-size:11px; }
+.slidev-layout .command-video-hint { grid-column:1 / -1; color:var(--deck-muted); font-size:16px; }
+@media print { .command-video-icon,.command-video-hint,.shortcut-video-dialog { display:none; } }
 </style>

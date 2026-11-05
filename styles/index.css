@@ -36,12 +36,18 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
   --color-accent-content: var(--deck-selection-content);
 }
 .slidev-layout .deck-slide .reading-emphasis { color: var(--reading-emphasis); font-weight: 650; }
+.slidev-layout .deck-slide .reading-emphasis--important { color: var(--deck-important); }
 .slidev-layout .deck-slide .reading-emphasis--critical { color: var(--deck-critical); }
+.slidev-layout .deck-slide .command-token {
+  color: var(--reading-emphasis); background: none; padding: 0;
+  font-family: var(--deck-command-font); font-size: .92em; font-weight: 650;
+  letter-spacing: 0; white-space: nowrap;
+}
 .slidev-layout .deck-slide :is(h1,h2,h3) .reading-emphasis { font-weight: inherit; }
 .deck-slide.type-profile { --reading-emphasis: var(--deck-ink); }
-.bento-card--paper { --reading-emphasis: var(--color-teal-800); }
-.bento-card--accent { --reading-emphasis: var(--color-teal-200); }
-@media (forced-colors: active) { .slidev-layout .deck-slide .reading-emphasis { color: CanvasText; } }
+.bento-card--paper { --reading-emphasis: var(--color-teal-800); --deck-important: var(--color-orange-800); }
+.bento-card--accent { --reading-emphasis: var(--color-teal-200); --deck-important: var(--color-orange-200); }
+@media (forced-colors: active) { .slidev-layout .deck-slide :is(.reading-emphasis,.command-token) { color: CanvasText; } }
 .slidev-layout .deck-slide :where(ul,ol) { margin: 0; padding-left: 1.15em; }
 .slidev-layout .deck-slide li { margin: .35em 0; padding-left: .12em; }
 .slidev-layout .deck-slide li::marker { color: var(--deck-cyan); }
@@ -96,6 +102,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .cover-author { font-size: 20px; line-height: 1.35; font-weight: 650; }
 .cover-author span { color: var(--deck-muted); font-size: 17px; font-weight: 500; }
 .cover-email { display: inline-block; margin-top: 6px; color: var(--deck-cyan); font-size: 17px; font-weight: 500; }
+.slidev-layout .deck-slide .thank-you-title { font-size:96px; line-height:1; font-weight:740; letter-spacing:-.04em; }
+.thank-you-copy { gap:28px; }
 .profile-grid { display: grid; grid-template-columns: 1fr; min-height: 0; flex: 1; align-items: center; }
 .profile-copy { display: flex; flex-direction: column; gap: 24px; }
 .profile-role { max-width: 570px; font-size: 34px; line-height: 1.2 !important; font-weight: 650; }

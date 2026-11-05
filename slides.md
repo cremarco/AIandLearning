@@ -135,6 +135,14 @@ title: "What can ChatGPT do?"
 
 ---
 layout: default
+routeAlias: s53shortcuts
+title: "Formal and informal shortcuts"
+---
+
+<DeckSlide id="S53SHORTCUTS" />
+
+---
+layout: default
 routeAlias: s53types
 title: "Formal commands and informal shortcuts"
 ---
@@ -144,23 +152,31 @@ title: "Formal commands and informal shortcuts"
 ---
 layout: default
 routeAlias: s53formalweb
-title: "Formal actions · ChatGPT web"
+title: "Study"
 ---
 
 <DeckSlide id="S53FORMALWEB" />
 
 ---
 layout: default
-routeAlias: s53formalapp
-title: "Formal slash commands · desktop app"
+routeAlias: s53formalreadaloud
+title: "Read aloud · ChatGPT web"
 ---
 
-<DeckSlide id="S53FORMALAPP" />
+<DeckSlide id="S53FORMALREADALOUD" />
+
+---
+layout: default
+routeAlias: s53shortcutcloud
+title: "79 shortcuts to explore"
+---
+
+<DeckSlide id="S53SHORTCUTCLOUD" />
 
 ---
 layout: default
 routeAlias: s53cmd1
-title: "Informal shortcuts · visual study materials"
+title: "Tested shortcuts · recall and self-assessment"
 ---
 
 <DeckSlide id="S53CMD1" />
@@ -168,7 +184,7 @@ title: "Informal shortcuts · visual study materials"
 ---
 layout: default
 routeAlias: s53cmd2
-title: "Informal shortcuts · explanations and review"
+title: "Tested shortcuts · quizzes and exams"
 ---
 
 <DeckSlide id="S53CMD2" />
@@ -176,7 +192,7 @@ title: "Informal shortcuts · explanations and review"
 ---
 layout: default
 routeAlias: s53cmd3
-title: "Informal shortcuts · practice and planning"
+title: "Tested shortcuts · games and exercises"
 ---
 
 <DeckSlide id="S53CMD3" />
@@ -184,58 +200,10 @@ title: "Informal shortcuts · practice and planning"
 ---
 layout: default
 routeAlias: s53cmd4
-title: "Informal shortcuts · maps and diagrams"
+title: "Tested shortcuts · guided and classroom activities"
 ---
 
 <DeckSlide id="S53CMD4" />
-
----
-layout: default
-routeAlias: s53cmd5
-title: "Informal shortcuts · memory and revision"
----
-
-<DeckSlide id="S53CMD5" />
-
----
-layout: default
-routeAlias: s53cmd6
-title: "Informal shortcuts · games and exercises"
----
-
-<DeckSlide id="S53CMD6" />
-
----
-layout: default
-routeAlias: s53cmd7
-title: "Informal shortcuts · deeper learning"
----
-
-<DeckSlide id="S53CMD7" />
-
----
-layout: default
-routeAlias: s53cmd8
-title: "Informal shortcuts for teachers"
----
-
-<DeckSlide id="S53CMD8" />
-
----
-layout: default
-routeAlias: s53ex1
-title: "/eli5 · Causal attention in plain language"
----
-
-<DeckSlide id="S53EX1" />
-
----
-layout: default
-routeAlias: s53ex2
-title: "/mindmap · How a model generates text"
----
-
-<DeckSlide id="S53EX2" />
 
 ---
 layout: default
@@ -247,27 +215,11 @@ title: "/flashcard · Three distinctions to remember"
 
 ---
 layout: default
-routeAlias: s53ex4
-title: "/quiz · Check understanding of temperature"
+routeAlias: s53widgetworksheet
+title: "/worksheet · Reveal a model answer"
 ---
 
-<DeckSlide id="S53EX4" />
-
----
-layout: default
-routeAlias: s53ex5
-title: "/commonwrong · Correct two misconceptions"
----
-
-<DeckSlide id="S53EX5" />
-
----
-layout: default
-routeAlias: s53ex6
-title: "/rubric · Assess the chapter assignment"
----
-
-<DeckSlide id="S53EX6" />
+<DeckSlide id="S53WIDGETWORKSHEET" />
 
 ---
 layout: default
@@ -287,14 +239,6 @@ title: "Where skills can run"
 
 ---
 layout: default
-routeAlias: s53skilldocs
-title: "Skills for study materials"
----
-
-<DeckSlide id="S53SKILLDOCS" />
-
----
-layout: default
 routeAlias: s53skillresearch
 title: "Skills for research and evidence"
 ---
@@ -303,83 +247,51 @@ title: "Skills for research and evidence"
 
 ---
 layout: default
-routeAlias: s53skillbuild
-title: "Skills for interactive learning"
+routeAlias: s58compiler
+title: "Compiler: turn thoughts into actions"
 ---
 
-<DeckSlide id="S53SKILLBUILD" />
-
----
-layout: default
-routeAlias: s53skillinstall
-title: "Find, inspect, install"
----
-
-<DeckSlide id="S53SKILLINSTALL" />
-
----
-layout: default
-routeAlias: s53skillevidence
-title: "Do skills improve results?"
----
-
-<DeckSlide id="S53SKILLEVIDENCE" />
-
----
-layout: default
-routeAlias: s53skillchoose
-title: "Choose a skill by the task"
----
-
-<DeckSlide id="S53SKILLCHOOSE" />
-
----
-layout: default
-routeAlias: s53skillbook
-title: "A skill workflow for the assigned book"
----
-
-<DeckSlide id="S53SKILLBOOK" />
-
----
-layout: default
-routeAlias: s53skillresources
-title: "Skill sources and installation guide"
----
-
-<DeckSlide id="S53SKILLRESOURCES" />
-
----
-layout: default
-routeAlias: s55
-title: "The first reading difficulty"
----
-
-<DeckSlide id="S55" />
-
----
-layout: default
-routeAlias: s56
-title: "Excalidraw: an initial map"
----
-
-<DeckSlide id="S56" />
-
----
-layout: default
-routeAlias: s57
-title: "Uncertain relationships in the first map"
----
-
-<DeckSlide id="S57" />
+<DeckSlide id="S58COMPILER" />
 
 ---
 layout: default
 routeAlias: s58
-title: "Goblin.tools: a concrete goal"
+title: "Magic ToDo: break down the task"
 ---
 
 <DeckSlide id="S58" />
+
+---
+layout: default
+routeAlias: s58estimator
+title: "Estimator: plan a time window"
+---
+
+<DeckSlide id="S58ESTIMATOR" />
+
+---
+layout: default
+routeAlias: s58taskmaster
+title: "Taskmaster: work on one task"
+---
+
+<DeckSlide id="S58TASKMASTER" />
+
+---
+layout: default
+routeAlias: s58professor
+title: "Professor: request an explanation"
+---
+
+<DeckSlide id="S58PROFESSOR" />
+
+---
+layout: default
+routeAlias: s58formalizer
+title: "Formalizer: revise the wording"
+---
+
+<DeckSlide id="S58FORMALIZER" />
 
 ---
 layout: default
@@ -408,10 +320,26 @@ title: "Activity: choose the next support"
 ---
 layout: default
 routeAlias: s61
-title: "Notebook: upload the chapter"
+title: "NotebookLM: add and select sources"
 ---
 
 <DeckSlide id="S61" />
+
+---
+layout: default
+routeAlias: s61research
+title: "Find and review new sources"
+---
+
+<DeckSlide id="S61RESEARCH" />
+
+---
+layout: default
+routeAlias: s61deep
+title: "Investigate a question with Deep Research"
+---
+
+<DeckSlide id="S61DEEP" />
 
 ---
 layout: default
@@ -424,7 +352,7 @@ title: "Ask a focused question"
 ---
 layout: default
 routeAlias: s63
-title: "Open the citation and read its context"
+title: "Open the citation and its source"
 ---
 
 <DeckSlide id="S63" />
@@ -436,6 +364,14 @@ title: "Request a graduated explanation"
 ---
 
 <DeckSlide id="S64" />
+
+---
+layout: default
+routeAlias: s64settings
+title: "Set up a Learning Guide"
+---
+
+<DeckSlide id="S64SETTINGS" />
 
 ---
 layout: default
@@ -456,26 +392,82 @@ title: "Explore a generated Mind Map"
 ---
 layout: default
 routeAlias: s67
-title: "Self-check before seeing the solution"
+title: "Answer a quiz before reading feedback"
 ---
 
 <DeckSlide id="S67" />
 
 ---
 layout: default
-routeAlias: s68
-title: "Excalidraw: revise the relationships"
+routeAlias: s67cards
+title: "Practise recall with flashcards"
 ---
 
-<DeckSlide id="S68" />
+<DeckSlide id="S67CARDS" />
 
 ---
 layout: default
-routeAlias: s69
-title: "Compare the two map versions"
+routeAlias: s67notes
+title: "Save a checked response as a note"
 ---
 
-<DeckSlide id="S69" />
+<DeckSlide id="S67NOTES" />
+
+---
+layout: default
+routeAlias: s67reports
+title: "Build a study guide from the chapter"
+---
+
+<DeckSlide id="S67REPORTS" />
+
+---
+layout: default
+routeAlias: s67audio
+title: "Listen to an Audio Overview"
+---
+
+<DeckSlide id="S67AUDIO" />
+
+---
+layout: default
+routeAlias: s67video
+title: "Watch a Video Overview"
+---
+
+<DeckSlide id="S67VIDEO" />
+
+---
+layout: default
+routeAlias: s67info
+title: "Compare concepts in an infographic"
+---
+
+<DeckSlide id="S67INFO" />
+
+---
+layout: default
+routeAlias: s67slides
+title: "Generate, present and revise slides"
+---
+
+<DeckSlide id="S67SLIDES" />
+
+---
+layout: default
+routeAlias: s67tables
+title: "Organise chapter concepts in a table"
+---
+
+<DeckSlide id="S67TABLES" />
+
+---
+layout: default
+routeAlias: s67share
+title: "Review access before sharing a notebook"
+---
+
+<DeckSlide id="S67SHARE" />
 
 ---
 layout: default
@@ -500,126 +492,6 @@ title: "A diagram to use during the exercise"
 ---
 
 <DeckSlide id="S72" />
-
----
-layout: default
-routeAlias: s73
-title: "The exercise: a small app with a real model"
----
-
-<DeckSlide id="S73" />
-
----
-layout: default
-routeAlias: s74
-title: "Claude: a complete assignment"
----
-
-<DeckSlide id="S74" />
-
----
-layout: default
-routeAlias: s75
-title: "Open and check the solution"
----
-
-<DeckSlide id="S75" />
-
----
-layout: default
-routeAlias: s75e
-title: "A designed tutor can support learning"
----
-
-<DeckSlide id="S75E" />
-
----
-layout: default
-routeAlias: s76
-title: "From input to the first token"
----
-
-<DeckSlide id="S76" />
-
----
-layout: default
-routeAlias: s77
-title: "The process represented by the app"
----
-
-<DeckSlide id="S77" />
-
----
-layout: default
-routeAlias: s78
-title: "Change the context, keep the model"
----
-
-<DeckSlide id="S78" />
-
----
-layout: default
-routeAlias: s79
-title: "Temperature changes the distribution"
----
-
-<DeckSlide id="S79" />
-
----
-layout: default
-routeAlias: s79f
-title: "Read the formula from the chapter"
----
-
-<DeckSlide id="S79F" />
-
----
-layout: default
-routeAlias: s79g
-title: "A short symbol guide"
----
-
-<DeckSlide id="S79G" />
-
----
-layout: default
-routeAlias: s79n
-title: "Notebook: ask about the formula"
----
-
-<DeckSlide id="S79N" />
-
----
-layout: default
-routeAlias: s79d
-title: "Desmos: make the formula observable"
----
-
-<DeckSlide id="S79D" />
-
----
-layout: default
-routeAlias: s79t
-title: "Check the worked example numerically"
----
-
-<DeckSlide id="S79T" />
-
----
-layout: default
-routeAlias: s80
-title: "Notebook: study the solution"
----
-
-<DeckSlide id="S80" />
-
----
-layout: default
-routeAlias: s81
-title: "What Andrea must demonstrate independently"
----
-
-<DeckSlide id="S81" />
 
 ---
 layout: default
@@ -792,143 +664,39 @@ title: "The evidence collected along the way"
 ---
 layout: default
 routeAlias: s97
-title: "Free tools for planning and source-based study"
+title: "Free tools"
 ---
 
 <DeckSlide id="S97" />
 
 ---
 layout: default
-routeAlias: s97b
-title: "Free tools for visualisation and the exercise"
----
-
-<DeckSlide id="S97B" />
-
----
-layout: default
-routeAlias: s97c
-title: "Free access supports already available"
----
-
-<DeckSlide id="S97C" />
-
----
-layout: default
-routeAlias: s97m
-title: "Tools for understanding formulas"
----
-
-<DeckSlide id="S97M" />
-
----
-layout: default
 routeAlias: s97p
-title: "Paid options: what would the upgrade add?"
+title: "Paid tools and upgrades"
 ---
 
 <DeckSlide id="S97P" />
 
 ---
 layout: default
-routeAlias: s97q
-title: "Paid options for study and access"
----
-
-<DeckSlide id="S97Q" />
-
----
-layout: default
-routeAlias: s98
-title: "Free tools for teachers and assessment"
----
-
-<DeckSlide id="S98" />
-
----
-layout: default
-routeAlias: s98p
-title: "Teacher tools: optional paid features"
----
-
-<DeckSlide id="S98P" />
-
----
-layout: default
 routeAlias: s99
-title: "Bibliography: AI and learning"
+title: "Bibliography"
 ---
 
 <DeckSlide id="S99" />
 
 ---
 layout: default
-routeAlias: s99b
-title: "Bibliography: guided use and retrieval"
----
-
-<DeckSlide id="S99B" />
-
----
-layout: default
-routeAlias: s100
-title: "Bibliography: regulation, maps and AI literacy"
----
-
-<DeckSlide id="S100" />
-
----
-layout: default
-routeAlias: s100b
-title: "Bibliography: accessible learning materials"
----
-
-<DeckSlide id="S100B" />
-
----
-layout: default
-routeAlias: s101
-title: "Technical bibliography: model and instructions"
----
-
-<DeckSlide id="S101" />
-
----
-layout: default
-routeAlias: s101b
-title: "Technical bibliography: retrieval and visual explanation"
----
-
-<DeckSlide id="S101B" />
-
----
-layout: default
 routeAlias: s102
-title: "Web resources: model, runtime and tool guides"
+title: "Web resources"
 ---
 
 <DeckSlide id="S102" />
 
 ---
 layout: default
-routeAlias: s102b
-title: "Web resources: access, dictation and media"
----
-
-<DeckSlide id="S102B" />
-
----
-layout: default
-routeAlias: s102c
-title: "Web resources: accessible formats and media"
----
-
-<DeckSlide id="S102C" />
-
----
-layout: default
 routeAlias: s103
-title: "Materials and next questions"
+title: "Thank you."
 ---
 
 <DeckSlide id="S103" />

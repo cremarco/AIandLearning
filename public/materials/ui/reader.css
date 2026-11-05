@@ -55,10 +55,17 @@ nav li { break-inside: avoid; }
 .command-catalogue table { width: 100%; table-layout: fixed; font-size: .85em; }
 .command-catalogue :is(th, td, code) { white-space: normal; overflow-wrap: anywhere; }
 .command-catalogue th { width: 45%; }
+.tool-resource-catalogue { max-width:100%; overflow-x:auto; }
+.tool-resource-catalogue table { width:100%; min-width:38rem; font-size:.9em; }
+.tool-resource-catalogue :is(th,td) { white-space:normal; vertical-align:top; }
+.tool-resource-catalogue tbody th { min-width:12rem; }
 .command-result { margin-block: 30px; padding-top: 20px; border-top: 1px solid var(--line); }
 .command-response { white-space: pre-line; }
 .prompt-block { min-width:0; margin-block:20px; }
 .prompt-block > .meta { margin-bottom:8px; }
+.prompt-chat { padding-block:0; }
+.prompt-chat .chat-bubble { max-width:100%; padding:1em 1.2em; background:var(--color-base-200); font-size:inherit; line-height:1.4; white-space:pre-wrap; overflow-wrap:anywhere; user-select:text; }
+.prompt-command { color:var(--accent); font-family:ui-monospace,monospace; font-weight:650; }
 .prompt-terminal pre { display:flex; width:100%; min-width:0; padding:0 20px; margin:0; font-size:.9em; }
 .prompt-terminal pre::before { flex:0 0 1em; margin-right:1em; }
 .prompt-terminal code { min-width:0; font:inherit; white-space:pre-wrap; overflow-wrap:anywhere; user-select:text; }

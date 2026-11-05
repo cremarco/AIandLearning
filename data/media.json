@@ -9,16 +9,17 @@
     "src": "images/book/pages/page-01.webp",
     "alt": "Cover of Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material."
   },
-  "S56": {
-    "src": "images/tools/excalidraw-1.png",
-    "alt": "Official Excalidraw editor canvas, with drawing, text and linking tools.",
-    "caption": "Editor image from the official website; vendor example.",
-    "source": "https://plus.excalidraw.com/"
-  },
   "S58": {
-    "src": "images/tools/goblin-real.jpg",
-    "alt": "Magic ToDo: a study goal and generated subtasks, followed by Andrea’s review.",
-    "caption": "Real execution of the English Andrea scenario; the generated plan is reviewed in the next steps."
+    "type": "video",
+    "src": "materials/goblin/magic-todo.mp4",
+    "poster": "materials/goblin/magic-todo-poster.jpg",
+    "captions": "materials/goblin/magic-todo.en.vtt",
+    "captionsDefault": false,
+    "alt": "Real Goblin Tools Magic ToDo execution for Andrea’s GenAI study task.",
+    "caption": "Real execution · 16 s",
+    "source": "https://goblin.tools/ToDo",
+    "transcript": "Magic ToDo — real execution, recorded 5 November 2026\n\nINPUT\nRead the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nLocate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.\n\n00:00:00.000 Start with one concrete task from the chapter.\n00:00:04.000 Use the magic-wand button to break the task down.\n00:00:06.000 Actual result: 4 smaller steps.\n00:00:10.000 Choose the steps that help; revise generic or repeated advice.",
+    "browserFrame": true
   },
   "S70": {
     "src": "images/tools/napkin-2.png",
@@ -53,9 +54,16 @@
     "caption": "Real Desmos graph · invented scores for the worked example, separate from Qwen measurements."
   },
   "S63": {
-    "src": "images/tools/notebook-citation.jpg",
-    "alt": "Actual Gemini Notebook citation popup for the final English chapter. The PDF extraction interleaves lines from two columns, so the original chapter is needed to check the wording.",
-    "caption": "Real citation popup. Here the PDF columns are interleaved; check the original PDF or reading HTML."
+    "type": "video",
+    "src": "materials/notebook/citations.mp4",
+    "poster": "materials/notebook/citations-poster.jpg",
+    "captions": "materials/notebook/citations.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · citation checking: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 10 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · citation checking — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nCitation 4 opens the PDF passage: “Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context.”\n\nSCOPE\nCitation popup opened and read in @Browser. The current PDF extraction preserves this paragraph correctly.\n\nCAPTIONS\n00:00:00.000 Open a reference beside the claim that parameters stay fixed during inference.\n00:00:04.370 Compare the exact passage with the generated claim and its inference condition.\n00:00:07.482 Inspect the original PDF in the source viewer, then return to the notebook.\n"
   },
   "S91": {
     "src": "images/tools/edge-read-aloud.png",
@@ -64,13 +72,288 @@
     "source": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge"
   },
   "S53EX3": {
+    "command": "/flashcard",
     "type": "video",
-    "src": "materials/chatgpt-shortcuts/flashcards-chatgpt.mp4",
-    "poster": "materials/chatgpt-shortcuts/flashcards-chatgpt-poster.jpg",
-    "captions": "materials/chatgpt-shortcuts/flashcards-chatgpt-en.vtt",
-    "alt": "The actual ChatGPT flashcard widget, recorded while revealing three answers about tokens, context and probabilities.",
-    "caption": "Actual ChatGPT output · recorded interaction",
-    "transcript": "1. How is a token different from a word? A token may represent a word, part of a word, punctuation, or spaces. Tokens and words are not equivalent.\n2. How do context and model parameters differ? Context supplies information for current inference. Parameters are learned numerical values updated during training, not ordinary inference.\n3. Does a token's probability indicate an answer's truth? No. It estimates how likely a token is as the next continuation, not whether the complete answer is true.",
-    "captionsDefault": false
+    "src": "materials/chatgpt-widgets/builds/flashcard.mp4",
+    "poster": "materials/chatgpt-widgets/builds/flashcard-poster.jpg",
+    "captions": "materials/chatgpt-widgets/builds/flashcard.en.vtt",
+    "captionsDefault": false,
+    "alt": "Actual ChatGPT /flashcard run, showing the original prompt, generation and completed widget.",
+    "caption": "Original prompt → widget generation · recorded in ChatGPT",
+    "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
+    "transcript": "/flashcard — prompt and widget generation\n\nPROMPT\n/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.\n\n00:00:00.000 The original prompt is sent in ChatGPT.\n00:00:04.558 ChatGPT generates the response and builds the widget.\n00:00:10.668 The generated widget is ready to use.\n\nGENERATED RESULT\nTap a card to reveal the answer. Mark ✓ if you know it or × if you don't, and I'll track your progress.How do context and model parameters differ?Does a token's probability indicate an answer's truth?How is a token different from a word?A token may represent a word, part of a word, punctuation, or spaces. Tokens and words are not equivalent.1 of 3Invia feedbackYou can ask me to review these flashcards from any chat, change the deck, or set up a daily review.\n",
+    "transcriptFile": "materials/chatgpt-widgets/builds/flashcard-transcript.txt",
+    "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+    "durationSeconds": 15.668,
+    "width": 800,
+    "height": 620,
+    "fps": 24,
+    "sha256": "1ccba16481a78c09dea60d07ab28c988bbfce1f7b43a25880622c7121e0d184f",
+    "chapters": [
+      {
+        "label": "Prompt",
+        "seconds": 0
+      },
+      {
+        "label": "Generation",
+        "seconds": 4.558
+      },
+      {
+        "label": "Widget",
+        "seconds": 10.668
+      }
+    ]
+  },
+  "S58COMPILER": {
+    "type": "video",
+    "src": "materials/goblin/compiler.mp4",
+    "poster": "materials/goblin/compiler-poster.jpg",
+    "captions": "materials/goblin/compiler.en.vtt",
+    "captionsDefault": false,
+    "alt": "Real Goblin Tools Compiler execution for Andrea’s GenAI study task.",
+    "caption": "Real execution · 16 s",
+    "source": "https://goblin.tools/Compiler",
+    "transcript": "Compiler — real execution, recorded 5 November 2026\n\nINPUT\nI have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.\n\nACTUAL RESULT\nStudy the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking\n\n00:00:00.000 Describe the study goal in your own words.\n00:00:04.000 Compiler extracts actions from the unstructured note.\n00:00:06.000 Actual result: four suggested study tasks.\n00:00:10.000 Review the list: keep the learning goal and remove overlap.",
+    "browserFrame": true
+  },
+  "S58ESTIMATOR": {
+    "type": "video",
+    "src": "materials/goblin/estimator.mp4",
+    "poster": "materials/goblin/estimator-poster.jpg",
+    "captions": "materials/goblin/estimator.en.vtt",
+    "captionsDefault": false,
+    "alt": "Real Goblin Tools Estimator execution for Andrea’s GenAI study task.",
+    "caption": "Real execution · 16 s",
+    "source": "https://goblin.tools/Estimator",
+    "transcript": "Estimator — real execution, recorded 5 November 2026\n\nINPUT\nRead two pages about training and inference, write a three-line comparison, and explain it aloud once.\n\nACTUAL RESULT\n10-20 minutes\n\n00:00:00.000 Describe the activity and its expected output.\n00:00:04.000 Ask Estimator for a rough time window.\n00:00:06.000 Actual result: 10-20 minutes.\n00:00:10.000 Record the real time, then adjust the next study session.",
+    "browserFrame": true
+  },
+  "S58TASKMASTER": {
+    "type": "video",
+    "src": "materials/goblin/taskmaster.mp4",
+    "poster": "materials/goblin/taskmaster-poster.jpg",
+    "captions": "materials/goblin/taskmaster.en.vtt",
+    "captionsDefault": false,
+    "alt": "Real Goblin Tools Taskmaster execution for Andrea’s GenAI study task.",
+    "caption": "Real execution · 16 s",
+    "source": "https://goblin.tools/Taskmaster",
+    "transcript": "Taskmaster — real execution, recorded 5 November 2026\n\nINPUT\nAndrea · full-page demo — Read the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nTaskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.\n\n00:00:00.000 Open the study list and choose one current task.\n00:00:03.000 Press Play and work with one item in view.\n00:00:07.000 Pause the timer. This demonstration records three seconds.\n00:00:10.000 Elapsed time shows activity; check understanding separately.",
+    "browserFrame": true
+  },
+  "S58PROFESSOR": {
+    "type": "video",
+    "src": "materials/goblin/professor.mp4",
+    "poster": "materials/goblin/professor-poster.jpg",
+    "captions": "materials/goblin/professor.en.vtt",
+    "captionsDefault": false,
+    "alt": "Real Goblin Tools Professor execution for Andrea’s GenAI study task.",
+    "caption": "Real execution · 17 s",
+    "source": "https://goblin.tools/Professor",
+    "transcript": "Professor — real execution, recorded 5 November 2026\n\nINPUT\nTraining versus inference in a language model. Explain the difference briefly and give one short example.\n\nACTUAL RESULT\nEXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.\n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.\nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.\nExample: Asking the model to write a summary of today's news after it has already been trained.\n\n00:00:00.000 Ask a focused question about training and inference.\n00:00:04.000 Professor generates an explanation and an example.\n00:00:07.000 Read the actual explanation; an analogy still needs checking.\n00:00:11.000 Return to the chapter: which parameters change, and when?",
+    "browserFrame": true
+  },
+  "S58FORMALIZER": {
+    "type": "video",
+    "src": "materials/goblin/formalizer.mp4",
+    "poster": "materials/goblin/formalizer-poster.jpg",
+    "captions": "materials/goblin/formalizer.en.vtt",
+    "captionsDefault": false,
+    "alt": "Real Goblin Tools Formalizer execution for Andrea’s GenAI study task.",
+    "caption": "Real execution · 16 s",
+    "source": "https://goblin.tools/Formalizer",
+    "transcript": "Formalizer — real execution, recorded 5 November 2026\n\nINPUT\nTraining is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.\n\nACTUAL RESULT\nTraining refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.\n\n00:00:00.000 Start with a draft that includes an unresolved question.\n00:00:04.000 Choose More professional, then Convert.\n00:00:06.000 Read the actual rewrite and compare its meaning.\n00:00:10.000 The uncertainty about context remains. Check the science too.",
+    "browserFrame": true
+  },
+  "S61": {
+    "type": "video",
+    "src": "materials/notebook/sources.mp4",
+    "poster": "materials/notebook/sources-poster.jpg",
+    "captions": "materials/notebook/sources.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · sources: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 12 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · sources — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nThe original Fondamenti_GenAI_Cremaschi.pdf was uploaded, indexed and selected. Notebook generated a summary of the chapter.\n\nSCOPE\nNew notebook and PDF upload executed entirely in @Browser; other import options were displayed.\n\nCAPTIONS\n00:00:00.000 Name the notebook and choose how to add the assigned material.\n00:00:02.773 Upload the original GenAI chapter PDF from the workshop materials.\n00:00:06.222 The PDF is indexed and selected; inspect the generated source summary.\n00:00:09.409 Deselect the web source to keep the next question focused on the chapter PDF.\n"
+  },
+  "S61RESEARCH": {
+    "type": "video",
+    "src": "materials/notebook/research.mp4",
+    "poster": "materials/notebook/research-poster.jpg",
+    "captions": "materials/notebook/research.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · source discovery: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 17 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · source discovery — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nFast Research returned ten sources. Tokenizers - Hugging Face was selected and imported after the other results were deselected.\n\nSCOPE\nFast Research, review, selection and one-source import executed in @Browser.\n\nCAPTIONS\n00:00:00.000 Search the web for official tokenizer documentation.\n00:00:02.256 Run Fast Research and review sources before importing them.\n00:00:04.819 Open the results and inspect their titles, descriptions and source links.\n00:00:07.289 Deselect the full list and choose one official documentation source.\n00:00:10.835 Choose one official documentation source from the reviewed results.\n00:00:13.286 Import only the reviewed source into the notebook.\n"
+  },
+  "S62": {
+    "type": "video",
+    "src": "materials/notebook/chat.mp4",
+    "poster": "materials/notebook/chat-poster.jpg",
+    "captions": "materials/notebook/chat.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · source-based chat: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 10 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · source-based chat — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\n* **Definition and role**: **Learned parameters** are internal numerical values (weights) established during training to guide model transformations, whereas **context** is the sequence of text and instructions made available specifically for the current inference step.\n* **Variability during inference**: During ordinary inference, the **model's parameters remain fixed**, while the **context changes dynamically** with each new input or message.\n* **Effect on model state**: Adding or modifying information in the context alters the input data for that specific calculation but **does not update or retrain the underlying weights**.\n\n💡 Would you like to explore how temperature settings alter output probabilities while keeping both the model parameters and context fixed?\n\nSCOPE\nQuestion submitted and complete answer recorded from the uploaded chapter PDF in @Browser.\n\nCAPTIONS\n00:00:00.000 Ask a focused question and request references to the chapter.\n00:00:03.211 Submit the question using the selected PDF as the source.\n00:00:05.515 Read the three-bullet answer and its numbered source references.\n"
+  },
+  "S64SETTINGS": {
+    "type": "video",
+    "src": "materials/notebook/customize.mp4",
+    "poster": "materials/notebook/customize-poster.jpg",
+    "captions": "materials/notebook/customize.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · chat settings: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 12 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · chat settings — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nLearning Guide and Shorter response length were selected and saved for the new Browser demonstration notebook.\n\nSCOPE\nNotebook-specific configuration saved in @Browser; no account-wide preferences were changed.\n\nCAPTIONS\n00:00:00.000 Open the notebook menu to configure the conversation.\n00:00:01.947 Choose the conversation goal and response length for the notebook.\n00:00:03.968 Select Learning Guide and shorter responses, then save these notebook settings.\n00:00:07.844 Review the saved Learning Guide goal and shorter response setting.\n"
+  },
+  "S66": {
+    "type": "video",
+    "src": "materials/notebook/mind-map.mp4",
+    "poster": "materials/notebook/mind-map-poster.jpg",
+    "captions": "materials/notebook/mind-map.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Mind Map: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 11 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Mind Map — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nTraining, Inference, Context, and Retrieval, 4 children\nModel Training and Fine-Tuning, 3 children\nOrdinary Inference, 2 children\nConversation Context, 2 children\nDocument Retrieval (RAG), 2 children\n\nSCOPE\nNew map generated from the PDF and expanded in a dedicated @Browser artifact tab.\n\nCAPTIONS\n00:00:00.000 Open Mind Map and specify the concepts to organise.\n00:00:01.457 Generate a map of training, inference, context and document retrieval.\n00:00:03.929 Locate the four branches connecting training, inference, context and retrieval.\n00:00:07.112 Expand the map and examine how the concepts are grouped.\n"
+  },
+  "S67": {
+    "type": "video",
+    "src": "materials/notebook/quiz.mp4",
+    "poster": "materials/notebook/quiz-poster.jpg",
+    "captions": "materials/notebook/quiz.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Quiz: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 16 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Quiz — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nQuestion: A developer supplies 'In this interaction, X means Y' in a prompt. Another user starts a fresh conversation with the same model. What happens to the custom definition?\n\nSelected C: It will revert to its original default understanding because passing information in a prompt context does not update the model's learned parameters.\n\nFeedback: That's right! Context changes only supply transient information available during a specific inference step; altering prompt inputs does not modify or re-train the underlying parameter weights of the model.\n\nSCOPE\nNew six-question quiz generated in @Browser; first question answered with C and feedback observed.\n\nCAPTIONS\n00:00:00.000 Open Quiz and inspect question types and difficulty settings.\n00:00:01.341 Create a focused multiple-choice self-check before seeing any solutions.\n00:00:04.592 Attempt the question about a custom definition and a fresh conversation.\n00:00:07.646 Choose an answer and inspect the explanation before continuing.\n00:00:11.872 Read the selected answer and its corrective explanation before moving on.\n"
+  },
+  "S67CARDS": {
+    "type": "video",
+    "src": "materials/notebook/flashcards.mp4",
+    "poster": "materials/notebook/flashcards-poster.jpg",
+    "captions": "materials/notebook/flashcards.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Flashcards: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 14 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Flashcards — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nObserved set: Language Models Flashcards, 25 cards. First question: How does an autoregressive language model generate text? Answer: It calculates a probability distribution over the vocabulary to select the next token, appends it to the context sequence, and repeats the process step-by-step.\n\nSCOPE\nGenerated anew from the uploaded PDF in @Browser. The first card was revealed and Got It selected in the standalone artifact tab. The actual set size is preserved.\n\nCAPTIONS\n00:00:00.000 Open Flashcards to set the amount, difficulty and topic.\n00:00:01.315 Generate a smaller text-only set focused on the chapter’s core distinctions.\n00:00:04.317 Read the first flashcard and attempt an answer before revealing it.\n00:00:07.404 Reveal the answer and compare it with your own attempt.\n00:00:11.652 Use Got It or Missed It to track recall and move to the next card.\n"
+  },
+  "S67NOTES": {
+    "type": "video",
+    "src": "materials/notebook/notes.mp4",
+    "poster": "materials/notebook/notes-poster.jpg",
+    "captions": "materials/notebook/notes.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Notes: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 7 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Notes — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nSaved note: Model Parameters and Context.\n\n* **Definition and role**: **Learned parameters** are internal numerical values (weights) established during training to guide model transformations, whereas **context** is the sequence of text and instructions made available specifically for the current inference step.\n* **Variability during inference**: During ordinary inference, the **model's parameters remain fixed**, while the **context changes dynamically** with each new input or message.\n* **Effect on model state**: Adding or modifying information in the context alters the input data for that specific calculation but **does not update or retrain the underlying weights**.\n\n💡 Would you like to explore how temperature settings alter output probabilities while keeping both the model parameters and context fixed?\n\nSCOPE\nResponse saved as a view-only note; Convert to source was shown but not executed.\n\nCAPTIONS\n00:00:00.000 Save the verified answer as a note with its references.\n00:00:03.501 The saved note keeps the response and its numbered PDF references.\n"
+  },
+  "S67REPORTS": {
+    "type": "video",
+    "src": "materials/notebook/reports.mp4",
+    "poster": "materials/notebook/reports-poster.jpg",
+    "captions": "materials/notebook/reports.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Reports: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 12 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Reports — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nStudy Guide: Foundations of Generative Artificial Intelligence\n\nThis study guide provides a detailed review of core concepts in generative artificial intelligence, autoregressive language models, and Transformer decoder architecture based on the foundational curriculum by Marco Cremaschi.\n\n1. Core Concepts Summary\n\nGenerative AI vs. AI Assistants\n\n* Generative AI Systems: Broadly defined as systems that produce content (such as text or images) conditioned on an input. \"Generative\" describes the activity itself rather than a single model architecture.\n* Autoregressive Language Models: Models that calculate the probability distribution of which token follows an existing sequence of text (context). Continuously repeating this next-token prediction step generates extended text.\n* Model vs. Assistant: A language model calculates next-token probabilities using fixed parameters. An assistant application wraps around the model and includes additional service-managed components such as system instructions, web search capabilities, document retrieval (RAG), content filters, external tools, and conversation memory.\n\nData, Parameters, and System Training\n\n* Parameters: Numerical values used in the model’s internal mathematical transformations. Parameters do not exist as a human-readable encyclopedia prior to training.\n* Pretraining: The optimization process where a model compares its predicted next-token distributions against actual text examples, updating parameter weights to minimize aggregate prediction error.\n* Instruction Tuning / Alignment: Post-pretraining stages (e.g., using demonstrations and human preferences as in InstructGPT) that adapt a model to follow instructions and exhibit desired behaviors.\n* Inference: Running calculations using fixed, already-available parameters. Inserting text into a conversation prompt alters the context of the current inference; it does not update the underlying model parameters or weights.\n\n+--------------------------+-------------------------------------------------------------+\n| Intervention             | Primary Effect                                              |\n+--------------------------+-------------------------------------------------------------+\n| Training / Fine-tuning   | Modifies the model's internal parameter weights.            |\n| Context Message          | Alters information available during the current inference.  |\n| Document Retrieval (RAG) | Supplies external text passages into the active context.    |\n+--------------------------+-------------------------------------------------------------+\n\n\nTokens, Embeddings, and Architectural Flow\n\n* Tokenizer: Converts input strings into sequences of numerical identifiers (token IDs). Tokens can represent words, sub-words, punctuation, or spaces. Token counts measure context length.\n* Token IDs: Indices within a vocabulary dictionary. Numerical proximity between IDs does not signify semantic similarity.\n* Initial Embedding: A static, learned vector retrieved from a lookup table using a token's numerical ID.\n* Contextual Representation: A dynamic vector produced after initial embeddings pass through Transformer decoder blocks, incorporating relationships with other permitted tokens in the sequence.\n* Positional Encoding: Methods (such as Rotary Position Embeddings / RoPE in Qwen2.5) that inject token order information into representations.\n* Transformer Decoder: A multi-layered structure comprising causal attention mechanisms, feed-forward networks, residual connections, and layer normalizations.\n* Causal Attention: Computes Query (q), Key (k), and Value (v) vectors across permitted positions. A causal mask prevents current sequence positions from accessing future tokens during next-token prediction.\n\nProbabilities, Softmax, and Temperature\n\n* Logit (z): Unnormalized numerical output scores produced by the final decoder layer for every entry in the vocabulary.\n* Softmax Function: Normalizes raw logits into a valid non-negative probability distribution summing to 1 across the vocabulary: \\ p_i = \\frac{\\exp(z_i / T)}{\\sum_j \\exp(z_j / T)} \\\n* Temperature (T): A positive scaling factor applied to logits before softmax normalization.\n  * Lower Temperature (T < 1.0): Concentrates probability mass onto the highest-scoring tokens.\n  * Higher Temperature (T > 1.0): Flattens the distribution, making token probabilities more uniform.\n  * Properties: Temperature scaling alters distribution concentration without changing the relative ranking order of the logits, adding new knowledge, or updating model weights.\n* Decoding Strategies:\n  * Greedy Selection: Continuously selects the single highest-probability token.\n  * Sampling: Randomly selects tokens based on the output probability distribution, allowing varied outputs across runs. Can be constrained via top-k or top-p filters.\n\nRetrieval-Augmented Generation (RAG) and Limitations\n\n* Retrieval-Augmented Generation (RAG): A framework where an external search component retrieves passages from a document collection and feeds them into the model's input context. RAG provides updated or specific context without fine-tuning model weights.\n* Hallucinations: Plausible-sounding but incorrect, ungrounded, or unsupported generations. Lowering temperature does not eliminate hallucinations; deterministic decoding can consistently repeat the same false statement.\n\n2. Short-Answer Quiz\n\n1. What is the operational distinction between a standalone language model and a complete AI assistant application?\n2. How does the function of pretraining differ from inserting new information directly into a user prompt?\n3. Why is a token’s numerical ID not considered a measurement of its semantic meaning?\n4. What is the architectural difference between an initial token embedding and a contextual representation?\n5. What constraint defines \"causal\" attention within a Transformer decoder block?\n6. How does altering the temperature parameter (T) affect the softmax output distribution over a fixed set of logits?\n7. How does greedy selection differ from probabilistic sampling during generation?\n8. Does retrieving external documents via Retrieval-Augmented Generation (RAG) update a model's parameters? Explain.\n9. Why does lowering the temperature parameter fail to eliminate model hallucinations?\n10. In experimental evaluations of language models, why is it necessary to isolate variables such as temperature and input context?\n\n3. Quiz Answer Key\n\n1. What is the operational distinction between a standalone language model and a complete AI assistant application? Answer: A language model is an autoregressive system that assigns probabilities to token sequences and predicts next tokens using internal parameter calculations. An assistant application is a broader system built around the model, incorporating external features such as system prompts, search engines, document retrieval components, content filters, memory management, and external tools.\n2. How does the function of pretraining differ from inserting new information directly into a user prompt? Answer: Pretraining updates the model's internal parameter weights by optimizing predictions against broad text datasets to reduce aggregate error. Inserting information into a prompt merely provides data within the context window for the current inference step, leaving the underlying parameter weights completely unchanged.\n3. Why is a token’s numerical ID not considered a measurement of its semantic meaning? Answer: Token IDs serve strictly as arbitrary lookup indices within a tokenizer's fixed vocabulary dictionary. Consecutive or nearby numerical IDs do not reflect conceptual similarity, and individual vector coordinates or ID numbers do not map to isolated human semantic properties.\n4. What is the architectural difference between an initial token embedding and a contextual representation? Answer: An initial embedding is a static, learned vector retrieved directly from the vocabulary matrix using a token's numerical ID. A contextual representation is the dynamic vector produced after passing the initial embedding through Transformer decoder blocks, integrating positional encodings and causal attention from other permitted sequence tokens.\n5. What constraint defines \"causal\" attention within a Transformer decoder block? Answer: Causal attention enforces a mathematical masking constraint that prevents a given token position from attending to subsequent or \"future\" token positions in the sequence. When predicting the next token, a position can only extract and process information from earlier tokens and its own available state.\n6. How does altering the temperature parameter (T) affect the softmax output distribution over a fixed set of logits? Answer: Raising the temperature distributes probability mass more uniformly across the vocabulary, whereas lowering the temperature concentrates probability mass onto the highest-scoring tokens. Crucially, adjusting temperature scales the logits before normalization without changing their relative rank order or adding external knowledge to the system.\n7. How does greedy selection differ from probabilistic sampling during generation? Answer: Greedy selection deterministically chooses the single token with the absolute highest probability at each sequence step. Sampling selects next tokens stochastically based on the output probability distribution, allowing different generation runs to produce diverging responses from identical inputs.\n8. Does retrieving external documents via Retrieval-Augmented Generation (RAG) update a model's parameters? Explain. Answer: No, RAG does not update model parameters. RAG extracts relevant textual passages from an external database and appends them directly into the prompt context, allowing the fixed model to process the retrieved text during standard inference.\n9. Why does lowering the temperature parameter fail to eliminate model hallucinations? Answer: Hallucinations stem from underlying structural, data, and statistical generation limits rather than temperature settings alone. Lowering temperature simply forces the model to select its highest-probability tokens more deterministically, which can lead it to repeat the exact same factual error with higher consistency.\n10. In experimental evaluations of language models, why is it necessary to isolate variables such as temperature and input context? Answer: Isolating single variables ensures that observed changes in generation outputs or probability distributions can be definitively attributed to a specific cause. Changing temperature and input context simultaneously confounds experimental results, making it impossible to separate parameter-scaling effects from context-driven shift effects.\n\n4. Essay Practice Questions\n\n(Note: These questions are designed for extended analysis and independent study. Answers are not provided.)\n\n1. Parameters vs. Contextual Knowledge: Contrast how a language model utilizes knowledge stored in its static parameters with information provided dynamically within its context window. In your analysis, discuss the implications of this distinction for system design, fine-tuning (e.g., InstructGPT), and real-time data updating.\n2. End-to-End Technical Pipeline of a Generation Step: Trace the complete mathematical and architectural path of an input string through a Transformer decoder model during a single autoregressive step. Begin at string tokenization and cover initial embeddings, positional encodings, Query/Key/Value causal attention matrices, feed-forward transformations, raw logits, temperature scaling, softmax normalization, and final token selection.\n3. Mathematical Behavior of Softmax and Temperature: Detail the mathematical operation of the softmax function p_i = \\frac{\\exp(z_i / T)}{\\sum_j \\exp(z_j / T)}. Using a hypothetical or empirical set of logits, analyze how varying T between low (T < 1.0) and high (T > 1.0) values alters total distribution entropy, top-token probability concentration, and candidate token selection probability without shifting logit rankings.\n4. Architectural Limitations, Verifiability, and RAG: Analyze the root causes of model hallucinations and factual inaccuracies in autoregressive models. Evaluate how Retrieval-Augmented Generation (RAG) addresses parametric knowledge freshness and factual grounding, while highlighting specific modes of failure that RAG systems remain vulnerable to (such as retrieval errors or context misinterpretation).\n5. Experimental Methodology for LLM Behavior: Formulate a rigorous empirical experimental protocol for evaluating a local quantized language model (such as Qwen2.5-0.5B-Instruct running via Transformers.js). Define your control parameters, primary dependent variables (including full-vocabulary probability mass and next-token distributions), hypothesis verification techniques, and code auditing procedures to detect silent logic errors in model execution pipelines.\n\n5. Comprehensive Glossary\n\n* Causal Attention: An attention mechanism variant restricted by a causal mask, ensuring that predictions for a given sequence position depend strictly on preceding and current positions, blocking access to future tokens.\n* Context: The full sequence of tokens (including system instructions, user inputs, historical dialogue, and retrieved documents) made available to a language model during a single inference step.\n* Contextual Representation: A dynamic, high-dimensional vector derived by passing initial embeddings through decoder layers, encoding both token identity and relationships to surrounding sequence context.\n* Embedding: A static, high-dimensional learned numerical vector associated with a specific token ID in a model's vocabulary lookup table.\n* Fine-Tuning: A post-pretraining process that further trains a model on specialized datasets or preference evaluations (e.g., RLHF / InstructGPT), updating parameter weights to align model outputs with desired behaviors or domains.\n* Generative AI: Systems designed to generate synthetic content (text, images, audio, etc.) conditioned on specific input prompts or instructions.\n* Greedy Selection: A deterministic decoding procedure that always selects the token assigned the highest probability by the softmax distribution.\n* Inference: The process of executing a trained model to generate predictions or outputs using fixed, existing parameter weights.\n* Logit (z): Unnormalized numerical output scores produced by the final linear layer of a neural network before conversion into probabilities.\n* Large Language Model (LLM): An autoregressive deep neural network trained on vast text datasets to compute token sequence probabilities; it refers to the core model architecture rather than an entire software application wrapper.\n* Parameter: A learned numerical weight or bias within a model's neural network layers that dictates its structural transformations and knowledge encoding, updated during training.\n* Quantisation: A compression technique that lowers the numerical precision of model parameters (e.g., from 16-bit floating-point to 4-bit integers / q4), reducing memory footprint and computational requirements.\n* Query, Key, Value (Q, K, V): Linear projections of token representations within an attention layer. Queries are matched against Keys to calculate normalized attention weights, which are subsequently used to compute a weighted sum over Values.\n* Retrieval-Augmented Generation (RAG): An application architecture that combines search algorithms with text generation by retrieving relevant passages from an external collection and inserting them into the model's inference context window.\n* Sampling: The process of stochastically selecting a output token from the calculated softmax probability distribution.\n* Softmax: A mathematical function that converts a vector of arbitrary real-valued logits into a normalized probability distribution of non-negative values that sum to 1.\n* Temperature (T): A positive scaling hyperparameter applied to raw logits prior to softmax normalization that controls the randomness or concentration of the output probability distribution.\n* Token: The fundamental unit of text processing in a language model, representing a word, sub-word segment, character, or special structural symbol.\n* Tokenizer: An algorithm and vocabulary mapping tool responsible for segmenting raw text strings into numerical token IDs and converting token IDs back into human-readable text.\n\n\nSCOPE\nDocument Study Guide generated and read in @Browser. Export to Docs and Export to Sheets menus inspected only.\n\nCAPTIONS\n00:00:00.000 Open Reports and inspect the available formats.\n00:00:01.439 Choose a document report and inspect the study-guide template.\n00:00:03.502 Generate a Study Guide with practice questions and a glossary.\n00:00:06.261 Open the generated Study Guide and inspect its chapter-based structure.\n00:00:09.630 Inspect the report’s export options for Docs and Sheets.\n"
+  },
+  "S67AUDIO": {
+    "type": "video",
+    "src": "materials/notebook/audio.mp4",
+    "poster": "materials/notebook/audio-poster.jpg",
+    "captions": "materials/notebook/audio.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Audio Overview: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 11 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Audio Overview — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nGenerated Deep Dive: Why AI Never Learns From Prompts, duration 4:38. Playback advanced to 00:36, Pause was exercised and the speed menu displayed 0.5x through 2.0x.\n\nSCOPE\nAudio generated, played and paused in @Browser. Interactive mode opened; microphone interaction was not started. The interface recording is silent.\n\nCAPTIONS\n00:00:00.000 Open Audio Overview to customise the discussion.\n00:00:01.332 Choose a short Deep Dive and specify what the hosts should explain.\n00:00:04.062 Open the newly generated audio and start listening to the discussion.\n00:00:08.822 Pause the discussion and inspect the playback-speed menu.\n"
+  },
+  "S67INFO": {
+    "type": "video",
+    "src": "materials/notebook/infographic.mp4",
+    "poster": "materials/notebook/infographic-poster.jpg",
+    "captions": "materials/notebook/infographic.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Infographic: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 14 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Infographic — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nGenerated infographic: Training, Inference, and Retrieval Comparison. It compares what changes, what stays fixed and misconceptions to avoid in three columns.\n\nSCOPE\nInfographic generated and inspected in @Browser; Download menu opened, no file download claimed.\n\nCAPTIONS\n00:00:00.000 Open Infographic to choose a visual format.\n00:00:01.336 Set the visual style, detail and comparison to show.\n00:00:04.379 Open and inspect the infographic generated from the chapter.\n00:00:07.870 Inspect the generated comparison and verify each label against the chapter.\n00:00:11.125 Open the artifact menu to find its Download command.\n"
+  },
+  "S67SLIDES": {
+    "type": "video",
+    "src": "materials/notebook/slides.mp4",
+    "poster": "materials/notebook/slides-poster.jpg",
+    "captions": "materials/notebook/slides.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Slide Deck: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 21 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Slide Deck — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nNew deck: The Architecture of AI Memory, eight slides. Slideshow started and advanced to slide two. PDF and PowerPoint download options were inspected. A slide was selected and revision mode exposed Revision instructions and Generate revised deck.\n\nSCOPE\nDeck generated anew in @Browser. Slideshow navigation executed; download and revision controls inspected without downloading or generating another revision.\n\nCAPTIONS\n00:00:00.000 Open Slide Deck to choose its format and length.\n00:00:01.337 Choose short presenter slides and provide a focused brief.\n00:00:04.318 Open the generated presentation and review its sequence.\n00:00:06.808 Start the slideshow to present the generated deck.\n00:00:10.165 Move to the next slide and inspect the explanation.\n00:00:13.309 Inspect the PDF and PowerPoint download options.\n00:00:15.839 Select a generated slide to inspect it at a larger size.\n00:00:18.147 Open revision mode for the selected slide.\n"
+  },
+  "S67TABLES": {
+    "type": "video",
+    "src": "materials/notebook/tables.mp4",
+    "poster": "materials/notebook/tables-poster.jpg",
+    "captions": "materials/notebook/tables.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Data Table: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 12 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Data Table — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nprocess\n\t\nwhat changes\n\t\nwhat stays fixed\n\t\nchapter evidence\n\t\nmisconception to avoid\n\t\nSource\n\n\nTraining or fine-tuning\n\t\nThe model's parameters (weights).\n\t\nNot in source\n\t\nSection 1.2, Table 1, and Figure 1\n\t\nInserting data into a prompt or conversation context updates the model's weights after every message.\n\t\n[1]\n\n\nOrdinary inference\n\t\nInformation available to the current inference (context) / input context.\n\t\nThe model's parameters / model itself.\n\t\nSection 1.2, Table 1, and Figure 1\n\t\nUsing context or getting a specific result proves that model parameters have been updated.\n\t\n[1]\n\n\nDocument retrieval (RAG)\n\t\nExternal passages supplied as context.\n\t\nThe model (parameters remain fixed).\n\t\nSection 1.2, Table 1, Figure 1, and Section 1.7\n\t\nUploading or retrieving documents automatically updates model weights or guarantees accurate context integration without failure.\n\t\n[1]\n\nSCOPE\nTable generated from the chapter PDF, expanded and its Export to Sheets menu opened in @Browser. No export was completed.\n\nCAPTIONS\n00:00:00.000 Open Data Table to organise information from the selected source.\n00:00:01.608 Describe the rows and columns before generating the comparison table.\n00:00:03.993 Open the generated table and compare the three processes side by side.\n00:00:06.529 Expand the table to read the evidence and misconception columns.\n00:00:09.978 The table menu offers Export to Sheets for further editing.\n"
+  },
+  "S67SHARE": {
+    "type": "video",
+    "src": "materials/notebook/sharing.mp4",
+    "poster": "materials/notebook/sharing-poster.jpg",
+    "captions": "materials/notebook/sharing.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Sharing: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 7 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Sharing — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nThe sharing dialog and More copy options were opened. Copy link to chat view was selected and its link copied. No recipient was entered and no access permissions were changed.\n\nSCOPE\nSharing controls inspected in @Browser; link copying executed only. No invitations sent or public access enabled.\n\nCAPTIONS\n00:00:00.000 Open the sharing dialog to review access before sending a link.\n00:00:02.382 Inspect the normal notebook link and the chat-view link option.\n00:00:04.732 Copy a chat-view link; recipients still need appropriate notebook access.\n"
+  },
+  "S61DEEP": {
+    "type": "video",
+    "src": "materials/notebook/deep-research.mp4",
+    "poster": "materials/notebook/deep-research-poster.jpg",
+    "captions": "materials/notebook/deep-research.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Deep Research: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 19 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Deep Research — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nCompleted report: Architectural Taxonomies in Natural Language Processing: A Comparative Analysis of Tokenization, Document Retrieval, and Language Model Training. It lists 17 cited sources and 18 not cited. Both lists were inspected, and only the generated report was imported. Some discovered sources were third-party or loosely related, illustrating the need for review.\n\nSCOPE\nDeep Research executed anew in @Browser. Source lists inspected and the report imported without its supporting sources.\n\nCAPTIONS\n00:00:00.000 Switch from Fast Research to Deep Research for a sourced report.\n00:00:02.364 Ask for a comparison grounded in official documentation and original papers.\n00:00:04.764 Start Deep Research and continue working while the report is prepared.\n00:00:07.112 Open the completed Deep Research report and examine its citations.\n00:00:10.615 Inspect the cited and not-cited lists; source quality still needs review.\n00:00:13.127 Keep the report selected while deselecting its supporting sources.\n00:00:15.903 Import the completed research report as a separate source.\n"
+  },
+  "S67VIDEO": {
+    "type": "video",
+    "src": "materials/notebook/video.mp4",
+    "poster": "materials/notebook/video-poster.jpg",
+    "captions": "materials/notebook/video.en.vtt",
+    "captionsDefault": false,
+    "browserFrame": true,
+    "alt": "NotebookLM · Video Overview: real actions recorded from scratch in @Browser.",
+    "caption": "Recorded in @Browser · 21 s",
+    "source": "https://notebook.google.com/",
+    "transcript": "NotebookLM · Video Overview — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nNew Explainer: Training vs. Inference, duration 7:04, Whiteboard style. Playback was started in its standalone @Browser tab, then Skip forward and Pause were exercised.\n\nSCOPE\nVideo generated anew from the uploaded PDF with an explicit training-versus-inference focus. All recorded video frames come from @Browser. The interface demonstration is silent.\n\nCAPTIONS\n00:00:00.000 Open Video Overview in Studio.\n00:00:01.876 Choose an Explainer video for a structured explanation of the chapter.\n00:00:03.817 Set a visual style and focus, then generate the source-based video.\n00:00:06.616 Open the new Training vs. Inference Explainer generated from the chapter.\n00:00:08.966 Play the new 7:04 Explainer, Training vs. Inference.\n00:00:17.400 Skip forward and pause to inspect a concept against the chapter.\n"
   }
 }

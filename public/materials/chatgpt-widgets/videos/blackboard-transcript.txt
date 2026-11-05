@@ -1,0 +1,57 @@
+/blackboard — actual ChatGPT interaction
+
+PROMPT
+/blackboard Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Compare the training and inference flows, then try the understanding check.
+00:00:04.000 Reveal the explanation after studying the diagram.
+
+RENDERED RESULT
+Blackboard: Training vs. Inference
+
+Generative AI · Chapter 1.2
+
+Training
+
+Examples
+
+Prediction error
+
+Parameter updates
+
+Changed model
+
+Inference
+
+Input + fixed model
+
+Model calculations
+
+Output distribution
+
+Selected output
+
+Third distinction: Retrieval
+
+Question → Retrieved passages → Context + fixed model → Generated answer
+
+Retrieval changes available information, not model weights.
+
+Training changes the model. Inference uses it.
+
+Check your understanding
+
+1. What changes during training?
+
+Optimization updates numerical parameters to reduce aggregate prediction error.
+
+Hide answer
+
+2. Does adding text to a prompt retrain the model?
+
+Reveal answer
+
+3. How can you isolate the effect of context?
+
+Reveal answer
+Source: Foundations of Generative Artificial Intelligence, Section 1.2, Figure 1 and Table 1, pages 5–6.

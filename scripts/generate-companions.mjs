@@ -5,6 +5,7 @@ const root = path.resolve(import.meta.dirname, '..')
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'))
 const slides = read('data/slides.json')
 const sources = read('data/sources.json')
+const shortcutVideos = new Map(read('data/chatgpt-videos.json').clips.map(clip => [clip.command.toLowerCase(), clip]))
 const skillResearch = read('data/skills-research.json')
 const catalogue = slide => (slide.skillIds || []).map(id => skillResearch.skills.find(skill => skill.id === id))
 const destination = path.join(root, 'public/materials')
@@ -16,9 +17,12 @@ for (const [source, name] of [
   ['node_modules/daisyui/daisyui.css', 'daisyui.css'],
   ['node_modules/daisyui/LICENSE', 'daisyui.LICENSE'],
   ['styles/reading-ui.css', 'theme.css'],
+  ['styles/browser-video.css', 'browser-video.css'],
 ]) {
   fs.copyFileSync(path.join(root, source), path.join(uiDirectory, name))
 }
+
+fs.copyFileSync(path.join(root, 'data/bibliography.bib'), path.join(destination, 'references.bib'))
 
 function write(name, value) {
   const output = Array.isArray(value)
@@ -48,11 +52,13 @@ function textContent(slide) {
   return [
     slide.message,
     ...slide.body,
+    ...(slide.shortcutLabels || []).map(item => item.command),
     ...(slide.commands || []).flatMap(row => [
       `${row.command}: ${row.description}`,
       ...(row.result ? [row.result.label, row.result.instruction, row.result.text || '', row.result.media.alt, row.result.media.caption] : []),
     ]),
     ...(slide.cards || []).flatMap(card => [card.title, card.body]),
+    ...(slide.toolTable?.rows || []).map(row => `${row.tool} — ${row.purpose} — ${row.access} ${row.url}`),
     ...catalogue(slide).flatMap(skill => [skill.name, `${skill.publisher} · ${skill.origin}`, skill.platform, skill.summary,
       `Example request · not executed: ${skill.prompt}`, `Expected deliverable: ${skill.expected}`, skill.caveat,
       `Requirements: ${skill.requirements}`, `Terminal installation for coding agents: ${skill.installCommand}`, skill.sourceUrl]),
@@ -87,7 +93,7 @@ write('Accessible_Deck_EN.txt', [
 ])
 write('Prompt_Bank_EN.txt', [
   ...introduction,
-  ...slides.filter(slide => slide.prompt && slide.id !== 'S55')
+  ...slides.filter(slide => slide.prompt)
     .flatMap(slide => [`${slide.id} · ${slide.title}`, slide.prompt, '']),
   'SKILL EXAMPLE REQUESTS — NOT EXECUTED',
   ...skillResearch.skills.flatMap(skill => [`${skill.name} · ${skill.publisher} · ${skill.platform}`, skill.prompt, `Expected deliverable: ${skill.expected}`, '']),
@@ -102,8 +108,8 @@ write('source_index.csv', [
     ].map(csvCell).join(',')),
 ])
 
-// Remove retired outputs as well, so regeneration cannot leave stale script downloads.
-const retiredFiles = new Set(['facilitator-guide-it.txt', 'Accessible_Deck_IT.txt', 'Prompt_Bank_IT.txt'])
+// Remove retired outputs as well, so regeneration cannot leave stale materials.
+const retiredFiles = new Set(['lettura.html', 'facilitator-guide-it.txt', 'Accessible_Deck_IT.txt', 'Prompt_Bank_IT.txt', 'map-initial.excalidraw', 'map-revised.excalidraw'])
 for (const name of fs.readdirSync(destination)) {
   if (name.startsWith('Presenter_Notes') || retiredFiles.has(name)) {
     fs.rmSync(path.join(destination, name))
@@ -127,6 +133,7 @@ function head(title, language = 'en') {
     `<title>${h(title)}</title>`,
     '<link rel="stylesheet" href="ui/daisyui.css">',
     '<link rel="stylesheet" href="ui/theme.css">',
+    '<link rel="stylesheet" href="ui/browser-video.css">',
     '<link rel="stylesheet" href="ui/reader.css">',
     '<script src="ui/reader.js" defer></script>',
     '</head><body><a class="btn skip" href="#content">Skip to content</a>',
@@ -146,21 +153,29 @@ const formulaMarkup='<math display="block" aria-label="p sub i equals exponentia
 function commandTable(slide) {
   if (!slide.commands?.length) return ''
   const formal = slide.commandCategory?.startsWith('formal-')
-  const column = slide.commandCategory === 'formal-web' ? 'Menu action' : formal ? 'Official command' : 'Informal shortcut'
+  const column = slide.commandCategory === 'formal-web' ? 'Menu action' : formal ? 'Official command' : 'Tested prompt label'
   const label = row => slide.commandCategory === 'formal-web' ? h(row.command) : `<code>${h(row.command)}</code>`
   return [
     '<div class="command-catalogue overflow-x-auto" lang="en"><table class="table">',
-    `<thead><tr><th scope="col">${column}</th><th scope="col">${formal ? 'What it does' : 'What you can ask for'}</th></tr></thead><tbody>`,
-    ...slide.commands.map(row => `<tr><th scope="row">${label(row)}</th><td>${h(row.description)}</td></tr>`),
+    `<thead><tr><th scope="col">${column}</th><th scope="col">${formal ? 'What it does' : 'Observed interactive output'}</th></tr></thead><tbody>`,
+    ...slide.commands.map(row => {
+      const clip = shortcutVideos.get(row.command.toLowerCase())
+      const videoLink = clip ? ` <a class="link link-primary" href="${h(relative(clip.src))}">Watch video</a>` : ''
+      return `<tr><th scope="row">${label(row)}${videoLink}</th><td>${h(row.description)}</td></tr>`
+    }),
     '</tbody></table></div>',
     ...slide.commands.filter(row => row.result).map(row => {
       const result = row.result
-      return `<article class="command-result"><h3>${h(row.command)} · ${h(result.label)}</h3>${row.command === 'Study' ? promptMarkup(result.instruction, 'Prompt after selecting Study') : `<p>${h(result.instruction)}</p>`}${result.text ? `<p class="command-response">${h(result.text)}</p>` : ''}${mediaMarkup(result.media)}${result.inputCapture ? `<p><a class="link link-primary" href="${h(relative(result.inputCapture))}">Study selection and prompt</a></p>` : ''}</article>`
+      return `<article class="command-result"><h3>${h(row.command)} · ${h(result.label)}</h3>${row.command === 'Study' ? promptMarkup(result.instruction, 'Prompt after selecting Study') : `<p>${h(result.instruction)}</p>`}${result.text ? `<p class="command-response">${h(result.text)}</p>` : ''}${mediaMarkup(result.media)}</article>`
     }),
   ].join('')
 }
 
-function promptMarkup(text, label = 'Prompt to copy', prefix = '>') {
+function promptMarkup(text, label = 'Prompt to copy', prefix = '>', style = 'chat') {
+  if (style === 'chat') {
+    const content = h(text).replace(/^(\/[a-z][a-z0-9_-]*)(?=\s)/i, '<span class="prompt-command">$1</span>')
+    return `<div class="prompt-block"><p class="meta">${h(label)}</p><div class="chat chat-end prompt-chat"><div class="chat-bubble">${content}</div></div></div>`
+  }
   return `<div class="prompt-block"><p class="meta">${h(label)}</p><div class="mockup-code prompt-terminal"><pre data-prefix="${h(prefix)}"><code>${h(text)}</code></pre></div></div>`
 }
 
@@ -173,7 +188,7 @@ function skillMarkup(skill, installation = false) {
     `<p><strong>Expected deliverable:</strong> ${h(skill.expected)}</p>`,
     `<p>${h(skill.caveat)}</p>`,
     `<p><strong>Requirements:</strong> ${h(skill.requirements)} <strong>License:</strong> ${h(skill.license)}.</p>`,
-    installation ? promptMarkup(skill.installCommand, 'Terminal installation · coding agents, not a ChatGPT message', '$') : '',
+    installation ? promptMarkup(skill.installCommand, 'Terminal installation · coding agents, not a ChatGPT message', '$', 'terminal') : '',
     `<p><a class="link link-primary" href="${h(skill.sourceUrl)}">Publisher’s skill and current instructions</a></p>`,
     installation ? `<p class="meta">Discovery snapshot · ${h(skill.verified)}: ${h(skill.popularity.installs)} directory installs; ${h(skill.popularity.repositoryStars)} repository stars. Counts are approximate, change over time and do not measure effectiveness. ${skill.popularity.installs !== 'Not recorded' ? `<a class="link link-primary" href="${h(skill.popularity.url)}">Directory entry</a>` : ''}</p>` : '',
     '</article>',
@@ -183,12 +198,15 @@ function skillMarkup(skill, installation = false) {
 function mediaMarkup(media) {
   if (!media) return ''
   const content = media.type === 'video' ? [
-    `<video controls preload="none" poster="${h(relative(media.poster))}">`,
+    `<video controls preload="none"${media.browserFrame ? ' width="1440" height="900"' : ''} aria-label="${h(media.alt)}" poster="${h(relative(media.poster))}">`,
     `<source src="${h(relative(media.src))}" type="${media.src.endsWith('webm') ? 'video/webm' : 'video/mp4'}">`,
     `<track kind="captions" srclang="en" label="English" src="${h(relative(media.captions))}"${media.captionsDefault === false ? '' : ' default'}>`,
     '</video>',
   ].join('') : `<img src="${h(relative(media.src))}" alt="${h(media.alt)}">`
-  return `<figure>${content}<figcaption>${h(media.caption)}</figcaption></figure>`
+  const framed = media.browserFrame
+    ? `<div class="mockup-browser browser-video"><div class="mockup-browser-toolbar"><div class="input browser-video-address">${h(media.source?.replace(/^https?:\/\//, ''))}</div></div><div class="browser-video-page">${content}<img class="video-print-poster" src="${h(relative(media.poster))}" alt="${h(media.alt)}"></div></div>`
+    : content
+  return `<figure>${framed}<figcaption>${h(media.caption)}</figcaption></figure>`
 }
 
 function transcriptMarkup(media) {
@@ -203,6 +221,8 @@ function inner(slide) {
   return [
     `<p>${h(slide.message)}</p>`,
     commandTable(slide),
+    slide.toolTable ? `<div class="tool-resource-catalogue overflow-x-auto"><table class="table" aria-label="${h(slide.title)}"><thead><tr>${slide.toolTable.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${slide.toolTable.rows.map(row => `<tr><th scope="row"><a class="link" href="${h(relative(row.url))}">${h(row.tool)}</a></th><td>${h(row.purpose)}</td><td>${h(row.access)}</td></tr>`).join('')}</tbody></table></div>` : '',
+    slide.shortcutLabels?.length ? `<ul class="shortcut-index">${slide.shortcutLabels.map(item => `<li><code>${h(item.command)}</code></li>`).join('')}</ul>` : '',
     ...catalogue(slide).map(skill => skillMarkup(skill)),
     slide.formula ? formulaMarkup : '',
     mediaMarkup(slide.media),
@@ -219,50 +239,19 @@ function inner(slide) {
   ].join('')
 }
 
-function sourceList(slide) {
-  const rows = slide.sources.filter(id => sources[id]?.url).map(id => {
-    const source = sources[id]
-    const limitation = source.limitations ? ` — ${h(source.limitations)}` : ''
-    return `<p><a class="link link-primary" href="${h(relative(source.url))}">${h(source.citation || source.title)}</a>${limitation}</p>`
-  })
-  return `<div class="refs">${rows.join('')}</div>`
-}
-
-writePage('lettura.html', 'Beyond prompting · reading guide', [
-  '<header><h1>Beyond prompting</h1>',
-  '<p>Study, understand and assess with tools. Follow Andrea’s learning path, the teacher’s assessment and choices of access support.</p>',
-  `<p class="meta">Marco Cremaschi · November 2026 · ${slides.length} slides</p>`,
-  controls,
-  '<p><a class="link link-primary" href="kit.html">Materials</a></p>',
-  '<nav aria-label="Slide index"><ul>',
-  ...slides.map(slide => `<li><a class="link link-primary" href="#${slide.id}">${slide.number}. ${h(slide.title)}</a></li>`),
-  '</ul></nav></header><main id="content">',
-  ...slides.map(slide => [
-    `<section class="slide" id="${slide.id}" lang="${slide.lang || 'en'}">`,
-    `<h2>${h(slide.title)}</h2>`,
-    `<p class="meta">Slide ${slide.number} · ${h(slide.stage || slide.section)}</p>`,
-    inner(slide),
-    sourceList(slide),
-    '</section>',
-  ].join('')),
-  '</main><footer><a class="link link-primary" href="#">Back to top</a></footer>',
-])
-
 writePage('kit.html', 'Workshop materials', [
   '<header><h1>Workshop materials</h1>',
   '<p>Andrea is a fictional teaching case. The textbook is fictional; its technical references and the cited research are real.</p>',
   controls,
   '</header><main id="content"><h2>Study and understand</h2><ul>',
-  '<li><a class="link link-primary" href="lettura.html">All slides in reading format</a></li>',
   '<li><a class="link link-primary" href="booklet-genai/Fondamenti_GenAI_Cremaschi.pdf">Textbook chapter PDF</a> · <a class="link link-primary" href="booklet-genai/lettura.html">Chapter reading HTML</a></li>',
   '<li><a class="link link-primary" href="demo-genai/index.html">Real-model application</a></li>',
   '<li><a class="link link-primary" href="Prompt_Bank_EN.txt">Prompts and requests</a></li>',
   '<li><a class="link link-primary" href="skills-guide.html">Agent Skills: annotated catalogue and installation guide</a></li>',
-  '<li><a class="link link-primary" href="map-initial.excalidraw">Initial map</a> · <a class="link link-primary" href="map-revised.excalidraw">Revised map</a> (open in Excalidraw)</li>',
   '<li><a class="link link-primary" href="activities.html">Participant activity sheets</a></li>',
   '<li><a class="link link-primary" href="formula-desmos.txt">Desmos expressions and numerical example</a></li>',
   '<li><a class="link link-primary" href="verifica.html">Assessment, expected answers and rubric</a></li>',
-  '</ul><h2>References</h2><ul><li><a class="link link-primary" href="source_index.csv">Source index</a></li></ul>',
+  '</ul><h2>References</h2><ul><li><a class="link link-primary" href="source_index.csv">Source index</a></li><li><a class="link link-primary" href="references.bib" download>Verified bibliography (BibTeX / BibLaTeX)</a></li></ul>',
   '<h2>Access support</h2>',
   '<p>Open the HTML chapter in Edge for Read Aloud. Adjust text size and spacing to suit the reader. System dictation offers an alternative to typing; review its transcript. Choose and check supports with the person using them.</p>',
   '<p>The main path uses free features. Account requirements and usage limits may change. The final slide catalogues distinguish premium alternatives and trials.</p>',
@@ -273,7 +262,7 @@ writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue'
   '<header><h1>Agent Skills for study, research and teaching</h1>',
   `<p class="meta">12 skills · sources checked ${h(skillResearch.verified)}</p>`,
   `<p>${h(skillResearch.scope)}</p>`, controls,
-  '<p><a class="link link-primary" href="kit.html">Workshop materials</a> · <a class="link link-primary" href="lettura.html#S53SKILLS">Skills slides in reading format</a></p>',
+  '<p><a class="link link-primary" href="kit.html">Workshop materials</a></p>',
   '<nav aria-label="Skill index"><ul>',
   ...skillResearch.skills.map(skill => `<li><a class="link link-primary" href="#${h(skill.id)}">${h(skill.name)} · ${h(skill.publisher)}</a></li>`),
   '</ul></nav></header><main id="content">',

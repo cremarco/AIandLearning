@@ -1,0 +1,46 @@
+/studyplan — actual ChatGPT interaction
+
+PROMPT
+/studyplan Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Read the three study activities and their self-checks.
+00:00:04.000 Mark the first activity complete and observe the progress counter.
+
+RENDERED RESULT
+Study Plan: Training vs. Inference
+
+University level · 15 minutes · Based on §1.2 and Figure 1 of the attached chapter
+
+Study progress
+
+1/3 completed
+
+1. Understand training
+
+5 min
+
+Trace examples → prediction error → parameter updates → changed model.
+
+Self-check: Explain why optimization changes learned numerical values.
+
+2. Understand inference
+
+5 min
+
+Trace input + fixed model → calculations → output distribution → selected output.
+
+Self-check: Explain why ordinary inference does not update parameters.
+
+3. Compare and apply
+
+5 min
+
+Compare training, inference, and RAG using the chapter's Figure 1.
+
+Self-check: Explain why adding a definition or retrieving a passage changes context without retraining.
+
+Final recall question: A model uses a definition supplied in the prompt. Does this prove its parameters have been updated? Explain why or why not.
+
+Success criterion: Independently distinguish changes to model parameters from changes to the information available during inference.
+
+The 15-minute schedule is a suggested study structure, not a timing requirement from the chapter.

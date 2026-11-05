@@ -1,0 +1,57 @@
+/millionaire — actual ChatGPT interaction
+
+PROMPT
+/millionaire Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Read the question and compare the four options.
+00:00:04.000 Choose the answer that parameters stay fixed during inference.
+00:00:08.000 Confirm the answer and read the correct-answer feedback.
+
+RENDERED RESULT
+Welcome to Who Wants to Be an AI Millionaire? A three-question challenge for university students, based on Section 1.2 of the attached chapter.
+
+Choose one answer per question. Each correct answer unlocks a higher prize!
+
+THE MILLIONAIRE CHALLENGE
+
+Training vs. Inference
+
+Q1
+
+1,000
+
+Q2
+
+10,000
+
+Q3
+
+1,000,000
+
+QUESTION 1 OF 3 · FOR 1,000 POINTS
+
+What happens to model parameters during ordinary inference?
+
+A:
+
+They are updated after each message.
+
+B:
+
+They remain fixed during the calculation.
+
+C:
+
+They are replaced by the prompt.
+
+D:
+
+They are optimized using prediction error.
+
+Correct answer!
+
+Ordinary inference uses existing model parameters. Training, not inference, updates their numerical values.
+
+Next question
+
+The central distinction to remember: training updates model parameters; ordinary inference uses the parameters already available. Changing context can change an answer without changing the model.

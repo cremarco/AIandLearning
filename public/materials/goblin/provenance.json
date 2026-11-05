@@ -1,0 +1,279 @@
+{
+  "recorded": "2026-11-05",
+  "language": "en-US",
+  "status": "executed",
+  "captureMethod": "Complete document screenshots from actual browser interactions at a 1440 × 900 viewport. The whole captured page stays visible at one scale per clip, without crops, zooms or overlays. Reading holds preserve the original site content. No reconstructed interface or synthetic results.",
+  "audio": "None; optional WebVTT captions are provided.",
+  "clips": [
+    {
+      "key": "compiler",
+      "name": "Compiler",
+      "slideId": "S58COMPILER",
+      "sourceId": "TOOL_GOBLIN_COMPILER",
+      "sourceUrl": "https://goblin.tools/Compiler",
+      "title": "Compiler: turn thoughts into actions",
+      "message": "An unstructured study goal becomes four suggested tasks.",
+      "decision": "Check that the list keeps the learning goal and fits the time available.",
+      "input": "I have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.",
+      "result": "Study the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking",
+      "captions": {
+        "input": "Describe the study goal in your own words.",
+        "action": "Compiler extracts actions from the unstructured note.",
+        "result": "Actual result: four suggested study tasks.",
+        "review": "Review the list: keep the learning goal and remove overlap."
+      },
+      "recordedAt": 1793882759863,
+      "captureSeconds": 5.486,
+      "durationSeconds": 16,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "fullPage": true,
+      "pageSize": [
+        1440,
+        900
+      ],
+      "captureFrameCount": 13,
+      "actions": [
+        {
+          "name": "input",
+          "t": 0.042
+        },
+        {
+          "name": "submit",
+          "t": 1.542
+        },
+        {
+          "name": "result",
+          "t": 2.871
+        }
+      ],
+      "sha256": "dba092acfa616ca4bd9f160be21368c3490ef56eeb8baff62ddb9d4dd77bf1e3"
+    },
+    {
+      "key": "magic-todo",
+      "name": "Magic ToDo",
+      "slideId": "S58",
+      "sourceId": "TOOL_GOBLIN_UI",
+      "sourceUrl": "https://goblin.tools/ToDo",
+      "title": "Magic ToDo: break down the task",
+      "message": "One study task becomes four smaller, editable steps.",
+      "decision": "Keep the useful steps; adjust detail where Andrea is stuck.",
+      "input": "Read the training and inference section and write a three-line comparison.",
+      "result": "Locate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.",
+      "captions": {
+        "input": "Start with one concrete task from the chapter.",
+        "action": "Use the magic-wand button to break the task down.",
+        "result": "Actual result: 4 smaller steps.",
+        "review": "Choose the steps that help; revise generic or repeated advice."
+      },
+      "recordedAt": 1793882796170,
+      "captureSeconds": 5.684,
+      "durationSeconds": 16,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "fullPage": true,
+      "pageSize": [
+        1440,
+        957
+      ],
+      "captureFrameCount": 13,
+      "actions": [
+        {
+          "name": "task",
+          "t": 0
+        },
+        {
+          "name": "submit",
+          "t": 1.501
+        },
+        {
+          "name": "result",
+          "t": 2.828
+        }
+      ],
+      "sha256": "1307bdbc6508f572cd072cbe40a30be2e6c01154bb7dc64f72b40cc4a31f6429"
+    },
+    {
+      "key": "estimator",
+      "name": "Estimator",
+      "slideId": "S58ESTIMATOR",
+      "sourceId": "TOOL_GOBLIN_ESTIMATOR",
+      "sourceUrl": "https://goblin.tools/Estimator",
+      "title": "Estimator: plan a time window",
+      "message": "The same kind of study task receives a rough time estimate.",
+      "decision": "Compare the suggested time window with the time Andrea actually needs.",
+      "input": "Read two pages about training and inference, write a three-line comparison, and explain it aloud once.",
+      "result": "10-20 minutes",
+      "captions": {
+        "input": "Describe the activity and its expected output.",
+        "action": "Ask Estimator for a rough time window.",
+        "result": "Actual result: 10-20 minutes.",
+        "review": "Record the real time, then adjust the next study session."
+      },
+      "recordedAt": 1793882820583,
+      "captureSeconds": 5.614,
+      "durationSeconds": 16,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "fullPage": true,
+      "pageSize": [
+        1440,
+        900
+      ],
+      "captureFrameCount": 13,
+      "actions": [
+        {
+          "name": "input",
+          "t": 0.022
+        },
+        {
+          "name": "submit",
+          "t": 1.524
+        },
+        {
+          "name": "result",
+          "t": 2.744
+        }
+      ],
+      "sha256": "27b771bee0b10bc73369080dc3ca6235646490366e0008c0c4478b3b00c3051f"
+    },
+    {
+      "key": "taskmaster",
+      "name": "Taskmaster",
+      "slideId": "S58TASKMASTER",
+      "sourceId": "TOOL_GOBLIN_TASKMASTER",
+      "sourceUrl": "https://goblin.tools/Taskmaster",
+      "title": "Taskmaster: work on one task",
+      "message": "Focus on one item from the Magic ToDo list; start and pause its timer.",
+      "decision": "The timer records time on task; the explanation provides evidence of learning.",
+      "input": "Andrea · full-page demo — Read the training and inference section and write a three-line comparison.",
+      "result": "Taskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.",
+      "captions": {
+        "input": "Open the study list and choose one current task.",
+        "action": "Press Play and work with one item in view.",
+        "result": "Pause the timer. This demonstration records three seconds.",
+        "review": "Elapsed time shows activity; check understanding separately."
+      },
+      "recordedAt": 1793882837658,
+      "captureSeconds": 7.477,
+      "durationSeconds": 16,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "fullPage": true,
+      "pageSize": [
+        1425,
+        996
+      ],
+      "captureFrameCount": 17,
+      "actions": [
+        {
+          "name": "task",
+          "t": 0.001
+        },
+        {
+          "name": "play",
+          "t": 1.775
+        },
+        {
+          "name": "pause",
+          "t": 5.345
+        }
+      ],
+      "sha256": "2ab3ad22a7736f4aaef93fa9f36c97e81c619724ab10a5e7f854457ca28ce9b7"
+    },
+    {
+      "key": "professor",
+      "name": "Professor",
+      "slideId": "S58PROFESSOR",
+      "sourceId": "TOOL_GOBLIN_PROFESSOR",
+      "sourceUrl": "https://goblin.tools/Professor",
+      "title": "Professor: request an explanation",
+      "message": "Ask for a short explanation and example of training versus inference.",
+      "decision": "Check parameter updates and the limits of the analogy against the assigned chapter.",
+      "input": "Training versus inference in a language model. Explain the difference briefly and give one short example.",
+      "result": "EXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.  \n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.  \nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.  \nExample: Asking the model to write a summary of today's news after it has already been trained.",
+      "captions": {
+        "input": "Ask a focused question about training and inference.",
+        "action": "Professor generates an explanation and an example.",
+        "result": "Read the actual explanation; an analogy still needs checking.",
+        "review": "Return to the chapter: which parameters change, and when?"
+      },
+      "recordedAt": 1793882867359,
+      "captureSeconds": 7.727,
+      "durationSeconds": 17,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "fullPage": true,
+      "pageSize": [
+        1425,
+        1051
+      ],
+      "captureFrameCount": 17,
+      "actions": [
+        {
+          "name": "input",
+          "t": 0.024
+        },
+        {
+          "name": "submit",
+          "t": 1.524
+        },
+        {
+          "name": "result",
+          "t": 4.662
+        }
+      ],
+      "sha256": "64fef38d6ba89073476a502c2083fdf2d5c1a6dcf97abae46f61d72e38a1ec3f"
+    },
+    {
+      "key": "formalizer",
+      "name": "Formalizer",
+      "slideId": "S58FORMALIZER",
+      "sourceId": "TOOL_GOBLIN_FORMALIZER",
+      "sourceUrl": "https://goblin.tools/Formalizer",
+      "title": "Formalizer: revise the wording",
+      "message": "Compare a student draft with the “More professional” rewrite.",
+      "decision": "Check that the distinction and the student’s remaining uncertainty survive the rewrite.",
+      "input": "Training is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.",
+      "result": "Training refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.",
+      "captions": {
+        "input": "Start with a draft that includes an unresolved question.",
+        "action": "Choose More professional, then Convert.",
+        "result": "Read the actual rewrite and compare its meaning.",
+        "review": "The uncertainty about context remains. Check the science too."
+      },
+      "recordedAt": 1793882884892,
+      "captureSeconds": 5.887,
+      "durationSeconds": 16,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "fullPage": true,
+      "pageSize": [
+        1425,
+        1020
+      ],
+      "captureFrameCount": 13,
+      "actions": [
+        {
+          "name": "input",
+          "t": 0.022
+        },
+        {
+          "name": "submit",
+          "t": 1.524
+        },
+        {
+          "name": "result",
+          "t": 3.074
+        }
+      ],
+      "sha256": "4eb6383f52f36b6b3dadea9dea7341b03eaf61c79d6e9b5073486cd5e902bc88"
+    }
+  ]
+}

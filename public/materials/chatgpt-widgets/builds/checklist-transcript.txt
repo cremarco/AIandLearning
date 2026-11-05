@@ -1,0 +1,11 @@
+/checklist — prompt and widget generation
+
+PROMPT
+/checklist Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 The original prompt is sent in ChatGPT.
+00:00:04.547 ChatGPT generates the response and builds the widget.
+00:00:21.595 The generated widget is ready to use.
+
+GENERATED RESULT
+Study Checklist: Training vs. InferenceUniversity level · Based on §1.2 and Figure 1 of the attached chapterMark each item when you can explain it independently.Learning progress0/3 complete1. Training — Understand parameter updatesI can explain how predicted distributions are compared with training examples and how optimization updates parameters to reduce prediction error.2. Inference — Understand fixed parametersI can explain how ordinary inference uses existing parameters to calculate an output without updating them.3. Context and retrieval — Distinguish interventionsI can explain why adding a prompt definition or retrieving a document changes available information without itself retraining the model. ResetFinal self-check: Can you explain why a model's answer may change after receiving a new definition even though its parameters remain unchanged?

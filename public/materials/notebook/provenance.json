@@ -1,0 +1,793 @@
+{
+  "recorded": "2026-11-05",
+  "language": "en-US",
+  "browser": "@Browser",
+  "restart": "All published clips were recorded again from scratch in a new notebook through @Browser. Earlier native-application recordings were replaced.",
+  "captureMethod": "Consecutive viewport screenshots during actual @Browser UI actions and media playback. Actual frame timestamps are replayed at 24 fps without drawing or reconstructing interfaces or responses. Generation waits are cut between scenes. The complete viewport remains visible at one scale.",
+  "source": "Original Fondamenti_GenAI_Cremaschi.pdf uploaded through the @Browser file chooser. Studio artifacts were generated with that PDF as the only selected source. Later research demonstrations imported official tokenizer documentation and a generated research report.",
+  "audio": "Silent interface demonstrations with English WebVTT captions and transcripts.",
+  "accountTierObserved": "PLUS; availability and limits vary by account.",
+  "captureManifestSha256": "8760e4e4d6787b07493bb46a98538509a5acef6aedc9a5464a49b2b5b1de75fd",
+  "clips": [
+    {
+      "key": "sources",
+      "slideId": "S61",
+      "name": "NotebookLM · sources",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "New notebook and PDF upload executed entirely in @Browser; other import options were displayed.",
+      "result": "The original Fondamenti_GenAI_Cremaschi.pdf was uploaded, indexed and selected. Notebook generated a summary of the chapter.",
+      "recordedAt": "2026-11-05T13:35:41.306Z",
+      "durationSeconds": 11.747,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 53,
+      "scenes": [
+        {
+          "phase": "add",
+          "durationSeconds": 2.773,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:35:41.306Z"
+        },
+        {
+          "phase": "upload",
+          "durationSeconds": 3.449,
+          "frameCount": 16,
+          "recordedAt": "2026-11-05T13:36:05.244Z"
+        },
+        {
+          "phase": "ready",
+          "durationSeconds": 3.187,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:36:41.918Z"
+        },
+        {
+          "phase": "scope",
+          "durationSeconds": 2.338,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:42:45.602Z"
+        }
+      ],
+      "sha256": "a0d4df7c88ed77e1f655e2e5470d2edd0c646b7ea175558b1c965b24f4f05ea5"
+    },
+    {
+      "key": "research",
+      "slideId": "S61RESEARCH",
+      "name": "NotebookLM · source discovery",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Fast Research, review, selection and one-source import executed in @Browser.",
+      "result": "Fast Research returned ten sources. Tokenizers - Hugging Face was selected and imported after the other results were deselected.",
+      "recordedAt": "2026-11-05T13:39:59.044Z",
+      "durationSeconds": 16.888,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 76,
+      "scenes": [
+        {
+          "phase": "query",
+          "durationSeconds": 2.256,
+          "frameCount": 10,
+          "recordedAt": "2026-11-05T13:39:59.044Z"
+        },
+        {
+          "phase": "search",
+          "durationSeconds": 2.563,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:40:01.301Z"
+        },
+        {
+          "phase": "review",
+          "durationSeconds": 2.47,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:41:29.703Z"
+        },
+        {
+          "phase": "select",
+          "durationSeconds": 3.546,
+          "frameCount": 16,
+          "recordedAt": "2026-11-05T13:41:53.104Z"
+        },
+        {
+          "phase": "choose",
+          "durationSeconds": 2.451,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:42:29.310Z"
+        },
+        {
+          "phase": "import",
+          "durationSeconds": 3.602,
+          "frameCount": 16,
+          "recordedAt": "2026-11-05T13:42:31.763Z"
+        }
+      ],
+      "sha256": "6a8509f285bf111e398961d7f184e1c5f4eea76949f24c9860b0538291c028b3"
+    },
+    {
+      "key": "deep-research",
+      "slideId": "S61DEEP",
+      "name": "NotebookLM · Deep Research",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Deep Research executed anew in @Browser. Source lists inspected and the report imported without its supporting sources.",
+      "result": "Completed report: Architectural Taxonomies in Natural Language Processing: A Comparative Analysis of Tokenization, Document Retrieval, and Language Model Training. It lists 17 cited sources and 18 not cited. Both lists were inspected, and only the generated report was imported. Some discovered sources were third-party or loosely related, illustrating the need for review.",
+      "recordedAt": "2026-11-05T13:42:47.942Z",
+      "durationSeconds": 19.406,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 87,
+      "scenes": [
+        {
+          "phase": "mode",
+          "durationSeconds": 2.364,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:42:47.942Z"
+        },
+        {
+          "phase": "query",
+          "durationSeconds": 2.4,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:43:02.583Z"
+        },
+        {
+          "phase": "start",
+          "durationSeconds": 2.348,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:43:04.986Z"
+        },
+        {
+          "phase": "report",
+          "durationSeconds": 3.503,
+          "frameCount": 16,
+          "recordedAt": "2026-11-05T13:54:14.389Z"
+        },
+        {
+          "phase": "sources",
+          "durationSeconds": 2.512,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:55:02.646Z"
+        },
+        {
+          "phase": "select",
+          "durationSeconds": 2.776,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:55:05.163Z"
+        },
+        {
+          "phase": "import",
+          "durationSeconds": 3.503,
+          "frameCount": 15,
+          "recordedAt": "2026-11-05T13:55:07.944Z"
+        }
+      ],
+      "sha256": "39bb8deb7cc222c022580e60631507e6926b5459a2ca624bf106f43464078630"
+    },
+    {
+      "key": "chat",
+      "slideId": "S62",
+      "name": "NotebookLM · source-based chat",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Question submitted and complete answer recorded from the uploaded chapter PDF in @Browser.",
+      "result": "* **Definition and role**: **Learned parameters** are internal numerical values (weights) established during training to guide model transformations, whereas **context** is the sequence of text and instructions made available specifically for the current inference step.\n* **Variability during inference**: During ordinary inference, the **model's parameters remain fixed**, while the **context changes dynamically** with each new input or message.\n* **Effect on model state**: Adding or modifying information in the context alters the input data for that specific calculation but **does not update or retrain the underlying weights**.\n\n💡 Would you like to explore how temperature settings alter output probabilities while keeping both the model parameters and context fixed?",
+      "recordedAt": "2026-11-05T13:39:23.142Z",
+      "durationSeconds": 9.769,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 44,
+      "scenes": [
+        {
+          "phase": "question",
+          "durationSeconds": 3.211,
+          "frameCount": 14,
+          "recordedAt": "2026-11-05T13:39:23.142Z"
+        },
+        {
+          "phase": "submit",
+          "durationSeconds": 2.304,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:39:26.354Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 4.254,
+          "frameCount": 19,
+          "recordedAt": "2026-11-05T13:40:20.800Z"
+        }
+      ],
+      "sha256": "59b591064a4ec5ee98d51843538203fd6de04e1788f28e6de11aa2ad4f202bd4"
+    },
+    {
+      "key": "citations",
+      "slideId": "S63",
+      "name": "NotebookLM · citation checking",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Citation popup opened and read in @Browser. The current PDF extraction preserves this paragraph correctly.",
+      "result": "Citation 4 opens the PDF passage: “Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context.”",
+      "recordedAt": "2026-11-05T13:40:25.325Z",
+      "durationSeconds": 9.969,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 42,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 4.37,
+          "frameCount": 17,
+          "recordedAt": "2026-11-05T13:40:25.325Z"
+        },
+        {
+          "phase": "passage",
+          "durationSeconds": 3.112,
+          "frameCount": 14,
+          "recordedAt": "2026-11-05T13:40:39.326Z"
+        },
+        {
+          "phase": "source",
+          "durationSeconds": 2.487,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:40:59.185Z"
+        }
+      ],
+      "sha256": "111332bfd756b1b22ce9a9e94cd52aa46ef9cdf22d71eb491e24555c1fbcc2ff"
+    },
+    {
+      "key": "customize",
+      "slideId": "S64SETTINGS",
+      "name": "NotebookLM · chat settings",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Notebook-specific configuration saved in @Browser; no account-wide preferences were changed.",
+      "result": "Learning Guide and Shorter response length were selected and saved for the new Browser demonstration notebook.",
+      "recordedAt": "2026-11-05T13:43:07.336Z",
+      "durationSeconds": 11.634,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 53,
+      "scenes": [
+        {
+          "phase": "menu",
+          "durationSeconds": 1.947,
+          "frameCount": 9,
+          "recordedAt": "2026-11-05T13:43:07.336Z"
+        },
+        {
+          "phase": "settings",
+          "durationSeconds": 2.021,
+          "frameCount": 9,
+          "recordedAt": "2026-11-05T13:43:19.326Z"
+        },
+        {
+          "phase": "save",
+          "durationSeconds": 3.876,
+          "frameCount": 18,
+          "recordedAt": "2026-11-05T13:43:29.393Z"
+        },
+        {
+          "phase": "chosen-settings",
+          "durationSeconds": 3.79,
+          "frameCount": 17,
+          "recordedAt": "2026-11-05T14:02:06.758Z"
+        }
+      ],
+      "sha256": "1161b8ebb44009d6b5a62097877ae78796e059dfed07c59ecc69793b1c6fb389"
+    },
+    {
+      "key": "mind-map",
+      "slideId": "S66",
+      "name": "NotebookLM · Mind Map",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "New map generated from the PDF and expanded in a dedicated @Browser artifact tab.",
+      "result": "Training, Inference, Context, and Retrieval, 4 children\nModel Training and Fine-Tuning, 3 children\nOrdinary Inference, 2 children\nConversation Context, 2 children\nDocument Retrieval (RAG), 2 children",
+      "recordedAt": "2026-11-05T13:39:09.951Z",
+      "durationSeconds": 11.318,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 48,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.457,
+          "frameCount": 6,
+          "recordedAt": "2026-11-05T13:39:09.951Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 2.472,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:39:20.667Z"
+        },
+        {
+          "phase": "overview",
+          "durationSeconds": 3.183,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:46:37.061Z"
+        },
+        {
+          "phase": "expand",
+          "durationSeconds": 4.206,
+          "frameCount": 18,
+          "recordedAt": "2026-11-05T13:46:40.249Z"
+        }
+      ],
+      "sha256": "092fb239b539b8b5ee624cf0871140e6b1ac93ae045ab0f4c8818ff40d8da4b6"
+    },
+    {
+      "key": "quiz",
+      "slideId": "S67",
+      "name": "NotebookLM · Quiz",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "New six-question quiz generated in @Browser; first question answered with C and feedback observed.",
+      "result": "Question: A developer supplies 'In this interaction, X means Y' in a prompt. Another user starts a fresh conversation with the same model. What happens to the custom definition?\n\nSelected C: It will revert to its original default understanding because passing information in a prompt context does not update the model's learned parameters.\n\nFeedback: That's right! Context changes only supply transient information available during a specific inference step; altering prompt inputs does not modify or re-train the underlying parameter weights of the model.",
+      "recordedAt": "2026-11-05T13:38:54.867Z",
+      "durationSeconds": 15.969,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 71,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.341,
+          "frameCount": 6,
+          "recordedAt": "2026-11-05T13:38:54.867Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 3.251,
+          "frameCount": 15,
+          "recordedAt": "2026-11-05T13:39:06.699Z"
+        },
+        {
+          "phase": "question",
+          "durationSeconds": 3.054,
+          "frameCount": 14,
+          "recordedAt": "2026-11-05T13:46:01.913Z"
+        },
+        {
+          "phase": "feedback",
+          "durationSeconds": 4.226,
+          "frameCount": 19,
+          "recordedAt": "2026-11-05T13:46:04.976Z"
+        },
+        {
+          "phase": "feedback-closeup",
+          "durationSeconds": 4.097,
+          "frameCount": 17,
+          "recordedAt": "2026-11-05T14:05:14.004Z"
+        }
+      ],
+      "sha256": "c15bbaa3d3b4d6479f87b7e8574298ec8bfefea0ca3435c0df75035442227781"
+    },
+    {
+      "key": "flashcards",
+      "slideId": "S67CARDS",
+      "name": "NotebookLM · Flashcards",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Generated anew from the uploaded PDF in @Browser. The first card was revealed and Got It selected in the standalone artifact tab. The actual set size is preserved.",
+      "result": "Observed set: Language Models Flashcards, 25 cards. First question: How does an autoregressive language model generate text? Answer: It calculates a probability distribution over the vocabulary to select the next token, appends it to the context sequence, and repeats the process step-by-step.",
+      "recordedAt": "2026-11-05T13:38:39.390Z",
+      "durationSeconds": 13.793,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 60,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.315,
+          "frameCount": 6,
+          "recordedAt": "2026-11-05T13:38:39.390Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 3.002,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:38:51.863Z"
+        },
+        {
+          "phase": "question",
+          "durationSeconds": 3.087,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:45:16.144Z"
+        },
+        {
+          "phase": "answer",
+          "durationSeconds": 4.248,
+          "frameCount": 20,
+          "recordedAt": "2026-11-05T13:45:19.236Z"
+        },
+        {
+          "phase": "self-rate",
+          "durationSeconds": 2.141,
+          "frameCount": 10,
+          "recordedAt": "2026-11-05T13:45:35.932Z"
+        }
+      ],
+      "sha256": "e094b2c6618fd684f8ca77020f47c75d6ad955456b720a0b318c499664f0496d"
+    },
+    {
+      "key": "notes",
+      "slideId": "S67NOTES",
+      "name": "NotebookLM · Notes",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Response saved as a view-only note; Convert to source was shown but not executed.",
+      "result": "Saved note: Model Parameters and Context.\n\n* **Definition and role**: **Learned parameters** are internal numerical values (weights) established during training to guide model transformations, whereas **context** is the sequence of text and instructions made available specifically for the current inference step.\n* **Variability during inference**: During ordinary inference, the **model's parameters remain fixed**, while the **context changes dynamically** with each new input or message.\n* **Effect on model state**: Adding or modifying information in the context alters the input data for that specific calculation but **does not update or retrain the underlying weights**.\n\n💡 Would you like to explore how temperature settings alter output probabilities while keeping both the model parameters and context fixed?",
+      "recordedAt": "2026-11-05T13:41:01.674Z",
+      "durationSeconds": 6.708,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 31,
+      "scenes": [
+        {
+          "phase": "save",
+          "durationSeconds": 3.501,
+          "frameCount": 16,
+          "recordedAt": "2026-11-05T13:41:01.674Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 3.207,
+          "frameCount": 15,
+          "recordedAt": "2026-11-05T13:41:19.799Z"
+        }
+      ],
+      "sha256": "f958f3dd599ef3023cde43e680a96c140d0f4a8426e64b733d80ef79e8a45df1"
+    },
+    {
+      "key": "reports",
+      "slideId": "S67REPORTS",
+      "name": "NotebookLM · Reports",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Document Study Guide generated and read in @Browser. Export to Docs and Export to Sheets menus inspected only.",
+      "result": "Study Guide: Foundations of Generative Artificial Intelligence\n\nThis study guide provides a detailed review of core concepts in generative artificial intelligence, autoregressive language models, and Transformer decoder architecture based on the foundational curriculum by Marco Cremaschi.\n\n1. Core Concepts Summary\n\nGenerative AI vs. AI Assistants\n\n* Generative AI Systems: Broadly defined as systems that produce content (such as text or images) conditioned on an input. \"Generative\" describes the activity itself rather than a single model architecture.\n* Autoregressive Language Models: Models that calculate the probability distribution of which token follows an existing sequence of text (context). Continuously repeating this next-token prediction step generates extended text.\n* Model vs. Assistant: A language model calculates next-token probabilities using fixed parameters. An assistant application wraps around the model and includes additional service-managed components such as system instructions, web search capabilities, document retrieval (RAG), content filters, external tools, and conversation memory.\n\nData, Parameters, and System Training\n\n* Parameters: Numerical values used in the model’s internal mathematical transformations. Parameters do not exist as a human-readable encyclopedia prior to training.\n* Pretraining: The optimization process where a model compares its predicted next-token distributions against actual text examples, updating parameter weights to minimize aggregate prediction error.\n* Instruction Tuning / Alignment: Post-pretraining stages (e.g., using demonstrations and human preferences as in InstructGPT) that adapt a model to follow instructions and exhibit desired behaviors.\n* Inference: Running calculations using fixed, already-available parameters. Inserting text into a conversation prompt alters the context of the current inference; it does not update the underlying model parameters or weights.\n\n+--------------------------+-------------------------------------------------------------+\n| Intervention             | Primary Effect                                              |\n+--------------------------+-------------------------------------------------------------+\n| Training / Fine-tuning   | Modifies the model's internal parameter weights.            |\n| Context Message          | Alters information available during the current inference.  |\n| Document Retrieval (RAG) | Supplies external text passages into the active context.    |\n+--------------------------+-------------------------------------------------------------+\n\n\nTokens, Embeddings, and Architectural Flow\n\n* Tokenizer: Converts input strings into sequences of numerical identifiers (token IDs). Tokens can represent words, sub-words, punctuation, or spaces. Token counts measure context length.\n* Token IDs: Indices within a vocabulary dictionary. Numerical proximity between IDs does not signify semantic similarity.\n* Initial Embedding: A static, learned vector retrieved from a lookup table using a token's numerical ID.\n* Contextual Representation: A dynamic vector produced after initial embeddings pass through Transformer decoder blocks, incorporating relationships with other permitted tokens in the sequence.\n* Positional Encoding: Methods (such as Rotary Position Embeddings / RoPE in Qwen2.5) that inject token order information into representations.\n* Transformer Decoder: A multi-layered structure comprising causal attention mechanisms, feed-forward networks, residual connections, and layer normalizations.\n* Causal Attention: Computes Query (q), Key (k), and Value (v) vectors across permitted positions. A causal mask prevents current sequence positions from accessing future tokens during next-token prediction.\n\nProbabilities, Softmax, and Temperature\n\n* Logit (z): Unnormalized numerical output scores produced by the final decoder layer for every entry in the vocabulary.\n* Softmax Function: Normalizes raw logits into a valid non-negative probability distribution summing to 1 across the vocabulary: \\ p_i = \\frac{\\exp(z_i / T)}{\\sum_j \\exp(z_j / T)} \\\n* Temperature (T): A positive scaling factor applied to logits before softmax normalization.\n  * Lower Temperature (T < 1.0): Concentrates probability mass onto the highest-scoring tokens.\n  * Higher Temperature (T > 1.0): Flattens the distribution, making token probabilities more uniform.\n  * Properties: Temperature scaling alters distribution concentration without changing the relative ranking order of the logits, adding new knowledge, or updating model weights.\n* Decoding Strategies:\n  * Greedy Selection: Continuously selects the single highest-probability token.\n  * Sampling: Randomly selects tokens based on the output probability distribution, allowing varied outputs across runs. Can be constrained via top-k or top-p filters.\n\nRetrieval-Augmented Generation (RAG) and Limitations\n\n* Retrieval-Augmented Generation (RAG): A framework where an external search component retrieves passages from a document collection and feeds them into the model's input context. RAG provides updated or specific context without fine-tuning model weights.\n* Hallucinations: Plausible-sounding but incorrect, ungrounded, or unsupported generations. Lowering temperature does not eliminate hallucinations; deterministic decoding can consistently repeat the same false statement.\n\n2. Short-Answer Quiz\n\n1. What is the operational distinction between a standalone language model and a complete AI assistant application?\n2. How does the function of pretraining differ from inserting new information directly into a user prompt?\n3. Why is a token’s numerical ID not considered a measurement of its semantic meaning?\n4. What is the architectural difference between an initial token embedding and a contextual representation?\n5. What constraint defines \"causal\" attention within a Transformer decoder block?\n6. How does altering the temperature parameter (T) affect the softmax output distribution over a fixed set of logits?\n7. How does greedy selection differ from probabilistic sampling during generation?\n8. Does retrieving external documents via Retrieval-Augmented Generation (RAG) update a model's parameters? Explain.\n9. Why does lowering the temperature parameter fail to eliminate model hallucinations?\n10. In experimental evaluations of language models, why is it necessary to isolate variables such as temperature and input context?\n\n3. Quiz Answer Key\n\n1. What is the operational distinction between a standalone language model and a complete AI assistant application? Answer: A language model is an autoregressive system that assigns probabilities to token sequences and predicts next tokens using internal parameter calculations. An assistant application is a broader system built around the model, incorporating external features such as system prompts, search engines, document retrieval components, content filters, memory management, and external tools.\n2. How does the function of pretraining differ from inserting new information directly into a user prompt? Answer: Pretraining updates the model's internal parameter weights by optimizing predictions against broad text datasets to reduce aggregate error. Inserting information into a prompt merely provides data within the context window for the current inference step, leaving the underlying parameter weights completely unchanged.\n3. Why is a token’s numerical ID not considered a measurement of its semantic meaning? Answer: Token IDs serve strictly as arbitrary lookup indices within a tokenizer's fixed vocabulary dictionary. Consecutive or nearby numerical IDs do not reflect conceptual similarity, and individual vector coordinates or ID numbers do not map to isolated human semantic properties.\n4. What is the architectural difference between an initial token embedding and a contextual representation? Answer: An initial embedding is a static, learned vector retrieved directly from the vocabulary matrix using a token's numerical ID. A contextual representation is the dynamic vector produced after passing the initial embedding through Transformer decoder blocks, integrating positional encodings and causal attention from other permitted sequence tokens.\n5. What constraint defines \"causal\" attention within a Transformer decoder block? Answer: Causal attention enforces a mathematical masking constraint that prevents a given token position from attending to subsequent or \"future\" token positions in the sequence. When predicting the next token, a position can only extract and process information from earlier tokens and its own available state.\n6. How does altering the temperature parameter (T) affect the softmax output distribution over a fixed set of logits? Answer: Raising the temperature distributes probability mass more uniformly across the vocabulary, whereas lowering the temperature concentrates probability mass onto the highest-scoring tokens. Crucially, adjusting temperature scales the logits before normalization without changing their relative rank order or adding external knowledge to the system.\n7. How does greedy selection differ from probabilistic sampling during generation? Answer: Greedy selection deterministically chooses the single token with the absolute highest probability at each sequence step. Sampling selects next tokens stochastically based on the output probability distribution, allowing different generation runs to produce diverging responses from identical inputs.\n8. Does retrieving external documents via Retrieval-Augmented Generation (RAG) update a model's parameters? Explain. Answer: No, RAG does not update model parameters. RAG extracts relevant textual passages from an external database and appends them directly into the prompt context, allowing the fixed model to process the retrieved text during standard inference.\n9. Why does lowering the temperature parameter fail to eliminate model hallucinations? Answer: Hallucinations stem from underlying structural, data, and statistical generation limits rather than temperature settings alone. Lowering temperature simply forces the model to select its highest-probability tokens more deterministically, which can lead it to repeat the exact same factual error with higher consistency.\n10. In experimental evaluations of language models, why is it necessary to isolate variables such as temperature and input context? Answer: Isolating single variables ensures that observed changes in generation outputs or probability distributions can be definitively attributed to a specific cause. Changing temperature and input context simultaneously confounds experimental results, making it impossible to separate parameter-scaling effects from context-driven shift effects.\n\n4. Essay Practice Questions\n\n(Note: These questions are designed for extended analysis and independent study. Answers are not provided.)\n\n1. Parameters vs. Contextual Knowledge: Contrast how a language model utilizes knowledge stored in its static parameters with information provided dynamically within its context window. In your analysis, discuss the implications of this distinction for system design, fine-tuning (e.g., InstructGPT), and real-time data updating.\n2. End-to-End Technical Pipeline of a Generation Step: Trace the complete mathematical and architectural path of an input string through a Transformer decoder model during a single autoregressive step. Begin at string tokenization and cover initial embeddings, positional encodings, Query/Key/Value causal attention matrices, feed-forward transformations, raw logits, temperature scaling, softmax normalization, and final token selection.\n3. Mathematical Behavior of Softmax and Temperature: Detail the mathematical operation of the softmax function p_i = \\frac{\\exp(z_i / T)}{\\sum_j \\exp(z_j / T)}. Using a hypothetical or empirical set of logits, analyze how varying T between low (T < 1.0) and high (T > 1.0) values alters total distribution entropy, top-token probability concentration, and candidate token selection probability without shifting logit rankings.\n4. Architectural Limitations, Verifiability, and RAG: Analyze the root causes of model hallucinations and factual inaccuracies in autoregressive models. Evaluate how Retrieval-Augmented Generation (RAG) addresses parametric knowledge freshness and factual grounding, while highlighting specific modes of failure that RAG systems remain vulnerable to (such as retrieval errors or context misinterpretation).\n5. Experimental Methodology for LLM Behavior: Formulate a rigorous empirical experimental protocol for evaluating a local quantized language model (such as Qwen2.5-0.5B-Instruct running via Transformers.js). Define your control parameters, primary dependent variables (including full-vocabulary probability mass and next-token distributions), hypothesis verification techniques, and code auditing procedures to detect silent logic errors in model execution pipelines.\n\n5. Comprehensive Glossary\n\n* Causal Attention: An attention mechanism variant restricted by a causal mask, ensuring that predictions for a given sequence position depend strictly on preceding and current positions, blocking access to future tokens.\n* Context: The full sequence of tokens (including system instructions, user inputs, historical dialogue, and retrieved documents) made available to a language model during a single inference step.\n* Contextual Representation: A dynamic, high-dimensional vector derived by passing initial embeddings through decoder layers, encoding both token identity and relationships to surrounding sequence context.\n* Embedding: A static, high-dimensional learned numerical vector associated with a specific token ID in a model's vocabulary lookup table.\n* Fine-Tuning: A post-pretraining process that further trains a model on specialized datasets or preference evaluations (e.g., RLHF / InstructGPT), updating parameter weights to align model outputs with desired behaviors or domains.\n* Generative AI: Systems designed to generate synthetic content (text, images, audio, etc.) conditioned on specific input prompts or instructions.\n* Greedy Selection: A deterministic decoding procedure that always selects the token assigned the highest probability by the softmax distribution.\n* Inference: The process of executing a trained model to generate predictions or outputs using fixed, existing parameter weights.\n* Logit (z): Unnormalized numerical output scores produced by the final linear layer of a neural network before conversion into probabilities.\n* Large Language Model (LLM): An autoregressive deep neural network trained on vast text datasets to compute token sequence probabilities; it refers to the core model architecture rather than an entire software application wrapper.\n* Parameter: A learned numerical weight or bias within a model's neural network layers that dictates its structural transformations and knowledge encoding, updated during training.\n* Quantisation: A compression technique that lowers the numerical precision of model parameters (e.g., from 16-bit floating-point to 4-bit integers / q4), reducing memory footprint and computational requirements.\n* Query, Key, Value (Q, K, V): Linear projections of token representations within an attention layer. Queries are matched against Keys to calculate normalized attention weights, which are subsequently used to compute a weighted sum over Values.\n* Retrieval-Augmented Generation (RAG): An application architecture that combines search algorithms with text generation by retrieving relevant passages from an external collection and inserting them into the model's inference context window.\n* Sampling: The process of stochastically selecting a output token from the calculated softmax probability distribution.\n* Softmax: A mathematical function that converts a vector of arbitrary real-valued logits into a normalized probability distribution of non-negative values that sum to 1.\n* Temperature (T): A positive scaling hyperparameter applied to raw logits prior to softmax normalization that controls the randomness or concentration of the output probability distribution.\n* Token: The fundamental unit of text processing in a language model, representing a word, sub-word segment, character, or special structural symbol.\n* Tokenizer: An algorithm and vocabulary mapping tool responsible for segmenting raw text strings into numerical token IDs and converting token IDs back into human-readable text.\n",
+      "recordedAt": "2026-11-05T13:38:13.248Z",
+      "durationSeconds": 11.988,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 54,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.439,
+          "frameCount": 7,
+          "recordedAt": "2026-11-05T13:38:13.248Z"
+        },
+        {
+          "phase": "format",
+          "durationSeconds": 2.063,
+          "frameCount": 9,
+          "recordedAt": "2026-11-05T13:38:27.606Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 2.759,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:38:36.629Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 3.369,
+          "frameCount": 15,
+          "recordedAt": "2026-11-05T13:48:33.430Z"
+        },
+        {
+          "phase": "export",
+          "durationSeconds": 2.358,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:48:47.670Z"
+        }
+      ],
+      "sha256": "c42ee541a1d2fda3c04e030b631b41711943740bc41f0c799453ed7820703aa1"
+    },
+    {
+      "key": "audio",
+      "slideId": "S67AUDIO",
+      "name": "NotebookLM · Audio Overview",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Audio generated, played and paused in @Browser. Interactive mode opened; microphone interaction was not started. The interface recording is silent.",
+      "result": "Generated Deep Dive: Why AI Never Learns From Prompts, duration 4:38. Playback advanced to 00:36, Pause was exercised and the speed menu displayed 0.5x through 2.0x.",
+      "recordedAt": "2026-11-05T13:37:09.160Z",
+      "durationSeconds": 11.494,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 48,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.332,
+          "frameCount": 6,
+          "recordedAt": "2026-11-05T13:37:09.160Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 2.73,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:37:20.073Z"
+        },
+        {
+          "phase": "play",
+          "durationSeconds": 4.76,
+          "frameCount": 18,
+          "recordedAt": "2026-11-05T13:49:48.736Z"
+        },
+        {
+          "phase": "controls",
+          "durationSeconds": 2.672,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:50:27.047Z"
+        }
+      ],
+      "sha256": "75e49b632db3cedfb5dc1a531e3ff08247e361a9e16f4f342b700bd47d4d893a"
+    },
+    {
+      "key": "video",
+      "slideId": "S67VIDEO",
+      "name": "NotebookLM · Video Overview",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Video generated anew from the uploaded PDF with an explicit training-versus-inference focus. All recorded video frames come from @Browser. The interface demonstration is silent.",
+      "result": "New Explainer: Training vs. Inference, duration 7:04, Whiteboard style. Playback was started in its standalone @Browser tab, then Skip forward and Pause were exercised.",
+      "recordedAt": "2026-11-05T13:36:45.106Z",
+      "durationSeconds": 21.115,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 93,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.876,
+          "frameCount": 8,
+          "recordedAt": "2026-11-05T13:36:45.106Z"
+        },
+        {
+          "phase": "format",
+          "durationSeconds": 1.941,
+          "frameCount": 9,
+          "recordedAt": "2026-11-05T13:36:57.336Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 2.799,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:37:06.360Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 2.35,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:51:09.876Z"
+        },
+        {
+          "phase": "playback",
+          "durationSeconds": 8.434,
+          "frameCount": 37,
+          "recordedAt": "2026-11-05T13:51:55.431Z"
+        },
+        {
+          "phase": "inspect",
+          "durationSeconds": 3.715,
+          "frameCount": 17,
+          "recordedAt": "2026-11-05T13:52:03.871Z"
+        }
+      ],
+      "sha256": "87916cb67998598d30fcb0aa80e29acda850a2055f136d8caa1b576a938733a1"
+    },
+    {
+      "key": "infographic",
+      "slideId": "S67INFO",
+      "name": "NotebookLM · Infographic",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Infographic generated and inspected in @Browser; Download menu opened, no file download claimed.",
+      "result": "Generated infographic: Training, Inference, and Retrieval Comparison. It compares what changes, what stays fixed and misconceptions to avoid in three columns.",
+      "recordedAt": "2026-11-05T13:37:46.455Z",
+      "durationSeconds": 13.58,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 60,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.336,
+          "frameCount": 6,
+          "recordedAt": "2026-11-05T13:37:46.455Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 3.043,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:37:58.423Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 3.491,
+          "frameCount": 14,
+          "recordedAt": "2026-11-05T13:46:45.166Z"
+        },
+        {
+          "phase": "inspect",
+          "durationSeconds": 3.255,
+          "frameCount": 15,
+          "recordedAt": "2026-11-05T13:47:22.827Z"
+        },
+        {
+          "phase": "download",
+          "durationSeconds": 2.455,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:47:26.085Z"
+        }
+      ],
+      "sha256": "b9949783b3d3e6bd98ae3b2df0628923eecf569f5ed33f46fd65d47d1554635d"
+    },
+    {
+      "key": "slides",
+      "slideId": "S67SLIDES",
+      "name": "NotebookLM · Slide Deck",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Deck generated anew in @Browser. Slideshow navigation executed; download and revision controls inspected without downloading or generating another revision.",
+      "result": "New deck: The Architecture of AI Memory, eight slides. Slideshow started and advanced to slide two. PDF and PowerPoint download options were inspected. A slide was selected and revision mode exposed Revision instructions and Generate revised deck.",
+      "recordedAt": "2026-11-05T13:37:32.621Z",
+      "durationSeconds": 20.648,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 92,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.337,
+          "frameCount": 6,
+          "recordedAt": "2026-11-05T13:37:32.621Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 2.981,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:37:43.473Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 2.49,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:52:08.133Z"
+        },
+        {
+          "phase": "present",
+          "durationSeconds": 3.357,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:52:32.021Z"
+        },
+        {
+          "phase": "next",
+          "durationSeconds": 3.144,
+          "frameCount": 13,
+          "recordedAt": "2026-11-05T13:52:35.381Z"
+        },
+        {
+          "phase": "export",
+          "durationSeconds": 2.53,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:52:38.666Z"
+        },
+        {
+          "phase": "select-slide",
+          "durationSeconds": 2.308,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:53:19.383Z"
+        },
+        {
+          "phase": "edit",
+          "durationSeconds": 2.501,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:53:27.305Z"
+        }
+      ],
+      "sha256": "e99399d6642c5ed49393add410b17f263715127b820e3d138b587a4b94d85a46"
+    },
+    {
+      "key": "tables",
+      "slideId": "S67TABLES",
+      "name": "NotebookLM · Data Table",
+      "browser": "@Browser",
+      "status": "executed",
+      "scope": "Table generated from the chapter PDF, expanded and its Export to Sheets menu opened in @Browser. No export was completed.",
+      "result": "process\n\t\nwhat changes\n\t\nwhat stays fixed\n\t\nchapter evidence\n\t\nmisconception to avoid\n\t\nSource\n\n\nTraining or fine-tuning\n\t\nThe model's parameters (weights).\n\t\nNot in source\n\t\nSection 1.2, Table 1, and Figure 1\n\t\nInserting data into a prompt or conversation context updates the model's weights after every message.\n\t\n[1]\n\n\nOrdinary inference\n\t\nInformation available to the current inference (context) / input context.\n\t\nThe model's parameters / model itself.\n\t\nSection 1.2, Table 1, and Figure 1\n\t\nUsing context or getting a specific result proves that model parameters have been updated.\n\t\n[1]\n\n\nDocument retrieval (RAG)\n\t\nExternal passages supplied as context.\n\t\nThe model (parameters remain fixed).\n\t\nSection 1.2, Table 1, Figure 1, and Section 1.7\n\t\nUploading or retrieving documents automatically updates model weights or guarantees accurate context integration without failure.\n\t\n[1]",
+      "recordedAt": "2026-11-05T13:38:01.467Z",
+      "durationSeconds": 12.498,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 56,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 1.608,
+          "frameCount": 7,
+          "recordedAt": "2026-11-05T13:38:01.467Z"
+        },
+        {
+          "phase": "generate",
+          "durationSeconds": 2.385,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:38:10.862Z"
+        },
+        {
+          "phase": "result",
+          "durationSeconds": 2.536,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:47:49.940Z"
+        },
+        {
+          "phase": "expand",
+          "durationSeconds": 3.449,
+          "frameCount": 16,
+          "recordedAt": "2026-11-05T13:48:03.842Z"
+        },
+        {
+          "phase": "export",
+          "durationSeconds": 2.52,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:48:07.702Z"
+        }
+      ],
+      "sha256": "4f8be8546248f6905cb33c76232b3aee24c7a441426378fb178b7d6895f389c9"
+    },
+    {
+      "key": "sharing",
+      "slideId": "S67SHARE",
+      "name": "NotebookLM · Sharing",
+      "browser": "@Browser",
+      "status": "opened",
+      "scope": "Sharing controls inspected in @Browser; link copying executed only. No invitations sent or public access enabled.",
+      "result": "The sharing dialog and More copy options were opened. Copy link to chat view was selected and its link copied. No recipient was entered and no access permissions were changed.",
+      "recordedAt": "2026-11-05T13:55:11.454Z",
+      "durationSeconds": 7.297,
+      "width": 1440,
+      "height": 900,
+      "fps": 24,
+      "captureFrameCount": 34,
+      "scenes": [
+        {
+          "phase": "open",
+          "durationSeconds": 2.382,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:55:11.454Z"
+        },
+        {
+          "phase": "links",
+          "durationSeconds": 2.35,
+          "frameCount": 11,
+          "recordedAt": "2026-11-05T13:55:32.169Z"
+        },
+        {
+          "phase": "copy",
+          "durationSeconds": 2.565,
+          "frameCount": 12,
+          "recordedAt": "2026-11-05T13:55:43.561Z"
+        }
+      ],
+      "sha256": "4207900e089695926b83bf04f186fcc9e908baafe40341c61666cc9b1f0e0c11"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+NotebookLM · Quiz — recorded from scratch in @Browser, 5 November 2026
+
+Authentic UI actions and playback, with generation waits cut between scenes.
+The interface recording is silent; English captions are available.
+
+OBSERVED RESULT
+Question: A developer supplies 'In this interaction, X means Y' in a prompt. Another user starts a fresh conversation with the same model. What happens to the custom definition?
+
+Selected C: It will revert to its original default understanding because passing information in a prompt context does not update the model's learned parameters.
+
+Feedback: That's right! Context changes only supply transient information available during a specific inference step; altering prompt inputs does not modify or re-train the underlying parameter weights of the model.
+
+SCOPE
+New six-question quiz generated in @Browser; first question answered with C and feedback observed.
+
+CAPTIONS
+00:00:00.000 Open Quiz and inspect question types and difficulty settings.
+00:00:01.341 Create a focused multiple-choice self-check before seeing any solutions.
+00:00:04.592 Attempt the question about a custom definition and a fresh conversation.
+00:00:07.646 Choose an answer and inspect the explanation before continuing.
+00:00:11.872 Read the selected answer and its corrective explanation before moving on.

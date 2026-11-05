@@ -1,0 +1,11 @@
+/mistakelog — prompt and widget generation
+
+PROMPT
+/mistakelog Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 The original prompt is sent in ChatGPT.
+00:00:04.622 ChatGPT generates the response and builds the widget.
+00:00:23.045 The generated widget is ready to use.
+
+GENERATED RESULT
+Mistake Log: Training vs. InferenceUniversity level · 3 common misconceptions · Based on §1.2 and Figure 1 of the attached chapterMistake 1UnderstoodAdding information to a prompt trains the model.A new message changes the available context, not the model's learned parameters.Reason: Training requires optimization that updates parameters.Mistake 2UnderstoodInference updates parameters after every prediction.Ordinary inference uses parameters already available.Reason: Parameter updates belong to training or fine-tuning.Mistake 3UnderstoodRetrieving a document means the model has learned its contents.Retrieval supplies external passages as context.Reason: The retrieved collection and model parameters are distinct.0/3 misconceptions reviewed ResetKey takeaway: Training changes parameters; inference uses existing parameters; retrieval changes available context.

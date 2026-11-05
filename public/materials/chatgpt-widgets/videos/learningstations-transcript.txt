@@ -1,0 +1,62 @@
+/learningstations — actual ChatGPT interaction
+
+PROMPT
+/learningstations Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Read the station activity and its understanding check.
+00:00:04.000 Reveal the explanation after working through the first station.
+00:00:08.000 Mark the first station complete and observe progress.
+
+RENDERED RESULT
+Learning Stations: Training vs. Inference
+
+Three 5-minute stations for university students, based on Sections 1.2, 1.7 and 1.9 of the attached chapter.
+
+15-minute rotation
+
+1/3 completed
+
+Station 1: Training
+
+Identify what changes during training.
+
+5 min
+
+Activity: Reconstruct the sequence: examples → prediction error → parameter updates → changed model.
+
+Why does prediction error lead to changes in parameters?
+
+Optimization uses prediction error as a learning signal to update numerical parameters.
+
+Hide answer
+I can explain this distinction.
+
+Station 2: Inference
+
+Explain prediction with fixed parameters.
+
+5 min
+
+Activity: Trace: input + fixed model → calculations → output distribution → selected token.
+
+Can a changed prompt alter the output without retraining?
+
+Reveal answer
+I can explain this distinction.
+
+Station 3: Retrieval & Comparison
+
+Distinguish context changes from model changes.
+
+5 min
+
+Activity: Compare a prompt with and without a retrieved passage, keeping the model and other settings fixed.
+
+Does retrieving a document prove the model learned it?
+
+Reveal answer
+I can explain this distinction.
+
+Final takeaway: Training updates model parameters; inference uses fixed parameters; retrieval changes available context without necessarily changing weights.
+
+Source: Foundations of Generative Artificial Intelligence, pages 5–6, 13–14 and 15–16.

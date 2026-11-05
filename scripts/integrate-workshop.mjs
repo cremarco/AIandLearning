@@ -15,6 +15,8 @@ const write = (file, data) => fs.writeFileSync(
 const intro = read('data/opening-slides.json', [])
 const media = read('data/media.json', {})
 const overrides = read('data/editorial-overrides.json', {})
+const shortcutLabels = read('data/chatgpt-widget-review.json', { results: [] }).results
+  .map(run => ({ command: run.command, retained: run.status === 'keep' }))
 const workshop = read('data/workshop-slides.json', []).map(slide => ({
   ...slide,
   type: 'workshop',
@@ -30,6 +32,7 @@ const slides = [...intro, ...workshop].map((slide, index) => {
   const { notes, duration, ...content } = slide
   return {
     ...content,
+    ...(slide.kind === 'shortcut-cloud' ? { shortcutLabels } : {}),
     number: index + 1,
     links: (slide.links || []).map(link => ({
       ...link,

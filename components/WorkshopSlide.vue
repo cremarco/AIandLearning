@@ -10,11 +10,25 @@ import ChatGPTIntro from './ChatGPTIntro.vue'
 import PromptCommandTables from './PromptCommandTables.vue'
 import FormalCommandResults from './FormalCommandResults.vue'
 import PromptBlock from './PromptBlock.vue'
+import PromptVideoDialog from './PromptVideoDialog.vue'
 import SkillCatalogue from './SkillCatalogue.vue'
+import DownloadIcon from './DownloadIcon.vue'
+import BrowserVideo from './BrowserVideo.vue'
+import ShortcutCloud from './ShortcutCloud.vue'
+import ToolLogos from './ToolLogos.vue'
+import ToolResourceTable from './ToolResourceTable.vue'
+import BibliographyGrid from './BibliographyGrid.vue'
+import { brandsForLabel, brandsForSlide } from '../utils/tool-brands'
 import { assetUrl as asset } from '../utils/assets'
+import { getShortcutVideo } from '../utils/shortcut-videos'
 import type { Slide } from '../utils/deck'
 const props = defineProps<{ slide: Slide }>()
 const s = computed(() => props.slide)
+const headingCommand = computed(() => {
+  const command = s.value.commandCategory === 'formal-web' && s.value.commands?.length === 1
+    ? s.value.commands[0].command : ''
+  return command && s.value.title.startsWith(command) ? command : ''
+})
 const active = ref(0)
 const pipeline = [
   { label: 'Text', description: 'Text enters as a sequence: the model does not receive words as we read them.' },
@@ -24,16 +38,26 @@ const pipeline = [
   { label: 'New token', description: 'One token is selected and added to the context; the cycle repeats.' },
 ]
 const lucaReaction = ref<InstanceType<typeof LucaReaction>>()
+const promptVideo = ref<InstanceType<typeof PromptVideoDialog>>()
+const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
+  ? getShortcutVideo(s.value.prompt?.match(/^\/\S+/)?.[0] || '') : undefined)
 </script>
 
 <template>
   <div class="workshop-content" :lang="s.lang" :class="[`kind-${s.kind}`, { 'has-media': !!s.media, 'has-character': !!s.character, 'has-prompt': !!s.prompt, 'has-comparison': !!s.comparison?.length }]" @click="lucaReaction?.advance()">
-    <header v-if="s.kind !== 'chatgpt-intro'" class="workshop-heading"><h1>{{ s.title }}</h1></header>
-    <p v-if="s.message && s.kind !== 'chatgpt-intro'" class="workshop-lead"><EmphasisText :text="s.message" /></p>
-    <div class="workshop-stage">
+    <header v-if="!['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
+      <ToolLogos :ids="brandsForSlide(s)" />
+      <h1><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
+    </header>
+    <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
+    <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
+    <div v-if="s.kind !== 'section-divider'" class="workshop-stage">
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
+      <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
       <FormalCommandResults v-else-if="s.commandCategory === 'formal-web' && s.commands?.some(command => command.result)" :commands="s.commands || []" />
       <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" />
+      <ToolResourceTable v-else-if="s.toolTable" :table="s.toolTable" :label="s.title" />
+      <BibliographyGrid v-else-if="s.kind === 'bibliography' || s.kind === 'web-resources'" :references="s.references || []" :spacious="s.kind === 'web-resources'" />
       <PromptCommandTables v-else-if="s.kind === 'prompt-commands'" :commands="s.commands || []" :category="s.commandCategory" />
       <template v-else-if="s.character">
         <div class="workshop-copy"><div class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div></div>
@@ -64,18 +88,19 @@ const lucaReaction = ref<InstanceType<typeof LucaReaction>>()
       <template v-else>
         <figure v-if="s.media" class="workshop-media">
           <AnimatedBook v-if="s.book" :book="s.book" :slide-number="s.number" />
+          <BrowserVideo v-else-if="s.media.type==='video' && s.media.browserFrame" :media="s.media" />
           <video v-else-if="s.media.type==='video'" controls preload="none" :poster="asset(s.media.poster)" :aria-label="s.media.alt" @click.stop>
             <source :src="asset(s.media.src)" :type="s.media.src.endsWith('webm') ? 'video/webm' : 'video/mp4'" />
             <track kind="captions" srclang="en" label="English" :src="asset(s.media.captions)" :default="s.media.captionsDefault !== false" />
           </video>
           <img v-else :src="asset(s.media.src)" :alt="s.media.alt" :style="s.media.fit ? {objectFit:s.media.fit} : undefined" />
-          <img v-if="s.media.type==='video'" class="video-print-poster" :src="asset(s.media.poster)" :alt="s.media.alt" />
-          <figcaption v-if="s.media.caption || s.media.source">{{ s.media.caption }}<a v-if="s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener"> Source</a></figcaption>
+          <img v-if="s.media.type==='video' && !s.media.browserFrame" class="video-print-poster" :src="asset(s.media.poster)" :alt="s.media.alt" />
+          <figcaption v-if="s.media.caption || s.media.source">{{ s.media.caption }}<a v-if="s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener"> Source</a><button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button></figcaption>
         </figure>
         <div class="workshop-copy">
-          <PromptBlock v-if="s.prompt" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
+          <PromptBlock v-if="s.prompt && s.kind !== 'tool-demo'" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
           <div v-if="s.comparison?.length" class="comparison" :class="{three:s.comparison.length===3}">
-            <section v-for="(item,i) in s.comparison" :key="i"><SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline /><h2><EmphasisText :text="item.label" /></h2><p><EmphasisText :text="item.text" /></p></section>
+            <section v-for="(item,i) in s.comparison" :key="i"><SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline /><h2 class="comparison-heading"><ToolLogos :ids="brandsForLabel(item.label)" compact /><EmphasisText :text="item.label" /></h2><p><EmphasisText :text="item.text" /></p></section>
           </div>
           <ol v-if="s.steps?.length" class="procedure-list">
             <li v-for="(step,i) in s.steps" :key="i"><span class="step-number">{{ i+1 }}</span><div><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div></li>
@@ -85,14 +110,21 @@ const lucaReaction = ref<InstanceType<typeof LucaReaction>>()
           <div v-if="s.links?.length" class="workshop-links">
             <a v-for="l in s.links" :key="l.url" class="btn gap-3" :class="s.kind === 'book' && l.download ? 'btn-primary btn-xl' : s.kind === 'access' ? 'text-3xl' : 'text-xl'"
               :href="asset(l.url)" :download="l.download ? '' : undefined" :target="l.download ? undefined : '_blank'" rel="noopener">
-              <span v-if="l.download" class="size-6 shrink-0 bg-current mask-contain mask-center mask-no-repeat"
-                :style="{ maskImage: `url(${asset('icons/heroicons/arrow-down-tray.svg')})` }" aria-hidden="true" />
+              <DownloadIcon v-if="l.download" :slide-number="s.number" />
               {{ l.label }}
             </a>
           </div>
         </div>
       </template>
     </div>
-    <p v-if="s.decision" class="workshop-decision"><EmphasisText :text="s.decision" /></p>
+    <p v-if="s.decision && s.kind !== 'shortcut-cloud'" class="workshop-decision"><EmphasisText :text="s.decision" /></p>
+    <PromptVideoDialog v-if="exampleVideo" ref="promptVideo" />
   </div>
 </template>
+
+<style scoped>
+.workshop-heading h1 { min-width:0; }
+.comparison-heading { display:flex; align-items:center; gap:10px; }
+.workshop-video-open { margin-left:12px; vertical-align:middle; }
+@media print { .workshop-video-open { display:none; } }
+</style>

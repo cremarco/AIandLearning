@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-11-01T22:36:34.839Z",
         "reason": "Codex: false positive verificato; documento HTML senza gradient/background-clip:text e con testi a colore pieno nel foglio style.css."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "components/AnimatedBook.vue"
+        ],
+        "createdAt": "2026-11-05T09:44:13.988Z",
+        "reason": "Agent triage: the neutral stone-300 right border on .book-page-block models the physical edge of the animated book's page stack; this is a literal book detail, not a card accent."
       }
     ]
   }

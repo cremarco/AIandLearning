@@ -1,0 +1,58 @@
+/multiplechoice — actual ChatGPT interaction
+
+PROMPT
+/multiplechoice Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Read the three multiple-choice questions.
+00:00:04.000 Select parameter updates, changed context and a fixed-model comparison.
+00:00:08.000 Check the answers and read the feedback.
+
+RENDERED RESULT
+Multiple-Choice Quiz: Training vs. Inference
+
+Three university-level questions based on Section 1.2 of the attached chapter. Choose one answer per question.
+
+QUESTION 1 OF 3
+
+What changes during model training?
+
+A. The conversation context only
+B. The model's learned parameters
+C. Only the selected output token
+D. The external document collection
+
+Correct
+
+Training uses prediction error and optimization to update learned numerical parameters.
+
+QUESTION 2 OF 3
+
+Andrea adds a definition to his prompt. What happens during ordinary inference?
+
+A. The model is automatically fine-tuned
+B. The tokenizer learns a new vocabulary
+C. The model's parameters are replaced
+D. The available context changes
+
+Correct
+
+A new message can influence predictions through context without updating model weights.
+
+QUESTION 3 OF 3
+
+Which experiment isolates the effect of context?
+
+A. Keep the model fixed and change the input
+B. Change the model and input together
+C. Fine-tune before each prediction
+D. Update parameters and retrieve new documents
+
+Correct
+
+Holding the model fixed while varying its input allows the effect of context to be studied.
+
+3/3
+
+Excellent! All concepts mastered.
+
+Try again

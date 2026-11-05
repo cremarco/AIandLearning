@@ -35,8 +35,8 @@ const slideProgress = computed(() => ({
 </script>
 
 <template>
-  <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '']" :data-slide-id="s.id">
-    <SlideAudience v-if="s.type !== 'cover'" :audience="s.audience" />
+  <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '']" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined">
+    <SlideAudience v-if="s.type !== 'cover' && s.kind !== 'thanks' && s.kind !== 'shortcut-cloud'" :audience="s.audience" />
     <span v-if="s.todo" class="badge badge-warning absolute left-16 top-4 z-10 h-7 gap-2 text-sm font-medium" role="note">
       <strong>TODO</strong>{{ s.todo }}
     </span>
@@ -50,9 +50,17 @@ const slideProgress = computed(() => ({
       </div>
     </template>
 
+    <template v-else-if="s.kind === 'thanks'">
+      <CoverBackground />
+      <div class="cover-copy thank-you-copy">
+        <h1 class="thank-you-title">{{ s.title }}</h1>
+        <p class="cover-author">{{ s.message }}<br /><span>{{ s.body[0] }}</span><br /><a v-for="link in s.links" :key="link.url" class="link link-hover cover-email" :href="link.url">{{ link.label }}</a></p>
+      </div>
+    </template>
+
     <template v-else-if="s.type === 'workshop'">
       <WorkshopSlide :slide="s" />
-      <SourceLine :ids="sourceIds" />
+      <SourceLine v-if="!['bibliography', 'web-resources', 'shortcut-cloud'].includes(s.kind)" :ids="sourceIds" />
     </template>
 
     <template v-else>
@@ -99,7 +107,7 @@ const slideProgress = computed(() => ({
       <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
       <SourceLine :ids="sourceIds" />
     </template>
-    <span class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
-    <progress class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
+    <span v-if="s.kind !== 'shortcut-cloud'" class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
+    <progress v-if="s.kind !== 'shortcut-cloud'" class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
   </main>
 </template>

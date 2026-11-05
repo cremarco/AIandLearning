@@ -1,0 +1,1641 @@
+{
+  "recordedOn": "2026-11-05",
+  "status": "executed",
+  "audio": false,
+  "method": "29 videos edited from original ChatGPT screenshots captured before and after real UI actions, with reading holds and English WebVTT captions. Crops exclude account navigation and unrelated messages. No reconstructed interface, answers, mouse movements or transitions. The existing flashcard clip is a native browser screencast.",
+  "book": {
+    "path": "public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981",
+    "uploadAuthorized": true
+  },
+  "clips": [
+    {
+      "type": "video",
+      "src": "materials/chatgpt-shortcuts/flashcards-chatgpt.mp4",
+      "poster": "materials/chatgpt-shortcuts/flashcards-chatgpt-poster.jpg",
+      "captions": "materials/chatgpt-shortcuts/flashcards-chatgpt-en.vtt",
+      "alt": "The actual ChatGPT flashcard widget, recorded while revealing three answers about tokens, context and probabilities.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "captionsDefault": false,
+      "command": "/flashcard",
+      "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
+      "durationSeconds": 20.966667,
+      "width": 832,
+      "height": 640,
+      "fps": 30,
+      "sha256": "0f0ef704e5e3b2a12f9b531d61edd79f10805bde924e47447f18fc69e33833ab",
+      "capture": {
+        "sourceRecord": "materials/chatgpt-shortcuts/recording-provenance.json"
+      }
+    },
+    {
+      "command": "/recall",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/recall.mp4",
+      "poster": "materials/chatgpt-widgets/videos/recall-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/recall.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /recall widget: Try to answer the recall question from memory. Reveal the explanation and compare it with your answer.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/recall Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/recall-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 520,
+      "fps": 24,
+      "sha256": "bab97cc2d5106b2287878f639ea7447e0c0f25ae2a1b9064408a9a4a6d5dda79",
+      "capture": {
+        "recordedAt": "2026-11-05T13:01:13.621Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "67b302cf-4f81-4c9b-961e-b1c097f9a112",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Try to answer the recall question from memory.",
+            "crop": {
+              "height": 412,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "c41f4459cde4ed1a2ee7beba1157064feb2c932b34d8487e1e3a1626a919f5c1"
+          },
+          {
+            "phase": "02-reveal",
+            "caption": "Reveal the explanation and compare it with your answer.",
+            "crop": {
+              "height": 520,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "b0109b80d6cc77ddbc29de1c680477c57e55b655c3a670b3af2574b2a454ef4d"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/spacedrepetition",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/spacedrepetition.mp4",
+      "poster": "materials/chatgpt-widgets/videos/spacedrepetition-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/spacedrepetition.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /spacedrepetition widget: Recall the explanation before revealing the first review card. Reveal the answer; review intervals are suggestions.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/spacedrepetition Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/spacedrepetition-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 554,
+      "fps": 24,
+      "sha256": "5200e6db708f78ee0b052c8dac1af1061431cd2d440ba46773ee331ba56f2549",
+      "capture": {
+        "recordedAt": "2026-11-05T13:06:09.204Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "dff98eaa-011c-40bd-ae54-4be3f3eb2c96",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Recall the explanation before revealing the first review card.",
+            "crop": {
+              "height": 496,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "983879867714988cad796407878bd8a497af5a7d6a2e65e59c98ca2d94e52bc8"
+          },
+          {
+            "phase": "02-reveal",
+            "caption": "Reveal the answer; review intervals are suggestions.",
+            "crop": {
+              "height": 554,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "af68dcdd21cd22a5e9ee6b31d65533f1c1e9835f5f42376ebd028ff4918f8930"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/gapfinder",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/gapfinder.mp4",
+      "poster": "materials/chatgpt-widgets/videos/gapfinder-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/gapfinder.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /gapfinder widget: Answer the three diagnostic questions before checking. Choose the distinctions between weights, context and retrieval. Review the diagnostic feedback and suggested next steps.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/gapfinder Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/gapfinder-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 1000,
+      "fps": 24,
+      "sha256": "faa3d87db286a0b08b13b7aab0e68340849d876df3d3d8f107415b5e141c5fcf",
+      "capture": {
+        "recordedAt": "2026-11-05T13:11:35.590Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1",
+        "rootId": "fe27c17c-e7cc-4e48-a14a-b45cd6b601cb",
+        "frames": [
+          {
+            "phase": "01-diagnostic",
+            "caption": "Answer the three diagnostic questions before checking.",
+            "crop": {
+              "height": 704,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "8c322e679fa3e6df36346f18a795cb828945d621b1e9067310d4236ed3395ed0"
+          },
+          {
+            "phase": "02-choices",
+            "caption": "Choose the distinctions between weights, context and retrieval.",
+            "crop": {
+              "height": 704,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "e95b4ae9000fa1f01022ba756baf8c39fbea924087754f39c9b59d2b2e298d05"
+          },
+          {
+            "phase": "03-feedback",
+            "caption": "Review the diagnostic feedback and suggested next steps.",
+            "crop": {
+              "height": 1000,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "53ed6d5f5688fad99215321985a81fe40a5e2563d425c673166503200aeefcc3"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/checklist",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/checklist.mp4",
+      "poster": "materials/chatgpt-widgets/videos/checklist-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/checklist.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /checklist widget: Read the statements before marking your confidence. Check the first item and observe the self-assessment progress.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/checklist Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/checklist-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 668,
+      "fps": 24,
+      "sha256": "b857c6f959ee0b41bdf672622983e62eaab50caabf1396f13f244077386eee81",
+      "capture": {
+        "recordedAt": "2026-11-05T13:12:50.229Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1",
+        "rootId": "3b9644b2-5de1-4520-9e30-2ea08acac161",
+        "frames": [
+          {
+            "phase": "01-list",
+            "caption": "Read the statements before marking your confidence.",
+            "crop": {
+              "height": 667,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "bdb835fc667a251c3e172f02f611f6380f09eec015d27accc13146b1e5746d63"
+          },
+          {
+            "phase": "02-progress",
+            "caption": "Check the first item and observe the self-assessment progress.",
+            "crop": {
+              "height": 667,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "5bdf7aaf41b910513df66abe1648043d09c496cc58a33d2e8929172a3a66005c"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/blackboard",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/blackboard.mp4",
+      "poster": "materials/chatgpt-widgets/videos/blackboard-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/blackboard.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /blackboard widget: Compare the training and inference flows, then try the understanding check. Reveal the explanation after studying the diagram.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/blackboard Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/blackboard-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 958,
+      "fps": 24,
+      "sha256": "8bc455e376d696afbe66ca824a91f71214a810f7ecc6c1e817ca2eb3d1c74144",
+      "capture": {
+        "recordedAt": "2026-11-05T13:15:16.107Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "a831b530-3157-4dc9-a3a0-87fa36cfc542",
+        "frames": [
+          {
+            "phase": "01-diagram",
+            "caption": "Compare the training and inference flows, then try the understanding check.",
+            "crop": {
+              "height": 930,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "b66ab77045ed6fa25a0c04bb027720983ac4175c51ddd351456c433d13fe2347"
+          },
+          {
+            "phase": "02-reveal",
+            "caption": "Reveal the explanation after studying the diagram.",
+            "crop": {
+              "height": 958,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "77a935a565cc1c2204c36259d4042275a5223aaee96bb6a2f605fd7018cd4830"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/questionbank",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/questionbank.mp4",
+      "poster": "materials/chatgpt-widgets/videos/questionbank-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/questionbank.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /questionbank widget: Try the recall, application and reasoning questions. Reveal an expected answer after attempting the question.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/questionbank Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/questionbank-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 712,
+      "fps": 24,
+      "sha256": "b7f65330f93ac8f45901c7130e1255f543c297a246811ce5e3a0e0274dd29a3f",
+      "capture": {
+        "recordedAt": "2026-11-05T13:13:56.455Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "161f2b36-f0e0-4a38-9970-aab53f3eb5c0",
+        "frames": [
+          {
+            "phase": "01-questions",
+            "caption": "Try the recall, application and reasoning questions.",
+            "crop": {
+              "height": 619,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "76034871785cb62b5d5e2d8b521109da2879e6561aaa559d65e08a494092963c"
+          },
+          {
+            "phase": "02-reveal",
+            "caption": "Reveal an expected answer after attempting the question.",
+            "crop": {
+              "height": 711,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 66
+            },
+            "sourceSha256": "189a1d749572c1059fc77e37754319cb97191226b0d21a1910b9d4a76d800a41"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/mistakelog",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/mistakelog.mp4",
+      "poster": "materials/chatgpt-widgets/videos/mistakelog-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/mistakelog.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /mistakelog widget: Read each misconception and its correction. Mark the first misconception reviewed and observe progress.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/mistakelog Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/mistakelog-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 658,
+      "fps": 24,
+      "sha256": "4b121194651b9bc44c78319cfe5fead7132086669c7846532d0ea5f5c10cea9a",
+      "capture": {
+        "recordedAt": "2026-11-05T13:10:22.032Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1",
+        "rootId": "659cd295-ad37-4f25-8763-c7049a9a3cb9",
+        "frames": [
+          {
+            "phase": "01-misconceptions",
+            "caption": "Read each misconception and its correction.",
+            "crop": {
+              "height": 658,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 365
+            },
+            "sourceSha256": "6a6c171a2cbb5b025d9d8ec39be0aca7693eeb44f2ed4b1e69089e2482da1f8b"
+          },
+          {
+            "phase": "02-reviewed",
+            "caption": "Mark the first misconception reviewed and observe progress.",
+            "crop": {
+              "height": 658,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 365
+            },
+            "sourceSha256": "5dfe63c1637aa340ed2c507c52a3292d190e7fe3344f9946d40acf9d57d52392"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/quiz",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/quiz.mp4",
+      "poster": "materials/chatgpt-widgets/videos/quiz-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/quiz.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /quiz widget: Read the true-or-false question about tokenization. Select True and read the tokenizer explanation. Move to the next question after reviewing the feedback.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/quiz Using only the attached chapter, help me revise tokens, context, model parameters and temperature. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/quiz-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 486,
+      "fps": 24,
+      "sha256": "74ea9af32513e4a42fb1a833cd72bfb5ac88effc03149eed7a073864beb7abe8",
+      "capture": {
+        "recordedAt": "2026-11-05T13:07:26.519Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "1c3d7bfd-973f-4618-b3a7-ac7362026df6",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Read the true-or-false question about tokenization.",
+            "crop": {
+              "height": 394,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "67a30f1b930626a65e8d991e8f08bfe46fd4c307f7a251adf29a68a680be2072"
+          },
+          {
+            "phase": "02-feedback",
+            "caption": "Select True and read the tokenizer explanation.",
+            "crop": {
+              "height": 434,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 131
+            },
+            "sourceSha256": "e5246125ef973c47e0c3607d4c42947084d5900644de2b1df826f5ebbaea5236"
+          },
+          {
+            "phase": "03-next",
+            "caption": "Move to the next question after reviewing the feedback.",
+            "crop": {
+              "height": 486,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 109
+            },
+            "sourceSha256": "6cdbcecfdbd69243f0bb8042b8e872300a03b19ffc4c7939d3523000522d7f56"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/multiplechoice",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/multiplechoice.mp4",
+      "poster": "materials/chatgpt-widgets/videos/multiplechoice-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/multiplechoice.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /multiplechoice widget: Read the three multiple-choice questions. Select parameter updates, changed context and a fixed-model comparison. Check the answers and read the feedback.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/multiplechoice Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/multiplechoice-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 1040,
+      "fps": 24,
+      "sha256": "41c818d95a17c869cdb9d7b0ab50fd430a6a846da0142a40cda7638c6ff53107",
+      "capture": {
+        "recordedAt": "2026-11-05T13:14:59.195Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "d62245a0-bf8b-4a0f-b86c-649f0965595f",
+        "frames": [
+          {
+            "phase": "01-questions",
+            "caption": "Read the three multiple-choice questions.",
+            "crop": {
+              "height": 852,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 66
+            },
+            "sourceSha256": "e8e06487aa61fe464f8ec96735fa09a530ffd847ffa117161df0ef866ec6bcd4"
+          },
+          {
+            "phase": "02-select",
+            "caption": "Select parameter updates, changed context and a fixed-model comparison.",
+            "crop": {
+              "height": 852,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "ea89c6f27de50d6375acf44687573c3e63ce8fce61f2558c3eb9ffef46a514ee"
+          },
+          {
+            "phase": "03-feedback",
+            "caption": "Check the answers and read the feedback.",
+            "crop": {
+              "height": 1040,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "77067d462720649442e2c041f97504ad6ba8e52241d570bde2731bd6fdee70f0"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/conceptquiz",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/conceptquiz.mp4",
+      "poster": "materials/chatgpt-widgets/videos/conceptquiz-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/conceptquiz.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /conceptquiz widget: Answer three conceptual questions about changes to parameters and context. Choose the answers supported by the chapter. Review the score and explanations for the three concepts.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/conceptquiz Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/conceptquiz-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 1040,
+      "fps": 24,
+      "sha256": "2d2f28955c85fff53d6317bbf0a27218c781bea80ce4535a75991ae9ba2d0ee2",
+      "capture": {
+        "recordedAt": "2026-11-05T13:14:50.829Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "9cc6033d-909d-485d-9d3c-93b2115da42f",
+        "frames": [
+          {
+            "phase": "01-questions",
+            "caption": "Answer three conceptual questions about changes to parameters and context.",
+            "crop": {
+              "height": 744,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "a751fe041a60bd98675567f7f4761ed58223f0253cf1c16f0bc40174920903d5"
+          },
+          {
+            "phase": "02-select",
+            "caption": "Choose the answers supported by the chapter.",
+            "crop": {
+              "height": 744,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "0643178bf55bf212044502c19b548d14fbe0086b318c68dfde1fdc719c50be30"
+          },
+          {
+            "phase": "03-feedback",
+            "caption": "Review the score and explanations for the three concepts.",
+            "crop": {
+              "height": 1040,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "85c1ceec515d884f54ca29145915120e1903d2844724830dc75391ea21d6e958"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/oral",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/oral.mp4",
+      "poster": "materials/chatgpt-widgets/videos/oral-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/oral.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /oral widget: Explain the difference between training and inference in your own words. Enter an explanation that distinguishes parameters from available context. Read ChatGPT’s conversational feedback and the follow-up question.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/oral Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/oral-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 508,
+      "fps": 24,
+      "sha256": "96be00c60b0b9e95c332820b5b4b4964530e9d023fd3a78800b8f3231bb285b0",
+      "capture": {
+        "recordedAt": "2026-11-05T13:15:53.168Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "c42d49a6-7f0f-425f-8295-e88457b24b2e",
+        "feedbackMessageId": "0bc18a8e-7be7-4e88-9289-1680e1e1ca94",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Explain the difference between training and inference in your own words.",
+            "crop": {
+              "height": 508,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "2aefcbbbe61ccdf78e6087a5013d03981c6a35d64aaa7df2e616def8c9e6a5fe"
+          },
+          {
+            "phase": "02-response",
+            "caption": "Enter an explanation that distinguishes parameters from available context.",
+            "crop": {
+              "height": 508,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "249ae3b3c33b760ef147c22c0aff7ca9ad71f7747836f592876b03e78734a6bd"
+          },
+          {
+            "phase": "03-feedback",
+            "caption": "Read ChatGPT’s conversational feedback and the follow-up question.",
+            "crop": {
+              "height": 382,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 641
+            },
+            "sourceSha256": "80dcff6ed5b5c646c77d5842cea4b30cc59eccc75d6a1107cf2e3866078952b2"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/exam",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/exam.mp4",
+      "poster": "materials/chatgpt-widgets/videos/exam-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/exam.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /exam widget: Write an explanation before opening the marking guide. Enter an explanation of how training and inference differ. Compare with the marking guide and select a self-assessment score of 2.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/exam Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/exam-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 396,
+      "fps": 24,
+      "sha256": "4429ab8d6cfea8471b93a45daf83dc6d1246b9912b8ba0f07efaff4845746286",
+      "capture": {
+        "recordedAt": "2026-11-05T13:12:07.145Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1",
+        "rootId": "3f525dbb-f8c1-41b5-a198-33c9285afa20",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Write an explanation before opening the marking guide.",
+            "crop": {
+              "height": 336,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "59eb04503fc3e760b6ccc0bafc2b3a2b4fe3e8a261f87d60839089bdf031a7e7"
+          },
+          {
+            "phase": "02-written",
+            "caption": "Enter an explanation of how training and inference differ.",
+            "crop": {
+              "height": 336,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "4b1d4506e747b52229142fc04badd8effc66b66d4d798e881925b73a2b77221b"
+          },
+          {
+            "phase": "03-self-assessment",
+            "caption": "Compare with the marking guide and select a self-assessment score of 2.",
+            "crop": {
+              "height": 395,
+              "rootVisible": true,
+              "width": 758,
+              "x": 704,
+              "y": 113
+            },
+            "sourceSha256": "b2cd697dcdef9edd157192f121025d035cbc4f06e811b87747cc0e95bddebc7d"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/languagedrill",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/languagedrill.mp4",
+      "poster": "materials/chatgpt-widgets/videos/languagedrill-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/languagedrill.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /languagedrill widget: Choose the technical verb or term for each sentence. Select updates, uses and context. Check the answers and read the explanations.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/languagedrill Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/languagedrill-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 978,
+      "fps": 24,
+      "sha256": "dd1fdd2443707995b6bbfbf2d496bfbc3c3ddf8d740b167eddaed39a255442d9",
+      "capture": {
+        "recordedAt": "2026-11-05T13:04:13.357Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "b8824029-1907-460a-a543-98418637548a",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Choose the technical verb or term for each sentence.",
+            "crop": {
+              "height": 746,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "06fd1ba38e6bf9ff6b776972868c7cb00e9ab9973caae40cc94fc85cf3ff11eb"
+          },
+          {
+            "phase": "02-select",
+            "caption": "Select updates, uses and context.",
+            "crop": {
+              "height": 746,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "b4bce663b2f6827129d58870b53f29ced139c76432c54538645a7692fdc21713"
+          },
+          {
+            "phase": "03-result",
+            "caption": "Check the answers and read the explanations.",
+            "crop": {
+              "height": 978,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "f81e34b1a6f988ce14877e681250af32de327589874b5467ce10628011a78d0d"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/quizgame",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/quizgame.mp4",
+      "poster": "materials/chatgpt-widgets/videos/quizgame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/quizgame.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /quizgame widget: Read which positions causal attention can use. Choose current and earlier positions, then read the feedback. Advance to the next challenge.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/quizgame Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/quizgame-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 548,
+      "fps": 24,
+      "sha256": "30dbbf2a625e0de4effe3fbc20553ce4e0fd8e59f8b158e7ac6529de0fc3cb77",
+      "capture": {
+        "recordedAt": "2026-11-05T13:08:01.436Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "3c5a4313-74e7-4dce-9e15-b4a5537128e0",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Read which positions causal attention can use.",
+            "crop": {
+              "height": 528,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 111
+            },
+            "sourceSha256": "3fe0bc549e2f3614eb180b06a03b4ccb9f829f38997cc66c5e07d4b0b15bd928"
+          },
+          {
+            "phase": "02-feedback",
+            "caption": "Choose current and earlier positions, then read the feedback.",
+            "crop": {
+              "height": 548,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 111
+            },
+            "sourceSha256": "f1cf62353b1d37ef392fcd627a18d97b69c90855662b4fd6c2fb2dd56b7e2dc2"
+          },
+          {
+            "phase": "03-next",
+            "caption": "Advance to the next challenge.",
+            "crop": {
+              "height": 462,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 59
+            },
+            "sourceSha256": "2b2ba10915737f5e484b9a27eef83ec4fdd001eba67b2dff05b32318ce0c5bbe"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/matchinggame",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/matchinggame.mp4",
+      "poster": "materials/chatgpt-widgets/videos/matchinggame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/matchinggame.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /matchinggame widget: Match each concept with its definition. Select Token on the concept side. Select the matching definition and observe the match counter.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/matchinggame Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/matchinggame-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 972,
+      "fps": 24,
+      "sha256": "6fcdac0800821571f9a958ff6af7575ac91a64cd89cbec6b230c2c250093235c",
+      "capture": {
+        "recordedAt": "2026-11-05T13:08:44.444Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "6e7d6b1e-8af7-45ff-b34e-2e2f01a17b6d",
+        "frames": [
+          {
+            "phase": "01-board",
+            "caption": "Match each concept with its definition.",
+            "crop": {
+              "height": 971,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 134
+            },
+            "sourceSha256": "d58edc35f581140a9395e7bac02c8e9aaae545351a64803cd94a6c8a9da83844"
+          },
+          {
+            "phase": "02-concept",
+            "caption": "Select Token on the concept side.",
+            "crop": {
+              "height": 970,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 135
+            },
+            "sourceSha256": "fb99d087ca82b6d322e051c8ef31b55a1a9aa9083062d44cda6f9bf6edb80953"
+          },
+          {
+            "phase": "03-match",
+            "caption": "Select the matching definition and observe the match counter.",
+            "crop": {
+              "height": 971,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 134
+            },
+            "sourceSha256": "143e95baf1fb9b3b0e6c337ed48b2ed5c43aaf532445e7a16a58be40c8ebdf15"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/memorygame",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/memorygame.mp4",
+      "poster": "materials/chatgpt-widgets/videos/memorygame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/memorygame.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /memorygame widget: Turn over cards to find each concept and its definition. Reveal the first card and remember its position. Reveal a second card and observe the move feedback.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/memorygame Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/memorygame-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 970,
+      "fps": 24,
+      "sha256": "ea9c732f18242ee1e7fbcad51f2d8d05f8336456d9cdd650a727f65149e2d0f0",
+      "capture": {
+        "recordedAt": "2026-11-05T13:09:10.333Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "58613a74-2a92-4ce6-a5b2-8f795403c00c",
+        "frames": [
+          {
+            "phase": "01-board",
+            "caption": "Turn over cards to find each concept and its definition.",
+            "crop": {
+              "height": 929,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 134
+            },
+            "sourceSha256": "1023d1c0c184c4e9a4eb97ce6a8b647f9c3766da63fb8d96f37b65abf88b161d"
+          },
+          {
+            "phase": "02-first-card",
+            "caption": "Reveal the first card and remember its position.",
+            "crop": {
+              "height": 929,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 135
+            },
+            "sourceSha256": "0ddef503d4241e06f1df6653991e25178c853a350b69997296e86d15c2fe63bd"
+          },
+          {
+            "phase": "03-second-card",
+            "caption": "Reveal a second card and observe the move feedback.",
+            "crop": {
+              "height": 970,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 135
+            },
+            "sourceSha256": "a758956c63d8c98960e8d24eaf5612d1d5b40f6865769b528d4de4f210895d1c"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/jeopardy",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/jeopardy.mp4",
+      "poster": "materials/chatgpt-widgets/videos/jeopardy-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/jeopardy.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /jeopardy widget: Choose a category and point value. Read the clue and formulate a response before revealing it. Reveal the expected response; scoring is a self-assessment.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/jeopardy Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/jeopardy-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 796,
+      "fps": 24,
+      "sha256": "ef5390f1c6feace4d49c33cddd12b90d2d9065a9c6e2c285ad75dce9f43534fb",
+      "capture": {
+        "recordedAt": "2026-11-05T13:09:16.700Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "d8482e48-00b8-47df-ae9a-0f789863048b",
+        "frames": [
+          {
+            "phase": "01-board",
+            "caption": "Choose a category and point value.",
+            "crop": {
+              "height": 796,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 133
+            },
+            "sourceSha256": "8c0307c35ca35d854fc1eaade82078dedf7001bc64a6c9e1b08f1b296cf31ee4"
+          },
+          {
+            "phase": "02-clue",
+            "caption": "Read the clue and formulate a response before revealing it.",
+            "crop": {
+              "height": 282,
+              "rootVisible": true,
+              "width": 758,
+              "x": 704,
+              "y": 71
+            },
+            "sourceSha256": "2d5207194485afb2caf0c678c13f6a2be27d27d4c8ad43b0dc257422e24e5855"
+          },
+          {
+            "phase": "03-reveal",
+            "caption": "Reveal the expected response; scoring is a self-assessment.",
+            "crop": {
+              "height": 388,
+              "rootVisible": true,
+              "width": 758,
+              "x": 704,
+              "y": 72
+            },
+            "sourceSha256": "e9e3bdb79007002a79b7874a400d977a32c4ca9960fffd6881d8bcac21274634"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/millionaire",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/millionaire.mp4",
+      "poster": "materials/chatgpt-widgets/videos/millionaire-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/millionaire.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /millionaire widget: Read the question and compare the four options. Choose the answer that parameters stay fixed during inference. Confirm the answer and read the correct-answer feedback.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/millionaire Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/millionaire-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 812,
+      "fps": 24,
+      "sha256": "f5ec639528971f770ffd151fe36f5212aeea3e0d0d910ed323c4fd096de49e56",
+      "capture": {
+        "recordedAt": "2026-11-05T13:03:06.671Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "0bf7bc76-25bd-4dad-bc65-b95c1dcd8514",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Read the question and compare the four options.",
+            "crop": {
+              "height": 722,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 137
+            },
+            "sourceSha256": "ff6001404f8de461b966120afa1febd0e109b7eebbd27de7260bf4cf859efb1e"
+          },
+          {
+            "phase": "02-select",
+            "caption": "Choose the answer that parameters stay fixed during inference.",
+            "crop": {
+              "height": 722,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 137
+            },
+            "sourceSha256": "92bb8f96d6b3ccb70283c7ede6e7c9ba80ce13a83b5f189ea4701dbe76e30ee0"
+          },
+          {
+            "phase": "03-result",
+            "caption": "Confirm the answer and read the correct-answer feedback.",
+            "crop": {
+              "height": 812,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 137
+            },
+            "sourceSha256": "04273c30b97e945244053fb4482e7f97d29e0dde98a67724263f7c5c4ad39431"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/crossword",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/crossword.mp4",
+      "poster": "materials/chatgpt-widgets/videos/crossword-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/crossword.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /crossword widget: Read the three clues from the chapter. Enter TRAINING, INFERENCE and CONTEXT. Check the three terms and read the result.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/crossword Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/crossword-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 1034,
+      "fps": 24,
+      "sha256": "cc72e0f5279e73163a3c5b38889319956c975ccb32c9283dc0a512662cf3329a",
+      "capture": {
+        "recordedAt": "2026-11-05T13:03:56.946Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "b0461af6-8759-4191-9f2a-e182e6f2684b",
+        "frames": [
+          {
+            "phase": "01-clues",
+            "caption": "Read the three clues from the chapter.",
+            "crop": {
+              "height": 943,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 72
+            },
+            "sourceSha256": "8ec948ecd81ff2fc4ed02040446d7e8d6e074d944f7a838dbe09203a9b4ca3df"
+          },
+          {
+            "phase": "02-fill",
+            "caption": "Enter TRAINING, INFERENCE and CONTEXT.",
+            "crop": {
+              "height": 943,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 71
+            },
+            "sourceSha256": "5dd8965cc2f0ad5ece084f190702ca54c05af88f55c9d9556c6253f1a8c3aa2e"
+          },
+          {
+            "phase": "03-result",
+            "caption": "Check the three terms and read the result.",
+            "crop": {
+              "height": 1034,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 71
+            },
+            "sourceSha256": "a0c235d02cf5eb475fb5e4b753dd11af3d936f91f12f312b96e9ba5dc08df820"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/fillintheblanks",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/fillintheblanks.mp4",
+      "poster": "materials/chatgpt-widgets/videos/fillintheblanks-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/fillintheblanks.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /fillintheblanks widget: Read the three incomplete sentences. Enter parameters, inference and context. Check the answers and read the feedback.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/fillintheblanks Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/fillintheblanks-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 786,
+      "fps": 24,
+      "sha256": "41f585104c60133355f8d5f8e741afde33b147566422e032f55a783168314b18",
+      "capture": {
+        "recordedAt": "2026-11-05T13:01:50.431Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "5cbf080d-a1cd-4b27-b50e-bed8214a30cb",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Read the three incomplete sentences.",
+            "crop": {
+              "height": 698,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 70
+            },
+            "sourceSha256": "aae6e2339c2ae82b58a6e0c8bf146df4957f5ebcea823855561081f908f6876b"
+          },
+          {
+            "phase": "02-complete",
+            "caption": "Enter parameters, inference and context.",
+            "crop": {
+              "height": 698,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 69
+            },
+            "sourceSha256": "69f87efe34ebd1a1bfa1c144e06dd4107fdc8dd59340b4de6e150110be8748d1"
+          },
+          {
+            "phase": "03-feedback",
+            "caption": "Check the answers and read the feedback.",
+            "crop": {
+              "height": 786,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 70
+            },
+            "sourceSha256": "4db80a785ab114befd2e220b5b80ab6c8ba45f809183e57c77a7867abd780fd6"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/sortinggame",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/sortinggame.mp4",
+      "poster": "materials/chatgpt-widgets/videos/sortinggame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/sortinggame.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /sortinggame widget: Classify the three actions as training or inference. Training updates parameters; the other actions use the existing model. Check the classifications and read the explanations.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/sortinggame Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/sortinggame-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 634,
+      "fps": 24,
+      "sha256": "e4cea7a87ec8f2fd66f1b41a0769f770303da8c790a2677df3361275f96e2eca",
+      "capture": {
+        "recordedAt": "2026-11-05T13:01:58.567Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "f4b9f99c-16b4-482f-857b-30d41825aad6",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Classify the three actions as training or inference.",
+            "crop": {
+              "height": 444,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 69
+            },
+            "sourceSha256": "d51852c0fd17dc52a4400c2b30e088653c199303a8d4408c3fdebf4dc21060ed"
+          },
+          {
+            "phase": "02-classify",
+            "caption": "Training updates parameters; the other actions use the existing model.",
+            "crop": {
+              "height": 444,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 68
+            },
+            "sourceSha256": "a63299897d6fe915c40356c24a60fb99191de6cf337365ed7e51b85d713164a6"
+          },
+          {
+            "phase": "03-feedback",
+            "caption": "Check the classifications and read the explanations.",
+            "crop": {
+              "height": 634,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 69
+            },
+            "sourceSha256": "f9664375e43569cd9ce8c1b7193c12f58c2611428b7e57530ce4221364cc1518"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/pomodoro",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/pomodoro.mp4",
+      "poster": "materials/chatgpt-widgets/videos/pomodoro-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/pomodoro.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /pomodoro widget: Read the first focused study activity. Finish the activity and move to the next study step.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/pomodoro Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/pomodoro-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 646,
+      "fps": 24,
+      "sha256": "7d83bfe70f0956408038a0c161bf4a2fb75af98701b8a9fe08e7e3af7746b460",
+      "capture": {
+        "recordedAt": "2026-11-05T13:06:25.125Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "bb0f20df-9447-4569-b949-b12203aa5b7b",
+        "frames": [
+          {
+            "phase": "01-session",
+            "caption": "Read the first focused study activity.",
+            "crop": {
+              "height": 646,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "295ed8f2c3dcbe92b1c6488ac0562949f4a868f449cef70b27e4b60f4d20b19b"
+          },
+          {
+            "phase": "02-next",
+            "caption": "Finish the activity and move to the next study step.",
+            "crop": {
+              "height": 646,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 66
+            },
+            "sourceSha256": "fac3df036c5a2e8070f199e15e4800d7d8e3ce679c656e2575ba5becd69283c0"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/studyplan",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/studyplan.mp4",
+      "poster": "materials/chatgpt-widgets/videos/studyplan-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/studyplan.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /studyplan widget: Read the three study activities and their self-checks. Mark the first activity complete and observe the progress counter.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/studyplan Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/studyplan-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 622,
+      "fps": 24,
+      "sha256": "23578bf3443b5c0b4f38127200ef7edb290b9296fafed5c4c82bac6370b8931e",
+      "capture": {
+        "recordedAt": "2026-11-05T13:06:42.062Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "efbfbd81-9e45-4f0e-99b7-8086db57a961",
+        "frames": [
+          {
+            "phase": "01-plan",
+            "caption": "Read the three study activities and their self-checks.",
+            "crop": {
+              "height": 622,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "64373e23669ab08d18f85e3b022939fc56c7be372b097037b67801b140cfb28e"
+          },
+          {
+            "phase": "02-progress",
+            "caption": "Mark the first activity complete and observe the progress counter.",
+            "crop": {
+              "height": 622,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "a80a96b4689dab72a186f1452a95d440d7e2e1fa9e8f960e1018b976b9cc902e"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/decisionmatrix",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/decisionmatrix.mp4",
+      "poster": "materials/chatgpt-widgets/videos/decisionmatrix-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/decisionmatrix.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /decisionmatrix widget: Compare how training, inference and retrieval affect parameters. Classify parameter optimisation, next-token prediction and retrieval using the matrix.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/decisionmatrix Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/decisionmatrix-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 986,
+      "fps": 24,
+      "sha256": "e578f495110f799ff7647e700e520f95dbe1cc14055562446f3e45e2bd43288e",
+      "capture": {
+        "recordedAt": "2026-11-05T13:12:56.357Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1",
+        "rootId": "9505deaf-e136-49f7-a726-1c141fba51e3",
+        "frames": [
+          {
+            "phase": "01-matrix",
+            "caption": "Compare how training, inference and retrieval affect parameters.",
+            "crop": {
+              "height": 884,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "b69ad2724cac364f07f509f4d7d0faf8023e28aa1ccb4f100fc7e54a32404a89"
+          },
+          {
+            "phase": "02-classify",
+            "caption": "Classify parameter optimisation, next-token prediction and retrieval using the matrix.",
+            "crop": {
+              "height": 986,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "ff26a252fc643118751d581deee6d1bfe9104e02a18490d624cd0901e159a7e5"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/caseStudy",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/caseStudy.mp4",
+      "poster": "materials/chatgpt-widgets/videos/caseStudy-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/caseStudy.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /caseStudy widget: Read the three situations and explain which changes the model. Reveal the first explanation and compare it with your reasoning.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/caseStudy Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/caseStudy-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 892,
+      "fps": 24,
+      "sha256": "11f0349568bd824d27406d37053e74ba7652b2ab4bc13ec7c0c29802c36dca8a",
+      "capture": {
+        "recordedAt": "2026-11-05T13:13:50.335Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "d7cac266-13bf-49f8-bbd5-01645df76213",
+        "frames": [
+          {
+            "phase": "01-scenario",
+            "caption": "Read the three situations and explain which changes the model.",
+            "crop": {
+              "height": 847,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "5f395cd6a31f037b0028b0010120b8b044b40ca14432e265fc51178337fffef1"
+          },
+          {
+            "phase": "02-reveal",
+            "caption": "Reveal the first explanation and compare it with your reasoning.",
+            "crop": {
+              "height": 891,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "cdf6167dc60559956326c0874e75d4188d8801c2301f73c12fa3acb235104827"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/exitTicket",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/exitTicket.mp4",
+      "poster": "materials/chatgpt-widgets/videos/exitTicket-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/exitTicket.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /exitTicket widget: Answer the three exit-ticket questions in your own words. Write explanations of parameters, context and retrieval. Submit and compare with the expected answers; review the reasoning.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/exitTicket Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/exitTicket-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 884,
+      "fps": 24,
+      "sha256": "da7effb0a727f59dcd72dbfc9261c26a0aa75008ddd45cc774e2d28dd49051d5",
+      "capture": {
+        "recordedAt": "2026-11-05T13:10:27.954Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1",
+        "rootId": "6805f515-e4f1-4836-b281-9ce12b6501ca",
+        "frames": [
+          {
+            "phase": "01-questions",
+            "caption": "Answer the three exit-ticket questions in your own words.",
+            "crop": {
+              "height": 730,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "3ef2738126441f2e7616e0e705d038bcb5b434d43b538dfd20cf4bc0ecda87cd"
+          },
+          {
+            "phase": "02-written",
+            "caption": "Write explanations of parameters, context and retrieval.",
+            "crop": {
+              "height": 730,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "99fe232bffee8bcbae0974742deb5b962bcbe5f1990c426143b2649f99f1d257"
+          },
+          {
+            "phase": "03-review",
+            "caption": "Submit and compare with the expected answers; review the reasoning.",
+            "crop": {
+              "height": 884,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "9bbb706745e653ac84203a07799fd207395ec23b471805c06ab5937aa99e2d92"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/peerassessment",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/peerassessment.mp4",
+      "poster": "materials/chatgpt-widgets/videos/peerassessment-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/peerassessment.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /peerassessment widget: Read the criteria and scoring scale before assessing an explanation. Assign 2 to the first criterion; the total is set by the reviewer.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/peerassessment Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/peerassessment-transcript.txt",
+      "durationSeconds": 10,
+      "width": 784,
+      "height": 938,
+      "fps": 24,
+      "sha256": "319ac8a1c983d34c939fb75c123a2a9f265780adb0c995ab14d87a25fbb90ec6",
+      "capture": {
+        "recordedAt": "2026-11-05T13:14:02.501Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "9548e4ae-3b39-45f2-ae7b-ef116797650e",
+        "frames": [
+          {
+            "phase": "01-rubric",
+            "caption": "Read the criteria and scoring scale before assessing an explanation.",
+            "crop": {
+              "height": 938,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "5f33b6e1a638ed08b7544a8ff8636d4bf4d0615260cce1ce643e304e408537f2"
+          },
+          {
+            "phase": "02-score",
+            "caption": "Assign 2 to the first criterion; the total is set by the reviewer.",
+            "crop": {
+              "height": 938,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "bc1ef7d0f7b2449961518f9202ab6e57924a03f7688f18f61710feb1dfb42fc2"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/worksheet",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/worksheet.mp4",
+      "poster": "materials/chatgpt-widgets/videos/worksheet-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/worksheet.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /worksheet widget: Read the question before checking the answer. Write an explanation in the answer field. Reveal the model answer and compare it with your explanation.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/worksheet Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/worksheet-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 472,
+      "fps": 24,
+      "sha256": "fbccf0fecec2bac766d39c8c4b7c97ea3cb2b4cd100c61402b07b0f5fa5bac0d",
+      "capture": {
+        "recordedAt": "2026-11-05T13:00:08.692Z",
+        "conversationUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+        "rootId": "7b23f04e-8b25-4b7a-81be-8abe8345bfb7",
+        "frames": [
+          {
+            "phase": "01-question",
+            "caption": "Read the question before checking the answer.",
+            "crop": {
+              "height": 300,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 145
+            },
+            "sourceSha256": "043f498a5cad923a0e40cb718d57a41fa65a24f628bdc54cd04bbb269092b353"
+          },
+          {
+            "phase": "02-answer",
+            "caption": "Write an explanation in the answer field.",
+            "crop": {
+              "height": 300,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 407
+            },
+            "sourceSha256": "836a6fda37f8da6264baf6d91cd3036932cdd3c11673ee1357678d60e2993f3e"
+          },
+          {
+            "phase": "03-result",
+            "caption": "Reveal the model answer and compare it with your explanation.",
+            "crop": {
+              "height": 472,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 309
+            },
+            "sourceSha256": "6b0efe086299dce02805a3bdb6e6f9729b77f95cdeaaa5bab014eda035a569fc"
+          }
+        ]
+      }
+    },
+    {
+      "command": "/learningstations",
+      "type": "video",
+      "src": "materials/chatgpt-widgets/videos/learningstations.mp4",
+      "poster": "materials/chatgpt-widgets/videos/learningstations-poster.jpg",
+      "captions": "materials/chatgpt-widgets/videos/learningstations.en.vtt",
+      "captionsDefault": false,
+      "alt": "Actual ChatGPT /learningstations widget: Read the station activity and its understanding check. Reveal the explanation after working through the first station. Mark the first station complete and observe progress.",
+      "caption": "Actual ChatGPT output · recorded interaction",
+      "prompt": "/learningstations Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "transcriptFile": "materials/chatgpt-widgets/videos/learningstations-transcript.txt",
+      "durationSeconds": 14,
+      "width": 784,
+      "height": 1004,
+      "fps": 24,
+      "sha256": "068438776ecb2a3dcfefdc025e9977d6de5493a8d8590c27dd96594b1ac5adc9",
+      "capture": {
+        "recordedAt": "2026-11-05T13:14:18.967Z",
+        "conversationUrl": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248",
+        "rootId": "9d40d005-bbc8-4e43-9317-97aed3691852",
+        "frames": [
+          {
+            "phase": "01-stations",
+            "caption": "Read the station activity and its understanding check.",
+            "crop": {
+              "height": 975,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "52cd4a6b46cc337dd9b43d0795d7d248f13c4516e39c5a6ea891b1caa9d9582e"
+          },
+          {
+            "phase": "02-explanation",
+            "caption": "Reveal the explanation after working through the first station.",
+            "crop": {
+              "height": 1003,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "bb4d499f7ebe3160d88467039b8ca34d48707da1d3501f2e12db9fa2f851ec79"
+          },
+          {
+            "phase": "03-progress",
+            "caption": "Mark the first station complete and observe progress.",
+            "crop": {
+              "height": 1003,
+              "rootVisible": true,
+              "width": 784,
+              "x": 691,
+              "y": 65
+            },
+            "sourceSha256": "d27370a945783ea25b269a223c0811361ee7729423741474606dbc3a282b7844"
+          }
+        ]
+      }
+    }
+  ]
+}

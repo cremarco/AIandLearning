@@ -1,0 +1,11 @@
+/caseStudy — prompt and widget generation
+
+PROMPT
+/caseStudy Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 The original prompt is sent in ChatGPT.
+00:00:04.754 ChatGPT generates the response and builds the widget.
+00:00:20.359 The generated widget is ready to use.
+
+GENERATED RESULT
+Case Study: Andrea's Language ModelUniversity level · Based on §1.2, Table 1 and Figure 1 of the attached chapterScenario: Andrea is developing a text-generation application. He observes three different interventions and must explain which ones change the model itself.Case 1 — TrainingThe system compares predicted distributions with training examples and uses prediction error to optimize numerical parameters.Question: What changes in the model?Case 2 — New contextAndrea adds “In this chapter, X means Y” to his prompt and obtains a different answer.Question: Does this prove the model has been retrained?Case 3 — Document retrievalAn external document is retrieved and its passages are supplied for generation.Question: How does this differ from training? Reveal case analysisKey learning outcome: Students should distinguish parameter updates from changes to information available during ordinary inference.

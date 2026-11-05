@@ -1,0 +1,11 @@
+/studyplan — prompt and widget generation
+
+PROMPT
+/studyplan Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 The original prompt is sent in ChatGPT.
+00:00:04.603 ChatGPT generates the response and builds the widget.
+00:00:25.823 The generated widget is ready to use.
+
+GENERATED RESULT
+Study Plan: Training vs. InferenceUniversity level · 15 minutes · Based on §1.2, Table 1 and Figure 1 of the attached chapterComplete three focused activities, then test your understanding without consulting the text.Study progress0/3 completed1. Understand training5 minTrace examples → predicted distribution → prediction error → parameter updates.Self-check: Explain how optimization reduces aggregate prediction error.2. Understand inference5 minTrace input + fixed model → calculations → output distribution → selected output.Self-check: Explain why ordinary inference does not update model parameters.3. Compare interventions5 minCompare training, a new prompt definition, and document retrieval using Table 1.Self-check: Identify which changes parameters and which changes available context. Reset planFinal recall question: Why can adding “In this chapter, X means Y” to a prompt change the model's answer without retraining it?Expected understanding: Training updates parameters; inference uses existing parameters; context supplies information without itself modifying the model.The 15-minute schedule is a suggested study structure, not a timing requirement specified in the chapter.

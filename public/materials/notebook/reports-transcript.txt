@@ -1,0 +1,129 @@
+NotebookLM · Reports — recorded from scratch in @Browser, 5 November 2026
+
+Authentic UI actions and playback, with generation waits cut between scenes.
+The interface recording is silent; English captions are available.
+
+OBSERVED RESULT
+Study Guide: Foundations of Generative Artificial Intelligence
+
+This study guide provides a detailed review of core concepts in generative artificial intelligence, autoregressive language models, and Transformer decoder architecture based on the foundational curriculum by Marco Cremaschi.
+
+1. Core Concepts Summary
+
+Generative AI vs. AI Assistants
+
+* Generative AI Systems: Broadly defined as systems that produce content (such as text or images) conditioned on an input. "Generative" describes the activity itself rather than a single model architecture.
+* Autoregressive Language Models: Models that calculate the probability distribution of which token follows an existing sequence of text (context). Continuously repeating this next-token prediction step generates extended text.
+* Model vs. Assistant: A language model calculates next-token probabilities using fixed parameters. An assistant application wraps around the model and includes additional service-managed components such as system instructions, web search capabilities, document retrieval (RAG), content filters, external tools, and conversation memory.
+
+Data, Parameters, and System Training
+
+* Parameters: Numerical values used in the model’s internal mathematical transformations. Parameters do not exist as a human-readable encyclopedia prior to training.
+* Pretraining: The optimization process where a model compares its predicted next-token distributions against actual text examples, updating parameter weights to minimize aggregate prediction error.
+* Instruction Tuning / Alignment: Post-pretraining stages (e.g., using demonstrations and human preferences as in InstructGPT) that adapt a model to follow instructions and exhibit desired behaviors.
+* Inference: Running calculations using fixed, already-available parameters. Inserting text into a conversation prompt alters the context of the current inference; it does not update the underlying model parameters or weights.
+
++--------------------------+-------------------------------------------------------------+
+| Intervention             | Primary Effect                                              |
++--------------------------+-------------------------------------------------------------+
+| Training / Fine-tuning   | Modifies the model's internal parameter weights.            |
+| Context Message          | Alters information available during the current inference.  |
+| Document Retrieval (RAG) | Supplies external text passages into the active context.    |
++--------------------------+-------------------------------------------------------------+
+
+
+Tokens, Embeddings, and Architectural Flow
+
+* Tokenizer: Converts input strings into sequences of numerical identifiers (token IDs). Tokens can represent words, sub-words, punctuation, or spaces. Token counts measure context length.
+* Token IDs: Indices within a vocabulary dictionary. Numerical proximity between IDs does not signify semantic similarity.
+* Initial Embedding: A static, learned vector retrieved from a lookup table using a token's numerical ID.
+* Contextual Representation: A dynamic vector produced after initial embeddings pass through Transformer decoder blocks, incorporating relationships with other permitted tokens in the sequence.
+* Positional Encoding: Methods (such as Rotary Position Embeddings / RoPE in Qwen2.5) that inject token order information into representations.
+* Transformer Decoder: A multi-layered structure comprising causal attention mechanisms, feed-forward networks, residual connections, and layer normalizations.
+* Causal Attention: Computes Query (q), Key (k), and Value (v) vectors across permitted positions. A causal mask prevents current sequence positions from accessing future tokens during next-token prediction.
+
+Probabilities, Softmax, and Temperature
+
+* Logit (z): Unnormalized numerical output scores produced by the final decoder layer for every entry in the vocabulary.
+* Softmax Function: Normalizes raw logits into a valid non-negative probability distribution summing to 1 across the vocabulary: \ p_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)} \
+* Temperature (T): A positive scaling factor applied to logits before softmax normalization.
+  * Lower Temperature (T < 1.0): Concentrates probability mass onto the highest-scoring tokens.
+  * Higher Temperature (T > 1.0): Flattens the distribution, making token probabilities more uniform.
+  * Properties: Temperature scaling alters distribution concentration without changing the relative ranking order of the logits, adding new knowledge, or updating model weights.
+* Decoding Strategies:
+  * Greedy Selection: Continuously selects the single highest-probability token.
+  * Sampling: Randomly selects tokens based on the output probability distribution, allowing varied outputs across runs. Can be constrained via top-k or top-p filters.
+
+Retrieval-Augmented Generation (RAG) and Limitations
+
+* Retrieval-Augmented Generation (RAG): A framework where an external search component retrieves passages from a document collection and feeds them into the model's input context. RAG provides updated or specific context without fine-tuning model weights.
+* Hallucinations: Plausible-sounding but incorrect, ungrounded, or unsupported generations. Lowering temperature does not eliminate hallucinations; deterministic decoding can consistently repeat the same false statement.
+
+2. Short-Answer Quiz
+
+1. What is the operational distinction between a standalone language model and a complete AI assistant application?
+2. How does the function of pretraining differ from inserting new information directly into a user prompt?
+3. Why is a token’s numerical ID not considered a measurement of its semantic meaning?
+4. What is the architectural difference between an initial token embedding and a contextual representation?
+5. What constraint defines "causal" attention within a Transformer decoder block?
+6. How does altering the temperature parameter (T) affect the softmax output distribution over a fixed set of logits?
+7. How does greedy selection differ from probabilistic sampling during generation?
+8. Does retrieving external documents via Retrieval-Augmented Generation (RAG) update a model's parameters? Explain.
+9. Why does lowering the temperature parameter fail to eliminate model hallucinations?
+10. In experimental evaluations of language models, why is it necessary to isolate variables such as temperature and input context?
+
+3. Quiz Answer Key
+
+1. What is the operational distinction between a standalone language model and a complete AI assistant application? Answer: A language model is an autoregressive system that assigns probabilities to token sequences and predicts next tokens using internal parameter calculations. An assistant application is a broader system built around the model, incorporating external features such as system prompts, search engines, document retrieval components, content filters, memory management, and external tools.
+2. How does the function of pretraining differ from inserting new information directly into a user prompt? Answer: Pretraining updates the model's internal parameter weights by optimizing predictions against broad text datasets to reduce aggregate error. Inserting information into a prompt merely provides data within the context window for the current inference step, leaving the underlying parameter weights completely unchanged.
+3. Why is a token’s numerical ID not considered a measurement of its semantic meaning? Answer: Token IDs serve strictly as arbitrary lookup indices within a tokenizer's fixed vocabulary dictionary. Consecutive or nearby numerical IDs do not reflect conceptual similarity, and individual vector coordinates or ID numbers do not map to isolated human semantic properties.
+4. What is the architectural difference between an initial token embedding and a contextual representation? Answer: An initial embedding is a static, learned vector retrieved directly from the vocabulary matrix using a token's numerical ID. A contextual representation is the dynamic vector produced after passing the initial embedding through Transformer decoder blocks, integrating positional encodings and causal attention from other permitted sequence tokens.
+5. What constraint defines "causal" attention within a Transformer decoder block? Answer: Causal attention enforces a mathematical masking constraint that prevents a given token position from attending to subsequent or "future" token positions in the sequence. When predicting the next token, a position can only extract and process information from earlier tokens and its own available state.
+6. How does altering the temperature parameter (T) affect the softmax output distribution over a fixed set of logits? Answer: Raising the temperature distributes probability mass more uniformly across the vocabulary, whereas lowering the temperature concentrates probability mass onto the highest-scoring tokens. Crucially, adjusting temperature scales the logits before normalization without changing their relative rank order or adding external knowledge to the system.
+7. How does greedy selection differ from probabilistic sampling during generation? Answer: Greedy selection deterministically chooses the single token with the absolute highest probability at each sequence step. Sampling selects next tokens stochastically based on the output probability distribution, allowing different generation runs to produce diverging responses from identical inputs.
+8. Does retrieving external documents via Retrieval-Augmented Generation (RAG) update a model's parameters? Explain. Answer: No, RAG does not update model parameters. RAG extracts relevant textual passages from an external database and appends them directly into the prompt context, allowing the fixed model to process the retrieved text during standard inference.
+9. Why does lowering the temperature parameter fail to eliminate model hallucinations? Answer: Hallucinations stem from underlying structural, data, and statistical generation limits rather than temperature settings alone. Lowering temperature simply forces the model to select its highest-probability tokens more deterministically, which can lead it to repeat the exact same factual error with higher consistency.
+10. In experimental evaluations of language models, why is it necessary to isolate variables such as temperature and input context? Answer: Isolating single variables ensures that observed changes in generation outputs or probability distributions can be definitively attributed to a specific cause. Changing temperature and input context simultaneously confounds experimental results, making it impossible to separate parameter-scaling effects from context-driven shift effects.
+
+4. Essay Practice Questions
+
+(Note: These questions are designed for extended analysis and independent study. Answers are not provided.)
+
+1. Parameters vs. Contextual Knowledge: Contrast how a language model utilizes knowledge stored in its static parameters with information provided dynamically within its context window. In your analysis, discuss the implications of this distinction for system design, fine-tuning (e.g., InstructGPT), and real-time data updating.
+2. End-to-End Technical Pipeline of a Generation Step: Trace the complete mathematical and architectural path of an input string through a Transformer decoder model during a single autoregressive step. Begin at string tokenization and cover initial embeddings, positional encodings, Query/Key/Value causal attention matrices, feed-forward transformations, raw logits, temperature scaling, softmax normalization, and final token selection.
+3. Mathematical Behavior of Softmax and Temperature: Detail the mathematical operation of the softmax function p_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)}. Using a hypothetical or empirical set of logits, analyze how varying T between low (T < 1.0) and high (T > 1.0) values alters total distribution entropy, top-token probability concentration, and candidate token selection probability without shifting logit rankings.
+4. Architectural Limitations, Verifiability, and RAG: Analyze the root causes of model hallucinations and factual inaccuracies in autoregressive models. Evaluate how Retrieval-Augmented Generation (RAG) addresses parametric knowledge freshness and factual grounding, while highlighting specific modes of failure that RAG systems remain vulnerable to (such as retrieval errors or context misinterpretation).
+5. Experimental Methodology for LLM Behavior: Formulate a rigorous empirical experimental protocol for evaluating a local quantized language model (such as Qwen2.5-0.5B-Instruct running via Transformers.js). Define your control parameters, primary dependent variables (including full-vocabulary probability mass and next-token distributions), hypothesis verification techniques, and code auditing procedures to detect silent logic errors in model execution pipelines.
+
+5. Comprehensive Glossary
+
+* Causal Attention: An attention mechanism variant restricted by a causal mask, ensuring that predictions for a given sequence position depend strictly on preceding and current positions, blocking access to future tokens.
+* Context: The full sequence of tokens (including system instructions, user inputs, historical dialogue, and retrieved documents) made available to a language model during a single inference step.
+* Contextual Representation: A dynamic, high-dimensional vector derived by passing initial embeddings through decoder layers, encoding both token identity and relationships to surrounding sequence context.
+* Embedding: A static, high-dimensional learned numerical vector associated with a specific token ID in a model's vocabulary lookup table.
+* Fine-Tuning: A post-pretraining process that further trains a model on specialized datasets or preference evaluations (e.g., RLHF / InstructGPT), updating parameter weights to align model outputs with desired behaviors or domains.
+* Generative AI: Systems designed to generate synthetic content (text, images, audio, etc.) conditioned on specific input prompts or instructions.
+* Greedy Selection: A deterministic decoding procedure that always selects the token assigned the highest probability by the softmax distribution.
+* Inference: The process of executing a trained model to generate predictions or outputs using fixed, existing parameter weights.
+* Logit (z): Unnormalized numerical output scores produced by the final linear layer of a neural network before conversion into probabilities.
+* Large Language Model (LLM): An autoregressive deep neural network trained on vast text datasets to compute token sequence probabilities; it refers to the core model architecture rather than an entire software application wrapper.
+* Parameter: A learned numerical weight or bias within a model's neural network layers that dictates its structural transformations and knowledge encoding, updated during training.
+* Quantisation: A compression technique that lowers the numerical precision of model parameters (e.g., from 16-bit floating-point to 4-bit integers / q4), reducing memory footprint and computational requirements.
+* Query, Key, Value (Q, K, V): Linear projections of token representations within an attention layer. Queries are matched against Keys to calculate normalized attention weights, which are subsequently used to compute a weighted sum over Values.
+* Retrieval-Augmented Generation (RAG): An application architecture that combines search algorithms with text generation by retrieving relevant passages from an external collection and inserting them into the model's inference context window.
+* Sampling: The process of stochastically selecting a output token from the calculated softmax probability distribution.
+* Softmax: A mathematical function that converts a vector of arbitrary real-valued logits into a normalized probability distribution of non-negative values that sum to 1.
+* Temperature (T): A positive scaling hyperparameter applied to raw logits prior to softmax normalization that controls the randomness or concentration of the output probability distribution.
+* Token: The fundamental unit of text processing in a language model, representing a word, sub-word segment, character, or special structural symbol.
+* Tokenizer: An algorithm and vocabulary mapping tool responsible for segmenting raw text strings into numerical token IDs and converting token IDs back into human-readable text.
+
+
+SCOPE
+Document Study Guide generated and read in @Browser. Export to Docs and Export to Sheets menus inspected only.
+
+CAPTIONS
+00:00:00.000 Open Reports and inspect the available formats.
+00:00:01.439 Choose a document report and inspect the study-guide template.
+00:00:03.502 Generate a Study Guide with practice questions and a glossary.
+00:00:06.261 Open the generated Study Guide and inspect its chapter-based structure.
+00:00:09.630 Inspect the report’s export options for Docs and Sheets.

@@ -27,11 +27,17 @@ export type SlideMedia = {
   poster?: string
   captions?: string
   captionsDefault?: boolean
+  browserFrame?: boolean
   fit?: 'contain' | 'cover'
   caption?: string
   source?: string
+  transcript?: string
 }
-export type Reference = { label: string; citation: string; url?: string; display?: string }
+export type Reference = { label: string; citation: string; url?: string; display?: string; group?: string; shortTitle?: string }
+export type ToolTable = {
+  headers: [string, string, string]
+  rows: { tool: string; purpose: string; access: string; url: string }[]
+}
 export type Slide = {
   id: string
   number: number
@@ -52,13 +58,16 @@ export type Slide = {
   book?: BookPreview
   character?: Character
   commands?: PromptCommand[]
+  shortcutLabels?: { command: string; retained: boolean }[]
   commandCategory?: CommandCategory
   skillIds?: string[]
+  toolTable?: ToolTable
   references?: Reference[]
   formula?: boolean
   diagram?: string
   prompt?: string
   promptLabel?: string
+  promptStyle?: 'terminal' | 'chat'
   comparison?: { label: string; text: string; audience?: Audience }[]
   steps?: { title: string; text: string }[]
   result?: string

@@ -1,0 +1,55 @@
+/conceptquiz — actual ChatGPT interaction
+
+PROMPT
+/conceptquiz Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Answer three conceptual questions about changes to parameters and context.
+00:00:04.000 Choose the answers supported by the chapter.
+00:00:08.000 Review the score and explanations for the three concepts.
+
+RENDERED RESULT
+Concept Quiz: Training vs. Inference
+
+Three university-level questions based on Section 1.2 of the attached chapter. Focus on what changes in the model and what changes only in its context.
+
+QUESTION 1 OF 3
+
+During pretraining, what causes model parameters to change?
+
+Adding a message to the context
+Optimization based on prediction error
+Selecting the next token
+
+Correct
+
+Training compares predictions with example tokens; optimization updates parameters to reduce aggregate error.
+
+QUESTION 2 OF 3
+
+Andrea adds a new definition to his prompt. What does this demonstrate?
+
+The model has learned new parameters
+The tokenizer has been retrained
+Context can influence output without changing weights
+
+Correct
+
+Ordinary inference uses existing parameters. New contextual information can change the output without changing the model.
+
+QUESTION 3 OF 3
+
+Which comparison best isolates the effect of context?
+
+Keep the model fixed and change the input
+Change both model parameters and input
+Fine-tune the model before every question
+
+Correct
+
+Keeping the model fixed while changing the input studies context effects. Training a new version changes the model itself.
+
+3/3
+
+Excellent conceptual understanding!
+
+Try again

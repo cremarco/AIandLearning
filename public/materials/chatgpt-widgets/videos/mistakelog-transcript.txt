@@ -1,0 +1,48 @@
+/mistakelog — actual ChatGPT interaction
+
+PROMPT
+/mistakelog Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Read each misconception and its correction.
+00:00:04.000 Mark the first misconception reviewed and observe progress.
+
+RENDERED RESULT
+Mistake Log: Training vs. Inference
+
+Review three common misconceptions from the attached chapter (§§1.2 and 1.7).
+
+Mistake 1
+
+Reviewed
+
+Uploading a textbook automatically trains the model.
+
+The textbook may supply context or retrieved passages. Parameter updates require training or fine-tuning.
+
+Context ≠ parameter updates
+
+Mistake 2
+
+Reviewed
+
+A model updates its weights whenever it generates a response.
+
+Ordinary inference uses existing parameters to calculate probabilities and select output tokens.
+
+Inference ≠ training
+
+Mistake 3
+
+Reviewed
+
+If a model uses new information correctly, it must have learned it through training.
+
+New context can influence an answer without changing the model's parameters.
+
+Changed output ≠ changed model
+
+Review progress
+
+1/3
+
+Self-check: Explain why Andrea's model can answer using a new definition without updating its parameters.

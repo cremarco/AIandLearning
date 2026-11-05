@@ -1,0 +1,11 @@
+/exam — prompt and widget generation
+
+PROMPT
+/exam Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 The original prompt is sent in ChatGPT.
+00:00:04.619 ChatGPT generates the response and builds the widget.
+00:00:32.524 The generated widget is ready to use.
+
+GENERATED RESULT
+Mini Exam: Training vs. InferenceUniversity level · 3 questions · 10 points · Based on §1.2, Table 1 and Figure 1 of the attached chapterComplete all three questions before submitting. The exam tests conceptual understanding, not just memorization.1. Multiple choice2 pointsWhich statement correctly distinguishes training from ordinary inference?A. Both update parameters after each input.B. Training updates parameters; inference uses existing parameters.C. Training changes context; inference optimizes weights.D. Both retrieve documents to update the model.2. Short answer4 pointsDuring pretraining, how do examples and prediction error lead to parameter updates?3. Applied reasoning4 pointsAndrea adds “In this chapter, X means Y” to a prompt and receives a different answer. Does this demonstrate retraining? Explain how you would isolate the effect of context. Submit examExam takeaway: Training changes the model's parameters. Inference uses the available model, while changing context can change its output without retraining.

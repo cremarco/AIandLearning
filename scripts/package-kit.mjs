@@ -38,7 +38,7 @@ const required = [
   'booklet-genai/main.typ', 'booklet-genai/contenuti.mjs',
   'booklet-genai/voiceover-attempt.json',
   'booklet-genai/build/Fondamenti_GenAI_Cremaschi.pdf',
-  'public/materials/kit.html', 'public/materials/lettura.html',
+  'public/materials/kit.html',
   'public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf',
   'public/materials/demo-genai/index.html', 'public/materials/demo-genai/app.js',
   'public/materials/demo-genai/model-manifest.json',

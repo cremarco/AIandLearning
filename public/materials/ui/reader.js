@@ -1,4 +1,4 @@
-// Shared controls for the reading guide, materials, activities and assessment.
+// Shared controls for materials, activities and assessment.
 const MIN_TEXT_SIZE = 16
 const MAX_TEXT_SIZE = 36
 const TEXT_SIZE_STEP = 2

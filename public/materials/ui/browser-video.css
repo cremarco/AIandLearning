@@ -1,0 +1,8 @@
+.browser-video.mockup-browser { display:flex; flex-direction:column; min-height:0; overflow:hidden; border:1px solid var(--color-base-300); border-radius:10px; background:var(--color-base-100); box-shadow:none; }
+.browser-video .mockup-browser-toolbar { flex:none; height:34px; min-height:34px; margin:0; padding-inline:14px; border-bottom:1px solid var(--color-base-300); background:var(--color-base-200); }
+.browser-video .mockup-browser-toolbar::before { opacity:.4; }
+.browser-video .browser-video-address.input { height:22px; min-height:22px; width:68%; max-width:480px; margin-inline:auto; border:0; border-radius:4px; background:var(--color-base-100); color:var(--color-base-content); box-shadow:none; font-size:12px; }
+.browser-video-page { display:flex; flex:1; min-height:0; overflow:hidden; aspect-ratio:8 / 5; }
+.browser-video-page video,.browser-video-page img { display:block; width:100%; height:100%; min-height:0; object-fit:contain; background:var(--color-white,#fff); }
+.browser-video-page .video-print-poster { display:none!important; }
+@media print { .browser-video-page video { display:none!important; } .browser-video-page .video-print-poster { display:block!important; } }

@@ -2,9 +2,13 @@
 .slidev-layout .deck-slide.type-workshop { gap:0; padding:48px 64px 82px; --tool-accent:var(--deck-cyan); }
 .workshop-content { display:flex; flex-direction:column; height:100%; gap:17px; min-height:0; }
 .slidev-layout .workshop-heading h1 { font-size:46px; max-width:1100px; line-height:1.07; }
+.kind-section-divider { justify-content:center; }
+.slidev-layout .kind-section-divider .workshop-heading h1 { max-width:980px; font-size:88px; line-height:1.08; }
 .slidev-layout .deck-slide .workshop-lead { font-size:25px; color:var(--deck-muted); line-height:1.32; max-width:1080px; }
 .workshop-stage { display:flex; flex:1; min-height:0; gap:38px; align-items:center; }
 .workshop-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:22px; }
+.slidev-layout .deck-slide.type-workshop:has(.kind-shortcut-cloud) { padding:36px 44px; }
+.kind-shortcut-cloud { gap:0; }
 .kind-audience-legend .comparison { gap:64px; }
 .kind-audience-legend .comparison section { gap:24px; }
 .kind-audience-legend .audience-icon { width:64px; height:64px; }
@@ -36,6 +40,21 @@
 .slidev-layout .has-media .workshop-copy :where(p) { font-size:23px; }
 .slidev-layout .has-media .workshop-copy h2 { font-size:25px; }
 .has-media .procedure-list { gap:18px; }
+.slidev-layout .deck-slide.type-workshop:has(.kind-tool-demo) { padding:40px 48px 64px; }
+.kind-tool-demo { display:grid; grid-template-columns:300px minmax(0,1fr); grid-template-rows:auto auto minmax(0,1fr) auto; gap:20px 32px; }
+.kind-tool-demo .workshop-heading { grid-area:1 / 1; }
+.kind-tool-demo .workshop-lead { grid-area:2 / 1; }
+.kind-tool-demo .workshop-stage { grid-area:1 / 2 / -1 / 3; align-items:stretch; justify-content:center; }
+.kind-tool-demo .workshop-media { width:100%; display:grid; grid-template-rows:minmax(0,1fr) auto; justify-items:center; gap:6px; }
+.kind-tool-demo .workshop-media .browser-video { width:100%; height:auto; max-height:100%; aspect-ratio:3 / 2; align-self:center; }
+.slidev-layout .kind-tool-demo .workshop-media figcaption { display:flex; align-items:center; justify-content:center; gap:8px; }
+.kind-tool-demo .workshop-media video,.kind-tool-demo .workshop-media .video-print-poster { width:100%; height:100%; max-height:100%; object-fit:contain; }
+.kind-tool-demo .workshop-copy { display:none; }
+.kind-tool-demo .tool-demo-prompt { grid-area:3 / 1; align-self:start; font-size:18px; }
+.kind-tool-demo .tool-demo-prompt .prompt-label { font-size:16px; }
+.slidev-layout .kind-tool-demo .workshop-heading h1 { font-size:36px; }
+.slidev-layout .kind-tool-demo .workshop-lead { font-size:21px; }
+.slidev-layout .kind-tool-demo .workshop-decision { grid-area:4 / 1; align-self:end; font-size:18px; padding-top:12px; }
 .workshop-links { display:flex; flex-wrap:wrap; gap:12px; }
 .kind-access .workshop-stage { gap:72px; }
 .kind-access .workshop-media { order:1; width:38%; }
@@ -59,6 +78,7 @@
   --deck-surface:var(--color-stone-100);
   --deck-raised:var(--color-stone-200);
   --deck-emphasis:var(--color-teal-800);
+  --deck-important:var(--color-orange-800);
   --deck-critical:var(--color-orange-800);
   --deck-link:var(--color-stone-600);
   --deck-red:var(--deck-link);

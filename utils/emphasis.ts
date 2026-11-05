@@ -2,8 +2,9 @@ import type { ComputedRef, InjectionKey } from 'vue'
 
 export const EMPHASIS_TERMS_KEY: InjectionKey<ComputedRef<readonly EmphasisTerm[]>> = Symbol('eduforum.emphasisTerms')
 
-export type EmphasisTerm = string | { text: string; tone: 'critical' }
-export type TextPart = { text: string; emphasized: boolean; tone?: 'critical' }
+export type EmphasisTone = 'important' | 'critical'
+export type EmphasisTerm = string | { text: string; tone: EmphasisTone }
+export type TextPart = { text: string; emphasized: boolean; tone?: EmphasisTone }
 
 // Keep the original text intact and emphasize only the first whole-word match
 // of each editorial phrase. The slide's editorial list contains at most two ideas.

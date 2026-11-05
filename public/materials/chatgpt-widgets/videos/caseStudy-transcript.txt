@@ -1,0 +1,48 @@
+/caseStudy — actual ChatGPT interaction
+
+PROMPT
+/caseStudy Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.
+
+00:00:00.000 Read the three situations and explain which changes the model.
+00:00:04.000 Reveal the first explanation and compare it with your reasoning.
+
+RENDERED RESULT
+Case Study: Did Andrea Train the Model?
+
+University level · Based on Sections 1.2 and 1.7 of the attached chapter
+
+Scenario: Andrea is building a text-generation application. He notices that the model produces different answers after he changes the information supplied to it.
+
+Three situations
+
+1. Training
+
+Andrea trains a model using examples. Prediction errors guide optimization, updating the model's numerical parameters.
+
+2. Inference
+
+Andrea adds “In this chapter, X means Y” to his prompt. The model uses this context while keeping its parameters fixed.
+
+3. Retrieval (RAG)
+
+Andrea retrieves a document. Selected passages become available as context without necessarily changing model weights.
+
+Test your understanding
+
+1. Which situation changes learned model parameters?
+
+Hide
+
+Situation 1: training.
+
+2. Why does a changed answer not prove retraining?
+
+Reveal
+
+3. How could Andrea isolate the effect of context?
+
+Reveal
+
+Key takeaway: Training changes the model; inference uses it; retrieval supplies additional information.
+
+Source: Foundations of Generative Artificial Intelligence, Section 1.2 (pp. 5–6) and Section 1.7 (pp. 13–14).
