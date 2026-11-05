@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onScopeDispose, ref, watch } from 'vue'
+import { useNav } from '@slidev/client'
 import type { PromptCommand } from '../utils/deck'
 import { assetUrl } from '../utils/assets'
 import CommandTag from './CommandTag.vue'
@@ -9,6 +10,10 @@ const props = defineProps<{ commands: PromptCommand[] }>()
 const selectedIndex = ref(0)
 const selected = computed(() => props.commands[selectedIndex.value] || props.commands[0])
 const result = computed(() => selected.value?.result)
+const video = ref<HTMLVideoElement>()
+const nav = useNav()
+watch([nav.currentSlideNo, nav.isPrintMode, selectedIndex], () => video.value?.pause())
+onScopeDispose(() => video.value?.pause())
 </script>
 
 <template>
@@ -42,10 +47,18 @@ const result = computed(() => selected.value?.result)
       <section v-if="result" class="formal-command-output" :data-command="selected.command" :data-result-status="result.status" aria-live="polite">
         <h2>{{ result.label }}</h2>
         <p v-if="result.text" class="formal-response">{{ result.text }}</p>
+        <figure v-else-if="result.media.type === 'video'" class="formal-recording">
+          <video ref="video" :key="result.media.src" controls playsinline preload="none" :poster="assetUrl(result.media.poster || '')" :aria-label="result.media.alt" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
+            <source :src="assetUrl(result.media.src)" type="video/mp4" />
+            <track v-if="result.media.captions" kind="captions" srclang="en" label="English" :src="assetUrl(result.media.captions)" :default="result.media.captionsDefault !== false" />
+          </video>
+          <img class="formal-print-poster" :src="assetUrl(result.media.poster || '')" :alt="result.media.alt" />
+        </figure>
         <img v-else class="formal-result-image" :src="assetUrl(result.media.src)" :alt="result.media.alt" />
         <p class="formal-result-caption">{{ result.media.caption }}</p>
         <div class="formal-result-links">
-          <a v-if="selected.command !== 'Study'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener">Open original capture</a>
+          <a v-if="selected.command !== 'Study'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>{{ result.media.type === 'video' ? 'Open video' : 'Open original capture' }}</a>
+          <a v-if="result.media.type === 'video' && result.media.source" class="link" :href="result.media.source" target="_blank" rel="noopener" @click.stop @keydown.stop>Original conversation</a>
         </div>
       </section>
     </template>
@@ -72,6 +85,12 @@ const result = computed(() => selected.value?.result)
 .slidev-layout .formal-command-output h2 { font-size:23px; color:var(--deck-cyan); }
 .slidev-layout .formal-response { white-space:pre-line; font-size:22px; line-height:1.3; }
 .formal-result-image { display:block; width:100%; max-height:270px; object-fit:contain; object-position:left top; }
+.formal-recording { margin:0; min-width:0; }
+.formal-recording video,.formal-print-poster { display:block; width:100%; max-height:320px; object-fit:contain; object-position:left top; border-radius:12px; }
+.formal-recording .formal-print-poster { display:none; }
+:global(.workshop-print) .formal-recording video { display:none; }
+:global(.workshop-print) .formal-recording .formal-print-poster { display:block; }
+@media print { .formal-recording video { display:none; } .formal-recording .formal-print-poster { display:block; } }
 .slidev-layout .formal-result-caption { font-size:17px; line-height:1.3; color:var(--deck-muted); }
 .formal-result-links { display:flex; flex-wrap:wrap; gap:10px 24px; font-size:16px; }
 </style>

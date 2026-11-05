@@ -343,15 +343,20 @@
         "command": "Read aloud",
         "description": "Listen to the latest response",
         "result": {
-          "label": "Actual playback state",
+          "label": "Read aloud in action",
           "instruction": "Select Read aloud from the / menu for the latest response.",
-          "caption": "Playback activated, then stopped. The highlighted stop control is captured; no audio recording is included.",
+          "caption": "Original ChatGPT interaction · menu → playback · no audio track.",
           "status": "executed",
           "media": {
-            "src": "materials/chatgpt-formal/web-read-aloud.jpg",
-            "type": "image",
-            "alt": "Native read-aloud playback started for the actual Study response. The control changed to “Interrompi lettura ad alta voce”. Playback was then stopped. The screenshot does not contain an audio recording.",
-            "caption": "Playback activated, then stopped. The highlighted stop control is captured; no audio recording is included."
+            "type": "video",
+            "src": "materials/chatgpt-formal/web-read-aloud.mp4",
+            "poster": "materials/chatgpt-formal/web-read-aloud-poster.jpg",
+            "captions": "materials/chatgpt-formal/web-read-aloud.en.vtt",
+            "captionsDefault": false,
+            "source": "https://chatgpt.com/c/6aecadb2-a9a8-83ed-bdc0-5b2547afc5d8",
+            "alt": "Actual ChatGPT Read aloud interaction: open the slash menu, choose Read aloud, see the active playback control, then return to the ready state. Silent video.",
+            "caption": "Original ChatGPT interaction · menu → playback · no audio track.",
+            "transcript": "Read aloud — actual ChatGPT menu and playback controls\n\nThis silent video is edited from original UI captures, with reading holds. It does not include the spoken audio.\n\nPROMPT\nExplain the difference between training and inference in two short sentences. Answer in English.\n\nRESPONSE\nTraining is the process of learning patterns from data by adjusting a model’s parameters to reduce prediction errors. Inference is the process of using those learned parameters to generate predictions or outputs for new inputs without changing them.\n\n00:00:00.000 ChatGPT provides a short explanation of training and inference.\n00:00:03.000 Open the / menu and choose Read aloud (Leggi ad alta voce).\n00:00:07.000 ChatGPT loads the read-aloud playback.\n00:00:09.000 The active stop control shows that read-aloud playback has started.\n00:00:14.000 After playback finishes, the Read aloud control is available again.\n"
           }
         }
       }

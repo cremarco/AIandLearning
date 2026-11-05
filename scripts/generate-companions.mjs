@@ -55,7 +55,7 @@ function textContent(slide) {
     ...(slide.shortcutLabels || []).map(item => item.command),
     ...(slide.commands || []).flatMap(row => [
       `${row.command}: ${row.description}`,
-      ...(row.result ? [row.result.label, row.result.instruction, row.result.text || '', row.result.media.alt, row.result.media.caption] : []),
+      ...(row.result ? [row.result.label, row.result.instruction, row.result.text || '', row.result.media.alt, row.result.media.caption, row.result.media.transcript || ''] : []),
     ]),
     ...(slide.cards || []).flatMap(card => [card.title, card.body]),
     ...(slide.toolTable?.rows || []).map(row => `${row.tool} — ${row.purpose} — ${row.access} ${row.url}`),
@@ -166,7 +166,7 @@ function commandTable(slide) {
     '</tbody></table></div>',
     ...slide.commands.filter(row => row.result).map(row => {
       const result = row.result
-      return `<article class="command-result"><h3>${h(row.command)} · ${h(result.label)}</h3>${row.command === 'Study' ? promptMarkup(result.instruction, 'Prompt after selecting Study') : `<p>${h(result.instruction)}</p>`}${result.text ? `<p class="command-response">${h(result.text)}</p>` : ''}${mediaMarkup(result.media)}</article>`
+      return `<article class="command-result"><h3>${h(row.command)} · ${h(result.label)}</h3>${row.command === 'Study' ? promptMarkup(result.instruction, 'Prompt after selecting Study') : `<p>${h(result.instruction)}</p>`}${result.text ? `<p class="command-response">${h(result.text)}</p>` : ''}${mediaMarkup(result.media)}${transcriptMarkup(result.media)}</article>`
     }),
   ].join('')
 }

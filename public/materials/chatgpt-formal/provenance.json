@@ -57,7 +57,91 @@
       "status": "executed",
       "capture": "web-read-aloud.jpg",
       "result": "Native read-aloud playback started for the actual Study response. The control changed to “Interrompi lettura ad alta voce”. Playback was then stopped. The screenshot does not contain an audio recording.",
-      "captureSha256": "776277152b555714dc129c4ddab74b55c37e629f97465a3ba1f02d5c6321f7f6"
+      "captureSha256": "776277152b555714dc129c4ddab74b55c37e629f97465a3ba1f02d5c6321f7f6",
+      "video": {
+        "recordedOn": "2026-11-05",
+        "sourceUrl": "https://chatgpt.com/c/6aecadb2-a9a8-83ed-bdc0-5b2547afc5d8",
+        "method": "Edited sequence of original ChatGPT UI captures, cropped at 1:1 with reading holds. No reconstructed interface, pointer movement or transitions. No audio track.",
+        "audio": false,
+        "src": "materials/chatgpt-formal/web-read-aloud.mp4",
+        "poster": "materials/chatgpt-formal/web-read-aloud-poster.jpg",
+        "captions": "materials/chatgpt-formal/web-read-aloud.en.vtt",
+        "transcriptFile": "materials/chatgpt-formal/web-read-aloud-transcript.txt",
+        "durationSeconds": 17,
+        "width": 800,
+        "height": 300,
+        "fps": 24,
+        "sha256": "285d7e1228342a9f1e9de255ea64b8368a80f4ae594fff4607b165c7542c69dc",
+        "prompt": "Explain the difference between training and inference in two short sentences. Answer in English.",
+        "response": "Training is the process of learning patterns from data by adjusting a model’s parameters to reduce prediction errors. Inference is the process of using those learned parameters to generate predictions or outputs for new inputs without changing them.",
+        "frames": [
+          {
+            "file": "00-response.jpg",
+            "phase": "response",
+            "duration": 3,
+            "caption": "ChatGPT provides a short explanation of training and inference.",
+            "crop": [
+              266,
+              50,
+              1066,
+              320
+            ],
+            "sourceSha256": "8b00e6b150c5c8bdd26caeb993603499e8db7503bc61cebdb3409e35ce81c09e"
+          },
+          {
+            "file": "01-menu.jpg",
+            "phase": "menu",
+            "duration": 4,
+            "caption": "Open the / menu and choose Read aloud (Leggi ad alta voce).",
+            "crop": [
+              266,
+              350,
+              1066,
+              640
+            ],
+            "sourceSha256": "9ef3c855d4a2f6cd095e6380a36e7e37a029644a8a41e393777f0f29ba53347d"
+          },
+          {
+            "file": "02-playing.jpg",
+            "phase": "loading",
+            "duration": 2,
+            "caption": "ChatGPT loads the read-aloud playback.",
+            "crop": [
+              266,
+              50,
+              1066,
+              320
+            ],
+            "sourceSha256": "5c3c371d76b7f3ce1968b45a9a6b7cba9f3082d1041608596cedc16f38a5fbd9"
+          },
+          {
+            "file": "03-playback.jpg",
+            "phase": "playback",
+            "duration": 5,
+            "caption": "The active stop control shows that read-aloud playback has started.",
+            "crop": [
+              266,
+              50,
+              1066,
+              320
+            ],
+            "sourceSha256": "a2af8be3976af22aae631ce853101bcfb76bc9cdf3fb7f44cbfc56975d568d63"
+          },
+          {
+            "file": "04-stopped.jpg",
+            "phase": "finished",
+            "duration": 3,
+            "caption": "After playback finishes, the Read aloud control is available again.",
+            "crop": [
+              266,
+              50,
+              1066,
+              320
+            ],
+            "sourceSha256": "ddbc0c24028f909c8c970b3804eaa9ae54bfbdf0e7466684f6c8bede615ad40d"
+          }
+        ]
+      }
     }
   ],
   "book": {

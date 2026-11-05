@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -38,7 +39,17 @@ export function checkData() {
   for (const row of formalWeb.flatMap(slide => slide.commands)) {
     const recorded = formalRecord.actions.find(action => action.action === row.command)
     assert(recorded && row.result, `${row.command}: a formal result needs its original execution record`)
-    assert.equal(row.result.media.src, `materials/chatgpt-formal/${recorded.capture}`)
+    assert.equal(row.result.media.src, recorded.video?.src || `materials/chatgpt-formal/${recorded.capture}`)
+    if (recorded.video) {
+      assert.equal(row.result.media.type, 'video', `${row.command}: keep the recorded video playable`)
+      for (const field of ['src', 'poster', 'captions']) {
+        assert.equal(row.result.media[field], recorded.video[field], `${row.command}: preserve the recorded ${field}`)
+        assert(fs.existsSync(path.join(root, 'public', row.result.media[field])), `${row.command}: missing video ${field}`)
+      }
+      const clip = fs.readFileSync(path.join(root, 'public', recorded.video.src))
+      assert.equal(createHash('sha256').update(clip).digest('hex'), recorded.video.sha256, `${row.command}: video must match its provenance`)
+      assert.equal(row.result.media.transcript, fs.readFileSync(path.join(root, 'public', recorded.video.transcriptFile), 'utf8'))
+    }
     const status = recorded.status.startsWith('opened') ? 'opened' : recorded.status === 'executed' ? 'executed' : 'not-executed'
     assert.equal(row.result.status, status, `${row.command}: do not present an unopened or unexecuted action as executed`)
     if (row.result.text) assert.equal(row.result.text.replace(/\s+/g, ' ').trim(), recorded.result.replace(/\s+/g, ' ').trim(), `${row.command}: preserve the actual ChatGPT response`)
