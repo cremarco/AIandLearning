@@ -135,8 +135,32 @@ title: "What can ChatGPT do?"
 
 ---
 layout: default
+routeAlias: s53types
+title: "Formal commands and informal shortcuts"
+---
+
+<DeckSlide id="S53TYPES" />
+
+---
+layout: default
+routeAlias: s53formalweb
+title: "Formal actions · ChatGPT web"
+---
+
+<DeckSlide id="S53FORMALWEB" />
+
+---
+layout: default
+routeAlias: s53formalapp
+title: "Formal slash commands · desktop app"
+---
+
+<DeckSlide id="S53FORMALAPP" />
+
+---
+layout: default
 routeAlias: s53cmd1
-title: "Starter shortcuts · 1/3"
+title: "Informal shortcuts · visual study materials"
 ---
 
 <DeckSlide id="S53CMD1" />
@@ -144,7 +168,7 @@ title: "Starter shortcuts · 1/3"
 ---
 layout: default
 routeAlias: s53cmd2
-title: "Starter shortcuts · 2/3"
+title: "Informal shortcuts · explanations and review"
 ---
 
 <DeckSlide id="S53CMD2" />
@@ -152,7 +176,7 @@ title: "Starter shortcuts · 2/3"
 ---
 layout: default
 routeAlias: s53cmd3
-title: "Starter shortcuts · 3/3"
+title: "Informal shortcuts · practice and planning"
 ---
 
 <DeckSlide id="S53CMD3" />
@@ -160,7 +184,7 @@ title: "Starter shortcuts · 3/3"
 ---
 layout: default
 routeAlias: s53cmd4
-title: "Maps, diagrams and visual representations"
+title: "Informal shortcuts · maps and diagrams"
 ---
 
 <DeckSlide id="S53CMD4" />
@@ -168,7 +192,7 @@ title: "Maps, diagrams and visual representations"
 ---
 layout: default
 routeAlias: s53cmd5
-title: "Memory and revision"
+title: "Informal shortcuts · memory and revision"
 ---
 
 <DeckSlide id="S53CMD5" />
@@ -176,7 +200,7 @@ title: "Memory and revision"
 ---
 layout: default
 routeAlias: s53cmd6
-title: "Games and interactive exercises"
+title: "Informal shortcuts · games and exercises"
 ---
 
 <DeckSlide id="S53CMD6" />
@@ -184,7 +208,7 @@ title: "Games and interactive exercises"
 ---
 layout: default
 routeAlias: s53cmd7
-title: "Understanding and deeper learning"
+title: "Informal shortcuts · deeper learning"
 ---
 
 <DeckSlide id="S53CMD7" />
@@ -192,10 +216,138 @@ title: "Understanding and deeper learning"
 ---
 layout: default
 routeAlias: s53cmd8
-title: "Shortcuts for teachers"
+title: "Informal shortcuts for teachers"
 ---
 
 <DeckSlide id="S53CMD8" />
+
+---
+layout: default
+routeAlias: s53ex1
+title: "/eli5 · Causal attention in plain language"
+---
+
+<DeckSlide id="S53EX1" />
+
+---
+layout: default
+routeAlias: s53ex2
+title: "/mindmap · How a model generates text"
+---
+
+<DeckSlide id="S53EX2" />
+
+---
+layout: default
+routeAlias: s53ex3
+title: "/flashcard · Three distinctions to remember"
+---
+
+<DeckSlide id="S53EX3" />
+
+---
+layout: default
+routeAlias: s53ex4
+title: "/quiz · Check understanding of temperature"
+---
+
+<DeckSlide id="S53EX4" />
+
+---
+layout: default
+routeAlias: s53ex5
+title: "/commonwrong · Correct two misconceptions"
+---
+
+<DeckSlide id="S53EX5" />
+
+---
+layout: default
+routeAlias: s53ex6
+title: "/rubric · Assess the chapter assignment"
+---
+
+<DeckSlide id="S53EX6" />
+
+---
+layout: default
+routeAlias: s53skills
+title: "Agent Skills: reusable workflows"
+---
+
+<DeckSlide id="S53SKILLS" />
+
+---
+layout: default
+routeAlias: s53skillhosts
+title: "Where skills can run"
+---
+
+<DeckSlide id="S53SKILLHOSTS" />
+
+---
+layout: default
+routeAlias: s53skilldocs
+title: "Skills for study materials"
+---
+
+<DeckSlide id="S53SKILLDOCS" />
+
+---
+layout: default
+routeAlias: s53skillresearch
+title: "Skills for research and evidence"
+---
+
+<DeckSlide id="S53SKILLRESEARCH" />
+
+---
+layout: default
+routeAlias: s53skillbuild
+title: "Skills for interactive learning"
+---
+
+<DeckSlide id="S53SKILLBUILD" />
+
+---
+layout: default
+routeAlias: s53skillinstall
+title: "Find, inspect, install"
+---
+
+<DeckSlide id="S53SKILLINSTALL" />
+
+---
+layout: default
+routeAlias: s53skillevidence
+title: "Do skills improve results?"
+---
+
+<DeckSlide id="S53SKILLEVIDENCE" />
+
+---
+layout: default
+routeAlias: s53skillchoose
+title: "Choose a skill by the task"
+---
+
+<DeckSlide id="S53SKILLCHOOSE" />
+
+---
+layout: default
+routeAlias: s53skillbook
+title: "A skill workflow for the assigned book"
+---
+
+<DeckSlide id="S53SKILLBOOK" />
+
+---
+layout: default
+routeAlias: s53skillresources
+title: "Skill sources and installation guide"
+---
+
+<DeckSlide id="S53SKILLRESOURCES" />
 
 ---
 layout: default

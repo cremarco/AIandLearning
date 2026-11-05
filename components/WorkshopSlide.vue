@@ -8,6 +8,9 @@ import AnimatedBook from './AnimatedBook.vue'
 import SlideAudience from './SlideAudience.vue'
 import ChatGPTIntro from './ChatGPTIntro.vue'
 import PromptCommandTables from './PromptCommandTables.vue'
+import FormalCommandResults from './FormalCommandResults.vue'
+import PromptBlock from './PromptBlock.vue'
+import SkillCatalogue from './SkillCatalogue.vue'
 import { assetUrl as asset } from '../utils/assets'
 import type { Slide } from '../utils/deck'
 const props = defineProps<{ slide: Slide }>()
@@ -29,7 +32,9 @@ const lucaReaction = ref<InstanceType<typeof LucaReaction>>()
     <p v-if="s.message && s.kind !== 'chatgpt-intro'" class="workshop-lead"><EmphasisText :text="s.message" /></p>
     <div class="workshop-stage">
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
-      <PromptCommandTables v-else-if="s.kind === 'prompt-commands'" :commands="s.commands || []" />
+      <FormalCommandResults v-else-if="s.commandCategory === 'formal-web' && s.commands?.some(command => command.result)" :commands="s.commands || []" />
+      <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" />
+      <PromptCommandTables v-else-if="s.kind === 'prompt-commands'" :commands="s.commands || []" :category="s.commandCategory" />
       <template v-else-if="s.character">
         <div class="workshop-copy"><div class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div></div>
         <LucaReaction ref="lucaReaction" :character="s.character" :slide-number="s.number" />
@@ -61,14 +66,14 @@ const lucaReaction = ref<InstanceType<typeof LucaReaction>>()
           <AnimatedBook v-if="s.book" :book="s.book" :slide-number="s.number" />
           <video v-else-if="s.media.type==='video'" controls preload="none" :poster="asset(s.media.poster)" :aria-label="s.media.alt" @click.stop>
             <source :src="asset(s.media.src)" :type="s.media.src.endsWith('webm') ? 'video/webm' : 'video/mp4'" />
-            <track kind="captions" srclang="en" label="English" :src="asset(s.media.captions)" default />
+            <track kind="captions" srclang="en" label="English" :src="asset(s.media.captions)" :default="s.media.captionsDefault !== false" />
           </video>
           <img v-else :src="asset(s.media.src)" :alt="s.media.alt" :style="s.media.fit ? {objectFit:s.media.fit} : undefined" />
           <img v-if="s.media.type==='video'" class="video-print-poster" :src="asset(s.media.poster)" :alt="s.media.alt" />
           <figcaption v-if="s.media.caption || s.media.source">{{ s.media.caption }}<a v-if="s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener"> Source</a></figcaption>
         </figure>
         <div class="workshop-copy">
-          <blockquote v-if="s.prompt" class="workshop-prompt"><span class="prompt-label">{{ s.promptLabel || 'Prompt to copy' }}</span><p>{{ s.prompt }}</p></blockquote>
+          <PromptBlock v-if="s.prompt" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
           <div v-if="s.comparison?.length" class="comparison" :class="{three:s.comparison.length===3}">
             <section v-for="(item,i) in s.comparison" :key="i"><SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline /><h2><EmphasisText :text="item.label" /></h2><p><EmphasisText :text="item.text" /></p></section>
           </div>

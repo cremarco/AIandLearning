@@ -1,8 +1,10 @@
 # Beyond prompting
 
-Slidev presentation by Marco Cremaschi for three November 2026 events in Lithuania. One sequence of 96 slides follows Andrea, a fictional computer science student, from an assigned generative AI chapter to an independent explanation and a teacher’s assessment. There are no presenter notes or event-specific routes.
+Slidev presentation by Marco Cremaschi for three November 2026 events in Lithuania. One sequence of 115 slides follows Andrea, a fictional computer science student, from an assigned generative AI chapter to an independent explanation and a teacher’s assessment. There are no presenter notes or event-specific routes.
 
 The deck uses Vue, Tailwind CSS and daisyUI. It retains the interactive book, particle wave, learning maps, videos, tool links and accessible reading materials. Event details are in [brief-workshop.md](brief-workshop.md).
+
+The formal web-action slide includes selectable original interface captures and the verbatim Study response. Opening a panel is distinguished from completing its action. Dictation and desktop commands have no claimed execution; the local desktop app could not be controlled for this recording.
 
 ## Run and edit
 
@@ -74,3 +76,5 @@ node public/materials/demo-genai/serve.mjs
 Open `http://127.0.0.1:4176/`. The approximately 786 MB model stays in one ignored local directory. After preparation, CPU/WASM inference works offline; WebGPU is optional. The English recording, captions, transcript and measured results remain usable without loading the model. See the app’s [README](public/materials/demo-genai/README.md).
 
 The distributed application was implemented with Codex. The Claude slide provides a reproducible assignment prompt; it does not claim a fabricated Claude execution. Maps, student responses and classroom assessments are constructed teaching examples unless explicitly identified as real recorded executions. Tool conditions can change; product documentation and educational evidence remain distinct in the source index.
+
+The Agent Skills section adds 12 publisher-documented skills across document work, research and interactive teaching. `data/skills-research.json` records requirements, licensing, proposed book-related prompts and dated discovery signals. These skills were source-reviewed, not installed or executed for the survey. The generated `public/materials/skills-guide.html` includes installation routes and version-pinned benchmark references. Prompt blocks use daisyUI `mockup-code` in both the deck and reading materials.

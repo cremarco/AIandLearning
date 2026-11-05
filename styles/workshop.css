@@ -14,7 +14,7 @@
 .slidev-layout .workshop-body { display:flex; flex-direction:column; gap:18px; }
 .slidev-layout .workshop-body p { font-size:25px; line-height:1.36; }
 .slidev-layout .workshop-content h2 { font-size:27px; line-height:1.15; font-weight:700; }
-.slidev-layout .workshop-content .workshop-prompt { padding:22px 26px; background:var(--tool-prompt,var(--deck-surface)); border:1px solid var(--deck-line); border-radius:12px; font-size:25px; }
+.slidev-layout .workshop-content .workshop-prompt { font-size:22px; }
 .prompt-label { display:block; color:var(--deck-muted); font-size:17px; margin-bottom:10px; font-weight:650; }
 .slidev-layout .workshop-content .procedure-list { display:flex; flex-direction:column; gap:23px; padding:0; list-style:none; }
 .slidev-layout .procedure-list li { display:flex; gap:20px; margin:0; padding:0; }
@@ -36,7 +36,6 @@
 .slidev-layout .has-media .workshop-copy :where(p) { font-size:23px; }
 .slidev-layout .has-media .workshop-copy h2 { font-size:25px; }
 .has-media .procedure-list { gap:18px; }
-.slidev-layout .has-media .workshop-prompt { padding:16px 18px; }
 .workshop-links { display:flex; flex-wrap:wrap; gap:12px; }
 .kind-access .workshop-stage { gap:72px; }
 .kind-access .workshop-media { order:1; width:38%; }
@@ -83,7 +82,21 @@
 .softmax-formula math {font-size:49px;color:var(--deck-cyan);}
 .slidev-layout .softmax-formula p {font-size:25px;text-align:center;line-height:1.35;}
 .kind-formula .procedure-list {flex:1;}
-.workshop-prompt p {white-space:pre-line;overflow-wrap:anywhere;}
+.kind-shortcut-example .workshop-stage { align-items:flex-start; padding-top:12px; }
+.kind-shortcut-example .workshop-copy { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr); gap:48px; align-items:start; }
+.slidev-layout .kind-shortcut-example .workshop-prompt { font-size:20px; }
+.slidev-layout .kind-shortcut-example .prompt-label { margin-bottom:18px; font-size:21px; color:var(--deck-cyan); }
+.kind-shortcut-example .workshop-result { border-top:0; padding-top:0; gap:18px; }
+.slidev-layout .kind-shortcut-example .workshop-result h2 { font-size:21px; color:var(--deck-cyan); }
+.slidev-layout .kind-shortcut-example .workshop-result p { white-space:pre-line; font-size:22px; line-height:1.25; }
+.slidev-layout .kind-shortcut-example .workshop-decision { font-size:21px; }
+.kind-shortcut-example.has-media .workshop-copy { display:flex; }
+.kind-shortcut-example.has-media .workshop-media { order:1; width:60%; --media-paper:var(--deck-paper); }
+.kind-shortcut-example.has-media .workshop-media video,.kind-shortcut-example.has-media .workshop-media .video-print-poster { max-height:372px; }
+.slide-S53EX4 .workshop-copy,.slide-S53EX6 .workshop-copy { grid-template-columns:minmax(0,.65fr) minmax(0,1.5fr); gap:40px; }
+.slide-S53EX6 .workshop-copy { grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr); }
+.slidev-layout :is(.slide-S53EX4,.slide-S53EX6) .workshop-prompt { font-size:18px; }
+.slidev-layout .slide-S53EX6 .workshop-result p { font-size:21px; line-height:1.25; }
 .video-print-poster {display:none!important;}
 @media print {.workshop-media .video-print-poster {display:block!important;}}
 .kind-book { display:grid; grid-template-columns:minmax(0, 430px) minmax(0, 1fr); grid-template-rows:auto auto minmax(0, 1fr); gap:20px 48px; }

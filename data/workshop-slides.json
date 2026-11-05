@@ -243,21 +243,228 @@
   {
     "type": "workshop",
     "section": "chatgpt",
+    "audience": "both",
+    "lang": "en",
+    "body": [],
+    "id": "S53TYPES",
+    "kind": "command-classification",
+    "stage": "ChatGPT · formal and informal",
+    "title": "Formal commands and informal shortcuts",
+    "message": "The interface recognises an action; a prompt describes a task.",
+    "sources": [
+      "CHATGPT_WEB_COMMANDS",
+      "CHATGPT_PROMPTING",
+      "CHATGPT_MENU_AUDIT"
+    ],
+    "comparison": [
+      {
+        "label": "Formal · interface action",
+        "text": "An action offered by the app’s command menu. Select it to invoke the supported behaviour. Available actions depend on the app, account and enabled features."
+      },
+      {
+        "label": "Informal · prompt label",
+        "text": "A label such as /flashcard or /eli5 included in a message. Explain the task and output in ordinary language. The label alone does not establish a built-in command or a guaranteed format."
+      }
+    ],
+    "decision": "In the checked ChatGPT web session, none of the 79 catalogue labels appeared in the / menu."
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "audience": "both",
+    "lang": "en",
+    "body": [],
+    "id": "S53FORMALWEB",
+    "kind": "prompt-commands",
+    "commandCategory": "formal-web",
+    "stage": "ChatGPT · formal web actions",
+    "title": "Formal actions · ChatGPT web",
+    "message": "Select an action to inspect its real ChatGPT result or execution status",
+    "sources": [
+      "CHATGPT_WEB_COMMANDS",
+      "CHATGPT_FORMAL_RUN",
+      "CHATGPT_MENU_AUDIT"
+    ],
+    "commands": [
+      {
+        "command": "Study",
+        "description": "Open the guided learning action",
+        "result": {
+          "label": "Actual ChatGPT response",
+          "instruction": "Using only the attached book, help me understand why adding text to context does not update model parameters. Ask me one short question at a time and wait for my answer. Answer in English.",
+          "text": "Let's work through this using Section 1.2: Data, Parameters and Training of your book.\nThe book distinguishes between training, which changes model parameters, and inference, which uses the parameters already available.\nQuestion 1:\nIf you add the sentence “In this chapter, X means Y” to a prompt, what do you think changes: the model's parameters or the information available in its context?\nExplain briefly in your own words.",
+          "caption": "Study selected in the native / menu; verbatim response to the uploaded book.",
+          "status": "executed",
+          "inputCapture": "materials/chatgpt-formal/web-study-input.jpg",
+          "media": {
+            "src": "materials/chatgpt-formal/web-study-result.jpg",
+            "type": "image",
+            "alt": "Let's work through this using Section 1.2: Data, Parameters and Training of your book.\n\nThe book distinguishes between training, which changes model parameters, and inference, which uses the parameters already available.\n\nQuestion 1:\n\nIf you add the sentence “In this chapter, X means Y” to a prompt, what do you think changes: the model's parameters or the information available in its context?\n\nExplain briefly in your own words.",
+            "caption": "Study selected in the native / menu; verbatim response to the uploaded book."
+          }
+        }
+      },
+      {
+        "command": "Model",
+        "description": "Open the model selector",
+        "result": {
+          "label": "Actual selector",
+          "instruction": "Select Model from the native / menu.",
+          "caption": "The selector opened. The selected option was left unchanged.",
+          "status": "opened",
+          "media": {
+            "src": "materials/chatgpt-formal/web-model.jpg",
+            "type": "image",
+            "alt": "The native selector opened with Immediato, Medio, Alto, Molto alto and Pro. No option was changed.",
+            "caption": "The selector opened. The selected option was left unchanged."
+          }
+        }
+      },
+      {
+        "command": "Read aloud",
+        "description": "Listen to the latest response",
+        "result": {
+          "label": "Actual playback state",
+          "instruction": "Select Read aloud from the / menu for the latest response.",
+          "caption": "Playback activated, then stopped. The highlighted stop control is captured; no audio recording is included.",
+          "status": "executed",
+          "media": {
+            "src": "materials/chatgpt-formal/web-read-aloud.jpg",
+            "type": "image",
+            "alt": "Native read-aloud playback started for the actual Study response. The control changed to “Interrompi lettura ad alta voce”. Playback was then stopped. The screenshot does not contain an audio recording.",
+            "caption": "Playback activated, then stopped. The highlighted stop control is captured; no audio recording is included."
+          }
+        }
+      },
+      {
+        "command": "Dictate",
+        "description": "Convert speech to text",
+        "result": {
+          "label": "Native control · not executed",
+          "instruction": "Dictation needs microphone access and spoken input.",
+          "caption": "The actual Dictate control is shown. No speech was recorded and no transcription is claimed.",
+          "status": "not-executed",
+          "media": {
+            "src": "materials/chatgpt-formal/web-dictate-control.jpg",
+            "type": "image",
+            "alt": "The native Dictate control is present. No voice was recorded; no transcription result is claimed.",
+            "caption": "The actual Dictate control is shown. No speech was recorded and no transcription is claimed."
+          }
+        }
+      },
+      {
+        "command": "Move to a project",
+        "description": "Organise the chat in a project",
+        "result": {
+          "label": "Actual project picker",
+          "instruction": "Select Move to a project from the native / menu.",
+          "caption": "The account’s project picker opened. The conversation was not moved.",
+          "status": "opened",
+          "media": {
+            "src": "materials/chatgpt-formal/web-project-picker.jpg",
+            "type": "image",
+            "alt": "The project picker listed the account’s existing projects. No project was selected and the chat was not moved.",
+            "caption": "The account’s project picker opened. The conversation was not moved."
+          }
+        }
+      },
+      {
+        "command": "Custom GPT",
+        "description": "Start a chat with a custom GPT",
+        "result": {
+          "label": "Actual empty state",
+          "instruction": "Select Custom GPT from the native / menu.",
+          "caption": "The account returned “Ancora nessun GPT” (no GPTs yet). No custom GPT was started.",
+          "status": "opened",
+          "media": {
+            "src": "materials/chatgpt-formal/web-custom-gpt.jpg",
+            "type": "image",
+            "alt": "The actual custom-GPT picker opened and displayed “Ancora nessun GPT” (no GPTs yet). No GPT was started.",
+            "caption": "The account returned “Ancora nessun GPT” (no GPTs yet). No custom GPT was started."
+          }
+        }
+      },
+      {
+        "command": "Feedback",
+        "description": "Send feedback about the chat",
+        "result": {
+          "label": "Actual feedback form",
+          "instruction": "Select Feedback from the native / menu.",
+          "caption": "The real form opened with an empty required field. No feedback was submitted.",
+          "status": "opened",
+          "media": {
+            "src": "materials/chatgpt-formal/web-feedback.jpg",
+            "type": "image",
+            "alt": "The real feedback dialog opened with categories and a required details field. Nothing was submitted.",
+            "caption": "The real form opened with an empty required field. No feedback was submitted."
+          }
+        }
+      }
+    ],
+    "decision": "Original interface captures · Italian UI · dictation was not executed."
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "audience": "both",
+    "lang": "en",
+    "body": [],
+    "id": "S53FORMALAPP",
+    "kind": "prompt-commands",
+    "commandCategory": "formal-desktop",
+    "stage": "ChatGPT · formal desktop commands",
+    "title": "Formal slash commands · desktop app",
+    "message": "Official reference · desktop execution not captured in this session",
+    "sources": [
+      "CHATGPT_DESKTOP_COMMANDS"
+    ],
+    "commands": [
+      {
+        "command": "/new",
+        "description": "Start a blank chat in the same local workspace, when available"
+      },
+      {
+        "command": "/model",
+        "description": "Choose the model for the current chat"
+      },
+      {
+        "command": "/reasoning",
+        "description": "Choose the reasoning effort"
+      },
+      {
+        "command": "/status",
+        "description": "Show chat ID, context usage and rate limits"
+      },
+      {
+        "command": "/rename",
+        "description": "Rename the current chat"
+      },
+      {
+        "command": "/archive",
+        "description": "Archive the current chat"
+      }
+    ],
+    "decision": "Documentation reference only: these desktop commands have no recorded execution here."
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD1",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 1/8",
-    "title": "Starter shortcuts · 1/3",
+    "stage": "ChatGPT · informal prompt catalogue · 1/8",
+    "title": "Informal shortcuts · visual study materials",
     "message": "Maps and visual study materials",
     "commands": [
       {
         "command": "/mindmap",
-        "description": "Visual mind map"
+        "description": "Mind map; specify text, diagram or image"
       },
       {
         "command": "/flashcard",
@@ -292,21 +499,23 @@
         "description": "Diagram comparing concepts"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD2",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 2/8",
-    "title": "Starter shortcuts · 2/3",
+    "stage": "ChatGPT · informal prompt catalogue · 2/8",
+    "title": "Informal shortcuts · explanations and review",
     "message": "Explain, summarise and check understanding",
     "commands": [
       {
@@ -327,7 +536,7 @@
       },
       {
         "command": "/feynman",
-        "description": "Check understanding by explaining a concept"
+        "description": "Explain a concept yourself, then request feedback"
       },
       {
         "command": "/analogy",
@@ -339,24 +548,26 @@
       },
       {
         "command": "/quiz",
-        "description": "Interactive quiz"
+        "description": "Quiz questions; specify the interaction"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD3",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 3/8",
-    "title": "Starter shortcuts · 3/3",
+    "stage": "ChatGPT · informal prompt catalogue · 3/8",
+    "title": "Informal shortcuts · practice and planning",
     "message": "Exams, active recall and study organisation",
     "commands": [
       {
@@ -377,7 +588,7 @@
       },
       {
         "command": "/spacedrepetition",
-        "description": "Spaced revision plan"
+        "description": "Plan for revision across several sessions"
       },
       {
         "command": "/studyplan",
@@ -385,28 +596,30 @@
       },
       {
         "command": "/pomodoro",
-        "description": "Structured study sessions"
+        "description": "Plan for timed study sessions"
       },
       {
         "command": "/checklist",
         "description": "Checklist of topics to master"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD4",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 4/8",
-    "title": "Maps, diagrams and visual representations",
+    "stage": "ChatGPT · informal prompt catalogue · 4/8",
+    "title": "Informal shortcuts · maps and diagrams",
     "message": "More ways to represent a topic",
     "commands": [
       {
@@ -458,21 +671,23 @@
         "description": "Illustrated diagram with labels"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD5",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 5/8",
-    "title": "Memory and revision",
+    "stage": "ChatGPT · informal prompt catalogue · 5/8",
+    "title": "Informal shortcuts · memory and revision",
     "message": "Associations, summaries and gaps to address",
     "commands": [
       {
@@ -516,21 +731,23 @@
         "description": "Record of mistakes to revisit"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD6",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 6/8",
-    "title": "Games and interactive exercises",
+    "stage": "ChatGPT · informal prompt catalogue · 6/8",
+    "title": "Informal shortcuts · games and exercises",
     "message": "Activities in chat; clickable versions depend on the tools available",
     "commands": [
       {
@@ -567,28 +784,30 @@
       },
       {
         "command": "/conceptquiz",
-        "description": "Adaptive quiz on concepts"
+        "description": "Concept questions; specify difficulty and feedback"
       },
       {
         "command": "/languagedrill",
         "description": "Interactive language exercises"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "both",
     "lang": "en",
     "id": "S53CMD7",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 7/8",
-    "title": "Understanding and deeper learning",
+    "stage": "ChatGPT · informal prompt catalogue · 7/8",
+    "title": "Informal shortcuts · deeper learning",
     "message": "Examples, questions and connections to build understanding",
     "commands": [
       {
@@ -632,21 +851,23 @@
         "description": "Critical analysis of a source"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
   },
   {
     "type": "workshop",
     "section": "chatgpt",
     "body": [],
     "sources": [
+      "CHATGPT_PROMPTING",
       "CHATGPT_CATALOGUE"
     ],
     "audience": "teacher",
     "lang": "en",
     "id": "S53CMD8",
     "kind": "prompt-commands",
-    "stage": "ChatGPT · prompt catalogue · 8/8",
-    "title": "Shortcuts for teachers",
+    "stage": "ChatGPT · informal prompt catalogue · 8/8",
+    "title": "Informal shortcuts for teachers",
     "message": "From lesson planning to assessment",
     "commands": [
       {
@@ -698,7 +919,428 @@
         "description": "Learning station activities"
       }
     ],
-    "decision": "Informal shortcuts: add the topic, learner level and instructions for the output."
+    "decision": "Informal prompt labels: state the task, source and output format in ordinary language.",
+    "commandCategory": "informal"
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "kind": "shortcut-example",
+    "stage": "ChatGPT · informal shortcuts applied to the book",
+    "lang": "en",
+    "body": [],
+    "sources": [
+      "BOOK_CHAPTER",
+      "CHATGPT_BOOK_RUN",
+      "CHATGPT_CATALOGUE"
+    ],
+    "promptLabel": "Prompt · informal shortcut",
+    "resultLabel": "Actual ChatGPT response",
+    "id": "S53EX1",
+    "title": "/eli5 · Causal attention in plain language",
+    "message": "Book §5 · The Transformer decoder",
+    "prompt": "/eli5 Using only §5 of the attached book, explain causal attention to a 15-year-old in no more than 80 words. Explain which tokens a position can use, why future tokens are blocked and what happens after a token is generated. Keep the technical meaning. Answer in English.",
+    "result": "Causal attention is a mechanism that helps a Transformer language model predict the next token (a piece of text).\nEach position can use information from earlier tokens and itself, but not from later positions. A causal mask blocks future tokens so the model cannot use information that should not yet be available.\nOnce a new token is generated, it is added to the sequence. The model can then use it to predict the next token, repeating the process.",
+    "decision": "Use it to simplify an explanation while preserving the causal constraint.",
+    "audience": "student"
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "kind": "shortcut-example",
+    "stage": "ChatGPT · informal shortcuts applied to the book",
+    "lang": "en",
+    "body": [],
+    "sources": [
+      "BOOK_CHAPTER",
+      "CHATGPT_BOOK_RUN",
+      "CHATGPT_CATALOGUE"
+    ],
+    "promptLabel": "Prompt · informal shortcut",
+    "resultLabel": "Actual ChatGPT response",
+    "id": "S53EX2",
+    "title": "/mindmap · How a model generates text",
+    "message": "Book §§2–7 · A text map with named relationships",
+    "prompt": "/mindmap Using only §§2–7 of the attached book, create a text mind map centred on “Text generation”. Use five branches and label each relationship. Include tokens, decoder blocks, probabilities, generation and training. Distinguish parameter updates from ordinary inference. Answer in English. Keep the complete response within 100 words.",
+    "result": "TEXT GENERATION\nText generation\n1. Tokens — are converted into numerical IDs, then embeddings with positional information.\n2. Decoder blocks — transform representations using causal attention, allowing access only to current and earlier positions.\n3. Probabilities — are calculated from logits through softmax; temperature changes their concentration.\n4. Generation — selects and appends one token, then repeats inference until stopping.\n5. Training — updates parameters to reduce prediction error; ordinary inference uses fixed parameters without updating them.",
+    "decision": "Use it to organise the chapter; explain each link without looking at the map.",
+    "audience": "student"
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "kind": "shortcut-example",
+    "stage": "ChatGPT · informal shortcuts applied to the book",
+    "lang": "en",
+    "body": [],
+    "sources": [
+      "BOOK_CHAPTER",
+      "CHATGPT_BOOK_RUN",
+      "CHATGPT_CATALOGUE"
+    ],
+    "promptLabel": "Prompt · informal shortcut",
+    "resultLabel": "Actual ChatGPT response",
+    "id": "S53EX3",
+    "title": "/flashcard · Three distinctions to remember",
+    "message": "Book §§2, 3 and 6 · Recall before checking the answer",
+    "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
+    "result": "",
+    "decision": "Answer the question before revealing the card; compare with the chapter.",
+    "audience": "student"
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "kind": "shortcut-example",
+    "stage": "ChatGPT · informal shortcuts applied to the book",
+    "lang": "en",
+    "body": [],
+    "sources": [
+      "BOOK_CHAPTER",
+      "CHATGPT_BOOK_RUN",
+      "CHATGPT_CATALOGUE"
+    ],
+    "promptLabel": "Prompt · informal shortcut",
+    "resultLabel": "Actual ChatGPT response",
+    "id": "S53EX4",
+    "title": "/quiz · Check understanding of temperature",
+    "message": "Book §6 · Probabilities and temperature",
+    "prompt": "/quiz Using only §6 of the attached book, write three short questions about temperature at fixed logits. Test concentration, ranking and truth. Put a numbered answer key after the questions, with a brief reason for each answer. Answer in English. Keep the complete response within 100 words.",
+    "result": "Quiz: Temperature at Fixed Logits\n1. Concentration: What happens to the probability distribution when temperature increases?\n2. Ranking: Does increasing temperature change which token has the highest probability?\n3. Truth: Does lowering temperature make the generated answer necessarily more truthful?\nAnswer key\n1. Less concentrated. Higher temperature spreads probability more evenly across alternatives.\n2. No. At fixed logits, temperature changes probabilities but preserves their ranking.\n3. No. Temperature changes the probability distribution, not the model's knowledge or the truthfulness of its answers.",
+    "decision": "Use the answer key after an independent attempt; investigate the reason for each error.",
+    "audience": "student"
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "kind": "shortcut-example",
+    "stage": "ChatGPT · informal shortcuts applied to the book",
+    "lang": "en",
+    "body": [],
+    "sources": [
+      "BOOK_CHAPTER",
+      "CHATGPT_BOOK_RUN",
+      "CHATGPT_CATALOGUE"
+    ],
+    "promptLabel": "Prompt · informal shortcut",
+    "resultLabel": "Actual ChatGPT response",
+    "id": "S53EX5",
+    "title": "/commonwrong · Correct two misconceptions",
+    "message": "Book §§2, 6 and 8 · Find the error and explain the correction",
+    "prompt": "/commonwrong Using only §§2, 6 and 8 of the attached book, show two common misconceptions: uploading a book trains the model, and lowering temperature removes hallucinations. For each, give the wrong claim and a correction with its reason. Answer in English. Keep the complete response within 100 words.",
+    "result": "1. Uploading a book trains the model\n Wrong claim: “Uploading a book updates the model’s parameters.”\n Correction: Uploading a book may provide information through context or retrieval. Only training or fine-tuning updates parameters; ordinary inference uses fixed parameters.\n2. Lowering temperature removes hallucinations\n Wrong claim: “Lower temperature guarantees accurate answers.”\n Correction: Lower temperature concentrates probabilities on more likely tokens. It does not verify truth or eliminate hallucinations. Deterministic selection may repeatedly produce the same mistake.",
+    "decision": "Use it to diagnose a misconception; ask the learner to justify the correction.",
+    "audience": "both"
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "kind": "shortcut-example",
+    "stage": "ChatGPT · informal shortcuts applied to the book",
+    "lang": "en",
+    "body": [],
+    "sources": [
+      "BOOK_CHAPTER",
+      "CHATGPT_BOOK_RUN",
+      "CHATGPT_CATALOGUE"
+    ],
+    "promptLabel": "Prompt · informal shortcut",
+    "resultLabel": "Actual ChatGPT response",
+    "id": "S53EX6",
+    "title": "/rubric · Assess the chapter assignment",
+    "message": "Book §§9–10 · Evidence of the learner’s understanding",
+    "prompt": "/rubric Using only §§9–10 of the attached book, create a 6-point formative rubric for Andrea’s assignment. Use three criteria worth 0–2 points each. Give a shared scoring scale and describe the evidence needed for full marks on each criterion. Assess understanding, not just working code. Answer in English. Keep the complete response within 100 words.",
+    "result": "Formative Rubric — 6 Points\nShared scale: 0 = absent/incorrect; 1 = partial understanding; 2 = complete, independently justified evidence.\nCriterion — Full marks (2 points)\n1. Conceptual understanding — Independently explain tokenization, probability calculation, sampling, and generation; connect functions to model behavior.\n2. Experimental reasoning — Record two controlled experiments, predict outcomes, change one variable, and interpret probability differences versus sampled outputs.\n3. Critical evaluation — Identify a code or conceptual error, explain its cause, and demonstrate a test revealing it.\nTotal: 6 points. Working code alone is insufficient; understanding requires independent explanation, prediction, interpretation, and verification.",
+    "decision": "Use the rubric for feedback, then ask for an independent explanation of one step.",
+    "audience": "teacher"
+  },
+  {
+    "id": "S53SKILLS",
+    "type": "workshop",
+    "kind": "skill-guide",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Agent Skills: reusable workflows",
+    "message": "A skill packages a method, resources and optional code for a compatible agent.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_STANDARD",
+      "SKILL_OPENAI"
+    ],
+    "comparison": [
+      {
+        "label": "Informal shortcut",
+        "text": "A label such as /eli5 asks for a style of response. Its meaning comes from the prompt."
+      },
+      {
+        "label": "Formal action",
+        "text": "A product feature exposed in its interface, such as Study. Availability depends on the surface."
+      },
+      {
+        "label": "Agent Skill",
+        "text": "A folder with SKILL.md, instructions and optional references, templates or scripts."
+      }
+    ],
+    "decision": "The host discovers a skill, loads its instructions and uses the tools it actually has."
+  },
+  {
+    "id": "S53SKILLHOSTS",
+    "type": "workshop",
+    "kind": "skill-guide",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Where skills can run",
+    "message": "Check the product and the runtime before choosing a skill.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_CHATGPT",
+      "SKILL_ANTHROPIC",
+      "SKILL_STANDARD"
+    ],
+    "comparison": [
+      {
+        "label": "ChatGPT",
+        "text": "Eligible Business, Enterprise, Healthcare and Edu accounts: Plugins → Skills. Workspace settings and availability apply."
+      },
+      {
+        "label": "Claude",
+        "text": "Anthropic publishes skills for Claude, including document workflows. Check each skill’s dependencies and terms."
+      },
+      {
+        "label": "Coding agents",
+        "text": "Codex and other compatible agents can load skill packages. Scripts may require Python, Node or network access."
+      }
+    ],
+    "decision": "A shared file format does not guarantee identical tools, installation or results."
+  },
+  {
+    "id": "S53SKILLDOCS",
+    "type": "workshop",
+    "kind": "skill-catalogue",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Skills for study materials",
+    "message": "Select a skill to inspect a concrete classroom use.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_ANTHROPIC",
+      "SKILL_PDF",
+      "SKILL_PPTX"
+    ],
+    "skillIds": [
+      "pdf",
+      "docx",
+      "pptx",
+      "xlsx"
+    ],
+    "decision": "Publisher instructions checked · prompts are examples; deliverables have not been generated."
+  },
+  {
+    "id": "S53SKILLRESEARCH",
+    "type": "workshop",
+    "kind": "skill-catalogue",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Skills for research and evidence",
+    "message": "K-Dense’s community workflows support different stages of research.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_KDENSE",
+      "SKILL_CITATION_MANAGEMENT",
+      "SKILL_LITERATURE_REVIEW"
+    ],
+    "skillIds": [
+      "citation-management",
+      "literature-review",
+      "scientific-writing",
+      "peer-review"
+    ],
+    "decision": "Source review confirms the workflow exists; it does not validate its scientific conclusions."
+  },
+  {
+    "id": "S53SKILLBUILD",
+    "type": "workshop",
+    "kind": "skill-catalogue",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Skills for interactive learning",
+    "message": "Build the activity, use documented UI, review it and package the routine.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_WEB_ARTIFACTS_BUILDER",
+      "SKILL_DAISYUI",
+      "SKILL_WEB_DESIGN_GUIDELINES"
+    ],
+    "skillIds": [
+      "web-artifacts-builder",
+      "daisyui",
+      "web-design-guidelines",
+      "skill-creator"
+    ],
+    "decision": "Choose the skill for the output you need, then test the finished activity."
+  },
+  {
+    "id": "S53SKILLINSTALL",
+    "type": "workshop",
+    "kind": "skill-guide",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Find, inspect, install",
+    "message": "Use the installation route provided by the host.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_CHATGPT",
+      "SKILL_CLI",
+      "SKILL_OLD_CATALOGUE"
+    ],
+    "steps": [
+      {
+        "title": "Find a candidate",
+        "text": "Start with the publisher’s repository or skills.sh. Read SKILL.md, dependencies and the license."
+      },
+      {
+        "title": "Use the right installation surface",
+        "text": "ChatGPT: Plugins → Skills, then install a shared skill or upload a package. Coding agents: use their plugin or skill installer."
+      },
+      {
+        "title": "Run one representative task",
+        "text": "Supply the input file and output criteria. Compare the result with the same task without the skill."
+      }
+    ],
+    "decision": "The old openai/skills catalogue is deprecated; current OpenAI examples are in openai/plugins.",
+    "links": [
+      {
+        "label": "Installation commands and all 12 skills",
+        "url": "./materials/skills-guide.html"
+      }
+    ]
+  },
+  {
+    "id": "S53SKILLEVIDENCE",
+    "type": "workshop",
+    "kind": "skill-evidence",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Do skills improve results?",
+    "message": "Two recent preprints show why the task and evaluation design matter.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_BENCH",
+      "SKILL_SWEBENCH"
+    ],
+    "comparison": [
+      {
+        "label": "SkillsBench · v4",
+        "text": "87 tasks · 8 domains · 18 model–harness configurations.\nAverage pass rate: 33.9% → 50.5% (+16.6 percentage points). Focused skill bundles performed better than exhaustive ones."
+      },
+      {
+        "label": "SWE-Skills-Bench · v2",
+        "text": "98 software-engineering skills · 4 agent–model configurations.\n92 had no statistically significant effect. Average pass ratio: 76.6% → 76.9% (+0.3 percentage points)."
+      }
+    ],
+    "decision": "Different tasks and baselines: these figures do not rank this catalogue or measure student learning."
+  },
+  {
+    "id": "S53SKILLCHOOSE",
+    "type": "workshop",
+    "kind": "skill-guide",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Choose a skill by the task",
+    "message": "Practical selection criteria derived from the documentation and benchmark findings.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_STANDARD",
+      "SKILL_BENCH",
+      "SKILL_SWEBENCH"
+    ],
+    "comparison": [
+      {
+        "label": "Strong candidate",
+        "text": "A narrow recurring task, a clear input and output, maintained dependencies and checks that match the deliverable."
+      },
+      {
+        "label": "Weak candidate",
+        "text": "Generic advice already supplied by the model, incompatible tools, changing external rules or long procedures unrelated to the task."
+      }
+    ],
+    "decision": "Compare factual errors, missing requirements, usable output and effort with and without the skill."
+  },
+  {
+    "id": "S53SKILLBOOK",
+    "type": "workshop",
+    "kind": "skill-guide",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "A skill workflow for the assigned book",
+    "message": "A proposed teaching workflow, to be checked before classroom use.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_PDF",
+      "SKILL_DOCX",
+      "EDU_BASTANI"
+    ],
+    "steps": [
+      {
+        "title": "Extract and check · pdf",
+        "text": "Read section 1.2. Preserve page references; check the definitions of context, parameters, training and inference."
+      },
+      {
+        "title": "Create materials · docx or pptx",
+        "text": "Use only the checked extract to prepare questions and a separate answer key. Keep source references with each claim."
+      },
+      {
+        "title": "Test learning independently",
+        "text": "Ask Andrea to explain the distinctions without the material. Use the response to revise the next study activity."
+      }
+    ],
+    "decision": "A polished file is an assisted product; independent explanation is the learning check."
+  },
+  {
+    "id": "S53SKILLRESOURCES",
+    "type": "workshop",
+    "kind": "references",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Skill sources and installation guide",
+    "message": "Publisher links, requirements, licenses and example requests for all 12 skills.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_DIRECTORY",
+      "SKILL_OPENAI",
+      "SKILL_BENCH"
+    ],
+    "references": [
+      {
+        "label": "Open format and hosts",
+        "citation": "Agent Skills specification; OpenAI Skills in ChatGPT and plugin documentation.",
+        "url": "https://agentskills.io/specification",
+        "display": "agentskills.io/specification"
+      },
+      {
+        "label": "Publisher catalogues",
+        "citation": "Anthropic Skills; K-Dense Scientific Agent Skills; daisyUI Skills; Vercel Agent Skills.",
+        "url": "./materials/skills-guide.html",
+        "display": "Open the annotated skill catalogue"
+      },
+      {
+        "label": "Evaluation research",
+        "citation": "SkillsBench v4 and SWE-Skills-Bench v2 (2026 preprints). Methods and limits are linked in the guide.",
+        "url": "./materials/skills-guide.html#evidence",
+        "display": "Open benchmark references"
+      }
+    ],
+    "decision": "Sources checked 5 November 2026 · examples are proposed uses, not recorded skill executions."
   },
   {
     "id": "S55",

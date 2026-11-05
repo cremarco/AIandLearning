@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { PromptCommand } from '../utils/deck'
-const props = defineProps<{ commands: PromptCommand[] }>()
+import type { CommandCategory, PromptCommand } from '../utils/deck'
+const props = withDefaults(defineProps<{ commands: PromptCommand[]; category?: CommandCategory }>(), { category: 'informal' })
+const labels = computed(() => props.category === 'formal-web'
+  ? { column: 'Menu action', description: 'What it does', table: 'Formal ChatGPT web actions' }
+  : props.category === 'formal-desktop'
+    ? { column: 'Official command', description: 'What it does', table: 'Formal desktop slash commands' }
+    : { column: 'Informal shortcut', description: 'What you can ask for', table: 'Informal prompt shortcuts' })
 const columns = computed(() => {
   const middle = Math.ceil(props.commands.length / 2)
   return [props.commands.slice(0, middle), props.commands.slice(middle)]
@@ -11,11 +16,11 @@ const columns = computed(() => {
 <template>
   <div class="command-tables grid grid-cols-1 md:grid-cols-2" lang="en">
     <div v-for="(rows, index) in columns" :key="index" class="overflow-x-auto">
-      <table class="table command-table" :aria-label="`Prompt shortcuts, part ${index + 1}`">
-        <thead><tr><th scope="col">Command</th><th scope="col">What you can ask for</th></tr></thead>
+      <table class="table command-table" :aria-label="`${labels.table}, part ${index + 1}`">
+        <thead><tr><th scope="col">{{ labels.column }}</th><th scope="col">{{ labels.description }}</th></tr></thead>
         <tbody>
           <tr v-for="row in rows" :key="row.command">
-            <th scope="row"><code>{{ row.command }}</code></th>
+            <th scope="row"><span v-if="category === 'formal-web'">{{ row.command }}</span><code v-else>{{ row.command }}</code></th>
             <td>{{ row.description }}</td>
           </tr>
         </tbody>

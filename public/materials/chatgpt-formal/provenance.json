@@ -1,0 +1,68 @@
+{
+  "recordedOn": "2026-11-05",
+  "sourceUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
+  "desktop": {
+    "status": "not-executed",
+    "reason": "Computer Use does not allow controlling com.openai.codex in this environment."
+  },
+  "actions": [
+    {
+      "action": "Study",
+      "status": "executed",
+      "prompt": "Using only the attached book, help me understand why adding text to context does not update model parameters. Ask me one short question at a time and wait for my answer. Answer in English.",
+      "result": "Let's work through this using Section 1.2: Data, Parameters and Training of your book.\n\nThe book distinguishes between training, which changes model parameters, and inference, which uses the parameters already available.\n\nQuestion 1:\n\nIf you add the sentence “In this chapter, X means Y” to a prompt, what do you think changes: the model's parameters or the information available in its context?\n\nExplain briefly in your own words.",
+      "inputCapture": "web-study-input.jpg",
+      "capture": "web-study-result.jpg",
+      "notes": "The Study action was selected from the native / menu. The composer contained the native Study pill before sending.",
+      "captureSha256": "8c16dde21694485c26f74156df7bc61a87a385283a3f9cd5c333dabff1e98c80"
+    },
+    {
+      "action": "Model",
+      "status": "opened",
+      "capture": "web-model.jpg",
+      "result": "The native selector opened with Immediato, Medio, Alto, Molto alto and Pro. No option was changed.",
+      "captureSha256": "8e1807d5dc7fc4bfc3690572b31c0a038b587476d479c49a00d18d651a6179aa"
+    },
+    {
+      "action": "Feedback",
+      "status": "opened-not-submitted",
+      "capture": "web-feedback.jpg",
+      "result": "The real feedback dialog opened with categories and a required details field. Nothing was submitted.",
+      "captureSha256": "3b7e1e92f2c40d9769010d1e139ffcf96143b91f8030d7e0aca987023ed7090d"
+    },
+    {
+      "action": "Move to a project",
+      "status": "opened-not-moved",
+      "capture": "web-project-picker.jpg",
+      "result": "The project picker listed the account’s existing projects. No project was selected and the chat was not moved.",
+      "captureSha256": "988c811b8252e423ffbfb05fbed5fc15e9f611d39c85f8d9076ed57d17e3d90b"
+    },
+    {
+      "action": "Custom GPT",
+      "status": "opened-empty",
+      "capture": "web-custom-gpt.jpg",
+      "result": "The actual custom-GPT picker opened and displayed “Ancora nessun GPT” (no GPTs yet). No GPT was started.",
+      "captureSha256": "40ab064001df173c5cee2bb682490a5698277a3cfdd4753a41ee8c61ad48b10b"
+    },
+    {
+      "action": "Dictate",
+      "status": "not-executed",
+      "capture": "web-dictate-control.jpg",
+      "result": "The native Dictate control is present. No voice was recorded; no transcription result is claimed.",
+      "reason": "A real transcription requires microphone access and spoken input.",
+      "captureSha256": "7c43f75a1f669038fd85b4eb82ea13a2309c7f5720176c631910bce5b4e072a1"
+    },
+    {
+      "action": "Read aloud",
+      "status": "executed",
+      "capture": "web-read-aloud.jpg",
+      "result": "Native read-aloud playback started for the actual Study response. The control changed to “Interrompi lettura ad alta voce”. Playback was then stopped. The screenshot does not contain an audio recording.",
+      "captureSha256": "776277152b555714dc129c4ddab74b55c37e629f97465a3ba1f02d5c6321f7f6"
+    }
+  ],
+  "book": {
+    "path": "public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981",
+    "uploadAuthorized": true
+  }
+}

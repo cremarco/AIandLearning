@@ -2,7 +2,16 @@ import slideData from '../data/slides.json'
 
 export type Audience = 'student' | 'teacher' | 'both'
 export type SlideCard = { title: string; body?: string; backgroundImage?: string }
-export type PromptCommand = { command: string; description: string }
+export type CommandResult = {
+  label: string
+  instruction: string
+  text?: string
+  media: SlideMedia
+  status: 'executed' | 'opened' | 'not-executed'
+  inputCapture?: string
+}
+export type PromptCommand = { command: string; description: string; result?: CommandResult }
+export type CommandCategory = 'formal-web' | 'formal-desktop' | 'informal'
 export type BookPreview = {
   cover: string
   sheets: { front: string; back: string }[]
@@ -17,6 +26,7 @@ export type SlideMedia = {
   type?: 'image' | 'video'
   poster?: string
   captions?: string
+  captionsDefault?: boolean
   fit?: 'contain' | 'cover'
   caption?: string
   source?: string
@@ -42,6 +52,8 @@ export type Slide = {
   book?: BookPreview
   character?: Character
   commands?: PromptCommand[]
+  commandCategory?: CommandCategory
+  skillIds?: string[]
   references?: Reference[]
   formula?: boolean
   diagram?: string

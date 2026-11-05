@@ -1,7 +1,25 @@
 BEYOND PROMPTING — STUDY, UNDERSTAND, ASSESS
 Marco Cremaschi · November 2026
-96 slides in one complete sequence. Participants observe the method; Andrea is a fictional student in a teaching scenario.
+115 slides in one complete sequence. Participants observe the method; Andrea is a fictional student in a teaching scenario.
 Public materials in English.
+
+S53EX1 · /eli5 · Causal attention in plain language
+/eli5 Using only §5 of the attached book, explain causal attention to a 15-year-old in no more than 80 words. Explain which tokens a position can use, why future tokens are blocked and what happens after a token is generated. Keep the technical meaning. Answer in English.
+
+S53EX2 · /mindmap · How a model generates text
+/mindmap Using only §§2–7 of the attached book, create a text mind map centred on “Text generation”. Use five branches and label each relationship. Include tokens, decoder blocks, probabilities, generation and training. Distinguish parameter updates from ordinary inference. Answer in English. Keep the complete response within 100 words.
+
+S53EX3 · /flashcard · Three distinctions to remember
+/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.
+
+S53EX4 · /quiz · Check understanding of temperature
+/quiz Using only §6 of the attached book, write three short questions about temperature at fixed logits. Test concentration, ranking and truth. Put a numbered answer key after the questions, with a brief reason for each answer. Answer in English. Keep the complete response within 100 words.
+
+S53EX5 · /commonwrong · Correct two misconceptions
+/commonwrong Using only §§2, 6 and 8 of the attached book, show two common misconceptions: uploading a book trains the model, and lowering temperature removes hallucinations. For each, give the wrong claim and a correction with its reason. Answer in English. Keep the complete response within 100 words.
+
+S53EX6 · /rubric · Assess the chapter assignment
+/rubric Using only §§9–10 of the attached book, create a 6-point formative rubric for Andrea’s assignment. Use three criteria worth 0–2 points each. Give a shared scoring scale and describe the evidence needed for full marks on each criterion. Assess understanding, not just working code. Answer in English. Keep the complete response within 100 words.
 
 S58 · Goblin.tools: a concrete goal
 Study the language-model chapter, distinguish training from inference, and prepare a diagram that I can explain.
@@ -35,3 +53,52 @@ Generate five chapter-based questions: distinction, explanation, diagram, predic
 
 S92 · Notebook: short segments and a glossary
 Rewrite this paragraph in three short segments. Define token, context and parameters. Preserve the condition “during inference” and flag each simplification. Do not remove essential relationships.
+
+SKILL EXAMPLE REQUESTS — NOT EXECUTED
+pdf · Anthropic · Claude / Claude Code
+Use the pdf skill to extract section 1.2 of the attached book. Preserve headings and page references; flag unreadable formulas.
+Expected deliverable: A checked text extract with page references and extraction warnings.
+
+docx · Anthropic · Claude / Claude Code
+Use the docx skill to turn the checked book extract into a two-page worksheet: glossary, three questions and a separate answer key.
+Expected deliverable: An editable .docx worksheet and answer key.
+
+pptx · Anthropic · Claude / Claude Code
+Use the pptx skill to make six slides from the checked book extract: context, parameters, training and inference. Cite source pages.
+Expected deliverable: An editable .pptx deck with source references.
+
+xlsx · Anthropic · Claude / Claude Code
+Use the xlsx skill to create a self-check tracker for the chapter: item, first answer, corrected answer and score. Use formulas for totals.
+Expected deliverable: An .xlsx tracker with editable entries and formula-based totals.
+
+citation-management · K-Dense · Skills-compatible research agents
+Use citation-management to verify the book’s cited attention and language-model papers. Return DOI/arXiv IDs and flag unmatched entries.
+Expected deliverable: A bibliography with verified metadata and unresolved entries marked.
+
+literature-review · K-Dense · Skills-compatible research agents
+Use literature-review to scope evidence on AI tutoring and independent learning. Record databases, search strings, screening decisions and limits.
+Expected deliverable: A reproducible search record and evidence table.
+
+scientific-writing · K-Dense · Skills-compatible research agents
+Use scientific-writing to revise my chapter summary. Link each technical claim to a checked book passage; mark missing evidence.
+Expected deliverable: A revised summary with a claim–evidence record.
+
+peer-review · K-Dense · Skills-compatible research agents
+Use peer-review to assess my public chapter summary for unsupported claims, training/inference confusion and missing limitations.
+Expected deliverable: A structured critique with locations and actionable revisions.
+
+web-artifacts-builder · Anthropic · Claude artifacts / Claude Code
+Use web-artifacts-builder to create a temperature quiz from the checked chapter: answer first, then reveal feedback and the source passage.
+Expected deliverable: A bundled HTML activity with state and feedback.
+
+daisyui · daisyUI · Codex, Claude Code and other coding agents
+Use the daisyUI skill to style the chapter quiz: accessible answer buttons, feedback and mockup-code blocks for the prompts.
+Expected deliverable: A UI implementation using documented daisyUI components.
+
+web-design-guidelines · Vercel · Codex, Claude Code and other coding agents
+Use web-design-guidelines to review the chapter quiz for keyboard access, focus, labels and feedback. Report findings with file and line.
+Expected deliverable: A list of code findings with locations.
+
+skill-creator · Anthropic · Claude / Claude Code
+Use skill-creator to draft a book-study routine: cite a page, ask one question, wait for my answer, then give feedback. Add test cases.
+Expected deliverable: A SKILL.md package plus representative evaluation cases.
