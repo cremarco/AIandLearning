@@ -2,15 +2,15 @@
 import { computed, provide } from 'vue'
 import { getSlide, slides } from '../utils/deck'
 import { imageUrl as image } from '../utils/assets'
-import highlights from '../data/highlights.json'
+import highlights from '../data/content/highlights.json'
 import { EMPHASIS_TERMS_KEY, type EmphasisTerm } from '../utils/emphasis'
-import EmphasisText from './EmphasisText.vue'
-import BentoCard from './BentoCard.vue'
-import SourceLine from './SourceLine.vue'
-import WhattadataCubes from './WhattadataCubes.vue'
-import SlideAudience from './SlideAudience.vue'
-import CoverBackground from './CoverBackground.vue'
-import WorkshopSlide from './WorkshopSlide.vue'
+import EmphasisText from './shared/EmphasisText.vue'
+import BentoCard from './shared/BentoCard.vue'
+import SourceLine from './shared/SourceLine.vue'
+import WhattadataCubes from './media/WhattadataCubes.vue'
+import SlideAudience from './shared/SlideAudience.vue'
+import CoverBackground from './media/CoverBackground.vue'
+import WorkshopSlide from './slides/WorkshopSlide.vue'
 
 const props = defineProps<{ id: string }>()
 provide(EMPHASIS_TERMS_KEY, computed(() => (highlights as Record<string, EmphasisTerm[]>)[props.id] || []))

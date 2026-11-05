@@ -1,4 +1,4 @@
-import {launchBrowser} from '../../scripts/browser.mjs';
+import {launchBrowser} from '../../scripts/lib/browser.mjs';
 import fs from 'node:fs';
 const url=process.argv[2]||'http://127.0.0.1:7140/lettura.html';
 const browser=await launchBrowser({headless:true});

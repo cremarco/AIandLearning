@@ -1,4 +1,4 @@
-import catalogue from '../data/chatgpt-videos.json'
+import catalogue from '../data/demos/chatgpt-videos.json'
 import type { SlideMedia } from './deck'
 
 export type ShortcutVideo = SlideMedia & {

@@ -1,4 +1,4 @@
-import brandData from '../data/tool-brands.json'
+import brandData from '../data/catalogues/tool-brands.json'
 import type { Slide } from './deck'
 
 export const toolBrands = brandData
@@ -36,6 +36,5 @@ export function brandsForSlide(slide: Slide): ToolBrandId[] {
   if (slide.tool === 'dictation') return ['apple', 'windows']
   if (slide.tool && slide.tool in toolBrands) return [slide.tool as ToolBrandId]
   if (slide.commands?.length || slide.kind === 'shortcut-example' || slide.id === 'S53TYPES') return ['chatgpt']
-  if (['S73', 'S76', 'S77', 'S78', 'S79'].includes(slide.id)) return ['huggingface', 'qwen']
   return []
 }

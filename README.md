@@ -2,9 +2,11 @@
 
 Slidev presentation by Marco Cremaschi for three November 2026 events in Lithuania. One continuous sequence follows Andrea, a fictional computer science student, from an assigned generative AI chapter to an independent explanation and a teacher’s assessment. There are no presenter notes or event-specific routes.
 
-The deck uses Vue, Tailwind CSS and daisyUI. It retains the interactive book, particle wave, videos, tool links and accessible reading materials. Event details are in [brief-workshop.md](brief-workshop.md).
+The deck uses Vue, Tailwind CSS and daisyUI. It retains the interactive book, particle wave, videos, tool links and accessible reading materials. Event details are in [docs/workshop-brief.md](docs/workshop-brief.md).
 
 The formal web-action slide includes selectable original interface captures and the verbatim Study response. Opening a panel is distinguished from completing its action. Dictation and desktop commands have no claimed execution; the local desktop app could not be controlled for this recording.
+
+The folder responsibilities and generation boundaries are documented in [Project structure](docs/architecture.md).
 
 ## Run and edit
 
@@ -22,22 +24,22 @@ Edit the authoring sources, then regenerate:
 
 | Location | Purpose |
 | --- | --- |
-| `data/opening-slides.json`, `data/workshop-slides.json` | Slide content and order |
-| `data/opening-sources.json`, `data/workshop-sources.json` | Citation records |
-| `data/media.json`, `data/editorial-overrides.json` | Workshop media and content refinements |
-| `data/highlights.json` | Terms highlighted in the slides |
-| `components/`, `utils/`, `styles/` | Typed Vue rendering, shared behavior and daisyUI theme |
+| `data/content/opening-slides.json`, `data/content/workshop-slides.json` | Slide content and order |
+| `data/references/opening-sources.json`, `data/references/workshop-sources.json` | Citation records |
+| `data/content/media.json`, `data/content/editorial-overrides.json` | Workshop media and content refinements |
+| `data/content/highlights.json` | Terms highlighted in the slides |
+| `components/`, `composables/`, `utils/`, `styles/` | Typed Vue rendering, shared behavior and daisyUI theme |
 | `public/images/`, `public/icons/` | Referenced presentation images and icons only |
 | `assets/illustrations/` | Authoring originals and image provenance, excluded from the website |
 | `booklet-genai/` | Shared textbook content, Typst source and reading edition |
 | `public/materials/demo-genai/` | Canonical real-model app, runtime and verified recordings |
 
-`data/slides.json`, `data/sources.json`, `data/flows.json`, `slides.md`, and the companion HTML/text materials are generated. Change their authoring inputs instead. `pnpm generate` is deterministic and does not recreate presenter notes.
+`data/generated/slides.json`, `data/generated/sources.json`, `data/generated/flows.json`, `slides.md`, and the companion HTML/text materials are generated. Change their authoring inputs instead. `pnpm generate` is deterministic and does not recreate presenter notes.
 
 ## Validate and distribute
 
 ```sh
-pnpm check                # Content, references, missing/unused images and probability maths
+pnpm check                # Structure, content, references, assets and probability maths
 pnpm build                # Lightweight static website in dist/
 pnpm check:browser        # Full browser checks against the running dev server
 pnpm export               # Tagged PDF in exports/EduForum-2026.pdf
@@ -71,7 +73,7 @@ All 79 reviewed informal shortcuts have a dedicated slide with their full record
 
 ## Real model exercise
 
-The canonical app is `public/materials/demo-genai/`; `demo-genai/tests/` contains its maths, UI and recording checks. The app uses actual quantised Qwen2.5-0.5B-Instruct inference through bundled Transformers.js and ONNX Runtime. The model preparation script pins a public revision and checks sizes and SHA-256 hashes:
+The canonical app is `public/materials/demo-genai/`; `tests/demo-genai/` contains its maths, inference and UI checks. Deliberate recording publication lives in `scripts/recordings/`. The app uses actual quantised Qwen2.5-0.5B-Instruct inference through bundled Transformers.js and ONNX Runtime. The model preparation script pins a public revision and checks sizes and SHA-256 hashes:
 
 ```sh
 node public/materials/demo-genai/prepare-model.mjs
@@ -82,12 +84,12 @@ Open `http://127.0.0.1:4176/`. The approximately 786 MB model stays in one ignor
 
 The distributed application was implemented with Codex. Maps, student responses and classroom assessments are constructed teaching examples unless explicitly identified as real recorded executions. Tool conditions can change; product documentation and educational evidence remain distinct in the source index.
 
-The Agent Skills section presents six workflows tested in ChatGPT web, Work mode, using the original workshop book: Learn, The Learning Skill, Markdown Mermaid Writing, Flashcard Generator, Scientific Critical Thinking and Citation Management. Each has its own recorded demonstration. `data/skill-demos.json` preserves original requests, observed checks, package revisions and generated-file hashes. `data/skills-research.json` contains the full 17-skill catalogue and distinguishes the six executions from eleven source-reviewed examples. The generated `public/materials/skills-guide.html` includes recordings, transcripts, downloadable outputs, requirements, licensing and benchmark references.
+The Agent Skills section presents six workflows tested in ChatGPT web, Work mode, using the original workshop book: Learn, The Learning Skill, Markdown Mermaid Writing, Flashcard Generator, Scientific Critical Thinking and Citation Management. Each has its own recorded demonstration. `data/demos/skill-demos.json` preserves original requests, observed checks, package revisions and generated-file hashes. `data/catalogues/skills-research.json` contains the full 17-skill catalogue and distinguishes the six executions from eleven source-reviewed examples. The generated `public/materials/skills-guide.html` includes recordings, transcripts, downloadable outputs, requirements, licensing and benchmark references.
 
-The six skill videos and their posters all use a 1440 × 900 pixel frame. They are edited from actual browser UI captures, including inspection of the generated files, and preserve source proportions and within-scene timing with reading holds. The Learn clip crops the relevant dialogue; other clips retain the full viewport. A duplicated due-card counter in the first Learning Skill output was corrected through a follow-up in the same chat, then tested again before recording the published kit. The public provenance is `public/materials/skills/provenance.json`; private captures and reviewed publisher packages remain in ignored `output/review/skill-web-tests/`. Re-render with `PYTHONPATH=output/video-tools python3 scripts/render-skill-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required), then `pnpm generate`. Source hyperlinks in the two distributed HTML outputs point to the local chapter; content, controls and styling are preserved, and the original template’s MIT notice is included. Slides show labelled excerpts; the guide and accessible materials preserve each full tested request.
+The six skill videos and their posters all use a 1440 × 900 pixel frame. They are edited from actual browser UI captures, including inspection of the generated files, and preserve source proportions and within-scene timing with reading holds. The Learn clip crops the relevant dialogue; other clips retain the full viewport. A duplicated due-card counter in the first Learning Skill output was corrected through a follow-up in the same chat, then tested again before recording the published kit. The public provenance is `public/materials/skills/provenance.json`; private captures and reviewed publisher packages remain in ignored `output/review/skill-web-tests/`. Re-render with `PYTHONPATH=output/video-tools python3 scripts/recordings/render-skill-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required), then `pnpm generate`. Source hyperlinks in the two distributed HTML outputs point to the local chapter; content, controls and styling are preserved, and the original template’s MIT notice is included. Slides show labelled excerpts; the guide and accessible materials preserve each full tested request.
 
-Six short Goblin Tools videos show real English executions of Compiler, Magic ToDo, Estimator, Taskmaster, Professor and Formalizer. Each has a separate slide with a flat browser frame, complete-page footage, optional WebVTT captions, a transcript and a poster. Inputs, exact outputs and editing details are in `public/materials/goblin/provenance.json`; private source frames stay in ignored `output/review/goblin-captures/`. Re-render with `python3 scripts/render-goblin-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required).
+Six short Goblin Tools videos show real English executions of Compiler, Magic ToDo, Estimator, Taskmaster, Professor and Formalizer. Each has a separate slide with a flat browser frame, complete-page footage, optional WebVTT captions, a transcript and a poster. Inputs, exact outputs and editing details are in `public/materials/goblin/provenance.json`; private source frames stay in ignored `output/review/goblin-captures/`. Re-render with `python3 scripts/recordings/render-goblin-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required).
 
-All 30 retained ChatGPT shortcuts open a video showing the original prompt, a new real generation and the completed widget. The oral-exam and blackboard recordings also show the additional request needed for interactive controls. The recordings retain their native crops. On-slide players share an 8:5 frame and fit the original footage proportionally, without stretching or cropping it. Prompt/result reading holds, optional captions, transcripts and source-frame hashes are included. Private source captures are in ignored `output/chatgpt-build-captures/`; publish the complete set with `PYTHONPATH=output/video-tools python3 scripts/render-chatgpt-build-videos.py`, then `pnpm generate`. The earlier result-only recordings remain documented in `public/materials/chatgpt-widgets/videos/interaction-provenance.json`.
+All 30 retained ChatGPT shortcuts open a video showing the original prompt, a new real generation and the completed widget. The oral-exam and blackboard recordings also show the additional request needed for interactive controls. The recordings retain their native crops. On-slide players share an 8:5 frame and fit the original footage proportionally, without stretching or cropping it. Prompt/result reading holds, optional captions, transcripts and source-frame hashes are included. Private source captures are in ignored `output/chatgpt-build-captures/`; publish the complete set with `PYTHONPATH=output/video-tools python3 scripts/recordings/render-chatgpt-build-videos.py`, then `pnpm generate`. The earlier result-only recordings remain documented in `public/materials/chatgpt-widgets/videos/interaction-provenance.json`.
 
-Seventeen NotebookLM videos cover sources, Fast Research, Deep Research, chat, citations, Learning Guide settings, Mind Maps, quizzes, flashcards, notes, reports, audio, video, infographics, slide decks, data tables and sharing. All were recorded again from scratch through @Browser in a new notebook, starting with the original chapter PDF upload. Consecutive viewport frames show actual UI actions, transitions and playback; generation waits are cut between scenes. Each dedicated slide has a poster, optional English captions and a transcript. Interface recordings are silent. `data/notebook-demos.json` and `public/materials/notebook/provenance.json` distinguish completed operations from inspected controls, including sharing and export menus. Private recording frames remain in `output/review/notebook-browser-captures/`. Re-render with `python3 scripts/render-notebook-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required); use `--only quiz` to update one clip, then run `pnpm generate` to refresh the deck and reading materials.
+Seventeen NotebookLM videos cover sources, Fast Research, Deep Research, chat, citations, Learning Guide settings, Mind Maps, quizzes, flashcards, notes, reports, audio, video, infographics, slide decks, data tables and sharing. All were recorded again from scratch through @Browser in a new notebook, starting with the original chapter PDF upload. Consecutive viewport frames show actual UI actions, transitions and playback; generation waits are cut between scenes. Each dedicated slide has a poster, optional English captions and a transcript. Interface recordings are silent. `data/demos/notebook-demos.json` and `public/materials/notebook/provenance.json` distinguish completed operations from inspected controls, including sharing and export menus. Private recording frames remain in `output/review/notebook-browser-captures/`. Re-render with `python3 scripts/recordings/render-notebook-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required); use `--only quiz` to update one clip, then run `pnpm generate` to refresh the deck and reading materials.

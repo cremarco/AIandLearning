@@ -1,4 +1,4 @@
-import slideData from '../data/slides.json'
+import slideData from '../data/generated/slides.json'
 
 export type Audience = 'student' | 'teacher' | 'both'
 export type SlideCard = { title: string; body?: string; backgroundImage?: string }
@@ -64,8 +64,6 @@ export type Slide = {
   skillIds?: string[]
   toolTable?: ToolTable
   references?: Reference[]
-  formula?: boolean
-  diagram?: string
   prompt?: string
   promptExcerpt?: string
   promptLabel?: string
