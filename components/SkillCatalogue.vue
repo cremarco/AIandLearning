@@ -26,10 +26,10 @@ const selected = computed(() => skills.value[index.value] || skills.value[0])
     <section v-if="selected" class="skill-detail" :data-skill="selected.id" aria-live="polite">
       <h2>{{ selected.summary }}</h2>
       <div class="chat chat-end skill-prompt">
-        <div class="chat-header">Example request · not executed</div>
-        <div class="chat-bubble max-w-full bg-base-200 text-base-content">{{ selected.prompt }}</div>
+        <div class="chat-header">{{ selected.executionStatus === 'executed' ? 'Tested request · excerpt' : 'Example request · not executed' }}</div>
+        <div class="chat-bubble max-w-full bg-base-200 text-base-content">{{ selected.promptExcerpt || selected.prompt }}</div>
       </div>
-      <div class="skill-expected"><h3>Expected deliverable</h3><p>{{ selected.expected }}</p></div>
+      <div class="skill-expected"><h3>{{ selected.executionStatus === 'executed' ? 'Observed in the chapter test' : 'Expected deliverable' }}</h3><p>{{ selected.resultExcerpt || selected.expected }}</p></div>
       <p class="skill-caveat">{{ selected.caveat }}</p>
       <div class="skill-links">
         <a class="link" :href="selected.sourceUrl" target="_blank" rel="noopener">Publisher’s skill</a>

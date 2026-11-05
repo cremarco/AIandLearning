@@ -28,6 +28,7 @@ export type SlideMedia = {
   captions?: string
   captionsDefault?: boolean
   browserFrame?: boolean
+  darkFrame?: boolean
   fit?: 'contain' | 'cover'
   caption?: string
   source?: string
@@ -66,6 +67,7 @@ export type Slide = {
   formula?: boolean
   diagram?: string
   prompt?: string
+  promptExcerpt?: string
   promptLabel?: string
   promptStyle?: 'terminal' | 'chat'
   comparison?: { label: string; text: string; audience?: Audience }[]

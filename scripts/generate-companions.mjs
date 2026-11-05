@@ -60,12 +60,12 @@ function textContent(slide) {
     ...(slide.cards || []).flatMap(card => [card.title, card.body]),
     ...(slide.toolTable?.rows || []).map(row => `${row.tool} — ${row.purpose} — ${row.access} ${row.url}`),
     ...catalogue(slide).flatMap(skill => [skill.name, `${skill.publisher} · ${skill.origin}`, skill.platform, skill.summary,
-      `Example request · not executed: ${skill.prompt}`, `Expected deliverable: ${skill.expected}`, skill.caveat,
+      `${skill.executionStatus === 'executed' ? 'Tested request' : 'Example request · not executed'}: ${skill.prompt}`, `${skill.executionStatus === 'executed' ? 'Observed result' : 'Expected deliverable'}: ${skill.expected}`, skill.caveat,
       `Requirements: ${skill.requirements}`, `Terminal installation for coding agents: ${skill.installCommand}`, skill.sourceUrl]),
     ...(slide.steps || []).flatMap((step, index) => [`${index + 1}. ${step.title}`, step.text]),
     ...(slide.comparison || []).flatMap(item => [item.label, item.text]),
     slide.formula ? 'p_i = exp(z_i/T) / sum_j exp(z_j/T), T > 0. Read: exponentiate each score divided by temperature, then divide by the sum over all candidates.' : '',
-    slide.prompt ? `${slide.promptLabel || 'Prompt / excerpt'}: ${slide.prompt}` : '',
+    slide.prompt ? `${slide.promptExcerpt ? 'Original tested request · full text' : slide.promptLabel || 'Prompt / excerpt'}: ${slide.prompt}` : '',
     slide.result ? `${slide.resultLabel || 'Result'}: ${slide.result}` : '',
     slide.decision || '',
     ...(slide.references || []).flatMap(item => [item.label, item.citation, item.url]),
@@ -95,8 +95,8 @@ write('Prompt_Bank_EN.txt', [
   ...introduction,
   ...slides.filter(slide => slide.prompt)
     .flatMap(slide => [`${slide.id} · ${slide.title}`, slide.prompt, '']),
-  'SKILL EXAMPLE REQUESTS — NOT EXECUTED',
-  ...skillResearch.skills.flatMap(skill => [`${skill.name} · ${skill.publisher} · ${skill.platform}`, skill.prompt, `Expected deliverable: ${skill.expected}`, '']),
+  'AGENT SKILL REQUESTS — EXECUTION STATUS SHOWN PER ENTRY',
+  ...skillResearch.skills.flatMap(skill => [`${skill.name} · ${skill.publisher} · ${skill.platform}`, skill.executionStatus === 'executed' ? 'Tested in ChatGPT web, Work mode, using the original workshop book.' : 'Proposed example · not executed.', skill.prompt, `${skill.executionStatus === 'executed' ? 'Observed result' : 'Expected deliverable'}: ${skill.expected}`, '']),
 ])
 const csvCell = value => `"${String(value || '').replaceAll('"', '""')}"`
 write('source_index.csv', [
@@ -184,9 +184,13 @@ function skillMarkup(skill, installation = false) {
     `<article class="skill-entry" id="${h(skill.id)}"><h3>${h(skill.name)}</h3>`,
     `<p class="meta">${h(skill.publisher)} · ${h(skill.origin)} · ${h(skill.platform)}</p>`,
     `<p>${h(skill.summary)}</p>`,
-    promptMarkup(skill.prompt, 'Example request · not executed'),
-    `<p><strong>Expected deliverable:</strong> ${h(skill.expected)}</p>`,
+    promptMarkup(skill.prompt, skill.executionStatus === 'executed' ? 'Tested request · original workshop book' : 'Example request · not executed'),
+    `<p><strong>${skill.executionStatus === 'executed' ? 'Observed result' : 'Expected deliverable'}:</strong> ${h(skill.expected)}</p>`,
     `<p>${h(skill.caveat)}</p>`,
+    skill.executionStatus === 'executed' ? `<p>Recorded in ChatGPT web, Work mode, with GPT-6.1 Sol Light on 5 November 2026. This is a task demonstration, not evidence of learning gains. <a class="link link-primary" href="skills/${h(skill.id)}.mp4">Watch the recorded test</a> · <a class="link link-primary" href="skills/${h(skill.id)}-transcript.txt">Read the transcript</a>.</p>` : '',
+    skill.webInstall ? `<p><strong>Web installation used:</strong> ${h(skill.webInstall)}</p>` : '',
+    skill.sourceCommit ? `<p><strong>Tested package revision:</strong> <a class="link link-primary" href="https://github.com/${h(skill.repo)}/commit/${h(skill.sourceCommit)}">${h(skill.sourceCommit.slice(0, 12))}</a>. Full test records: <a class="link link-primary" href="skills/provenance.json">recording provenance</a>.</p>` : '',
+    ...(skill.artifacts || []).map(file => `<p><a class="link link-primary" href="${h(relative(file.url))}">${h(file.label)}</a></p>`),
     `<p><strong>Requirements:</strong> ${h(skill.requirements)} <strong>License:</strong> ${h(skill.license)}.</p>`,
     installation ? promptMarkup(skill.installCommand, 'Terminal installation · coding agents, not a ChatGPT message', '$', 'terminal') : '',
     `<p><a class="link link-primary" href="${h(skill.sourceUrl)}">Publisher’s skill and current instructions</a></p>`,
@@ -204,7 +208,7 @@ function mediaMarkup(media) {
     '</video>',
   ].join('') : `<img src="${h(relative(media.src))}" alt="${h(media.alt)}">`
   const framed = media.browserFrame
-    ? `<div class="mockup-browser browser-video"><div class="mockup-browser-toolbar"><div class="input browser-video-address">${h(media.source?.replace(/^https?:\/\//, ''))}</div></div><div class="browser-video-page">${content}<img class="video-print-poster" src="${h(relative(media.poster))}" alt="${h(media.alt)}"></div></div>`
+    ? `<div class="mockup-browser browser-video${media.darkFrame ? ' browser-video-dark' : ''}"><div class="mockup-browser-toolbar"><div class="input browser-video-address">${h(media.source?.replace(/^https?:\/\//, ''))}</div></div><div class="browser-video-page">${content}<img class="video-print-poster" src="${h(relative(media.poster))}" alt="${h(media.alt)}"></div></div>`
     : content
   return `<figure>${framed}<figcaption>${h(media.caption)}</figcaption></figure>`
 }
@@ -226,7 +230,7 @@ function inner(slide) {
     ...catalogue(slide).map(skill => skillMarkup(skill)),
     slide.formula ? formulaMarkup : '',
     mediaMarkup(slide.media),
-    slide.prompt ? promptMarkup(slide.prompt, slide.promptLabel || 'Prompt / excerpt') : '',
+    slide.prompt ? promptMarkup(slide.prompt, slide.promptExcerpt ? 'Original tested request · full text' : slide.promptLabel || 'Prompt / excerpt') : '',
     ...(slide.body || []).map(text => `<p>${h(text)}</p>`),
     slide.steps?.length ? `<ol>${slide.steps.map(step => `<li><strong>${h(step.title)}</strong><p>${h(step.text)}</p></li>`).join('')}</ol>` : '',
     ...(slide.cards || []).map(card => `<h3>${h(card.title)}</h3><p>${h(card.body)}</p>`),
@@ -260,7 +264,7 @@ writePage('kit.html', 'Workshop materials', [
 
 writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue', [
   '<header><h1>Agent Skills for study, research and teaching</h1>',
-  `<p class="meta">12 skills · sources checked ${h(skillResearch.verified)}</p>`,
+  `<p class="meta">${skillResearch.skills.length} skills · ${skillResearch.skills.filter(skill => skill.executionStatus === 'executed').length} tested on the workshop book · sources checked ${h(skillResearch.verified)}</p>`,
   `<p>${h(skillResearch.scope)}</p>`, controls,
   '<p><a class="link link-primary" href="kit.html">Workshop materials</a></p>',
   '<nav aria-label="Skill index"><ul>',
@@ -268,7 +272,7 @@ writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue'
   '</ul></nav></header><main id="content">',
   '<section class="slide"><h2>What is a skill?</h2><p>An Agent Skill is a folder with a SKILL.md file containing metadata and workflow instructions, plus optional references, scripts and assets. A product command invokes a feature; an informal shortcut labels a request. Skills require a host that can discover them and supply the necessary tools.</p>',
   '<p><a class="link link-primary" href="https://agentskills.io/specification">Agent Skills specification</a> · <a class="link link-primary" href="https://developers.openai.com/plugins/concepts/skills">OpenAI skill and plugin concepts</a></p></section>',
-  '<section class="slide"><h2>Installation depends on the host</h2><p>Eligible ChatGPT Business, Enterprise, Healthcare and Edu users can open Plugins → Skills, install shared skills or use Create to build or upload a package. Availability and workspace settings apply. The terminal commands below are for compatible coding agents; they are not ChatGPT slash commands.</p>',
+  '<section class="slide"><h2>Installation depends on the host</h2><p>In the recorded account, ChatGPT web offered Plugins → Skills → Add skill → Upload from computer. The six reviewed packages were uploaded and selected in Work mode. Availability depends on the account and workspace. The terminal commands below are for compatible coding agents; they are not ChatGPT slash commands.</p>',
   '<p>For coding agents, review the publisher’s files, dependencies and license before installing. The Skills CLI asks which skills and agents to install for; installation is project-scoped by default. Installing the instructions does not install their Python, Node or external service dependencies. A portable format does not guarantee identical behaviour across hosts.</p>',
   '<p>The old openai/skills repository is deprecated; use current OpenAI plugin documentation and openai/plugins examples.</p>',
   '<p><a class="link link-primary" href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt">Skills in ChatGPT</a> · <a class="link link-primary" href="https://github.com/vercel-labs/skills">Skills CLI documentation</a> · <a class="link link-primary" href="https://github.com/openai/skills">Retired OpenAI catalogue notice</a> · <a class="link link-primary" href="https://github.com/openai/plugins">Current OpenAI examples</a></p></section>',

@@ -3777,7 +3777,7 @@
     "comparison": [
       {
         "label": "ChatGPT",
-        "text": "Eligible Business, Enterprise, Healthcare and Edu accounts: Plugins → Skills. Workspace settings and availability apply."
+        "text": "Recorded here in ChatGPT web: Plugins → Skills → upload a package, then select it in Work mode. Availability depends on the account and workspace."
       },
       {
         "label": "Coding agents",
@@ -3789,28 +3789,268 @@
     "links": []
   },
   {
+    "id": "S53SKILLSTUDY",
+    "type": "workshop",
+    "kind": "skill-catalogue",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Skills for studying the same chapter",
+    "message": "Four reusable workflows, tested with Andrea’s assigned book.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_LEARN",
+      "SKILL_LEARNING",
+      "SKILL_MERMAID",
+      "SKILL_FLASHCARD_GENERATOR"
+    ],
+    "skillIds": [
+      "learn",
+      "the-learning-skill",
+      "markdown-mermaid-writing",
+      "flashcard-generator"
+    ],
+    "decision": "Choose a support for the next learning action, then check its output.",
+    "number": 108,
+    "links": []
+  },
+  {
+    "id": "S53SKILLLEARN",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Learn: explain before receiving feedback",
+    "message": "Andrea tests his understanding of training, inference and RAG.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_LEARN",
+      "SKILL_DEMO_LEARN"
+    ],
+    "prompt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Explain what changed before reading the feedback.",
+    "promptExcerpt": "Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer.",
+    "media": {
+      "type": "video",
+      "src": "materials/skills/learn.mp4",
+      "poster": "materials/skills/learn-poster.jpg",
+      "captions": "materials/skills/learn.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "learn: actual ChatGPT web test using the original workshop book.",
+      "caption": "Recorded chapter test · 17 s",
+      "source": "https://chatgpt.com/c/6aecb2f1-a814-83eb-8415-315a1d31e2ee",
+      "transcript": "learn — recorded chapter test\n\nSOURCE\nOriginal workshop book, sections 1.2, 1.7.\n\nSELECTED SKILL\nlearn\n\nORIGINAL REQUEST\nI am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.\n\n00:00:00.000 The imported Learn skill receives the original chapter and asks Andrea to explain what changed.\n00:00:06.642 Andrea’s misconception receives feedback grounded in §1.2 and a RAG transfer question from §1.7.\n\nOBSERVED RESULT\nAsked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.\n\nRECORDED CONVERSATION / GENERATED FILE\nHai detto:\nFondamenti_GenAI_Cremaschi(2).pdf\nPDF\n\nlearn I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.\n\nHa lavorato per 13s\nChatGPT ha detto:\n\nAndrea, suppose you add “In this chapter, X means Y” to a prompt, and the model then uses that definition correctly. What do you think changed inside the system, and why does that explain its answer? (§1.2)\n\nHai detto:\nI think its weights changed because it learned the new definition from my message.\nChatGPT ha detto:\n\nYou’ve identified that the message affects the answer, but using new information does not mean updating weights. Your definition becomes part of the conversation context. Ordinary inference uses that context with fixed parameters; training uses prediction error and optimisation to change parameters. (§1.2)\n\nSuppose a RAG system retrieves a page containing the same definition and supplies it as context. Would that require changing the model’s weights? (§1.7)\n\nHai detto:\nNo. RAG supplies retrieved passages as context to ordinary inference. The weights stay fixed. Training or fine-tuning changes parameters through optimisation. Adding a definition changes the available context, not the parameters.\nChatGPT ha detto:\n\nThat’s correct. You’ve separated changes to context from changes to parameters: training changes parameters; ordinary inference uses fixed parameters; RAG supplies retrieved passages as context. (§§1.2, 1.7)\n\nOne final transfer check: a RAG system retrieves a recent document and gives an incorrect answer. Does the document’s recency establish that the answer is correct? Explain one way the process could fail. (§1.7)\n\nChatGPT può commettere errori. Verifica le informazioni importanti.\nUltima risposta\n\n\n\n\nGPT-6.1 Sol\nLight\nNessuno\nMinimo\nLight\nMedio\nAlto\nMolto alto\nMassimo\nUltra\nPersistente\n"
+    },
+    "number": 109,
+    "links": []
+  },
+  {
+    "id": "S53SKILLLEARNING",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Build a study kit after recall",
+    "message": "The same chapter becomes practice materials and two short reviews.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_LEARNING",
+      "SKILL_DEMO_THE_LEARNING_SKILL"
+    ],
+    "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Test the material and its controls before giving it to students.",
+    "promptExcerpt": "Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week.",
+    "media": {
+      "type": "video",
+      "src": "materials/skills/the-learning-skill.mp4",
+      "poster": "materials/skills/the-learning-skill-poster.jpg",
+      "captions": "materials/skills/the-learning-skill.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "the-learning-skill: actual ChatGPT web test using the original workshop book.",
+      "caption": "Recorded chapter test · 43 s",
+      "source": "https://chatgpt.com/c/6aecb38f-3c04-83ed-b26e-e8d199a1ea0e",
+      "transcript": "the-learning-skill — recorded chapter test\n\nSOURCE\nOriginal workshop book, sections 1.2, 1.7.\n\nSELECTED SKILL\nthe-learning-skill\n\nORIGINAL REQUEST\nI am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.\n\n00:00:00.000 The complete Learning Skill starts with the assigned book, Andrea’s goal and a short study budget.\n00:00:06.003 Andrea answers first; the chat then provides chapter-linked study files and two short review sessions.\n00:00:13.337 The corrected kit starts with three cards due out of three total cards.\n00:00:19.803 Reveal shows the answer, chapter reference and recall-rating controls.\n00:00:26.324 After Good, the next card appears and the due count falls from three to two.\n00:00:32.375 The quiz accepts a correct answer and explains it with a chapter reference.\n\nOBSERVED RESULT\nStarted with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. Testing found a duplicated due-card count. A follow-up corrected it; reveal, Good → next card (3 due → 2), and quiz feedback were verified.\n\nRECORDED CONVERSATION / GENERATED FILE\nHai detto:\nFondamenti_GenAI_Cremaschi(3).pdf\nPDF\n\nthe learning skill I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.\n\nHa lavorato per 30s\nChatGPT ha detto:\n\nAndrea, without looking at the book: when you add a definition to a prompt and the model uses it correctly, what has changed—and does that demonstrate training? (§§1.2, 1.7)\n\nHai detto:\nThe context changed. Ordinary inference uses fixed parameters, so using a definition in a prompt does not demonstrate training. RAG also supplies context; training updates parameters through optimisation. Please now make the compact kit from the book: notes, exactly three HTML flashcards, a short quiz and a file with two 5-minute reviews. Keep chapter references with the answers.\nHa lavorato per 1min 59s\nChatGPT ha detto:\n\nCorrect—you distinguished changes to context from updates to parameters.\n\nYour kit uses only §§1.2 and 1.7, with chapter references beside answers:\n\nNotes\nExactly three HTML flashcards\nShort quiz\nTwo 5-minute reviews: 6 and 8 November\nPrintable cheatsheet\n\nTry each recall task before revealing its answer.\n\nHai detto:\nI tested flashcards.html. On the first view it showed Due today: 6 while Total cards: 3, then Due today became 3 after rating one card Good. Please inspect and fix the due-card counter so a card cannot be counted twice. Keep exactly the same three chapter-grounded cards and source references. Return the corrected HTML file.\nHa lavorato per 42s\nChatGPT ha detto:\n\nFixed\nflashcards.html\n.\n\nThe counter now counts each card once from its due date, without adding queue entries. Verified: initially 3, after Good: 2, and duplicate queue entries do not inflate it.\n\nThe same three cards and all chapter and source references are preserved.\n\nChatGPT può commettere errori. Verifica le informazioni importanti.\nUltima risposta\n\n\n\n\nGPT-6.1 Sol\nLight\nNessuno\nMinimo\nLight\nMedio\nAlto\nMolto alto\nMassimo\nUltra\nPersistente\n"
+    },
+    "number": 110,
+    "links": []
+  },
+  {
+    "id": "S53SKILLMERMAID",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Compare the chapter in an editable diagram",
+    "message": "Training, ordinary inference and RAG retain distinct flows.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_MERMAID",
+      "SKILL_DEMO_MARKDOWN_MERMAID_WRITING"
+    ],
+    "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Check each arrow against the chapter, then explain the diagram independently.",
+    "promptExcerpt": "Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references.",
+    "media": {
+      "type": "video",
+      "src": "materials/skills/markdown-mermaid-writing.mp4",
+      "poster": "materials/skills/markdown-mermaid-writing-poster.jpg",
+      "captions": "materials/skills/markdown-mermaid-writing.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "markdown-mermaid-writing: actual ChatGPT web test using the original workshop book.",
+      "caption": "Recorded chapter test · 23 s",
+      "source": "https://chatgpt.com/c/6aecb3c3-b380-83eb-8743-7fddc0f7131e",
+      "transcript": "markdown-mermaid-writing — recorded chapter test\n\nSOURCE\nOriginal workshop book, sections 1.2, 1.7.\n\nSELECTED SKILL\nmarkdown-mermaid-writing\n\nORIGINAL REQUEST\nUsing only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.\n\n00:00:00.000 The rendered diagram and its text alternative use the same chapter sections.\n00:00:06.456 The source-linked diagram is inspected at the common 1440 × 900 viewport.\n00:00:12.879 The generated Mermaid source remains editable.\n\nOBSERVED RESULT\nProduced a rendered eight-node Mermaid flowchart, accessible title and description, text alternative and section references. The code editor opens.\n\nRECORDED CONVERSATION / GENERATED FILE\nHai detto:\nFondamenti_GenAI_Cremaschi(4).pdf\nPDF\n\nmarkdown mermaid writing Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.\n\nHa lavorato per 27s\nChatGPT ha detto:\n\nAndrea can edit the node labels and arrow text directly. 8 nodes; references point to the book’s sections.\n\nTraining examples (§1.2)\nPrediction error\nChanged model\nOrdinary inference: input andcontext (§1.2)\nCalculations with fixed modelparameters\nGenerated output (§1.7)\nRAG: question (§1.7)\nSelected external passages\nCompare predictions withexample tokens\nOptimisation changesparameters\nContext can change;parameters stay fixed\nAppend tokens; parametersstay fixed\nSearch documents and selectpassages\nAdd to context; parametersstay fixed\n\nText alternative: Training changes parameters through optimisation (§1.2). Ordinary inference uses the current input and context with fixed parameters (§1.2). RAG retrieves external passages for that context; it does not update model weights or guarantee correctness (§1.7).\n\nSource: Workshop book, §1.2, pp. 5–6; §1.7, pp. 13–14.\n\nChatGPT può commettere errori. Verifica le informazioni importanti.\nUltima risposta\n\n\n\n\nGPT-6.1 Sol\nLight\nNessuno\nMinimo\nLight\nMedio\nAlto\nMolto alto\nMassimo\nUltra\nPersistente\n"
+    },
+    "number": 111,
+    "links": []
+  },
+  {
+    "id": "S53SKILLFLASHCARDS",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Three questions to answer from memory",
+    "message": "The chapter becomes an importable text deck.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_FLASHCARD_GENERATOR",
+      "SKILL_DEMO_FLASHCARD_GENERATOR"
+    ],
+    "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Attempt each answer first; the text file is a deck, not an interactive app.",
+    "promptExcerpt": "Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer.",
+    "media": {
+      "type": "video",
+      "src": "materials/skills/flashcard-generator.mp4",
+      "poster": "materials/skills/flashcard-generator-poster.jpg",
+      "captions": "materials/skills/flashcard-generator.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "flashcard-generator: actual ChatGPT web test using the original workshop book.",
+      "caption": "Recorded chapter test · 18 s",
+      "source": "https://chatgpt.com/c/6aecb461-8dd4-83ed-8900-5b4f811a4695",
+      "transcript": "flashcard-generator — recorded chapter test\n\nSOURCE\nOriginal workshop book, sections 1.2, 1.7.\n\nSELECTED SKILL\nflashcard-generator\n\nORIGINAL REQUEST\nUsing only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.\n\n00:00:00.000 The original request selects Flashcard Generator and attaches the workshop book.\n00:00:06.460 Exactly three cards are inspected in the generated text file, each with a chapter reference.\n\nOBSERVED RESULT\nCreated and downloaded a text file containing exactly three Question | Answer pairs. Each answer is under 30 words and cites §1.2 or §1.7.\n\nRECORDED CONVERSATION / GENERATED FILE\nGenerated text file:\n\nHow do training and ordinary inference differ in their use of model parameters? | Training updates parameters through optimisation to reduce prediction error. Ordinary inference calculates outputs using fixed, already available parameters. (§1.2)\nWhen Andrea adds a new definition to a prompt, what changes, and what does using that definition demonstrate about model weights? | The definition changes the context available to current inference. Using it does not demonstrate that model weights have changed. (§1.2)\nHow does retrieval-augmented generation (RAG) supply new information without a parameter update? | RAG retrieves selected document passages and supplies them as generation context. The consulted collection and model parameters are distinct components, so weights can remain unchanged. (§1.7)\n"
+    },
+    "number": 112,
+    "links": []
+  },
+  {
     "id": "S53SKILLRESEARCH",
     "type": "workshop",
     "kind": "skill-catalogue",
     "section": "study",
     "stage": "Reusable Agent Skills",
-    "title": "Skills for research and evidence",
-    "message": "K-Dense’s community workflows support different stages of research.",
+    "title": "Skills for evidence and references",
+    "message": "Check the chapter’s claims and its cited publications.",
     "body": [],
     "audience": "both",
     "sources": [
-      "SKILL_KDENSE",
-      "SKILL_CITATION_MANAGEMENT",
-      "SKILL_LITERATURE_REVIEW"
+      "BOOK_CHAPTER",
+      "SKILL_CRITICAL_THINKING",
+      "SKILL_CITATION_MANAGEMENT"
     ],
     "skillIds": [
-      "citation-management",
-      "literature-review",
-      "scientific-writing",
-      "peer-review"
+      "scientific-critical-thinking",
+      "citation-management"
     ],
-    "decision": "Source review confirms the workflow exists; it does not validate its scientific conclusions.",
-    "number": 108,
+    "decision": "Check a generated critique against the chapter; metadata alone does not verify a claim.",
+    "number": 113,
+    "links": []
+  },
+  {
+    "id": "S53SKILLCRITICAL",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Check an explanation against the book",
+    "message": "Andrea’s draft contains three claims to verify.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_CRITICAL_THINKING",
+      "SKILL_DEMO_SCIENTIFIC_CRITICAL_THINKING"
+    ],
+    "prompt": "Using only the attached workshop book, review Andrea’s explanation: \"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\" Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Use the chapter to check the critique as well as the original claim.",
+    "promptExcerpt": "\"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\"",
+    "media": {
+      "type": "video",
+      "src": "materials/skills/scientific-critical-thinking.mp4",
+      "poster": "materials/skills/scientific-critical-thinking-poster.jpg",
+      "captions": "materials/skills/scientific-critical-thinking.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "scientific-critical-thinking: actual ChatGPT web test using the original workshop book.",
+      "caption": "Recorded chapter test · 25 s",
+      "source": "https://chatgpt.com/c/6aecb43d-3578-83ed-a6ca-a770c362b923",
+      "transcript": "scientific-critical-thinking — recorded chapter test\n\nSOURCE\nOriginal workshop book, sections 1.2, 1.6, 1.7.\n\nSELECTED SKILL\nscientific-critical-thinking\n\nORIGINAL REQUEST\nUsing only the attached workshop book, review Andrea’s explanation: \"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\" Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.\n\n00:00:00.000 Andrea’s three statements are submitted with the original book as the evidence source.\n00:00:06.496 The generated table checks each claim against §§1.2, 1.6 and 1.7.\n00:00:14.995 The critique ends with an independent question about separating context and temperature effects.\n\nOBSERVED RESULT\nChecked all three claims against §§1.2, 1.6 and 1.7, gave specific corrections and ended with an independent question about isolating context and temperature effects.\n\nRECORDED CONVERSATION / GENERATED FILE\nHai detto:\nFondamenti_GenAI_Cremaschi(5).pdf\nPDF\n\nscientific critical thinking Using only the attached workshop book, review Andrea’s explanation: \"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\" Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.\n\nHa lavorato per 19s\nChatGPT ha detto:\nClaim\tVerdict\tChapter evidence\tCorrection\n“Adding the chapter to a prompt updates model weights.”\tIncorrect for ordinary inference.\t§1.2 distinguishes optimisation that updates parameters from new messages that change available context. §1.7 says documents can supply information without changing weights.\tAdding the chapter changes the context. Using its information does not establish that weights changed. Any later service use of data is a separate matter (§1.2).\n“RAG retrieves passages and therefore guarantees a correct answer.”\tRetrieval is described correctly; the guarantee is contradicted.\t§1.7 states that retrieval can fail, select irrelevant passages, or supply material that the response misinterprets.\tRAG supplies selected passages to generation. Correctness remains unestablished until the generated claim is checked against supporting evidence; a link alone is insufficient (§1.7).\n“Increasing temperature adds knowledge.”\tExplicitly contradicted.\t§1.6 states that, with logits fixed, higher temperature makes the token distribution more uniform; it adds no knowledge and does not retrain the model.\tTemperature changes probabilities used for token selection. It does not establish greater knowledge, truthfulness, or originality in an individual answer (§1.6).\n\nIndependent question: Andrea, if an answer changes after you add a chapter passage and raise temperature, how would you isolate each intervention’s effect, and what could you conclude about weights and correctness?\n\nChatGPT può commettere errori. Verifica le informazioni importanti.\nUltima risposta\n\n\n\n\nGPT-6.1 Sol\nLight\nNessuno\nMinimo\nLight\nMedio\nAlto\nMolto alto\nMassimo\nUltra\nPersistente\n"
+    },
+    "number": 114,
+    "links": []
+  },
+  {
+    "id": "S53SKILLCITATIONS",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Verify the book’s three technical references",
+    "message": "Check bibliographic identity before checking what a paper supports.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_CITATION_MANAGEMENT",
+      "SKILL_DEMO_CITATION_MANAGEMENT"
+    ],
+    "prompt": "Verify only the three technical references listed in the attached workshop book: Vaswani et al. (2017), Attention Is All You Need, arXiv:1706.03762; Ouyang et al. (2022), Training language models to follow instructions with human feedback, arXiv:2203.02155; Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401. Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "A matching reference identifies a paper; read its relevant passage before accepting a claim.",
+    "promptExcerpt": "Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim.",
+    "media": {
+      "type": "video",
+      "src": "materials/skills/citation-management.mp4",
+      "poster": "materials/skills/citation-management-poster.jpg",
+      "captions": "materials/skills/citation-management.en.vtt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "darkFrame": true,
+      "alt": "citation-management: actual ChatGPT web test using the original workshop book.",
+      "caption": "Recorded chapter test · 24 s",
+      "source": "https://chatgpt.com/c/6aecb499-5510-83eb-8d64-9a2419a39c35",
+      "transcript": "citation-management — recorded chapter test\n\nSOURCE\nOriginal workshop book, sections bibliography.\n\nSELECTED SKILL\ncitation-management\n\nORIGINAL REQUEST\nVerify only the three technical references listed in the attached workshop book: Vaswani et al. (2017), Attention Is All You Need, arXiv:1706.03762; Ouyang et al. (2022), Training language models to follow instructions with human feedback, arXiv:2203.02155; Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401. Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim. Answer in English.\n\n00:00:00.000 The original request checks only the three technical papers listed in the book.\n00:00:06.038 The result matches the book’s references to arXiv and conference records.\n00:00:14.265 The downloadable bibliography is kept separate from verification of the chapter’s claims.\n\nOBSERVED RESULT\nMatched all three references to arXiv and NeurIPS records and produced a downloadable BibTeX file. Explicitly separated bibliographic identity from claim support.\n\nRECORDED CONVERSATION / GENERATED FILE\nHai detto:\nFondamenti_GenAI_Cremaschi(7).pdf\nPDF\n\ncitation management Verify only the three technical references listed in the attached workshop book: Vaswani et al. (2017), Attention Is All You Need, arXiv:1706.03762; Ouyang et al. (2022), Training language models to follow instructions with human feedback, arXiv:2203.02155; Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401. Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim. Answer in English.\n\nHa lavorato per 1min 34s\nChatGPT ha detto:\n\nAll three references match the primary records for paper identity, year and venue.\n\nReference\tIdentity and year\tVerified venue\tPrimary records\nVaswani et al., Attention Is All You Need\tCorrect; 2017\tAdvances in Neural Information Processing Systems 30, NIPS 2017\tarXiv:1706.03762 · Proceedings.\narxiv.org\n+1\n\nOuyang et al., Training language models to follow instructions with human feedback\tCorrect; 2022\tAdvances in Neural Information Processing Systems 35, NeurIPS 2022\tarXiv:2203.02155 · Proceedings.\narxiv.org\n+1\n\nLewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\tCorrect; 2020\tAdvances in Neural Information Processing Systems 33, NeurIPS 2020\tarXiv:2005.11401 · Proceedings.\narxiv.org\n+1\n\nThe BibTeX contains exactly these three conference entries, with their arXiv identifiers.\n\nDownload verified_references.bib\n\nCorrect metadata establishes which work is cited. Verifying a chapter claim additionally requires checking whether the paper’s methods, results and limitations support that specific statement; this metadata check does not establish that.\n\nChatGPT può commettere errori. Verifica le informazioni importanti.\nUltima risposta\n\n\n\n\nGPT-6.1 Sol\nLight\nNessuno\nMinimo\nLight\nMedio\nAlto\nMolto alto\nMassimo\nUltra\nPersistente\n"
+    },
+    "number": 115,
     "links": []
   },
   {
@@ -3840,7 +4080,7 @@
       "transcript": "Compiler — real execution, recorded 5 November 2026\n\nINPUT\nI have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.\n\nACTUAL RESULT\nStudy the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking\n\n00:00:00.000 Describe the study goal in your own words.\n00:00:04.000 Compiler extracts actions from the unstructured note.\n00:00:06.000 Actual result: four suggested study tasks.\n00:00:10.000 Review the list: keep the learning goal and remove overlap.",
       "browserFrame": true
     },
-    "number": 109,
+    "number": 116,
     "links": []
   },
   {
@@ -3870,7 +4110,7 @@
       "transcript": "Magic ToDo — real execution, recorded 5 November 2026\n\nINPUT\nRead the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nLocate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.\n\n00:00:00.000 Start with one concrete task from the chapter.\n00:00:04.000 Use the magic-wand button to break the task down.\n00:00:06.000 Actual result: 4 smaller steps.\n00:00:10.000 Choose the steps that help; revise generic or repeated advice.",
       "browserFrame": true
     },
-    "number": 110,
+    "number": 117,
     "links": []
   },
   {
@@ -3900,7 +4140,7 @@
       "transcript": "Estimator — real execution, recorded 5 November 2026\n\nINPUT\nRead two pages about training and inference, write a three-line comparison, and explain it aloud once.\n\nACTUAL RESULT\n10-20 minutes\n\n00:00:00.000 Describe the activity and its expected output.\n00:00:04.000 Ask Estimator for a rough time window.\n00:00:06.000 Actual result: 10-20 minutes.\n00:00:10.000 Record the real time, then adjust the next study session.",
       "browserFrame": true
     },
-    "number": 111,
+    "number": 118,
     "links": []
   },
   {
@@ -3930,7 +4170,7 @@
       "transcript": "Taskmaster — real execution, recorded 5 November 2026\n\nINPUT\nAndrea · full-page demo — Read the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nTaskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.\n\n00:00:00.000 Open the study list and choose one current task.\n00:00:03.000 Press Play and work with one item in view.\n00:00:07.000 Pause the timer. This demonstration records three seconds.\n00:00:10.000 Elapsed time shows activity; check understanding separately.",
       "browserFrame": true
     },
-    "number": 112,
+    "number": 119,
     "links": []
   },
   {
@@ -3960,7 +4200,7 @@
       "transcript": "Professor — real execution, recorded 5 November 2026\n\nINPUT\nTraining versus inference in a language model. Explain the difference briefly and give one short example.\n\nACTUAL RESULT\nEXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.\n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.\nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.\nExample: Asking the model to write a summary of today's news after it has already been trained.\n\n00:00:00.000 Ask a focused question about training and inference.\n00:00:04.000 Professor generates an explanation and an example.\n00:00:07.000 Read the actual explanation; an analogy still needs checking.\n00:00:11.000 Return to the chapter: which parameters change, and when?",
       "browserFrame": true
     },
-    "number": 113,
+    "number": 120,
     "links": []
   },
   {
@@ -3990,12 +4230,12 @@
       "transcript": "Formalizer — real execution, recorded 5 November 2026\n\nINPUT\nTraining is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.\n\nACTUAL RESULT\nTraining refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.\n\n00:00:00.000 Start with a draft that includes an unresolved question.\n00:00:04.000 Choose More professional, then Convert.\n00:00:06.000 Read the actual rewrite and compare its meaning.\n00:00:10.000 The uncertainty about context remains. Check the science too.",
       "browserFrame": true
     },
-    "number": 114,
+    "number": 121,
     "links": []
   },
   {
     "id": "S59",
-    "number": 115,
+    "number": 122,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -4035,7 +4275,7 @@
   },
   {
     "id": "S60",
-    "number": 116,
+    "number": 123,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -4071,7 +4311,7 @@
   },
   {
     "id": "S60A",
-    "number": 117,
+    "number": 124,
     "type": "workshop",
     "kind": "activity",
     "section": "study",
@@ -4102,7 +4342,7 @@
   },
   {
     "id": "S61",
-    "number": 118,
+    "number": 125,
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
@@ -4150,7 +4390,7 @@
   },
   {
     "id": "S61RESEARCH",
-    "number": 119,
+    "number": 126,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4182,7 +4422,7 @@
   },
   {
     "id": "S61DEEP",
-    "number": 120,
+    "number": 127,
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
@@ -4214,7 +4454,7 @@
   },
   {
     "id": "S62",
-    "number": 121,
+    "number": 128,
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
@@ -4249,7 +4489,7 @@
   },
   {
     "id": "S63",
-    "number": 122,
+    "number": 129,
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
@@ -4304,7 +4544,7 @@
   },
   {
     "id": "S64",
-    "number": 123,
+    "number": 130,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -4326,7 +4566,7 @@
   },
   {
     "id": "S64SETTINGS",
-    "number": 124,
+    "number": 131,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4358,7 +4598,7 @@
   },
   {
     "id": "S65",
-    "number": 125,
+    "number": 132,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -4390,7 +4630,7 @@
   },
   {
     "id": "S66",
-    "number": 126,
+    "number": 133,
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
@@ -4437,7 +4677,7 @@
   },
   {
     "id": "S67",
-    "number": 127,
+    "number": 134,
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
@@ -4472,7 +4712,7 @@
   },
   {
     "id": "S67CARDS",
-    "number": 128,
+    "number": 135,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4504,7 +4744,7 @@
   },
   {
     "id": "S67NOTES",
-    "number": 129,
+    "number": 136,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4536,7 +4776,7 @@
   },
   {
     "id": "S67REPORTS",
-    "number": 130,
+    "number": 137,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4568,7 +4808,7 @@
   },
   {
     "id": "S67AUDIO",
-    "number": 131,
+    "number": 138,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4600,7 +4840,7 @@
   },
   {
     "id": "S67VIDEO",
-    "number": 132,
+    "number": 139,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4632,7 +4872,7 @@
   },
   {
     "id": "S67INFO",
-    "number": 133,
+    "number": 140,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4664,7 +4904,7 @@
   },
   {
     "id": "S67SLIDES",
-    "number": 134,
+    "number": 141,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4696,7 +4936,7 @@
   },
   {
     "id": "S67TABLES",
-    "number": 135,
+    "number": 142,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4728,7 +4968,7 @@
   },
   {
     "id": "S67SHARE",
-    "number": 136,
+    "number": 143,
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -4760,7 +5000,7 @@
   },
   {
     "id": "S70",
-    "number": 137,
+    "number": 144,
     "type": "workshop",
     "kind": "procedure",
     "section": "study",
@@ -4797,7 +5037,7 @@
   },
   {
     "id": "S71",
-    "number": 138,
+    "number": 145,
     "type": "workshop",
     "kind": "compare",
     "section": "study",
@@ -4842,7 +5082,7 @@
   },
   {
     "id": "S72",
-    "number": 139,
+    "number": 146,
     "type": "workshop",
     "kind": "diagram",
     "section": "study",
@@ -4878,7 +5118,7 @@
   },
   {
     "id": "S82",
-    "number": 140,
+    "number": 147,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -4909,7 +5149,7 @@
   },
   {
     "id": "S83",
-    "number": 141,
+    "number": 148,
     "type": "workshop",
     "kind": "procedure",
     "section": "teachers",
@@ -4940,7 +5180,7 @@
   },
   {
     "id": "S84",
-    "number": 142,
+    "number": 149,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -4972,7 +5212,7 @@
   },
   {
     "id": "S84A",
-    "number": 143,
+    "number": 150,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5008,7 +5248,7 @@
   },
   {
     "id": "S84B",
-    "number": 144,
+    "number": 151,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5044,7 +5284,7 @@
   },
   {
     "id": "S84C",
-    "number": 145,
+    "number": 152,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5080,7 +5320,7 @@
   },
   {
     "id": "S85",
-    "number": 146,
+    "number": 153,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5102,7 +5342,7 @@
   },
   {
     "id": "S85B",
-    "number": 147,
+    "number": 154,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5130,7 +5370,7 @@
   },
   {
     "id": "S85C",
-    "number": 148,
+    "number": 155,
     "type": "workshop",
     "kind": "assessment",
     "section": "teachers",
@@ -5158,7 +5398,7 @@
   },
   {
     "id": "S86",
-    "number": 149,
+    "number": 156,
     "type": "workshop",
     "kind": "procedure",
     "section": "teachers",
@@ -5198,7 +5438,7 @@
   },
   {
     "id": "S87",
-    "number": 150,
+    "number": 157,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5232,7 +5472,7 @@
   },
   {
     "id": "S88",
-    "number": 151,
+    "number": 158,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5264,7 +5504,7 @@
   },
   {
     "id": "S89",
-    "number": 152,
+    "number": 159,
     "type": "workshop",
     "kind": "compare",
     "section": "teachers",
@@ -5299,7 +5539,7 @@
   },
   {
     "id": "S89A",
-    "number": 153,
+    "number": 160,
     "type": "workshop",
     "kind": "activity",
     "section": "teachers",
@@ -5330,7 +5570,7 @@
   },
   {
     "id": "S90",
-    "number": 154,
+    "number": 161,
     "type": "workshop",
     "kind": "accessibility",
     "section": "accessibility",
@@ -5364,7 +5604,7 @@
   },
   {
     "id": "S91",
-    "number": 155,
+    "number": 162,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -5404,7 +5644,7 @@
   },
   {
     "id": "S92",
-    "number": 156,
+    "number": 163,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -5428,7 +5668,7 @@
   },
   {
     "id": "S93",
-    "number": 157,
+    "number": 164,
     "type": "workshop",
     "kind": "procedure",
     "section": "accessibility",
@@ -5463,7 +5703,7 @@
   },
   {
     "id": "S94",
-    "number": 158,
+    "number": 165,
     "type": "workshop",
     "kind": "assessment",
     "section": "accessibility",
@@ -5487,7 +5727,7 @@
   },
   {
     "id": "S95",
-    "number": 159,
+    "number": 166,
     "type": "workshop",
     "kind": "diagram",
     "section": "transfer",
@@ -5522,7 +5762,7 @@
   },
   {
     "id": "S96",
-    "number": 160,
+    "number": 167,
     "type": "workshop",
     "kind": "compare",
     "section": "transfer",
@@ -5644,7 +5884,7 @@
         }
       ]
     },
-    "number": 161,
+    "number": 168,
     "links": []
   },
   {
@@ -5731,7 +5971,7 @@
         }
       ]
     },
-    "number": 162,
+    "number": 169,
     "links": []
   },
   {
@@ -5875,7 +6115,7 @@
         "download": true
       }
     ],
-    "number": 163
+    "number": 170
   },
   {
     "id": "S102",
@@ -5955,7 +6195,7 @@
         "shortTitle": "Making audio and video accessible"
       }
     ],
-    "number": 164,
+    "number": 171,
     "links": []
   },
   {
@@ -5977,6 +6217,6 @@
         "url": "mailto:marco.cremaschi@unimib.it"
       }
     ],
-    "number": 165
+    "number": 172
   }
 ]

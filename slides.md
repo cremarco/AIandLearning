@@ -871,11 +871,67 @@ title: "Where skills can run"
 
 ---
 layout: default
+routeAlias: s53skillstudy
+title: "Skills for studying the same chapter"
+---
+
+<DeckSlide id="S53SKILLSTUDY" />
+
+---
+layout: default
+routeAlias: s53skilllearn
+title: "Learn: explain before receiving feedback"
+---
+
+<DeckSlide id="S53SKILLLEARN" />
+
+---
+layout: default
+routeAlias: s53skilllearning
+title: "Build a study kit after recall"
+---
+
+<DeckSlide id="S53SKILLLEARNING" />
+
+---
+layout: default
+routeAlias: s53skillmermaid
+title: "Compare the chapter in an editable diagram"
+---
+
+<DeckSlide id="S53SKILLMERMAID" />
+
+---
+layout: default
+routeAlias: s53skillflashcards
+title: "Three questions to answer from memory"
+---
+
+<DeckSlide id="S53SKILLFLASHCARDS" />
+
+---
+layout: default
 routeAlias: s53skillresearch
-title: "Skills for research and evidence"
+title: "Skills for evidence and references"
 ---
 
 <DeckSlide id="S53SKILLRESEARCH" />
+
+---
+layout: default
+routeAlias: s53skillcritical
+title: "Check an explanation against the book"
+---
+
+<DeckSlide id="S53SKILLCRITICAL" />
+
+---
+layout: default
+routeAlias: s53skillcitations
+title: "Verify the book’s three technical references"
+---
+
+<DeckSlide id="S53SKILLCITATIONS" />
 
 ---
 layout: default

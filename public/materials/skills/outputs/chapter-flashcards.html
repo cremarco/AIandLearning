@@ -1,0 +1,543 @@
+<!--
+HTML template from toddward/the-learning-skill, revision 764f77764e9a731f74da297a4963959670e80e03.
+MIT License
+
+Copyright (c) 2026 Wm. Todd Wardzinski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Training, inference and RAG — Flashcards</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --bg-card: #1a1d24;
+    --bg-card-back: #1f242c;
+    --fg: #e8eaed;
+    --fg-muted: #9aa1ad;
+    --accent: #7aa2f7;
+    --good: #5eb87f;
+    --hard: #f7c97a;
+    --again: #f77a7a;
+    --easy: #6ed3d3;
+    --border: #262b34;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  .app {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--fg);
+  }
+  .subtitle { color: var(--fg-muted); font-size: 0.85rem; }
+  .progress {
+    height: 4px; background: var(--border); border-radius: 999px;
+    margin-bottom: 22px; overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%; background: var(--accent);
+    width: 0%; transition: width 240ms ease;
+  }
+  .stats {
+    display: flex; gap: 16px; font-size: 0.82rem; color: var(--fg-muted);
+    margin-bottom: 18px; flex-wrap: wrap;
+  }
+  .stats span b { color: var(--fg); font-weight: 600; }
+  .card-stack {
+    perspective: 1400px;
+    margin-bottom: 24px;
+  }
+  .card {
+    position: relative;
+    min-height: 280px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 28px;
+    cursor: pointer;
+    transition: transform 380ms cubic-bezier(.4,.0,.2,1), background 200ms;
+    transform-style: preserve-3d;
+    user-select: none;
+  }
+  .card.flipped { transform: rotateX(180deg); }
+  .card-face {
+    position: absolute; inset: 0;
+    padding: 32px 28px;
+    backface-visibility: hidden;
+    display: flex; flex-direction: column;
+    overflow: auto;
+  }
+  .card-front {}
+  .card-back {
+    transform: rotateX(180deg);
+    background: var(--bg-card-back);
+    border-radius: 14px;
+  }
+  .card-label {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin-bottom: 14px;
+  }
+  .card-content {
+    font-size: 1.18rem;
+    color: var(--fg);
+    flex: 1;
+  }
+  .card-content code {
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.95em;
+  }
+  .card-content pre {
+    background: rgba(0,0,0,0.35);
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+  }
+  .hint {
+    font-size: 0.78rem; color: var(--fg-muted);
+    margin-top: 12px; align-self: flex-end;
+  }
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .actions button {
+    padding: 14px 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-card);
+    color: var(--fg);
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 80ms, background 120ms;
+  }
+  .actions button:hover { transform: translateY(-1px); }
+  .actions button:active { transform: translateY(0); }
+  .actions .interval { display: block; font-size: 0.7rem; color: var(--fg-muted); margin-top: 4px; }
+  .btn-again { border-color: rgba(247,122,122,0.3); }
+  .btn-again:hover { background: rgba(247,122,122,0.1); }
+  .btn-hard  { border-color: rgba(247,201,122,0.3); }
+  .btn-hard:hover  { background: rgba(247,201,122,0.1); }
+  .btn-good  { border-color: rgba(94,184,127,0.3); }
+  .btn-good:hover  { background: rgba(94,184,127,0.1); }
+  .btn-easy  { border-color: rgba(110,211,211,0.3); }
+  .btn-easy:hover  { background: rgba(110,211,211,0.1); }
+
+  .actions[hidden] { display: none; }
+  .reveal-row {
+    display: flex; justify-content: center;
+  }
+  .btn-reveal {
+    padding: 14px 28px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background: rgba(122,162,247,0.1);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+  .btn-reveal:hover { background: rgba(122,162,247,0.18); }
+  .reveal-row[hidden] { display: none; }
+
+  .done {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .done h2 { font-size: 1.4rem; margin: 12px 0; }
+  .done p { color: var(--fg-muted); }
+  .done button {
+    margin-top: 18px;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #0c1018;
+    font-weight: 600;
+    border: none; border-radius: 8px; cursor: pointer; font-family: inherit;
+  }
+
+  footer {
+    margin-top: 32px;
+    color: var(--fg-muted);
+    font-size: 0.78rem;
+    text-align: center;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 540px) {
+    .actions { grid-template-columns: repeat(2, 1fr); }
+    .card { min-height: 240px; }
+    .card-content { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Training, inference and RAG</h1>
+      <div class="subtitle" id="subtitle">Click the card to flip — then rate how well you knew it.</div>
+    </div>
+  </header>
+
+  <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+  <div class="stats">
+    <span>Due today: <b id="stat-due">0</b></span>
+    <span>Reviewed: <b id="stat-reviewed">0</b></span>
+    <span>Total cards: <b id="stat-total">0</b></span>
+    <span>Streak: <b id="stat-streak">0</b></span>
+  </div>
+
+  <div id="study-area">
+    <div class="card-stack" id="card-stack">
+      <div class="card" id="card" onclick="flipCard()">
+        <div class="card-face card-front">
+          <div class="card-label">Question</div>
+          <div class="card-content" id="card-front-content"></div>
+          <div class="hint">Click to reveal</div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-label">Answer</div>
+          <div class="card-content" id="card-back-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal-row" id="reveal-row">
+      <button class="btn-reveal" onclick="flipCard()">Show answer (or press Space)</button>
+    </div>
+
+    <div class="actions" id="actions" hidden>
+      <button class="btn-again" onclick="rate('again')">Again<span class="interval" id="int-again"></span></button>
+      <button class="btn-hard"  onclick="rate('hard')">Hard<span class="interval" id="int-hard"></span></button>
+      <button class="btn-good"  onclick="rate('good')">Good<span class="interval" id="int-good"></span></button>
+      <button class="btn-easy"  onclick="rate('easy')">Easy<span class="interval" id="int-easy"></span></button>
+    </div>
+  </div>
+
+  <div id="done-area" class="done" hidden>
+    <h2>All caught up</h2>
+    <p id="done-msg"></p>
+    <button onclick="resetSession()">Review extras</button>
+    <button onclick="clearProgress()" style="background: var(--bg-card); color: var(--fg); border: 1px solid var(--border); margin-left: 8px;">Reset all progress</button>
+  </div>
+
+  <footer>
+    <span id="storage-info"></span>
+  </footer>
+</div>
+
+<script>
+// =========================================
+// Card data — injected at generation time.
+// =========================================
+const CARDS = [{"front": "Training: what changes, and how?", "back": "Parameters change through optimisation using prediction error from examples. The model itself changes. (§1.2)"}, {"front": "Ordinary inference: what changes when you add a definition to the prompt?", "back": "The information available in context changes; ordinary inference uses fixed parameters. Using the definition does not demonstrate training. (§1.2)"}, {"front": "RAG: what does retrieval add, and what does it not guarantee?", "back": "Selected external passages become context while model parameters remain fixed. Retrieval or interpretation can fail; a citation alone does not establish correctness. (§§1.2, 1.7)"}];
+const DECK_ID = "04241633960a28cc";
+
+// =========================================
+// Simple SM-2-inspired scheduler (with localStorage).
+// State per card: { ef, interval, due, reps, lapses }
+// =========================================
+const STORAGE_KEY = `flashcards:${DECK_ID}`;
+const STREAK_KEY  = `flashcards-streak:${DECK_ID}`;
+
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    return s;
+  } catch (e) { return {}; }
+}
+function saveState(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+function todayDate() { return new Date().toISOString().slice(0,10); }
+function daysFromNow(n) {
+  const d = new Date();
+  d.setDate(d.getDate() + n);
+  return d.toISOString().slice(0,10);
+}
+
+function getCardState(idx) {
+  const s = loadState();
+  return s[idx] || { ef: 2.5, interval: 0, due: todayDate(), reps: 0, lapses: 0 };
+}
+function setCardState(idx, cs) {
+  const s = loadState();
+  s[idx] = cs;
+  saveState(s);
+}
+
+function nextIntervals(cs) {
+  // Show user the projected interval for each rating.
+  const ef = cs.ef;
+  return {
+    again: 0,
+    hard: Math.max(1, Math.round(cs.interval * 1.2)),
+    good: cs.interval === 0 ? 1 : (cs.interval === 1 ? 3 : Math.round(cs.interval * ef)),
+    easy: cs.interval === 0 ? 3 : Math.round(cs.interval * ef * 1.5),
+  };
+}
+
+function applyRating(cs, rating) {
+  const next = { ...cs };
+  switch (rating) {
+    case "again":
+      next.lapses += 1;
+      next.interval = 0;
+      next.ef = Math.max(1.3, next.ef - 0.2);
+      next.due = todayDate();
+      break;
+    case "hard":
+      next.interval = Math.max(1, Math.round(cs.interval * 1.2));
+      next.ef = Math.max(1.3, next.ef - 0.15);
+      next.due = daysFromNow(next.interval);
+      break;
+    case "good":
+      next.interval = cs.interval === 0 ? 1 : (cs.interval === 1 ? 3 : Math.round(cs.interval * cs.ef));
+      next.due = daysFromNow(next.interval);
+      break;
+    case "easy":
+      next.interval = cs.interval === 0 ? 3 : Math.round(cs.interval * cs.ef * 1.5);
+      next.ef = next.ef + 0.15;
+      next.due = daysFromNow(next.interval);
+      break;
+  }
+  next.reps += 1;
+  return next;
+}
+
+// =========================================
+// Session management
+// =========================================
+let queue = [];
+let currentIdx = null;
+let reviewedThisSession = 0;
+let revealed = false;
+
+function buildQueue() {
+  const today = todayDate();
+  const due = [];
+  for (let i = 0; i < CARDS.length; i++) {
+    const cs = getCardState(i);
+    if (cs.due <= today) due.push(i);
+  }
+  // Shuffle for variety
+  for (let i = due.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [due[i], due[j]] = [due[j], due[i]];
+  }
+  return due;
+}
+
+function showCard(idx) {
+  currentIdx = idx;
+  revealed = false;
+  const card = CARDS[idx];
+  document.getElementById("card-front-content").innerHTML = renderMd(card.front);
+  document.getElementById("card-back-content").innerHTML = renderMd(card.back);
+  document.getElementById("card").classList.remove("flipped");
+  document.getElementById("reveal-row").hidden = false;
+  document.getElementById("actions").hidden = true;
+  // Update interval projections
+  const cs = getCardState(idx);
+  const proj = nextIntervals(cs);
+  document.getElementById("int-again").textContent = "<10m";
+  document.getElementById("int-hard").textContent  = `${proj.hard}d`;
+  document.getElementById("int-good").textContent  = `${proj.good}d`;
+  document.getElementById("int-easy").textContent  = `${proj.easy}d`;
+}
+
+function flipCard() {
+  if (currentIdx === null) return;
+  if (!revealed) {
+    document.getElementById("card").classList.add("flipped");
+    document.getElementById("reveal-row").hidden = true;
+    document.getElementById("actions").hidden = false;
+    revealed = true;
+  }
+}
+
+function rate(rating) {
+  if (currentIdx === null || !revealed) return;
+  const cs = getCardState(currentIdx);
+  const next = applyRating(cs, rating);
+  setCardState(currentIdx, next);
+  reviewedThisSession += 1;
+  if (rating === "again") {
+    queue.push(currentIdx);
+  }
+  updateStats();
+  advance();
+}
+
+function advance() {
+  while (queue.length > 0) {
+    const idx = queue.shift();
+    const cs = getCardState(idx);
+    if (cs.due <= todayDate() || queue.includes(idx)) {
+      showCard(idx);
+      return;
+    }
+  }
+  showDone();
+}
+
+function showDone() {
+  document.getElementById("study-area").hidden = true;
+  document.getElementById("done-area").hidden = false;
+  const msg = `You reviewed ${reviewedThisSession} card${reviewedThisSession===1?"":"s"} today. Come back tomorrow to keep your streak.`;
+  document.getElementById("done-msg").textContent = msg;
+  bumpStreak();
+}
+
+function resetSession() {
+  // Build a queue of all cards regardless of due date
+  queue = [];
+  for (let i = 0; i < CARDS.length; i++) queue.push(i);
+  for (let i = queue.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [queue[i], queue[j]] = [queue[j], queue[i]];
+  }
+  document.getElementById("done-area").hidden = true;
+  document.getElementById("study-area").hidden = false;
+  reviewedThisSession = 0;
+  updateStats();
+  advance();
+}
+
+function clearProgress() {
+  if (!confirm("Clear all progress for this deck?")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STREAK_KEY);
+  location.reload();
+}
+
+function updateStats() {
+  document.getElementById("stat-total").textContent = CARDS.length;
+  document.getElementById("stat-reviewed").textContent = reviewedThisSession;
+  const today = todayDate();
+  let due = 0;
+  for (let i = 0; i < CARDS.length; i++) {
+    const cs = getCardState(i);
+    if (cs.due <= today) due += 1;
+  }
+  document.getElementById("stat-due").textContent = due;
+  const total = CARDS.length;
+  const reviewed = reviewedThisSession;
+  document.getElementById("progress-bar").style.width = `${total === 0 ? 0 : Math.min(100, (reviewed / Math.max(1, due + reviewed)) * 100)}%`;
+  // Streak
+  const streak = parseInt(localStorage.getItem(STREAK_KEY) || "0", 10);
+  document.getElementById("stat-streak").textContent = streak;
+}
+
+function bumpStreak() {
+  const lastKey = STREAK_KEY + ":last";
+  const last = localStorage.getItem(lastKey);
+  const today = todayDate();
+  if (last === today) return;
+  let streak = parseInt(localStorage.getItem(STREAK_KEY) || "0", 10);
+  const yesterday = daysFromNow(-1);
+  if (last === yesterday) streak += 1;
+  else if (last !== today) streak = 1;
+  localStorage.setItem(STREAK_KEY, streak.toString());
+  localStorage.setItem(lastKey, today);
+  document.getElementById("stat-streak").textContent = streak;
+}
+
+// Tiny markdown rendering: code fences, inline code, line breaks.
+function renderMd(text) {
+  if (text == null) return "";
+  let html = String(text);
+  html = html.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  // Code fences
+  html = html.replace(/```([a-zA-Z0-9]*)\n([\s\S]*?)```/g, (m, lang, code) =>
+    `<pre><code>${code.replace(/\n$/, "")}</code></pre>`);
+  // Inline code
+  html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
+  // Bold
+  html = html.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  // Italic
+  html = html.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, "<i>$1</i>");
+  // Line breaks for non-code regions
+  html = html.replace(/\n/g, "<br>");
+  return html;
+}
+
+// Keyboard shortcuts
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  if (e.code === "Space" || e.key === "Enter") {
+    e.preventDefault();
+    if (!revealed) flipCard();
+    return;
+  }
+  if (!revealed) return;
+  if (e.key === "1") rate("again");
+  if (e.key === "2") rate("hard");
+  if (e.key === "3") rate("good");
+  if (e.key === "4") rate("easy");
+});
+
+// Init
+function init() {
+  document.getElementById("storage-info").textContent =
+    "Progress saved locally to your browser. Press 1/2/3/4 = Again/Hard/Good/Easy. Space to flip.";
+  queue = buildQueue();
+  updateStats();
+  if (queue.length === 0) {
+    showDone();
+    document.getElementById("done-msg").textContent = "No cards due today. Come back tomorrow, or click below to review extras.";
+  } else {
+    advance();
+  }
+}
+init();
+</script>
+<footer><a href="../../booklet-genai/lettura.html">Source: workshop book §§1.2 and 1.7</a></footer></body>
+</html>

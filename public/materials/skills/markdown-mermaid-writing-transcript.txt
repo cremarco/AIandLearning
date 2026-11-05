@@ -1,0 +1,66 @@
+markdown-mermaid-writing — recorded chapter test
+
+SOURCE
+Original workshop book, sections 1.2, 1.7.
+
+SELECTED SKILL
+markdown-mermaid-writing
+
+ORIGINAL REQUEST
+Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.
+
+00:00:00.000 The rendered diagram and its text alternative use the same chapter sections.
+00:00:06.456 The source-linked diagram is inspected at the common 1440 × 900 viewport.
+00:00:12.879 The generated Mermaid source remains editable.
+
+OBSERVED RESULT
+Produced a rendered eight-node Mermaid flowchart, accessible title and description, text alternative and section references. The code editor opens.
+
+RECORDED CONVERSATION / GENERATED FILE
+Hai detto:
+Fondamenti_GenAI_Cremaschi(4).pdf
+PDF
+
+markdown mermaid writing Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.
+
+Ha lavorato per 27s
+ChatGPT ha detto:
+
+Andrea can edit the node labels and arrow text directly. 8 nodes; references point to the book’s sections.
+
+Training examples (§1.2)
+Prediction error
+Changed model
+Ordinary inference: input andcontext (§1.2)
+Calculations with fixed modelparameters
+Generated output (§1.7)
+RAG: question (§1.7)
+Selected external passages
+Compare predictions withexample tokens
+Optimisation changesparameters
+Context can change;parameters stay fixed
+Append tokens; parametersstay fixed
+Search documents and selectpassages
+Add to context; parametersstay fixed
+
+Text alternative: Training changes parameters through optimisation (§1.2). Ordinary inference uses the current input and context with fixed parameters (§1.2). RAG retrieves external passages for that context; it does not update model weights or guarantee correctness (§1.7).
+
+Source: Workshop book, §1.2, pp. 5–6; §1.7, pp. 13–14.
+
+ChatGPT può commettere errori. Verifica le informazioni importanti.
+Ultima risposta
+
+
+
+
+GPT-6.1 Sol
+Light
+Nessuno
+Minimo
+Light
+Medio
+Alto
+Molto alto
+Massimo
+Ultra
+Persistente

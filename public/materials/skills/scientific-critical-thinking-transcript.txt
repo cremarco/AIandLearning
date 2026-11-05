@@ -1,0 +1,51 @@
+scientific-critical-thinking — recorded chapter test
+
+SOURCE
+Original workshop book, sections 1.2, 1.6, 1.7.
+
+SELECTED SKILL
+scientific-critical-thinking
+
+ORIGINAL REQUEST
+Using only the attached workshop book, review Andrea’s explanation: "Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge." Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.
+
+00:00:00.000 Andrea’s three statements are submitted with the original book as the evidence source.
+00:00:06.496 The generated table checks each claim against §§1.2, 1.6 and 1.7.
+00:00:14.995 The critique ends with an independent question about separating context and temperature effects.
+
+OBSERVED RESULT
+Checked all three claims against §§1.2, 1.6 and 1.7, gave specific corrections and ended with an independent question about isolating context and temperature effects.
+
+RECORDED CONVERSATION / GENERATED FILE
+Hai detto:
+Fondamenti_GenAI_Cremaschi(5).pdf
+PDF
+
+scientific critical thinking Using only the attached workshop book, review Andrea’s explanation: "Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge." Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.
+
+Ha lavorato per 19s
+ChatGPT ha detto:
+Claim	Verdict	Chapter evidence	Correction
+“Adding the chapter to a prompt updates model weights.”	Incorrect for ordinary inference.	§1.2 distinguishes optimisation that updates parameters from new messages that change available context. §1.7 says documents can supply information without changing weights.	Adding the chapter changes the context. Using its information does not establish that weights changed. Any later service use of data is a separate matter (§1.2).
+“RAG retrieves passages and therefore guarantees a correct answer.”	Retrieval is described correctly; the guarantee is contradicted.	§1.7 states that retrieval can fail, select irrelevant passages, or supply material that the response misinterprets.	RAG supplies selected passages to generation. Correctness remains unestablished until the generated claim is checked against supporting evidence; a link alone is insufficient (§1.7).
+“Increasing temperature adds knowledge.”	Explicitly contradicted.	§1.6 states that, with logits fixed, higher temperature makes the token distribution more uniform; it adds no knowledge and does not retrain the model.	Temperature changes probabilities used for token selection. It does not establish greater knowledge, truthfulness, or originality in an individual answer (§1.6).
+
+Independent question: Andrea, if an answer changes after you add a chapter passage and raise temperature, how would you isolate each intervention’s effect, and what could you conclude about weights and correctness?
+
+ChatGPT può commettere errori. Verifica le informazioni importanti.
+Ultima risposta
+
+
+
+
+GPT-6.1 Sol
+Light
+Nessuno
+Minimo
+Light
+Medio
+Alto
+Molto alto
+Massimo
+Ultra
+Persistente

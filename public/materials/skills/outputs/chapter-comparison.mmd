@@ -1,0 +1,21 @@
+flowchart TB
+    accTitle: Training, Ordinary Inference and RAG
+    accDescr: Training updates model parameters using prediction error. Ordinary inference keeps parameters fixed; RAG retrieves passages that change the available context while model parameters remain fixed.
+
+
+    examples["Training examples (§1.2)"]
+    error["Prediction error"]
+    changed_model["Changed model"]
+    input["Ordinary inference: input and context (§1.2)"]
+    fixed_model["Calculations with fixed model parameters"]
+    output["Generated output (§1.7)"]
+    question["RAG: question (§1.7)"]
+    passages["Selected external passages"]
+
+
+    examples -->|"Compare predictions with example tokens"| error
+    error -->|"Optimisation changes parameters"| changed_model
+    input -->|"Context can change; parameters stay fixed"| fixed_model
+    fixed_model -->|"Append tokens; parameters stay fixed"| output
+    question -->|"Search documents and select passages"| passages
+    passages -->|"Add to context; parameters stay fixed"| fixed_model

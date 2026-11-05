@@ -1,0 +1,23 @@
+flashcard-generator — recorded chapter test
+
+SOURCE
+Original workshop book, sections 1.2, 1.7.
+
+SELECTED SKILL
+flashcard-generator
+
+ORIGINAL REQUEST
+Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.
+
+00:00:00.000 The original request selects Flashcard Generator and attaches the workshop book.
+00:00:06.460 Exactly three cards are inspected in the generated text file, each with a chapter reference.
+
+OBSERVED RESULT
+Created and downloaded a text file containing exactly three Question | Answer pairs. Each answer is under 30 words and cites §1.2 or §1.7.
+
+RECORDED CONVERSATION / GENERATED FILE
+Generated text file:
+
+How do training and ordinary inference differ in their use of model parameters? | Training updates parameters through optimisation to reduce prediction error. Ordinary inference calculates outputs using fixed, already available parameters. (§1.2)
+When Andrea adds a new definition to a prompt, what changes, and what does using that definition demonstrate about model weights? | The definition changes the context available to current inference. Using it does not demonstrate that model weights have changed. (§1.2)
+How does retrieval-augmented generation (RAG) supply new information without a parameter update? | RAG retrieves selected document passages and supplies them as generation context. The consulted collection and model parameters are distinct components, so weights can remain unchanged. (§1.7)

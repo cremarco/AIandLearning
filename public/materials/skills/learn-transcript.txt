@@ -1,0 +1,62 @@
+learn — recorded chapter test
+
+SOURCE
+Original workshop book, sections 1.2, 1.7.
+
+SELECTED SKILL
+learn
+
+ORIGINAL REQUEST
+I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.
+
+00:00:00.000 The imported Learn skill receives the original chapter and asks Andrea to explain what changed.
+00:00:06.642 Andrea’s misconception receives feedback grounded in §1.2 and a RAG transfer question from §1.7.
+
+OBSERVED RESULT
+Asked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.
+
+RECORDED CONVERSATION / GENERATED FILE
+Hai detto:
+Fondamenti_GenAI_Cremaschi(2).pdf
+PDF
+
+learn I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.
+
+Ha lavorato per 13s
+ChatGPT ha detto:
+
+Andrea, suppose you add “In this chapter, X means Y” to a prompt, and the model then uses that definition correctly. What do you think changed inside the system, and why does that explain its answer? (§1.2)
+
+Hai detto:
+I think its weights changed because it learned the new definition from my message.
+ChatGPT ha detto:
+
+You’ve identified that the message affects the answer, but using new information does not mean updating weights. Your definition becomes part of the conversation context. Ordinary inference uses that context with fixed parameters; training uses prediction error and optimisation to change parameters. (§1.2)
+
+Suppose a RAG system retrieves a page containing the same definition and supplies it as context. Would that require changing the model’s weights? (§1.7)
+
+Hai detto:
+No. RAG supplies retrieved passages as context to ordinary inference. The weights stay fixed. Training or fine-tuning changes parameters through optimisation. Adding a definition changes the available context, not the parameters.
+ChatGPT ha detto:
+
+That’s correct. You’ve separated changes to context from changes to parameters: training changes parameters; ordinary inference uses fixed parameters; RAG supplies retrieved passages as context. (§§1.2, 1.7)
+
+One final transfer check: a RAG system retrieves a recent document and gives an incorrect answer. Does the document’s recency establish that the answer is correct? Explain one way the process could fail. (§1.7)
+
+ChatGPT può commettere errori. Verifica le informazioni importanti.
+Ultima risposta
+
+
+
+
+GPT-6.1 Sol
+Light
+Nessuno
+Minimo
+Light
+Medio
+Alto
+Molto alto
+Massimo
+Ultra
+Persistente

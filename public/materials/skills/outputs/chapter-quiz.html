@@ -1,0 +1,515 @@
+<!--
+HTML template from toddward/the-learning-skill, revision 764f77764e9a731f74da297a4963959670e80e03.
+MIT License
+
+Copyright (c) 2026 Wm. Todd Wardzinski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Training, inference and RAG — Quiz</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --bg-card: #1a1d24;
+    --bg-card-back: #1f242c;
+    --fg: #e8eaed;
+    --fg-muted: #9aa1ad;
+    --accent: #7aa2f7;
+    --good: #5eb87f;
+    --bad: #f77a7a;
+    --warn: #f7c97a;
+    --border: #262b34;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  .app {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 18px;
+  }
+  h1 { font-size: 1.15rem; font-weight: 600; margin: 0; }
+  .subtitle { color: var(--fg-muted); font-size: 0.85rem; }
+  .progress { height: 4px; background: var(--border); border-radius: 999px; margin-bottom: 22px; overflow: hidden; }
+  .progress-bar { height: 100%; background: var(--accent); width: 0%; transition: width 240ms ease; }
+
+  .qcard {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 26px;
+    margin-bottom: 18px;
+  }
+  .q-meta {
+    color: var(--fg-muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    display: flex; justify-content: space-between;
+  }
+  .q-text {
+    font-size: 1.1rem;
+    color: var(--fg);
+    margin-bottom: 22px;
+  }
+  .q-text code {
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.95em;
+  }
+  .q-text pre {
+    background: rgba(0,0,0,0.35);
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+  }
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+    cursor: pointer;
+    transition: background 120ms, border-color 120ms;
+  }
+  .option:hover { background: rgba(255,255,255,0.05); }
+  .option.selected { border-color: var(--accent); background: rgba(122,162,247,0.08); }
+  .option.correct { border-color: var(--good); background: rgba(94,184,127,0.12); }
+  .option.incorrect { border-color: var(--bad); background: rgba(247,122,122,0.10); }
+  .option .marker {
+    flex: 0 0 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--fg-muted);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; color: var(--fg-muted); font-weight: 700;
+    margin-top: 1px;
+  }
+  .option.selected .marker { border-color: var(--accent); color: var(--accent); }
+  .option.correct .marker { border-color: var(--good); color: var(--good); }
+  .option.incorrect .marker { border-color: var(--bad); color: var(--bad); }
+  .option .text { flex: 1; }
+
+  .text-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+    color: var(--fg);
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 80px;
+  }
+  .text-input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+  .row {
+    display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;
+  }
+  button {
+    padding: 11px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-card);
+    color: var(--fg);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 80ms, background 120ms;
+  }
+  button:hover:not(:disabled) { transform: translateY(-1px); }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  button.primary { background: var(--accent); color: #0c1018; font-weight: 600; border-color: var(--accent); }
+  button.primary:hover:not(:disabled) { filter: brightness(1.05); }
+  button.success { background: var(--good); color: #0c1018; font-weight: 600; border-color: var(--good); }
+  button.danger { background: var(--bad); color: #0c1018; font-weight: 600; border-color: var(--bad); }
+
+  .feedback {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid var(--accent);
+  }
+  .feedback.correct { border-left-color: var(--good); background: rgba(94,184,127,0.08); }
+  .feedback.incorrect { border-left-color: var(--bad); background: rgba(247,122,122,0.08); }
+  .feedback .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-muted); margin-bottom: 6px; font-weight: 600; }
+  .feedback .label.correct { color: var(--good); }
+  .feedback .label.incorrect { color: var(--bad); }
+  .feedback .text { font-size: 0.95rem; }
+
+  .results {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .results h2 { font-size: 1.6rem; margin: 16px 0 8px; }
+  .results .score {
+    font-size: 3rem; font-weight: 700; color: var(--accent); margin: 8px 0;
+  }
+  .results .breakdown {
+    margin: 18px auto; max-width: 520px;
+    background: var(--bg-card); border-radius: 12px; padding: 18px 20px;
+    border: 1px solid var(--border); text-align: left;
+  }
+  .results .breakdown h3 { font-size: 0.85rem; text-transform: uppercase; color: var(--fg-muted); margin: 0 0 10px; }
+  .results .breakdown ol { margin: 0; padding: 0 0 0 20px; }
+  .results .breakdown li { margin-bottom: 6px; font-size: 0.92rem; }
+  .results .breakdown li.wrong { color: var(--fg); }
+  .results .breakdown li.right { color: var(--fg-muted); }
+  .results .breakdown li.wrong b { color: var(--bad); }
+  .results .breakdown li.right b { color: var(--good); }
+
+  footer { margin-top: 32px; color: var(--fg-muted); font-size: 0.78rem; text-align: center; }
+
+  @media (max-width: 540px) {
+    .q-text { font-size: 1rem; }
+    .row { flex-direction: column; }
+    .row button { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Training, inference and RAG</h1>
+      <div class="subtitle" id="subtitle"></div>
+    </div>
+    <button onclick="restart()" id="restart-btn" style="display:none;">Restart</button>
+  </header>
+
+  <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+  <div id="quiz-area"></div>
+
+  <div id="results-area" class="results" hidden></div>
+
+  <footer id="footer-info">Progress saved locally to your browser.</footer>
+</div>
+
+<script>
+// =========================================
+// Quiz data — injected at generation time.
+// Each question has:
+//   { type: "mcq"|"true_false"|"short_answer",
+//     question: "...",
+//     options: ["A","B","C","D"]   // for mcq
+//     answer: index|true/false|"text",
+//     accept_aliases: ["..."],     // for short_answer (case-insensitive contains)
+//     explanation: "..." }
+// =========================================
+const QUIZ = [{"type": "short_answer", "question": "What does optimisation update during training?", "answer": "parameters", "accept_aliases": ["weights", "model parameters"], "explanation": "Optimisation updates numerical parameters to reduce aggregate prediction error. (§1.2)"}, {"type": "true_false", "question": "Correctly using a definition in your prompt proves that the model was trained on that message.", "answer": false, "explanation": "The definition can influence the answer through context while ordinary inference keeps parameters fixed. (§1.2)"}, {"type": "short_answer", "question": "Explain RAG, then name one reason its answer may be wrong. Say your answer aloud before revealing the model answer.", "answer": "Retrieval supplies passages as context to a fixed model; retrieval may select irrelevant passages or the response may misinterpret them.", "explanation": "Self-assess the meaning, not exact wording: identify retrieved context, fixed parameters and one failure mode. Check the cited passage against the answer. (§§1.2, 1.7)"}];
+const QUIZ_ID = "04241633960a28cc";
+const STORAGE_KEY = `quiz:${QUIZ_ID}`;
+
+let state = {
+  currentIdx: 0,
+  responses: [],   // {questionIdx, answer, correct}
+  startTime: Date.now(),
+  finished: false,
+};
+
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+    if (s && Array.isArray(s.responses)) state = s;
+  } catch (e) {}
+}
+function saveState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+function renderMd(text) {
+  if (text == null) return "";
+  let html = String(text);
+  html = html.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  html = html.replace(/```([a-zA-Z0-9]*)\n([\s\S]*?)```/g, (m, lang, code) =>
+    `<pre><code>${code.replace(/\n$/, "")}</code></pre>`);
+  html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
+  html = html.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  html = html.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, "<i>$1</i>");
+  html = html.replace(/\n/g, "<br>");
+  return html;
+}
+
+function renderQuestion() {
+  const idx = state.currentIdx;
+  const q = QUIZ[idx];
+  const total = QUIZ.length;
+  document.getElementById("progress-bar").style.width = `${(idx / total) * 100}%`;
+  document.getElementById("subtitle").textContent = `Question ${idx+1} of ${total}`;
+  const qa = document.getElementById("quiz-area");
+
+  const responded = state.responses.find(r => r.questionIdx === idx);
+
+  if (q.type === "mcq" || q.type === "true_false") {
+    const opts = q.type === "true_false" ? ["True", "False"] : q.options;
+    qa.innerHTML = `
+      <div class="qcard">
+        <div class="q-meta"><span>${q.type === "true_false" ? "True / False" : "Multiple choice"}</span><span>#${idx+1}</span></div>
+        <div class="q-text">${renderMd(q.question)}</div>
+        <div class="options" id="options">
+          ${opts.map((opt, i) => `
+            <div class="option" data-i="${i}" onclick="selectOption(${i})">
+              <div class="marker">${String.fromCharCode(65+i)}</div>
+              <div class="text">${renderMd(opt)}</div>
+            </div>
+          `).join("")}
+        </div>
+        <div class="row">
+          <button class="primary" id="submit-btn" onclick="submitChoice()" disabled>Submit</button>
+          <button onclick="prev()" ${idx === 0 ? "disabled" : ""}>Back</button>
+        </div>
+        <div id="feedback"></div>
+      </div>
+    `;
+
+    if (responded) {
+      // Restore previous response
+      const sel = document.querySelector(`.option[data-i="${responded.answer}"]`);
+      const correctIdx = q.type === "true_false" ? (q.answer ? 0 : 1) : q.answer;
+      document.querySelectorAll(".option").forEach((el, i) => {
+        if (i === correctIdx) el.classList.add("correct");
+        if (i === responded.answer && responded.answer !== correctIdx) el.classList.add("incorrect");
+        el.style.pointerEvents = "none";
+      });
+      document.getElementById("submit-btn").style.display = "none";
+      showFeedback(responded.correct, q.explanation);
+      addNextButton();
+    }
+  } else if (q.type === "short_answer") {
+    qa.innerHTML = `
+      <div class="qcard">
+        <div class="q-meta"><span>Short answer</span><span>#${idx+1}</span></div>
+        <div class="q-text">${renderMd(q.question)}</div>
+        <textarea class="text-input" id="text-answer" placeholder="Type your answer here..."></textarea>
+        <div class="row">
+          <button class="primary" id="submit-btn" onclick="submitText()">Submit</button>
+          <button onclick="prev()" ${idx === 0 ? "disabled" : ""}>Back</button>
+          <button onclick="skipShortAnswer()" id="skip-btn">I don't know</button>
+        </div>
+        <div id="feedback"></div>
+      </div>
+    `;
+    if (responded) {
+      document.getElementById("text-answer").value = responded.answer || "";
+      document.getElementById("text-answer").disabled = true;
+      document.getElementById("submit-btn").style.display = "none";
+      document.getElementById("skip-btn").style.display = "none";
+      showFeedback(responded.correct, q.explanation, q.answer);
+      addNextButton();
+    }
+  }
+}
+
+function selectOption(i) {
+  document.querySelectorAll(".option").forEach((el, j) => {
+    el.classList.toggle("selected", j === i);
+  });
+  document.getElementById("submit-btn").disabled = false;
+  document.getElementById("submit-btn").dataset.choice = i;
+}
+
+function submitChoice() {
+  const idx = state.currentIdx;
+  const q = QUIZ[idx];
+  const choice = parseInt(document.getElementById("submit-btn").dataset.choice, 10);
+  const correctIdx = q.type === "true_false" ? (q.answer ? 0 : 1) : q.answer;
+  const correct = choice === correctIdx;
+  state.responses = state.responses.filter(r => r.questionIdx !== idx);
+  state.responses.push({ questionIdx: idx, answer: choice, correct });
+  saveState();
+  document.querySelectorAll(".option").forEach((el, i) => {
+    if (i === correctIdx) el.classList.add("correct");
+    if (i === choice && choice !== correctIdx) el.classList.add("incorrect");
+    el.style.pointerEvents = "none";
+  });
+  document.getElementById("submit-btn").style.display = "none";
+  showFeedback(correct, q.explanation);
+  addNextButton();
+}
+
+function submitText() {
+  const idx = state.currentIdx;
+  const q = QUIZ[idx];
+  const userText = document.getElementById("text-answer").value.trim();
+  if (!userText) return;
+  const expected = (q.answer || "").toLowerCase();
+  const aliases = (q.accept_aliases || []).map(a => a.toLowerCase());
+  const userLower = userText.toLowerCase();
+  // Permissive matching: user response contains expected, or user matches alias
+  let correct = userLower.includes(expected) && expected.length > 0;
+  if (!correct && aliases.length) {
+    correct = aliases.some(a => userLower.includes(a));
+  }
+  state.responses = state.responses.filter(r => r.questionIdx !== idx);
+  state.responses.push({ questionIdx: idx, answer: userText, correct });
+  saveState();
+  document.getElementById("text-answer").disabled = true;
+  document.getElementById("submit-btn").style.display = "none";
+  document.getElementById("skip-btn").style.display = "none";
+  showFeedback(correct, q.explanation, q.answer);
+  addNextButton();
+}
+
+function skipShortAnswer() {
+  const idx = state.currentIdx;
+  const q = QUIZ[idx];
+  state.responses = state.responses.filter(r => r.questionIdx !== idx);
+  state.responses.push({ questionIdx: idx, answer: "(skipped)", correct: false });
+  saveState();
+  document.getElementById("text-answer").disabled = true;
+  document.getElementById("text-answer").value = "(skipped)";
+  document.getElementById("submit-btn").style.display = "none";
+  document.getElementById("skip-btn").style.display = "none";
+  showFeedback(false, q.explanation, q.answer);
+  addNextButton();
+}
+
+function showFeedback(correct, explanation, expected) {
+  const fb = document.getElementById("feedback");
+  if (!fb) return;
+  let inner = "";
+  if (correct) {
+    inner = `<div class="feedback correct">
+      <div class="label correct">Correct</div>
+      <div class="text">${renderMd(explanation || "Nice.")}</div>
+    </div>`;
+  } else {
+    let answerLine = "";
+    if (expected) answerLine = `<div style="margin-top:8px;"><b>Expected:</b> ${renderMd(expected)}</div>`;
+    inner = `<div class="feedback incorrect">
+      <div class="label incorrect">Not quite</div>
+      <div class="text">${renderMd(explanation || "")}${answerLine}</div>
+    </div>`;
+  }
+  fb.innerHTML = inner;
+}
+
+function addNextButton() {
+  const row = document.querySelector(".row");
+  if (!row) return;
+  const isLast = state.currentIdx === QUIZ.length - 1;
+  const next = document.createElement("button");
+  next.className = "primary";
+  next.textContent = isLast ? "See results" : "Next";
+  next.onclick = isLast ? finish : advance;
+  row.appendChild(next);
+}
+
+function advance() {
+  state.currentIdx += 1;
+  saveState();
+  renderQuestion();
+}
+function prev() {
+  if (state.currentIdx > 0) {
+    state.currentIdx -= 1;
+    saveState();
+    renderQuestion();
+  }
+}
+
+function finish() {
+  state.finished = true;
+  saveState();
+  document.getElementById("quiz-area").hidden = true;
+  document.getElementById("progress-bar").style.width = "100%";
+  document.getElementById("subtitle").textContent = "Results";
+  document.getElementById("restart-btn").style.display = "block";
+  const ra = document.getElementById("results-area");
+  ra.hidden = false;
+  const correctCount = state.responses.filter(r => r.correct).length;
+  const total = QUIZ.length;
+  const pct = Math.round((correctCount / total) * 100);
+  ra.innerHTML = `
+    <div class="score">${correctCount} / ${total}</div>
+    <h2>${pct}%</h2>
+    <p style="color:var(--fg-muted);">Time: ${Math.round((Date.now() - state.startTime) / 1000)}s</p>
+    <div class="breakdown">
+      <h3>Breakdown</h3>
+      <ol>
+        ${state.responses
+          .sort((a,b) => a.questionIdx - b.questionIdx)
+          .map(r => {
+            const q = QUIZ[r.questionIdx];
+            const cls = r.correct ? "right" : "wrong";
+            const marker = r.correct ? "<b>✓</b>" : "<b>✗</b>";
+            return `<li class="${cls}">${marker} ${renderMd(q.question.slice(0, 90))}${q.question.length > 90 ? "..." : ""}</li>`;
+          }).join("")}
+      </ol>
+    </div>
+    <div class="row" style="justify-content:center;">
+      <button class="primary" onclick="reviewWrong()">Review missed</button>
+      <button onclick="restart()">Restart all</button>
+    </div>
+  `;
+}
+
+function reviewWrong() {
+  const wrongIdx = state.responses.filter(r => !r.correct).map(r => r.questionIdx);
+  if (wrongIdx.length === 0) {
+    alert("Nothing to review — you got everything right.");
+    return;
+  }
+  state.responses = state.responses.filter(r => !wrongIdx.includes(r.questionIdx));
+  state.currentIdx = wrongIdx[0];
+  state.finished = false;
+  saveState();
+  document.getElementById("results-area").hidden = true;
+  document.getElementById("quiz-area").hidden = false;
+  document.getElementById("restart-btn").style.display = "none";
+  renderQuestion();
+}
+
+function restart() {
+  state = { currentIdx: 0, responses: [], startTime: Date.now(), finished: false };
+  saveState();
+  document.getElementById("results-area").hidden = true;
+  document.getElementById("quiz-area").hidden = false;
+  document.getElementById("restart-btn").style.display = "none";
+  renderQuestion();
+}
+
+// Init
+loadState();
+if (state.finished) finish();
+else renderQuestion();
+</script>
+<footer><a href="../../booklet-genai/lettura.html">Source: workshop book §§1.2 and 1.7</a></footer></body>
+</html>

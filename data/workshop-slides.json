@@ -3103,7 +3103,7 @@
     "comparison": [
       {
         "label": "ChatGPT",
-        "text": "Eligible Business, Enterprise, Healthcare and Edu accounts: Plugins → Skills. Workspace settings and availability apply."
+        "text": "Recorded here in ChatGPT web: Plugins → Skills → upload a package, then select it in Work mode. Availability depends on the account and workspace."
       },
       {
         "label": "Coding agents",
@@ -3113,27 +3113,175 @@
     "decision": "A shared file format does not guarantee identical tools, installation or results."
   },
   {
+    "id": "S53SKILLSTUDY",
+    "type": "workshop",
+    "kind": "skill-catalogue",
+    "section": "study",
+    "stage": "Reusable Agent Skills",
+    "title": "Skills for studying the same chapter",
+    "message": "Four reusable workflows, tested with Andrea’s assigned book.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "SKILL_LEARN",
+      "SKILL_LEARNING",
+      "SKILL_MERMAID",
+      "SKILL_FLASHCARD_GENERATOR"
+    ],
+    "skillIds": [
+      "learn",
+      "the-learning-skill",
+      "markdown-mermaid-writing",
+      "flashcard-generator"
+    ],
+    "decision": "Choose a support for the next learning action, then check its output."
+  },
+  {
+    "id": "S53SKILLLEARN",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Learn: explain before receiving feedback",
+    "message": "Andrea tests his understanding of training, inference and RAG.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_LEARN",
+      "SKILL_DEMO_LEARN"
+    ],
+    "prompt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Explain what changed before reading the feedback.",
+    "promptExcerpt": "Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer."
+  },
+  {
+    "id": "S53SKILLLEARNING",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Build a study kit after recall",
+    "message": "The same chapter becomes practice materials and two short reviews.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_LEARNING",
+      "SKILL_DEMO_THE_LEARNING_SKILL"
+    ],
+    "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Test the material and its controls before giving it to students.",
+    "promptExcerpt": "Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week."
+  },
+  {
+    "id": "S53SKILLMERMAID",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Compare the chapter in an editable diagram",
+    "message": "Training, ordinary inference and RAG retain distinct flows.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_MERMAID",
+      "SKILL_DEMO_MARKDOWN_MERMAID_WRITING"
+    ],
+    "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Check each arrow against the chapter, then explain the diagram independently.",
+    "promptExcerpt": "Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references."
+  },
+  {
+    "id": "S53SKILLFLASHCARDS",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Three questions to answer from memory",
+    "message": "The chapter becomes an importable text deck.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_FLASHCARD_GENERATOR",
+      "SKILL_DEMO_FLASHCARD_GENERATOR"
+    ],
+    "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Attempt each answer first; the text file is a deck, not an interactive app.",
+    "promptExcerpt": "Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer."
+  },
+  {
     "id": "S53SKILLRESEARCH",
     "type": "workshop",
     "kind": "skill-catalogue",
     "section": "study",
     "stage": "Reusable Agent Skills",
-    "title": "Skills for research and evidence",
-    "message": "K-Dense’s community workflows support different stages of research.",
+    "title": "Skills for evidence and references",
+    "message": "Check the chapter’s claims and its cited publications.",
     "body": [],
     "audience": "both",
     "sources": [
-      "SKILL_KDENSE",
-      "SKILL_CITATION_MANAGEMENT",
-      "SKILL_LITERATURE_REVIEW"
+      "BOOK_CHAPTER",
+      "SKILL_CRITICAL_THINKING",
+      "SKILL_CITATION_MANAGEMENT"
     ],
     "skillIds": [
-      "citation-management",
-      "literature-review",
-      "scientific-writing",
-      "peer-review"
+      "scientific-critical-thinking",
+      "citation-management"
     ],
-    "decision": "Source review confirms the workflow exists; it does not validate its scientific conclusions."
+    "decision": "Check a generated critique against the chapter; metadata alone does not verify a claim."
+  },
+  {
+    "id": "S53SKILLCRITICAL",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Check an explanation against the book",
+    "message": "Andrea’s draft contains three claims to verify.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_CRITICAL_THINKING",
+      "SKILL_DEMO_SCIENTIFIC_CRITICAL_THINKING"
+    ],
+    "prompt": "Using only the attached workshop book, review Andrea’s explanation: \"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\" Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "Use the chapter to check the critique as well as the original claim.",
+    "promptExcerpt": "\"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\""
+  },
+  {
+    "id": "S53SKILLCITATIONS",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Agent Skills · recorded chapter test",
+    "tool": "chatgpt",
+    "title": "Verify the book’s three technical references",
+    "message": "Check bibliographic identity before checking what a paper supports.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "BOOK_CHAPTER",
+      "SKILL_CITATION_MANAGEMENT",
+      "SKILL_DEMO_CITATION_MANAGEMENT"
+    ],
+    "prompt": "Verify only the three technical references listed in the attached workshop book: Vaswani et al. (2017), Attention Is All You Need, arXiv:1706.03762; Ouyang et al. (2022), Training language models to follow instructions with human feedback, arXiv:2203.02155; Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401. Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim. Answer in English.",
+    "promptLabel": "Tested request · excerpt",
+    "decision": "A matching reference identifies a paper; read its relevant passage before accepting a claim.",
+    "promptExcerpt": "Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim."
   },
   {
     "id": "S58COMPILER",

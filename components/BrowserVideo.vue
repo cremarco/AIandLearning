@@ -6,7 +6,7 @@ defineProps<{ media: SlideMedia }>()
 </script>
 
 <template>
-  <div class="mockup-browser browser-video">
+  <div class="mockup-browser browser-video" :class="{ 'browser-video-dark': media.darkFrame }">
     <div class="mockup-browser-toolbar">
       <div class="input browser-video-address">{{ media.source?.replace(/^https?:\/\//, '') }}</div>
     </div>

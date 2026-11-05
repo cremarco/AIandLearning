@@ -1,0 +1,80 @@
+the-learning-skill — recorded chapter test
+
+SOURCE
+Original workshop book, sections 1.2, 1.7.
+
+SELECTED SKILL
+the-learning-skill
+
+ORIGINAL REQUEST
+I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.
+
+00:00:00.000 The complete Learning Skill starts with the assigned book, Andrea’s goal and a short study budget.
+00:00:06.003 Andrea answers first; the chat then provides chapter-linked study files and two short review sessions.
+00:00:13.337 The corrected kit starts with three cards due out of three total cards.
+00:00:19.803 Reveal shows the answer, chapter reference and recall-rating controls.
+00:00:26.324 After Good, the next card appears and the due count falls from three to two.
+00:00:32.375 The quiz accepts a correct answer and explains it with a chapter reference.
+
+OBSERVED RESULT
+Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. Testing found a duplicated due-card count. A follow-up corrected it; reveal, Good → next card (3 due → 2), and quiz feedback were verified.
+
+RECORDED CONVERSATION / GENERATED FILE
+Hai detto:
+Fondamenti_GenAI_Cremaschi(3).pdf
+PDF
+
+the learning skill I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.
+
+Ha lavorato per 30s
+ChatGPT ha detto:
+
+Andrea, without looking at the book: when you add a definition to a prompt and the model uses it correctly, what has changed—and does that demonstrate training? (§§1.2, 1.7)
+
+Hai detto:
+The context changed. Ordinary inference uses fixed parameters, so using a definition in a prompt does not demonstrate training. RAG also supplies context; training updates parameters through optimisation. Please now make the compact kit from the book: notes, exactly three HTML flashcards, a short quiz and a file with two 5-minute reviews. Keep chapter references with the answers.
+Ha lavorato per 1min 59s
+ChatGPT ha detto:
+
+Correct—you distinguished changes to context from updates to parameters.
+
+Your kit uses only §§1.2 and 1.7, with chapter references beside answers:
+
+Notes
+Exactly three HTML flashcards
+Short quiz
+Two 5-minute reviews: 6 and 8 November
+Printable cheatsheet
+
+Try each recall task before revealing its answer.
+
+Hai detto:
+I tested flashcards.html. On the first view it showed Due today: 6 while Total cards: 3, then Due today became 3 after rating one card Good. Please inspect and fix the due-card counter so a card cannot be counted twice. Keep exactly the same three chapter-grounded cards and source references. Return the corrected HTML file.
+Ha lavorato per 42s
+ChatGPT ha detto:
+
+Fixed
+flashcards.html
+.
+
+The counter now counts each card once from its due date, without adding queue entries. Verified: initially 3, after Good: 2, and duplicate queue entries do not inflate it.
+
+The same three cards and all chapter and source references are preserved.
+
+ChatGPT può commettere errori. Verifica le informazioni importanti.
+Ultima risposta
+
+
+
+
+GPT-6.1 Sol
+Light
+Nessuno
+Minimo
+Light
+Medio
+Alto
+Molto alto
+Massimo
+Ultra
+Persistente
