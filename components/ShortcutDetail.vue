@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onScopeDispose, ref, watch } from 'vue'
-import { useNav } from '@slidev/client'
+import { computed, ref } from 'vue'
+import { useSlideVideo } from '../utils/slide-video'
 import type { Slide } from '../utils/deck'
 import { assetUrl } from '../utils/assets'
 import { getShortcutVideo } from '../utils/shortcut-videos'
@@ -9,11 +9,7 @@ import PromptBlock from './PromptBlock.vue'
 const props = defineProps<{ slide: Slide }>()
 const clip = computed(() => getShortcutVideo(props.slide.title))
 const video = ref<HTMLVideoElement>()
-const nav = useNav()
-watch(() => nav.currentSlideNo.value === props.slide.number && !nav.isPrintMode.value, active => {
-  if (!active) video.value?.pause()
-})
-onScopeDispose(() => video.value?.pause())
+useSlideVideo(video)
 </script>
 
 <template>
@@ -48,20 +44,20 @@ onScopeDispose(() => video.value?.pause())
 
 <style scoped>
 .shortcut-detail { display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.45fr); gap:40px; width:100%; height:100%; min-height:0; align-items:stretch; }
-.shortcut-detail-request { display:flex; flex-direction:column; justify-content:space-between; gap:24px; min-width:0; min-height:0; }
-.shortcut-detail-prompt { font-size:20px; }
-.shortcut-detail-prompt :deep(.prompt-label) { font-size:17px; margin-bottom:12px; }
-.shortcut-detail-prompt :deep(.chat-bubble) { padding:20px 24px; line-height:1.45; }
+.shortcut-detail-request { display:flex; flex-direction:column; justify-content:space-between; gap:16px; min-width:0; min-height:0; }
+.shortcut-detail-prompt { font-size:var(--deck-text-prompt); }
+.shortcut-detail-prompt :deep(.prompt-label) { font-size:var(--deck-text-label); margin-bottom:12px; }
+.shortcut-detail-prompt :deep(.chat-bubble) { padding:16px 24px; line-height:1.45; }
 .shortcut-detail-context { display:flex; flex-direction:column; gap:16px; padding-bottom:2px; }
 .slidev-layout .shortcut-detail .shortcut-detail-format { margin:0; font-size:18px; line-height:1.4; color:var(--deck-muted); }
 .shortcut-detail-links { display:flex; flex-wrap:wrap; gap:12px; font-size:17px; line-height:1.35; }
-.shortcut-detail-output { display:flex; flex-direction:column; gap:16px; min-width:0; min-height:0; }
+.shortcut-detail-output { display:grid; grid-template-rows:auto minmax(0,1fr); gap:16px; min-width:0; min-height:0; }
 .slidev-layout .shortcut-detail-output h2 { flex:none; margin:0; font-size:21px; line-height:1.25; font-weight:650; color:var(--deck-cyan); }
-.shortcut-detail-recording { display:flex; flex:1; align-items:center; justify-content:flex-start; min-height:0; margin:0; }
-.shortcut-detail-recording video,.shortcut-detail-recording img { display:block; width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; border-radius:12px; background:var(--deck-surface); }
+.shortcut-detail-recording { display:flex; justify-self:start; align-self:start; align-items:center; justify-content:center; width:auto; max-width:100%; height:100%; aspect-ratio:var(--deck-video-ratio); min-height:0; margin:0; overflow:hidden; border:1px solid var(--deck-line); border-radius:12px; background:var(--deck-surface); }
+.shortcut-detail-recording video,.shortcut-detail-recording img { display:block; width:100%; height:100%; min-height:0; object-fit:contain; background:var(--deck-surface); }
 .shortcut-detail-static { padding:0; min-width:0; min-height:0; align-self:start; }
 .shortcut-detail-static .chat-bubble { padding:24px 28px; border-radius:16px; }
-.slidev-layout .shortcut-detail .shortcut-detail-excerpt { margin:0; white-space:normal; font-size:21px; line-height:1.45; }
+.slidev-layout .shortcut-detail .shortcut-detail-excerpt { margin:0; white-space:normal; font-size:23px; line-height:1.4; }
 .shortcut-detail-recording .shortcut-detail-print-poster { display:none; }
 :global(.workshop-print) .shortcut-detail-recording .shortcut-detail-print-poster { display:block; }
 @media print { .shortcut-detail-recording video { display:none!important; } .shortcut-detail-recording .shortcut-detail-print-poster { display:block; } }

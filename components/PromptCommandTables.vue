@@ -26,7 +26,7 @@ const columns = computed(() => {
           <tr v-for="row in rows" :key="row.command">
             <th scope="row">
               <button v-if="getShortcutVideo(row.command)" class="btn btn-link command-video-trigger" type="button" :aria-label="`Play ${row.command} video`" @click.stop="player?.open(row.command)">
-                <CommandTag :text="row.command" /><span aria-hidden="true" class="command-video-icon">▶</span>
+                <CommandTag :text="row.command" /><svg aria-hidden="true" class="command-video-icon" viewBox="0 0 16 16"><path d="M5 3.5 12 8l-7 4.5Z" fill="currentColor" /></svg>
               </button>
               <CommandTag v-else :text="row.command" />
             </th>
@@ -44,15 +44,15 @@ const columns = computed(() => {
 .command-tables { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; gap:24px 40px; align-self:flex-start; }
 .slidev-layout .command-table { width:100%; table-layout:fixed; font-size:21px; line-height:1.3; letter-spacing:-.015em; }
 .slidev-layout .command-table :is(th,td) { padding:12px 0; border-bottom:1px solid var(--deck-line); vertical-align:top; text-align:left; }
-.slidev-layout .command-table thead th { color:var(--deck-muted); font-size:17px; font-weight:500; padding-top:0; padding-bottom:13px; }
+.slidev-layout .command-table thead th { color:var(--deck-muted); font-size:var(--deck-text-label); font-weight:500; padding-top:0; padding-bottom:13px; }
 .slidev-layout .command-table th:first-child { width:46%; padding-right:16px; }
 .slidev-layout .command-table tbody th { font-weight:600; }
 .slidev-layout .command-table td { color:var(--deck-muted); font-size:20px; }
 .slidev-layout .command-table .command-token { font-size:19px; }
 .slidev-layout .command-table tbody tr:last-child :is(th,td) { border-bottom:0; }
-.slidev-layout .command-table .command-video-trigger { display:inline-flex; align-items:center; gap:8px; min-height:32px; height:auto; margin:-4px 0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:var(--deck-cyan); font:inherit; text-decoration:none; }
-.command-video-trigger:hover .command-token { text-decoration:underline; text-underline-offset:4px; }
-.command-video-icon { font-size:11px; }
+.slidev-layout .command-table .command-video-trigger { display:inline-flex; align-items:center; gap:8px; min-height:44px; height:auto; margin:-4px 0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:var(--deck-cyan); font:inherit; text-decoration:none; }
+.command-video-trigger:is(:hover,:focus-visible) .command-token { text-decoration:underline; text-underline-offset:4px; }
+.command-video-icon { width:16px; height:16px; flex:none; }
 .slidev-layout .command-video-hint { grid-column:1 / -1; color:var(--deck-muted); font-size:16px; }
 @media print { .command-video-icon,.command-video-hint,.shortcut-video-dialog { display:none; } }
 </style>

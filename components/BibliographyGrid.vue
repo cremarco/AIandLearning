@@ -38,7 +38,7 @@ const groups = computed(() => {
 .bibliography-two-columns { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .slidev-layout .bibliography-group h2 { font-size:21px; line-height:1.2; margin:0 0 16px; color:var(--deck-cyan); }
 .slidev-layout .bibliography-list.list { padding:0; margin:0; list-style:none; }
-.slidev-layout .bibliography-list .list-row { grid-template-columns:minmax(0,1fr); gap:0; margin:0; padding:7px 0; border-radius:0; }
+.slidev-layout .bibliography-list .list-row { grid-template-columns:minmax(0,1fr); gap:0; margin:0; padding:6px 0; border-radius:0; }
 .slidev-layout .bibliography .bibliography-entry { display:flex; flex-direction:column; gap:2px; text-decoration:none; }
 .bibliography-entry:hover .bibliography-title { text-decoration:underline; text-underline-offset:3px; }
 .bibliography-author { font-size:20px; line-height:1.2; font-weight:650; text-decoration:underline; text-underline-offset:3px; }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useSlideVideo } from '../utils/slide-video'
 import LearningMap from './LearningMap.vue'
 import SoftmaxFormula from './SoftmaxFormula.vue'
 import LucaReaction from './LucaReaction.vue'
@@ -31,6 +32,8 @@ const headingCommand = computed(() => {
   return command && s.value.title.startsWith(command) ? command : ''
 })
 const active = ref(0)
+const video = ref<HTMLVideoElement>()
+useSlideVideo(video)
 const pipeline = [
   { label: 'Text', description: 'Text enters as a sequence: the model does not receive words as we read them.' },
   { label: 'Tokens and position', description: 'The tokenizer assigns identifiers; representations and position prepare the sequence.' },
@@ -91,7 +94,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
         <figure v-if="s.media" class="workshop-media">
           <AnimatedBook v-if="s.book" :book="s.book" :slide-number="s.number" />
           <BrowserVideo v-else-if="s.media.type==='video' && s.media.browserFrame" :media="s.media" />
-          <video v-else-if="s.media.type==='video'" controls preload="none" :poster="asset(s.media.poster)" :aria-label="s.media.alt" @click.stop>
+          <video v-else-if="s.media.type==='video'" ref="video" playsinline controls preload="none" :poster="asset(s.media.poster)" :aria-label="s.media.alt" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
             <source :src="asset(s.media.src)" :type="s.media.src.endsWith('webm') ? 'video/webm' : 'video/mp4'" />
             <track kind="captions" srclang="en" label="English" :src="asset(s.media.captions)" :default="s.media.captionsDefault !== false" />
           </video>

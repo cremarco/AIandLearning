@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onScopeDispose, ref, watch } from 'vue'
-import { useNav } from '@slidev/client'
+import { computed, ref, watch } from 'vue'
+import { useSlideVideo } from '../utils/slide-video'
 import type { PromptCommand } from '../utils/deck'
 import { assetUrl } from '../utils/assets'
 import CommandTag from './CommandTag.vue'
@@ -11,9 +11,8 @@ const selectedIndex = ref(0)
 const selected = computed(() => props.commands[selectedIndex.value] || props.commands[0])
 const result = computed(() => selected.value?.result)
 const video = ref<HTMLVideoElement>()
-const nav = useNav()
-watch([nav.currentSlideNo, nav.isPrintMode, selectedIndex], () => video.value?.pause())
-onScopeDispose(() => video.value?.pause())
+const pauseVideo = useSlideVideo(video)
+watch(selectedIndex, pauseVideo)
 </script>
 
 <template>

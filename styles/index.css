@@ -16,7 +16,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
   width: 100%; height: 100%; padding: var(--deck-inset-top) var(--deck-inset-inline) var(--deck-inset-bottom);
   overflow: hidden; position: relative; isolation: isolate;
   color: var(--deck-ink); background: var(--deck-paper); font-family: var(--deck-font);
-  font-size: 24px; line-height: 1.3; letter-spacing: -.018em; -webkit-font-smoothing: antialiased;
+  font-size: var(--deck-text-body); line-height: 1.3; letter-spacing: -.012em; -webkit-font-smoothing: antialiased;
 }
 .slidev-layout .deck-slide :where(h1,h2,h3,p,figure,blockquote) { margin: 0; }
 .slidev-layout .deck-slide h1 { max-width: 1120px; font-size: 48px; line-height: 1.06; font-weight: 720; letter-spacing: -.035em; text-wrap: balance; }
@@ -148,7 +148,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .type-profile ::selection { background: var(--deck-selection); color: var(--deck-selection-content); }
 .type-profile :focus-visible { outline-color: var(--deck-ink); }
 .takeaway { margin-top: auto; padding: 18px 22px; border: 1px solid var(--deck-line); border-radius: 14px; background: var(--deck-raised); font-size: 24px; line-height: 1.3; }
-.source-line { position: absolute; left: var(--deck-inset-inline); right: 174px; bottom: 27px; color: var(--deck-muted); font-size: 14px; line-height: 1.4; letter-spacing: 0; }
+.source-line { position: absolute; left: var(--deck-inset-inline); right: 174px; bottom: 27px; color: var(--deck-muted); font-size: var(--deck-text-caption); line-height: 1.4; letter-spacing: 0; }
 .slide-page { position: absolute; z-index:4; right: calc(var(--deck-inset-inline) - 7px); bottom: 23px; padding: 3px 7px; border-radius: 6px; background: var(--deck-paper); color: var(--deck-muted); font-size: 16px; line-height: 1.4; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .slide-progress { position:absolute; inset:auto 0 0; z-index:3; pointer-events:none; }
 @media (prefers-reduced-motion: reduce) {

@@ -19,10 +19,10 @@
 .has-character .workshop-copy { position:relative; z-index:1; flex:0 1 720px; max-width:720px; }
 .has-character > :not(.workshop-stage) { position:relative; z-index:1; width:720px; }
 .slidev-layout .workshop-body { display:flex; flex-direction:column; gap:20px; }
-.slidev-layout .workshop-body p { font-size:24px; line-height:1.36; }
+.slidev-layout .workshop-body p { max-width:72ch; font-size:var(--deck-text-body); line-height:1.36; }
 .slidev-layout .workshop-content h2 { font-size:27px; line-height:1.15; font-weight:700; }
-.slidev-layout .workshop-content .workshop-prompt { font-size:22px; }
-.prompt-label { display:block; color:var(--deck-muted); font-size:17px; margin-bottom:10px; font-weight:650; }
+.slidev-layout .workshop-content .workshop-prompt { font-size:var(--deck-text-prompt); }
+.prompt-label { display:block; color:var(--deck-muted); font-size:var(--deck-text-label); margin-bottom:10px; font-weight:650; }
 .slidev-layout .workshop-content .procedure-list { display:flex; flex-direction:column; gap:24px; padding:0; list-style:none; }
 .slidev-layout .procedure-list li { display:flex; gap:20px; margin:0; padding:0; }
 .step-number { flex:0 0 32px; font-size:25px; color:var(--deck-cyan); font-variant-numeric:tabular-nums; font-weight:700; }
@@ -52,7 +52,7 @@
 .slidev-layout .kind-concept .workshop-result h2 { font-size:17px; color:var(--deck-cyan); }
 .workshop-media { display:flex; flex-direction:column; gap:10px; width:54%; flex-shrink:0; align-self:stretch; justify-content:center; min-height:0; }
 .workshop-media img,.workshop-media video { display:block; object-fit:contain; width:100%; max-height:345px; background:var(--media-paper,var(--color-white)); }
-.slidev-layout .deck-slide .workshop-media figcaption { font-size:14px; line-height:1.3; color:var(--deck-muted); }
+.slidev-layout .deck-slide .workshop-media figcaption { font-size:var(--deck-text-caption); line-height:1.3; color:var(--deck-muted); }
 .has-media .workshop-copy { gap:16px; }
 .slidev-layout .has-media .workshop-copy :where(p) { font-size:23px; }
 .slidev-layout .has-media .workshop-copy h2 { font-size:25px; }
@@ -77,7 +77,7 @@
 .kind-tool-demo .workshop-heading .tool-logos .tool-logo { width:36px; height:36px; }
 .workshop-links { display:flex; flex-wrap:wrap; gap:12px; }
 .bibliography-links { flex-shrink:0; }
-.bibliography-links .btn { min-height:32px; height:32px; padding-inline:14px; font-size:16px; }
+.bibliography-links .btn { min-height:44px; height:44px; padding-inline:14px; font-size:16px; }
 .kind-shortcut-detail .workshop-stage { align-items:stretch; }
 .kind-access .workshop-stage { gap:72px; }
 .kind-access .workshop-media { order:1; width:38%; }
