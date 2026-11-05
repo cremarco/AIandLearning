@@ -15,6 +15,7 @@ import SkillCatalogue from './SkillCatalogue.vue'
 import DownloadIcon from './DownloadIcon.vue'
 import BrowserVideo from './BrowserVideo.vue'
 import ShortcutCloud from './ShortcutCloud.vue'
+import ShortcutDetail from './ShortcutDetail.vue'
 import ToolLogos from './ToolLogos.vue'
 import ToolResourceTable from './ToolResourceTable.vue'
 import BibliographyGrid from './BibliographyGrid.vue'
@@ -44,7 +45,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 </script>
 
 <template>
-  <div class="workshop-content" :lang="s.lang" :class="[`kind-${s.kind}`, { 'has-media': !!s.media, 'has-character': !!s.character, 'has-prompt': !!s.prompt, 'has-comparison': !!s.comparison?.length }]" @click="lucaReaction?.advance()">
+  <div class="workshop-content" :lang="s.lang" :class="[`kind-${s.kind}`, { 'has-media': !!s.media, 'has-character': !!s.character, 'has-prompt': !!s.prompt, 'has-comparison': !!s.comparison?.length, 'has-four-steps': (s.steps?.length || 0) >= 4, 'has-mixed-content': !!s.comparison?.length && !!s.steps?.length, 'has-long-title': s.title.length > 55 }]" @click="lucaReaction?.advance()">
     <header v-if="!['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
       <ToolLogos :ids="brandsForSlide(s)" />
       <h1><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
@@ -54,6 +55,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
     <div v-if="s.kind !== 'section-divider'" class="workshop-stage">
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
       <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
+      <ShortcutDetail v-else-if="s.kind === 'shortcut-detail'" :slide="s" />
       <FormalCommandResults v-else-if="s.commandCategory === 'formal-web' && s.commands?.some(command => command.result)" :commands="s.commands || []" />
       <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" />
       <ToolResourceTable v-else-if="s.toolTable" :table="s.toolTable" :label="s.title" />
@@ -116,6 +118,9 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           </div>
         </div>
       </template>
+    </div>
+    <div v-if="s.links?.length && ['bibliography', 'web-resources'].includes(s.kind)" class="workshop-links bibliography-links">
+      <a v-for="link in s.links" :key="link.url" class="btn btn-sm gap-2" :href="asset(link.url)" :download="link.download ? '' : undefined" :target="link.download ? undefined : '_blank'" rel="noopener"><DownloadIcon v-if="link.download" :slide-number="s.number" />{{ link.label }}</a>
     </div>
     <p v-if="s.decision && s.kind !== 'shortcut-cloud'" class="workshop-decision"><EmphasisText :text="s.decision" /></p>
     <PromptVideoDialog v-if="exampleVideo" ref="promptVideo" />

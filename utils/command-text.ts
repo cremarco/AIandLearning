@@ -1,7 +1,9 @@
 import { slides } from './deck'
 
-const commands = new Set(slides.flatMap(slide => (slide.commands || [])
-  .map(row => row.command.toLowerCase()).filter(command => command.startsWith('/'))))
+const commands = new Set(slides.flatMap(slide => [
+  ...(slide.commands || []).map(row => row.command),
+  ...(slide.shortcutLabels || []).map(row => row.command),
+]).map(command => command.toLowerCase()).filter(command => command.startsWith('/')))
 
 export type CommandTextPart = { text: string; command: boolean }
 

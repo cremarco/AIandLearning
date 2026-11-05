@@ -13,7 +13,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .slidev-layout { padding: 0 !important; width: 100%; height: 100%; }
 .slidev-layout .deck-slide {
   box-sizing: border-box; display: flex; flex-direction: column; gap: 18px;
-  width: 100%; height: 100%; padding: 54px 64px 90px;
+  width: 100%; height: 100%; padding: var(--deck-inset-top) var(--deck-inset-inline) var(--deck-inset-bottom);
   overflow: hidden; position: relative; isolation: isolate;
   color: var(--deck-ink); background: var(--deck-paper); font-family: var(--deck-font);
   font-size: 24px; line-height: 1.3; letter-spacing: -.018em; -webkit-font-smoothing: antialiased;
@@ -59,7 +59,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .slidev-layout .deck-slide a:is(.link,.btn) { color:revert-layer; border:revert-layer; text-decoration:revert-layer; }
 .slidev-layout .deck-slide .lead { flex-shrink: 0; max-width: 1050px; font-size: 25px; line-height: 1.35; color: var(--deck-muted); }
 .slide-heading { flex-shrink: 0; }
-.slide-audience { position: absolute; z-index: 5; top: 20px; right: 64px; display: inline-flex; align-items: center; gap: 10px; min-height: 30px; color: var(--deck-muted); }
+.slide-audience { position: absolute; z-index: 5; top: 20px; right: var(--deck-inset-inline); display: inline-flex; align-items: center; gap: 10px; min-height: 30px; color: var(--deck-muted); }
 .audience-icon { display: block; width: 26px; height: 26px; background: currentColor; mask-size: contain; mask-repeat: no-repeat; mask-position: center; }
 @media print { .slide-audience::before, .slide-audience::after { display: none; } }
 .slidev-layout .deck-slide.type-company { --deck-paper: var(--color-zinc-950); --deck-muted: var(--color-violet-200); --deck-emphasis: var(--color-lime-400); --deck-cyan: var(--color-lime-400); --color-accent: var(--color-lime-400); }
@@ -148,8 +148,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .type-profile ::selection { background: var(--deck-selection); color: var(--deck-selection-content); }
 .type-profile :focus-visible { outline-color: var(--deck-ink); }
 .takeaway { margin-top: auto; padding: 18px 22px; border: 1px solid var(--deck-line); border-radius: 14px; background: var(--deck-raised); font-size: 24px; line-height: 1.3; }
-.source-line { position: absolute; left: 64px; right: 174px; bottom: 27px; color: var(--deck-muted); font-size: 14px; line-height: 1.4; letter-spacing: 0; }
-.slide-page { position: absolute; z-index:4; right: 57px; bottom: 23px; padding: 3px 7px; border-radius: 6px; background: var(--deck-paper); color: var(--deck-muted); font-size: 16px; line-height: 1.4; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.source-line { position: absolute; left: var(--deck-inset-inline); right: 174px; bottom: 27px; color: var(--deck-muted); font-size: 14px; line-height: 1.4; letter-spacing: 0; }
+.slide-page { position: absolute; z-index:4; right: calc(var(--deck-inset-inline) - 7px); bottom: 23px; padding: 3px 7px; border-radius: 6px; background: var(--deck-paper); color: var(--deck-muted); font-size: 16px; line-height: 1.4; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .slide-progress { position:absolute; inset:auto 0 0; z-index:3; pointer-events:none; }
 @media (prefers-reduced-motion: reduce) {
   .deck-slide *,.slidev-vclick-target,.slidev-page,.slidev-layout { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

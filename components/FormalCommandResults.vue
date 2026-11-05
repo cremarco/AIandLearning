@@ -12,7 +12,7 @@ const result = computed(() => selected.value?.result)
 </script>
 
 <template>
-  <div class="formal-command-results" :class="selected?.command === 'Study' ? 'formal-study-chat' : 'grid grid-cols-1 md:grid-cols-[380px_minmax(0,1fr)]'">
+  <div class="formal-command-results" :class="selected?.command === 'Study' ? 'formal-study-chat' : 'formal-split'">
     <section v-if="selected?.command === 'Study' && result" class="formal-study-conversation" :data-command="selected.command" :data-result-status="result.status" aria-label="Recorded Study conversation" aria-live="polite">
       <div class="chat chat-end">
         <div class="chat-header">You · Prompt after selecting Study</div>
@@ -54,6 +54,7 @@ const result = computed(() => selected.value?.result)
 
 <style scoped>
 .formal-command-results { width:100%; gap:42px; align-self:stretch; align-items:start; }
+.formal-split { display:grid; grid-template-columns:320px minmax(0,1fr); }
 .formal-command-results nav { min-width:0; }
 .slidev-layout .formal-command-menu { width:100%; padding:0; gap:0; background:none; font-size:22px; }
 .slidev-layout .formal-command-menu li { margin:0; padding:0; }

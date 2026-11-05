@@ -13,7 +13,6 @@ const logo = imageUrl('tools/chatgpt-logo.svg')
       <img class="chatgpt-logo" :src="logo" alt="ChatGPT logo, by OpenAI" width="300" height="300" />
     </div>
     <div class="chatgpt-intro-copy">
-      <p class="chatgpt-eyebrow">One tool, many ways to learn</p>
       <h1>{{ title }}</h1>
       <p class="chatgpt-intro-message">{{ message }}</p>
       <p class="chatgpt-intro-preview">Maps · Explanations · Revision · Practice</p>
@@ -26,7 +25,6 @@ const logo = imageUrl('tools/chatgpt-logo.svg')
 .chatgpt-logo-stage { display:grid; place-items:center; height:360px; }
 .chatgpt-logo { width:300px; height:300px; object-fit:contain; }
 .chatgpt-intro-copy { display:flex; flex-direction:column; align-items:flex-start; gap:24px; }
-.slidev-layout .chatgpt-eyebrow { color:var(--deck-cyan); font-size:19px; letter-spacing:.01em; }
 .slidev-layout .chatgpt-intro h1 { font-size:76px; line-height:1.02; max-width:620px; text-wrap:balance; }
 .slidev-layout .chatgpt-intro-message { color:var(--deck-muted); font-size:27px; max-width:590px; line-height:1.4; }
 .slidev-layout .chatgpt-intro-preview { padding-top:12px; font-size:19px; color:var(--deck-cyan); }

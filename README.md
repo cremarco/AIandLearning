@@ -63,6 +63,10 @@ The portable ZIP always excludes weights. Its bundled server shares one prepared
 
 Serve HTML over HTTP. Keep `exports/` and `public/` together when sharing the PDF: its local material links are relative. Rebuild the booklet separately with `pnpm booklet:build` after editing `booklet-genai/contenuti.mjs`; see [booklet-genai/README.md](booklet-genai/README.md) for Typst requirements and verification limits.
 
+## Individual shortcuts
+
+All 79 reviewed informal shortcuts have a dedicated slide with their full recorded prompt and a brief purpose. The 30 retained interactive outputs include the original videos; the other 49 show a labelled static response excerpt or the recorded observation for an image. Original conversation links remain available. Hover or focus a shortcut in the animated cloud to read its description; click or press Enter to open its slide.
+
 ## Real model exercise
 
 The canonical app is `public/materials/demo-genai/`; `demo-genai/tests/` contains its maths, UI and recording checks. The app uses actual quantised Qwen2.5-0.5B-Instruct inference through bundled Transformers.js and ONNX Runtime. The model preparation script pins a public revision and checks sizes and SHA-256 hashes:

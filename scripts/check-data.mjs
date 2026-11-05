@@ -67,6 +67,36 @@ export function checkData() {
   assert.deepEqual(read('public/materials/chatgpt-widgets/provenance.json'), widgetReview, 'The public execution record must match the authored review')
   const shortcutVideos = read('data/chatgpt-videos.json').clips
   assert.deepEqual(shortcutVideos.map(clip => clip.command).sort(), [...commands].sort(), 'Every retained shortcut needs a recorded video')
+  const shortcutDetails = slides.filter(slide => slide.kind === 'shortcut-detail')
+  assert.equal(shortcutDetails.length, widgetReview.results.length, 'Every reviewed shortcut needs its own detail slide')
+  assert.deepEqual(shortcutDetails.map(slide => slide.title), widgetReview.results.map(run => run.command), 'Show every shortcut exactly once, in reviewed order')
+  const detailsIndex = slides.findIndex(slide => slide.id === 'S53CMD4') + 1
+  assert.deepEqual(slides.slice(detailsIndex, detailsIndex + shortcutDetails.length).map(slide => slide.id), shortcutDetails.map(slide => slide.id), 'Keep the individual shortcut slides together after the four overview tables')
+  for (const [index, detail] of shortcutDetails.entries()) {
+    const run = widgetReview.results[index]
+    const video = shortcutVideos.find(clip => clip.command.toLowerCase() === run.command.toLowerCase())
+    assert.equal(detail.id, `S53DETAIL${run.command.replace(/[^a-z0-9]/gi, '').toUpperCase()}`)
+    assert.equal(detail.message, shortcutDescriptions[run.command], `${run.command}: use the authored purpose`)
+    assert.equal(detail.prompt, video?.prompt || run.prompt, `${run.command}: preserve the full prompt that belongs to the recording`)
+    if (run.conversationUrl) assert(detail.links.some(link => link.url === run.conversationUrl), `${run.command}: preserve the recorded conversation link`)
+    if (video) {
+      assert.equal(detail.media?.src, video.src, `${run.command}: show its original recorded video`)
+      assert.equal(detail.resultLabel, 'Recorded interactive output')
+      assert.equal(detail.result, video.caption || video.alt)
+    } else if (run.outputType === 'static-image') {
+      assert.equal(detail.resultLabel, 'Recorded observation · static image')
+      assert.equal(detail.result, run.interaction.observed, `${run.command}: show the recorded observation, not an invented image`)
+      assert(!detail.media, `${run.command}: the review did not preserve an image asset`)
+    } else {
+      const marker = /(?:ChatGPT ha detto:|ChatGPT said:|ChatGPT ha risposto:)/i.exec(run.uiText)
+      assert(marker, `${run.command}: locate the recorded assistant response`)
+      const response = run.uiText.slice(marker.index + marker[0].length).trim()
+      assert(response.startsWith(detail.result.replace(/…$/, '')), `${run.command}: keep a verbatim response excerpt`)
+      assert(detail.result.length > 0 && detail.result.length <= 651, `${run.command}: keep the visible excerpt concise`)
+      if (response.length > 650) assert(detail.result.endsWith('…') && detail.resultLabel.includes('excerpt'), `${run.command}: identify truncated excerpts`)
+      assert(!detail.media, `${run.command}: a static response must not be relabelled as an interactive recording`)
+    }
+  }
   const videoProvenance = read('public/materials/chatgpt-widgets/videos/provenance.json')
   for (const clip of shortcutVideos) {
     for (const field of ['src', 'poster', 'captions']) assert(clip[field] && fs.existsSync(path.join(root, 'public', clip[field])), `${clip.command}: missing video ${field}`)

@@ -10,7 +10,7 @@ const selected = computed(() => skills.value[index.value] || skills.value[0])
 </script>
 
 <template>
-  <div class="skill-catalogue grid grid-cols-1 md:grid-cols-[300px_minmax(0,1fr)]">
+  <div class="skill-catalogue">
     <nav aria-label="Select a documented skill">
       <ul class="menu menu-vertical skill-menu">
         <li v-for="(skill, i) in skills" :key="skill!.id">
@@ -40,7 +40,7 @@ const selected = computed(() => skills.value[index.value] || skills.value[0])
 </template>
 
 <style scoped>
-.skill-catalogue { width:100%; gap:38px; align-self:stretch; align-items:start; }
+.skill-catalogue { display:grid; grid-template-columns:280px minmax(0,1fr); width:100%; gap:48px; align-self:stretch; align-items:start; }
 .skill-catalogue nav { min-width:0; }
 .slidev-layout .skill-menu { width:100%; padding:0; gap:6px; background:none; font-size:23px; }
 .slidev-layout .skill-menu li { padding:0; margin:0; }
@@ -48,7 +48,7 @@ const selected = computed(() => skills.value[index.value] || skills.value[0])
 .slidev-layout .skill-menu button.menu-active { color:var(--deck-cyan); background:var(--deck-surface); font-weight:700; }
 .skill-host { display:flex; flex-direction:column; gap:12px; margin-top:26px; padding-inline:12px; }
 .slidev-layout .skill-host p { font-size:18px; line-height:1.25; color:var(--deck-muted); }
-.skill-detail { min-width:0; display:flex; flex-direction:column; gap:16px; padding-top:6px; }
+.skill-detail { min-width:0; display:flex; flex-direction:column; gap:20px; padding-top:6px; }
 .slidev-layout .skill-detail h2 { font-size:26px; line-height:1.2; }
 .skill-prompt { padding-block:0; row-gap:8px; }
 .slidev-layout .skill-prompt .chat-header { color:var(--deck-muted); font-size:17px; line-height:1.25; font-weight:650; }

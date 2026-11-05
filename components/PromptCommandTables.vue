@@ -18,7 +18,7 @@ const columns = computed(() => {
 </script>
 
 <template>
-  <div class="command-tables grid grid-cols-1 md:grid-cols-2" lang="en">
+  <div class="command-tables" lang="en">
     <div v-for="(rows, index) in columns" :key="index" class="overflow-x-auto">
       <table class="table command-table" :aria-label="`${labels.table}, part ${index + 1}`">
         <thead><tr><th scope="col">{{ labels.column }}</th><th scope="col">{{ labels.description }}</th></tr></thead>
@@ -41,13 +41,16 @@ const columns = computed(() => {
 </template>
 
 <style scoped>
-.command-tables { width:100%; gap:36px; align-self:flex-start; }
-.slidev-layout .command-table { width:100%; font-size:20px; line-height:1.2; letter-spacing:-.015em; }
-.slidev-layout .command-table :is(th,td) { padding:5px 10px; border-bottom:1px solid var(--deck-line); vertical-align:top; text-align:left; }
+.command-tables { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; gap:24px 40px; align-self:flex-start; }
+.slidev-layout .command-table { width:100%; table-layout:fixed; font-size:21px; line-height:1.3; letter-spacing:-.015em; }
+.slidev-layout .command-table :is(th,td) { padding:12px 0; border-bottom:1px solid var(--deck-line); vertical-align:top; text-align:left; }
 .slidev-layout .command-table thead th { color:var(--deck-muted); font-size:17px; font-weight:500; padding-top:0; padding-bottom:13px; }
-.slidev-layout .command-table tbody th { width:43%; font-weight:600; }
+.slidev-layout .command-table th:first-child { width:46%; padding-right:16px; }
+.slidev-layout .command-table tbody th { font-weight:600; }
+.slidev-layout .command-table td { color:var(--deck-muted); font-size:20px; }
+.slidev-layout .command-table .command-token { font-size:19px; }
 .slidev-layout .command-table tbody tr:last-child :is(th,td) { border-bottom:0; }
-.slidev-layout .command-table .command-video-trigger { display:inline-flex; align-items:center; gap:8px; min-height:24px; height:auto; margin:0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:var(--deck-cyan); font:inherit; text-decoration:none; }
+.slidev-layout .command-table .command-video-trigger { display:inline-flex; align-items:center; gap:8px; min-height:32px; height:auto; margin:-4px 0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:var(--deck-cyan); font:inherit; text-decoration:none; }
 .command-video-trigger:hover .command-token { text-decoration:underline; text-underline-offset:4px; }
 .command-video-icon { font-size:11px; }
 .slidev-layout .command-video-hint { grid-column:1 / -1; color:var(--deck-muted); font-size:16px; }

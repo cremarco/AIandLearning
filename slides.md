@@ -207,6 +207,638 @@ title: "Tested shortcuts · guided and classroom activities"
 
 ---
 layout: default
+routeAlias: s53detailquiz
+title: "/quiz"
+---
+
+<DeckSlide id="S53DETAILQUIZ" />
+
+---
+layout: default
+routeAlias: s53detailquizgame
+title: "/quizgame"
+---
+
+<DeckSlide id="S53DETAILQUIZGAME" />
+
+---
+layout: default
+routeAlias: s53detailmatchinggame
+title: "/matchinggame"
+---
+
+<DeckSlide id="S53DETAILMATCHINGGAME" />
+
+---
+layout: default
+routeAlias: s53detailmemorygame
+title: "/memorygame"
+---
+
+<DeckSlide id="S53DETAILMEMORYGAME" />
+
+---
+layout: default
+routeAlias: s53detailjeopardy
+title: "/jeopardy"
+---
+
+<DeckSlide id="S53DETAILJEOPARDY" />
+
+---
+layout: default
+routeAlias: s53detailmillionaire
+title: "/millionaire"
+---
+
+<DeckSlide id="S53DETAILMILLIONAIRE" />
+
+---
+layout: default
+routeAlias: s53detailcrossword
+title: "/crossword"
+---
+
+<DeckSlide id="S53DETAILCROSSWORD" />
+
+---
+layout: default
+routeAlias: s53detailmindmap
+title: "/mindmap"
+---
+
+<DeckSlide id="S53DETAILMINDMAP" />
+
+---
+layout: default
+routeAlias: s53detailfillintheblanks
+title: "/fillintheblanks"
+---
+
+<DeckSlide id="S53DETAILFILLINTHEBLANKS" />
+
+---
+layout: default
+routeAlias: s53detailflashcard
+title: "/flashcard"
+---
+
+<DeckSlide id="S53DETAILFLASHCARD" />
+
+---
+layout: default
+routeAlias: s53detaileli5
+title: "/eli5"
+---
+
+<DeckSlide id="S53DETAILELI5" />
+
+---
+layout: default
+routeAlias: s53detailsortinggame
+title: "/sortinggame"
+---
+
+<DeckSlide id="S53DETAILSORTINGGAME" />
+
+---
+layout: default
+routeAlias: s53detailconceptquiz
+title: "/conceptquiz"
+---
+
+<DeckSlide id="S53DETAILCONCEPTQUIZ" />
+
+---
+layout: default
+routeAlias: s53detailsummary
+title: "/summary"
+---
+
+<DeckSlide id="S53DETAILSUMMARY" />
+
+---
+layout: default
+routeAlias: s53detaillanguagedrill
+title: "/languagedrill"
+---
+
+<DeckSlide id="S53DETAILLANGUAGEDRILL" />
+
+---
+layout: default
+routeAlias: s53detailblueprint
+title: "/blueprint"
+---
+
+<DeckSlide id="S53DETAILBLUEPRINT" />
+
+---
+layout: default
+routeAlias: s53detailmultiplechoice
+title: "/multiplechoice"
+---
+
+<DeckSlide id="S53DETAILMULTIPLECHOICE" />
+
+---
+layout: default
+routeAlias: s53detailrecall
+title: "/recall"
+---
+
+<DeckSlide id="S53DETAILRECALL" />
+
+---
+layout: default
+routeAlias: s53detailgapfinder
+title: "/gapfinder"
+---
+
+<DeckSlide id="S53DETAILGAPFINDER" />
+
+---
+layout: default
+routeAlias: s53detailblackboard
+title: "/blackboard"
+---
+
+<DeckSlide id="S53DETAILBLACKBOARD" />
+
+---
+layout: default
+routeAlias: s53detailwhiteboard
+title: "/whiteboard"
+---
+
+<DeckSlide id="S53DETAILWHITEBOARD" />
+
+---
+layout: default
+routeAlias: s53detailsketchnote
+title: "/sketchnote"
+---
+
+<DeckSlide id="S53DETAILSKETCHNOTE" />
+
+---
+layout: default
+routeAlias: s53detailflowchart
+title: "/flowchart"
+---
+
+<DeckSlide id="S53DETAILFLOWCHART" />
+
+---
+layout: default
+routeAlias: s53detailinfographic
+title: "/infographic"
+---
+
+<DeckSlide id="S53DETAILINFOGRAPHIC" />
+
+---
+layout: default
+routeAlias: s53detailtimeline
+title: "/timeline"
+---
+
+<DeckSlide id="S53DETAILTIMELINE" />
+
+---
+layout: default
+routeAlias: s53detailvenn
+title: "/venn"
+---
+
+<DeckSlide id="S53DETAILVENN" />
+
+---
+layout: default
+routeAlias: s53detailanalogy
+title: "/analogy"
+---
+
+<DeckSlide id="S53DETAILANALOGY" />
+
+---
+layout: default
+routeAlias: s53detailcomic
+title: "/comic"
+---
+
+<DeckSlide id="S53DETAILCOMIC" />
+
+---
+layout: default
+routeAlias: s53detailfeynman
+title: "/feynman"
+---
+
+<DeckSlide id="S53DETAILFEYNMAN" />
+
+---
+layout: default
+routeAlias: s53detailglossary
+title: "/glossary"
+---
+
+<DeckSlide id="S53DETAILGLOSSARY" />
+
+---
+layout: default
+routeAlias: s53detailoral
+title: "/oral"
+---
+
+<DeckSlide id="S53DETAILORAL" />
+
+---
+layout: default
+routeAlias: s53detailspacedrepetition
+title: "/spacedrepetition"
+---
+
+<DeckSlide id="S53DETAILSPACEDREPETITION" />
+
+---
+layout: default
+routeAlias: s53detailexam
+title: "/exam"
+---
+
+<DeckSlide id="S53DETAILEXAM" />
+
+---
+layout: default
+routeAlias: s53detailstudyplan
+title: "/studyplan"
+---
+
+<DeckSlide id="S53DETAILSTUDYPLAN" />
+
+---
+layout: default
+routeAlias: s53detailchecklist
+title: "/checklist"
+---
+
+<DeckSlide id="S53DETAILCHECKLIST" />
+
+---
+layout: default
+routeAlias: s53detailconceptmap
+title: "/conceptmap"
+---
+
+<DeckSlide id="S53DETAILCONCEPTMAP" />
+
+---
+layout: default
+routeAlias: s53detailpomodoro
+title: "/pomodoro"
+---
+
+<DeckSlide id="S53DETAILPOMODORO" />
+
+---
+layout: default
+routeAlias: s53detailfishbone
+title: "/fishbone"
+---
+
+<DeckSlide id="S53DETAILFISHBONE" />
+
+---
+layout: default
+routeAlias: s53detailiceberg
+title: "/iceberg"
+---
+
+<DeckSlide id="S53DETAILICEBERG" />
+
+---
+layout: default
+routeAlias: s53detailpyramid
+title: "/pyramid"
+---
+
+<DeckSlide id="S53DETAILPYRAMID" />
+
+---
+layout: default
+routeAlias: s53detailtree
+title: "/tree"
+---
+
+<DeckSlide id="S53DETAILTREE" />
+
+---
+layout: default
+routeAlias: s53detailanatomydiagram
+title: "/anatomydiagram"
+---
+
+<DeckSlide id="S53DETAILANATOMYDIAGRAM" />
+
+---
+layout: default
+routeAlias: s53detailcyclediagram
+title: "/cyclediagram"
+---
+
+<DeckSlide id="S53DETAILCYCLEDIAGRAM" />
+
+---
+layout: default
+routeAlias: s53detailexplodedview
+title: "/explodedview"
+---
+
+<DeckSlide id="S53DETAILEXPLODEDVIEW" />
+
+---
+layout: default
+routeAlias: s53detailhandwritten
+title: "/handwritten"
+---
+
+<DeckSlide id="S53DETAILHANDWRITTEN" />
+
+---
+layout: default
+routeAlias: s53detaildecisionmatrix
+title: "/decisionmatrix"
+---
+
+<DeckSlide id="S53DETAILDECISIONMATRIX" />
+
+---
+layout: default
+routeAlias: s53detailonepager
+title: "/onepager"
+---
+
+<DeckSlide id="S53DETAILONEPAGER" />
+
+---
+layout: default
+routeAlias: s53detaillabeleddiagram
+title: "/labeleddiagram"
+---
+
+<DeckSlide id="S53DETAILLABELEDDIAGRAM" />
+
+---
+layout: default
+routeAlias: s53detailmnemonic
+title: "/mnemonic"
+---
+
+<DeckSlide id="S53DETAILMNEMONIC" />
+
+---
+layout: default
+routeAlias: s53detailmemorypalaceimage
+title: "/memorypalaceimage"
+---
+
+<DeckSlide id="S53DETAILMEMORYPALACEIMAGE" />
+
+---
+layout: default
+routeAlias: s53detailmemoryhooks
+title: "/memoryhooks"
+---
+
+<DeckSlide id="S53DETAILMEMORYHOOKS" />
+
+---
+layout: default
+routeAlias: s53detailmnemonicart
+title: "/mnemonicart"
+---
+
+<DeckSlide id="S53DETAILMNEMONICART" />
+
+---
+layout: default
+routeAlias: s53detailvisualvocab
+title: "/visualvocab"
+---
+
+<DeckSlide id="S53DETAILVISUALVOCAB" />
+
+---
+layout: default
+routeAlias: s53detailemojisummary
+title: "/emojisummary"
+---
+
+<DeckSlide id="S53DETAILEMOJISUMMARY" />
+
+---
+layout: default
+routeAlias: s53detailpicturemnemonics
+title: "/picturemnemonics"
+---
+
+<DeckSlide id="S53DETAILPICTUREMNEMONICS" />
+
+---
+layout: default
+routeAlias: s53detailcheatsheet
+title: "/cheatsheet"
+---
+
+<DeckSlide id="S53DETAILCHEATSHEET" />
+
+---
+layout: default
+routeAlias: s53detaildeepdive
+title: "/deepdive"
+---
+
+<DeckSlide id="S53DETAILDEEPDIVE" />
+
+---
+layout: default
+routeAlias: s53detailmistakelog
+title: "/mistakelog"
+---
+
+<DeckSlide id="S53DETAILMISTAKELOG" />
+
+---
+layout: default
+routeAlias: s53detailstepbystep
+title: "/stepbystep"
+---
+
+<DeckSlide id="S53DETAILSTEPBYSTEP" />
+
+---
+layout: default
+routeAlias: s53detailtwinexample
+title: "/twinexample"
+---
+
+<DeckSlide id="S53DETAILTWINEXAMPLE" />
+
+---
+layout: default
+routeAlias: s53detailworkedexample
+title: "/workedexample"
+---
+
+<DeckSlide id="S53DETAILWORKEDEXAMPLE" />
+
+---
+layout: default
+routeAlias: s53detailsocraticmode
+title: "/socraticmode"
+---
+
+<DeckSlide id="S53DETAILSOCRATICMODE" />
+
+---
+layout: default
+routeAlias: s53detailcommonwrong
+title: "/commonwrong"
+---
+
+<DeckSlide id="S53DETAILCOMMONWRONG" />
+
+---
+layout: default
+routeAlias: s53detailrealworld
+title: "/realworld"
+---
+
+<DeckSlide id="S53DETAILREALWORLD" />
+
+---
+layout: default
+routeAlias: s53detailconnectit
+title: "/connectit"
+---
+
+<DeckSlide id="S53DETAILCONNECTIT" />
+
+---
+layout: default
+routeAlias: s53detaillessonplan
+title: "/lessonplan"
+---
+
+<DeckSlide id="S53DETAILLESSONPLAN" />
+
+---
+layout: default
+routeAlias: s53detailsourceanalysis
+title: "/sourceanalysis"
+---
+
+<DeckSlide id="S53DETAILSOURCEANALYSIS" />
+
+---
+layout: default
+routeAlias: s53detailcasestudy
+title: "/caseStudy"
+---
+
+<DeckSlide id="S53DETAILCASESTUDY" />
+
+---
+layout: default
+routeAlias: s53detaillearningobjectives
+title: "/learningobjectives"
+---
+
+<DeckSlide id="S53DETAILLEARNINGOBJECTIVES" />
+
+---
+layout: default
+routeAlias: s53detailrubric
+title: "/rubric"
+---
+
+<DeckSlide id="S53DETAILRUBRIC" />
+
+---
+layout: default
+routeAlias: s53detailbloomquestions
+title: "/bloomquestions"
+---
+
+<DeckSlide id="S53DETAILBLOOMQUESTIONS" />
+
+---
+layout: default
+routeAlias: s53detailquestionbank
+title: "/questionbank"
+---
+
+<DeckSlide id="S53DETAILQUESTIONBANK" />
+
+---
+layout: default
+routeAlias: s53detailflippedclassroom
+title: "/flippedclassroom"
+---
+
+<DeckSlide id="S53DETAILFLIPPEDCLASSROOM" />
+
+---
+layout: default
+routeAlias: s53detaildifferentiate
+title: "/differentiate"
+---
+
+<DeckSlide id="S53DETAILDIFFERENTIATE" />
+
+---
+layout: default
+routeAlias: s53detailexitticket
+title: "/exitTicket"
+---
+
+<DeckSlide id="S53DETAILEXITTICKET" />
+
+---
+layout: default
+routeAlias: s53detailpeerassessment
+title: "/peerassessment"
+---
+
+<DeckSlide id="S53DETAILPEERASSESSMENT" />
+
+---
+layout: default
+routeAlias: s53detailworksheet
+title: "/worksheet"
+---
+
+<DeckSlide id="S53DETAILWORKSHEET" />
+
+---
+layout: default
+routeAlias: s53detaillearningstations
+title: "/learningstations"
+---
+
+<DeckSlide id="S53DETAILLEARNINGSTATIONS" />
+
+---
+layout: default
+routeAlias: s53detailslides
+title: "/slides"
+---
+
+<DeckSlide id="S53DETAILSLIDES" />
+
+---
+layout: default
 routeAlias: s53ex3
 title: "/flashcard · Three distinctions to remember"
 ---

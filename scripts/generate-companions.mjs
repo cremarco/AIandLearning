@@ -28,7 +28,7 @@ function write(name, value) {
   const output = Array.isArray(value)
     ? `${value.filter(item => item !== undefined).join('\n').trim()}\n`
     : value
-  fs.writeFileSync(path.join(destination, name), output)
+  fs.writeFileSync(path.join(destination, name), name.endsWith('.txt') ? output.replace(/[ \t]+$/gm, '') : output)
 }
 
 const h = value => String(value ?? '')

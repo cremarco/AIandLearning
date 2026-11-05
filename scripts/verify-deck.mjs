@@ -92,7 +92,8 @@ try{
   const main=page.locator(`#slide-container .slide-${s.id}:visible`);await main.waitFor()
   await assertNoPathControls()
   if(s.id==='S01')assert.equal(await main.locator('button, select, [role="button"]').count(),0,`${s.id}: cover must be static, without route buttons or selectors`)
-  assert.equal(await main.locator('.slide-page').innerText(),`${s.number} / ${slides.length}`)
+  if(s.kind==='shortcut-cloud')assert.equal(await main.locator('.slide-page').count(),0)
+  else assert.equal(await main.locator('.slide-page').innerText(),`${s.number} / ${slides.length}`)
   const result=await main.evaluate(async el=>{
    const imgs=[...el.querySelectorAll('img')];await Promise.all(imgs.map(i=>i.decode().catch(()=>{})))
    const broken=imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)

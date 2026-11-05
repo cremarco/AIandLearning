@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, onScopeDispose, ref, useId, watch } from 'vue'
 import { useNav } from '@slidev/client'
+import { useRouter } from 'vue-router'
+import { slides } from '../utils/deck'
 import shortcutDescriptions from '../data/shortcut-descriptions.json'
 import { useSlideMotion } from '../utils/slide-motion'
 
@@ -10,6 +12,12 @@ const props = defineProps<{
 }>()
 const { running, isStatic } = useSlideMotion(() => props.slideNumber)
 const nav = useNav()
+const router = useRouter()
+const detailSlides = new Map(slides.filter(slide => slide.kind === 'shortcut-detail').map(slide => [slide.title, slide.id.toLowerCase()]))
+function openShortcut(command: string) {
+  const route = detailSlides.get(command)
+  if (route) { closeTooltip(); router.push(`/${route}`) }
+}
 const isPrint = computed(() => nav.isPrintMode.value || nav.currentRoute.value.name === 'print')
 const cloud = ref<HTMLElement>()
 const tooltipId = useId()
@@ -126,8 +134,8 @@ const words = computed(() => {
               :tabindex="isPrint ? -1 : 0" :role="isPrint ? undefined : 'button'" :aria-label="word.command" :aria-describedby="tooltip?.command === word.command ? tooltipId : undefined"
               @pointerenter="showTooltip($event, word.command, 'hover')" @pointerleave="leaveShortcut"
               @focus="showTooltip($event, word.command, 'focus')" @blur="focused = undefined"
-              @click.stop="showTooltip($event, word.command, 'focus')"
-              @keydown.enter.stop.prevent="showTooltip($event, word.command, 'focus')" @keydown.space.stop.prevent="showTooltip($event, word.command, 'focus')">{{ word.command }}</text>
+              @click.stop="openShortcut(word.command)"
+              @keydown.enter.stop.prevent="openShortcut(word.command)" @keydown.space.stop.prevent="openShortcut(word.command)">{{ word.command }}</text>
           </g>
         </g>
       </g>
@@ -135,7 +143,7 @@ const words = computed(() => {
     <div v-if="tooltip" class="shortcut-tooltip tooltip tooltip-open" :class="tooltip.below ? 'tooltip-bottom' : 'tooltip-top'"
       :style="{ left: `${tooltip.left}px`, top: `${tooltip.top}px` }" @pointerenter="cancelClose" @pointerleave="leaveShortcut">
       <div :id="tooltipId" class="tooltip-content" role="tooltip">
-        <strong>{{ tooltip.command }}</strong><span>{{ tooltip.description }}</span>
+        <strong>{{ tooltip.command }}</strong><span>{{ tooltip.description }}</span><span v-if="detailSlides.has(tooltip.command)" class="shortcut-tooltip-action">Click or press Enter to open the slide.</span>
       </div>
     </div>
     <ul v-if="isPrint" class="sr-only" aria-label="All tested shortcut labels">
@@ -157,6 +165,7 @@ const words = computed(() => {
 .shortcut-tooltip.tooltip { position:absolute; width:0; height:0; z-index:10; --tt-bg:var(--deck-raised); }
 .shortcut-tooltip .tooltip-content { display:flex; flex-direction:column; gap:6px; width:320px; max-width:320px; padding:12px 16px; border:1px solid var(--deck-control-line); text-align:left; color:var(--deck-ink); font-family:var(--deck-font); font-size:18px; line-height:1.35; pointer-events:auto; }
 .shortcut-tooltip strong { color:var(--deck-cyan); font-family:var(--deck-command-font); font-size:17px; }
+.shortcut-tooltip .shortcut-tooltip-action { color:var(--deck-muted); font-size:15px; margin-top:2px; }
 .shortcut-field { transform-origin:50% 50%; animation:shortcuts-current 16s ease-in-out infinite paused; }
 /* Each word scales inside its own bounds; shared field motion preserves the gaps. */
 .shortcut-float { transform-box:fill-box; transform-origin:center; animation:shortcuts-float var(--float-duration) ease-in-out var(--float-phase) infinite paused; }
