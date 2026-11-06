@@ -959,6 +959,14 @@ title: "Verify the book’s three technical references"
 
 ---
 layout: default
+routeAlias: s53toolssection
+title: "Tool"
+---
+
+<DeckSlide id="S53TOOLSSECTION" />
+
+---
+layout: default
 routeAlias: s58compiler
 title: "Compiler: turn thoughts into actions"
 ---
