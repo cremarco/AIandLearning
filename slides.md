@@ -871,6 +871,14 @@ title: "/worksheet · Reveal a model answer"
 
 ---
 layout: default
+routeAlias: s53skillssection
+title: "Skills"
+---
+
+<DeckSlide id="S53SKILLSSECTION" />
+
+---
+layout: default
 routeAlias: s53skills
 title: "Agent Skills: reusable workflows"
 ---
