@@ -60,7 +60,7 @@
     "title": "Build a study kit after recall",
     "message": "The same chapter becomes practice materials and two short reviews.",
     "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
-    "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. Testing found a duplicated due-card count. A follow-up corrected it; reveal, Good → next card (3 due → 2), and quiz feedback were verified.",
+    "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. A duplicated due-card count was corrected; reveal and Good → next card (3 due → 2) were checked. The recording shows one correct-answer quiz feedback path; the later review found unreliable keyword grading.",
     "decision": "Test the material and its controls before giving it to students.",
     "chapter": [
       "1.2",
@@ -231,7 +231,14 @@
     "artifactUrls": [
       "https://chatgpt.com/library?file_id=libfile_c397dee4345c81919c145a45323bbf53",
       "https://chatgpt.com/library?file_id=libfile_75eb9b45175c8191ac50f6c17819b0f8"
-    ]
+    ],
+    "postRecordingReview": {
+      "reviewedOn": "2026-11-06",
+      "finding": "Short-answer grading uses substring matching, causing false positives for negations and false negatives for valid paraphrases. Only one correct-answer feedback path was observed in the recording.",
+      "reviewedAdaptation": "materials/skills/outputs/chapter-quiz-reviewed.html",
+      "scope": "The adaptation uses explicit manual self-assessment; the original quiz, recording, transcript and artifact hashes are unchanged.",
+      "reviewedSha256": "05ee5b29c8568c11de2ce784db4f24d5cd3518143d6ebd00fa53615a68c5093a"
+    }
   },
   {
     "key": "markdown-mermaid-writing",

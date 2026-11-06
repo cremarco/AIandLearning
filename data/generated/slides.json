@@ -577,10 +577,10 @@
       },
       {
         "label": "Informal · prompt label",
-        "text": "A descriptive label such as /flashcard or /quiz included in a prompt. This catalogue retains only outputs whose learning controls were tested in ChatGPT. State the task, source and intended format; the label alone does not guarantee a widget."
+        "text": "A label such as /flashcard or /quiz used in a prompt. The four overview tables show the 30 tested interactive outputs; individual slides also document 49 static outcomes. Specify the task, source and format: the label alone does not guarantee a widget."
       }
     ],
-    "decision": "79 labels tested · 30 interactive outputs retained · 49 static outputs removed.",
+    "decision": "79 labels tested · 30 interactive outputs catalogued · 49 static outcomes documented individually.",
     "number": 20,
     "links": []
   },
@@ -684,7 +684,7 @@
     ],
     "audience": "both",
     "tool": "chatgpt",
-    "decision": "79 labels tested · 30 interactive outputs retained for the following slides.",
+    "decision": "79 labels tested · 30 interactive outputs and 49 static outcomes documented in the following detail slides.",
     "shortcutLabels": [
       {
         "command": "/quiz",
@@ -2073,6 +2073,7 @@
         "method": "Aspect-preserving Lanczos downsample from 1664x1040 to 1440x900. H.264 CRF14; original 60 fps cadence and duration preserved. Native media retained in the ignored pre-pull review archive."
       }
     },
+    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
     "number": 37
   },
   {
@@ -3674,6 +3675,7 @@
         "method": "Aspect-preserving Lanczos downsample from 1664x1040 to 1440x900. H.264 CRF14; original 60 fps cadence and duration preserved. Native media retained in the ignored pre-pull review archive."
       }
     },
+    "decision": "Countdown was not validated; +1 min gave a wrong result. Use a separate timer.",
     "number": 64
   },
   {
@@ -5698,11 +5700,12 @@
     "sources": [
       "BOOK_CHAPTER",
       "SKILL_LEARNING",
+      "SKILL_QUIZ_REVIEW",
       "SKILL_DEMO_THE_LEARNING_SKILL"
     ],
     "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
     "promptLabel": "Tested request · excerpt",
-    "decision": "Test the material and its controls before giving it to students.",
+    "decision": "The original quiz has unreliable keyword grading. Use the reviewed self-assessment copy.",
     "promptExcerpt": "Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week.",
     "media": {
       "type": "video",
@@ -6305,11 +6308,12 @@
     "message": "Read the sourced report and inspect the material behind it",
     "body": [],
     "sources": [
-      "TOOL_NOTEBOOK_SOURCES"
+      "TOOL_NOTEBOOK_SOURCES",
+      "TOOL_NOTEBOOK_DEEP"
     ],
     "audience": "both",
     "tool": "notebook",
-    "decision": "Check the cited sources before treating the report as evidence.",
+    "decision": "Check cited sources before treating the report as evidence. Deep Research requires an adult account.",
     "media": {
       "type": "video",
       "src": "materials/notebook/deep-research.mp4",
@@ -6473,7 +6477,7 @@
       "Back to the source: during ordinary inference, context enters the calculation and parameters are not updated."
     ],
     "sources": [
-      "TECH_QWEN"
+      "BOOK_CHAPTER"
     ],
     "audience": "both",
     "tool": "notebook",
@@ -6840,7 +6844,7 @@
     "stage": "NotebookLM · recorded examples",
     "title": "Compare concepts in an infographic",
     "message": "Choose a visual format and inspect the generated comparison",
-    "decision": "Verify each label and relationship before sharing the visual.",
+    "decision": "Verify every label and relationship. Infographic generation requires an adult account.",
     "media": {
       "type": "video",
       "src": "materials/notebook/infographic.mp4",
@@ -6864,13 +6868,13 @@
     "audience": "both",
     "tool": "notebook",
     "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
+      "TOOL_NOTEBOOK_SLIDES"
     ],
     "kind": "tool-demo",
     "stage": "NotebookLM · recorded examples",
-    "title": "Generate, present and revise slides",
-    "message": "Inspect a generated deck before presenting or editing it",
-    "decision": "Check the sequence and explanations before using generated slides in class.",
+    "title": "Generate and present slides",
+    "message": "Recorded: a deck was generated and presented; revision controls were inspected.",
+    "decision": "Adult accounts only. Revisions ignore sources and use deck quota; check every change.",
     "media": {
       "type": "video",
       "src": "materials/notebook/slides.mp4",
@@ -8013,7 +8017,7 @@
         {
           "tool": "Gemini Notebook",
           "purpose": "Study sources and check citations",
-          "access": "Standard; account and usage limits.",
+          "access": "Account + quotas; some generation features are adult-only.",
           "url": "https://notebook.google.com/"
         },
         {
@@ -8202,7 +8206,7 @@
         },
         {
           "tool": "Formative paid plans",
-          "purpose": "Rubrics, media and AI feedback",
+          "purpose": "Rubrics, audio/video responses and AI feedback",
           "access": "Free Teacher for response collection.",
           "url": "https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me"
         },
@@ -8243,64 +8247,82 @@
       "ACC_CAST",
       "ACC_COGA",
       "ACC_AID",
-      "SKILL_LIBRARY_PAPER"
+      "SKILL_LIBRARY_PAPER",
+      "EDU_SELF_ASSESSMENT",
+      "EDU_SELF_DIRECTED"
     ],
     "references": [
       {
-        "label": "Bastani et al. (2025)",
-        "citation": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), Article e2422633122. https://doi.org/10.1073/pnas.2422633122",
-        "url": "https://doi.org/10.1073/pnas.2422633122",
-        "group": "Learning & teaching",
-        "shortTitle": "AI guardrails and independent learning"
-      },
-      {
-        "label": "Deng et al. (2025)",
-        "citation": "Deng, R., Jiang, M., Yu, X., Lu, Y., & Liu, S. (2025). Does ChatGPT enhance student learning? A systematic review and meta-analysis of experimental studies. Computers & Education, 227, Article 105224. https://doi.org/10.1016/j.compedu.2024.105224",
-        "url": "https://doi.org/10.1016/j.compedu.2024.105224",
-        "group": "Learning & teaching",
-        "shortTitle": "ChatGPT: review of experimental studies"
-      },
-      {
-        "label": "Huang et al. (2026)",
-        "citation": "Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13(1), Article 62. https://doi.org/10.1186/s40594-026-00652-9",
-        "url": "https://doi.org/10.1186/s40594-026-00652-9",
-        "group": "Learning & teaching",
-        "shortTitle": "Structured AI use in STEM"
+        "label": "Andrade (2019)",
+        "citation": "Andrade, H. L. (2019). A critical review of research on student self-assessment. Frontiers in Education, 4, 87.",
+        "url": "https://doi.org/10.3389/feduc.2019.00087",
+        "display": "Formative student self-assessment",
+        "shortTitle": "Formative student self-assessment",
+        "group": "Learning & assessment"
       },
       {
         "label": "Karpicke & Blunt (2011)",
         "citation": "Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772–775. https://doi.org/10.1126/science.1199327",
         "url": "https://doi.org/10.1126/science.1199327",
-        "group": "Learning & teaching",
+        "group": "Learning & assessment",
         "shortTitle": "Retrieval practice and concept maps"
       },
       {
-        "label": "Kestin et al. (2025)",
-        "citation": "Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15(1), Article 17458. https://doi.org/10.1038/s41598-025-97652-6",
-        "url": "https://doi.org/10.1038/s41598-025-97652-6",
-        "group": "Learning & teaching",
-        "shortTitle": "AI tutoring vs active learning"
-      },
-      {
-        "label": "Miao et al. (2024)",
-        "citation": "Miao, F., Shiohira, K., & Lao, N. (2024). AI competency framework for students. UNESCO. https://doi.org/10.54675/jkjb9835",
-        "url": "https://doi.org/10.54675/jkjb9835",
-        "group": "Learning & teaching",
-        "shortTitle": "AI competency framework for students"
+        "label": "NLM (n.d.)",
+        "citation": "National Library of Medicine. (n.d.). Self-Directed Learning as Topic (MeSH D000073819). Definition attributed to Knowles (1975), Self-directed learning: A guide for learners and teachers. New York: Association Press.",
+        "url": "https://www.ncbi.nlm.nih.gov/mesh/2023167",
+        "display": "Self-directed learning · MeSH definition",
+        "shortTitle": "Self-directed learning · MeSH definition",
+        "group": "Learning & assessment"
       },
       {
         "label": "Novak & Cañas (2008)",
         "citation": "Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. (Technical Report IHMC CmapTools 2006-01, Rev. 01-2008). Florida Institute for Human and Machine Cognition. https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf",
         "url": "https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf",
-        "group": "Learning & teaching",
+        "group": "Learning & assessment",
         "shortTitle": "How to construct concept maps"
       },
       {
         "label": "Panadero (2017)",
         "citation": "Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. Frontiers in Psychology, 8, Article 422. https://doi.org/10.3389/fpsyg.2017.00422",
         "url": "https://doi.org/10.3389/fpsyg.2017.00422",
-        "group": "Learning & teaching",
+        "group": "Learning & assessment",
         "shortTitle": "Models of self-regulated learning"
+      },
+      {
+        "label": "Bastani et al. (2025)",
+        "citation": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), Article e2422633122. https://doi.org/10.1073/pnas.2422633122",
+        "url": "https://doi.org/10.1073/pnas.2422633122",
+        "group": "AI & education",
+        "shortTitle": "AI guardrails and independent learning"
+      },
+      {
+        "label": "Deng et al. (2025)",
+        "citation": "Deng, R., Jiang, M., Yu, X., Lu, Y., & Liu, S. (2025). Does ChatGPT enhance student learning? A systematic review and meta-analysis of experimental studies. Computers & Education, 227, Article 105224. https://doi.org/10.1016/j.compedu.2024.105224",
+        "url": "https://doi.org/10.1016/j.compedu.2024.105224",
+        "group": "AI & education",
+        "shortTitle": "ChatGPT: review of experimental studies"
+      },
+      {
+        "label": "Huang et al. (2026)",
+        "citation": "Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13(1), Article 62. https://doi.org/10.1186/s40594-026-00652-9",
+        "url": "https://doi.org/10.1186/s40594-026-00652-9",
+        "group": "AI & education",
+        "shortTitle": "Structured AI use in STEM"
+      },
+      {
+        "label": "Kestin et al. (2025)",
+        "citation": "Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15(1), Article 17458. https://doi.org/10.1038/s41598-025-97652-6",
+        "url": "https://doi.org/10.1038/s41598-025-97652-6",
+        "group": "AI & education",
+        "shortTitle": "AI tutoring vs active learning"
+      },
+      {
+        "label": "Miao et al. (2024)",
+        "citation": "Miao, F., Shiohira, K., & Lao, N. (2024). AI competency framework for students. UNESCO. https://doi.org/10.54675/jkjb9835",
+        "url": "https://doi.org/10.54675/jkjb9835",
+        "group": "AI & education",
+        "shortTitle": "AI competency framework for students"
       },
       {
         "label": "Cho et al. (2026)",
@@ -8419,7 +8441,7 @@
       },
       {
         "label": "Apple · Dictation",
-        "citation": "Apple. (2026). Use Dictation to enter text on Mac. macOS User Guide.",
+        "citation": "Apple. (2026). Dictate messages and documents on Mac. Mac User Guide.",
         "url": "https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27",
         "group": "Access & accessible media",
         "shortTitle": "Dictation on Mac"
@@ -8434,7 +8456,7 @@
       {
         "label": "W3C · WCAG 2.2",
         "citation": "World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
-        "url": "https://www.w3.org/TR/WCAG22/",
+        "url": "https://www.w3.org/TR/2023/REC-WCAG22-20231005/",
         "group": "Access & accessible media",
         "shortTitle": "Web Content Accessibility Guidelines"
       },

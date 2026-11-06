@@ -1224,7 +1224,7 @@ title: "Compare concepts in an infographic"
 ---
 layout: default
 routeAlias: s67slides
-title: "Generate, present and revise slides"
+title: "Generate and present slides"
 ---
 
 <DeckSlide id="S67SLIDES" />

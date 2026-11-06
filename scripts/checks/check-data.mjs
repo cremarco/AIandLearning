@@ -25,6 +25,12 @@ export function checkData() {
   assert.equal(flows.length, 1, 'Only one complete presentation path is supported')
   assert.equal(flows[0].id, 'all')
   assert.deepEqual(flows[0].slideIds, slides.map(slide => slide.id))
+  const bibliographyText = fs.readFileSync(path.join(root, 'data/references/bibliography.bib'), 'utf8')
+  const bibliographyAudit = read('data/references/bibliography-audit.json')
+  const bibliographyCount = [...bibliographyText.matchAll(/^@\w+\{/gm)].length
+  assert.equal(bibliographyAudit.bibtex_sha256, createHash('sha256').update(bibliographyText).digest('hex'), 'The bibliography audit must match the delivered BibTeX')
+  assert.equal(bibliographyAudit.records.length, bibliographyCount, 'Audit every delivered bibliography entry')
+  assert.equal(bibliographyAudit.validation.total_entries, bibliographyCount, 'Keep bibliography validation counts current')
   const bookIndex = slides.findIndex(slide => slide.id === 'S53')
   assert(bookIndex >= 0, 'The assigned chapter must be present')
   assert.deepEqual(slides.slice(bookIndex + 1, bookIndex + 3).map(slide => slide.id), ['S53TOOLCHATGPT', 'S53GPT'], 'Introduce ChatGPT with its title and logo immediately after the book')

@@ -488,7 +488,7 @@
           }
         ]
       },
-      "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. Testing found a duplicated due-card count. A follow-up corrected it; reveal, Good → next card (3 due → 2), and quiz feedback were verified.",
+      "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. A duplicated due-card count was corrected; reveal and Good → next card (3 due → 2) were checked. The recording shows one correct-answer quiz feedback path; the later review found unreliable keyword grading.",
       "tests": [
         {
           "action": "Reveal an HTML flashcard and rate it Good.",
@@ -1116,7 +1116,14 @@
         }
       ],
       "videoSha256": "21d57f5ec2ec75b748582100b57aa6df14af66c5a3da26a443ce7adbcbb4b515",
-      "posterSha256": "3ab66013f2d9d3e521d7ca079fd3a28af0432f711b51672b93244dd2f97bf8a5"
+      "posterSha256": "3ab66013f2d9d3e521d7ca079fd3a28af0432f711b51672b93244dd2f97bf8a5",
+      "postRecordingReview": {
+        "reviewedOn": "2026-11-06",
+        "finding": "Short-answer grading uses substring matching, causing false positives for negations and false negatives for valid paraphrases. Only one correct-answer feedback path was observed in the recording.",
+        "reviewedAdaptation": "materials/skills/outputs/chapter-quiz-reviewed.html",
+        "scope": "The adaptation uses explicit manual self-assessment; the original quiz, recording, transcript and artifact hashes are unchanged.",
+        "reviewedSha256": "05ee5b29c8568c11de2ce784db4f24d5cd3518143d6ebd00fa53615a68c5093a"
+      }
     },
     {
       "key": "markdown-mermaid-writing",

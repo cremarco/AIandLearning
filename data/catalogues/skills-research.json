@@ -143,7 +143,7 @@
       "demoSlideId": "S53SKILLCITATIONS",
       "conversationUrl": "https://chatgpt.com/c/6aecb499-5510-83eb-8d64-9a2419a39c35",
       "sourceCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "webInstall": "ChatGPT web: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode.",
+      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file.",
       "resultExcerpt": "Three book references matched to primary records; a BibTeX file downloaded.",
       "artifacts": [
@@ -367,7 +367,7 @@
       "demoSlideId": "S53SKILLLEARN",
       "conversationUrl": "https://chatgpt.com/c/6aecb2f1-a814-83eb-8415-315a1d31e2ee",
       "sourceCommit": "1566547ffb9834424810869c973082085b9fd83d",
-      "webInstall": "ChatGPT web: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode.",
+      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7.",
       "resultExcerpt": "One question, source-linked feedback and a transfer check.",
       "artifacts": []
@@ -381,8 +381,8 @@
       "requirements": "Python for generators; a browser/PDF backend for the cheatsheet.",
       "summary": "Plan, practise and retain the chapter.",
       "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
-      "expected": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. Testing found a duplicated due-card count. A follow-up corrected it; reveal, Good → next card (3 due → 2), and quiz feedback were verified.",
-      "caveat": "The first generated counter double-counted due cards. A follow-up fixed it; the corrected reveal, rating, progress and quiz feedback were checked.",
+      "expected": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. A duplicated due-card count was corrected; reveal and Good → next card (3 due → 2) were checked. The recording shows one correct-answer quiz feedback path; the later review found unreliable keyword grading.",
+      "caveat": "The recorded quiz grades by keyword and rejects valid paraphrases. Use the separately reviewed manual self-assessment copy; the original recording is preserved.",
       "repo": "toddward/the-learning-skill",
       "sourceUrl": "https://github.com/toddward/the-learning-skill/blob/main/the-learning-skill/SKILL.md",
       "sourceId": "SKILL_LEARNING",
@@ -397,11 +397,11 @@
         "url": "https://github.com/toddward/the-learning-skill",
         "snapshot": "2026-11-05"
       },
-      "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. Testing found a duplicated due-card count. A follow-up corrected it; reveal, Good → next card (3 due → 2), and quiz feedback were verified.",
+      "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. A duplicated due-card count was corrected; reveal and Good → next card (3 due → 2) were checked. The recording shows one correct-answer quiz feedback path; the later review found unreliable keyword grading.",
       "demoSlideId": "S53SKILLLEARNING",
       "conversationUrl": "https://chatgpt.com/c/6aecb38f-3c04-83ed-b26e-e8d199a1ea0e",
       "sourceCommit": "764f77764e9a731f74da297a4963959670e80e03",
-      "webInstall": "ChatGPT web: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode.",
+      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance.",
       "resultExcerpt": "Recall first, then notes, three HTML flashcards, a quiz and two reviews.",
       "artifacts": [
@@ -416,7 +416,7 @@
           ]
         },
         {
-          "label": "Open the chapter quiz",
+          "label": "Original generated quiz · grading limitation",
           "url": "materials/skills/outputs/chapter-quiz.html",
           "sha256": "4a434e91265b615d16fcdfe9c4c607cd13ceb6cb01c45fae05f24ad5bbc86469",
           "originalSha256": "668093efcddf617267b9b278e4d5a83aedb6e1b69223d4cfaa5fb4ac0b669ded",
@@ -424,6 +424,11 @@
             "Source hyperlink points to the distributed workshop chapter instead of the recording account’s file library; content, controls and styling unchanged.",
             "Original MIT template copyright and permission notice included in a non-rendered HTML comment."
           ]
+        },
+        {
+          "label": "Reviewed chapter practice · manual self-assessment",
+          "url": "materials/skills/outputs/chapter-quiz-reviewed.html",
+          "role": "post-recording workshop adaptation"
         }
       ]
     },
@@ -456,7 +461,7 @@
       "demoSlideId": "S53SKILLMERMAID",
       "conversationUrl": "https://chatgpt.com/c/6aecb3c3-b380-83eb-8743-7fddc0f7131e",
       "sourceCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "webInstall": "ChatGPT web: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode.",
+      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed.",
       "resultExcerpt": "An eight-node diagram, editable Mermaid source and a text alternative.",
       "artifacts": [
@@ -505,7 +510,7 @@
       "demoSlideId": "S53SKILLFLASHCARDS",
       "conversationUrl": "https://chatgpt.com/c/6aecb461-8dd4-83ed-8900-5b4f811a4695",
       "sourceCommit": "1566547ffb9834424810869c973082085b9fd83d",
-      "webInstall": "ChatGPT web: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode.",
+      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates.",
       "resultExcerpt": "A downloaded text file with three source-linked Question | Answer pairs.",
       "artifacts": [
@@ -547,7 +552,7 @@
       "demoSlideId": "S53SKILLCRITICAL",
       "conversationUrl": "https://chatgpt.com/c/6aecb43d-3578-83ed-a6ca-a770c362b923",
       "sourceCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "webInstall": "ChatGPT web: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode.",
+      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7.",
       "resultExcerpt": "Three misconceptions checked against specific chapter sections.",
       "artifacts": []

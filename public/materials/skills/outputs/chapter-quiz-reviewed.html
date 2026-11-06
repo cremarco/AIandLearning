@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reviewed chapter practice · manual self-assessment</title>
+<link rel="stylesheet" href="../../ui/daisyui.css"><link rel="stylesheet" href="../../ui/theme.css"><link rel="stylesheet" href="../../ui/reader.css">
+<style>main{display:flex;flex-direction:column;gap:24px}.card-body{gap:14px}.card-title{margin-bottom:0}textarea.textarea{font:inherit;min-height:130px}select.select{font:inherit;min-height:48px}summary{font-weight:650}output{font-weight:700}footer{padding-bottom:48px}</style></head><body>
+<header><h1>Reviewed chapter practice</h1><p>Manual self-assessment · workshop adaptation, 6 November 2026.</p><p>The original generated quiz uses unreliable keyword matching. This adaptation asks you to compare meaning with the chapter; it does not automatically judge your explanation.</p><p><a class="link" href="chapter-quiz.html">Original recorded quiz · grading limitation</a> · <a class="link" href="../../booklet-genai/lettura.html">Workshop book</a></p></header><main id="content">
+<section class="card bg-base-200"><div class="card-body">
+<h2 class="card-title">1. Training</h2><p>What does optimisation update during training?</p>
+<label for="answer-1">Your explanation</label><textarea class="textarea w-full" id="answer-1" rows="3"></textarea>
+<details class="collapse collapse-arrow bg-base-100"><summary class="collapse-title">Reveal model answer and criteria</summary><div class="collapse-content"><p>Model parameters (weights). Optimisation changes numerical parameters to reduce aggregate prediction error.</p><p><strong>Check:</strong> Name the parameters and connect their update to prediction error. (§1.2)</p></div></details>
+<label for="rating-1">Self-assessment for item 1</label><select class="select w-full" id="rating-1" data-rating><option value="">Not rated</option><option value="0">0 — Needs review</option><option value="1">1 — Partly explained</option><option value="2">2 — Explained with the key distinctions</option></select>
+</div></section>
+<section class="card bg-base-200"><div class="card-body">
+<h2 class="card-title">2. Context and inference</h2><p>True or false: correctly using a definition in your prompt proves that the model was trained on that message. Explain.</p>
+<label for="answer-2">Your explanation</label><textarea class="textarea w-full" id="answer-2" rows="3"></textarea>
+<details class="collapse collapse-arrow bg-base-100"><summary class="collapse-title">Reveal model answer and criteria</summary><div class="collapse-content"><p>False. A definition can influence the answer through context while ordinary inference uses fixed parameters.</p><p><strong>Check:</strong> Distinguish context available during inference from parameter updates during training. (§1.2)</p></div></details>
+<label for="rating-2">Self-assessment for item 2</label><select class="select w-full" id="rating-2" data-rating><option value="">Not rated</option><option value="0">0 — Needs review</option><option value="1">1 — Partly explained</option><option value="2">2 — Explained with the key distinctions</option></select>
+</div></section>
+<section class="card bg-base-200"><div class="card-body">
+<h2 class="card-title">3. Retrieval-augmented generation</h2><p>Explain RAG and name one reason its answer may be wrong.</p>
+<label for="answer-3">Your explanation</label><textarea class="textarea w-full" id="answer-3" rows="3"></textarea>
+<details class="collapse collapse-arrow bg-base-100"><summary class="collapse-title">Reveal model answer and criteria</summary><div class="collapse-content"><p>During use, retrieval supplies passages as context to a model. Retrieval itself does not update model weights. It may select irrelevant material, and the response may misinterpret a passage.</p><p><strong>Check:</strong> Identify retrieved context, fixed parameters during ordinary inference, and one failure mode. Accept equivalent explanations. (§§1.2, 1.7)</p></div></details>
+<label for="rating-3">Self-assessment for item 3</label><select class="select w-full" id="rating-3" data-rating><option value="">Not rated</option><option value="0">0 — Needs review</option><option value="1">1 — Partly explained</option><option value="2">2 — Explained with the key distinctions</option></select>
+</div></section>
+<section aria-labelledby="score-title"><h2 id="score-title">Your self-assessment</h2><output id="score" aria-live="polite">Self-rated score: 0 / 6 · 0 / 3 items rated.</output><p>This is a practice record, not an automatic grade or proof of mastery. Explain a new example independently and ask for feedback where needed.</p><button class="btn" id="reset">Reset answers and ratings</button></section></main><footer>Adapted from the recorded study-kit example; question meanings checked against the assigned chapter. The original quiz and recording are preserved separately.</footer>
+<script>
+const ratings=[...document.querySelectorAll('[data-rating]')];
+function updateScore(){const chosen=ratings.filter(item=>item.value!=='');const total=chosen.reduce((sum,item)=>sum+Number(item.value),0);document.getElementById('score').textContent=`Self-rated score: ${total} / 6 · ${chosen.length} / 3 items rated.`;}
+ratings.forEach(item=>item.addEventListener('change',updateScore));
+document.getElementById('reset').addEventListener('click',()=>{document.querySelectorAll('textarea').forEach(item=>item.value='');ratings.forEach(item=>item.value='');document.querySelectorAll('details').forEach(item=>item.open=false);updateScore();});
+</script></body></html>

@@ -281,7 +281,7 @@ writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue'
   '<section class="slide"><h2>How to choose</h2><p>The following is a practical inference from the sources, not a measured ranking of these packages: prefer a narrow recurring task with a clear input, output and check. For one representative task, compare factual errors, missing requirements, file usability and effort with and without the skill. For teaching, also assess what the learner can explain without assistance.</p>',
   '<h3>Research method</h3><ol>', ...skillResearch.method.map(text => `<li>${h(text)}</li>`),
   '</ol><h3>Sources</h3>',
-  ...Object.entries(sources).filter(([id]) => id.startsWith('SKILL_')).map(([, source]) => `<p><a class="link link-primary" href="${h(source.url)}">${h(source.citation)}</a> ${h(source.limitations)}</p>`),
+  ...Object.entries(sources).filter(([id]) => id.startsWith('SKILL_')).map(([, source]) => `<p><a class="link link-primary" href="${h(relative(source.url))}">${h(source.citation)}</a> ${h(source.limitations)}</p>`),
   '</section></main><footer><a class="link link-primary" href="#">Back to top</a></footer>',
 ])
 

@@ -16,7 +16,7 @@ const groups = computed(() => {
 
 <template>
   <div class="bibliography" :class="{ 'bibliography-spacious': spacious }">
-    <div class="bibliography-columns" :class="{ 'bibliography-two-columns': groups.length === 2 }">
+    <div class="bibliography-columns" :class="{ 'bibliography-two-columns': groups.length === 2, 'bibliography-four-columns': groups.length === 4 }">
       <section v-for="group in groups" :key="group.title" class="bibliography-group">
         <h2>{{ group.title }}</h2>
         <ul class="list bibliography-list">
@@ -36,6 +36,7 @@ const groups = computed(() => {
 .bibliography { width:100%; align-self:stretch; display:flex; flex-direction:column; gap:12px; }
 .bibliography-columns { display:grid; grid-template-columns:1.1fr 1fr .95fr; gap:32px; flex:1; min-height:0; align-items:start; }
 .bibliography-two-columns { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.bibliography-four-columns { grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
 .slidev-layout .bibliography-group h2 { font-size:21px; line-height:1.2; margin:0 0 16px; color:var(--deck-cyan); }
 .slidev-layout .bibliography-list.list { padding:0; margin:0; list-style:none; }
 .slidev-layout .bibliography-list .list-row { grid-template-columns:minmax(0,1fr); gap:0; margin:0; padding:2px 0; border-radius:0; }
