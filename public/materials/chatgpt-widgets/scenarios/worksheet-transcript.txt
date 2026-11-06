@@ -1,0 +1,66 @@
+/worksheet — prompt, generation and widget use
+
+PROMPT
+/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.302 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:08.008 The generated widget is ready.
+00:00:10.013 Write a justified answer before revealing the model answer.
+00:00:13.445 Reveal the expected mechanism and compare it with your explanation.
+00:00:16.882 Choose a partial self-assessment score.
+00:00:19.301 Inspect the self-assessment total after scoring one exercise.
+
+OBSERVED RESULT AFTER USE
+Interactive Worksheet: Training, Inference & Context
+
+University level · 3 exercises · 6 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+
+Write your answers independently, reveal the model answers, and award yourself 0–2 points for each exercise.
+
+Worksheet progress
+
+1 of 3 exercises assessed
+1/6
+Self-assessment score
+
+1. Training — Explain the mechanism
+
+2 points
+
+During pretraining, how does the comparison between predicted distributions and actual tokens lead to parameter updates?
+
+Hide model answer
+
+MODEL ANSWER
+
+The text supplies a learning signal. The system compares predicted distributions with the actual tokens in training examples, and optimization updates numerical parameters to reduce aggregate prediction error.
+
+Full-mark evidence: Connect predicted distributions, example tokens, prediction error and parameter optimization.
+
+Self-assessment
+0 · Incorrect
+1 · Partial
+2 · Complete
+
+2. Inference — Trace the process
+
+2 points
+
+Explain how ordinary inference produces an output. What happens to the model's parameters?
+
+Reveal model answer
+
+3. Context — Apply the distinction
+
+2 points
+
+Andrea adds “In this chapter, X means Y” to a prompt and receives a different answer. Does this demonstrate retraining? Explain.
+
+Reveal model answer
+Reset worksheet
+
+Scoring scale: 0 = incorrect or absent; 1 = partially correct; 2 = accurate and independently justified.
+
+Learning outcome: Distinguish parameter updates during training from fixed-parameter inference and changes to information available through context.

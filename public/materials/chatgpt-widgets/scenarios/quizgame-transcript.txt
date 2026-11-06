@@ -1,0 +1,51 @@
+/quizgame — prompt, generation and widget use
+
+PROMPT
+/quizgame Using only the attached chapter, create an interactive three-question quiz game on training versus inference. Include answer choices, feedback, score and next-question controls. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.224 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.634 The generated widget is ready.
+00:00:09.641 Choose the numerical-parameter answer.
+00:00:11.887 Lock in the answer, then read the feedback and score.
+00:00:15.504 Advance to the next round with the updated score.
+
+OBSERVED RESULT AFTER USE
+Quiz Game: Training vs. Inference
+
+Three university-level challenges based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.
+
+Choose an answer, lock it in to receive feedback, and advance to the next question. Each correct answer earns 100 points.
+
+UNIVERSITY CHALLENGE
+
+Training vs. Inference
+
+SCORE
+
+100
+
+Question 2 of 3 · Inference
+
+A fixed model processes an input and produces an output distribution. What describes this operation?
+
+A
+
+Ordinary inference with existing parameters
+
+B
+
+Fine-tuning the model using the input
+
+C
+
+Updating weights after each generated token
+
+D
+
+Replacing model parameters with context
+
+Lock in answer
+
+Key distinction: Training updates numerical parameters; ordinary inference uses them without updating; changing context can affect the answer without retraining.

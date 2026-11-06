@@ -1,0 +1,63 @@
+/exitTicket — prompt, generation and widget use
+
+PROMPT
+/exitTicket Using only the attached chapter, create an interactive three-question exit ticket on training, inference and context. Include answer fields and a submit button that reveals expected answers. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.368 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.147 The generated widget is ready.
+00:00:09.155 Explain what changes in training.
+00:00:12.471 Explain how inference uses an existing model.
+00:00:15.735 Explain why new context is not retraining.
+00:00:19.165 Submit the completed ticket and compare with the expected answers.
+
+OBSERVED RESULT AFTER USE
+Exit Ticket: Training, Inference & Context
+
+University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Answer all three questions independently. Submit your responses to reveal the expected answers and compare your understanding.
+
+Exit ticket progress
+
+3 of 3 responses written
+0/3
+
+1. Training
+
+What changes during pretraining, and how does prediction error contribute?
+
+EXPECTED ANSWER
+
+The system compares predicted distributions with tokens in training examples. Optimization updates numerical model parameters to reduce aggregate prediction error.
+
+My explanation was accurate and justified.
+
+2. Inference
+
+How does ordinary inference generate an output without updating model parameters?
+
+EXPECTED ANSWER
+
+The input and fixed model undergo calculations that produce an output distribution and selected output. Existing parameters are used without being updated.
+
+My explanation was accurate and justified.
+
+3. Context
+
+Andrea adds “In this chapter, X means Y” to a prompt. The answer changes. Does this demonstrate retraining? Explain.
+
+EXPECTED ANSWER
+
+No. The new definition changes information available in context, potentially influencing the output without updating model weights.
+
+My explanation was accurate and justified.
+0/3
+
+Review the explanations where your reasoning needs improvement.
+
+Self-assessed results, not automatic grading.
+Retry exit ticket
+
+Success criterion: Independently distinguish parameter updates during training from fixed-parameter inference and changes to context.

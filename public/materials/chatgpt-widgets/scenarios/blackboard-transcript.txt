@@ -1,0 +1,56 @@
+/blackboard — prompt, generation and widget use
+
+PROMPT
+/blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.221 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:06.467 The generated widget is ready.
+00:00:08.475 Filter the diagram to show training.
+00:00:11.326 Switch to inference and compare the two processes.
+00:00:14.042 Open a conceptual check below the diagram.
+00:00:17.453 Hide the explanation to repeat the check from memory.
+
+OBSERVED RESULT AFTER USE
+Interactive Blackboard: Training vs. Inference
+
+University level · Source: §1.2, Table 1 and Figure 1 of Foundations of Generative Artificial Intelligence
+
+Switch between Training and Inference to explore their processes, then complete three understanding checks.
+
+INTERACTIVE BLACKBOARD
+
+How the Model Works
+Both
+Training
+Inference
+
+Inference uses existing parameters.
+
+A new message changes context, not automatically model weights.
+
+Understanding checks
+
+0/3
+
+1.
+
+What changes during training, and why?
+
+Reveal answer
+
+2.
+
+What happens to parameters during ordinary inference?
+
+Reveal answer
+
+3.
+
+Andrea adds “In this chapter, X means Y” to his prompt. Does this retrain the model?
+
+Reveal answer
+Reset
+
+Key takeaway: Training updates model parameters to reduce prediction error. Ordinary inference uses existing parameters, while new context may change generated outputs without retraining.

@@ -1,0 +1,82 @@
+/decisionmatrix — prompt, generation and widget use
+
+PROMPT
+/decisionmatrix Using only the attached chapter, create an interactive matrix comparing training, inference and retrieval. Include selectable processes and three revealable decision checks. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.286 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:08.135 The generated widget is ready.
+00:00:10.141 Select Inference and inspect what changes in the process.
+00:00:13.243 Switch to Retrieval and compare its effect on context.
+00:00:16.271 Reveal a decision check and compare the explanation.
+
+OBSERVED RESULT AFTER USE
+Interactive Decision Matrix: Training, Inference & Retrieval
+
+University level · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+
+Select a process to explore what changes, then complete three decision checks to test your understanding.
+
+Compare the three interventions
+
+Criterion
+
+
+
+Training
+
+
+
+Inference
+
+
+
+Retrieval
+
+
+Changes	Parameters	Output	Context
+Updates weights?	Yes	No	No
+Result	Changed model	Selected output	Generated answer
+
+Explore a process
+
+Training
+Inference
+Retrieval
+Retrieval (RAG)
+
+Changes: Available context
+
+Question
+
+Retrieved passages
+
+Context + fixed model
+
+Generated answer
+
+Retrieval supplies external document passages as context. It does not itself update the model's parameters.
+
+Decision checks
+
+1/3 revealed
+
+1. A system optimizes weights using prediction error. Which intervention is this?
+
+Hide answer
+
+Training
+
+Optimization updates the model's parameters.
+
+2. A fixed model processes an input and selects an output. Which process is this?
+
+Reveal answer
+
+3. An application retrieves passages from an external document. What changes?
+
+Reveal answer
+Reset
+
+Key distinction: Training updates parameters; inference uses existing parameters; retrieval supplies external information as context without itself retraining the model.

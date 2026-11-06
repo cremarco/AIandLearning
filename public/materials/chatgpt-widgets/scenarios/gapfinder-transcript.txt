@@ -1,0 +1,57 @@
+/gapfinder — prompt, generation and widget use
+
+PROMPT
+/gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.262 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:06.668 The generated widget is ready.
+00:00:08.675 Write your explanation before viewing the expected reasoning.
+00:00:12.015 Reveal the expected explanation and compare the reasoning.
+00:00:15.477 Identify a concept needing further review.
+
+OBSERVED RESULT AFTER USE
+Knowledge Gap Finder: Training vs. Inference
+
+University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Write your explanations independently, then reveal the expected answers. Compare your reasoning and identify concepts that need further review.
+
+Diagnostic progress
+
+1 of 3 assessed
+0/3
+
+1. Training
+
+
+During pretraining, how does the comparison between predicted distributions and actual tokens lead to changes in model parameters?
+
+Hide explanation
+
+EXPECTED EXPLANATION
+
+The text supplies a learning signal: the model compares predicted distributions with actual tokens in examples. Optimization updates numerical parameters to reduce aggregate prediction error.
+
+Did you connect examples, prediction error, and parameter updates?
+
+Needs review
+Understood
+
+2. Inference
+
+
+A model produces two different responses to two prompts. Does this mean its parameters changed? Explain.
+
+Reveal expected explanation
+
+3. Retrieval
+
+
+Andrea retrieves a new document and uses it to generate an answer. How does this differ from training?
+
+Reveal expected explanation
+Restart
+
+Core distinction: Training updates model parameters. Ordinary inference uses existing parameters, while document retrieval supplies additional context without itself updating them.

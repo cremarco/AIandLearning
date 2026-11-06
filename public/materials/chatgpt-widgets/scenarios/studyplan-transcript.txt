@@ -1,0 +1,75 @@
+/studyplan — prompt, generation and widget use
+
+PROMPT
+/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.417 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.062 The generated widget is ready.
+00:00:09.066 Complete the training activity and watch the progress percentage.
+00:00:11.569 Complete the inference activity.
+00:00:13.805 Complete context and inspect the finished plan.
+00:00:16.745 Reset the plan to start a new study session.
+
+OBSERVED RESULT AFTER USE
+Interactive Study Plan: Training, Inference & Context
+
+University level · 3 steps · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Complete each activity, explain the concept in your own words, and check it off when you understand it.
+
+Study progress
+
+0 of 3 activities completed
+0%
+
+1
+
+Training
+
+
+Understand how a model learns.
+
+Trace training examples → prediction error → parameter updates → changed model.
+
+SELF-CHECK
+
+Explain why optimization updates numerical parameters to reduce aggregate prediction error.
+
+I can explain this independently.
+
+2
+
+Inference
+
+
+Understand how a trained model generates output.
+
+Trace input + fixed model → model calculations → output distribution → selected output.
+
+SELF-CHECK
+
+Explain why ordinary inference uses existing parameters without updating them.
+
+I can explain this independently.
+
+3
+
+Context
+
+
+Distinguish providing information from retraining.
+
+Compare adding “In this chapter, X means Y” to a prompt with updating model parameters.
+
+SELF-CHECK
+
+Explain why changing the available context can influence output without changing weights.
+
+I can explain this independently.
+Reset plan
+
+Final recall challenge: Why can a new prompt produce a different answer without retraining the model?
+
+Key principle: Training updates parameters; inference uses existing parameters; context supplies information for the current inference.

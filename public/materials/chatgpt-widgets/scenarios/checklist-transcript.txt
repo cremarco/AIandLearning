@@ -1,0 +1,43 @@
+/checklist — prompt, generation and widget use
+
+PROMPT
+/checklist Using only the attached chapter, create an interactive three-item checklist for understanding training, inference and context. Include completion progress and reset. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.222 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:05.174 The generated widget is ready.
+00:00:07.180 Check the training objective and watch completion progress.
+00:00:09.516 Mark inference and context as understood.
+00:00:12.594 Reset the checklist for a new self-check.
+
+OBSERVED RESULT AFTER USE
+Interactive Checklist: Training, Inference & Context
+
+University level · 3 learning objectives · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Check each item when you can explain the concept independently, without consulting your notes.
+
+Learning progress
+
+Mark each objective when understood
+
+0/3
+
+1. Training — Update parameters
+
+I can explain how predicted distributions are compared with tokens in training examples and how optimization updates numerical parameters to reduce aggregate prediction error.
+
+2. Inference — Use fixed parameters
+
+I can explain how ordinary inference uses already available parameters to calculate an output distribution and select an output.
+
+3. Context — Supply information
+
+I can explain why adding a definition to a prompt or retrieving passages can influence the answer without itself updating model parameters.
+
+Reset checklist
+
+Final self-check: Why can changing a prompt produce a different answer without retraining the model?
+
+Expected understanding: The prompt changes the available context, while ordinary inference uses the existing model parameters.

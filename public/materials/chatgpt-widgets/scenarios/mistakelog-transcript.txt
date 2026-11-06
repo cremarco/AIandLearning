@@ -1,0 +1,76 @@
+/mistakelog — prompt, generation and widget use
+
+PROMPT
+/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.262 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:08.329 The generated widget is ready.
+00:00:10.338 Reveal the correction to the first misconception.
+00:00:13.833 Mark the misconception for further review.
+00:00:16.538 Open the correction for the inference misconception.
+
+OBSERVED RESULT AFTER USE
+Interactive Mistake Log: Training, Inference & Context
+
+University level · 3 misconceptions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Review each incorrect claim, reveal its correction, and explain the mistake in your own words. Mark each concept as understood or needing further review.
+
+Review progress
+
+1/3 misconceptions assessed
+0/3
+
+1. Training
+
+
+MISCONCEPTION
+
+Training simply stores the examples as readable entries inside the model.
+
+Hide correction
+
+Correct explanation
+
+Training updates numerical parameters through optimization to reduce aggregate prediction error.
+
+Reason: The training text supplies a learning signal. Parameters are learned numerical values, not an encyclopedia of readable entries.
+
+Why is parameter optimization different from simply storing examples?
+
+Needs review
+Understood
+
+2. Inference
+
+
+MISCONCEPTION
+
+The model must update its weights whenever it generates a response.
+
+Hide correction
+
+Correct explanation
+
+Ordinary inference performs calculations using parameters already available.
+
+Reason: A fixed model can calculate output distributions and select outputs without modifying its learned weights.
+
+What does inference use instead of changing weights?
+
+Needs review
+Understood
+
+3. Context
+
+
+MISCONCEPTION
+
+If adding “X means Y” to a prompt changes the answer, the model has been retrained.
+
+Reveal correction
+Reset mistake log
+
+Key takeaway: Training updates model parameters. Ordinary inference uses existing parameters, and changing context can influence an answer without retraining the model.

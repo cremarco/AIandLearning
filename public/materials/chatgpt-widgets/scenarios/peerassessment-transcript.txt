@@ -1,0 +1,79 @@
+/peerassessment — prompt, generation and widget use
+
+PROMPT
+/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.253 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.894 The generated widget is ready.
+00:00:09.900 Assign the training explanation a partial score.
+00:00:12.391 Write specific feedback for a classmate.
+00:00:15.967 Reveal the expected evidence to support the judgement.
+00:00:19.632 Score inference and inspect the updated total.
+00:00:22.913 Inspect the accumulated total: 3/6 points assigned by the reviewer.
+
+OBSERVED RESULT AFTER USE
+Peer Assessment: Training, Inference & Context
+
+University level · 3 criteria · 6 points · Based on §§1.2 and 1.10, Table 1 and Figure 1 of the attached chapter
+
+Evaluate a classmate's explanation using the rubric below. Award 0–2 points per criterion, record constructive feedback, and compare the explanation with the expected evidence.
+
+Assessment progress
+
+2 of 3 criteria scored
+3/6
+Total points
+
+1. Training
+
+Max. 2 points
+
+Does the student explain how training changes the model?
+
+Score
+0 · Incorrect
+1 · Partial
+2 · Complete
+Hide expected evidence
+
+EVIDENCE FOR FULL MARKS
+
+Explains that predicted distributions are compared with tokens in examples and that optimization updates numerical parameters to reduce aggregate prediction error.
+
+Check for a causal connection between examples, prediction error and parameter updates.
+
+2. Inference
+
+Max. 2 points
+
+Does the student explain how ordinary inference operates?
+
+Score
+0 · Incorrect
+1 · Partial
+2 · Complete
+Show expected evidence
+
+3. Context
+
+Max. 2 points
+
+Does the student distinguish new context from retraining?
+
+Score
+0 · Incorrect
+1 · Partial
+2 · Complete
+Show expected evidence
+
+Assessment total
+
+Complete all three criteria
+3/6
+Reset rubric
+
+Shared scoring scale: 0 = absent or incorrect; 1 = partially accurate or insufficiently justified; 2 = accurate, independently explained and justified.
+
+The assessment emphasizes conceptual relationships and reasoning, consistent with §1.10, rather than merely recognizing terminology or producing working code.

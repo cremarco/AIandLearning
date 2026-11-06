@@ -1,0 +1,48 @@
+/matchinggame — prompt, generation and widget use
+
+PROMPT
+/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.248 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.476 The generated widget is ready.
+00:00:09.480 Select Training, then match its definition.
+00:00:13.775 Match Inference to calculations using existing parameters.
+00:00:18.114 Complete the final Context pair and inspect the result.
+
+OBSERVED RESULT AFTER USE
+Matching Game: Training, Inference & Context
+
+University level · 3 pairs · Based on §1.2 and Table 1 of the attached chapter
+
+Select a concept on the left, then its matching definition on the right. Receive immediate feedback and track your progress.
+
+Matching progress
+
+3 attempts
+3/3
+
+CONCEPT
+
+DEFINITION
+
+Training
+
+Inference
+
+Context
+
+Information available to the model during the current inference.
+
+Updates numerical model parameters to reduce aggregate prediction error.
+
+Runs calculations using model parameters already available.
+
+All three pairs matched!
+
+0 incorrect attempts
+
+Play again
+
+Key distinction: Training updates parameters, inference uses existing parameters, and context provides information that can influence an answer without retraining the model.

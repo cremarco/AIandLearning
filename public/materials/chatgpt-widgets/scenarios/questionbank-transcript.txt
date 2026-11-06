@@ -1,0 +1,54 @@
+/questionbank — prompt, generation and widget use
+
+PROMPT
+/questionbank Using only the attached chapter, create an interactive bank of three questions on training, inference and context. Include answer fields, reveal/hide explanations and progress. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.276 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.833 The generated widget is ready.
+00:00:09.841 Write an answer using your own explanation.
+00:00:13.379 Reveal the expected explanation and compare it with your answer.
+00:00:16.809 Mark the question understood and update progress.
+
+OBSERVED RESULT AFTER USE
+Interactive Question Bank: Training, Inference & Context
+
+University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Write your answers independently, reveal the expected explanations, and mark each question as understood or needing review.
+
+Review progress
+
+1 of 3 assessed
+1/3
+
+1. Training
+
+During pretraining, how does comparing predicted distributions with the tokens in examples lead to changes in model parameters?
+
+Hide explanation
+
+EXPECTED EXPLANATION
+
+The text supplies a learning signal. The system compares predicted distributions with actual tokens, and optimization updates numerical parameters to reduce aggregate prediction error.
+
+Did you explain prediction error, optimization, and parameter updates?
+
+Needs review
+Understood
+
+2. Inference
+
+What happens during ordinary inference, and how does this differ from training?
+
+Reveal explanation
+
+3. Context
+
+Andrea adds “In this chapter, X means Y” to a prompt and receives a different answer. What changed, and does this prove retraining?
+
+Reveal explanation
+Reset question bank
+
+Core distinction: Training updates learned model parameters; ordinary inference uses existing parameters; context provides information that may influence an answer without retraining.

@@ -116,6 +116,12 @@ export function checkData() {
     assert(clip.chapters?.some(chapter => chapter.label === 'Prompt') && clip.chapters.some(chapter => chapter.label === 'Generation') && clip.chapters.some(chapter => chapter.label === 'Widget'), `${clip.command}: show the prompt, generation and completed widget`)
     const capture = videoProvenance.clips.find(record => record.command === clip.command)?.capture
     assert(capture?.responseComplete && capture.frames?.length >= 3, `${clip.command}: preserve a complete generation capture`)
+    assert.deepEqual(clip.chapters.map(chapter => chapter.label), ['Prompt', 'Send', 'Generation', 'Widget', 'Use'], `${clip.command}: show the complete prompt-to-use scenario`)
+    assert.equal(clip.width, 1920, `${clip.command}: preserve the native Retina crop`)
+    assert.equal(clip.height, 1200, `${clip.command}: preserve the 8:5 frame`)
+    assert.equal(clip.fps, 60, `${clip.command}: retain smooth browser transitions`)
+    assert(capture.responseId && capture.actions?.length >= 2, `${clip.command}: record meaningful use of the actual response`)
+    assert(capture.phases?.filter(phase => ['widget', 'usage'].includes(phase.name)).every(phase => phase.speed === 1), `${clip.command}: never accelerate widget use`)
   }
   assert.equal(slides.find(slide => slide.id === 'S53WIDGETWORKSHEET')?.media?.type, 'video', 'The worksheet example must show its recorded interaction')
   for (const example of slides.filter(slide => slide.kind === 'shortcut-example')) {

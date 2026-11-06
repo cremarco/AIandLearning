@@ -1,0 +1,64 @@
+/sortinggame — prompt, generation and widget use
+
+PROMPT
+/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.363 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.338 The generated widget is ready.
+00:00:12.197 Parameter updating is selected as Training.
+00:00:14.214 Select Inference for calculations with fixed parameters.
+00:00:16.557 Select Inference for supplying new prompt context.
+00:00:18.797 Check the three classifications and read the explanations.
+
+OBSERVED RESULT AFTER USE
+Sorting Game: Training vs. Inference
+
+University level · 3 items · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Classify each action as Training or Inference, then check your answers to reveal explanations. Adding prompt context is classified under inference because it does not itself update parameters.
+
+Sorting progress
+
+3 of 3 classified
+3/3
+
+1. Updating numerical parameters to reduce prediction error
+
+
+Training
+Inference
+
+Correct classification: Training
+
+Training uses examples and prediction error to optimize the model's learned numerical parameters.
+
+2. Calculating outputs with an existing, fixed model
+
+
+Training
+Inference
+
+Correct classification: Inference
+
+Ordinary inference uses available model parameters to calculate an output distribution and select an output.
+
+3. Adding “In this chapter, X means Y” to a prompt
+
+
+Training
+Inference
+
+Correct classification: Inference
+
+This changes information in the current context, not the model's learned weights. It is an input change used during inference.
+
+3/3 correct
+
+All three classifications are correct.
+
+Check answers
+Reveal answers
+
+Key takeaway: Training updates parameters; inference uses fixed parameters. Adding context can influence the output without retraining the model.

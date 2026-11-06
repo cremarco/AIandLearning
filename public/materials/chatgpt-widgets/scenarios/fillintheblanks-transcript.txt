@@ -1,0 +1,61 @@
+/fillintheblanks — prompt, generation and widget use
+
+PROMPT
+/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.311 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.746 The generated widget is ready.
+00:00:09.753 Use a hint for the first sentence.
+00:00:12.189 Enter the missing verb and check its explanation.
+00:00:15.959 Complete and check the inference term.
+
+OBSERVED RESULT AFTER USE
+Fill in the Blanks: Training, Inference & Context
+
+University level · 3 exercises · Based exclusively on §1.2 and Table 1 of the attached chapter
+
+Complete each sentence with the correct technical term. Use hints if needed, then check your answers to see explanations and track your progress.
+
+Learning progress
+
+2 of 3 answers checked
+2/3
+
+1. Complete the sentence
+
+
+During pretraining, optimization _____ model parameters to reduce aggregate prediction error.
+
+Check
+Hide hint
+
+Think of the verb describing how learned numerical values change.
+
+Correct!
+
+The system compares predicted distributions with actual tokens in examples. Optimization updates parameters using this learning signal.
+
+2. Complete the sentence
+
+
+Ordinary _____ runs calculations using model parameters that are already available.
+
+Check
+Show hint
+
+Correct!
+
+Inference uses existing parameters without updating them through ordinary training.
+
+3. Complete the sentence
+
+
+Adding a definition to a prompt changes the information available in the _____ , not the model's learned weights.
+
+Check
+Show hint
+Reset drill
+
+Key distinction: Training updates parameters; ordinary inference uses existing parameters; context supplies information without automatically changing the model.

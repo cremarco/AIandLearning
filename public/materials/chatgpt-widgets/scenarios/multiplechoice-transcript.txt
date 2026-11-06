@@ -1,0 +1,49 @@
+/multiplechoice — prompt, generation and widget use
+
+PROMPT
+/multiplechoice Using only the attached chapter, create an interactive three-question multiple-choice widget about training versus inference. Show answer feedback, explanations and progress. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.237 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:08.548 The generated widget is ready.
+00:00:10.554 Select the role of prediction error in training.
+00:00:12.824 Check the answer and read the explanation.
+00:00:16.400 Advance to the next question and inspect progress.
+
+OBSERVED RESULT AFTER USE
+Multiple-Choice Quiz: Training vs. Inference
+
+University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+
+Select one answer per question, check your response, and review the explanation. Your score and progress update as you advance.
+
+Question 2 of 3
+
+Inference
+1/3
+Correct answers
+Which statement correctly describes ordinary inference?
+
+A
+
+It updates weights after every generated token.
+
+B
+
+It repeats the entire pretraining process.
+
+C
+
+It calculates outputs using already available parameters.
+
+D
+
+It replaces learned parameters with retrieved passages.
+
+Back
+Check answer
+
+1 of 3 questions answered
+
+Key takeaway: Training updates model parameters to reduce prediction error. Ordinary inference uses existing parameters, while changes to context can influence the output without retraining.

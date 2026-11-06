@@ -1,0 +1,45 @@
+/spacedrepetition — prompt, generation and widget use
+
+PROMPT
+/spacedrepetition Using only the attached chapter, create an interactive three-card spaced-review widget on training versus inference. Include reveal, review marking and progress. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.270 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.520 The generated widget is ready.
+00:00:09.526 Reveal the first card after recalling the answer.
+00:00:12.434 Mark the concept as remembered and watch review progress update.
+00:00:15.135 Move to the next concept.
+00:00:17.831 Reveal the second answer for comparison.
+
+OBSERVED RESULT AFTER USE
+Spaced Review: Training vs. Inference
+
+Three interactive cards based on §1.2 and Figure 1 of the attached chapter.
+
+Reveal each answer, mark whether you remembered it, and track your progress. Concepts marked Again are prioritized for another review.
+
+SPACED REVIEW · ROUND 1
+
+Training vs. Inference
+1/3
+Reviewed
+
+CARD 2 OF 3
+
+What happens during ordinary inference?
+
+The model uses parameters already available to calculate an output distribution and select an output. These parameters are not updated during ordinary inference.
+
+How well did you remember the answer?
+
+Again
+Remembered
+Back
+Next card
+
+1 remembered · 0 to review again
+
+Reset
+
+Review strategy: Repeat missed concepts sooner and revisit remembered concepts after longer intervals. This widget tracks progress within the current session; it does not schedule future reviews automatically.

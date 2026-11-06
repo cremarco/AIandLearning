@@ -1137,26 +1137,64 @@
     "title": "/quiz",
     "message": "Answer questions, review feedback and move through a quiz.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/quiz Using only the attached chapter, help me revise tokens, context, model parameters and temperature. Answer in English.",
+    "prompt": "/quiz Using only the attached chapter, create an interactive three-question quiz about tokens, context and parameters. Show feedback and let me advance one question at a time. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
-    "links": [],
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+    "links": [
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
+      }
+    ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/quiz.mp4",
+      "command": "/quiz",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/quiz-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/quiz.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/quiz.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/quiz-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/quiz.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /quiz run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /quiz execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/quiz Using only the attached chapter, create an interactive three-question quiz about tokens, context and parameters. Show feedback and let me advance one question at a time. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/quiz — prompt, generation and widget use\n\nPROMPT\n/quiz Using only the attached chapter, create an interactive three-question quiz about tokens, context and parameters. Show feedback and let me advance one question at a time. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.214 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:06.822 The generated widget is ready.\n00:00:08.830 Read a hint before choosing an answer.\n00:00:11.594 Choose the tokenizer-dependent answer and read the feedback.\n00:00:15.058 Advance to question two.\n\nOBSERVED RESULT AFTER USE\nInteractive Quiz: Tokens, Context & Parameters\n\nThree university-level questions based exclusively on the attached chapter (§§1.2–1.3). Answer each question, receive feedback, and advance to the next.\n\nAndrea adds 'In this chapter, X means Y' to a prompt. The output changes. What is the most justified conclusion?\n\n2 of 3\n\nA\n\nThe new text changed the available context.\n\nB\n\nThe model was automatically fine-tuned.\n\nC\n\nThe tokenizer's vocabulary was rebuilt.\n\nD\n\nThe model's weights were updated by optimization.\n\nNext\nInvia feedback\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/quiz-transcript.txt",
+      "durationSeconds": 20.131,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "cda4ee81ec58e1e4499174d96b4bf82678d0bf19ce269c1d7335a2902674f703",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.214
+        },
+        {
+          "label": "Widget",
+          "seconds": 6.822
+        },
+        {
+          "label": "Use",
+          "seconds": 8.824
+        }
+      ]
     },
     "number": 25
   },
@@ -1169,31 +1207,68 @@
     "title": "/quizgame",
     "message": "Practise a topic through quiz challenges.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/quizgame Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+    "prompt": "/quizgame Using only the attached chapter, create an interactive three-question quiz game on training versus inference. Include answer choices, feedback, score and next-question controls. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/quizgame.mp4",
+      "command": "/quizgame",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/quizgame-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/quizgame.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/quizgame.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/quizgame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/quizgame.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /quizgame run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /quizgame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/quizgame Using only the attached chapter, create an interactive three-question quiz game on training versus inference. Include answer choices, feedback, score and next-question controls. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/quizgame — prompt, generation and widget use\n\nPROMPT\n/quizgame Using only the attached chapter, create an interactive three-question quiz game on training versus inference. Include answer choices, feedback, score and next-question controls. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.224 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.634 The generated widget is ready.\n00:00:09.641 Choose the numerical-parameter answer.\n00:00:11.887 Lock in the answer, then read the feedback and score.\n00:00:15.504 Advance to the next round with the updated score.\n\nOBSERVED RESULT AFTER USE\nQuiz Game: Training vs. Inference\n\nThree university-level challenges based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.\n\nChoose an answer, lock it in to receive feedback, and advance to the next question. Each correct answer earns 100 points.\n\nUNIVERSITY CHALLENGE\n\nTraining vs. Inference\n\nSCORE\n\n100\n\nQuestion 2 of 3 · Inference\n\nA fixed model processes an input and produces an output distribution. What describes this operation?\n\nA\n\nOrdinary inference with existing parameters\n\nB\n\nFine-tuning the model using the input\n\nC\n\nUpdating weights after each generated token\n\nD\n\nReplacing model parameters with context\n\nLock in answer\n\nKey distinction: Training updates numerical parameters; ordinary inference uses them without updating; changing context can affect the answer without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/quizgame-transcript.txt",
+      "durationSeconds": 20.893,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "5da3b8409d79d2122f724e2766fce5f17fe753a452b40d927aef767e1fd82124",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.224
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.634
+        },
+        {
+          "label": "Use",
+          "seconds": 9.636
+        }
+      ]
     },
     "number": 26
   },
@@ -1206,31 +1281,68 @@
     "title": "/matchinggame",
     "message": "Match concepts with their definitions.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/matchinggame Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+    "prompt": "/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/matchinggame.mp4",
+      "command": "/matchinggame",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/matchinggame-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/matchinggame.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/matchinggame.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/matchinggame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/matchinggame.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /matchinggame run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /matchinggame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/matchinggame — prompt, generation and widget use\n\nPROMPT\n/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.248 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.476 The generated widget is ready.\n00:00:09.480 Select Training, then match its definition.\n00:00:13.775 Match Inference to calculations using existing parameters.\n00:00:18.114 Complete the final Context pair and inspect the result.\n\nOBSERVED RESULT AFTER USE\nMatching Game: Training, Inference & Context\n\nUniversity level · 3 pairs · Based on §1.2 and Table 1 of the attached chapter\n\nSelect a concept on the left, then its matching definition on the right. Receive immediate feedback and track your progress.\n\nMatching progress\n\n3 attempts\n3/3\n\nCONCEPT\n\nDEFINITION\n\nTraining\n\nInference\n\nContext\n\nInformation available to the model during the current inference.\n\nUpdates numerical model parameters to reduce aggregate prediction error.\n\nRuns calculations using model parameters already available.\n\nAll three pairs matched!\n\n0 incorrect attempts\n\nPlay again\n\nKey distinction: Training updates parameters, inference uses existing parameters, and context provides information that can influence an answer without retraining the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/matchinggame-transcript.txt",
+      "durationSeconds": 24.574,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "8745e2a8a7df33fd6a3d1bc0b322412c8dac2d5fb490c40183d6f2d29a008f73",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.248
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.476
+        },
+        {
+          "label": "Use",
+          "seconds": 9.479
+        }
+      ]
     },
     "number": 27
   },
@@ -1243,31 +1355,68 @@
     "title": "/memorygame",
     "message": "Find matching pairs by revealing hidden cards.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/memorygame Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+    "prompt": "/memorygame Using only the attached chapter, create an interactive memory game with three concept-definition pairs: training, inference and context. Include card flipping, match feedback and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/memorygame.mp4",
+      "command": "/memorygame",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/memorygame-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/memorygame.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/memorygame.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/memorygame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/memorygame.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /memorygame run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /memorygame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/memorygame Using only the attached chapter, create an interactive memory game with three concept-definition pairs: training, inference and context. Include card flipping, match feedback and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/memorygame — prompt, generation and widget use\n\nPROMPT\n/memorygame Using only the attached chapter, create an interactive memory game with three concept-definition pairs: training, inference and context. Include card flipping, match feedback and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.344 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.725 The generated widget is ready.\n00:00:09.731 Flip the first card and read its concept or definition.\n00:00:12.492 Flip a second card and inspect the match feedback.\n00:00:15.988 Turn the unmatched cards back over and continue.\n00:00:18.112 Reveal a third card to continue searching for a matching definition.\n\nOBSERVED RESULT AFTER USE\nMemory Game: Training, Inference & Context\n\nMatch each concept to its definition, based exclusively on §1.2 and Figure 1 of the attached chapter.\n\nFlip two cards at a time. Matching pairs stay visible; incorrect pairs can be flipped back to try again.\n\nUNIVERSITY MEMORY CHALLENGE\n\nFind the Matching Pairs\n0/3\nPairs found\n1\nMoves\n1\nIncorrect matches\n\nCard 1\n\nCard 2\n\nDEFINITION\n\nInformation available to the model during current inference.\n\nCard 4\n\nCard 5\n\nCard 6\n\nChoose two cards to find a concept-definition pair.\n\nRestart\n\nKey takeaway: Training updates parameters; inference uses existing parameters; context supplies information without itself retraining the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/memorygame-transcript.txt",
+      "durationSeconds": 23.096,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "7f5e5d6ac913a39ef7668961974db32cc29f691a45ed0d132850559e87b5093b",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.344
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.725
+        },
+        {
+          "label": "Use",
+          "seconds": 9.729
+        }
+      ]
     },
     "number": 28
   },
@@ -1280,31 +1429,68 @@
     "title": "/jeopardy",
     "message": "Choose clues, reveal answers and assess your recall.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/jeopardy Based only on the attached chapter: how generative language models work. For university students. Answer in English.",
+    "prompt": "/jeopardy Using only the attached chapter, create an interactive compact Jeopardy game on tokens, training and inference. Include point choices, revealable answers and score controls. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/jeopardy.mp4",
+      "command": "/jeopardy",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/jeopardy-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/jeopardy.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/jeopardy.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/jeopardy-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/jeopardy.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /jeopardy run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /jeopardy execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/jeopardy Using only the attached chapter, create an interactive compact Jeopardy game on tokens, training and inference. Include point choices, revealable answers and score controls. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/jeopardy — prompt, generation and widget use\n\nPROMPT\n/jeopardy Using only the attached chapter, create an interactive compact Jeopardy game on tokens, training and inference. Include point choices, revealable answers and score controls. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.307 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.087 The generated widget is ready.\n00:00:09.093 Choose the 100-point clue in the first category.\n00:00:12.049 Reveal the answer after attempting the clue.\n\nOBSERVED RESULT AFTER USE\nGenerative AI Jeopardy!\n\nA compact university-level game based exclusively on the attached chapter, Foundations of Generative Artificial Intelligence, §§1.2–1.3 and Figure 1.\n\nChoose a category and point value, think of your answer, then reveal it. Award yourself points for correct responses or deduct points for incorrect ones.\n\nUNIVERSITY CHALLENGE\n\nJEOPARDY!\n\nTOTAL SCORE\n\n0\n\nTokens\n\nTraining\n\nInference\n\n100\n100\n100\n200\n200\n200\n300\n300\n300\n\n0/9 clues played\n\n0 correct\n\nTokens\n\n100 points\n\nThis unit may represent a word, part of a word, punctuation, or spaces.\n\nEXPECTED RESPONSE\n\nWhat is a token?\n\nA tokenizer converts text into token IDs; tokens are not necessarily complete words.\n\nDid you answer correctly?\n\n+100\n−100\n\nKey distinction: Training updates model parameters; inference uses existing parameters. Changes to context may affect the answer without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/jeopardy-transcript.txt",
+      "durationSeconds": 17.76,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "489b67ba8cf47ce1b0ea22ebf5b6f788545dc8c8c1520dfeed578e46b210c5dc",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.307
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.087
+        },
+        {
+          "label": "Use",
+          "seconds": 9.09
+        }
+      ]
     },
     "number": 29
   },
@@ -1317,31 +1503,68 @@
     "title": "/millionaire",
     "message": "Answer increasingly challenging multiple-choice questions.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/millionaire Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/millionaire Using only the attached chapter, create an interactive three-question Millionaire game on training versus inference. Include answer selection, lock-in, feedback and prize progression. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/millionaire.mp4",
+      "command": "/millionaire",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/millionaire-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/millionaire.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/millionaire.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/millionaire-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/millionaire.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /millionaire run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /millionaire execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/millionaire Using only the attached chapter, create an interactive three-question Millionaire game on training versus inference. Include answer selection, lock-in, feedback and prize progression. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/millionaire — prompt, generation and widget use\n\nPROMPT\n/millionaire Using only the attached chapter, create an interactive three-question Millionaire game on training versus inference. Include answer selection, lock-in, feedback and prize progression. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.242 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.052 The generated widget is ready.\n00:00:09.060 Select the answer stating that inference keeps parameters fixed.\n00:00:11.338 Lock in the answer and inspect the feedback and prize.\n00:00:14.982 Continue to the next prize question.\n\nOBSERVED RESULT AFTER USE\nWho Wants to Be an AI Millionaire?\n\nA three-question university challenge based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.\n\nSelect an answer and lock it in to reveal feedback. Correct answers unlock progressively larger prizes.\n\nTHE MILLIONAIRE CHALLENGE\n\nTraining vs. Inference\n\nQ1\n\n1,000\n\nQ2\n\n10,000\n\nQ3\n\n1,000,000\n\nAPPLICATION · QUESTION 2 OF 3\n\nAndrea adds “In this chapter, X means Y” to a prompt and receives a different answer. What changed?\n\nA:\n\nThe model's learned parameters.\n\nB:\n\nThe model's training objective.\n\nC:\n\nThe information available in context.\n\nD:\n\nThe tokenizer's vocabulary.\n\nLock in answer\n\nKey distinction: Training updates numerical parameters. Ordinary inference uses existing parameters, and new context can change the output without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/millionaire-transcript.txt",
+      "durationSeconds": 20.065,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "26ea93bf2cf35c76afbeb5df015aad8cdd4cc09adc2613f648774849fd7e15ee",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.242
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.052
+        },
+        {
+          "label": "Use",
+          "seconds": 9.056
+        }
+      ]
     },
     "number": 30
   },
@@ -1354,31 +1577,68 @@
     "title": "/crossword",
     "message": "Revise key terms by completing a crossword.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/crossword Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/crossword Using only the attached chapter, create an interactive mini crossword with training, inference and context. Include clue fields, hints, answer checking and a visible letter grid. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/crossword.mp4",
+      "command": "/crossword",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/crossword-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/crossword.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/crossword.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/crossword-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/crossword.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /crossword run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /crossword execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/crossword Using only the attached chapter, create an interactive mini crossword with training, inference and context. Include clue fields, hints, answer checking and a visible letter grid. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/crossword — prompt, generation and widget use\n\nPROMPT\n/crossword Using only the attached chapter, create an interactive mini crossword with training, inference and context. Include clue fields, hints, answer checking and a visible letter grid. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.281 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.405 The generated widget is ready.\n00:00:09.412 Open a hint for the training clue.\n00:00:11.961 Enter TRAINING, INFERENCE and CONTEXT in the clue fields.\n00:00:15.033 Inspect how the entered words fill the letter grid.\n00:00:18.617 Check the answers and read the resulting feedback.\n\nOBSERVED RESULT AFTER USE\nMini Crossword: Training vs. Inference\n\nUniversity level · 3 intersecting words · Based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter\n\nSolve the three clues. Type your answers to fill the letter grid, use hints if needed, and check your score.\n\nCROSSWORD CHALLENGE\n\nThree Key Concepts\n3 words\n\nLetter grid\n\n12 × 10\n\nT\n\nR\n\nA\n\nI\n\nN\n\nI\n\nN\n\nG\n\nN\n\nF\n\nE\n\nR\n\nC\n\nO\n\nN\n\nT\n\nE\n\nX\n\nT\n\nN\n\nC\n\nE\n\nCrossing letters must agree. A question mark indicates conflicting entries.\n\n1. Across · 8 letters\n\nThe process that updates model parameters to reduce prediction error.\n\nHide hint\n\nIt uses examples, prediction error and optimization.\n\n2. Down · 9 letters\n\nRunning a model using parameters already available.\n\nShow hint\n\n3. Across · 7 letters\n\nInformation available to the model during its current calculation.\n\nShow hint\n3/3 correct\n\nExcellent! All three concepts are correct.\n\nCheck answers\nReveal solution\n\nKey takeaway: Training updates model parameters; inference uses existing parameters; context supplies information without itself retraining the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/crossword-transcript.txt",
+      "durationSeconds": 24.274,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "279f34f4d085b5f35ed3c1a81b884a8fe954f1f407f040a9a5fabe0b1fa3d29b",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.281
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.405
+        },
+        {
+          "label": "Use",
+          "seconds": 9.408
+        }
+      ]
     },
     "number": 31
   },
@@ -1419,31 +1679,68 @@
     "title": "/fillintheblanks",
     "message": "Complete missing terms and check your answers.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/fillintheblanks Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/fillintheblanks.mp4",
+      "command": "/fillintheblanks",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/fillintheblanks-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/fillintheblanks.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/fillintheblanks.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/fillintheblanks-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/fillintheblanks.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /fillintheblanks run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /fillintheblanks execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/fillintheblanks — prompt, generation and widget use\n\nPROMPT\n/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.311 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.746 The generated widget is ready.\n00:00:09.753 Use a hint for the first sentence.\n00:00:12.189 Enter the missing verb and check its explanation.\n00:00:15.959 Complete and check the inference term.\n\nOBSERVED RESULT AFTER USE\nFill in the Blanks: Training, Inference & Context\n\nUniversity level · 3 exercises · Based exclusively on §1.2 and Table 1 of the attached chapter\n\nComplete each sentence with the correct technical term. Use hints if needed, then check your answers to see explanations and track your progress.\n\nLearning progress\n\n2 of 3 answers checked\n2/3\n\n1. Complete the sentence\n\n\nDuring pretraining, optimization _____ model parameters to reduce aggregate prediction error.\n\nCheck\nHide hint\n\nThink of the verb describing how learned numerical values change.\n\nCorrect!\n\nThe system compares predicted distributions with actual tokens in examples. Optimization updates parameters using this learning signal.\n\n2. Complete the sentence\n\n\nOrdinary _____ runs calculations using model parameters that are already available.\n\nCheck\nShow hint\n\nCorrect!\n\nInference uses existing parameters without updating them through ordinary training.\n\n3. Complete the sentence\n\n\nAdding a definition to a prompt changes the information available in the _____ , not the model's learned weights.\n\nCheck\nShow hint\nReset drill\n\nKey distinction: Training updates parameters; ordinary inference uses existing parameters; context supplies information without automatically changing the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/fillintheblanks-transcript.txt",
+      "durationSeconds": 22.029,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "dc6fe6daac0cd2ce59545a355cc0db7c4606f05e703153f31e638f63541bca91",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.311
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.746
+        },
+        {
+          "label": "Use",
+          "seconds": 9.75
+        }
+      ]
     },
     "number": 33
   },
@@ -1456,31 +1753,68 @@
     "title": "/flashcard",
     "message": "Practise recall with questions and answers on flip cards.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
+    "prompt": "/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/flashcard.mp4",
+      "command": "/flashcard",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/flashcard-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/flashcard.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/flashcard.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/flashcard-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/flashcard.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /flashcard run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /flashcard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/flashcard — prompt, generation and widget use\n\nPROMPT\n/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.200 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:04.971 The generated flashcard widget is ready.\n00:00:06.976 Flip the first card to reveal the answer.\n00:00:09.963 Mark the card as known and advance to the next concept.\n00:00:12.890 Reveal the second answer, then mark it for more practice.\n00:00:15.803 The review advances while tracking learning progress.\n\nOBSERVED RESULT AFTER USE\nObserved use: the first answer was revealed and marked known; the second was revealed and marked for further practice; the widget advanced to card 3 of 3.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/flashcard-transcript.txt",
+      "durationSeconds": 20.886,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "0bc375bbc495710e0e5ee24d74643ff50cad65f8c61b4c48b5a5aa384030e705",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.2
+        },
+        {
+          "label": "Widget",
+          "seconds": 4.971
+        },
+        {
+          "label": "Use",
+          "seconds": 6.973
+        }
+      ]
     },
     "number": 34
   },
@@ -1521,31 +1855,68 @@
     "title": "/sortinggame",
     "message": "Classify examples into categories and check the result.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/sortinggame Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/sortinggame.mp4",
+      "command": "/sortinggame",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/sortinggame-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/sortinggame.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/sortinggame.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/sortinggame-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/sortinggame.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /sortinggame run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /sortinggame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/sortinggame — prompt, generation and widget use\n\nPROMPT\n/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.363 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.338 The generated widget is ready.\n00:00:12.197 Parameter updating is selected as Training.\n00:00:14.214 Select Inference for calculations with fixed parameters.\n00:00:16.557 Select Inference for supplying new prompt context.\n00:00:18.797 Check the three classifications and read the explanations.\n\nOBSERVED RESULT AFTER USE\nSorting Game: Training vs. Inference\n\nUniversity level · 3 items · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nClassify each action as Training or Inference, then check your answers to reveal explanations. Adding prompt context is classified under inference because it does not itself update parameters.\n\nSorting progress\n\n3 of 3 classified\n3/3\n\n1. Updating numerical parameters to reduce prediction error\n\n\nTraining\nInference\n\nCorrect classification: Training\n\nTraining uses examples and prediction error to optimize the model's learned numerical parameters.\n\n2. Calculating outputs with an existing, fixed model\n\n\nTraining\nInference\n\nCorrect classification: Inference\n\nOrdinary inference uses available model parameters to calculate an output distribution and select an output.\n\n3. Adding “In this chapter, X means Y” to a prompt\n\n\nTraining\nInference\n\nCorrect classification: Inference\n\nThis changes information in the current context, not the model's learned weights. It is an input change used during inference.\n\n3/3 correct\n\nAll three classifications are correct.\n\nCheck answers\nReveal answers\n\nKey takeaway: Training updates parameters; inference uses fixed parameters. Adding context can influence the output without retraining the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/sortinggame-transcript.txt",
+      "durationSeconds": 24.597,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "c6d57f7e3e242531c05a294a4ae4ed7441d41682717d46ecfd5929d30cb5011f",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.363
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.338
+        },
+        {
+          "label": "Use",
+          "seconds": 9.342
+        }
+      ]
     },
     "number": 36
   },
@@ -1558,31 +1929,68 @@
     "title": "/conceptquiz",
     "message": "Check conceptual understanding through questions and explanations.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/conceptquiz Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/conceptquiz Using only the attached chapter, create an interactive three-question concept quiz distinguishing training, inference and context. Include feedback, explanations and navigation. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/conceptquiz.mp4",
+      "command": "/conceptquiz",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/conceptquiz-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/conceptquiz.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/conceptquiz.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/conceptquiz-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/conceptquiz.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /conceptquiz run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /conceptquiz execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/conceptquiz Using only the attached chapter, create an interactive three-question concept quiz distinguishing training, inference and context. Include feedback, explanations and navigation. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/conceptquiz — prompt, generation and widget use\n\nPROMPT\n/conceptquiz Using only the attached chapter, create an interactive three-question concept quiz distinguishing training, inference and context. Include feedback, explanations and navigation. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.285 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:06.888 The generated widget is ready.\n00:00:08.894 Choose the parameter-update explanation.\n00:00:12.337 Move to the next conceptual question.\n00:00:15.485 Return to inspect the previous question and feedback.\n\nOBSERVED RESULT AFTER USE\nConcept Quiz: Training, Inference & Context\n\nA three-question university-level quiz based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.\n\nChoose an answer, check the feedback, and advance through the questions one at a time.\n\nA system compares its predicted distributions with tokens in training examples. What happens during optimization?\n\n1 of 3\n\nA\n\nIt changes the input context while keeping learned values unchanged.\n\nB\n\nIt retrieves external passages for the next inference.\n\nC\n\nIt selects output tokens using existing parameters only.\n\nD\n\nIt updates model parameters to reduce aggregate prediction error.\n\nTraining uses the learning signal from examples to optimize numerical parameters and reduce error.\n\nNext\nInvia feedback\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/conceptquiz-transcript.txt",
+      "durationSeconds": 20.334,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "7f4bae961cc441639c2ce882586fc06f9ed7f302781f3eb8fb3ef77d0a8ec8d2",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.285
+        },
+        {
+          "label": "Widget",
+          "seconds": 6.888
+        },
+        {
+          "label": "Use",
+          "seconds": 8.89
+        }
+      ]
     },
     "number": 37
   },
@@ -1623,31 +2031,68 @@
     "title": "/languagedrill",
     "message": "Practise terminology by completing and checking sentences.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/languagedrill Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/languagedrill Using only the attached chapter, build an interactive three-item English terminology drill on training, inference and context. Include answer fields, checking, hints and explanations. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/languagedrill.mp4",
+      "command": "/languagedrill",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/languagedrill-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/languagedrill.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/languagedrill.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/languagedrill-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/languagedrill.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /languagedrill run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /languagedrill execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/languagedrill Using only the attached chapter, build an interactive three-item English terminology drill on training, inference and context. Include answer fields, checking, hints and explanations. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/languagedrill — prompt, generation and widget use\n\nPROMPT\n/languagedrill Using only the attached chapter, build an interactive three-item English terminology drill on training, inference and context. Include answer fields, checking, hints and explanations. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.300 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.861 The generated widget is ready.\n00:00:09.868 Open a hint for the terminology exercise.\n00:00:12.541 Enter the missing verb and check the response.\n00:00:16.500 Complete and check the inference term.\n\nOBSERVED RESULT AFTER USE\nEnglish Terminology Drill: Training, Inference & Context\n\nUniversity level · 3 exercises · Based exclusively on §1.2 and Table 1 of the attached chapter\n\nComplete each sentence with the correct technical term. Use hints when needed, check your answers, and review the explanations.\n\nPractice progress\n\n2 of 3 answers checked\n2/3\n\n1. Complete the sentence\n\n\nDuring pretraining, optimization ________ model parameters to reduce aggregate prediction error.\n\nCheck\nHide hint\n\nThink of the verb describing a change to learned numerical values.\n\nCorrect!\n\nTraining compares predicted distributions with actual tokens. Optimization updates parameters using the resulting learning signal.\n\n2. Complete the sentence\n\n\nOrdinary ________ runs calculations using model parameters that are already available.\n\nCheck\nShow hint\n\nCorrect!\n\nInference uses existing model parameters without updating them through ordinary training.\n\n3. Complete the sentence\n\n\nAdding a definition to a prompt changes the information available in the ________ , not the model's learned weights.\n\nCheck\nShow hint\nReset drill\n\nRemember: Training updates parameters; ordinary inference uses them; new context can influence an answer without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/languagedrill-transcript.txt",
+      "durationSeconds": 22.542,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "c8bf567700c735e3ea18446a4e53770d9757ff55c546b2b5e38ea1828fe98d39",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.3
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.861
+        },
+        {
+          "label": "Use",
+          "seconds": 9.864
+        }
+      ]
     },
     "number": 39
   },
@@ -1688,31 +2133,68 @@
     "title": "/multiplechoice",
     "message": "Choose answers from options and check your score.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/multiplechoice Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/multiplechoice Using only the attached chapter, create an interactive three-question multiple-choice widget about training versus inference. Show answer feedback, explanations and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/multiplechoice.mp4",
+      "command": "/multiplechoice",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/multiplechoice-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/multiplechoice.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/multiplechoice.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/multiplechoice-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/multiplechoice.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /multiplechoice run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /multiplechoice execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/multiplechoice Using only the attached chapter, create an interactive three-question multiple-choice widget about training versus inference. Show answer feedback, explanations and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/multiplechoice — prompt, generation and widget use\n\nPROMPT\n/multiplechoice Using only the attached chapter, create an interactive three-question multiple-choice widget about training versus inference. Show answer feedback, explanations and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.237 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.548 The generated widget is ready.\n00:00:10.554 Select the role of prediction error in training.\n00:00:12.824 Check the answer and read the explanation.\n00:00:16.400 Advance to the next question and inspect progress.\n\nOBSERVED RESULT AFTER USE\nMultiple-Choice Quiz: Training vs. Inference\n\nUniversity level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nSelect one answer per question, check your response, and review the explanation. Your score and progress update as you advance.\n\nQuestion 2 of 3\n\nInference\n1/3\nCorrect answers\nWhich statement correctly describes ordinary inference?\n\nA\n\nIt updates weights after every generated token.\n\nB\n\nIt repeats the entire pretraining process.\n\nC\n\nIt calculates outputs using already available parameters.\n\nD\n\nIt replaces learned parameters with retrieved passages.\n\nBack\nCheck answer\n\n1 of 3 questions answered\n\nKey takeaway: Training updates model parameters to reduce prediction error. Ordinary inference uses existing parameters, while changes to context can influence the output without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/multiplechoice-transcript.txt",
+      "durationSeconds": 21.487,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "e022c22c359aff336eb0d880db05cfd03a5e7a7ba05f74e2934db9135fd35a75",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.237
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.548
+        },
+        {
+          "label": "Use",
+          "seconds": 10.551
+        }
+      ]
     },
     "number": 41
   },
@@ -1725,31 +2207,68 @@
     "title": "/recall",
     "message": "Attempt an answer before revealing it and assess your recall.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/recall Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/recall Using only the attached chapter, build an interactive active-recall widget on training versus inference. Include three questions with reveal/hide answers. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/recall.mp4",
+      "command": "/recall",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/recall-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/recall.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/recall.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/recall-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/recall.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /recall run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /recall execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/recall Using only the attached chapter, build an interactive active-recall widget on training versus inference. Include three questions with reveal/hide answers. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/recall — prompt, generation and widget use\n\nPROMPT\n/recall Using only the attached chapter, build an interactive active-recall widget on training versus inference. Include three questions with reveal/hide answers. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.254 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.414 The generated widget is ready.\n00:00:09.421 Reveal the explanation after recalling the training process.\n00:00:12.875 Open the inference explanation for comparison.\n00:00:15.935 Hide the first answer and try recalling it again.\n\nOBSERVED RESULT AFTER USE\nActive Recall: Training vs. Inference\n\nUniversity level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nAnswer each question from memory before revealing the explanation. Mark whether you recalled it correctly to track your progress.\n\nRecall progress\n\n0/3 reviewed\n\n1. Training\n\nHow does prediction error lead to parameter updates during pretraining?\nReveal answer\n\n2. Inference\n\nHow does ordinary inference differ from training in its use of model parameters?\nHide answer\n\nEXPECTED ANSWER\n\nInference runs calculations with parameters already available. The input and fixed model produce an output distribution and a selected output, without updating the parameters.\n\nCould you explain this correctly without notes?\n\nRemembered\nNeeds review\n\n3. Context\n\nAndrea adds “In this chapter, X means Y” to a prompt. Why might his answer change without retraining?\nReveal answer\nPractice again\n\nKey takeaway: Training updates model parameters; ordinary inference uses existing ones. New context can change a response without changing the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/recall-transcript.txt",
+      "durationSeconds": 20.552,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "e26a11da64bf344a7ef620e003d769fc1ec26e1f9869ad3b1a01358d8725f52e",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.254
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.414
+        },
+        {
+          "label": "Use",
+          "seconds": 9.415
+        }
+      ]
     },
     "number": 42
   },
@@ -1762,31 +2281,68 @@
     "title": "/gapfinder",
     "message": "Use diagnostic questions to identify gaps in understanding.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/gapfinder Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/gapfinder.mp4",
+      "command": "/gapfinder",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/gapfinder-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/gapfinder.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/gapfinder.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/gapfinder-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/gapfinder.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /gapfinder run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /gapfinder execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/gapfinder — prompt, generation and widget use\n\nPROMPT\n/gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.262 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:06.668 The generated widget is ready.\n00:00:08.675 Write your explanation before viewing the expected reasoning.\n00:00:12.015 Reveal the expected explanation and compare the reasoning.\n00:00:15.477 Identify a concept needing further review.\n\nOBSERVED RESULT AFTER USE\nKnowledge Gap Finder: Training vs. Inference\n\nUniversity level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nWrite your explanations independently, then reveal the expected answers. Compare your reasoning and identify concepts that need further review.\n\nDiagnostic progress\n\n1 of 3 assessed\n0/3\n\n1. Training\n\n\nDuring pretraining, how does the comparison between predicted distributions and actual tokens lead to changes in model parameters?\n\nHide explanation\n\nEXPECTED EXPLANATION\n\nThe text supplies a learning signal: the model compares predicted distributions with actual tokens in examples. Optimization updates numerical parameters to reduce aggregate prediction error.\n\nDid you connect examples, prediction error, and parameter updates?\n\nNeeds review\nUnderstood\n\n2. Inference\n\n\nA model produces two different responses to two prompts. Does this mean its parameters changed? Explain.\n\nReveal expected explanation\n\n3. Retrieval\n\n\nAndrea retrieves a new document and uses it to generate an answer. How does this differ from training?\n\nReveal expected explanation\nRestart\n\nCore distinction: Training updates model parameters. Ordinary inference uses existing parameters, while document retrieval supplies additional context without itself updating them.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/gapfinder-transcript.txt",
+      "durationSeconds": 20.267,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "b702207dbfb38612f302fa082f1618ae9822a7eb9d60bf4b34d60b6f334a3587",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.262
+        },
+        {
+          "label": "Widget",
+          "seconds": 6.668
+        },
+        {
+          "label": "Use",
+          "seconds": 8.672
+        }
+      ]
     },
     "number": 43
   },
@@ -1799,31 +2355,68 @@
     "title": "/blackboard",
     "message": "Work through a board-style explanation with answer checks.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/blackboard Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/blackboard.mp4",
+      "command": "/blackboard",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/blackboard-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/blackboard.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/blackboard.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/blackboard-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/blackboard.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /blackboard run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /blackboard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/blackboard — prompt, generation and widget use\n\nPROMPT\n/blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.221 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:06.467 The generated widget is ready.\n00:00:08.475 Filter the diagram to show training.\n00:00:11.326 Switch to inference and compare the two processes.\n00:00:14.042 Open a conceptual check below the diagram.\n00:00:17.453 Hide the explanation to repeat the check from memory.\n\nOBSERVED RESULT AFTER USE\nInteractive Blackboard: Training vs. Inference\n\nUniversity level · Source: §1.2, Table 1 and Figure 1 of Foundations of Generative Artificial Intelligence\n\nSwitch between Training and Inference to explore their processes, then complete three understanding checks.\n\nINTERACTIVE BLACKBOARD\n\nHow the Model Works\nBoth\nTraining\nInference\n\nInference uses existing parameters.\n\nA new message changes context, not automatically model weights.\n\nUnderstanding checks\n\n0/3\n\n1.\n\nWhat changes during training, and why?\n\nReveal answer\n\n2.\n\nWhat happens to parameters during ordinary inference?\n\nReveal answer\n\n3.\n\nAndrea adds “In this chapter, X means Y” to his prompt. Does this retrain the model?\n\nReveal answer\nReset\n\nKey takeaway: Training updates model parameters to reduce prediction error. Ordinary inference uses existing parameters, while new context may change generated outputs without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/blackboard-transcript.txt",
+      "durationSeconds": 21.796,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "c928c706b37abfa6782288af2d5575886558fdddec4c9d95ed12166b9c182b82",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.221
+        },
+        {
+          "label": "Widget",
+          "seconds": 6.467
+        },
+        {
+          "label": "Use",
+          "seconds": 8.47
+        }
+      ]
     },
     "number": 44
   },
@@ -2116,31 +2709,68 @@
     "title": "/oral",
     "message": "Practise explaining answers and receive follow-up feedback in chat.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/oral Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/oral.mp4",
+      "command": "/oral",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/oral-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/oral.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/oral.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/oral-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/oral.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /oral run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /oral execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/oral — prompt, generation and widget use\n\nPROMPT\n/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.267 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.034 The generated widget is ready.\n00:00:10.038 Write a concise summary of the answer you would give aloud.\n00:00:13.395 Reveal the expected answer and compare your explanation.\n00:00:16.661 Assess your confidence before advancing. This is self-assessment.\n00:00:19.371 Advance to question two and inspect the new prompt.\n\nOBSERVED RESULT AFTER USE\nInteractive Oral Exam: Training vs. Inference\n\nUniversity level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nPractice answering aloud, then write a short summary. Reveal the expected answer to compare your reasoning before advancing.\n\nORAL EXAM PRACTICE\n\nQuestion 2 of 3\nInference\nExplain the sequence of operations during ordinary inference. What happens to model parameters?\n\nKey concepts: Fixed model · Calculations · Output distribution\n\nReveal expected answer\nBack\nNext question\n\n1/3 questions assessed\n\nAssessment focus: Explain not only which processes update parameters, but also why changing the context can influence outputs while the model remains fixed.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/oral-transcript.txt",
+      "durationSeconds": 24.784,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "82bb4239e245f677f10d5b82623ce886de4a67125a6cfb6895673ac8440c6a87",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.267
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.034
+        },
+        {
+          "label": "Use",
+          "seconds": 10.037
+        }
+      ]
     },
     "number": 55
   },
@@ -2153,31 +2783,68 @@
     "title": "/spacedrepetition",
     "message": "Review and rate recall cards with suggested review intervals.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/spacedrepetition Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/spacedrepetition Using only the attached chapter, create an interactive three-card spaced-review widget on training versus inference. Include reveal, review marking and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/spacedrepetition.mp4",
+      "command": "/spacedrepetition",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/spacedrepetition-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/spacedrepetition.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/spacedrepetition.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/spacedrepetition-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/spacedrepetition.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /spacedrepetition run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /spacedrepetition execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/spacedrepetition Using only the attached chapter, create an interactive three-card spaced-review widget on training versus inference. Include reveal, review marking and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/spacedrepetition — prompt, generation and widget use\n\nPROMPT\n/spacedrepetition Using only the attached chapter, create an interactive three-card spaced-review widget on training versus inference. Include reveal, review marking and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.270 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.520 The generated widget is ready.\n00:00:09.526 Reveal the first card after recalling the answer.\n00:00:12.434 Mark the concept as remembered and watch review progress update.\n00:00:15.135 Move to the next concept.\n00:00:17.831 Reveal the second answer for comparison.\n\nOBSERVED RESULT AFTER USE\nSpaced Review: Training vs. Inference\n\nThree interactive cards based on §1.2 and Figure 1 of the attached chapter.\n\nReveal each answer, mark whether you remembered it, and track your progress. Concepts marked Again are prioritized for another review.\n\nSPACED REVIEW · ROUND 1\n\nTraining vs. Inference\n1/3\nReviewed\n\nCARD 2 OF 3\n\nWhat happens during ordinary inference?\n\nThe model uses parameters already available to calculate an output distribution and select an output. These parameters are not updated during ordinary inference.\n\nHow well did you remember the answer?\n\nAgain\nRemembered\nBack\nNext card\n\n1 remembered · 0 to review again\n\nReset\n\nReview strategy: Repeat missed concepts sooner and revisit remembered concepts after longer intervals. This widget tracks progress within the current session; it does not schedule future reviews automatically.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/spacedrepetition-transcript.txt",
+      "durationSeconds": 22.883,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "798d34469937043caab02a8678d3eec294068e3cdd435d9ee2319af19c87e279",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.27
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.52
+        },
+        {
+          "label": "Use",
+          "seconds": 9.523
+        }
+      ]
     },
     "number": 56
   },
@@ -2190,31 +2857,68 @@
     "title": "/exam",
     "message": "Practise exam questions using marking guides and self-scoring.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/exam Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/exam Using only the attached chapter, create an interactive three-question practice exam on training, inference and context. Include answer fields, revealable model answers and self-assessment scores. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/exam.mp4",
+      "command": "/exam",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/exam-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/exam.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/exam.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/exam-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/exam.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /exam run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /exam execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/exam Using only the attached chapter, create an interactive three-question practice exam on training, inference and context. Include answer fields, revealable model answers and self-assessment scores. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/exam — prompt, generation and widget use\n\nPROMPT\n/exam Using only the attached chapter, create an interactive three-question practice exam on training, inference and context. Include answer fields, revealable model answers and self-assessment scores. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.287 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.861 The generated widget is ready.\n00:00:09.868 Write and justify an independent answer.\n00:00:13.381 Reveal the model answer for comparison.\n00:00:16.856 Award a partial self-assessment score; the widget totals your choices.\n\nOBSERVED RESULT AFTER USE\nInteractive Practice Exam: Training, Inference & Context\n\nUniversity level · 3 questions · 12 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter\n\nWrite your answers independently, reveal the expected explanations, then assign yourself a score based on conceptual accuracy and justification.\n\nExam progress\n\n1 of 3 answers assessed\n2/12\nPoints awarded\n\n1. Training\n\n4 points\n\nDuring pretraining, how does the comparison between a predicted distribution and the actual tokens in examples lead to changes in model parameters?\n\nHide model answer\n\nMODEL ANSWER\n\nThe system compares its predicted distribution with tokens actually present in training examples. The text supplies the learning signal, and optimization updates numerical parameters to reduce aggregate prediction error.\n\nEvidence for full marks\n\nIdentifies the comparison with actual tokens\n\nConnects prediction error to optimization\n\nExplains that parameters are updated\n\nSelf-assessment (0–4 points)\n0\n1\n2\n3\n4\n\n2. Inference\n\n4 points\n\nExplain how ordinary inference produces an output. What happens to the model's learned parameters?\n\nReveal model answer\n\n3. Context\n\n4 points\n\nAndrea adds “In this chapter, X means Y” to a prompt and gets a different answer. Does this demonstrate retraining? Explain how to isolate the effect of context.\n\nReveal model answer\nRestart exam\n\nScoring guide: 0 = absent or incorrect; 1–2 = partial; 3 = substantially correct; 4 = complete and independently justified.\n\nLearning goal: Distinguish parameter updates during training from fixed-parameter inference and changes to available context.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/exam-transcript.txt",
+      "durationSeconds": 21.905,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "9dad88f3bd4ed8c5bba2c02594b6031c0352624688015a6d6d0beb37da0c35a2",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.287
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.861
+        },
+        {
+          "label": "Use",
+          "seconds": 9.864
+        }
+      ]
     },
     "number": 57
   },
@@ -2227,31 +2931,68 @@
     "title": "/studyplan",
     "message": "Break a learning goal into activities and track completion.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/studyplan Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/studyplan.mp4",
+      "command": "/studyplan",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/studyplan-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/studyplan.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/studyplan.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/studyplan-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/studyplan.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /studyplan run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /studyplan execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/studyplan — prompt, generation and widget use\n\nPROMPT\n/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.417 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.062 The generated widget is ready.\n00:00:09.066 Complete the training activity and watch the progress percentage.\n00:00:11.569 Complete the inference activity.\n00:00:13.805 Complete context and inspect the finished plan.\n00:00:16.745 Reset the plan to start a new study session.\n\nOBSERVED RESULT AFTER USE\nInteractive Study Plan: Training, Inference & Context\n\nUniversity level · 3 steps · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nComplete each activity, explain the concept in your own words, and check it off when you understand it.\n\nStudy progress\n\n0 of 3 activities completed\n0%\n\n1\n\nTraining\n\n\nUnderstand how a model learns.\n\nTrace training examples → prediction error → parameter updates → changed model.\n\nSELF-CHECK\n\nExplain why optimization updates numerical parameters to reduce aggregate prediction error.\n\nI can explain this independently.\n\n2\n\nInference\n\n\nUnderstand how a trained model generates output.\n\nTrace input + fixed model → model calculations → output distribution → selected output.\n\nSELF-CHECK\n\nExplain why ordinary inference uses existing parameters without updating them.\n\nI can explain this independently.\n\n3\n\nContext\n\n\nDistinguish providing information from retraining.\n\nCompare adding “In this chapter, X means Y” to a prompt with updating model parameters.\n\nSELF-CHECK\n\nExplain why changing the available context can influence output without changing weights.\n\nI can explain this independently.\nReset plan\n\nFinal recall challenge: Why can a new prompt produce a different answer without retraining the model?\n\nKey principle: Training updates parameters; inference uses existing parameters; context supplies information for the current inference.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/studyplan-transcript.txt",
+      "durationSeconds": 21.391,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "f118f6c1db847b5a568fcfcc5665b360828b30b761700487f5f830146c0902ee",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.417
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.062
+        },
+        {
+          "label": "Use",
+          "seconds": 9.064
+        }
+      ]
     },
     "number": 58
   },
@@ -2264,31 +3005,68 @@
     "title": "/checklist",
     "message": "Turn a task into items you can check and track.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/checklist Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/checklist Using only the attached chapter, create an interactive three-item checklist for understanding training, inference and context. Include completion progress and reset. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/checklist.mp4",
+      "command": "/checklist",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/checklist-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/checklist.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/checklist.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/checklist-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/checklist.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /checklist run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /checklist execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/checklist Using only the attached chapter, create an interactive three-item checklist for understanding training, inference and context. Include completion progress and reset. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/checklist — prompt, generation and widget use\n\nPROMPT\n/checklist Using only the attached chapter, create an interactive three-item checklist for understanding training, inference and context. Include completion progress and reset. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.222 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:05.174 The generated widget is ready.\n00:00:07.180 Check the training objective and watch completion progress.\n00:00:09.516 Mark inference and context as understood.\n00:00:12.594 Reset the checklist for a new self-check.\n\nOBSERVED RESULT AFTER USE\nInteractive Checklist: Training, Inference & Context\n\nUniversity level · 3 learning objectives · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nCheck each item when you can explain the concept independently, without consulting your notes.\n\nLearning progress\n\nMark each objective when understood\n\n0/3\n\n1. Training — Update parameters\n\nI can explain how predicted distributions are compared with tokens in training examples and how optimization updates numerical parameters to reduce aggregate prediction error.\n\n2. Inference — Use fixed parameters\n\nI can explain how ordinary inference uses already available parameters to calculate an output distribution and select an output.\n\n3. Context — Supply information\n\nI can explain why adding a definition to a prompt or retrieving passages can influence the answer without itself updating model parameters.\n\nReset checklist\n\nFinal self-check: Why can changing a prompt produce a different answer without retraining the model?\n\nExpected understanding: The prompt changes the available context, while ordinary inference uses the existing model parameters.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/checklist-transcript.txt",
+      "durationSeconds": 17.165,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "1d740b0f4fa19e3cc476913857a375a6d84af9a8675fa47dff64e01ee519d3a3",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.222
+        },
+        {
+          "label": "Widget",
+          "seconds": 5.174
+        },
+        {
+          "label": "Use",
+          "seconds": 7.176
+        }
+      ]
     },
     "number": 59
   },
@@ -2329,31 +3107,68 @@
     "title": "/pomodoro",
     "message": "Organise study sessions and breaks, then mark completion.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/pomodoro Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/pomodoro Using only the attached chapter, create an interactive focused-study widget with three five-minute activities on training, inference and context. Include recall reveals and activity progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/pomodoro.mp4",
+      "command": "/pomodoro",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/pomodoro-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/pomodoro.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/pomodoro.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/pomodoro-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/pomodoro.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /pomodoro run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /pomodoro execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/pomodoro Using only the attached chapter, create an interactive focused-study widget with three five-minute activities on training, inference and context. Include recall reveals and activity progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/pomodoro — prompt, generation and widget use\n\nPROMPT\n/pomodoro Using only the attached chapter, create an interactive focused-study widget with three five-minute activities on training, inference and context. Include recall reveals and activity progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.352 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.584 The generated widget is ready.\n00:00:10.590 Write the recall answer for the training activity.\n00:00:13.711 Reveal the expected answer and compare your explanation.\n00:00:17.174 Complete the activity and advance to inference.\n00:00:20.320 Choose the Context activity. Five minutes is planned study time, not an elapsed timer.\n\nOBSERVED RESULT AFTER USE\nFocused Study: Training, Inference & Context\n\nUniversity level · 15 minutes · 3 activities · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nComplete three five-minute study activities. For each, review the process, answer a recall question, reveal the expected explanation, and mark the activity complete.\n\nSession progress\n\n1 of 3 activities completed\n5/15 min planned\n\nTraining\n\n5 min\n\nInference\n\n5 min\n\nContext\n\n5 min\n\nActivity 3: Context\n\n5 min\n\nDistinguish new information from retraining.\n\nNew prompt definition\n\nAvailable context\n\nFixed model\n\nPotentially changed answer\n\nRecall question\n\nWhy can adding “X means Y” to a prompt change the answer without retraining?\nReveal expected answer\nReset\nComplete activity\n\nKey takeaway: Training updates parameters to reduce prediction error; inference uses existing parameters; adding information to context can change the output without retraining.\n\nThe five-minute activity structure is a suggested study method, not a timing requirement from the chapter. Completion is self-reported; the widget does not measure elapsed time.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/pomodoro-transcript.txt",
+      "durationSeconds": 25.412,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "6d306eca3db58ea93138a5f34a0d856767399248c74af072f52f00f6a87e4a99",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.352
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.584
+        },
+        {
+          "label": "Use",
+          "seconds": 10.587
+        }
+      ]
     },
     "number": 61
   },
@@ -2590,31 +3405,68 @@
     "title": "/decisionmatrix",
     "message": "Compare options against criteria, with checks to reveal.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/decisionmatrix Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/decisionmatrix Using only the attached chapter, create an interactive matrix comparing training, inference and retrieval. Include selectable processes and three revealable decision checks. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/decisionmatrix.mp4",
+      "command": "/decisionmatrix",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/decisionmatrix-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/decisionmatrix.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/decisionmatrix.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/decisionmatrix-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/decisionmatrix.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /decisionmatrix run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /decisionmatrix execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/decisionmatrix Using only the attached chapter, create an interactive matrix comparing training, inference and retrieval. Include selectable processes and three revealable decision checks. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/decisionmatrix — prompt, generation and widget use\n\nPROMPT\n/decisionmatrix Using only the attached chapter, create an interactive matrix comparing training, inference and retrieval. Include selectable processes and three revealable decision checks. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.286 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.135 The generated widget is ready.\n00:00:10.141 Select Inference and inspect what changes in the process.\n00:00:13.243 Switch to Retrieval and compare its effect on context.\n00:00:16.271 Reveal a decision check and compare the explanation.\n\nOBSERVED RESULT AFTER USE\nInteractive Decision Matrix: Training, Inference & Retrieval\n\nUniversity level · Source: §1.2, Table 1 and Figure 1 of the attached chapter\n\nSelect a process to explore what changes, then complete three decision checks to test your understanding.\n\nCompare the three interventions\n\nCriterion\n\n\t\n\nTraining\n\n\t\n\nInference\n\n\t\n\nRetrieval\n\n\nChanges\tParameters\tOutput\tContext\nUpdates weights?\tYes\tNo\tNo\nResult\tChanged model\tSelected output\tGenerated answer\n\nExplore a process\n\nTraining\nInference\nRetrieval\nRetrieval (RAG)\n\nChanges: Available context\n\nQuestion\n\nRetrieved passages\n\nContext + fixed model\n\nGenerated answer\n\nRetrieval supplies external document passages as context. It does not itself update the model's parameters.\n\nDecision checks\n\n1/3 revealed\n\n1. A system optimizes weights using prediction error. Which intervention is this?\n\nHide answer\n\nTraining\n\nOptimization updates the model's parameters.\n\n2. A fixed model processes an input and selects an output. Which process is this?\n\nReveal answer\n\n3. An application retrieves passages from an external document. What changes?\n\nReveal answer\nReset\n\nKey distinction: Training updates parameters; inference uses existing parameters; retrieval supplies external information as context without itself retraining the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/decisionmatrix-transcript.txt",
+      "durationSeconds": 21.888,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "7607181a4dccd996d3e5ae39d7083e4ba2a046ab9166d1771f635c82d746a6fd",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.286
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.135
+        },
+        {
+          "label": "Use",
+          "seconds": 10.137
+        }
+      ]
     },
     "number": 70
   },
@@ -2935,31 +3787,68 @@
     "title": "/mistakelog",
     "message": "Record misconceptions, review corrections and track progress.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/mistakelog Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/mistakelog.mp4",
+      "command": "/mistakelog",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/mistakelog-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/mistakelog.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/mistakelog.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/mistakelog-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/mistakelog.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /mistakelog run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /mistakelog execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/mistakelog — prompt, generation and widget use\n\nPROMPT\n/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.262 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.329 The generated widget is ready.\n00:00:10.338 Reveal the correction to the first misconception.\n00:00:13.833 Mark the misconception for further review.\n00:00:16.538 Open the correction for the inference misconception.\n\nOBSERVED RESULT AFTER USE\nInteractive Mistake Log: Training, Inference & Context\n\nUniversity level · 3 misconceptions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nReview each incorrect claim, reveal its correction, and explain the mistake in your own words. Mark each concept as understood or needing further review.\n\nReview progress\n\n1/3 misconceptions assessed\n0/3\n\n1. Training\n\n\nMISCONCEPTION\n\nTraining simply stores the examples as readable entries inside the model.\n\nHide correction\n\nCorrect explanation\n\nTraining updates numerical parameters through optimization to reduce aggregate prediction error.\n\nReason: The training text supplies a learning signal. Parameters are learned numerical values, not an encyclopedia of readable entries.\n\nWhy is parameter optimization different from simply storing examples?\n\nNeeds review\nUnderstood\n\n2. Inference\n\n\nMISCONCEPTION\n\nThe model must update its weights whenever it generates a response.\n\nHide correction\n\nCorrect explanation\n\nOrdinary inference performs calculations using parameters already available.\n\nReason: A fixed model can calculate output distributions and select outputs without modifying its learned weights.\n\nWhat does inference use instead of changing weights?\n\nNeeds review\nUnderstood\n\n3. Context\n\n\nMISCONCEPTION\n\nIf adding “X means Y” to a prompt changes the answer, the model has been retrained.\n\nReveal correction\nReset mistake log\n\nKey takeaway: Training updates model parameters. Ordinary inference uses existing parameters, and changing context can influence an answer without retraining the model.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/mistakelog-transcript.txt",
+      "durationSeconds": 21.86,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "b9571e78f000553c0e2ab747c031afbb775f6ed4ddd017ee05ff904133f2c67c",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.262
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.329
+        },
+        {
+          "label": "Use",
+          "seconds": 10.332
+        }
+      ]
     },
     "number": 82
   },
@@ -3224,31 +4113,68 @@
     "title": "/caseStudy",
     "message": "Analyse a concrete case, then compare with suggested answers.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/caseStudy Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/caseStudy.mp4",
+      "command": "/caseStudy",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/caseStudy-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/caseStudy.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/caseStudy.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/caseStudy-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/caseStudy.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /caseStudy run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /caseStudy execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/caseStudy — prompt, generation and widget use\n\nPROMPT\n/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.312 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.466 The generated widget is ready.\n00:00:10.472 Write a decision explaining what training changes.\n00:00:14.037 Reveal the expected reasoning and compare your decision.\n00:00:17.530 Assign a partial self-assessment score.\n00:00:19.952 Advance to the next intervention in the case study.\n\nOBSERVED RESULT AFTER USE\nInteractive Case Study: Andrea’s Language Model\n\nUniversity level · 3 decisions · 6 points · Based on §1.2, Table 1, Figure 1 and §1.7 of the attached chapter\n\nAndrea is developing a text-generation application. He performs three different interventions: training the model, changing a prompt, and retrieving a document.\n\nFor each scenario, explain what changes, what remains fixed, and why. Then reveal the expected explanation and assess your reasoning.\n\nCase 2 of 3\n\n1 decisions assessed\n1/6\nSelf-assessed score\nChanging the prompt\n2 points\n\nAndrea keeps the model fixed but adds “In this chapter, X means Y” to the prompt. The generated answer changes.\n\nDoes the new answer demonstrate retraining? What intervention explains the difference?\n\nReveal expected explanation\nBack\nNext case\nRestart case study\n\nFinal takeaway: Training updates model parameters, changing a prompt modifies the available context, and retrieval supplies external passages without itself retraining the model. A changed or well-supported-looking answer does not automatically demonstrate learning or correctness.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/caseStudy-transcript.txt",
+      "durationSeconds": 25.284,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "6b5ba5668027dde8c21072934fd0336da654a6a24c3b89c92804f1a70b43496d",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.312
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.466
+        },
+        {
+          "label": "Use",
+          "seconds": 10.469
+        }
+      ]
     },
     "number": 92
   },
@@ -3345,31 +4271,68 @@
     "title": "/questionbank",
     "message": "Build a set of practice questions with answers to reveal.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/questionbank Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/questionbank Using only the attached chapter, create an interactive bank of three questions on training, inference and context. Include answer fields, reveal/hide explanations and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/questionbank.mp4",
+      "command": "/questionbank",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/questionbank-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/questionbank.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/questionbank.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/questionbank-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/questionbank.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /questionbank run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /questionbank execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/questionbank Using only the attached chapter, create an interactive bank of three questions on training, inference and context. Include answer fields, reveal/hide explanations and progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/questionbank — prompt, generation and widget use\n\nPROMPT\n/questionbank Using only the attached chapter, create an interactive bank of three questions on training, inference and context. Include answer fields, reveal/hide explanations and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.276 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.833 The generated widget is ready.\n00:00:09.841 Write an answer using your own explanation.\n00:00:13.379 Reveal the expected explanation and compare it with your answer.\n00:00:16.809 Mark the question understood and update progress.\n\nOBSERVED RESULT AFTER USE\nInteractive Question Bank: Training, Inference & Context\n\nUniversity level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nWrite your answers independently, reveal the expected explanations, and mark each question as understood or needing review.\n\nReview progress\n\n1 of 3 assessed\n1/3\n\n1. Training\n\nDuring pretraining, how does comparing predicted distributions with the tokens in examples lead to changes in model parameters?\n\nHide explanation\n\nEXPECTED EXPLANATION\n\nThe text supplies a learning signal. The system compares predicted distributions with actual tokens, and optimization updates numerical parameters to reduce aggregate prediction error.\n\nDid you explain prediction error, optimization, and parameter updates?\n\nNeeds review\nUnderstood\n\n2. Inference\n\nWhat happens during ordinary inference, and how does this differ from training?\n\nReveal explanation\n\n3. Context\n\nAndrea adds “In this chapter, X means Y” to a prompt and receives a different answer. What changed, and does this prove retraining?\n\nReveal explanation\nReset question bank\n\nCore distinction: Training updates learned model parameters; ordinary inference uses existing parameters; context provides information that may influence an answer without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/questionbank-transcript.txt",
+      "durationSeconds": 21.637,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "373e705828ccfea5b6b9a30d0f78e857e3dbabf6328b84d7939c8f9d8409af83",
+      "recordedOn": "2026-11-05",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.276
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.833
+        },
+        {
+          "label": "Use",
+          "seconds": 9.837
+        }
+      ]
     },
     "number": 96
   },
@@ -3438,31 +4401,68 @@
     "title": "/exitTicket",
     "message": "Use brief end-of-lesson questions to check understanding.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/exitTicket Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/exitTicket Using only the attached chapter, create an interactive three-question exit ticket on training, inference and context. Include answer fields and a submit button that reveals expected answers. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/exitTicket.mp4",
+      "command": "/exitTicket",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/exitTicket-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/exitTicket.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/exitTicket.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/exitTicket-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/exitTicket.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /exitTicket run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /exitTicket execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/exitTicket Using only the attached chapter, create an interactive three-question exit ticket on training, inference and context. Include answer fields and a submit button that reveals expected answers. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/exitTicket — prompt, generation and widget use\n\nPROMPT\n/exitTicket Using only the attached chapter, create an interactive three-question exit ticket on training, inference and context. Include answer fields and a submit button that reveals expected answers. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.368 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.147 The generated widget is ready.\n00:00:09.155 Explain what changes in training.\n00:00:12.471 Explain how inference uses an existing model.\n00:00:15.735 Explain why new context is not retraining.\n00:00:19.165 Submit the completed ticket and compare with the expected answers.\n\nOBSERVED RESULT AFTER USE\nExit Ticket: Training, Inference & Context\n\nUniversity level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter\n\nAnswer all three questions independently. Submit your responses to reveal the expected answers and compare your understanding.\n\nExit ticket progress\n\n3 of 3 responses written\n0/3\n\n1. Training\n\nWhat changes during pretraining, and how does prediction error contribute?\n\nEXPECTED ANSWER\n\nThe system compares predicted distributions with tokens in training examples. Optimization updates numerical model parameters to reduce aggregate prediction error.\n\nMy explanation was accurate and justified.\n\n2. Inference\n\nHow does ordinary inference generate an output without updating model parameters?\n\nEXPECTED ANSWER\n\nThe input and fixed model undergo calculations that produce an output distribution and selected output. Existing parameters are used without being updated.\n\nMy explanation was accurate and justified.\n\n3. Context\n\nAndrea adds “In this chapter, X means Y” to a prompt. The answer changes. Does this demonstrate retraining? Explain.\n\nEXPECTED ANSWER\n\nNo. The new definition changes information available in context, potentially influencing the output without updating model weights.\n\nMy explanation was accurate and justified.\n0/3\n\nReview the explanations where your reasoning needs improvement.\n\nSelf-assessed results, not automatic grading.\nRetry exit ticket\n\nSuccess criterion: Independently distinguish parameter updates during training from fixed-parameter inference and changes to context.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/exitTicket-transcript.txt",
+      "durationSeconds": 25.008,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "80605afbcc790f51d998cd1b4fdc5846fc3342a725aa7cbe82e3ff908b0097c1",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.368
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.147
+        },
+        {
+          "label": "Use",
+          "seconds": 9.151
+        }
+      ]
     },
     "number": 99
   },
@@ -3475,31 +4475,68 @@
     "title": "/peerassessment",
     "message": "Review a peer's work using shared criteria and scores.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/peerassessment Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/peerassessment.mp4",
+      "command": "/peerassessment",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/peerassessment-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/peerassessment.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/peerassessment.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/peerassessment-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/peerassessment.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /peerassessment run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /peerassessment execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/peerassessment — prompt, generation and widget use\n\nPROMPT\n/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.253 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:07.894 The generated widget is ready.\n00:00:09.900 Assign the training explanation a partial score.\n00:00:12.391 Write specific feedback for a classmate.\n00:00:15.967 Reveal the expected evidence to support the judgement.\n00:00:19.632 Score inference and inspect the updated total.\n00:00:22.913 Inspect the accumulated total: 3/6 points assigned by the reviewer.\n\nOBSERVED RESULT AFTER USE\nPeer Assessment: Training, Inference & Context\n\nUniversity level · 3 criteria · 6 points · Based on §§1.2 and 1.10, Table 1 and Figure 1 of the attached chapter\n\nEvaluate a classmate's explanation using the rubric below. Award 0–2 points per criterion, record constructive feedback, and compare the explanation with the expected evidence.\n\nAssessment progress\n\n2 of 3 criteria scored\n3/6\nTotal points\n\n1. Training\n\nMax. 2 points\n\nDoes the student explain how training changes the model?\n\nScore\n0 · Incorrect\n1 · Partial\n2 · Complete\nHide expected evidence\n\nEVIDENCE FOR FULL MARKS\n\nExplains that predicted distributions are compared with tokens in examples and that optimization updates numerical parameters to reduce aggregate prediction error.\n\nCheck for a causal connection between examples, prediction error and parameter updates.\n\n2. Inference\n\nMax. 2 points\n\nDoes the student explain how ordinary inference operates?\n\nScore\n0 · Incorrect\n1 · Partial\n2 · Complete\nShow expected evidence\n\n3. Context\n\nMax. 2 points\n\nDoes the student distinguish new context from retraining?\n\nScore\n0 · Incorrect\n1 · Partial\n2 · Complete\nShow expected evidence\n\nAssessment total\n\nComplete all three criteria\n3/6\nReset rubric\n\nShared scoring scale: 0 = absent or incorrect; 1 = partially accurate or insufficiently justified; 2 = accurate, independently explained and justified.\n\nThe assessment emphasizes conceptual relationships and reasoning, consistent with §1.10, rather than merely recognizing terminology or producing working code.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/peerassessment-transcript.txt",
+      "durationSeconds": 28.918,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "051ee788f6e19be75f582e7ac60d79eb453bd78b7569fbefd4a87f11877be207",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.253
+        },
+        {
+          "label": "Widget",
+          "seconds": 7.894
+        },
+        {
+          "label": "Use",
+          "seconds": 9.896
+        }
+      ]
     },
     "number": 100
   },
@@ -3512,31 +4549,68 @@
     "title": "/worksheet",
     "message": "Practise with answer fields and model answers to reveal.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/worksheet Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/worksheet.mp4",
+      "command": "/worksheet",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/worksheet-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/worksheet.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/worksheet.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/worksheet-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/worksheet.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /worksheet run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /worksheet execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/worksheet — prompt, generation and widget use\n\nPROMPT\n/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.302 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.008 The generated widget is ready.\n00:00:10.013 Write a justified answer before revealing the model answer.\n00:00:13.445 Reveal the expected mechanism and compare it with your explanation.\n00:00:16.882 Choose a partial self-assessment score.\n00:00:19.301 Inspect the self-assessment total after scoring one exercise.\n\nOBSERVED RESULT AFTER USE\nInteractive Worksheet: Training, Inference & Context\n\nUniversity level · 3 exercises · 6 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter\n\nWrite your answers independently, reveal the model answers, and award yourself 0–2 points for each exercise.\n\nWorksheet progress\n\n1 of 3 exercises assessed\n1/6\nSelf-assessment score\n\n1. Training — Explain the mechanism\n\n2 points\n\nDuring pretraining, how does the comparison between predicted distributions and actual tokens lead to parameter updates?\n\nHide model answer\n\nMODEL ANSWER\n\nThe text supplies a learning signal. The system compares predicted distributions with the actual tokens in training examples, and optimization updates numerical parameters to reduce aggregate prediction error.\n\nFull-mark evidence: Connect predicted distributions, example tokens, prediction error and parameter optimization.\n\nSelf-assessment\n0 · Incorrect\n1 · Partial\n2 · Complete\n\n2. Inference — Trace the process\n\n2 points\n\nExplain how ordinary inference produces an output. What happens to the model's parameters?\n\nReveal model answer\n\n3. Context — Apply the distinction\n\n2 points\n\nAndrea adds “In this chapter, X means Y” to a prompt and receives a different answer. Does this demonstrate retraining? Explain.\n\nReveal model answer\nReset worksheet\n\nScoring scale: 0 = incorrect or absent; 1 = partially correct; 2 = accurate and independently justified.\n\nLearning outcome: Distinguish parameter updates during training from fixed-parameter inference and changes to information available through context.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/worksheet-transcript.txt",
+      "durationSeconds": 24.971,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "57d9498af17883778e80b1b3b70a5ac588e09805026761097d66506e41a0559d",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.302
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.008
+        },
+        {
+          "label": "Use",
+          "seconds": 10.01
+        }
+      ]
     },
     "number": 101
   },
@@ -3549,31 +4623,68 @@
     "title": "/learningstations",
     "message": "Organise activities into stations and track completion.",
     "body": [
-      "Recorded widget with tested learning controls."
+      "Recorded prompt, generation and normal-speed use of the working controls."
     ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/learningstations Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "Original prompt → widget generation · recorded in ChatGPT",
+    "result": "Prompt → send → generation (accelerated) → widget use (normal speed)",
     "links": [
       {
         "label": "Open recorded conversation",
         "url": "https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248"
+      },
+      {
+        "label": "Recorded conversation",
+        "url": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042"
       }
     ],
     "media": {
-      "src": "materials/chatgpt-widgets/builds/learningstations.mp4",
+      "command": "/learningstations",
       "type": "video",
-      "poster": "materials/chatgpt-widgets/builds/learningstations-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/learningstations.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/learningstations.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/learningstations-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/learningstations.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /learningstations run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT"
+      "alt": "Real ChatGPT /learningstations execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.",
+      "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
+      "transcript": "/learningstations — prompt, generation and widget use\n\nPROMPT\n/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.268 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.468 The generated widget is ready.\n00:00:10.478 Write your explanation at the Training station.\n00:00:13.833 Reveal the expected answer and compare your reasoning.\n00:00:17.419 Mark the station complete and watch progress update.\n00:00:20.136 Advance to the Inference station.\n00:00:23.147 Select the Context station directly with its tab.\n\nOBSERVED RESULT AFTER USE\nInteractive Learning Stations: Training, Inference & Context\n\nUniversity level · 3 stations · Based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter\n\nExplore each station, write your explanation, then reveal the expected answer. Mark the station complete when you can explain the concept independently.\n\nStation progress\n\n1 of 3 completed\n33%\n✓ Training\nInference\nContext\n\nSTATION 3\n\nContext\n\nDistinguish changing information from changing parameters.\n\nNew prompt definition\n\nAvailable context\n\nFixed model\n\nPotentially different answer\n\nYour task\n\nAndrea adds “In this chapter, X means Y” to his prompt. Why might the answer change without retraining?\nReveal expected answer\nI can explain this independently.\nNext\nReset activity\n\nFinal learning outcome: Training updates model parameters to reduce prediction error; ordinary inference uses existing parameters; changing context can influence the output without retraining.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/learningstations-transcript.txt",
+      "durationSeconds": 28.231,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "2798bd031318f677c9a3ede08a219fde46c65845b24e0b7b0bc43b60fb08e964",
+      "recordedOn": "2026-11-06",
+      "chapters": [
+        {
+          "label": "Prompt",
+          "seconds": 0
+        },
+        {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
+          "label": "Generation",
+          "seconds": 4.268
+        },
+        {
+          "label": "Widget",
+          "seconds": 8.468
+        },
+        {
+          "label": "Use",
+          "seconds": 10.472
+        }
+      ]
     },
     "number": 102
   },
@@ -3623,41 +4734,50 @@
     "id": "S53EX3",
     "promptStyle": "chat",
     "title": "/flashcard · Three distinctions to remember",
-    "message": "Book §§2, 3 and 6 · Recall before checking the answer",
-    "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
+    "message": "Attached chapter · Recall before checking the answer",
+    "prompt": "/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.",
     "result": "",
     "decision": "Answer the question before revealing the card; compare with the chapter.",
     "audience": "student",
     "media": {
       "command": "/flashcard",
       "type": "video",
-      "src": "materials/chatgpt-widgets/builds/flashcard.mp4",
-      "poster": "materials/chatgpt-widgets/builds/flashcard-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/flashcard.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/flashcard.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/flashcard-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/flashcard.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /flashcard run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT",
-      "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
-      "transcript": "/flashcard — prompt and widget generation\n\nPROMPT\n/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.\n\n00:00:00.000 The original prompt is sent in ChatGPT.\n00:00:04.558 ChatGPT generates the response and builds the widget.\n00:00:10.668 The generated widget is ready to use.\n\nGENERATED RESULT\nTap a card to reveal the answer. Mark ✓ if you know it or × if you don't, and I'll track your progress.How do context and model parameters differ?Does a token's probability indicate an answer's truth?How is a token different from a word?A token may represent a word, part of a word, punctuation, or spaces. Tokens and words are not equivalent.1 of 3Invia feedbackYou can ask me to review these flashcards from any chat, change the deck, or set up a daily review.\n",
-      "transcriptFile": "materials/chatgpt-widgets/builds/flashcard-transcript.txt",
+      "alt": "Real ChatGPT /flashcard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.",
       "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
-      "durationSeconds": 15.668,
-      "width": 800,
-      "height": 620,
-      "fps": 24,
-      "sha256": "1ccba16481a78c09dea60d07ab28c988bbfce1f7b43a25880622c7121e0d184f",
+      "transcript": "/flashcard — prompt, generation and widget use\n\nPROMPT\n/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.200 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:04.971 The generated flashcard widget is ready.\n00:00:06.976 Flip the first card to reveal the answer.\n00:00:09.963 Mark the card as known and advance to the next concept.\n00:00:12.890 Reveal the second answer, then mark it for more practice.\n00:00:15.803 The review advances while tracking learning progress.\n\nOBSERVED RESULT AFTER USE\nObserved use: the first answer was revealed and marked known; the second was revealed and marked for further practice; the widget advanced to card 3 of 3.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/flashcard-transcript.txt",
+      "durationSeconds": 20.886,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "0bc375bbc495710e0e5ee24d74643ff50cad65f8c61b4c48b5a5aa384030e705",
+      "recordedOn": "2026-11-05",
       "chapters": [
         {
           "label": "Prompt",
           "seconds": 0
         },
         {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
           "label": "Generation",
-          "seconds": 4.558
+          "seconds": 4.2
         },
         {
           "label": "Widget",
-          "seconds": 10.668
+          "seconds": 4.971
+        },
+        {
+          "label": "Use",
+          "seconds": 6.973
         }
       ]
     },
@@ -3680,40 +4800,49 @@
     "resultLabel": "Observed interaction",
     "title": "/worksheet · Reveal a model answer",
     "message": "Actual ChatGPT worksheet · write an explanation, then reveal the model answer",
-    "prompt": "/worksheet Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
     "result": "",
     "decision": "Write an answer before revealing the model answer.",
     "audience": "both",
     "media": {
       "command": "/worksheet",
       "type": "video",
-      "src": "materials/chatgpt-widgets/builds/worksheet.mp4",
-      "poster": "materials/chatgpt-widgets/builds/worksheet-poster.jpg",
-      "captions": "materials/chatgpt-widgets/builds/worksheet.en.vtt",
+      "src": "materials/chatgpt-widgets/scenarios/worksheet.mp4",
+      "poster": "materials/chatgpt-widgets/scenarios/worksheet-poster.jpg",
+      "captions": "materials/chatgpt-widgets/scenarios/worksheet.en.vtt",
       "captionsDefault": false,
-      "alt": "Actual ChatGPT /worksheet run, showing the original prompt, generation and completed widget.",
-      "caption": "Original prompt → widget generation · recorded in ChatGPT",
-      "prompt": "/worksheet Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
-      "transcript": "/worksheet — prompt and widget generation\n\nPROMPT\n/worksheet Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.\n\n00:00:00.000 The original prompt is sent in ChatGPT.\n00:00:04.656 ChatGPT generates the response and builds the widget.\n00:00:27.777 The generated widget is ready to use.\n\nGENERATED RESULT\nWorksheet: Training vs. InferenceUniversity level · 3 exercises · 6 points · Based on §1.2, Table 1 and Figure 1 of the attached chapterAnswer independently, then reveal the expected answers and assess your understanding.1. Explain training2 pointsHow does prediction error lead to changes in a language model's parameters during pretraining? Reveal answer2. Explain inference2 pointsHow can a model generate different outputs from different inputs while its parameters remain unchanged? Reveal answer3. Apply the distinction2 pointsAndrea adds “In this chapter, X means Y” to a prompt. What changes, and how could you test whether context explains the different answer? Reveal answerYour score0/3 exercises assessed0/6 ResetSuccess criterion: Explain why training changes learned parameters, whereas ordinary inference uses them without updating them.\n",
-      "transcriptFile": "materials/chatgpt-widgets/builds/worksheet-transcript.txt",
+      "alt": "Real ChatGPT /worksheet execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+      "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
       "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
-      "durationSeconds": 32.777,
-      "width": 800,
-      "height": 620,
-      "fps": 24,
-      "sha256": "4e5110cdb6fb35ca26e6a2c6447cc125665f3f8e4d21d0312b68d08e3c7183ad",
+      "transcript": "/worksheet — prompt, generation and widget use\n\nPROMPT\n/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.302 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:08.008 The generated widget is ready.\n00:00:10.013 Write a justified answer before revealing the model answer.\n00:00:13.445 Reveal the expected mechanism and compare it with your explanation.\n00:00:16.882 Choose a partial self-assessment score.\n00:00:19.301 Inspect the self-assessment total after scoring one exercise.\n\nOBSERVED RESULT AFTER USE\nInteractive Worksheet: Training, Inference & Context\n\nUniversity level · 3 exercises · 6 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter\n\nWrite your answers independently, reveal the model answers, and award yourself 0–2 points for each exercise.\n\nWorksheet progress\n\n1 of 3 exercises assessed\n1/6\nSelf-assessment score\n\n1. Training — Explain the mechanism\n\n2 points\n\nDuring pretraining, how does the comparison between predicted distributions and actual tokens lead to parameter updates?\n\nHide model answer\n\nMODEL ANSWER\n\nThe text supplies a learning signal. The system compares predicted distributions with the actual tokens in training examples, and optimization updates numerical parameters to reduce aggregate prediction error.\n\nFull-mark evidence: Connect predicted distributions, example tokens, prediction error and parameter optimization.\n\nSelf-assessment\n0 · Incorrect\n1 · Partial\n2 · Complete\n\n2. Inference — Trace the process\n\n2 points\n\nExplain how ordinary inference produces an output. What happens to the model's parameters?\n\nReveal model answer\n\n3. Context — Apply the distinction\n\n2 points\n\nAndrea adds “In this chapter, X means Y” to a prompt and receives a different answer. Does this demonstrate retraining? Explain.\n\nReveal model answer\nReset worksheet\n\nScoring scale: 0 = incorrect or absent; 1 = partially correct; 2 = accurate and independently justified.\n\nLearning outcome: Distinguish parameter updates during training from fixed-parameter inference and changes to information available through context.\n",
+      "transcriptFile": "materials/chatgpt-widgets/scenarios/worksheet-transcript.txt",
+      "durationSeconds": 24.971,
+      "width": 1920,
+      "height": 1200,
+      "fps": 60,
+      "sha256": "57d9498af17883778e80b1b3b70a5ac588e09805026761097d66506e41a0559d",
+      "recordedOn": "2026-11-06",
       "chapters": [
         {
           "label": "Prompt",
           "seconds": 0
         },
         {
+          "label": "Send",
+          "seconds": 3.5
+        },
+        {
           "label": "Generation",
-          "seconds": 4.656
+          "seconds": 4.302
         },
         {
           "label": "Widget",
-          "seconds": 27.777
+          "seconds": 8.008
+        },
+        {
+          "label": "Use",
+          "seconds": 10.01
         }
       ]
     },

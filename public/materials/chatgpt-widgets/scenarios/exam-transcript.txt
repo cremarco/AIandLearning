@@ -1,0 +1,73 @@
+/exam — prompt, generation and widget use
+
+PROMPT
+/exam Using only the attached chapter, create an interactive three-question practice exam on training, inference and context. Include answer fields, revealable model answers and self-assessment scores. Answer in English.
+
+00:00:00.000 Write the prompt · fast typing.
+00:00:03.500 Send the completed prompt.
+00:00:04.287 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:07.861 The generated widget is ready.
+00:00:09.868 Write and justify an independent answer.
+00:00:13.381 Reveal the model answer for comparison.
+00:00:16.856 Award a partial self-assessment score; the widget totals your choices.
+
+OBSERVED RESULT AFTER USE
+Interactive Practice Exam: Training, Inference & Context
+
+University level · 3 questions · 12 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+
+Write your answers independently, reveal the expected explanations, then assign yourself a score based on conceptual accuracy and justification.
+
+Exam progress
+
+1 of 3 answers assessed
+2/12
+Points awarded
+
+1. Training
+
+4 points
+
+During pretraining, how does the comparison between a predicted distribution and the actual tokens in examples lead to changes in model parameters?
+
+Hide model answer
+
+MODEL ANSWER
+
+The system compares its predicted distribution with tokens actually present in training examples. The text supplies the learning signal, and optimization updates numerical parameters to reduce aggregate prediction error.
+
+Evidence for full marks
+
+Identifies the comparison with actual tokens
+
+Connects prediction error to optimization
+
+Explains that parameters are updated
+
+Self-assessment (0–4 points)
+0
+1
+2
+3
+4
+
+2. Inference
+
+4 points
+
+Explain how ordinary inference produces an output. What happens to the model's learned parameters?
+
+Reveal model answer
+
+3. Context
+
+4 points
+
+Andrea adds “In this chapter, X means Y” to a prompt and gets a different answer. Does this demonstrate retraining? Explain how to isolate the effect of context.
+
+Reveal model answer
+Restart exam
+
+Scoring guide: 0 = absent or incorrect; 1–2 = partial; 3 = substantially correct; 4 = complete and independently justified.
+
+Learning goal: Distinguish parameter updates during training from fixed-parameter inference and changes to available context.

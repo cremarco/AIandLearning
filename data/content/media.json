@@ -60,33 +60,42 @@
   "S53EX3": {
     "command": "/flashcard",
     "type": "video",
-    "src": "materials/chatgpt-widgets/builds/flashcard.mp4",
-    "poster": "materials/chatgpt-widgets/builds/flashcard-poster.jpg",
-    "captions": "materials/chatgpt-widgets/builds/flashcard.en.vtt",
+    "src": "materials/chatgpt-widgets/scenarios/flashcard.mp4",
+    "poster": "materials/chatgpt-widgets/scenarios/flashcard-poster.jpg",
+    "captions": "materials/chatgpt-widgets/scenarios/flashcard.en.vtt",
     "captionsDefault": false,
-    "alt": "Actual ChatGPT /flashcard run, showing the original prompt, generation and completed widget.",
-    "caption": "Original prompt → widget generation · recorded in ChatGPT",
-    "prompt": "/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.",
-    "transcript": "/flashcard — prompt and widget generation\n\nPROMPT\n/flashcard Using only §§2, 3 and 6 of the attached book, write exactly three question-and-answer flashcards. Test token versus word, context versus parameters, and token probability versus truth. Keep each answer under 30 words. Answer in English. Keep the complete response within 100 words.\n\n00:00:00.000 The original prompt is sent in ChatGPT.\n00:00:04.558 ChatGPT generates the response and builds the widget.\n00:00:10.668 The generated widget is ready to use.\n\nGENERATED RESULT\nTap a card to reveal the answer. Mark ✓ if you know it or × if you don't, and I'll track your progress.How do context and model parameters differ?Does a token's probability indicate an answer's truth?How is a token different from a word?A token may represent a word, part of a word, punctuation, or spaces. Tokens and words are not equivalent.1 of 3Invia feedbackYou can ask me to review these flashcards from any chat, change the deck, or set up a daily review.\n",
-    "transcriptFile": "materials/chatgpt-widgets/builds/flashcard-transcript.txt",
+    "alt": "Real ChatGPT /flashcard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
+    "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+    "prompt": "/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.",
     "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
-    "durationSeconds": 15.668,
-    "width": 800,
-    "height": 620,
-    "fps": 24,
-    "sha256": "1ccba16481a78c09dea60d07ab28c988bbfce1f7b43a25880622c7121e0d184f",
+    "transcript": "/flashcard — prompt, generation and widget use\n\nPROMPT\n/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.200 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:04.971 The generated flashcard widget is ready.\n00:00:06.976 Flip the first card to reveal the answer.\n00:00:09.963 Mark the card as known and advance to the next concept.\n00:00:12.890 Reveal the second answer, then mark it for more practice.\n00:00:15.803 The review advances while tracking learning progress.\n\nOBSERVED RESULT AFTER USE\nObserved use: the first answer was revealed and marked known; the second was revealed and marked for further practice; the widget advanced to card 3 of 3.\n",
+    "transcriptFile": "materials/chatgpt-widgets/scenarios/flashcard-transcript.txt",
+    "durationSeconds": 20.886,
+    "width": 1920,
+    "height": 1200,
+    "fps": 60,
+    "sha256": "0bc375bbc495710e0e5ee24d74643ff50cad65f8c61b4c48b5a5aa384030e705",
+    "recordedOn": "2026-11-05",
     "chapters": [
       {
         "label": "Prompt",
-        "seconds": 0
+        "seconds": 0.0
+      },
+      {
+        "label": "Send",
+        "seconds": 3.5
       },
       {
         "label": "Generation",
-        "seconds": 4.558
+        "seconds": 4.2
       },
       {
         "label": "Widget",
-        "seconds": 10.668
+        "seconds": 4.971
+      },
+      {
+        "label": "Use",
+        "seconds": 6.973
       }
     ]
   },
