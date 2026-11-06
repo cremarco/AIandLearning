@@ -1,0 +1,90 @@
+/mistakelog — fresh temporary chat, PDF, shortcut and extended widget use
+
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
+/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.
+
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.298 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.353 Write the prompt · fast typing.
+00:00:08.853 Send the shortcut as the second message.
+00:00:09.176 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.341 Inspect the generated widget before using its controls.
+00:00:16.193 Write why a definition added to a prompt changes context rather than weights.
+00:00:25.246 Reveal the correction grounded in the uploaded chapter.
+00:00:30.588 Answer the self-check by choosing information available to inference.
+00:00:34.950 Mark the corrected misconception Understood after meeting the requirements.
+00:00:39.423 Move to the next misconception in the log.
+00:00:42.722 Write a partial explanation for the second misconception.
+00:00:49.479 Reveal the chapter correction about fixed parameters during inference.
+00:00:54.976 Choose the generated-answer option to inspect an unsuccessful self-check.
+00:00:58.835 Mark this misconception for another review.
+00:01:03.210 Move on to the retrieval misconception.
+00:01:06.504 Correct the claim that retrieval updates weights and guarantees correctness.
+00:01:15.488 Reveal the chapter correction about RAG and reliability.
+00:01:20.840 Choose external passages available in context in the self-check.
+00:01:25.192 Mark the retrieval distinction Understood.
+00:01:29.543 Inspect the totals: all three reviewed, with one still needing practice.
+00:01:34.785 Reopen Mistake 2 directly to revisit the stored difficult case.
+
+OBSERVED RESULT AFTER USE
+Interactive Mistake Log
+
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, pp. 5–6 and 13–14.
+
+Review three misconceptions, write your own correction, reveal the chapter explanation, and mark each mistake as understood or needing another review.
+
+Review progress
+
+3/3 reviewed
+
+ 2 understood
+
+1 need another review
+
+Mistake 1
+Mistake 2
+Mistake 3
+Inference vs. training
+
+§1.2, p. 5
+
+MISCONCEPTION
+
+Every time a model generates an answer, it trains itself on the new input.
+Write the correction in your own words
+Hide chapter correction
+
+ Chapter-grounded correction
+
+Ordinary inference performs calculations using the model's existing parameters. Training updates parameters, while changing the input with the model fixed allows the effect of context to be studied.
+Reference: §1.2, p. 5
+
+Self-check: What remains fixed during ordinary inference?
+
+The model's parameters
+The generated answer
+The input text
+
+ Not quite — revisit the distinction
+
+Ordinary inference uses parameters already available. Different inputs can produce different outputs without retraining.
+
+Review decision
+
+Review again
+Understood
+To mark a mistake as understood, write a correction, reveal the explanation, and answer the self-check correctly.
+Previous
+
+2 of 3
+
+Next
+First review completed
+Return to the entries marked for another review and try explaining them independently.
+Start another review
+
+Final recall challenge: Without looking at the corrections, explain in one sentence each what changes during training, ordinary inference with a new prompt, and RAG. The key distinction is whether the intervention changes the model's parameters or the information available in context.

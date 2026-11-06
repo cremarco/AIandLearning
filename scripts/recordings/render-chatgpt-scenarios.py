@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-PREFIX = 'materials/chatgpt-widgets/scenarios'
+PREFIX = 'materials/chatgpt-widgets/isolated'
 
 
 def read(p):
@@ -36,15 +36,19 @@ def render(capture, source, destination, ffmpeg):
     assert capture['complete'] and capture['actions'], f'{key}: missing completed usage'
     assert not capture.get('truncated'), f'{key}: screencast buffer lost frames'
     phases = capture['phases']
-    assert [p['name'] for p in phases] == ['typing', 'send', 'generation', 'widget', 'usage'], f'{key}: incomplete scenario'
+    assert [p['name'] for p in phases] == ['upload', 'setup-generation', 'typing', 'send', 'generation', 'widget', 'usage'], f'{key}: incomplete two-message scenario'
     assert capture['evidence'].get('responseId'), f'{key}: missing response provenance'
+    assert capture.get('newChat') and capture.get('temporaryChat') and capture.get('interfaceLanguage') == 'en'
+    assert capture.get('initialMessageCount') == 0 and capture['evidence'].get('userMessageCount') == 2
+    assert capture.get('conversationUrl', '').startswith('https://chatgpt.com/c/') and 'temporary-chat=true' in capture['conversationUrl'], f'{key}: identify the independent temporary conversation'
+    assert len(capture['actions']) >= 7, f'{key}: demonstrate several meaningful interactions'
     phases = [dict(p) for p in phases]
     phases[0]['at'] = 0
     for i, phase in enumerate(phases):
         phase['end'] = phases[i + 1]['at'] if i + 1 < len(phases) else capture['durationMs']
         if phase['name'] == 'typing':
             phase['speed'] = max(1, (phase['end'] - phase['at']) / 3500)
-        elif phase['name'] == 'generation':
+        elif phase['name'] in ['generation', 'setup-generation']:
             phase['speed'] = max(8, (phase['end'] - phase['at']) / 5500)
         else:
             assert phase['speed'] == 1, 'Widget and usage must remain at normal speed'
@@ -79,7 +83,7 @@ def render(capture, source, destination, ffmpeg):
     concat = []
     for i, frame in enumerate(frames):
         image_path = source / key / frame['file']
-        assert Image.open(image_path).size == (2880, 1600), f'{key}: expected Retina 1440×800 capture'
+        assert Image.open(image_path).size == (2560, 1440), f'{key}: expected native 1280×720 Retina capture'
         start = warp(frame['at'])
         end = warp(frames[i + 1]['at']) if i + 1 < len(frames) else duration
         if end <= start:
@@ -88,11 +92,12 @@ def render(capture, source, destination, ffmpeg):
     concat += [f"file '{(source / key / frames[-1]['file']).as_posix()}'", 'option framerate 60']
     listing = work / 'frames.ffconcat'
     listing.write_text('ffconcat version 1.0\n' + '\n'.join(concat) + '\n')
-    send = next(p for p in phases if p['name'] == 'send')
     generation = next(p for p in phases if p['name'] == 'generation')
     # Reframe the composer while writing; retain the conversation column during
-    # generation and use. Both views are native 1920×1200 crops, with no upscaling.
-    crop = f"crop=1920:1200:532:if(lt(t\\,{warp(generation['at']):.6f})\\,400\\,120),scale=1440:900:flags=lanczos,fps=60"
+    # generation and use. A wider home composer needs its own horizontal crop.
+    # Native 1664×1040 crops are downsampled to 1440×900 without clipped text.
+    typing = next(p for p in phases if p['name'] == 'typing')
+    crop = f"crop=1664:1040:if(lt(t\\,{warp(phases[1]['at']):.6f})\\,400\\,528):if(between(t\\,{warp(typing['at']):.6f}\\,{warp(generation['at']):.6f})\\,400\\,96),scale=1440:900:flags=lanczos,fps=60"
     output = destination / f'{key}.mp4'
     subprocess.run([ffmpeg, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', str(listing),
                     '-t', f'{duration:.6f}', '-vf', crop, '-an', '-c:v', 'libx264', '-preset', 'fast',
@@ -100,9 +105,10 @@ def render(capture, source, destination, ffmpeg):
     # A completed long response can begin below the viewport. Choose the first
     # demonstrated control after its genuine UI scroll, rather than a stale view
     # of the previous response at the beginning of the result-reading hold.
-    poster_at = capture['actions'][-1]['at'] + 1200
-    poster_frame = next((f for f in frames if f['at'] >= poster_at), frames[-1])
-    Image.open(source / key / poster_frame['file']).convert('RGB').crop((532, 120, 2452, 1320)).resize((1440, 900), Image.Resampling.LANCZOS).save(destination / f'{key}-poster.jpg', quality=98, subsampling=0)
+    poster_action = capture['actions'][capture.get('posterActionIndex', -1)]
+    poster_at = poster_action['at'] + 1200
+    poster_frame = next((f for f in reversed(frames) if f['at'] <= poster_at), frames[0])
+    Image.open(source / key / poster_frame['file']).convert('RGB').crop((528, 96, 2192, 1136)).resize((1440, 900), Image.Resampling.LANCZOS).save(destination / f'{key}-poster.jpg', quality=98, subsampling=0)
     cues = []
     for i, phase in enumerate(phases):
         start = edited_starts[i]
@@ -118,33 +124,41 @@ def render(capture, source, destination, ffmpeg):
         end = warp(capture['actions'][i + 1]['at']) if i + 1 < len(capture['actions']) else duration
         cues.append((warp(action['at']), end, action['label']))
     (destination / f'{key}.en.vtt').write_text('WEBVTT\n\n' + '\n\n'.join(f'{stamp(a)} --> {stamp(b)}\n{t}' for a, b, t in cues if b > a) + '\n')
-    transcript = (f"{capture['command']} — prompt, generation and widget use\n\nPROMPT\n{capture['prompt']}\n\n"
+    transcript = (f"{capture['command']} — fresh temporary chat, PDF, shortcut and extended widget use\n\nFIRST MESSAGE\nAttach Fondamenti_GenAI_Cremaschi.pdf.\n{capture['setupPrompt']}\n\nSECOND MESSAGE\n{capture['prompt']}\n\n"
                   + '\n'.join(f'{stamp(a)} {t}' for a, _, t in cues)
                   + '\n\nOBSERVED RESULT AFTER USE\n' + capture['evidence']['text'] + '\n')
-    (destination / f'{key}-transcript.txt').write_text('\n'.join(line.rstrip() for line in transcript.splitlines()) + '\n')
+    if capture.get('observations'):
+        transcript += '\nOBSERVATIONS\n' + '\n'.join(capture['observations']) + '\n'
+    transcript = '\n'.join(line.rstrip() for line in transcript.splitlines()) + '\n'
+    (destination / f'{key}-transcript.txt').write_text(transcript)
     clip = {'command': capture['command'], 'type': 'video', 'src': f'{PREFIX}/{key}.mp4',
             'poster': f'{PREFIX}/{key}-poster.jpg', 'captions': f'{PREFIX}/{key}.en.vtt', 'captionsDefault': False,
             'alt': f"Real ChatGPT {capture['command']} execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
-            'caption': 'Prompt → send → generation (accelerated) → widget use (normal speed)',
-            'prompt': capture['prompt'], 'source': capture['conversationUrl'], 'transcript': transcript,
+            'caption': 'New temporary chat → PDF → shortcut → generation → extended widget use',
+            'prompt': capture['prompt'], 'setupPrompt': capture['setupPrompt'], 'temporaryChat': True, 'interfaceLanguage': 'en', 'transcript': transcript,
             'transcriptFile': f'{PREFIX}/{key}-transcript.txt', 'durationSeconds': round(duration, 3),
             'width': 1440, 'height': 900, 'fps': 60, 'sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
             'recordedOn': datetime.fromisoformat(capture['startedAt'].replace('Z', '+00:00')).astimezone(ZoneInfo('Europe/Rome')).date().isoformat(),
-            'chapters': [{'label': {'typing': 'Prompt', 'send': 'Send', 'generation': 'Generation', 'widget': 'Widget', 'usage': 'Use'}[p['name']], 'seconds': round(s, 3)} for p, s in zip(phases, edited_starts)]}
+            'chapters': [{'label': {'upload': 'PDF', 'setup-generation': 'Read chapter', 'typing': 'Prompt', 'send': 'Send', 'generation': 'Generation', 'widget': 'Widget', 'usage': 'Use'}[p['name']], 'seconds': round(s, 3)} for p, s in zip(phases, edited_starts)]}
     provenance = {**{k: v for k, v in clip.items() if k != 'transcript'},
                   'capture': {'startedAt': capture['startedAt'], 'responseId': capture['evidence']['responseId'], 'responseComplete': True,
-                              'rawDimensions': [2880, 1600], 'sourceFrames': len(frames),
+                              'newChat': True, 'temporaryChat': True, 'initialMessageCount': 0, 'userMessageCount': 2,
+                              'conversationFingerprint': hashlib.sha256(capture['conversationUrl'].encode()).hexdigest(),
+                              'interfaceLanguage': 'en', 'book': capture['book'], 'observations': capture.get('observations', []),
+                              'rawDimensions': [2560, 1440], 'sourceFrames': len(frames),
+                              'framing': {'width': 1664, 'height': 1040, 'conversationX': 528, 'uploadX': 400, 'topY': 96, 'composerY': 400},
                               'phases': phases, 'idleCutsMilliseconds': cuts,
                               'actions': [{k: v for k, v in a.items() if k != 'state'} for a in capture['actions']],
                               'frames': [{'at': f['at'], 'sha256': hashlib.sha256((source / key / f['file']).read_bytes()).hexdigest()} for f in frames]}}
     write(destination / f'{key}-provenance.json', provenance)
-    print(f"{key}: {duration:.1f}s · 1440×900 · 60fps · {len(capture['actions'])} actions", flush=True)
+    assert duration - edited_starts[-1] >= 40, f'{key}: extend normal-speed use beyond 40 seconds'
+    print(f"{key}: {duration:.1f}s · 1440×900 delivery · 60fps · {len(capture['actions'])} actions", flush=True)
     return clip, provenance
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--source', type=Path, default=ROOT / 'output/review/chatgpt-full-captures')
+    parser.add_argument('--source', type=Path, default=ROOT / 'output/review/chatgpt-fresh-captures')
     parser.add_argument('--only', nargs='*')
     parser.add_argument('--publish', action='store_true')
     args = parser.parse_args()
@@ -162,11 +176,12 @@ def main():
     new = {c['command'].lower(): (c, p) for c, p in clips}
     assert len(new) == len(previous['clips']) == 30, 'Publish only the complete set of 30 new recordings'
     ordered = [new[c['command'].lower()] for c in previous['clips']]
+    assert len({p['capture']['conversationFingerprint'] for _, p in ordered}) == 30, 'Every recording must use a different conversation'
     recorded_on = max(c['recordedOn'] for c, _ in ordered)
     write(ROOT / 'data/demos/chatgpt-videos.json', {'recordedOn': recorded_on, 'clips': [c for c, _ in ordered]})
     old_provenance = read(ROOT / 'public/materials/chatgpt-widgets/videos/provenance.json')
     provenance = {'recordedOn': recorded_on, 'status': 'executed', 'audio': False,
-                  'method': 'Native Retina PNG browser screencast events with original timestamps. Real fast prompt entry, send, accelerated ChatGPT processing and widget generation, followed by real widget use at original speed. Native 1920×1200 crops downsampled to 1440×900; no upscaling or reconstructed interface; 60 fps H.264 CRF 14. Generation waits shortened; all usage retains source timing.',
+                  'method': 'Thirty independent temporary chats in the English interface. Each starts empty: first message uploads the PDF, second sends the shortcut request. Native Retina screencast events, fast typing and accelerated generation, followed by at least forty seconds of normal-speed use and seven interactions. Native 1664×1040 close-ups downsampled to 1440×900 without upscaling; no personalized home suggestions; chronological actions, reading holds and source-frame hashes.',
                   'book': old_provenance['book'], 'clips': [p for _, p in ordered]}
     write(destination / 'provenance.json', provenance)
     write(ROOT / 'public/materials/chatgpt-widgets/videos/provenance.json', provenance)
@@ -179,9 +194,12 @@ def main():
         if slide.get('kind') == 'shortcut-detail' and command in new:
             clip = new[command][0]
             slide.update(prompt=clip['prompt'], media=clip, result=clip['caption'],
-                         body=['Recorded prompt, generation and normal-speed use of the working controls.'])
-            if not any(link['url'] == clip['source'] for link in slide.get('links', [])):
-                slide.setdefault('links', []).append({'label': 'Recorded conversation', 'url': clip['source']})
+                         body=['New temporary chat: upload the chapter, send the shortcut, then use the generated widget.'])
+            for link in slide.get('links', []):
+                if link.get('label') == 'Open recorded conversation':
+                    link['label'] = 'Original probe'
+                elif link.get('label') in ['Recorded conversation', 'Earlier probe']:
+                    link['label'] = 'Earlier recording'
         if slide['id'] == 'S53EX3':
             slide['prompt'] = new['/flashcard'][0]['prompt']
             slide['message'] = 'Attached chapter · Recall before checking the answer'

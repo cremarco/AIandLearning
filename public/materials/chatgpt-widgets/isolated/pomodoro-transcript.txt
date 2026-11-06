@@ -1,0 +1,84 @@
+/pomodoro — fresh temporary chat, PDF, shortcut and extended widget use
+
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
+/pomodoro Using only the attached chapter, create an interactive focused-study widget with three five-minute activities on training, inference and context. Include recall reveals and activity progress. Answer in English.
+
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.240 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.016 Write the prompt · fast typing.
+00:00:09.516 Send the shortcut as the second message.
+00:00:09.826 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.527 Inspect the generated widget before using its controls.
+00:00:16.145 Activate the study session with Start.
+00:00:22.035 Pause the session and inspect the displayed time.
+00:00:26.545 Use the +1 min control and inspect the displayed time.
+00:00:31.412 Write a training explanation at normal speed.
+00:00:40.248 Reveal the expected training answer.
+00:00:43.800 Mark the training recall as completed.
+00:00:48.149 Move to the inference activity.
+00:00:51.437 Explain why prompt context does not prove changed weights.
+00:01:00.730 Compare the answer with the expected explanation.
+00:01:06.798 Mark the inference activity complete.
+00:01:11.161 Open the context and retrieval activity.
+00:01:14.441 Write a retrieval explanation at normal speed.
+00:01:24.159 Reveal the expected retrieval explanation.
+00:01:30.128 Complete all three recall activities.
+00:01:36.076 Revisit Training with the saved written response.
+
+OBSERVED RESULT AFTER USE
+Focused study: Training, Inference & Context
+
+Three five-minute study sessions based exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14).
+
+FOCUSED STUDY · 15 MINUTES
+
+Your study timer
+3/3 complete
+
+Training
+
+Inference
+
+Context & RAG
+
+SESSION 1 OF 3 · TRAINING
+
+04:00
+Start
+Reset
++1 min
+Activity 1: Training
+
+§1.2 · pp. 5–6
+
+Explain what changes when a model is trained.
+
+Recall from memory
+
+What happens to model parameters during training, and what provides the learning signal?
+Hide expected answer
+
+Expected answer
+
+Training compares predicted distributions with tokens in examples. The text provides the learning signal, and optimisation updates numerical parameters to reduce aggregate error.
+
+Key distinction: Training changes the model's parameters.
+
+Source: Foundations of Generative Artificial Intelligence, §1.2 · pp. 5–6
+I completed the recall and checked my explanation.
+Previous
+Next activity
+All three activities completed!
+
+You have reviewed parameter updates, fixed-parameter inference, and retrieved context.
+
+Final self-check: Can you explain, without looking at the answers, why a new definition in a prompt and a retrieved document can change a response without training the model?
+
+All activity questions and expected answers are grounded in the attached chapter, especially Table 1 and Figure 1 in §1.2 and the RAG explanation in §1.7.
+
+OBSERVATIONS
+The generated timer controls change state, but a real-time countdown was not observed. The +1 min control displayed 04:00 after the initial 05:00. The activity answers, reveals and completion controls were exercised.

@@ -1,0 +1,82 @@
+/gapfinder — fresh temporary chat, PDF, shortcut and extended widget use
+
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
+/gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.
+
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.438 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.704 Write the prompt · fast typing.
+00:00:09.204 Send the shortcut as the second message.
+00:00:09.525 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.770 Inspect the generated widget before using its controls.
+00:00:15.469 Correct the first claim: training updates parameters, ordinary inference uses them.
+00:00:24.386 Reveal the first expected explanation and compare it with the correction.
+00:00:27.686 Read the first expected explanation and its chapter reference.
+00:00:32.907 Correct the second claim by distinguishing new context from learned parameters.
+00:00:41.642 Reveal and read the expected explanation about prompt context.
+00:00:45.405 Correct the retrieval claim without confusing retrieved context with training.
+00:00:54.725 Reveal and compare the third expected explanation.
+00:01:00.264 Inspect the completed counter: three answers and three explanations.
+00:01:05.533 Reset the written responses and explanations for another attempt.
+
+OBSERVED RESULT AFTER USE
+Gap Finder: Training vs. Inference
+
+Find and correct three conceptual misunderstandings from Foundations of Generative Artificial Intelligence, §1.2 (pp. 5–6). Write your answers before revealing the expected explanations.
+
+YOUR PROGRESS
+
+0/3 answered · 0/3 explanations revealed
+
+Question 1 of 3
+
+§1.2, p. 5
+What changes during training?
+
+FLAWED EXPLANATION
+
+Training and inference both update model parameters whenever new text is processed.
+
+Identify the conceptual error. Explain what training changes and what ordinary inference does.
+
+Response not yet entered
+
+Reveal explanation
+
+Question 2 of 3
+
+§1.2, pp. 5–6
+Does a prompt teach the model?
+
+FLAWED EXPLANATION
+
+Andrea writes 'In this chapter, X means Y.' The model uses that definition, proving its weights have changed.
+
+Explain why this conclusion is not justified. What actually changes?
+
+Response not yet entered
+
+Reveal explanation
+
+Question 3 of 3
+
+§§1.2 and 1.7, pp. 5–6, 14
+Is retrieval the same as training?
+
+FLAWED EXPLANATION
+
+Retrieving a document through RAG updates the model, so the retrieved information becomes part of its parameters.
+
+Identify the gap and distinguish retrieval, inference and training.
+
+Response not yet entered
+
+Reveal explanation
+Reset activity
+Reveal all explanations
+
+Learning goal: Explain independently why training changes parameters, while changing a prompt or retrieving documents changes the context available to inference. Based exclusively on the attached chapter.

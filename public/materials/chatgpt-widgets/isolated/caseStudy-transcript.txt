@@ -1,0 +1,122 @@
+/caseStudy — fresh temporary chat, PDF, shortcut and extended widget use
+
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
+/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.
+
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.302 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.394 Write the prompt · fast typing.
+00:00:09.894 Send the shortcut as the second message.
+00:00:10.241 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.848 Inspect the generated widget before using its controls.
+00:00:17.509 Write what changes during the training experiment.
+00:00:28.435 Reveal the training explanation for comparison.
+00:00:31.717 Move to the prompt experiment.
+00:00:35.240 Explain the effect of a definition in the prompt.
+00:00:45.548 Reveal the expected prompt explanation.
+00:00:51.596 Open the retrieval experiment.
+00:00:55.208 Write the retrieval decision and its limitation.
+00:01:05.627 Reveal the expected retrieval explanation.
+00:01:11.778 Review the completed case-study progress.
+00:01:16.502 Return to the first experiment and inspect the saved response.
+
+OBSERVED RESULT AFTER USE
+Interactive Case Study: Andrea’s Three Experiments
+
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, pp. 5–6 and 13–14.
+
+Andrea is a second-year computer science student developing a text-generation application. He wants to understand what happens when he changes a model through training, adds information to a prompt, or retrieves external passages.
+
+Your task: Make three written decisions. For each experiment, explain what changes, what stays fixed, and what the observed result actually proves. Reveal the expected explanation after submitting your reasoning.
+
+Case study progress
+
+3 of 3 completed
+
+1. Training
+2. Prompt
+3. RAG
+
+Experiment 1 — Training
+
+Andrea trains a new version of his model using examples and prediction error. During optimisation, numerical parameters are updated.
+
+What changes in this experiment? How is it different from ordinary inference?
+
+§1.2, pp. 5–6
+Explanation revealed
+
+Expected explanation
+
+Training changes the model's parameters through optimisation. During ordinary inference, the model performs calculations using already available parameters. Training a new version therefore changes the model itself; changing only the input does not.
+
+Self-check
+
+Did you distinguish parameter updates from calculations with fixed parameters?
+
+Previous
+Next experiment
+
+All three decisions completed
+
+You have compared parameter updates, prompt context and retrieved context. Can you now explain all three distinctions without looking at the expected answers?
+
+Restart case study
+Final comparison
+
+Intervention
+
+
+
+What changes?
+
+
+
+Model parameters
+
+
+
+
+Training or fine-tuning
+
+
+
+Learned numerical values
+
+
+
+Updated
+
+
+
+
+New prompt
+
+
+
+Available inference context
+
+
+
+Fixed
+
+
+
+
+RAG
+
+
+
+External passages supplied as context
+
+
+
+Fixed
+
+This comparison follows Figure 1 and Table 1 of the chapter (§1.2, pp. 5–6). The retrieval limitations are explained in §1.7, p. 14.
+
+Reflection: An answer changes after Andrea adds information. What evidence would you need before claiming that the model itself has changed?

@@ -108,6 +108,7 @@ export function checkData() {
     }
   }
   const videoProvenance = read('public/materials/chatgpt-widgets/videos/provenance.json')
+  assert.equal(new Set(videoProvenance.clips.map(record => record.capture?.conversationFingerprint)).size, 30, 'Every shortcut video must use an independent temporary chat')
   for (const clip of shortcutVideos) {
     for (const field of ['src', 'poster', 'captions']) assert(clip[field] && fs.existsSync(path.join(root, 'public', clip[field])), `${clip.command}: missing video ${field}`)
     assert(clip.durationSeconds > 0 && clip.transcript, `${clip.command}: missing duration or transcript`)
@@ -116,11 +117,20 @@ export function checkData() {
     assert(clip.chapters?.some(chapter => chapter.label === 'Prompt') && clip.chapters.some(chapter => chapter.label === 'Generation') && clip.chapters.some(chapter => chapter.label === 'Widget'), `${clip.command}: show the prompt, generation and completed widget`)
     const capture = videoProvenance.clips.find(record => record.command === clip.command)?.capture
     assert(capture?.responseComplete && capture.frames?.length >= 3, `${clip.command}: preserve a complete generation capture`)
-    assert.deepEqual(clip.chapters.map(chapter => chapter.label), ['Prompt', 'Send', 'Generation', 'Widget', 'Use'], `${clip.command}: show the complete prompt-to-use scenario`)
+    assert.deepEqual(clip.chapters.map(chapter => chapter.label), ['PDF', 'Read chapter', 'Prompt', 'Send', 'Generation', 'Widget', 'Use'], `${clip.command}: show PDF upload before the second-message shortcut and widget use`)
     assert.equal(clip.width, 1440, `${clip.command}: use the agreed 1440px delivery width`)
     assert.equal(clip.height, 900, `${clip.command}: use the agreed 900px delivery height`)
     assert.equal(clip.fps, 60, `${clip.command}: retain smooth browser transitions`)
-    assert(capture.responseId && capture.actions?.length >= 2, `${clip.command}: record meaningful use of the actual response`)
+    assert(capture.responseId && capture.actions?.length >= 7, `${clip.command}: record several meaningful interactions with the actual response`)
+    assert(capture.newChat && capture.temporaryChat && clip.temporaryChat, `${clip.command}: use a fresh temporary chat`)
+    assert.match(capture.conversationFingerprint, /^[a-f0-9]{64}$/, `${clip.command}: preserve the independent conversation fingerprint`)
+    assert.equal(capture.initialMessageCount, 0, `${clip.command}: begin with an empty chat`)
+    assert.equal(capture.userMessageCount, 2, `${clip.command}: upload the PDF first and send the shortcut second`)
+    assert.equal(capture.interfaceLanguage, 'en', `${clip.command}: record the English interface`)
+    assert.equal(clip.interfaceLanguage, 'en', `${clip.command}: identify the interface language`)
+    assert(clip.setupPrompt && clip.transcript.includes(clip.setupPrompt), `${clip.command}: preserve the PDF setup request`)
+    assert.equal(clip.transcript, fs.readFileSync(path.join(root, 'public', clip.transcriptFile), 'utf8'), `${clip.command}: keep the downloadable transcript consistent with the slide`)
+    assert(clip.durationSeconds - clip.chapters.at(-1).seconds >= 39.999, `${clip.command}: demonstrate at least forty seconds of normal-speed use`)
     assert(capture.phases?.filter(phase => ['widget', 'usage'].includes(phase.name)).every(phase => phase.speed === 1), `${clip.command}: never accelerate widget use`)
   }
   assert.equal(slides.find(slide => slide.id === 'S53WIDGETWORKSHEET')?.media?.type, 'video', 'The worksheet example must show its recorded interaction')

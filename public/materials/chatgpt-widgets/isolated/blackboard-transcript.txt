@@ -1,0 +1,123 @@
+/blackboard — fresh temporary chat, PDF, shortcut and extended widget use
+
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
+/blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.
+
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.615 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.102 Write the prompt · fast typing.
+00:00:09.602 Send the shortcut as the second message.
+00:00:09.923 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.815 Inspect the generated widget before using its controls.
+00:00:15.462 Filter the blackboard to focus on Training.
+00:00:20.807 Follow the training flow down to parameter updates.
+00:00:25.664 Switch the diagram to Inference.
+00:00:31.025 Inspect the fixed-parameter step in the inference flow.
+00:00:35.784 Restore Both processes for a side-by-side comparison.
+00:00:39.078 Reveal the first check about a definition added to the prompt.
+00:00:44.465 Reveal the check about what pretraining updates.
+00:00:49.946 Reveal the check about changed outputs with fixed parameters.
+00:00:53.241 Hide all three explanations at once for another independent attempt.
+00:00:58.302 Reveal all three explanations with the collective control.
+00:01:03.223 Inspect the complete check counter and the shared controls.
+
+OBSERVED RESULT AFTER USE
+Interactive Blackboard: Training vs. Inference
+
+Explore how a language model learns during training and generates outputs during inference. Select a filter to focus on one process, then reveal the three understanding checks to test your knowledge.
+
+Source: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6.
+
+Both
+Training
+Inference
+
+Training
+
+Training examples
+
+Actual tokens
+
+Predictions
+
+Compare with examples
+
+Prediction error
+
+Learning signal
+
+Parameter updates
+
+Optimisation
+
+Changed model
+
+Inference
+
+Current input + context
+
+Information available now
+
+Model calculations
+
+Using existing parameters
+
+Output distribution
+
+Next-token probabilities
+
+Parameters remain fixed
+
+No training update
+
+Selected output
+
+The key distinction
+Training changes the model's parameters. Ordinary inference uses existing parameters to produce an output from the current input and context.
+
+Three understanding checks
+
+3 of 3 explanations revealed
+
+Hide all
+
+1
+
+A model uses a new definition provided in a prompt. Have its weights necessarily changed?
+
+§1.2, p. 5
+Hide answer
+
+Expected explanation
+
+No. The definition changes the information available in the current context. It does not demonstrate a parameter update.
+
+2
+
+What is updated when the system learns from prediction errors during pretraining?
+
+§1.2, p. 5
+Hide answer
+
+Expected explanation
+
+The model's numerical parameters are updated through optimisation to reduce aggregate prediction error.
+
+3
+
+How can a different prompt change the output if the model's parameters remain fixed?
+
+§1.2, pp. 5–6
+Hide answer
+
+Expected explanation
+
+Ordinary inference uses the current input and context with fixed parameters. Changing the context can therefore change the output distribution without retraining.
+
+Final takeaway: Changing context changes the information available to inference; changing parameters requires training or fine-tuning. A different answer alone is not evidence that the model has learned new weights.
+
+Source: §1.2, Table 1 and Figure 1, pp. 5–6. The diagram follows the chapter's conceptual distinction between training and ordinary inference.

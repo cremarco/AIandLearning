@@ -470,52 +470,69 @@ Guidance for writing requests, not recognition or validation of the 79 informal 
 SLIDE S53DETAILQUIZ — /quiz
 Page 28 / 198
 Answer questions, review feedback and move through a quiz.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /quiz Using only the attached chapter, create an interactive three-question quiz about tokens, context and parameters. Show feedback and let me advance one question at a time. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /quiz execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/quiz — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/quiz — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /quiz Using only the attached chapter, create an interactive three-question quiz about tokens, context and parameters. Show feedback and let me advance one question at a time. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.214 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:06.822 The generated widget is ready.
-00:00:08.830 Read a hint before choosing an answer.
-00:00:11.594 Choose the tokenizer-dependent answer and read the feedback.
-00:00:15.058 Advance to question two.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.474 ChatGPT reads the uploaded chapter · accelerated.
+00:00:04.596 Write the prompt · fast typing.
+00:00:08.096 Send the shortcut as the second message.
+00:00:08.415 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:10.420 Inspect the generated widget before using its controls.
+00:00:14.053 Open a hint before answering the tokenizer question.
+00:00:17.869 Choose the embedding-vector option to inspect incorrect-answer feedback.
+00:00:22.713 Read the explanation, then advance to the context question.
+00:00:26.010 Open a hint for the context intervention.
+00:00:29.901 Choose the available-context answer and read the correct feedback.
+00:00:34.937 Advance to the final question about parameters.
+00:00:38.250 Read a hint for the relationship between retrieval and model parameters.
+00:00:42.242 Choose the explanation distinguishing external context from parameter updates.
+00:00:47.181 Finish the quiz and inspect the result of all three answers.
+00:00:50.474 Review the 2/3 summary and the explanation of the earlier mistake.
+00:00:55.650 Restart the same quiz to practise the difficult concept again.
+00:01:00.158 Correct the earlier mistake by selecting numerical token identifiers.
 
 OBSERVED RESULT AFTER USE
-Interactive Quiz: Tokens, Context & Parameters
+Test your understanding of tokens, context, and parameters using three questions based exclusively on Foundations of Generative Artificial Intelligence, §§1.2, 1.3, and 1.7.
 
-Three university-level questions based exclusively on the attached chapter (§§1.2–1.3). Answer each question, receive feedback, and advance to the next.
+Choose an answer to receive feedback, then advance to the next question. You'll see your results at the end.
 
-Andrea adds 'In this chapter, X means Y' to a prompt. The output changes. What is the most justified conclusion?
+According to §1.3, what does a tokenizer produce when converting an input string for a language model?
 
-2 of 3
+1 of 3
 
 A
 
-The new text changed the available context.
+A sequence of learned embedding vectors
 
 B
 
-The model was automatically fine-tuned.
+A sequence of numerical token identifiers
+
+A tokenizer converts a string into token IDs. Tokens can represent words, parts of words, punctuation, or sequences containing spaces (§1.3).
 
 C
 
-The tokenizer's vocabulary was rebuilt.
+A sequence of updated model parameters
 
 D
 
-The model's weights were updated by optimization.
+A sequence of next-token probabilities
 
 Next
-Invia feedback
+Give feedback
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -524,64 +541,68 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILQUIZGAME — /quizgame
 Page 29 / 198
 Practise a topic through quiz challenges.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /quizgame Using only the attached chapter, create an interactive three-question quiz game on training versus inference. Include answer choices, feedback, score and next-question controls. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /quizgame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/quizgame — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/quizgame — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /quizgame Using only the attached chapter, create an interactive three-question quiz game on training versus inference. Include answer choices, feedback, score and next-question controls. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.224 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.634 The generated widget is ready.
-00:00:09.641 Choose the numerical-parameter answer.
-00:00:11.887 Lock in the answer, then read the feedback and score.
-00:00:15.504 Advance to the next round with the updated score.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.665 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.931 Write the prompt · fast typing.
+00:00:09.431 Send the shortcut as the second message.
+00:00:09.762 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.460 Inspect the generated widget before using its controls.
+00:00:16.116 Open the hint before selecting the training outcome.
+00:00:20.629 Choose that optimisation updates numerical parameters.
+00:00:25.964 Advance to the second round after reading the feedback.
+00:00:29.257 Choose the fine-tuning claim to inspect feedback on a common misconception.
+00:00:35.097 Advance after reading why context use does not establish fine-tuning.
+00:00:39.444 Open the hint for the final question.
+00:00:42.729 Choose the controlled comparison with fixed model and settings.
+00:00:48.200 Finish the three rounds and read the score and explanations.
+00:00:54.031 Start another attempt with the same generated quiz.
 
 OBSERVED RESULT AFTER USE
-Quiz Game: Training vs. Inference
+Test your understanding of training versus inference with three questions based exclusively on §1.2, Data, parameters and training, and its continuation on page 6.
 
-Three university-level challenges based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.
+Choose your answers to receive feedback and track your score.
 
-Choose an answer, lock it in to receive feedback, and advance to the next question. Each correct answer earns 100 points.
+During pretraining, a model compares its predicted token distribution with the tokens present in training examples. What happens through optimisation?
 
-UNIVERSITY CHALLENGE
-
-Training vs. Inference
-
-SCORE
-
-100
-
-Question 2 of 3 · Inference
-
-A fixed model processes an input and produces an output distribution. What describes this operation?
+1 of 3
 
 A
 
-Ordinary inference with existing parameters
+The model selects an output without changing parameters.
 
 B
 
-Fine-tuning the model using the input
+The model retrieves external passages for each prediction.
 
 C
 
-Updating weights after each generated token
+The model updates its numerical parameters.
 
 D
 
-Replacing model parameters with context
+The model changes only its current input context.
 
-Lock in answer
+Next
+Give feedback
 
-Key distinction: Training updates numerical parameters; ordinary inference uses them without updating; changing context can affect the answer without retraining.
+Source: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6, including Table 1 and Figure 1.
+Fondamenti_GenAI_Cremaschi.pdf
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -590,61 +611,69 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILMATCHINGGAME — /matchinggame
 Page 30 / 198
 Match concepts with their definitions.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /matchinggame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/matchinggame — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/matchinggame — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.248 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.476 The generated widget is ready.
-00:00:09.480 Select Training, then match its definition.
-00:00:13.775 Match Inference to calculations using existing parameters.
-00:00:18.114 Complete the final Context pair and inspect the result.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.605 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.866 Write the prompt · fast typing.
+00:00:09.367 Send the shortcut as the second message.
+00:00:09.770 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.791 Inspect the generated widget before using its controls.
+00:00:16.447 Select Training as the concept to match.
+00:00:20.483 Match it to the definition involving prediction error and parameter updates.
+00:00:25.457 Select Inference for the second pair.
+00:00:29.472 Match Inference to running a model with existing parameters.
+00:00:34.313 Select Context for the final pair.
+00:00:38.278 Match Context to the information available during the current inference.
+00:00:41.571 Inspect the completed three-pair result and number of attempts.
+00:00:46.732 Restart the board to practise the pairs again.
+00:00:51.567 Select Training again in the fresh board.
+00:00:55.567 Repeat the correct training match.
+00:01:00.471 Inspect the new round at one of three pairs completed.
 
 OBSERVED RESULT AFTER USE
-Matching Game: Training, Inference & Context
+Match the three concepts to their definitions using only Chapter 1 of Foundations of Generative Artificial Intelligence, especially §1.2 and the glossary on page 18.
 
-University level · 3 pairs · Based on §1.2 and Table 1 of the attached chapter
+Matching game
 
-Select a concept on the left, then its matching definition on the right. Receive immediate feedback and track your progress.
+1/3 matched
 
-Matching progress
+Step 1: Select a concept. Step 2: Select its matching definition.
 
-3 attempts
-3/3
-
-CONCEPT
-
-DEFINITION
-
-Training
-
+✓ Training
 Inference
-
 Context
 
-Information available to the model during the current inference.
+A
 
-Updates numerical model parameters to reduce aggregate prediction error.
+The sequence of information made available to the current inference.
 
-Runs calculations using model parameters already available.
+A process that uses prediction error and optimisation to update model parameters.
 
-All three pairs matched!
+C
 
-0 incorrect attempts
+Running a model with the parameters currently available.
 
-Play again
+Correct! Training updates parameters.
 
-Key distinction: Training updates parameters, inference uses existing parameters, and context provides information that can influence an answer without retraining the model.
+Attempts: 1 · Completed: 33%
+
+Restart
+Source: §1.2, “Data, parameters and training” (pp. 5–6); Study Resource A, “Glossary” (p. 18). Definitions are taken from or closely paraphrase the chapter.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -653,63 +682,75 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILMEMORYGAME — /memorygame
 Page 31 / 198
 Find matching pairs by revealing hidden cards.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /memorygame Using only the attached chapter, create an interactive memory game with three concept-definition pairs: training, inference and context. Include card flipping, match feedback and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /memorygame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/memorygame — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/memorygame — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /memorygame Using only the attached chapter, create an interactive memory game with three concept-definition pairs: training, inference and context. Include card flipping, match feedback and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.344 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.725 The generated widget is ready.
-00:00:09.731 Flip the first card and read its concept or definition.
-00:00:12.492 Flip a second card and inspect the match feedback.
-00:00:15.988 Turn the unmatched cards back over and continue.
-00:00:18.112 Reveal a third card to continue searching for a matching definition.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.364 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.625 Write the prompt · fast typing.
+00:00:09.125 Send the shortcut as the second message.
+00:00:09.439 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.127 Inspect the generated widget before using its controls.
+00:00:14.987 Flip card 1 and read its concept or definition.
+00:00:20.094 Flip card 2 and read its concept or definition.
+00:00:22.690 Turn the unmatched pair back over before the next attempt.
+00:00:27.195 Flip card 3 and compare it with the cards already seen.
+00:00:32.332 Flip card 4 and compare it with the cards already seen.
+00:00:34.935 Turn the second unmatched pair back over.
+00:00:38.888 Return to the Context card remembered from the first attempt.
+00:00:43.313 Match it with the context definition remembered in card 4.
+00:00:48.767 Flip card 5 to search for the next known pair.
+00:00:52.066 Match the training definition in card 5 with the Training concept in card 3.
+00:00:57.518 Reveal the final unknown card and identify its concept.
+00:01:02.566 Match Inference with the definition remembered in card 1.
+00:01:07.971 Inspect the completed three-pair result and attempt counter.
+00:01:13.784 Restart the memory game with a fresh hidden board.
 
 OBSERVED RESULT AFTER USE
-Memory Game: Training, Inference & Context
+Match each concept with its correct definition. All three pairs come from the attached chapter, Foundations of Generative Artificial Intelligence, especially §1.2 and Glossary A (p. 18).
 
-Match each concept to its definition, based exclusively on §1.2 and Figure 1 of the attached chapter.
+Concept memory game
 
-Flip two cards at a time. Matching pairs stay visible; incorrect pairs can be flipped back to try again.
-
-UNIVERSITY MEMORY CHALLENGE
-
-Find the Matching Pairs
-0/3
-Pairs found
-1
-Moves
-1
-Incorrect matches
-
-Card 1
-
-Card 2
-
-DEFINITION
-
-Information available to the model during current inference.
-
-Card 4
-
-Card 5
-
-Card 6
-
-Choose two cards to find a concept-definition pair.
+Flip two cards · Find 3 pairs
 
 Restart
+0/3
+Pairs
+0
+Attempts
+0%
+Complete
 
-Key takeaway: Training updates parameters; inference uses existing parameters; context supplies information without itself retraining the model.
+Flip card
+
+Flip card
+
+Flip card
+
+Flip card
+
+Flip card
+
+Flip card
+
+Select two cards to find a matching concept and definition.
+
+Learning check: Training changes model parameters; inference runs the model using its available parameters; context is the information available during that inference.
+
+Source: §1.2, “Data, parameters and training” (pp. 5–6), and Study Resource A, “Glossary” (p. 18). No external sources used.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -718,78 +759,75 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILJEOPARDY — /jeopardy
 Page 32 / 198
 Choose clues, reveal answers and assess your recall.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /jeopardy Using only the attached chapter, create an interactive compact Jeopardy game on tokens, training and inference. Include point choices, revealable answers and score controls. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /jeopardy execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/jeopardy — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/jeopardy — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /jeopardy Using only the attached chapter, create an interactive compact Jeopardy game on tokens, training and inference. Include point choices, revealable answers and score controls. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.307 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.087 The generated widget is ready.
-00:00:09.093 Choose the 100-point clue in the first category.
-00:00:12.049 Reveal the answer after attempting the clue.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.712 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.686 Write the prompt · fast typing.
+00:00:10.186 Send the shortcut as the second message.
+00:00:10.516 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.547 Inspect the generated widget before using its controls.
+00:00:15.221 Choose a 100-point question about tokens.
+00:00:18.522 Reveal the expected answer before self-scoring.
+00:00:22.100 Self-score the first response as correct: +100.
+00:00:27.077 Open a 200-point training question.
+00:00:32.107 Reveal the chapter-based training answer.
+00:00:35.673 Mark this answer incorrect; the score stays at 100.
+00:00:40.663 Choose a 300-point inference question.
+00:00:45.612 Reveal the inference explanation.
+00:00:51.608 Award 300 points and inspect the updated total.
+00:00:57.088 Reset the board for another round.
 
 OBSERVED RESULT AFTER USE
-Generative AI Jeopardy!
+Jeopardy: Foundations of Generative AI
 
-A compact university-level game based exclusively on the attached chapter, Foundations of Generative Artificial Intelligence, §§1.2–1.3 and Figure 1.
+Test your understanding of tokens, training, and inference using only the attached chapter (§§1.2–1.4, 1.6–1.7).
 
-Choose a category and point value, think of your answer, then reveal it. Award yourself points for correct responses or deduct points for incorrect ones.
+Choose a point value, answer from memory, then reveal the expected answer. Award yourself the points if correct, or mark it incorrect.
 
-UNIVERSITY CHALLENGE
+YOUR SCORE
 
-JEOPARDY!
+0 / 1800
 
-TOTAL SCORE
-
-0
+0 of 9 answered
 
 Tokens
 
+100
+200
+300
+
 Training
+
+100
+200
+300
 
 Inference
 
 100
-100
-100
-200
-200
 200
 300
-300
-300
 
-0/9 clues played
+Select any available point value to begin.
 
-0 correct
-
-Tokens
-
-100 points
-
-This unit may represent a word, part of a word, punctuation, or spaces.
-
-EXPECTED RESPONSE
-
-What is a token?
-
-A tokenizer converts text into token IDs; tokens are not necessarily complete words.
-
-Did you answer correctly?
-
-+100
-−100
-
-Key distinction: Training updates model parameters; inference uses existing parameters. Changes to context may affect the answer without retraining.
+0 correct · 0 incorrect
+Reset game
+Source: Foundations of Generative Artificial Intelligence, Chapter 1. All nine questions and expected answers are grounded in the attached chapter. No external sources used.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -798,72 +836,84 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILMILLIONAIRE — /millionaire
 Page 33 / 198
 Answer increasingly challenging multiple-choice questions.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /millionaire Using only the attached chapter, create an interactive three-question Millionaire game on training versus inference. Include answer selection, lock-in, feedback and prize progression. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /millionaire execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/millionaire — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/millionaire — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /millionaire Using only the attached chapter, create an interactive three-question Millionaire game on training versus inference. Include answer selection, lock-in, feedback and prize progression. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.242 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.052 The generated widget is ready.
-00:00:09.060 Select the answer stating that inference keeps parameters fixed.
-00:00:11.338 Lock in the answer and inspect the feedback and prize.
-00:00:14.982 Continue to the next prize question.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.497 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.754 Write the prompt · fast typing.
+00:00:09.254 Send the shortcut as the second message.
+00:00:09.624 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.684 Inspect the generated widget before using its controls.
+00:00:17.385 Choose the parameter update answer.
+00:00:21.890 Lock in the final answer and read the feedback.
+00:00:25.454 Continue to the second question.
+00:00:29.045 Select the contextual-inference explanation.
+00:00:33.626 Confirm and inspect why context does not update weights.
+00:00:39.566 Advance to the final question.
+00:00:43.150 Choose a comparison that keeps the model fixed.
+00:00:47.595 Lock the final answer and read its explanation.
+00:00:51.198 Show the final result after all three answers.
+00:00:54.823 Start a new round with the first question.
 
 OBSERVED RESULT AFTER USE
-Who Wants to Be an AI Millionaire?
+Who Wants to Be a GenAI Millionaire?
 
-A three-question university challenge based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.
+Test your understanding of training versus inference with three increasingly challenging questions based exclusively on §1.2, Data, parameters and training, of the attached chapter.
 
-Select an answer and lock it in to reveal feedback. Correct answers unlock progressively larger prizes.
+GENAI MILLIONAIRE
 
-THE MILLIONAIRE CHALLENGE
-
-Training vs. Inference
+Question 1 of 3
 
 Q1
 
-1,000
+$100
 
 Q2
 
-10,000
+$1,000
 
 Q3
 
-1,000,000
+$1,000,000
 
-APPLICATION · QUESTION 2 OF 3
+Current prize
 
-Andrea adds “In this chapter, X means Y” to a prompt and receives a different answer. What changed?
+$100
+What changes during model training or fine-tuning?
 
-A:
+A.
 
-The model's learned parameters.
+The model's numerical parameters
 
-B:
+B.
 
-The model's training objective.
+Only the current prompt
 
-C:
+C.
 
-The information available in context.
+Only the selected output token
 
-D:
+D.
 
-The tokenizer's vocabulary.
+The user's screen layout
 
-Lock in answer
-
-Key distinction: Training updates numerical parameters. Ordinary inference uses existing parameters, and new context can change the output without retraining.
+Lock in final answer
+Choose A, B, C or D, then lock in your answer. You cannot change it afterward.
+All prizes are fictional game points, not real money. Source: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6, including Table 1 and Figure 1.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -872,116 +922,82 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILCROSSWORD — /crossword
 Page 34 / 198
 Revise key terms by completing a crossword.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /crossword Using only the attached chapter, create an interactive mini crossword with training, inference and context. Include clue fields, hints, answer checking and a visible letter grid. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /crossword execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/crossword — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/crossword — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /crossword Using only the attached chapter, create an interactive mini crossword with training, inference and context. Include clue fields, hints, answer checking and a visible letter grid. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.281 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.405 The generated widget is ready.
-00:00:09.412 Open a hint for the training clue.
-00:00:11.961 Enter TRAINING, INFERENCE and CONTEXT in the clue fields.
-00:00:15.033 Inspect how the entered words fill the letter grid.
-00:00:18.617 Check the answers and read the resulting feedback.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.646 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.396 Write the prompt · fast typing.
+00:00:09.896 Send the shortcut as the second message.
+00:00:10.227 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.775 Inspect the generated widget before using its controls.
+00:00:16.529 Ask for a hint on the first clue.
+00:00:21.522 Enter an incorrect first attempt.
+00:00:25.875 Check the attempt and inspect the feedback.
+00:00:29.475 Correct the first word to inference.
+00:00:33.910 Complete the second clue with training.
+00:00:38.278 Complete the last clue with context.
+00:00:42.503 Check all three completed answers.
+00:00:45.233 Inspect the filled grid and its 3/3 result.
+00:00:50.961 Reset the puzzle and clear the grid.
 
 OBSERVED RESULT AFTER USE
-Mini Crossword: Training vs. Inference
+Mini Crossword: Training, Inference & Context
 
-University level · 3 intersecting words · Based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter
+Complete the three intersecting words using only §§1.2 and 1.7 of Foundations of Generative Artificial Intelligence (pages 5–6 and 13–14).
 
-Solve the three clues. Type your answers to fill the letter grid, use hints if needed, and check your score.
+Crossword grid
 
-CROSSWORD CHALLENGE
-
-Three Key Concepts
 3 words
 
-Letter grid
+1
 
-12 × 10
+2
 
-T
+3
 
-R
+The grid fills automatically as you type your answers. Intersections share letters.
 
-A
+1. Down — 9 letters
 
-I
+§1.2
 
-N
+Running a model's calculations using its already available parameters.
 
-I
+Hint
 
-N
+2. Across — 8 letters
 
-G
+§1.2
 
-N
+The process in which optimisation updates a model's parameters using a learning signal.
 
-F
+Hint
 
-E
+3. Across — 7 letters
 
-R
+§§1.2, 1.7
 
-C
+The information available to a model during its current inference.
 
-O
-
-N
-
-T
-
-E
-
-X
-
-T
-
-N
-
-C
-
-E
-
-Crossing letters must agree. A question mark indicates conflicting entries.
-
-1. Across · 8 letters
-
-The process that updates model parameters to reduce prediction error.
-
-Hide hint
-
-It uses examples, prediction error and optimization.
-
-2. Down · 9 letters
-
-Running a model using parameters already available.
-
-Show hint
-
-3. Across · 7 letters
-
-Information available to the model during its current calculation.
-
-Show hint
-3/3 correct
-
-Excellent! All three concepts are correct.
-
+Hint
 Check answers
-Reveal solution
+Reset
 
-Key takeaway: Training updates model parameters; inference uses existing parameters; context supplies information without itself retraining the model.
+Final reflection: Explain why adding a new definition to a prompt changes the context but does not, by itself, constitute training. This follows the distinction in §1.2.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1029,74 +1045,74 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILFILLINTHEBLANKS — /fillintheblanks
 Page 36 / 198
 Complete missing terms and check your answers.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /fillintheblanks execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/fillintheblanks — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/fillintheblanks — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.311 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.746 The generated widget is ready.
-00:00:09.753 Use a hint for the first sentence.
-00:00:12.189 Enter the missing verb and check its explanation.
-00:00:15.959 Complete and check the inference term.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.360 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.764 Write the prompt · fast typing.
+00:00:09.264 Send the shortcut as the second message.
+00:00:09.611 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.973 Inspect the generated widget before using its controls.
+00:00:15.636 Try an incorrect word in the first sentence.
+00:00:20.336 Check the first answer and read the explanation.
+00:00:25.852 Reveal a hint for the inference sentence.
+00:00:29.418 Replace the first answer with parameters.
+00:00:33.788 Describe ordinary inference with fixed parameters.
+00:00:37.767 Complete the third sentence with context.
+00:00:41.911 Check all completed sentences together.
+00:00:44.642 Inspect the complete 3/3 result and final explanation.
+00:00:50.387 Reset the exercise for a fresh attempt.
 
 OBSERVED RESULT AFTER USE
-Fill in the Blanks: Training, Inference & Context
+Practice three key distinctions from the attached chapter, Foundations of Generative Artificial Intelligence, §1.2 (pp. 5–6) and §1.7 (pp. 13–14).
 
-University level · 3 exercises · Based exclusively on §1.2 and Table 1 of the attached chapter
+Fill in the blanks
 
-Complete each sentence with the correct technical term. Use hints if needed, then check your answers to see explanations and track your progress.
+Three questions · One word per blank
 
-Learning progress
+0/3 checked
 
-2 of 3 answers checked
-2/3
+Question 1
 
-1. Complete the sentence
+During training, optimisation updates the model's
+to reduce an aggregate prediction error.
 
-
-During pretraining, optimization _____ model parameters to reduce aggregate prediction error.
-
-Check
-Hide hint
-
-Think of the verb describing how learned numerical values change.
-
-Correct!
-
-The system compares predicted distributions with actual tokens in examples. Optimization updates parameters using this learning signal.
-
-2. Complete the sentence
-
-
-Ordinary _____ runs calculations using model parameters that are already available.
-
-Check
 Show hint
+Check answer
 
-Correct!
+Question 2
 
-Inference uses existing parameters without updating them through ordinary training.
+During ordinary inference, the model performs calculations with its parameters
+.
 
-3. Complete the sentence
-
-
-Adding a definition to a prompt changes the information available in the _____ , not the model's learned weights.
-
-Check
 Show hint
-Reset drill
+Check answer
 
-Key distinction: Training updates parameters; ordinary inference uses existing parameters; context supplies information without automatically changing the model.
+Question 3
+
+Adding a definition to a prompt changes the information available in the current
+, not the model's weights.
+
+Show hint
+Check answer
+Reset
+Check all answers
+
+Source: Attached chapter, §§1.2 and 1.7. All questions, hints and explanations are grounded in the chapter.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1105,29 +1121,60 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILFLASHCARD — /flashcard
 Page 37 / 198
 Practise recall with questions and answers on flip cards.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /flashcard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/flashcard — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/flashcard — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.200 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:04.971 The generated flashcard widget is ready.
-00:00:06.976 Flip the first card to reveal the answer.
-00:00:09.963 Mark the card as known and advance to the next concept.
-00:00:12.890 Reveal the second answer, then mark it for more practice.
-00:00:15.803 The review advances while tracking learning progress.
+00:00:00.000 Start a new temporary chat and attach the chapter PDF.
+00:00:06.389 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.807 Write the prompt · fast typing.
+00:00:10.307 Send the second message containing the shortcut.
+00:00:10.631 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.513 View the generated flashcards before starting the review.
+00:00:15.144 Recall the first answer, then flip the card to check it.
+00:00:19.677 Flip back to the question and try recalling the distinction again.
+00:00:23.526 Reveal the answer again before marking your recall.
+00:00:27.374 Mark this distinction as known and move to card two.
+00:00:30.652 Read the context question, reveal the answer, and compare it with the chapter.
+00:00:35.484 Mark this card as needing more practice.
+00:00:39.840 Reveal the third answer about probability versus truth.
+00:00:43.117 Finish the three-card review and inspect the learning summary.
+00:00:46.358 Retry only the missed card instead of restarting the whole deck.
+00:00:50.742 Recall the difficult distinction, then reveal its explanation again.
+00:00:55.612 Finish the targeted retry and inspect the new result.
 
 OBSERVED RESULT AFTER USE
-Observed use: the first answer was revealed and marked known; the second was revealed and marked for further practice; the widget advanced to card 3 of 3.
+Flashcards: Tokens, Context & Probability
+
+Three flashcards based exclusively on Foundations of Generative Artificial Intelligence, Chapter 1 (§§1.3, 1.7 and 1.6).
+
+Try to answer each question from memory before revealing the answer.
+
+Tap a card to reveal the answer. Mark ✓ if you know it or × if you don't, and I'll track your progress.
+
+Perfect score, you got 100%!
+
+0
+
+1
+
+Restart
+More flashcards
+Give feedback
+
+You can ask me to review these flashcards from any chat, change the deck, or set up a daily review.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1161,77 +1208,83 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILSORTINGGAME — /sortinggame
 Page 39 / 198
 Classify examples into categories and check the result.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /sortinggame execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/sortinggame — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/sortinggame — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.363 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.338 The generated widget is ready.
-00:00:12.197 Parameter updating is selected as Training.
-00:00:14.214 Select Inference for calculations with fixed parameters.
-00:00:16.557 Select Inference for supplying new prompt context.
-00:00:18.797 Check the three classifications and read the explanations.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.481 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.020 Write the prompt · fast typing.
+00:00:09.520 Send the shortcut as the second message.
+00:00:09.852 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.694 Inspect the generated widget before using its controls.
+00:00:17.319 Sort parameter updates into Training.
+00:00:22.264 Try Training for fixed-model calculations.
+00:00:27.261 Classify prompt context as Inference.
+00:00:32.239 Check the three classifications.
+00:00:34.993 Show explanations for all categories.
+00:00:40.823 Correct fixed-model calculations to Inference.
+00:00:45.771 Check the corrected classification.
+00:00:49.353 Reveal the explanations after achieving 3/3.
+00:00:52.092 Review the first classification with its explanation.
 
 OBSERVED RESULT AFTER USE
-Sorting Game: Training vs. Inference
+Sort the three processes into Training or Inference, using only §1.2 of Foundations of Generative Artificial Intelligence (pp. 5–6).
 
-University level · 3 items · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Sort the processes
 
-Classify each action as Training or Inference, then check your answers to reveal explanations. Adding prompt context is classified under inference because it does not itself update parameters.
+3 of 3 sorted
 
-Sorting progress
-
-3 of 3 classified
-3/3
-
-1. Updating numerical parameters to reduce prediction error
+1. Parameter updates
 
 
 Training
 Inference
 
-Correct classification: Training
+Training · Explanation
 
-Training uses examples and prediction error to optimize the model's learned numerical parameters.
+Training or fine-tuning changes the model’s numerical parameters through optimisation.
 
-2. Calculating outputs with an existing, fixed model
-
-
-Training
-Inference
-
-Correct classification: Inference
-
-Ordinary inference uses available model parameters to calculate an output distribution and select an output.
-
-3. Adding “In this chapter, X means Y” to a prompt
+2. Fixed-model calculations
 
 
 Training
 Inference
 
-Correct classification: Inference
+Inference · Explanation
 
-This changes information in the current context, not the model's learned weights. It is an input change used during inference.
+Ordinary inference performs calculations using parameters that are already available.
+
+3. Adding prompt context
+
+
+Training
+Inference
+
+Inference · Explanation
+
+A new message changes the information available to the current inference, not the model’s weights.
 
 3/3 correct
 
-All three classifications are correct.
+Excellent! All three classifications are correct.
 
 Check answers
-Reveal answers
+Hide explanations
 
-Key takeaway: Training updates parameters; inference uses fixed parameters. Adding context can influence the output without retraining the model.
+Source: §1.2, “Data, parameters and training,” Table 1 and Figure 1 (pp. 5–6). Adding prompt context belongs to inference because it changes the available information while the model parameters remain fixed.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1240,57 +1293,65 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILCONCEPTQUIZ — /conceptquiz
 Page 40 / 198
 Check conceptual understanding through questions and explanations.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /conceptquiz Using only the attached chapter, create an interactive three-question concept quiz distinguishing training, inference and context. Include feedback, explanations and navigation. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /conceptquiz execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/conceptquiz — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/conceptquiz — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /conceptquiz Using only the attached chapter, create an interactive three-question concept quiz distinguishing training, inference and context. Include feedback, explanations and navigation. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.285 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:06.888 The generated widget is ready.
-00:00:08.894 Choose the parameter-update explanation.
-00:00:12.337 Move to the next conceptual question.
-00:00:15.485 Return to inspect the previous question and feedback.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:05.011 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.004 Write the prompt · fast typing.
+00:00:09.504 Send the shortcut as the second message.
+00:00:09.872 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.398 Inspect the generated widget before using its controls.
+00:00:17.067 Open a hint for the training intervention.
+00:00:21.514 Choose numerical parameters and read why optimisation changes the model.
+00:00:24.839 Move from training to the question about a new prompt definition.
+00:00:29.162 Open the hint before choosing the second answer.
+00:00:32.453 Choose the explanation that the definition influenced inference through context.
+00:00:37.931 Use Previous question to review the earlier training explanation.
+00:00:42.342 Return to the context question with Next question.
+00:00:46.794 Advance to the final conceptual distinction.
+00:00:50.096 Open a hint for the final scenario.
+00:00:54.440 Choose the explanation that changed context can alter the continuation without retraining.
+00:00:59.993 Finish the quiz and read the summary of all three distinctions.
 
 OBSERVED RESULT AFTER USE
-Concept Quiz: Training, Inference & Context
+Test your understanding of training, ordinary inference, and context with three questions based exclusively on §§1.2 and 1.7 of Foundations of Generative Artificial Intelligence.
 
-A three-question university-level quiz based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter.
+Choose your answers, then review the feedback and explanations. Navigate through all three questions to complete the quiz.
 
-Choose an answer, check the feedback, and advance through the questions one at a time.
+Concept Quiz: Training, Inference and Context
 
-A system compares its predicted distributions with tokens in training examples. What happens during optimization?
+Perfect score! You got all 3 questions right.
 
-1 of 3
+Andrea trains a new version of a language model using examples and prediction error. What changes as a result of optimisation?
 
-A
+Section 1.2 explains that optimisation changes parameters to reduce aggregate prediction error.
 
-It changes the input context while keeping learned values unchanged.
+Andrea adds a new definition to his prompt. The model uses that definition in its response. Which conclusion is justified?
 
-B
+Section 1.2 explicitly explains that a new definition in the conversation may influence the answer through context without updating the weights.
 
-It retrieves external passages for the next inference.
+Andrea keeps the same model but replaces 'The capital of France is' with 'In my story, the imaginary capital of France is called'. The continuation changes. What is the best interpretation?
 
-C
+Section 1.7 uses this example to show that context changes the task, including whether a continuation is fictional.
 
-It selects output tokens using existing parameters only.
-
-D
-
-It updates model parameters to reduce aggregate prediction error.
-
-Training uses the learning signal from examples to optimize numerical parameters and reduce error.
-
-Next
-Invia feedback
+Try again
+Next quiz
+Give feedback
+Source: Chapter 1, §1.2 “Data, parameters and training” (pp. 5–6) and §1.7 “Generation, context and retrieval” (pp. 13–14). Each question targets a different conceptual distinction.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1332,74 +1393,71 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILLANGUAGEDRILL — /languagedrill
 Page 42 / 198
 Practise terminology by completing and checking sentences.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /languagedrill Using only the attached chapter, build an interactive three-item English terminology drill on training, inference and context. Include answer fields, checking, hints and explanations. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /languagedrill execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/languagedrill — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/languagedrill — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /languagedrill Using only the attached chapter, build an interactive three-item English terminology drill on training, inference and context. Include answer fields, checking, hints and explanations. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.300 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.861 The generated widget is ready.
-00:00:09.868 Open a hint for the terminology exercise.
-00:00:12.541 Enter the missing verb and check the response.
-00:00:16.500 Complete and check the inference term.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.427 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.313 Write the prompt · fast typing.
+00:00:08.813 Send the shortcut as the second message.
+00:00:09.218 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.336 Inspect the generated widget before using its controls.
+00:00:15.988 Enter inference for the first definition to demonstrate a terminology error.
+00:00:20.308 Enter inference for the fixed-parameter calculation definition.
+00:00:24.654 Enter context for the information available during inference.
+00:00:28.774 Check all three terms and inspect correct and incorrect feedback.
+00:00:32.084 Open the hint for the incorrectly named process.
+00:00:37.084 Open the explanation distinguishing training from inference.
+00:00:42.487 Replace the first term with training.
+00:00:47.275 Check the revised answers and inspect the successful feedback.
+00:00:52.713 Inspect the completed 3/3 result.
+00:00:58.043 Reset the exercise to practise the terms again.
 
 OBSERVED RESULT AFTER USE
-English Terminology Drill: Training, Inference & Context
+English terminology drill: Training, Inference & Context
 
-University level · 3 exercises · Based exclusively on §1.2 and Table 1 of the attached chapter
+Practice three technical terms from Foundations of Generative Artificial Intelligence, §1.2 (p. 5) and §1.7 (pp. 13–14).
 
-Complete each sentence with the correct technical term. Use hints when needed, check your answers, and review the explanations.
+Enter the correct English term for each definition. Use Check answers for feedback, or reveal a hint when needed.
 
-Practice progress
+3 TERMS · FILL IN THE BLANKS
 
-2 of 3 answers checked
-2/3
+Not checked
 
-1. Complete the sentence
+1. Identify the term
 
+The process in which optimisation updates a model’s numerical parameters to reduce prediction error.
+Hint
+Explanation
 
-During pretraining, optimization ________ model parameters to reduce aggregate prediction error.
+2. Identify the term
 
-Check
-Hide hint
+Running a model’s calculations using parameters that are already available, without updating them.
+Hint
+Explanation
 
-Think of the verb describing a change to learned numerical values.
+3. Identify the term
 
-Correct!
+The sequence of information made available to a model during its current inference.
+Hint
+Explanation
+Check answers
+Reset
 
-Training compares predicted distributions with actual tokens. Optimization updates parameters using the resulting learning signal.
-
-2. Complete the sentence
-
-
-Ordinary ________ runs calculations using model parameters that are already available.
-
-Check
-Show hint
-
-Correct!
-
-Inference uses existing model parameters without updating them through ordinary training.
-
-3. Complete the sentence
-
-
-Adding a definition to a prompt changes the information available in the ________ , not the model's learned weights.
-
-Check
-Show hint
-Reset drill
-
-Remember: Training updates parameters; ordinary inference uses them; new context can influence an answer without retraining.
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, with terminology consistent with Glossary A (p. 18). Answers are checked case-insensitively, ignoring surrounding spaces.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1469,62 +1527,71 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILMULTIPLECHOICE — /multiplechoice
 Page 44 / 198
 Choose answers from options and check your score.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /multiplechoice Using only the attached chapter, create an interactive three-question multiple-choice widget about training versus inference. Show answer feedback, explanations and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /multiplechoice execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/multiplechoice — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/multiplechoice — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /multiplechoice Using only the attached chapter, create an interactive three-question multiple-choice widget about training versus inference. Show answer feedback, explanations and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.237 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.548 The generated widget is ready.
-00:00:10.554 Select the role of prediction error in training.
-00:00:12.824 Check the answer and read the explanation.
-00:00:16.400 Advance to the next question and inspect progress.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.425 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.756 Write the prompt · fast typing.
+00:00:09.256 Send the shortcut as the second message.
+00:00:09.596 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.597 Inspect the generated widget before using its controls.
+00:00:17.442 Select the context-only alternative to inspect error feedback.
+00:00:21.788 Check the selected answer and read the training explanation.
+00:00:27.847 Advance to the second question after reviewing the feedback.
+00:00:31.110 Select the explanation that context can affect inference without weight updates.
+00:00:35.443 Check the second answer and read its feedback.
+00:00:41.286 Advance to the final question.
+00:00:44.571 Choose the experiment that keeps the model fixed while changing the input.
+00:00:48.945 Check the final answer and compare the experimental reasoning.
+00:00:52.242 Inspect the 2/3 result and the completed-question counter.
+00:00:57.533 Start another attempt with the same three questions.
+00:01:02.041 Correct the first question by selecting numerical model parameters.
+00:01:06.398 Check the corrected answer and read the updated feedback.
 
 OBSERVED RESULT AFTER USE
-Multiple-Choice Quiz: Training vs. Inference
+Test your understanding of training versus inference with three multiple-choice questions based exclusively on §1.2 of Foundations of Generative Artificial Intelligence (pp. 5–6).
 
-University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Knowledge check
 
-Select one answer per question, check your response, and review the explanation. Your score and progress update as you advance.
+1 of 3 completed
 
-Question 2 of 3
+QUESTION 1 OF 3
 
-Inference
-1/3
-Correct answers
-Which statement correctly describes ordinary inference?
+§1.2, p. 5
 
-A
+What changes during model training or fine-tuning?
 
-It updates weights after every generated token.
+The model's numerical parameters
 
-B
+Only the current conversation context
 
-It repeats the entire pretraining process.
+Only the selected output token
 
-C
+The external passages retrieved
 
-It calculates outputs using already available parameters.
+Correct!
 
-D
+Training uses prediction error and optimisation to update numerical parameters. Ordinary inference uses parameters that are already available.
 
-It replaces learned parameters with retrieved passages.
+Source: §1.2, p. 5
+Previous
+Next question
 
-Back
-Check answer
-
-1 of 3 questions answered
-
-Key takeaway: Training updates model parameters to reduce prediction error. Ordinary inference uses existing parameters, while changes to context can influence the output without retraining.
+Source: Cremaschi, Foundations of Generative Artificial Intelligence, §1.2, “Data, parameters and training,” including Figure 1 and its checkpoint. Feedback appears after each submitted answer.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1533,63 +1600,68 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILRECALL — /recall
 Page 45 / 198
 Attempt an answer before revealing it and assess your recall.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /recall Using only the attached chapter, build an interactive active-recall widget on training versus inference. Include three questions with reveal/hide answers. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /recall execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/recall — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/recall — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /recall Using only the attached chapter, build an interactive active-recall widget on training versus inference. Include three questions with reveal/hide answers. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.254 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.414 The generated widget is ready.
-00:00:09.421 Reveal the explanation after recalling the training process.
-00:00:12.875 Open the inference explanation for comparison.
-00:00:15.935 Hide the first answer and try recalling it again.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.389 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.939 Write the prompt · fast typing.
+00:00:09.439 Send the shortcut as the second message.
+00:00:09.754 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.412 Inspect the generated widget before using its controls.
+00:00:16.036 Recall the training/inference distinction, then reveal the expected answer.
+00:00:21.441 Hide the first explanation and attempt the distinction again from memory.
+00:00:25.892 Reveal the prompt-context explanation for the second question.
+00:00:31.386 Open the third explanation and compare the proposed experiment.
+00:00:34.738 Reveal the remaining answer to complete the three-question review.
+00:00:39.564 Inspect the counter showing all three explanations revealed.
+00:00:43.739 Reset all three answers for a fresh recall attempt.
+00:00:48.148 Reveal the training distinction again after the reset.
+00:00:53.099 Hide the answer to leave the question ready for another independent attempt.
 
 OBSERVED RESULT AFTER USE
-Active Recall: Training vs. Inference
+Test your understanding of training versus inference using three active-recall questions from §1.2 of Foundations of Generative Artificial Intelligence (pp. 5–6).
 
-University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Try answering each question from memory before revealing the expected answer.
 
-Answer each question from memory before revealing the explanation. Mark whether you recalled it correctly to track your progress.
+Active recall
 
-Recall progress
+0 of 3 revealed
 
-0/3 reviewed
+Q1
 
-1. Training
+What changes during training, and what stays fixed during ordinary inference?
 
-How does prediction error lead to parameter updates during pretraining?
 Reveal answer
 
-2. Inference
+Q2
 
-How does ordinary inference differ from training in its use of model parameters?
-Hide answer
+Andrea adds “In this chapter, X means Y” to a prompt. The model uses this definition. Does that prove its weights changed?
 
-EXPECTED ANSWER
-
-Inference runs calculations with parameters already available. The input and fixed model produce an output distribution and a selected output, without updating the parameters.
-
-Could you explain this correctly without notes?
-
-Remembered
-Needs review
-
-3. Context
-
-Andrea adds “In this chapter, X means Y” to a prompt. Why might his answer change without retraining?
 Reveal answer
-Practice again
 
-Key takeaway: Training updates model parameters; ordinary inference uses existing ones. New context can change a response without changing the model.
+Q3
+
+How could Andrea test the effect of context without confusing it with training?
+
+Reveal answer
+Source: Chapter 1, §1.2, Table 1 and Figure 1.
+Reset
+
+Self-check: You should be able to explain, without looking, why changing the prompt can change a model's answer without changing its parameters.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1598,70 +1670,95 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILGAPFINDER — /gapfinder
 Page 46 / 198
 Use diagnostic questions to identify gaps in understanding.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /gapfinder execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/gapfinder — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/gapfinder — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /gapfinder Using only the attached chapter, create an interactive three-question gap-finding widget on training versus inference. Let me enter answers and reveal expected explanations. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.262 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:06.668 The generated widget is ready.
-00:00:08.675 Write your explanation before viewing the expected reasoning.
-00:00:12.015 Reveal the expected explanation and compare the reasoning.
-00:00:15.477 Identify a concept needing further review.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.438 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.704 Write the prompt · fast typing.
+00:00:09.204 Send the shortcut as the second message.
+00:00:09.525 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.770 Inspect the generated widget before using its controls.
+00:00:15.469 Correct the first claim: training updates parameters, ordinary inference uses them.
+00:00:24.386 Reveal the first expected explanation and compare it with the correction.
+00:00:27.686 Read the first expected explanation and its chapter reference.
+00:00:32.907 Correct the second claim by distinguishing new context from learned parameters.
+00:00:41.642 Reveal and read the expected explanation about prompt context.
+00:00:45.405 Correct the retrieval claim without confusing retrieved context with training.
+00:00:54.725 Reveal and compare the third expected explanation.
+00:01:00.264 Inspect the completed counter: three answers and three explanations.
+00:01:05.533 Reset the written responses and explanations for another attempt.
 
 OBSERVED RESULT AFTER USE
-Knowledge Gap Finder: Training vs. Inference
+Gap Finder: Training vs. Inference
 
-University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Find and correct three conceptual misunderstandings from Foundations of Generative Artificial Intelligence, §1.2 (pp. 5–6). Write your answers before revealing the expected explanations.
 
-Write your explanations independently, then reveal the expected answers. Compare your reasoning and identify concepts that need further review.
+YOUR PROGRESS
 
-Diagnostic progress
+0/3 answered · 0/3 explanations revealed
 
-1 of 3 assessed
-0/3
+Question 1 of 3
 
-1. Training
+§1.2, p. 5
+What changes during training?
 
+FLAWED EXPLANATION
 
-During pretraining, how does the comparison between predicted distributions and actual tokens lead to changes in model parameters?
+Training and inference both update model parameters whenever new text is processed.
 
-Hide explanation
+Identify the conceptual error. Explain what training changes and what ordinary inference does.
 
-EXPECTED EXPLANATION
+Response not yet entered
 
-The text supplies a learning signal: the model compares predicted distributions with actual tokens in examples. Optimization updates numerical parameters to reduce aggregate prediction error.
+Reveal explanation
 
-Did you connect examples, prediction error, and parameter updates?
+Question 2 of 3
 
-Needs review
-Understood
+§1.2, pp. 5–6
+Does a prompt teach the model?
 
-2. Inference
+FLAWED EXPLANATION
 
+Andrea writes 'In this chapter, X means Y.' The model uses that definition, proving its weights have changed.
 
-A model produces two different responses to two prompts. Does this mean its parameters changed? Explain.
+Explain why this conclusion is not justified. What actually changes?
 
-Reveal expected explanation
+Response not yet entered
 
-3. Retrieval
+Reveal explanation
 
+Question 3 of 3
 
-Andrea retrieves a new document and uses it to generate an answer. How does this differ from training?
+§§1.2 and 1.7, pp. 5–6, 14
+Is retrieval the same as training?
 
-Reveal expected explanation
-Restart
+FLAWED EXPLANATION
 
-Core distinction: Training updates model parameters. Ordinary inference uses existing parameters, while document retrieval supplies additional context without itself updating them.
+Retrieving a document through RAG updates the model, so the retrieved information becomes part of its parameters.
+
+Identify the gap and distinguish retrieval, inference and training.
+
+Response not yet entered
+
+Reveal explanation
+Reset activity
+Reveal all explanations
+
+Learning goal: Explain independently why training changes parameters, while changing a prompt or retrieving documents changes the context available to inference. Based exclusively on the attached chapter.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -1670,69 +1767,136 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILBLACKBOARD — /blackboard
 Page 47 / 198
 Work through a board-style explanation with answer checks.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /blackboard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/blackboard — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/blackboard — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /blackboard Using only the attached chapter, create an interactive training-versus-inference diagram. Include Training/Inference filters and three reveal/hide understanding checks. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.221 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:06.467 The generated widget is ready.
-00:00:08.475 Filter the diagram to show training.
-00:00:11.326 Switch to inference and compare the two processes.
-00:00:14.042 Open a conceptual check below the diagram.
-00:00:17.453 Hide the explanation to repeat the check from memory.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.615 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.102 Write the prompt · fast typing.
+00:00:09.602 Send the shortcut as the second message.
+00:00:09.923 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.815 Inspect the generated widget before using its controls.
+00:00:15.462 Filter the blackboard to focus on Training.
+00:00:20.807 Follow the training flow down to parameter updates.
+00:00:25.664 Switch the diagram to Inference.
+00:00:31.025 Inspect the fixed-parameter step in the inference flow.
+00:00:35.784 Restore Both processes for a side-by-side comparison.
+00:00:39.078 Reveal the first check about a definition added to the prompt.
+00:00:44.465 Reveal the check about what pretraining updates.
+00:00:49.946 Reveal the check about changed outputs with fixed parameters.
+00:00:53.241 Hide all three explanations at once for another independent attempt.
+00:00:58.302 Reveal all three explanations with the collective control.
+00:01:03.223 Inspect the complete check counter and the shared controls.
 
 OBSERVED RESULT AFTER USE
 Interactive Blackboard: Training vs. Inference
 
-University level · Source: §1.2, Table 1 and Figure 1 of Foundations of Generative Artificial Intelligence
+Explore how a language model learns during training and generates outputs during inference. Select a filter to focus on one process, then reveal the three understanding checks to test your knowledge.
 
-Switch between Training and Inference to explore their processes, then complete three understanding checks.
+Source: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6.
 
-INTERACTIVE BLACKBOARD
-
-How the Model Works
 Both
 Training
 Inference
 
-Inference uses existing parameters.
+Training
 
-A new message changes context, not automatically model weights.
+Training examples
 
-Understanding checks
+Actual tokens
 
-0/3
+Predictions
 
-1.
+Compare with examples
 
-What changes during training, and why?
+Prediction error
 
-Reveal answer
+Learning signal
 
-2.
+Parameter updates
 
-What happens to parameters during ordinary inference?
+Optimisation
 
-Reveal answer
+Changed model
 
-3.
+Inference
 
-Andrea adds “In this chapter, X means Y” to his prompt. Does this retrain the model?
+Current input + context
 
-Reveal answer
-Reset
+Information available now
 
-Key takeaway: Training updates model parameters to reduce prediction error. Ordinary inference uses existing parameters, while new context may change generated outputs without retraining.
+Model calculations
+
+Using existing parameters
+
+Output distribution
+
+Next-token probabilities
+
+Parameters remain fixed
+
+No training update
+
+Selected output
+
+The key distinction
+Training changes the model's parameters. Ordinary inference uses existing parameters to produce an output from the current input and context.
+
+Three understanding checks
+
+3 of 3 explanations revealed
+
+Hide all
+
+1
+
+A model uses a new definition provided in a prompt. Have its weights necessarily changed?
+
+§1.2, p. 5
+Hide answer
+
+Expected explanation
+
+No. The definition changes the information available in the current context. It does not demonstrate a parameter update.
+
+2
+
+What is updated when the system learns from prediction errors during pretraining?
+
+§1.2, p. 5
+Hide answer
+
+Expected explanation
+
+The model's numerical parameters are updated through optimisation to reduce aggregate prediction error.
+
+3
+
+How can a different prompt change the output if the model's parameters remain fixed?
+
+§1.2, pp. 5–6
+Hide answer
+
+Expected explanation
+
+Ordinary inference uses the current input and context with fixed parameters. Changing the context can therefore change the output distribution without retraining.
+
+Final takeaway: Changing context changes the information available to inference; changing parameters requires training or fine-tuning. A different answer alone is not evidence that the model has learned new weights.
+
+Source: §1.2, Table 1 and Figure 1, pp. 5–6. The diagram follows the chapter's conceptual distinction between training and ordinary inference.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2018,49 +2182,66 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILORAL — /oral
 Page 58 / 198
 Practise explaining answers and receive follow-up feedback in chat.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /oral execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/oral — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/oral — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.267 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.034 The generated widget is ready.
-00:00:10.038 Write a concise summary of the answer you would give aloud.
-00:00:13.395 Reveal the expected answer and compare your explanation.
-00:00:16.661 Assess your confidence before advancing. This is self-assessment.
-00:00:19.371 Advance to question two and inspect the new prompt.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.754 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.335 Write the prompt · fast typing.
+00:00:09.835 Send the shortcut as the second message.
+00:00:10.174 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.960 Inspect the generated widget before using its controls.
+00:00:16.635 Write a concise distinction that could be expanded in an oral answer.
+00:00:25.385 Reveal the expected answer and compare the key concepts.
+00:00:28.663 Advance to the second oral-exam question.
+00:00:31.963 Explain why using a new definition does not establish weight updates.
+00:00:40.112 Compare the explanation with the chapter-grounded expected answer.
+00:00:45.556 Advance to the third oral-exam question.
+00:00:48.847 Summarize how prediction error guides parameter updates in pretraining.
+00:00:56.867 Reveal the expected account of the training mechanism.
+00:01:02.326 Go Back to verify that the earlier written answer is retained.
+00:01:06.740 Return to the third question and its stored explanation.
+00:01:11.196 Continue to the fourth question.
+00:01:13.783 Explain the purpose of keeping the model fixed while varying the input.
+00:01:22.157 Reveal the expected reasoning for the controlled comparison.
+00:01:27.586 Advance to the fifth question.
+00:01:30.839 Distinguish retrieval from parameter updates and ordinary model calculations.
+00:01:40.130 Reveal and compare the final expected answer.
+00:01:43.356 Inspect the completed five-question counter.
+00:01:43.356 Restart the oral-practice set for another attempt.
 
 OBSERVED RESULT AFTER USE
-Interactive Oral Exam: Training vs. Inference
+Practice explaining the distinction between training and inference aloud, as if answering a university examiner. The questions and expected answers are based exclusively on §1.2, Data, parameters and training, and its accompanying diagram on page 6.
 
-University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Oral examination
 
-Practice answering aloud, then write a short summary. Reveal the expected answer to compare your reasoning before advancing.
+Question 1 of 5
 
-ORAL EXAM PRACTICE
+What is the fundamental difference between training and ordinary inference?
 
-Question 2 of 3
-Inference
-Explain the sequence of operations during ordinary inference. What happens to model parameters?
-
-Key concepts: Fixed model · Calculations · Output distribution
+Explain aloud first, then write a brief summary of your answer.
 
 Reveal expected answer
 Back
-Next question
 
-1/3 questions assessed
+0/5 answered
 
-Assessment focus: Explain not only which processes update parameters, but also why changing the context can influence outputs while the model remains fixed.
+Next
+
+Practice tip: Aim for a 30–60 second explanation per question. Reveal the expected answer only after attempting your response, then compare the underlying concepts rather than memorising the wording.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2069,58 +2250,66 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILSPACEDREPETITION — /spacedrepetition
 Page 59 / 198
 Review and rate recall cards with suggested review intervals.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /spacedrepetition Using only the attached chapter, create an interactive three-card spaced-review widget on training versus inference. Include reveal, review marking and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /spacedrepetition execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/spacedrepetition — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/spacedrepetition — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /spacedrepetition Using only the attached chapter, create an interactive three-card spaced-review widget on training versus inference. Include reveal, review marking and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.270 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.520 The generated widget is ready.
-00:00:09.526 Reveal the first card after recalling the answer.
-00:00:12.434 Mark the concept as remembered and watch review progress update.
-00:00:15.135 Move to the next concept.
-00:00:17.831 Reveal the second answer for comparison.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.725 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.011 Write the prompt · fast typing.
+00:00:09.511 Send the shortcut as the second message.
+00:00:09.885 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.257 Inspect the generated widget before using its controls.
+00:00:16.012 Recall the parameter-change distinction, then reveal the first answer.
+00:00:19.292 Rate the first distinction as Good and inspect the review counter.
+00:00:23.836 Reveal the second explanation after recalling it independently.
+00:00:29.193 Rate this concept as Hard to distinguish it from remembered material.
+00:00:32.495 Reveal the context answer and compare it with the definition of training.
+00:00:37.827 Rate the third concept Again to keep it in the difficult set.
+00:00:41.131 Inspect the summary: one Again, one Hard, and one Good card.
+00:00:46.376 Start another review round without sending a new message.
+00:00:50.745 Reveal the first concept again in the new round.
+00:00:55.695 Re-rate the concept as Good after successful recall.
+00:01:00.133 Use Previous to revisit the earlier card.
 
 OBSERVED RESULT AFTER USE
-Spaced Review: Training vs. Inference
-
-Three interactive cards based on §1.2 and Figure 1 of the attached chapter.
-
-Reveal each answer, mark whether you remembered it, and track your progress. Concepts marked Again are prioritized for another review.
+Review the three cards below to distinguish training, ordinary inference, and context changes. All answers are based exclusively on §1.2 of Foundations of Generative Artificial Intelligence (pp. 5–6).
 
 SPACED REVIEW · ROUND 1
 
-Training vs. Inference
-1/3
-Reviewed
+1 / 3 reviewed
 
-CARD 2 OF 3
+Card 1 of 3
 
-What happens during ordinary inference?
+Good
 
-The model uses parameters already available to calculate an output distribution and select an output. These parameters are not updated during ordinary inference.
+ANSWER
 
-How well did you remember the answer?
+The model’s numerical parameters change through optimisation. During pretraining, predicted distributions are compared with tokens in examples, and parameters are updated to reduce aggregate error.
+§1.2 · p. 5
+Show question
+
+How well did you recall the answer?
 
 Again
-Remembered
-Back
-Next card
+Hard
+Good
+Previous
+Next
 
-1 remembered · 0 to review again
-
-Reset
-
-Review strategy: Repeat missed concepts sooner and revisit remembered concepts after longer intervals. This widget tracks progress within the current session; it does not schedule future reviews automatically.
+Suggested review intervals: revisit difficult cards tomorrow, then review all three after three days and again after one week. These intervals are a study suggestion, not a schedule specified by the chapter. Progress is tracked within this widget.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2129,86 +2318,70 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILEXAM — /exam
 Page 60 / 198
 Practise exam questions using marking guides and self-scoring.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /exam Using only the attached chapter, create an interactive three-question practice exam on training, inference and context. Include answer fields, revealable model answers and self-assessment scores. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /exam execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/exam — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/exam — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /exam Using only the attached chapter, create an interactive three-question practice exam on training, inference and context. Include answer fields, revealable model answers and self-assessment scores. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.287 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.861 The generated widget is ready.
-00:00:09.868 Write and justify an independent answer.
-00:00:13.381 Reveal the model answer for comparison.
-00:00:16.856 Award a partial self-assessment score; the widget totals your choices.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.429 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.344 Write the prompt · fast typing.
+00:00:08.844 Send the shortcut as the second message.
+00:00:09.187 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.058 Inspect the generated widget before using its controls.
+00:00:15.688 Write a partial answer that distinguishes parameter updates from inference.
+00:00:23.651 Reveal the model answer and inspect the missing reasoning.
+00:00:26.954 Award 1 point because the answer meets one of the two rubric criteria.
+00:00:31.867 Move to the question about learning from a new prompt definition.
+00:00:37.387 Explain that the new definition changes context without proving weight updates.
+00:00:47.203 Reveal the model answer and compare both rubric criteria.
+00:00:52.707 Award 2 points for an answer addressing both criteria.
+00:00:57.095 Move to the retrieval question.
+00:00:59.857 Explain how retrieval supplies context without guaranteeing correctness.
+00:01:09.240 Reveal the model answer for the retrieval question.
+00:01:14.743 Award 2 points for distinguishing retrieval from training and its reliability limit.
+00:01:19.105 Inspect the complete self-assessed result of 5/6.
+00:01:24.833 Restart the exam to clear the three answers and scores.
 
 OBSERVED RESULT AFTER USE
-Interactive Practice Exam: Training, Inference & Context
+Practice Exam: Training, Inference and Context
 
-University level · 3 questions · 12 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7 · 3 questions · 6 points total
 
-Write your answers independently, reveal the expected explanations, then assign yourself a score based on conceptual accuracy and justification.
+Answer each question in your own words before revealing the model answer. Then assess your response using the 0–2 scoring rubric.
 
 Exam progress
 
-1 of 3 answers assessed
-2/12
-Points awarded
+0 of 3 assessed
 
-1. Training
+Self-assessed score
 
-4 points
+0 / 6
+Q1
+Q2
+Q3
 
-During pretraining, how does the comparison between a predicted distribution and the actual tokens in examples lead to changes in model parameters?
+§1.2 · Data, parameters and training
 
-Hide model answer
-
-MODEL ANSWER
-
-The system compares its predicted distribution with tokens actually present in training examples. The text supplies the learning signal, and optimization updates numerical parameters to reduce aggregate prediction error.
-
-Evidence for full marks
-
-Identifies the comparison with actual tokens
-
-Connects prediction error to optimization
-
-Explains that parameters are updated
-
-Self-assessment (0–4 points)
-0
-1
-2
-3
-4
-
-2. Inference
-
-4 points
-
-Explain how ordinary inference produces an output. What happens to the model's learned parameters?
-
+1. Training vs. ordinary inference
+Explain what changes during training or fine-tuning and what stays fixed during ordinary inference. Why can the same model produce different answers to different inputs?
+Your answer
 Reveal model answer
+Previous
+Next question
 
-3. Context
-
-4 points
-
-Andrea adds “In this chapter, X means Y” to a prompt and gets a different answer. Does this demonstrate retraining? Explain how to isolate the effect of context.
-
-Reveal model answer
-Restart exam
-
-Scoring guide: 0 = absent or incorrect; 1–2 = partial; 3 = substantially correct; 4 = complete and independently justified.
-
-Learning goal: Distinguish parameter updates during training from fixed-parameter inference and changes to available context.
+Source: Cremaschi, Foundations of Generative Artificial Intelligence (2026), Chapter 1, §1.2 (pp. 5–6), §1.7 (pp. 13–14). All questions and model answers are grounded exclusively in the attached chapter.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2217,88 +2390,103 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILSTUDYPLAN — /studyplan
 Page 61 / 198
 Break a learning goal into activities and track completion.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /studyplan execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/studyplan — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/studyplan — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.417 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.062 The generated widget is ready.
-00:00:09.066 Complete the training activity and watch the progress percentage.
-00:00:11.569 Complete the inference activity.
-00:00:13.805 Complete context and inspect the finished plan.
-00:00:16.745 Reset the plan to start a new study session.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.514 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.605 Write the prompt · fast typing.
+00:00:09.105 Send the shortcut as the second message.
+00:00:09.427 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.887 Inspect the generated widget before using its controls.
+00:00:16.589 Reveal the expected training explanation.
+00:00:22.560 Mark the parameter explanation activity complete.
+00:00:26.925 Mark the prompt-versus-training comparison complete.
+00:00:31.277 Move to the ordinary-inference step.
+00:00:36.170 Reveal the inference explanation.
+00:00:39.451 Complete the fixed-parameters activity.
+00:00:43.790 Complete the changed-input comparison.
+00:00:48.138 Open the context and retrieval step.
+00:00:53.112 Reveal the context and retrieval explanation.
+00:00:59.145 Mark the context activity complete.
+00:01:03.508 Complete all six activities and inspect 100% progress.
+00:01:07.113 Reveal the final recall answer.
+00:01:13.069 Reset checkmarks and explanations for a new study pass.
 
 OBSERVED RESULT AFTER USE
-Interactive Study Plan: Training, Inference & Context
+Interactive study plan: Training, Inference & Context
 
-University level · 3 steps · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, pp. 5–6 and 13–14.
 
-Complete each activity, explain the concept in your own words, and check it off when you understand it.
+Complete three steps to learn what changes when a model is trained, when it performs inference, and when new information is supplied as context.
 
-Study progress
+Your study progress
 
-0 of 3 activities completed
-0%
+0 / 6 activities
+0% complete
+
+10 minutes total
 
 1
 
 Training
 
-
-Understand how a model learns.
-
-Trace training examples → prediction error → parameter updates → changed model.
-
-SELF-CHECK
-
-Explain why optimization updates numerical parameters to reduce aggregate prediction error.
-
-I can explain this independently.
+4 min
 
 2
 
-Inference
+Ordinary inference
 
-
-Understand how a trained model generates output.
-
-Trace input + fixed model → model calculations → output distribution → selected output.
-
-SELF-CHECK
-
-Explain why ordinary inference uses existing parameters without updating them.
-
-I can explain this independently.
+3 min
 
 3
 
-Context
+Context and retrieval
 
+3 min
 
-Distinguish providing information from retraining.
+Step 1: Training
+4 min
 
-Compare adding “In this chapter, X means Y” to a prompt with updating model parameters.
+§1.2 · pp. 5–6
 
-SELF-CHECK
+Training uses examples and prediction error to update numerical model parameters through optimisation.
 
-Explain why changing the available context can influence output without changing weights.
+Activities — complete independently
 
-I can explain this independently.
-Reset plan
+Explain what model parameters are and how training changes them.
+Explain why adding a definition to a prompt does not prove the weights changed.
+Reveal expected explanation
+Previous
+Next step
 
-Final recall challenge: Why can a new prompt produce a different answer without retraining the model?
+Reset all checkmarks and revealed explanations.
 
-Key principle: Training updates parameters; inference uses existing parameters; context supplies information for the current inference.
+Reset
+Final recall challenge
+
+Without looking at the explanations, complete this sentence:
+
+Training changes _______; ordinary inference keeps _______ fixed; adding a prompt definition or retrieving a passage changes _______.
+
+Hide answer
+
+Expected answer: Model parameters; model parameters; the context available for inference. (§§1.2, 1.7)
+
+Completion tracks activities you mark as finished; it does not automatically assess conceptual understanding.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2307,56 +2495,74 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILCHECKLIST — /checklist
 Page 62 / 198
 Turn a task into items you can check and track.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /checklist Using only the attached chapter, create an interactive three-item checklist for understanding training, inference and context. Include completion progress and reset. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /checklist execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/checklist — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/checklist — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /checklist Using only the attached chapter, create an interactive three-item checklist for understanding training, inference and context. Include completion progress and reset. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.222 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:05.174 The generated widget is ready.
-00:00:07.180 Check the training objective and watch completion progress.
-00:00:09.516 Mark inference and context as understood.
-00:00:12.594 Reset the checklist for a new self-check.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.427 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.510 Write the prompt · fast typing.
+00:00:09.010 Send the shortcut as the second message.
+00:00:09.324 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.908 Inspect the generated widget before using its controls.
+00:00:15.673 Mark the training objective complete after the self-check.
+00:00:20.522 Mark the inference objective complete.
+00:00:25.353 Inspect progress after completing two objectives.
+00:00:30.292 Complete the context and retrieval objective.
+00:00:35.142 Inspect the fully completed checklist and its 100% progress.
+00:00:40.357 Uncheck inference when you decide it still needs practice.
+00:00:45.396 Inspect how progress decreases after the reassessment.
+00:00:50.086 Reset the entire checklist for a new study session.
+00:00:55.121 Return to the progress indicator and verify the fresh starting state.
 
 OBSERVED RESULT AFTER USE
-Interactive Checklist: Training, Inference & Context
+Training, Inference & Context — Understanding Checklist
 
-University level · 3 learning objectives · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Check each item when you can explain the concept in your own words without assistance. Based only on §§1.2 and 1.7 of the attached chapter.
 
-Check each item when you can explain the concept independently, without consulting your notes.
+COMPLETION PROGRESS
 
-Learning progress
+0 of 3 completed
+0%
 
-Mark each objective when understood
+1. Training changes model parameters
 
-0/3
+I can explain how training uses prediction error and optimisation to update numerical parameters.
 
-1. Training — Update parameters
+Self-check: Can I explain why training changes the model itself?
 
-I can explain how predicted distributions are compared with tokens in training examples and how optimization updates numerical parameters to reduce aggregate prediction error.
+§1.2 · p. 5
 
-2. Inference — Use fixed parameters
+2. Ordinary inference uses fixed parameters
 
-I can explain how ordinary inference uses already available parameters to calculate an output distribution and select an output.
+I can explain why using a new definition in a prompt does not prove that model weights have changed.
 
-3. Context — Supply information
+Self-check: Can I distinguish a different answer from an updated model?
 
-I can explain why adding a definition to a prompt or retrieving passages can influence the answer without itself updating model parameters.
+§1.2 · pp. 5–6
 
+3. Context and retrieval supply information
+
+I can explain how a new message or retrieved passage affects the available context without itself updating parameters, and why RAG does not guarantee correctness.
+
+Self-check: Can I distinguish retrieved information from training?
+
+§§1.2, 1.7 · pp. 5, 13–14
 Reset checklist
 
-Final self-check: Why can changing a prompt produce a different answer without retraining the model?
-
-Expected understanding: The prompt changes the available context, while ordinary inference uses the existing model parameters.
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, including Table 1 and Figure 1. Completion is self-reported, not automatically assessed.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2414,75 +2620,97 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILPOMODORO — /pomodoro
 Page 64 / 198
 Organise study sessions and breaks, then mark completion.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /pomodoro Using only the attached chapter, create an interactive focused-study widget with three five-minute activities on training, inference and context. Include recall reveals and activity progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /pomodoro execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/pomodoro — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/pomodoro — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /pomodoro Using only the attached chapter, create an interactive focused-study widget with three five-minute activities on training, inference and context. Include recall reveals and activity progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.352 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.584 The generated widget is ready.
-00:00:10.590 Write the recall answer for the training activity.
-00:00:13.711 Reveal the expected answer and compare your explanation.
-00:00:17.174 Complete the activity and advance to inference.
-00:00:20.320 Choose the Context activity. Five minutes is planned study time, not an elapsed timer.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.240 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.016 Write the prompt · fast typing.
+00:00:09.516 Send the shortcut as the second message.
+00:00:09.826 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.527 Inspect the generated widget before using its controls.
+00:00:16.145 Activate the study session with Start.
+00:00:22.035 Pause the session and inspect the displayed time.
+00:00:26.545 Use the +1 min control and inspect the displayed time.
+00:00:31.412 Write a training explanation at normal speed.
+00:00:40.248 Reveal the expected training answer.
+00:00:43.800 Mark the training recall as completed.
+00:00:48.149 Move to the inference activity.
+00:00:51.437 Explain why prompt context does not prove changed weights.
+00:01:00.730 Compare the answer with the expected explanation.
+00:01:06.798 Mark the inference activity complete.
+00:01:11.161 Open the context and retrieval activity.
+00:01:14.441 Write a retrieval explanation at normal speed.
+00:01:24.159 Reveal the expected retrieval explanation.
+00:01:30.128 Complete all three recall activities.
+00:01:36.076 Revisit Training with the saved written response.
 
 OBSERVED RESULT AFTER USE
-Focused Study: Training, Inference & Context
+Focused study: Training, Inference & Context
 
-University level · 15 minutes · 3 activities · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Three five-minute study sessions based exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14).
 
-Complete three five-minute study activities. For each, review the process, answer a recall question, reveal the expected explanation, and mark the activity complete.
+FOCUSED STUDY · 15 MINUTES
 
-Session progress
-
-1 of 3 activities completed
-5/15 min planned
+Your study timer
+3/3 complete
 
 Training
 
-5 min
-
 Inference
 
-5 min
+Context & RAG
 
-Context
+SESSION 1 OF 3 · TRAINING
 
-5 min
-
-Activity 3: Context
-
-5 min
-
-Distinguish new information from retraining.
-
-New prompt definition
-
-Available context
-
-Fixed model
-
-Potentially changed answer
-
-Recall question
-
-Why can adding “X means Y” to a prompt change the answer without retraining?
-Reveal expected answer
+04:00
+Start
 Reset
-Complete activity
++1 min
+Activity 1: Training
 
-Key takeaway: Training updates parameters to reduce prediction error; inference uses existing parameters; adding information to context can change the output without retraining.
+§1.2 · pp. 5–6
 
-The five-minute activity structure is a suggested study method, not a timing requirement from the chapter. Completion is self-reported; the widget does not measure elapsed time.
+Explain what changes when a model is trained.
+
+Recall from memory
+
+What happens to model parameters during training, and what provides the learning signal?
+Hide expected answer
+
+Expected answer
+
+Training compares predicted distributions with tokens in examples. The text provides the learning signal, and optimisation updates numerical parameters to reduce aggregate error.
+
+Key distinction: Training changes the model's parameters.
+
+Source: Foundations of Generative Artificial Intelligence, §1.2 · pp. 5–6
+I completed the recall and checked my explanation.
+Previous
+Next activity
+All three activities completed!
+
+You have reviewed parameter updates, fixed-parameter inference, and retrieved context.
+
+Final self-check: Can you explain, without looking at the answers, why a new definition in a prompt and a retrieved document can change a response without training the model?
+
+All activity questions and expected answers are grounded in the attached chapter, especially Table 1 and Figure 1 in §1.2 and the RAG explanation in §1.7.
+
+OBSERVATIONS
+The generated timer controls change state, but a real-time countdown was not observed. The +1 min control displayed 04:00 after the initial 05:00. The activity answers, reveals and completion controls were exercised.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -2739,36 +2967,71 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILDECISIONMATRIX — /decisionmatrix
 Page 73 / 198
 Compare options against criteria, with checks to reveal.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /decisionmatrix Using only the attached chapter, create an interactive matrix comparing training, inference and retrieval. Include selectable processes and three revealable decision checks. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /decisionmatrix execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/decisionmatrix — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/decisionmatrix — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /decisionmatrix Using only the attached chapter, create an interactive matrix comparing training, inference and retrieval. Include selectable processes and three revealable decision checks. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.286 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.135 The generated widget is ready.
-00:00:10.141 Select Inference and inspect what changes in the process.
-00:00:13.243 Switch to Retrieval and compare its effect on context.
-00:00:16.271 Reveal a decision check and compare the explanation.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.252 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.547 Write the prompt · fast typing.
+00:00:10.047 Send the shortcut as the second message.
+00:00:10.378 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.805 Inspect the generated widget before using its controls.
+00:00:17.461 Switch the process view to ordinary inference.
+00:00:22.822 Switch to retrieval-augmented generation.
+00:00:28.694 Compare the three processes in the matrix.
+00:00:32.017 Choose Available context for the new prompt definition.
+00:00:36.473 Reveal why a prompt definition does not retrain the model.
+00:00:42.487 Choose retrieval-augmented generation for document search.
+00:00:47.076 Reveal the retrieval explanation.
+00:00:50.370 Reject unsupported claims about weights and guaranteed accuracy.
+00:00:54.851 Reveal the final explanation.
+00:01:00.874 Review all three revealed checks and the score.
+00:01:06.800 Reset the choices and return to the process selector.
 
 OBSERVED RESULT AFTER USE
-Interactive Decision Matrix: Training, Inference & Retrieval
+Interactive decision matrix: Training, Inference & Retrieval
 
-University level · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+Explore what changes in each process, what stays fixed, and how to identify the correct process in a practical scenario.
 
-Select a process to explore what changes, then complete three decision checks to test your understanding.
+Source: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, pp. 5–6 and 13–14.
 
-Compare the three interventions
+1. Select a process
+Training
+Inference
+RAG
+Training / fine-tuning
 
-Criterion
+PROCESS FLOW
+
+Examples → prediction error → parameter updates → changed model
+
+WHAT CHANGES
+
+The model's numerical parameters are updated through optimisation.
+
+WHAT STAYS FIXED / IS NOT ESTABLISHED
+
+The chapter does not specify a universal set of other components that remain fixed during training.
+
+EXAMPLE
+
+A system trains a new model version by optimising its parameters.
+2. Comparison matrix
+
+Dimension
 
 
 
@@ -2780,54 +3043,124 @@ Inference
 
 
 
-Retrieval
+RAG
 
 
-Changes	Parameters	Output	Context
-Updates weights?	Yes	No	No
-Result	Changed model	Selected output	Generated answer
 
-Explore a process
 
+Updates weights?
+
+
+
+Yes
+
+
+
+No
+
+
+
+No, not through retrieval
+
+
+
+
+Uses context?
+
+
+
+Examples provide learning signal
+
+
+
+Yes
+
+
+
+Yes, including retrieved passages
+
+
+
+
+Main result
+
+
+
+Changed model
+
+
+
+Output
+
+
+
+Answer using supplied context
+
+
+
+
+Key distinction
+
+
+
+Optimisation
+
+
+
+Fixed parameters
+
+
+
+External document search
+
+Based on Table 1 and Figure 1 (§1.2), and the RAG explanation (§1.7). The model can generate an incorrect answer even when passages have been retrieved.
+3. Three decision checks
+
+Choose an answer, then reveal the explanation. Each check can be completed independently.
+
+Checks revealed: 0 of 3
+
+0 correct
+
+Check 1
+
+
+Andrea inserts a new definition into his prompt. The model uses it. What changed?
+Model parameters
+Available context
+The model was fine-tuned
+Reveal explanation
+
+§1.2
+
+Check 2
+
+
+A document search supplies a recent passage to answer a question. What process is responsible?
 Training
-Inference
-Retrieval
-Retrieval (RAG)
+Ordinary inference without retrieval
+Retrieval-augmented generation
+Reveal explanation
 
-Changes: Available context
+§1.7
 
-Question
+Check 3
 
-Retrieved passages
 
-Context + fixed model
+A model successfully answers using a retrieved passage. What can you conclude?
+Its parameters were updated
+Its answer is guaranteed correct
+Neither conclusion is established
+Reveal explanation
 
-Generated answer
+§1.7
 
-Retrieval supplies external document passages as context. It does not itself update the model's parameters.
+Reset activity
 
-Decision checks
+Final takeaway: Training changes the model's parameters; ordinary inference uses fixed parameters with the available input; RAG retrieves passages to enrich that context without itself retraining the model. Neither context changes nor retrieval guarantee a correct answer.
 
-1/3 revealed
-
-1. A system optimizes weights using prediction error. Which intervention is this?
-
-Hide answer
-
-Training
-
-Optimization updates the model's parameters.
-
-2. A fixed model processes an input and selects an output. Which process is this?
-
-Reveal answer
-
-3. An application retrieves passages from an external document. What changes?
-
-Reveal answer
-Reset
-
-Key distinction: Training updates parameters; inference uses existing parameters; retrieval supplies external information as context without itself retraining the model.
+Source: Cremaschi, Foundations of Generative Artificial Intelligence (2026), §1.2, Table 1 and Figure 1 (pp. 5–6); §1.7 (pp. 13–14).
+Fondamenti_GenAI_Cremaschi.pdf
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -3229,89 +3562,103 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILMISTAKELOG — /mistakelog
 Page 85 / 198
 Record misconceptions, review corrections and track progress.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /mistakelog execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/mistakelog — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/mistakelog — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.262 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.329 The generated widget is ready.
-00:00:10.338 Reveal the correction to the first misconception.
-00:00:13.833 Mark the misconception for further review.
-00:00:16.538 Open the correction for the inference misconception.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.298 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.353 Write the prompt · fast typing.
+00:00:08.853 Send the shortcut as the second message.
+00:00:09.176 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.341 Inspect the generated widget before using its controls.
+00:00:16.193 Write why a definition added to a prompt changes context rather than weights.
+00:00:25.246 Reveal the correction grounded in the uploaded chapter.
+00:00:30.588 Answer the self-check by choosing information available to inference.
+00:00:34.950 Mark the corrected misconception Understood after meeting the requirements.
+00:00:39.423 Move to the next misconception in the log.
+00:00:42.722 Write a partial explanation for the second misconception.
+00:00:49.479 Reveal the chapter correction about fixed parameters during inference.
+00:00:54.976 Choose the generated-answer option to inspect an unsuccessful self-check.
+00:00:58.835 Mark this misconception for another review.
+00:01:03.210 Move on to the retrieval misconception.
+00:01:06.504 Correct the claim that retrieval updates weights and guarantees correctness.
+00:01:15.488 Reveal the chapter correction about RAG and reliability.
+00:01:20.840 Choose external passages available in context in the self-check.
+00:01:25.192 Mark the retrieval distinction Understood.
+00:01:29.543 Inspect the totals: all three reviewed, with one still needing practice.
+00:01:34.785 Reopen Mistake 2 directly to revisit the stored difficult case.
 
 OBSERVED RESULT AFTER USE
-Interactive Mistake Log: Training, Inference & Context
+Interactive Mistake Log
 
-University level · 3 misconceptions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, pp. 5–6 and 13–14.
 
-Review each incorrect claim, reveal its correction, and explain the mistake in your own words. Mark each concept as understood or needing further review.
+Review three misconceptions, write your own correction, reveal the chapter explanation, and mark each mistake as understood or needing another review.
 
 Review progress
 
-1/3 misconceptions assessed
-0/3
+3/3 reviewed
 
-1. Training
+ 2 understood
 
+1 need another review
+
+Mistake 1
+Mistake 2
+Mistake 3
+Inference vs. training
+
+§1.2, p. 5
 
 MISCONCEPTION
 
-Training simply stores the examples as readable entries inside the model.
+Every time a model generates an answer, it trains itself on the new input.
+Write the correction in your own words
+Hide chapter correction
 
-Hide correction
+ Chapter-grounded correction
 
-Correct explanation
+Ordinary inference performs calculations using the model's existing parameters. Training updates parameters, while changing the input with the model fixed allows the effect of context to be studied.
+Reference: §1.2, p. 5
 
-Training updates numerical parameters through optimization to reduce aggregate prediction error.
+Self-check: What remains fixed during ordinary inference?
 
-Reason: The training text supplies a learning signal. Parameters are learned numerical values, not an encyclopedia of readable entries.
+The model's parameters
+The generated answer
+The input text
 
-Why is parameter optimization different from simply storing examples?
+ Not quite — revisit the distinction
 
-Needs review
+Ordinary inference uses parameters already available. Different inputs can produce different outputs without retraining.
+
+Review decision
+
+Review again
 Understood
+To mark a mistake as understood, write a correction, reveal the explanation, and answer the self-check correctly.
+Previous
 
-2. Inference
+2 of 3
 
+Next
+First review completed
+Return to the entries marked for another review and try explaining them independently.
+Start another review
 
-MISCONCEPTION
-
-The model must update its weights whenever it generates a response.
-
-Hide correction
-
-Correct explanation
-
-Ordinary inference performs calculations using parameters already available.
-
-Reason: A fixed model can calculate output distributions and select outputs without modifying its learned weights.
-
-What does inference use instead of changing weights?
-
-Needs review
-Understood
-
-3. Context
-
-
-MISCONCEPTION
-
-If adding “X means Y” to a prompt changes the answer, the model has been retrained.
-
-Reveal correction
-Reset mistake log
-
-Key takeaway: Training updates model parameters. Ordinary inference uses existing parameters, and changing context can influence an answer without retraining the model.
+Final recall challenge: Without looking at the corrections, explain in one sentence each what changes during training, ordinary inference with a new prompt, and RAG. The key distinction is whether the intervention changes the model's parameters or the information available in context.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -3705,54 +4052,135 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILCASESTUDY — /caseStudy
 Page 95 / 198
 Analyse a concrete case, then compare with suggested answers.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /caseStudy execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/caseStudy — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/caseStudy — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.312 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.466 The generated widget is ready.
-00:00:10.472 Write a decision explaining what training changes.
-00:00:14.037 Reveal the expected reasoning and compare your decision.
-00:00:17.530 Assign a partial self-assessment score.
-00:00:19.952 Advance to the next intervention in the case study.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.302 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.394 Write the prompt · fast typing.
+00:00:09.894 Send the shortcut as the second message.
+00:00:10.241 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.848 Inspect the generated widget before using its controls.
+00:00:17.509 Write what changes during the training experiment.
+00:00:28.435 Reveal the training explanation for comparison.
+00:00:31.717 Move to the prompt experiment.
+00:00:35.240 Explain the effect of a definition in the prompt.
+00:00:45.548 Reveal the expected prompt explanation.
+00:00:51.596 Open the retrieval experiment.
+00:00:55.208 Write the retrieval decision and its limitation.
+00:01:05.627 Reveal the expected retrieval explanation.
+00:01:11.778 Review the completed case-study progress.
+00:01:16.502 Return to the first experiment and inspect the saved response.
 
 OBSERVED RESULT AFTER USE
-Interactive Case Study: Andrea’s Language Model
+Interactive Case Study: Andrea’s Three Experiments
 
-University level · 3 decisions · 6 points · Based on §1.2, Table 1, Figure 1 and §1.7 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, pp. 5–6 and 13–14.
 
-Andrea is developing a text-generation application. He performs three different interventions: training the model, changing a prompt, and retrieving a document.
+Andrea is a second-year computer science student developing a text-generation application. He wants to understand what happens when he changes a model through training, adds information to a prompt, or retrieves external passages.
 
-For each scenario, explain what changes, what remains fixed, and why. Then reveal the expected explanation and assess your reasoning.
+Your task: Make three written decisions. For each experiment, explain what changes, what stays fixed, and what the observed result actually proves. Reveal the expected explanation after submitting your reasoning.
 
-Case 2 of 3
+Case study progress
 
-1 decisions assessed
-1/6
-Self-assessed score
-Changing the prompt
-2 points
+3 of 3 completed
 
-Andrea keeps the model fixed but adds “In this chapter, X means Y” to the prompt. The generated answer changes.
+1. Training
+2. Prompt
+3. RAG
 
-Does the new answer demonstrate retraining? What intervention explains the difference?
+Experiment 1 — Training
 
-Reveal expected explanation
-Back
-Next case
+Andrea trains a new version of his model using examples and prediction error. During optimisation, numerical parameters are updated.
+
+What changes in this experiment? How is it different from ordinary inference?
+
+§1.2, pp. 5–6
+Explanation revealed
+
+Expected explanation
+
+Training changes the model's parameters through optimisation. During ordinary inference, the model performs calculations using already available parameters. Training a new version therefore changes the model itself; changing only the input does not.
+
+Self-check
+
+Did you distinguish parameter updates from calculations with fixed parameters?
+
+Previous
+Next experiment
+
+All three decisions completed
+
+You have compared parameter updates, prompt context and retrieved context. Can you now explain all three distinctions without looking at the expected answers?
+
 Restart case study
+Final comparison
 
-Final takeaway: Training updates model parameters, changing a prompt modifies the available context, and retrieval supplies external passages without itself retraining the model. A changed or well-supported-looking answer does not automatically demonstrate learning or correctness.
+Intervention
+
+
+
+What changes?
+
+
+
+Model parameters
+
+
+
+
+Training or fine-tuning
+
+
+
+Learned numerical values
+
+
+
+Updated
+
+
+
+
+New prompt
+
+
+
+Available inference context
+
+
+
+Fixed
+
+
+
+
+RAG
+
+
+
+External passages supplied as context
+
+
+
+Fixed
+
+This comparison follows Figure 1 and Table 1 of the chapter (§1.2, pp. 5–6). The retrieval limitations are explained in §1.7, p. 14.
+
+Reflection: An answer changes after Andrea adds information. What evidence would you need before claiming that the model itself has changed?
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -3870,67 +4298,76 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILQUESTIONBANK — /questionbank
 Page 99 / 198
 Build a set of practice questions with answers to reveal.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /questionbank Using only the attached chapter, create an interactive bank of three questions on training, inference and context. Include answer fields, reveal/hide explanations and progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /questionbank execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/questionbank — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/questionbank — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /questionbank Using only the attached chapter, create an interactive bank of three questions on training, inference and context. Include answer fields, reveal/hide explanations and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.276 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.833 The generated widget is ready.
-00:00:09.841 Write an answer using your own explanation.
-00:00:13.379 Reveal the expected explanation and compare it with your answer.
-00:00:16.809 Mark the question understood and update progress.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.440 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.386 Write the prompt · fast typing.
+00:00:08.886 Send the shortcut as the second message.
+00:00:09.204 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.758 Inspect the generated widget before using its controls.
+00:00:15.363 Write an independent answer about parameter changes.
+00:00:23.243 Reveal the first explanation for comparison.
+00:00:28.695 Mark the first question Reviewed after comparing the reasoning.
+00:00:31.987 Answer the prompt-context question in your own words.
+00:00:39.902 Reveal the second explanation and compare the distinction.
+00:00:45.239 Mark the second question Reviewed.
+00:00:49.581 Write why retrieval supplies context but still requires verification.
+00:01:00.068 Reveal the retrieval explanation and compare it with the written answer.
+00:01:05.625 Mark the final question Reviewed.
+00:01:09.989 Inspect the completed three-question progress indicator.
+00:01:15.202 Reset the activity for another independent practice session.
 
 OBSERVED RESULT AFTER USE
-Interactive Question Bank: Training, Inference & Context
+Test your understanding of training, ordinary inference, and context with three questions drawn exclusively from Foundations of Generative Artificial Intelligence, §§1.2 and 1.7.
 
-University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Write your own answers before revealing the explanations.
 
-Write your answers independently, reveal the expected explanations, and mark each question as understood or needing review.
+Question bank progress
 
-Review progress
+0 / 3 completed
 
-1 of 3 assessed
-1/3
+A question is completed when you have written an answer and marked it as reviewed.
 
-1. Training
+QUESTION 1 OF 3
 
-During pretraining, how does comparing predicted distributions with the tokens in examples lead to changes in model parameters?
-
-Hide explanation
-
-EXPECTED EXPLANATION
-
-The text supplies a learning signal. The system compares predicted distributions with actual tokens, and optimization updates numerical parameters to reduce aggregate prediction error.
-
-Did you explain prediction error, optimization, and parameter updates?
-
-Needs review
-Understood
-
-2. Inference
-
-What happens during ordinary inference, and how does this differ from training?
-
+Training vs. inference
+§1.2 · Data, parameters and training
+What changes during training that does not change during ordinary inference?
 Reveal explanation
+Reviewed
 
-3. Context
+QUESTION 2 OF 3
 
-Andrea adds “In this chapter, X means Y” to a prompt and receives a different answer. What changed, and does this prove retraining?
-
+A new definition in the prompt
+§1.2 · Data, parameters and training
+Andrea writes, “In this chapter, X means Y.” The model subsequently uses this definition. Does this prove that the model’s weights have changed? Explain.
 Reveal explanation
-Reset question bank
+Reviewed
 
-Core distinction: Training updates learned model parameters; ordinary inference uses existing parameters; context provides information that may influence an answer without retraining.
+QUESTION 3 OF 3
+
+Context and retrieval
+§1.7 · Generation, context and retrieval
+What changes when a document passage is retrieved and supplied to a language model? Why does this not guarantee a correct answer?
+Reveal explanation
+Reviewed
+Reset activity
+Source: Cremaschi, Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7. All explanations are grounded in the attached chapter.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -4034,76 +4471,70 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILEXITTICKET — /exitTicket
 Page 102 / 198
 Use brief end-of-lesson questions to check understanding.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /exitTicket Using only the attached chapter, create an interactive three-question exit ticket on training, inference and context. Include answer fields and a submit button that reveals expected answers. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6db3-3b2c-83eb-9d89-73540fb1a0a1
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /exitTicket execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/exitTicket — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/exitTicket — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /exitTicket Using only the attached chapter, create an interactive three-question exit ticket on training, inference and context. Include answer fields and a submit button that reveals expected answers. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.368 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.147 The generated widget is ready.
-00:00:09.155 Explain what changes in training.
-00:00:12.471 Explain how inference uses an existing model.
-00:00:15.735 Explain why new context is not retraining.
-00:00:19.165 Submit the completed ticket and compare with the expected answers.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.419 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.491 Write the prompt · fast typing.
+00:00:08.991 Send the shortcut as the second message.
+00:00:09.344 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:13.390 Inspect the generated widget before using its controls.
+00:00:17.004 Answer the training-versus-inference question.
+00:00:26.577 Explain what the new prompt definition changes.
+00:00:35.621 Explain the effect and limitations of retrieval.
+00:00:45.349 Submit all three answers to unlock the expected explanations.
+00:00:48.104 Compare the first explanation and self-award two points.
+00:00:54.570 Compare the prompt explanation and self-award two points.
+00:01:01.112 Compare the retrieval explanation and self-award two points.
+00:01:04.533 Inspect the self-assigned 6/6 total and reviewed count.
+00:01:10.249 Start another exit-ticket attempt with empty answers.
 
 OBSERVED RESULT AFTER USE
 Exit Ticket: Training, Inference & Context
 
-University level · 3 questions · Based on §1.2, Table 1 and Figure 1 of the attached chapter
+Based exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 · Approximately 5 minutes
 
-Answer all three questions independently. Submit your responses to reveal the expected answers and compare your understanding.
+Answer all three questions in your own words. Submit your responses to reveal the chapter-grounded expected answers and compare your understanding.
 
-Exit ticket progress
+PROGRESS
 
-3 of 3 responses written
-0/3
+0 of 3 answered
 
-1. Training
+Q1
 
-What changes during pretraining, and how does prediction error contribute?
+Training versus inference
 
-EXPECTED ANSWER
+What changes during training or fine-tuning, and what stays fixed during ordinary inference?
 
-The system compares predicted distributions with tokens in training examples. Optimization updates numerical model parameters to reduce aggregate prediction error.
+Q2
 
-My explanation was accurate and justified.
+A definition in the prompt
 
-2. Inference
+Andrea writes, “In this chapter, X means Y.” The model then uses this definition correctly. Does this prove that the model has learned it by updating its weights? Explain.
 
-How does ordinary inference generate an output without updating model parameters?
+Q3
 
-EXPECTED ANSWER
+Context and retrieval
 
-The input and fixed model undergo calculations that produce an output distribution and selected output. Existing parameters are used without being updated.
+What changes when a page from the book is added to a prompt or supplied through RAG? Name two things this does not establish.
+Submit answers and reveal explanations
+Answer all three questions to unlock the expected answers.
 
-My explanation was accurate and justified.
-
-3. Context
-
-Andrea adds “In this chapter, X means Y” to a prompt. The answer changes. Does this demonstrate retraining? Explain.
-
-EXPECTED ANSWER
-
-No. The new definition changes information available in context, potentially influencing the output without updating model weights.
-
-My explanation was accurate and justified.
-0/3
-
-Review the explanations where your reasoning needs improvement.
-
-Self-assessed results, not automatic grading.
-Retry exit ticket
-
-Success criterion: Independently distinguish parameter updates during training from fixed-parameter inference and changes to context.
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, including Table 1 and Figure 1. The score is a self-assessment, not an automated evaluation.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -4112,92 +4543,136 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILPEERASSESSMENT — /peerassessment
 Page 103 / 198
 Review a peer's work using shared criteria and scores.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /peerassessment execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/peerassessment — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/peerassessment — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.253 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:07.894 The generated widget is ready.
-00:00:09.900 Assign the training explanation a partial score.
-00:00:12.391 Write specific feedback for a classmate.
-00:00:15.967 Reveal the expected evidence to support the judgement.
-00:00:19.632 Score inference and inspect the updated total.
-00:00:22.913 Inspect the accumulated total: 3/6 points assigned by the reviewer.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.357 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.254 Write the prompt · fast typing.
+00:00:08.754 Send the shortcut as the second message.
+00:00:09.090 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.150 Inspect the generated widget before using its controls.
+00:00:14.797 Enter fictional names for a demonstration assessment.
+00:00:19.940 Assign two points to the training criterion.
+00:00:24.387 Write specific feedback about parameter updates.
+00:00:32.262 Reveal the chapter evidence for the training criterion.
+00:00:35.542 Assign one point to the incomplete inference explanation.
+00:00:40.016 Write an actionable improvement for the inference criterion.
+00:00:48.606 Reveal expected evidence about ordinary inference.
+00:00:54.463 Assign two points to the context and retrieval criterion.
+00:00:58.998 Write feedback on retrieval and source checking.
+00:01:08.113 Reveal the chapter evidence about context and retrieval.
+00:01:11.402 Write an overall strength and a concrete improvement.
+00:01:23.258 Finalize the demonstration assessment.
+00:01:26.605 Inspect the finalized scores and written feedback.
+00:01:29.352 Reset the rubric and return to the unscored progress.
 
 OBSERVED RESULT AFTER USE
-Peer Assessment: Training, Inference & Context
+Interactive Peer-Assessment Rubric
 
-University level · 3 criteria · 6 points · Based on §§1.2 and 1.10, Table 1 and Figure 1 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2, 1.7 and Study Resource B (p. 19).
 
-Evaluate a classmate's explanation using the rubric below. Award 0–2 points per criterion, record constructive feedback, and compare the explanation with the expected evidence.
+Evaluate a peer's explanation of training, ordinary inference and context. Assign 0–2 points for each criterion, provide constructive feedback, and compare the explanation with the expected evidence from the chapter.
+
+Student being assessed
+Peer assessor
 
 Assessment progress
 
-2 of 3 criteria scored
-3/6
+0 of 3 criteria scored
+
+0 / 6
+
 Total points
 
+Scoring guide
+
+Score
+
+
+
+Meaning
+
+
+
+
+0 — Not demonstrated
+
+
+
+Incorrect, missing or contradicted explanation
+
+
+
+
+1 — Partially demonstrated
+
+
+
+Some correct understanding, but incomplete or unclear
+
+
+
+
+2 — Demonstrated
+
+
+
+Accurate explanation with the relevant conceptual distinction
+
 1. Training
+§1.2 · p. 5
+— / 2
+Does the explanation correctly identify what changes during training?
+Peer score
+0 — Not demonstrated
+1 — Partially demonstrated
+2 — Demonstrated
+Constructive feedback
+Reveal expected evidence
+2. Ordinary inference
+§1.2 · pp. 5–6
+— / 2
+Does the explanation distinguish using a fixed model from training it?
+Peer score
+0 — Not demonstrated
+1 — Partially demonstrated
+2 — Demonstrated
+Constructive feedback
+Reveal expected evidence
+3. Context and retrieval
+§§1.2, 1.7 · pp. 5, 13–14
+— / 2
+Does the explanation correctly describe what changes when a prompt or retrieved passage is added?
+Peer score
+0 — Not demonstrated
+1 — Partially demonstrated
+2 — Demonstrated
+Constructive feedback
+Reveal expected evidence
+Final peer feedback
+Overall feedback and one suggested improvement
 
-Max. 2 points
+Total: 0 / 6
 
-Does the student explain how training changes the model?
-
-Score
-0 · Incorrect
-1 · Partial
-2 · Complete
-Hide expected evidence
-
-EVIDENCE FOR FULL MARKS
-
-Explains that predicted distributions are compared with tokens in examples and that optimization updates numerical parameters to reduce aggregate prediction error.
-
-Check for a causal connection between examples, prediction error and parameter updates.
-
-2. Inference
-
-Max. 2 points
-
-Does the student explain how ordinary inference operates?
-
-Score
-0 · Incorrect
-1 · Partial
-2 · Complete
-Show expected evidence
-
-3. Context
-
-Max. 2 points
-
-Does the student distinguish new context from retraining?
-
-Score
-0 · Incorrect
-1 · Partial
-2 · Complete
-Show expected evidence
-
-Assessment total
-
-Complete all three criteria
-3/6
+Complete all three scores to finalize
+Finalize assessment
 Reset rubric
 
-Shared scoring scale: 0 = absent or incorrect; 1 = partially accurate or insufficiently justified; 2 = accurate, independently explained and justified.
-
-The assessment emphasizes conceptual relationships and reasoning, consistent with §1.10, rather than merely recognizing terminology or producing working code.
+The 0/1/2 scoring scale is an assessment structure created for this activity. The expected conceptual evidence is drawn exclusively from the attached chapter. The final score measures demonstrated understanding of the three criteria, not general model proficiency.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -4206,79 +4681,127 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILWORKSHEET — /worksheet
 Page 104 / 198
 Practise with answer fields and model answers to reveal.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /worksheet execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/worksheet — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/worksheet — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.302 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.008 The generated widget is ready.
-00:00:10.013 Write a justified answer before revealing the model answer.
-00:00:13.445 Reveal the expected mechanism and compare it with your explanation.
-00:00:16.882 Choose a partial self-assessment score.
-00:00:19.301 Inspect the self-assessment total after scoring one exercise.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.544 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.444 Write the prompt · fast typing.
+00:00:08.944 Send the shortcut as the second message.
+00:00:09.264 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.553 Inspect the generated widget before using its controls.
+00:00:16.249 Write the training-versus-inference comparison.
+00:00:27.495 Reveal the first model answer.
+00:00:33.522 Self-score the first answer as complete.
+00:00:37.883 Write the explanation about a prompt definition.
+00:00:48.374 Reveal the second model answer.
+00:00:51.667 Review and self-score the prompt explanation.
+00:00:57.654 Write the retrieval explanation with its limitation.
+00:01:10.256 Reveal the third model answer and its two criteria.
+00:01:16.223 Self-award two points to the completed retrieval explanation.
+00:01:20.592 Inspect the complete worksheet and 6/6 total.
+00:01:26.448 Reset the worksheet answers, reveals and scores.
 
 OBSERVED RESULT AFTER USE
-Interactive Worksheet: Training, Inference & Context
+Interactive worksheet: Training, Inference & Context
 
-University level · 3 exercises · 6 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7 · Three exercises · Self-assessment
 
-Write your answers independently, reveal the model answers, and award yourself 0–2 points for each exercise.
+Complete each exercise in your own words, reveal the model answer, then score yourself from 0 to 2. Your total updates automatically.
 
 Worksheet progress
 
-1 of 3 exercises assessed
-1/6
-Self-assessment score
+0/3 responses written
 
-1. Training — Explain the mechanism
+Self-assessment total
 
-2 points
+0 / 6
 
-During pretraining, how does the comparison between predicted distributions and actual tokens lead to parameter updates?
+Exercises scored
 
-Hide model answer
+0 / 3
 
-MODEL ANSWER
+EXERCISE 1 OF 3
 
-The text supplies a learning signal. The system compares predicted distributions with the actual tokens in training examples, and optimization updates numerical parameters to reduce aggregate prediction error.
+Not scored
 
-Full-mark evidence: Connect predicted distributions, example tokens, prediction error and parameter optimization.
+Training vs. inference
 
-Self-assessment
-0 · Incorrect
-1 · Partial
-2 · Complete
+§1.2 · Data, parameters and training
 
-2. Inference — Trace the process
-
-2 points
-
-Explain how ordinary inference produces an output. What happens to the model's parameters?
-
+Explain what changes during training and what remains fixed during ordinary inference. Why can the same model produce different answers to different inputs?
+Write your answer
 Reveal model answer
 
-3. Context — Apply the distinction
+Self-score
 
-2 points
+0 — Incorrect or missing key concepts
+1 — Partially correct; one key element missing
+2 — Correct; both key elements explained
 
-Andrea adds “In this chapter, X means Y” to a prompt and receives a different answer. Does this demonstrate retraining? Explain.
+EXERCISE 2 OF 3
 
+Not scored
+
+A definition in the prompt
+
+§1.2 · Data, parameters and training
+
+Andrea writes: “In this chapter, X means Y.” The model then uses that definition correctly. Does this prove that the model has learned it by updating its weights? Explain.
+Write your answer
 Reveal model answer
+
+Self-score
+
+0 — Incorrect or missing key concepts
+1 — Partially correct; one key element missing
+2 — Correct; both key elements explained
+
+EXERCISE 3 OF 3
+
+Not scored
+
+Context and retrieval (RAG)
+
+§1.7 · Generation, context and retrieval
+
+Andrea adds a page from the chapter to his prompt. Alternatively, a RAG system retrieves a relevant passage. Explain what changes, what does not necessarily change, and why a correct answer is not guaranteed.
+Write your answer
+Reveal model answer
+
+Self-score
+
+0 — Incorrect or missing key concepts
+1 — Partially correct; one key element missing
+2 — Correct; both key elements explained
+Final self-assessment
+
+Total score
+
+0 / 6
+
+Assessment status
+
+3 remaining
+
+Reveal the expected answers, compare them with your responses, and assign all three scores to complete the worksheet.
+
 Reset worksheet
 
-Scoring scale: 0 = incorrect or absent; 1 = partially correct; 2 = accurate and independently justified.
-
-Learning outcome: Distinguish parameter updates during training from fixed-parameter inference and changes to information available through context.
+Source references: Chapter 1, §1.2, pp. 5–6 (Table 1 and Figure 1); §1.7, pp. 13–14. All model answers are based exclusively on the attached chapter.
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -4287,66 +4810,82 @@ One account and session with prior turns in context. Output types vary. Self-sco
 SLIDE S53DETAILLEARNINGSTATIONS — /learningstations
 Page 105 / 198
 Organise activities into stations and track completion.
-Recorded prompt, generation and normal-speed use of the working controls.
+New temporary chat: upload the chapter, send the shortcut, then use the generated widget.
 Recorded prompt: /learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.
-Recorded interactive output: Prompt → send → generation (accelerated) → widget use (normal speed)
-Open recorded conversation: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
-Recorded conversation: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
+Recorded interactive output: New temporary chat → PDF → shortcut → generation → extended widget use
+Original probe: https://chatgpt.com/c/6aec6d13-d448-83ed-8f37-a771d07b3248
+Earlier recording: https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042
 Real ChatGPT /learningstations execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/learningstations — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/learningstations — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.268 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.468 The generated widget is ready.
-00:00:10.478 Write your explanation at the Training station.
-00:00:13.833 Reveal the expected answer and compare your reasoning.
-00:00:17.419 Mark the station complete and watch progress update.
-00:00:20.136 Advance to the Inference station.
-00:00:23.147 Select the Context station directly with its tab.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.239 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.186 Write the prompt · fast typing.
+00:00:08.686 Send the shortcut as the second message.
+00:00:09.049 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.934 Inspect the generated widget before using its controls.
+00:00:15.567 Write the explanation at the training station.
+00:00:25.452 Reveal the expected training answer.
+00:00:28.747 Mark the training station complete.
+00:00:33.109 Move to the inference station.
+00:00:36.403 Explain why using a definition does not prove changed weights.
+00:00:46.450 Reveal the expected inference answer.
+00:00:52.394 Mark the inference station complete.
+00:00:56.754 Move to the context and retrieval station.
+00:01:00.075 Write the retrieval explanation and the need for checking.
+00:01:11.095 Reveal the expected context and retrieval answer.
+00:01:17.081 Complete the third station and inspect overall progress.
+00:01:23.024 Revisit Training and inspect the saved explanation.
 
 OBSERVED RESULT AFTER USE
-Interactive Learning Stations: Training, Inference & Context
+Explore three learning stations based exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14). At each station, explain your reasoning in writing, then reveal the expected answer and mark the station complete.
 
-University level · 3 stations · Based exclusively on §1.2, Table 1 and Figure 1 of the attached chapter
+Learning stations
 
-Explore each station, write your explanation, then reveal the expected answer. Mark the station complete when you can explain the concept independently.
+3 of 3 completed
+1. Training
+2. Inference
+3. Context
+Training
 
-Station progress
+§1.2 · pp. 5–6
 
-1 of 3 completed
-33%
-✓ Training
-Inference
-Context
+Andrea trains a language model using examples. What changes during training, and how does prediction error contribute to that change?
 
-STATION 3
+Thinking prompt
 
-Context
+Explain the relationship between examples, prediction error, optimisation and parameters.
 
-Distinguish changing information from changing parameters.
+Your explanation
+Hide expected answer
 
-New prompt definition
+Expected answer
 
-Available context
+During training, the model compares its predicted distribution with the tokens in examples. Optimisation reduces aggregate prediction error by updating numerical parameters. Training therefore changes the model itself. (§1.2, pp. 5–6)
 
-Fixed model
+Self-check
 
-Potentially different answer
+Did you explain both parameter updates and the role of prediction error?
 
-Your task
+I compared my explanation and completed this station.
+Previous
+Next station
 
-Andrea adds “In this chapter, X means Y” to his prompt. Why might the answer change without retraining?
-Reveal expected answer
-I can explain this independently.
-Next
-Reset activity
+All three stations complete.
 
-Final learning outcome: Training updates model parameters to reduce prediction error; ordinary inference uses existing parameters; changing context can influence the output without retraining.
+Try explaining all three distinctions again without looking at the expected answers.
+
+Restart activity
+
+Final synthesis challenge: Explain in one sentence what changes during training, what stays fixed during ordinary inference, and what retrieval adds to context. This brings together Figure 1 (§1.2, p. 6) and the RAG discussion (§1.7, p. 14).
 
 [CHATGPT_WIDGET_TESTS] Original ChatGPT web tests in the author’s account, 5 November 2026. All 79 candidate labels were run with the assigned chapter; 30 retained after a working content control was verified, 49 removed. Three additional control checks corrected the initial filter.
 ./materials/chatgpt-widgets/provenance.json
@@ -4386,23 +4925,54 @@ Attached chapter · Recall before checking the answer
 Prompt · informal shortcut: /flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.
 Answer the question before revealing the card; compare with the chapter.
 Real ChatGPT /flashcard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/flashcard — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/flashcard — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.200 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:04.971 The generated flashcard widget is ready.
-00:00:06.976 Flip the first card to reveal the answer.
-00:00:09.963 Mark the card as known and advance to the next concept.
-00:00:12.890 Reveal the second answer, then mark it for more practice.
-00:00:15.803 The review advances while tracking learning progress.
+00:00:00.000 Start a new temporary chat and attach the chapter PDF.
+00:00:06.389 ChatGPT reads the uploaded chapter · accelerated.
+00:00:06.807 Write the prompt · fast typing.
+00:00:10.307 Send the second message containing the shortcut.
+00:00:10.631 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.513 View the generated flashcards before starting the review.
+00:00:15.144 Recall the first answer, then flip the card to check it.
+00:00:19.677 Flip back to the question and try recalling the distinction again.
+00:00:23.526 Reveal the answer again before marking your recall.
+00:00:27.374 Mark this distinction as known and move to card two.
+00:00:30.652 Read the context question, reveal the answer, and compare it with the chapter.
+00:00:35.484 Mark this card as needing more practice.
+00:00:39.840 Reveal the third answer about probability versus truth.
+00:00:43.117 Finish the three-card review and inspect the learning summary.
+00:00:46.358 Retry only the missed card instead of restarting the whole deck.
+00:00:50.742 Recall the difficult distinction, then reveal its explanation again.
+00:00:55.612 Finish the targeted retry and inspect the new result.
 
 OBSERVED RESULT AFTER USE
-Observed use: the first answer was revealed and marked known; the second was revealed and marked for further practice; the widget advanced to card 3 of 3.
+Flashcards: Tokens, Context & Probability
+
+Three flashcards based exclusively on Foundations of Generative Artificial Intelligence, Chapter 1 (§§1.3, 1.7 and 1.6).
+
+Try to answer each question from memory before revealing the answer.
+
+Tap a card to reveal the answer. Mark ✓ if you know it or × if you don't, and I'll track your progress.
+
+Perfect score, you got 100%!
+
+0
+
+1
+
+Restart
+More flashcards
+Give feedback
+
+You can ask me to review these flashcards from any chat, change the deck, or set up a daily review.
 
 [BOOK_CHAPTER] Cremaschi, M. (2026). Foundations of Generative Artificial Intelligence: Language Models and Basic Architecture. Original teaching chapter for Beyond prompting.
 ./materials/booklet-genai/lettura.html
@@ -4423,73 +4993,121 @@ Actual ChatGPT worksheet · write an explanation, then reveal the model answer
 Tested prompt: /worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
 Write an answer before revealing the model answer.
 Real ChatGPT /worksheet execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.
-Prompt → send → generation (accelerated) → widget use (normal speed)
-/worksheet — prompt, generation and widget use
+New temporary chat → PDF → shortcut → generation → extended widget use
+/worksheet — fresh temporary chat, PDF, shortcut and extended widget use
 
-PROMPT
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
 /worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
 
-00:00:00.000 Write the prompt · fast typing.
-00:00:03.500 Send the completed prompt.
-00:00:04.302 ChatGPT processes the prompt and builds the widget · accelerated.
-00:00:08.008 The generated widget is ready.
-00:00:10.013 Write a justified answer before revealing the model answer.
-00:00:13.445 Reveal the expected mechanism and compare it with your explanation.
-00:00:16.882 Choose a partial self-assessment score.
-00:00:19.301 Inspect the self-assessment total after scoring one exercise.
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.544 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.444 Write the prompt · fast typing.
+00:00:08.944 Send the shortcut as the second message.
+00:00:09.264 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:12.553 Inspect the generated widget before using its controls.
+00:00:16.249 Write the training-versus-inference comparison.
+00:00:27.495 Reveal the first model answer.
+00:00:33.522 Self-score the first answer as complete.
+00:00:37.883 Write the explanation about a prompt definition.
+00:00:48.374 Reveal the second model answer.
+00:00:51.667 Review and self-score the prompt explanation.
+00:00:57.654 Write the retrieval explanation with its limitation.
+00:01:10.256 Reveal the third model answer and its two criteria.
+00:01:16.223 Self-award two points to the completed retrieval explanation.
+00:01:20.592 Inspect the complete worksheet and 6/6 total.
+00:01:26.448 Reset the worksheet answers, reveals and scores.
 
 OBSERVED RESULT AFTER USE
-Interactive Worksheet: Training, Inference & Context
+Interactive worksheet: Training, Inference & Context
 
-University level · 3 exercises · 6 points · Source: §1.2, Table 1 and Figure 1 of the attached chapter
+Source: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7 · Three exercises · Self-assessment
 
-Write your answers independently, reveal the model answers, and award yourself 0–2 points for each exercise.
+Complete each exercise in your own words, reveal the model answer, then score yourself from 0 to 2. Your total updates automatically.
 
 Worksheet progress
 
-1 of 3 exercises assessed
-1/6
-Self-assessment score
+0/3 responses written
 
-1. Training — Explain the mechanism
+Self-assessment total
 
-2 points
+0 / 6
 
-During pretraining, how does the comparison between predicted distributions and actual tokens lead to parameter updates?
+Exercises scored
 
-Hide model answer
+0 / 3
 
-MODEL ANSWER
+EXERCISE 1 OF 3
 
-The text supplies a learning signal. The system compares predicted distributions with the actual tokens in training examples, and optimization updates numerical parameters to reduce aggregate prediction error.
+Not scored
 
-Full-mark evidence: Connect predicted distributions, example tokens, prediction error and parameter optimization.
+Training vs. inference
 
-Self-assessment
-0 · Incorrect
-1 · Partial
-2 · Complete
+§1.2 · Data, parameters and training
 
-2. Inference — Trace the process
-
-2 points
-
-Explain how ordinary inference produces an output. What happens to the model's parameters?
-
+Explain what changes during training and what remains fixed during ordinary inference. Why can the same model produce different answers to different inputs?
+Write your answer
 Reveal model answer
 
-3. Context — Apply the distinction
+Self-score
 
-2 points
+0 — Incorrect or missing key concepts
+1 — Partially correct; one key element missing
+2 — Correct; both key elements explained
 
-Andrea adds “In this chapter, X means Y” to a prompt and receives a different answer. Does this demonstrate retraining? Explain.
+EXERCISE 2 OF 3
 
+Not scored
+
+A definition in the prompt
+
+§1.2 · Data, parameters and training
+
+Andrea writes: “In this chapter, X means Y.” The model then uses that definition correctly. Does this prove that the model has learned it by updating its weights? Explain.
+Write your answer
 Reveal model answer
+
+Self-score
+
+0 — Incorrect or missing key concepts
+1 — Partially correct; one key element missing
+2 — Correct; both key elements explained
+
+EXERCISE 3 OF 3
+
+Not scored
+
+Context and retrieval (RAG)
+
+§1.7 · Generation, context and retrieval
+
+Andrea adds a page from the chapter to his prompt. Alternatively, a RAG system retrieves a relevant passage. Explain what changes, what does not necessarily change, and why a correct answer is not guaranteed.
+Write your answer
+Reveal model answer
+
+Self-score
+
+0 — Incorrect or missing key concepts
+1 — Partially correct; one key element missing
+2 — Correct; both key elements explained
+Final self-assessment
+
+Total score
+
+0 / 6
+
+Assessment status
+
+3 remaining
+
+Reveal the expected answers, compare them with your responses, and assign all three scores to complete the worksheet.
+
 Reset worksheet
 
-Scoring scale: 0 = incorrect or absent; 1 = partially correct; 2 = accurate and independently justified.
-
-Learning outcome: Distinguish parameter updates during training from fixed-parameter inference and changes to information available through context.
+Source references: Chapter 1, §1.2, pp. 5–6 (Table 1 and Figure 1); §1.7, pp. 13–14. All model answers are based exclusively on the attached chapter.
 
 [BOOK_CHAPTER] Cremaschi, M. (2026). Foundations of Generative Artificial Intelligence: Language Models and Basic Architecture. Original teaching chapter for Beyond prompting.
 ./materials/booklet-genai/lettura.html

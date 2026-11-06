@@ -1,0 +1,69 @@
+/learningstations — fresh temporary chat, PDF, shortcut and extended widget use
+
+FIRST MESSAGE
+Attach Fondamenti_GenAI_Cremaschi.pdf.
+Use the attached chapter as the only source for the next activity. Please wait for my next request.
+
+SECOND MESSAGE
+/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.
+
+00:00:00.000 Open a new temporary chat and upload the chapter PDF.
+00:00:04.239 ChatGPT reads the uploaded chapter · accelerated.
+00:00:05.186 Write the prompt · fast typing.
+00:00:08.686 Send the shortcut as the second message.
+00:00:09.049 ChatGPT processes the prompt and builds the widget · accelerated.
+00:00:11.934 Inspect the generated widget before using its controls.
+00:00:15.567 Write the explanation at the training station.
+00:00:25.452 Reveal the expected training answer.
+00:00:28.747 Mark the training station complete.
+00:00:33.109 Move to the inference station.
+00:00:36.403 Explain why using a definition does not prove changed weights.
+00:00:46.450 Reveal the expected inference answer.
+00:00:52.394 Mark the inference station complete.
+00:00:56.754 Move to the context and retrieval station.
+00:01:00.075 Write the retrieval explanation and the need for checking.
+00:01:11.095 Reveal the expected context and retrieval answer.
+00:01:17.081 Complete the third station and inspect overall progress.
+00:01:23.024 Revisit Training and inspect the saved explanation.
+
+OBSERVED RESULT AFTER USE
+Explore three learning stations based exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14). At each station, explain your reasoning in writing, then reveal the expected answer and mark the station complete.
+
+Learning stations
+
+3 of 3 completed
+1. Training
+2. Inference
+3. Context
+Training
+
+§1.2 · pp. 5–6
+
+Andrea trains a language model using examples. What changes during training, and how does prediction error contribute to that change?
+
+Thinking prompt
+
+Explain the relationship between examples, prediction error, optimisation and parameters.
+
+Your explanation
+Hide expected answer
+
+Expected answer
+
+During training, the model compares its predicted distribution with the tokens in examples. Optimisation reduces aggregate prediction error by updating numerical parameters. Training therefore changes the model itself. (§1.2, pp. 5–6)
+
+Self-check
+
+Did you explain both parameter updates and the role of prediction error?
+
+I compared my explanation and completed this station.
+Previous
+Next station
+
+All three stations complete.
+
+Try explaining all three distinctions again without looking at the expected answers.
+
+Restart activity
+
+Final synthesis challenge: Explain in one sentence what changes during training, what stays fixed during ordinary inference, and what retrieval adds to context. This brings together Figure 1 (§1.2, p. 6) and the RAG discussion (§1.7, p. 14).

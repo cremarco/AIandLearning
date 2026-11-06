@@ -80,44 +80,63 @@
   "S53EX3": {
     "command": "/flashcard",
     "type": "video",
-    "src": "materials/chatgpt-widgets/scenarios/flashcard.mp4",
-    "poster": "materials/chatgpt-widgets/scenarios/flashcard-poster.jpg",
-    "captions": "materials/chatgpt-widgets/scenarios/flashcard.en.vtt",
+    "src": "materials/chatgpt-widgets/isolated/flashcard.mp4",
+    "poster": "materials/chatgpt-widgets/isolated/flashcard-poster.jpg",
+    "captions": "materials/chatgpt-widgets/isolated/flashcard.en.vtt",
     "captionsDefault": false,
     "alt": "Real ChatGPT /flashcard execution: fast prompt entry, sending, accelerated generation and normal-speed widget use.",
-    "caption": "Prompt → send → generation (accelerated) → widget use (normal speed)",
+    "caption": "New temporary chat → PDF → shortcut → generation → extended widget use",
     "prompt": "/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.",
-    "source": "https://chatgpt.com/c/6aec84fe-7e84-83eb-90e5-259804e72042",
-    "transcript": "/flashcard — prompt, generation and widget use\n\nPROMPT\n/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.\n\n00:00:00.000 Write the prompt · fast typing.\n00:00:03.500 Send the completed prompt.\n00:00:04.200 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:04.971 The generated flashcard widget is ready.\n00:00:06.976 Flip the first card to reveal the answer.\n00:00:09.963 Mark the card as known and advance to the next concept.\n00:00:12.890 Reveal the second answer, then mark it for more practice.\n00:00:15.803 The review advances while tracking learning progress.\n\nOBSERVED RESULT AFTER USE\nObserved use: the first answer was revealed and marked known; the second was revealed and marked for further practice; the widget advanced to card 3 of 3.\n",
-    "transcriptFile": "materials/chatgpt-widgets/scenarios/flashcard-transcript.txt",
-    "durationSeconds": 20.886,
-    "width": 1920,
-    "height": 1200,
+    "setupPrompt": "Use the attached chapter as the only source for the next activity. Please wait for my next request.",
+    "temporaryChat": true,
+    "interfaceLanguage": "en",
+    "transcript": "/flashcard — fresh temporary chat, PDF, shortcut and extended widget use\n\nFIRST MESSAGE\nAttach Fondamenti_GenAI_Cremaschi.pdf.\nUse the attached chapter as the only source for the next activity. Please wait for my next request.\n\nSECOND MESSAGE\n/flashcard Using only the attached chapter, create three interactive flashcards on tokens, context and probability versus truth. Include answer reveal, next/back and progress. Answer in English.\n\n00:00:00.000 Start a new temporary chat and attach the chapter PDF.\n00:00:06.389 ChatGPT reads the uploaded chapter · accelerated.\n00:00:06.807 Write the prompt · fast typing.\n00:00:10.307 Send the second message containing the shortcut.\n00:00:10.631 ChatGPT processes the prompt and builds the widget · accelerated.\n00:00:11.513 View the generated flashcards before starting the review.\n00:00:15.144 Recall the first answer, then flip the card to check it.\n00:00:19.677 Flip back to the question and try recalling the distinction again.\n00:00:23.526 Reveal the answer again before marking your recall.\n00:00:27.374 Mark this distinction as known and move to card two.\n00:00:30.652 Read the context question, reveal the answer, and compare it with the chapter.\n00:00:35.484 Mark this card as needing more practice.\n00:00:39.840 Reveal the third answer about probability versus truth.\n00:00:43.117 Finish the three-card review and inspect the learning summary.\n00:00:46.358 Retry only the missed card instead of restarting the whole deck.\n00:00:50.742 Recall the difficult distinction, then reveal its explanation again.\n00:00:55.612 Finish the targeted retry and inspect the new result.\n\nOBSERVED RESULT AFTER USE\nFlashcards: Tokens, Context & Probability\n\nThree flashcards based exclusively on Foundations of Generative Artificial Intelligence, Chapter 1 (§§1.3, 1.7 and 1.6).\n\nTry to answer each question from memory before revealing the answer.\n\nTap a card to reveal the answer. Mark ✓ if you know it or × if you don't, and I'll track your progress.\n\nPerfect score, you got 100%!\n\n0\n\n1\n\nRestart\nMore flashcards\nGive feedback\n\nYou can ask me to review these flashcards from any chat, change the deck, or set up a daily review.\n",
+    "transcriptFile": "materials/chatgpt-widgets/isolated/flashcard-transcript.txt",
+    "durationSeconds": 62.629,
+    "width": 1440,
+    "height": 900,
     "fps": 60,
-    "sha256": "0bc375bbc495710e0e5ee24d74643ff50cad65f8c61b4c48b5a5aa384030e705",
-    "recordedOn": "2026-11-05",
+    "sha256": "4525da6cbc9844423f3eed40fa44fdf72a7e505ef33a82baff6a30a539f0b2a7",
+    "recordedOn": "2026-11-06",
     "chapters": [
       {
-        "label": "Prompt",
+        "label": "PDF",
         "seconds": 0.0
       },
       {
+        "label": "Read chapter",
+        "seconds": 6.389
+      },
+      {
+        "label": "Prompt",
+        "seconds": 6.807
+      },
+      {
         "label": "Send",
-        "seconds": 3.5
+        "seconds": 10.307
       },
       {
         "label": "Generation",
-        "seconds": 4.2
+        "seconds": 10.631
       },
       {
         "label": "Widget",
-        "seconds": 4.971
+        "seconds": 11.513
       },
       {
         "label": "Use",
-        "seconds": 6.973
+        "seconds": 15.143
       }
-    ]
+    ],
+    "deliveryNormalization": {
+      "date": "2026-11-06",
+      "sourceSha256": "dc8ef448c48123d37a0d67d6ae309f48e60dbe1b8579b4312461f6a46ab6754e",
+      "sourceDimensions": [
+        1664,
+        1040
+      ],
+      "method": "Aspect-preserving Lanczos downsample from 1664x1040 to 1440x900. H.264 CRF14; original 60 fps cadence and duration preserved. Native media retained in the ignored pre-pull review archive."
+    }
   },
   "S58COMPILER": {
     "type": "video",
