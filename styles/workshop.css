@@ -132,8 +132,9 @@
 .kind-book .workshop-media { grid-area:1 / 2 / 4 / 3; width:100%; align-self:center; --media-paper:transparent; --book-page-width:300px; --book-page-height:calc(var(--book-page-width) * 254 / 180); --book-caption-height:40px; --book-caption-size:18px; }
 .slide-S63 .workshop-media img {max-height:325px;}
 .slide-S70 .workshop-media {width:50%;}
-.slide-S52E .workshop-media {order:1;width:29%;align-self:center;gap:8px;}
-.slide-S52E .workshop-media img {max-height:340px;}
-.slide-S52E .comparison {grid-template-columns:minmax(0,1fr);gap:20px;}
-.slide-S52E .comparison section {gap:8px;padding-top:12px;}
+/* Paper excerpts always use the first page, without a white image frame. */
+.kind-evidence .workshop-media {order:1;width:31%;align-self:center;gap:8px;}
+.kind-evidence .workshop-media img {width:auto;height:auto;max-width:100%;max-height:365px;align-self:center;background:transparent;border:0;border-radius:0;padding:0;}
+.kind-evidence .comparison {grid-template-columns:minmax(0,1fr);gap:20px;}
+.kind-evidence .comparison section {gap:8px;padding-top:12px;}
 @media print { .workshop-media video { display:none; } }

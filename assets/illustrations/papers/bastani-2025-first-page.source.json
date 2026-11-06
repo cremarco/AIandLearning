@@ -2,11 +2,36 @@
   "title": "Generative AI without guardrails can harm learning: Evidence from high school mathematics",
   "authors": "Hamsa Bastani, Osbert Bastani, Alp Sungu, Haosen Ge, Özge Kabakcı, Rei Mariman",
   "doi": "10.1073/pnas.2422633122",
+  "license": "CC BY-NC-ND 4.0",
   "source": "https://doi.org/10.1073/pnas.2422633122",
-  "version": "Published PNAS article, 2025, volume 122, issue 26, e2422633122",
+  "version": "Published article, first page",
+  "retrieved": "2026-11-06",
   "inputFile": "bastani-et-al-2025-generative-ai-without-guardrails-can-harm-learning-evidence-from-high-school-mathematics.pdf",
   "inputSha256": "d398f8e409d38a4ae08cc87af3f8682c0c06d5dda8346aa3d986508cc7e33e21",
-  "retrieved": "2026-11-04",
   "page": 1,
-  "render": "pdftoppm -f 1 -singlefile -scale-to 1800 -png; complete page, without cropping or retouching"
+  "render": "Poppler first page at 2400 px; blank exterior margins trimmed, 2 px antialiasing guard; no retouching or added frame",
+  "originalPixels": [
+    1794,
+    2400
+  ],
+  "cropPixels": [
+    12,
+    41,
+    1734,
+    2343
+  ],
+  "outputPixels": [
+    1722,
+    2302
+  ],
+  "outputSha256": "353f3974f271785ac7bd3a86560a025c91bcfc44e9633338400019dbbe0f2d1d",
+  "pdfReadPreflight": {
+    "verdict": "UNAVAILABLE",
+    "sha256": "d398f8e409d38a4ae08cc87af3f8682c0c06d5dda8346aa3d986508cc7e33e21",
+    "declared_page_count": 8,
+    "reader_page_count": 8,
+    "warnings": [
+      "xref-coverage: object number(s) [9427] present in the file but absent from the active xref chain (possible stale startxref / unreachable newer revision)"
+    ]
+  }
 }

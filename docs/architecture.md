@@ -1,6 +1,6 @@
 # Project structure
 
-The Slidev entry point remains `slides.md`. The 177-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
+The Slidev entry point remains `slides.md`. The 179-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
 
 | Folder | Responsibility |
 | --- | --- |
@@ -35,3 +35,5 @@ The model lab has one server: `pnpm demo:dev`. Tests use that server at port 417
 Renderers under `scripts/recordings/` keep their original capture formats. `render-chatgpt-videos.py` reproduces the older result-only recordings; `render-chatgpt-build-videos.py` produces the retained prompt-to-widget demonstrations. Keep raw captures and original assets when cleaning generated outputs.
 
 The portable kit includes composables, docs, tests, Python renderers, editable `.drawio` / `.excalidraw` files and TSV cards. It excludes local diagnostics and downloaded model weights.
+
+Dedicated research slides display the original first PDF page without an added frame. Use `scripts/content/render-paper-page.py` to render and trim exterior blank margins; keep per-paper provenance under `assets/illustrations/papers/`. The [AI study evidence note](research/ai-study-evidence.md) records the selected sources and their limits.

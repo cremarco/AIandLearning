@@ -111,8 +111,24 @@ title: "What is self-assessment?"
 
 ---
 layout: default
+routeAlias: s52ekestin
+title: "AI tutoring can improve learning"
+---
+
+<DeckSlide id="S52EKESTIN" />
+
+---
+layout: default
+routeAlias: s52edeng
+title: "What do studies find overall?"
+---
+
+<DeckSlide id="S52EDENG" />
+
+---
+layout: default
 routeAlias: s52e
-title: "Assisted performance and learning"
+title: "Better answers can hide weaker learning"
 ---
 
 <DeckSlide id="S52E" />

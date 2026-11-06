@@ -160,16 +160,69 @@
     "decision": "AI can offer feedback; the learner checks the evidence and decides what to improve."
   },
   {
+    "type": "workshop",
+    "kind": "evidence",
+    "section": "scenario",
+    "stage": "Evidence for AI-supported study",
+    "audience": "both",
+    "id": "S52EKESTIN",
+    "title": "AI tutoring can improve learning",
+    "message": "An experiment in university physics",
+    "body": [
+      "194 eligible students at Harvard · Two physics lessons · Immediate post-tests with a purpose-built tutor."
+    ],
+    "sources": [
+      "EDU_KESTIN"
+    ],
+    "comparison": [
+      {
+        "label": "Observed benefit",
+        "text": "The AI-tutor condition produced higher immediate test scores than an active-learning class, with less time on task."
+      },
+      {
+        "label": "How it was designed",
+        "text": "Worked solutions, step-by-step guidance and personalised feedback supported students as they solved problems."
+      }
+    ],
+    "decision": "Chapter study: ask for hints, then explain training and inference without AI."
+  },
+  {
+    "type": "workshop",
+    "kind": "evidence",
+    "section": "scenario",
+    "stage": "Evidence for AI-supported study",
+    "audience": "both",
+    "id": "S52EDENG",
+    "title": "What do studies find overall?",
+    "message": "69 studies reviewed · 62 included in meta-analysis",
+    "body": [
+      "Mostly university students; subjects, interventions and assessment methods varied considerably."
+    ],
+    "sources": [
+      "EDU_DENG"
+    ],
+    "comparison": [
+      {
+        "label": "Positive overall pattern",
+        "text": "The review reports higher academic performance and more positive motivation-related outcomes with ChatGPT-supported activities."
+      },
+      {
+        "label": "Limits of the evidence",
+        "text": "High variation, publication bias and weak assessment designs limit what the pooled results establish about lasting understanding."
+      }
+    ],
+    "decision": "Chapter study: use explanations and practice questions, then check understanding against the book."
+  },
+  {
     "id": "S52E",
     "type": "workshop",
     "kind": "evidence",
-    "todo": "Replace this paper.",
     "section": "scenario",
     "stage": "Why this learning path",
-    "title": "Assisted performance and learning",
-    "message": "One study separates what happens during and after assistance",
+    "title": "Better answers can hide weaker learning",
+    "message": "Practice with AI and performance without AI are different outcomes",
     "body": [
-      "High-school mathematics, nearly 1,000 students in one Turkish school; not a trial of these tools."
+      "Nearly 1,000 high-school students · One Turkish school · Four mathematics sessions; short-term outcomes."
     ],
     "sources": [
       "EDU_BASTANI"
@@ -177,15 +230,15 @@
     "audience": "both",
     "comparison": [
       {
-        "label": "With AI assistance",
-        "text": "In Bastani and colleagues’ trial, assisted practice performance improved."
+        "label": "During assisted practice",
+        "text": "GPT Base improved practice scores by 48% relative to the control group."
       },
       {
         "label": "Later, without AI",
-        "text": "The general-chat group performed below the control; instructional safeguards largely mitigated that harm."
+        "text": "The same group scored 17% lower than the control. The safeguarded tutor largely removed this penalty, without a clear independent-test gain."
       }
     ],
-    "decision": "Workshop design choice: keep a brief independent assessment as well."
+    "decision": "Chapter study: attempt a problem before asking for hints; finish with an independent self-test."
   },
   {
     "id": "S53",
@@ -5991,6 +6044,7 @@
     "audience": "both",
     "sources": [
       "EDU_BASTANI",
+      "EDU_DENG",
       "EDU_KESTIN",
       "EDU_HUANG",
       "EDU_RETRIEVAL",
@@ -6013,6 +6067,13 @@
         "url": "https://doi.org/10.1073/pnas.2422633122",
         "group": "Learning & teaching",
         "shortTitle": "AI guardrails and independent learning"
+      },
+      {
+        "label": "Deng et al. (2025)",
+        "citation": "Deng, R., Jiang, M., Yu, X., Lu, Y., & Liu, S. (2025). Does ChatGPT enhance student learning? A systematic review and meta-analysis of experimental studies. Computers & Education, 227, Article 105224. https://doi.org/10.1016/j.compedu.2024.105224",
+        "url": "https://doi.org/10.1016/j.compedu.2024.105224",
+        "group": "Learning & teaching",
+        "shortTitle": "ChatGPT: review of experimental studies"
       },
       {
         "label": "Huang et al. (2026)",
