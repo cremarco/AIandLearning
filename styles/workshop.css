@@ -6,6 +6,9 @@
 .slidev-layout .workshop-heading h1 { font-size:44px; max-width:1080px; line-height:1.08; }
 .slidev-layout .has-long-title .workshop-heading h1 { font-size:40px; }
 .kind-section-divider { justify-content:center; }
+.kind-section-divider.has-media { position:relative; }
+.kind-section-divider.has-media .workshop-heading { position:relative; z-index:1; width:46%; }
+.slidev-layout .kind-section-divider.has-media .workshop-heading h1 { max-width:100%; }
 .slidev-layout .kind-section-divider .workshop-heading h1 { max-width:980px; font-size:88px; line-height:1.08; }
 .slidev-layout .deck-slide .workshop-lead { flex-shrink:0; font-size:24px; color:var(--deck-muted); line-height:1.32; max-width:1060px; }
 .workshop-stage { display:flex; flex:1; min-height:0; gap:var(--deck-column-gap); align-items:center; }
