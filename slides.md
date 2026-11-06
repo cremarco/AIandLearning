@@ -1335,6 +1335,14 @@ title: "Rebuild a branching map from the book"
 
 ---
 layout: default
+routeAlias: s81teachertools
+title: "Tools for teachers"
+---
+
+<DeckSlide id="S81TEACHERTOOLS" />
+
+---
+layout: default
 routeAlias: s82
 title: "The teacher designs the evidence"
 ---
