@@ -71,6 +71,7 @@ watch(motionElement, async (element) => {
   const at = (milliseconds: number) => milliseconds / duration
   const animate = (target: Element, keyframes: Keyframe[]) => {
     const animation = target.animate(keyframes, { duration, fill: 'both', easing: 'linear' })
+    animation.playbackRate = 1.25
     animation.pause()
     animation.currentTime = 0
     animations.push(animation)
