@@ -36,7 +36,7 @@ const slideProgress = computed(() => ({
 
 <template>
   <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '']" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined">
-    <SlideAudience v-if="s.type !== 'cover' && s.kind !== 'thanks' && s.kind !== 'shortcut-cloud'" :audience="s.audience" />
+    <SlideAudience v-if="!['cover', 'profile'].includes(s.type) && s.kind !== 'thanks' && s.kind !== 'shortcut-cloud'" :audience="s.audience" />
     <span v-if="s.todo" class="badge badge-warning absolute left-16 top-4 z-10 h-7 gap-2 text-sm font-medium" role="note">
       <strong>TODO</strong>{{ s.todo }}
     </span>
