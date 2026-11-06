@@ -37,7 +37,9 @@ def main():
         canvas.paste(image.crop(crop), (0, 0))
         canvas.save(work / f'{index:02}.png')
         if frame['phase'] == 'playback':
-            canvas.save(DESTINATION / 'web-read-aloud-poster.jpg', quality=96, subsampling=0)
+            poster = Image.new('RGB', (1440, 900), '#18181b')
+            poster.paste(canvas.resize((1440, 540), Image.Resampling.LANCZOS), (0, 180))
+            poster.save(DESTINATION / 'web-read-aloud-poster.jpg', quality=96, subsampling=0)
         cues.append((elapsed, elapsed + frame['duration'], frame['caption']))
         elapsed += frame['duration']
         frames.append({**frame, 'crop': list(crop), 'sourceSha256': hashlib.sha256((SOURCE / frame['file']).read_bytes()).hexdigest()})
@@ -50,7 +52,7 @@ def main():
         ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     output = DESTINATION / 'web-read-aloud.mp4'
     subprocess.run([ffmpeg, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', str(concat),
-                    '-t', str(elapsed), '-vf', 'fps=24', '-an', '-c:v', 'libx264', '-preset', 'fast',
+                    '-t', str(elapsed), '-vf', 'scale=1440:540:flags=lanczos,pad=1440:900:0:180:color=0x18181b,fps=24', '-an', '-c:v', 'libx264', '-preset', 'fast',
                     '-crf', '16', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', str(output)], check=True)
     (DESTINATION / 'web-read-aloud.en.vtt').write_text('WEBVTT\n\n' + '\n\n'.join(
         f'{timestamp(start)} --> {timestamp(end)}\n{caption}' for start, end, caption in cues) + '\n')
@@ -61,10 +63,10 @@ def main():
     (DESTINATION / 'web-read-aloud-transcript.txt').write_text(transcript)
     clip = {
         'recordedOn': record['recordedOn'], 'sourceUrl': record['conversationUrl'],
-        'method': 'Edited sequence of original ChatGPT UI captures, cropped at 1:1 with reading holds. No reconstructed interface, pointer movement or transitions. No audio track.',
+        'method': 'Edited sequence of original ChatGPT UI captures, cropped at 1:1 with reading holds, then scaled and padded to 1440×900 for delivery. No reconstructed interface, pointer movement or transitions. No audio track.',
         'audio': False, 'src': PREFIX + '.mp4', 'poster': PREFIX + '-poster.jpg',
         'captions': PREFIX + '.en.vtt', 'transcriptFile': PREFIX + '-transcript.txt',
-        'durationSeconds': elapsed, 'width': 800, 'height': 300, 'fps': 24,
+        'durationSeconds': elapsed, 'width': 1440, 'height': 900, 'fps': 24,
         'sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
         'prompt': record['prompt'], 'response': record['response'], 'frames': frames,
     }
@@ -84,7 +86,7 @@ def main():
         'caption': result['caption'], 'transcript': transcript,
     }
     slides_file.write_text(json.dumps(slides, ensure_ascii=False, indent=2) + '\n')
-    print(f'Read aloud: {elapsed}s · 800 × 300 · {output.stat().st_size:,} bytes · no audio')
+    print(f'Read aloud: {elapsed}s · 1440 × 900 · {output.stat().st_size:,} bytes · no audio')
 
 
 if __name__ == '__main__':

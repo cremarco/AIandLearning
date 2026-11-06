@@ -68,10 +68,10 @@
         "captions": "materials/chatgpt-formal/web-read-aloud.en.vtt",
         "transcriptFile": "materials/chatgpt-formal/web-read-aloud-transcript.txt",
         "durationSeconds": 17,
-        "width": 800,
-        "height": 300,
+        "width": 1440,
+        "height": 900,
         "fps": 24,
-        "sha256": "285d7e1228342a9f1e9de255ea64b8368a80f4ae594fff4607b165c7542c69dc",
+        "sha256": "9b8c0b2a67b170332368c7da52174a3070fdfbe51bdba25107788ff924fc9c65",
         "prompt": "Explain the difference between training and inference in two short sentences. Answer in English.",
         "response": "Training is the process of learning patterns from data by adjusting a model’s parameters to reduce prediction errors. Inference is the process of using those learned parameters to generate predictions or outputs for new inputs without changing them.",
         "frames": [
@@ -140,7 +140,16 @@
             ],
             "sourceSha256": "ddbc0c24028f909c8c970b3804eaa9ae54bfbdf0e7466684f6c8bede615ad40d"
           }
-        ]
+        ],
+        "deliveryNormalization": {
+          "date": "2026-11-06",
+          "sourceSha256": "285d7e1228342a9f1e9de255ea64b8368a80f4ae594fff4607b165c7542c69dc",
+          "sourceDimensions": [
+            800,
+            300
+          ],
+          "method": "Aspect-preserving Lanczos resize; padding only when needed. H.264 CRF16; original cadence and duration preserved. Original media retained in ignored local review archive."
+        }
       }
     }
   ],

@@ -92,7 +92,7 @@ def render(capture, source, destination, ffmpeg):
     generation = next(p for p in phases if p['name'] == 'generation')
     # Reframe the composer while writing; retain the conversation column during
     # generation and use. Both views are native 1920×1200 crops, with no upscaling.
-    crop = f"crop=1920:1200:532:if(lt(t\\,{warp(generation['at']):.6f})\\,400\\,120),fps=60"
+    crop = f"crop=1920:1200:532:if(lt(t\\,{warp(generation['at']):.6f})\\,400\\,120),scale=1440:900:flags=lanczos,fps=60"
     output = destination / f'{key}.mp4'
     subprocess.run([ffmpeg, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', str(listing),
                     '-t', f'{duration:.6f}', '-vf', crop, '-an', '-c:v', 'libx264', '-preset', 'fast',
@@ -102,7 +102,7 @@ def render(capture, source, destination, ffmpeg):
     # of the previous response at the beginning of the result-reading hold.
     poster_at = capture['actions'][-1]['at'] + 1200
     poster_frame = next((f for f in frames if f['at'] >= poster_at), frames[-1])
-    Image.open(source / key / poster_frame['file']).convert('RGB').crop((532, 120, 2452, 1320)).save(destination / f'{key}-poster.jpg', quality=98, subsampling=0)
+    Image.open(source / key / poster_frame['file']).convert('RGB').crop((532, 120, 2452, 1320)).resize((1440, 900), Image.Resampling.LANCZOS).save(destination / f'{key}-poster.jpg', quality=98, subsampling=0)
     cues = []
     for i, phase in enumerate(phases):
         start = edited_starts[i]
@@ -128,7 +128,7 @@ def render(capture, source, destination, ffmpeg):
             'caption': 'Prompt → send → generation (accelerated) → widget use (normal speed)',
             'prompt': capture['prompt'], 'source': capture['conversationUrl'], 'transcript': transcript,
             'transcriptFile': f'{PREFIX}/{key}-transcript.txt', 'durationSeconds': round(duration, 3),
-            'width': 1920, 'height': 1200, 'fps': 60, 'sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
+            'width': 1440, 'height': 900, 'fps': 60, 'sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
             'recordedOn': datetime.fromisoformat(capture['startedAt'].replace('Z', '+00:00')).astimezone(ZoneInfo('Europe/Rome')).date().isoformat(),
             'chapters': [{'label': {'typing': 'Prompt', 'send': 'Send', 'generation': 'Generation', 'widget': 'Widget', 'usage': 'Use'}[p['name']], 'seconds': round(s, 3)} for p, s in zip(phases, edited_starts)]}
     provenance = {**{k: v for k, v in clip.items() if k != 'transcript'},
@@ -138,7 +138,7 @@ def render(capture, source, destination, ffmpeg):
                               'actions': [{k: v for k, v in a.items() if k != 'state'} for a in capture['actions']],
                               'frames': [{'at': f['at'], 'sha256': hashlib.sha256((source / key / f['file']).read_bytes()).hexdigest()} for f in frames]}}
     write(destination / f'{key}-provenance.json', provenance)
-    print(f"{key}: {duration:.1f}s · 1920×1200 · 60fps · {len(capture['actions'])} actions", flush=True)
+    print(f"{key}: {duration:.1f}s · 1440×900 · 60fps · {len(capture['actions'])} actions", flush=True)
     return clip, provenance
 
 
@@ -166,7 +166,7 @@ def main():
     write(ROOT / 'data/demos/chatgpt-videos.json', {'recordedOn': recorded_on, 'clips': [c for c, _ in ordered]})
     old_provenance = read(ROOT / 'public/materials/chatgpt-widgets/videos/provenance.json')
     provenance = {'recordedOn': recorded_on, 'status': 'executed', 'audio': False,
-                  'method': 'Native Retina PNG browser screencast events with original timestamps. Real fast prompt entry, send, accelerated ChatGPT processing and widget generation, followed by real widget use at original speed. Native 1920×1200 crops; no upscaling or reconstructed interface; 60 fps H.264 CRF 14. Generation waits shortened; all usage retains source timing.',
+                  'method': 'Native Retina PNG browser screencast events with original timestamps. Real fast prompt entry, send, accelerated ChatGPT processing and widget generation, followed by real widget use at original speed. Native 1920×1200 crops downsampled to 1440×900; no upscaling or reconstructed interface; 60 fps H.264 CRF 14. Generation waits shortened; all usage retains source timing.',
                   'book': old_provenance['book'], 'clips': [p for _, p in ordered]}
     write(destination / 'provenance.json', provenance)
     write(ROOT / 'public/materials/chatgpt-widgets/videos/provenance.json', provenance)

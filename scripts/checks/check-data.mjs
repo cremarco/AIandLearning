@@ -117,8 +117,8 @@ export function checkData() {
     const capture = videoProvenance.clips.find(record => record.command === clip.command)?.capture
     assert(capture?.responseComplete && capture.frames?.length >= 3, `${clip.command}: preserve a complete generation capture`)
     assert.deepEqual(clip.chapters.map(chapter => chapter.label), ['Prompt', 'Send', 'Generation', 'Widget', 'Use'], `${clip.command}: show the complete prompt-to-use scenario`)
-    assert.equal(clip.width, 1920, `${clip.command}: preserve the native Retina crop`)
-    assert.equal(clip.height, 1200, `${clip.command}: preserve the 8:5 frame`)
+    assert.equal(clip.width, 1440, `${clip.command}: use the agreed 1440px delivery width`)
+    assert.equal(clip.height, 900, `${clip.command}: use the agreed 900px delivery height`)
     assert.equal(clip.fps, 60, `${clip.command}: retain smooth browser transitions`)
     assert(capture.responseId && capture.actions?.length >= 2, `${clip.command}: record meaningful use of the actual response`)
     assert(capture.phases?.filter(phase => ['widget', 'usage'].includes(phase.name)).every(phase => phase.speed === 1), `${clip.command}: never accelerate widget use`)

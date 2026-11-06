@@ -85,7 +85,7 @@ watch(selectedIndex, pauseVideo)
 .slidev-layout .formal-response { white-space:pre-line; font-size:22px; line-height:1.3; }
 .formal-result-image { display:block; width:100%; max-height:270px; object-fit:contain; object-position:left top; }
 .formal-recording { margin:0; min-width:0; }
-.formal-recording video,.formal-print-poster { display:block; width:100%; max-height:320px; object-fit:contain; object-position:left top; border-radius:12px; }
+.formal-recording video,.formal-print-poster { display:block; width:100%; max-height:320px; aspect-ratio:8 / 3; object-fit:cover; object-position:center; border-radius:12px; }
 .formal-recording .formal-print-poster { display:none; }
 :global(.workshop-print) .formal-recording video { display:none; }
 :global(.workshop-print) .formal-recording .formal-print-poster { display:block; }

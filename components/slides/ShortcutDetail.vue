@@ -8,6 +8,46 @@ import PromptBlock from '../shared/PromptBlock.vue'
 
 const props = defineProps<{ slide: Slide }>()
 const clip = computed(() => getShortcutVideo(props.slide.title))
+// The original UI excerpts contain paragraph breaks and table-cell tabs.
+// Keep their words verbatim while restoring compact reading groups.
+const staticResultBlocks = computed(() => {
+  const raw = props.slide.result || ''
+  const parts = raw.split(/\n\s*\n/).map(part => part.trim()).filter(Boolean)
+  const blocks: { label: string; text: string }[] = []
+  if (!parts.length) return blocks
+  const add = (values: string[], label = '') => {
+    if (values.length || label) blocks.push({ label, text: values.join(' ').replace(/\s+/g, ' ') })
+  }
+  if (raw.includes('\t')) {
+    const prefix = raw.slice(0, raw.indexOf('\t')).trim().split(/\n\s*\n/).filter(Boolean)
+    const firstRow = prefix.length + 1
+    add(parts.slice(1, firstRow), parts[0])
+    let index = firstRow
+    while (index + 1 < parts.length && parts[index].length < 120 && parts[index + 1].length > 35) {
+      add([parts[index + 1]], parts[index])
+      index += 2
+    }
+    add(parts.slice(index))
+  } else if (parts.some(part => /^\d+[.)]\s/.test(part))) {
+    let start = parts.findIndex(part => /^\d+[.)]\s/.test(part))
+    if (start > 0) add(parts.slice(1, start), parts[0])
+    while (start < parts.length) {
+      let end = start + 1
+      while (end < parts.length && !/^\d+[.)]\s/.test(parts[end])) end++
+      add(parts.slice(start + 1, end), parts[start])
+      start = end
+    }
+  } else {
+    let group: string[] = []
+    let label = parts[0]
+    for (const part of parts.slice(1)) {
+      if (group.join(' ').length > 220) { add(group, label); group = []; label = '' }
+      group.push(part)
+    }
+    add(group, label)
+  }
+  return blocks
+})
 const video = ref<HTMLVideoElement>()
 useSlideVideo(video)
 </script>
@@ -35,7 +75,7 @@ useSlideVideo(video)
       </figure>
       <div v-else class="chat chat-start shortcut-detail-static">
         <div class="chat-bubble w-full max-w-full bg-base-200 text-base-content">
-          <p class="shortcut-detail-excerpt">{{ slide.result }}</p>
+          <p v-for="(block,index) in staticResultBlocks" :key="index" class="shortcut-detail-excerpt"><strong v-if="block.label">{{ block.label + ' ' }}</strong>{{ block.text }}</p>
         </div>
       </div>
     </section>
@@ -44,6 +84,7 @@ useSlideVideo(video)
 
 <style scoped>
 .shortcut-detail { display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.45fr); gap:40px; width:100%; height:100%; min-height:0; align-items:stretch; }
+.shortcut-detail:has(.shortcut-detail-static) { grid-template-columns:336px minmax(0,1fr); gap:32px; }
 .shortcut-detail-request { display:flex; flex-direction:column; justify-content:space-between; gap:16px; min-width:0; min-height:0; }
 .shortcut-detail-prompt { font-size:var(--deck-text-prompt); }
 .shortcut-detail-prompt :deep(.prompt-label) { font-size:var(--deck-text-label); margin-bottom:12px; }
@@ -56,8 +97,9 @@ useSlideVideo(video)
 .shortcut-detail-recording { display:flex; justify-self:start; align-self:start; align-items:center; justify-content:center; width:auto; max-width:100%; height:100%; aspect-ratio:var(--deck-video-ratio); min-height:0; margin:0; overflow:hidden; border:1px solid var(--deck-line); border-radius:12px; background:var(--deck-surface); }
 .shortcut-detail-recording video,.shortcut-detail-recording img { display:block; width:100%; height:100%; min-height:0; object-fit:contain; background:var(--deck-surface); }
 .shortcut-detail-static { padding:0; min-width:0; min-height:0; align-self:start; }
-.shortcut-detail-static .chat-bubble { padding:24px 28px; border-radius:16px; }
-.slidev-layout .shortcut-detail .shortcut-detail-excerpt { margin:0; white-space:normal; font-size:23px; line-height:1.4; }
+.shortcut-detail-static .chat-bubble { padding:12px 24px; border-radius:16px; }
+.slidev-layout .shortcut-detail .shortcut-detail-excerpt + .shortcut-detail-excerpt { margin-top:8px; }
+.slidev-layout .shortcut-detail .shortcut-detail-excerpt { margin:0; white-space:normal; font-size:23px; line-height:1.35; }
 .shortcut-detail-recording .shortcut-detail-print-poster { display:none; }
 :global(.workshop-print) .shortcut-detail-recording .shortcut-detail-print-poster { display:block; }
 @media print { .shortcut-detail-recording video { display:none!important; } .shortcut-detail-recording .shortcut-detail-print-poster { display:block; } }

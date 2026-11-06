@@ -39,3 +39,5 @@ The portable kit includes composables, docs, tests, Python renderers, editable `
 Dedicated research slides display the original first PDF page without an added frame. Use `scripts/content/render-paper-page.py` to render and trim exterior blank margins; keep per-paper provenance under `assets/illustrations/papers/`. The [AI study evidence note](research/ai-study-evidence.md) records the selected sources and their limits.
 
 Tool blocks open with a `tool-divider` slide that reuses the shared brand catalogue and prominent `ToolLogos` treatment. Only name and original logo appear on these dividers; comparison-only resources stay in the summary tables.
+
+Published demo videos use 1440×900 delivery frames. Scenario captures retain their original Retina source geometry; the renderer downsamples only the delivery copy. The narrow Read aloud capture is padded, and its embedded player crops only that added padding. See `data/demos/video-normalization.json` for input hashes and delivery records. Static shortcut excerpts preserve every source word while grouping numbered items and label/description pairs.
