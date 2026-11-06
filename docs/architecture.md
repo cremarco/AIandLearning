@@ -1,6 +1,6 @@
 # Project structure
 
-The Slidev entry point remains `slides.md`. The 197-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
+The Slidev entry point remains `slides.md`. The 198-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
 
 | Folder | Responsibility |
 | --- | --- |

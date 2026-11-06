@@ -1471,6 +1471,14 @@ title: "Activity: adapt an assessment"
 
 ---
 layout: default
+routeAlias: s90accessibilitysection
+title: "Accessibility"
+---
+
+<DeckSlide id="S90ACCESSIBILITYSECTION" />
+
+---
+layout: default
 routeAlias: s90
 title: "Accessibility and learning differences"
 ---
