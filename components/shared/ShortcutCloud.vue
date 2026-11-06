@@ -20,12 +20,16 @@ function openShortcut(command: string) {
 }
 const isPrint = computed(() => nav.isPrintMode.value || nav.currentRoute.value.name === 'print')
 const cloud = ref<HTMLElement>()
+const cloudId = useId()
+const paused = ref(false)
 const tooltipId = useId()
 const descriptions: Record<string, string> = shortcutDescriptions
 type ShortcutTooltip = { command: string; description: string; left: number; top: number; below: boolean }
 const hovered = ref<ShortcutTooltip>()
 const focused = ref<ShortcutTooltip>()
 const tooltip = computed(() => hovered.value || focused.value)
+const animating = computed(() => running.value && !paused.value && !tooltip.value)
+const motionState = computed(() => isStatic.value ? 'static' : !running.value ? 'still' : animating.value ? 'playing' : 'paused')
 let closeTimer: ReturnType<typeof setTimeout> | undefined
 const cancelClose = () => { clearTimeout(closeTimer) }
 const closeTooltip = () => { cancelClose(); hovered.value = undefined; focused.value = undefined }
@@ -63,6 +67,8 @@ const anchors: Record<string, { x: number; y: number; size: number; angle: numbe
   '/studyplan': { x: .25, y: .48, size: 36, angle: -90 },
   '/rubric': { x: .49, y: .20, size: 34, angle: -10 },
 }
+// A clockwise reading cue starts with the central task, then visits the anchors.
+const focusOrder = ['/flashcard', '/quiz', '/rubric', '/mindmap', '/eli5', '/worksheet', '/summary', '/studyplan']
 const warm = new Set(['/quiz', '/worksheet', '/pomodoro', '/mistakelog', '/recall'])
 const hash = (text: string) => [...text].reduce((seed, character) => (Math.imul(seed, 31) + character.charCodeAt(0)) >>> 0, 7)
 type WordBox = { x: number; y: number; width: number; height: number; halfWidth: number; halfHeight: number; cos: number; sin: number }
@@ -118,24 +124,32 @@ const words = computed(() => {
       if (!found) size--
     }
     occupied.push({ x, y, width: boxWidth, height: boxHeight, halfWidth, halfHeight, cos, sin })
-    return { ...label, size, x, y, duration: 6000 + label.seed % 6000,
-      phase: -(label.seed % 12000) }
+    return { ...label, size, x, y,
+      // One brief, radial arrival; the finished labels keep their exact layout.
+      enterDelay: Math.round(Math.min(1, Math.hypot((x - width * .53) / width, (y - height * .47) / height)) * 220),
+      focusPhase: label.anchor ? -((focusOrder.length - focusOrder.indexOf(label.command)) % focusOrder.length) * 3000 : 0,
+    }
   })
 })
 </script>
 
 <template>
-  <div ref="cloud" class="shortcut-cloud" :class="{ 'is-playing': running, 'has-tooltip': !!tooltip }" :data-motion="isStatic ? 'static' : running ? 'playing' : 'still'" @keydown.esc.stop.prevent="closeTooltip">
-    <svg viewBox="0 0 1192 648" preserveAspectRatio="xMidYMid meet" :aria-hidden="isPrint || undefined" role="group" aria-label="Explore shortcut descriptions" @click.self.stop="closeTooltip">
+  <div ref="cloud" class="shortcut-cloud" :class="{ 'is-playing': animating, 'has-tooltip': !!tooltip }" :data-motion="motionState" @keydown.esc.stop.prevent="closeTooltip">
+    <div v-if="!isStatic" class="shortcut-controls">
+      <button class="btn btn-sm" type="button" :aria-controls="cloudId" :aria-pressed="paused" @click.stop="paused = !paused">{{ paused ? 'Resume motion' : 'Pause motion' }}</button>
+    </div>
+    <svg :id="cloudId" viewBox="0 0 1192 648" preserveAspectRatio="xMidYMid meet" :aria-hidden="isPrint || undefined" role="group" aria-label="Explore shortcut descriptions" @click.self.stop="closeTooltip">
       <g class="shortcut-field">
         <g v-for="word in words" :key="word.command" :transform="`translate(${word.x} ${word.y}) rotate(${word.angle})`">
-          <g class="shortcut-float" :style="{ '--float-duration': `${word.duration}ms`, '--float-phase': `${word.phase}ms` }">
-            <text :font-size="word.size" :class="{ 'is-retained': word.retained, 'is-prominent': !!word.anchor, 'is-warm': warm.has(word.command) }" text-anchor="middle" dominant-baseline="central"
-              :tabindex="isPrint ? -1 : 0" :role="isPrint ? undefined : 'button'" :aria-label="word.command" :aria-describedby="tooltip?.command === word.command ? tooltipId : undefined"
-              @pointerenter="showTooltip($event, word.command, 'hover')" @pointerleave="leaveShortcut"
-              @focus="showTooltip($event, word.command, 'focus')" @blur="focused = undefined"
-              @click.stop="openShortcut(word.command)"
-              @keydown.enter.stop.prevent="openShortcut(word.command)" @keydown.space.stop.prevent="openShortcut(word.command)">{{ word.command }}</text>
+          <g class="shortcut-reveal" :style="{ '--enter-delay': `${word.enterDelay}ms` }">
+            <g class="shortcut-beacon" :class="{ 'is-prominent': !!word.anchor }" :style="{ '--focus-phase': `${word.focusPhase}ms` }">
+              <text :font-size="word.size" :class="{ 'is-retained': word.retained, 'is-prominent': !!word.anchor, 'is-warm': warm.has(word.command) }" text-anchor="middle" dominant-baseline="central"
+                :tabindex="isPrint ? -1 : 0" :role="isPrint ? undefined : 'button'" :aria-label="word.command" :aria-describedby="tooltip?.command === word.command ? tooltipId : undefined"
+                @pointerenter="showTooltip($event, word.command, 'hover')" @pointerleave="leaveShortcut"
+                @focus="showTooltip($event, word.command, 'focus')" @blur="focused = undefined"
+                @click.stop="openShortcut(word.command)"
+                @keydown.enter.stop.prevent="openShortcut(word.command)" @keydown.space.stop.prevent="openShortcut(word.command)">{{ word.command }}</text>
+            </g>
           </g>
         </g>
       </g>
@@ -153,34 +167,34 @@ const words = computed(() => {
 </template>
 
 <style scoped>
-.shortcut-cloud { position:relative; width:100%; height:100%; min-height:0; }
-.shortcut-cloud svg { display:block; width:100%; height:100%; overflow:visible; }
+.shortcut-cloud { position:relative; display:flex; flex-direction:column; gap:6px; width:100%; height:100%; min-height:0; }
+.shortcut-cloud svg { display:block; flex:1; order:0; width:100%; height:100%; min-height:0; overflow:visible; }
+.shortcut-controls { display:flex; order:1; flex-shrink:0; justify-content:flex-end; }
 .shortcut-cloud text { font-family:var(--deck-command-font); font-weight:450; letter-spacing:0; fill:var(--deck-muted); }
 .shortcut-cloud text.is-retained { fill:var(--deck-cyan); font-weight:600; }
 .shortcut-cloud text.is-prominent { font-weight:750; fill:var(--deck-ink); }
 .shortcut-cloud text.is-retained.is-prominent { fill:var(--deck-cyan); }
 .shortcut-cloud text.is-retained.is-warm { fill:var(--deck-important); font-weight:650; }
-.shortcut-cloud text[tabindex="0"] { cursor:help; pointer-events:bounding-box; }
+.shortcut-cloud text[tabindex="0"] { cursor:pointer; pointer-events:bounding-box; }
 .shortcut-cloud text:focus-visible { outline:1px solid var(--deck-cyan); outline-offset:4px; }
 .shortcut-tooltip.tooltip { position:absolute; width:0; height:0; z-index:10; --tt-bg:var(--deck-raised); }
 .shortcut-tooltip .tooltip-content { display:flex; flex-direction:column; gap:6px; width:320px; max-width:320px; padding:12px 16px; border:1px solid var(--deck-control-line); text-align:left; color:var(--deck-ink); font-family:var(--deck-font); font-size:18px; line-height:1.35; pointer-events:auto; }
 .shortcut-tooltip strong { color:var(--deck-cyan); font-family:var(--deck-command-font); font-size:17px; }
 .shortcut-tooltip .shortcut-tooltip-action { color:var(--deck-muted); font-size:15px; margin-top:2px; }
-.shortcut-field { transform-origin:50% 50%; animation:shortcuts-current 16s ease-in-out infinite paused; }
-/* Each word scales inside its own bounds; shared field motion preserves the gaps. */
-.shortcut-float { transform-box:fill-box; transform-origin:center; animation:shortcuts-float var(--float-duration) ease-in-out var(--float-phase) infinite paused; }
-.is-playing :is(.shortcut-field,.shortcut-float) { animation-play-state:running; }
-.shortcut-cloud.has-tooltip :is(.shortcut-field,.shortcut-float) { animation-play-state:paused; }
-@keyframes shortcuts-current {
-  0%,100% { transform:translate(-8px,5px) rotate(-.3deg) scale(.985); }
-  33% { transform:translate(7px,-5px) rotate(.25deg) scale(1); }
-  66% { transform:translate(4px,7px) rotate(.1deg) scale(.99); }
+/* The complete map stays fixed; only its eight anchors continue moving. */
+.shortcut-reveal,.shortcut-beacon { transform-box:fill-box; transform-origin:center; }
+.shortcut-reveal { animation:shortcuts-gather 520ms cubic-bezier(.16,1,.3,1) var(--enter-delay) both paused; }
+.shortcut-beacon.is-prominent { animation:shortcuts-focus 24s cubic-bezier(.45,0,.55,1) var(--focus-phase) infinite paused; }
+.is-playing :is(.shortcut-reveal,.shortcut-beacon.is-prominent) { animation-play-state:running; }
+@keyframes shortcuts-gather {
+  from { transform:scale(.96); opacity:.68; }
+  to { transform:scale(1); opacity:1; }
 }
-@keyframes shortcuts-float {
-  0%,100% { transform:scale(.92); opacity:.82; }
-  50% { transform:scale(.98); opacity:1; }
+@keyframes shortcuts-focus {
+  0%,12.5%,100% { transform:scale(.975); opacity:.86; }
+  4%,8% { transform:scale(1); opacity:1; }
 }
-.shortcut-cloud[data-motion="static"] :is(.shortcut-field,.shortcut-float) { animation:none; transform:none; opacity:1; }
-@media (prefers-reduced-motion:reduce), print { .shortcut-field,.shortcut-float { animation:none!important; transform:none!important; opacity:1!important; } }
+.shortcut-cloud[data-motion="static"] :is(.shortcut-reveal,.shortcut-beacon) { animation:none; transform:none; opacity:1; }
+@media (prefers-reduced-motion:reduce), print { .shortcut-reveal,.shortcut-beacon { animation:none!important; transform:none!important; opacity:1!important; } }
 @media print { .shortcut-tooltip { display:none; } }
 </style>
