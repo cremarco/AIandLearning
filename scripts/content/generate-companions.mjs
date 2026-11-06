@@ -287,7 +287,7 @@ writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue'
 
 const assessment = slides.filter(slide => {
   const number = parseInt(slide.id.slice(1))
-  return number >= 82 && number <= 89
+  return number >= 82 && number <= 89 && slide.kind !== 'tool-divider'
 })
 writePage('verifica.html', 'Knowledge assessment · Andrea case', [
   '<header><h1>Knowledge assessment</h1>',

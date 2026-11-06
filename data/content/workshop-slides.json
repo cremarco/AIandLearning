@@ -265,6 +265,20 @@
     "decision": ""
   },
   {
+    "id": "S53TOOLCHATGPT",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "chatgpt",
+    "stage": "ChatGPT · possibilities for learning",
+    "tool": "chatgpt",
+    "title": "ChatGPT",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "type": "workshop",
     "section": "chatgpt",
     "body": [
@@ -4471,6 +4485,20 @@
     "lang": "en"
   },
   {
+    "id": "S58TOOLGOBLIN",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Goblin Tools · recorded examples",
+    "tool": "goblin",
+    "title": "Goblin.tools",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "id": "S58COMPILER",
     "type": "workshop",
     "kind": "tool-demo",
@@ -4660,6 +4688,20 @@
       }
     ],
     "decision": "A justified support choice that can transfer to another subject."
+  },
+  {
+    "id": "S61TOOLNOTEBOOK",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "NotebookLM · recorded examples",
+    "tool": "notebook",
+    "title": "NotebookLM",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
   },
   {
     "id": "S61",
@@ -4903,6 +4945,20 @@
     "decision": "Recognising the revealed answer is different from recalling it unaided."
   },
   {
+    "id": "S67TOOLANKI",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Learner · spaced practice",
+    "tool": "anki",
+    "title": "Anki / AnkiWeb",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "type": "workshop",
     "section": "study",
     "body": [
@@ -4917,14 +4973,59 @@
     "sources": [
       "BOOK_CHAPTER",
       "TOOL_ANKI",
-      "TOOL_ANKIWEB",
-      "TOOL_KNOWT"
+      "TOOL_ANKIWEB"
     ],
     "comparison": [
       {
         "label": "Anki / AnkiWeb",
         "text": "Create or import checked cards in free Anki Desktop; sync and review in AnkiWeb with an account. Rate recall honestly to schedule the next review."
+      }
+    ],
+    "decision": "The downloadable cards are prepared examples; these account-based workflows were not executed in this session.",
+    "links": [
+      {
+        "label": "Book cards · TSV",
+        "url": "./materials/study-tools/book-cards.tsv",
+        "download": true
       },
+      {
+        "label": "AnkiWeb",
+        "url": "https://ankiweb.net/"
+      }
+    ],
+    "tool": "anki"
+  },
+  {
+    "id": "S67TOOLKNOWT",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Learner · spaced practice",
+    "tool": "knowt",
+    "title": "Knowt",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [
+      "Book §1.2: Does adding a definition to a prompt update the model’s weights? Explain why before revealing the answer."
+    ],
+    "audience": "both",
+    "id": "S67KNOWT",
+    "kind": "compare",
+    "stage": "Learner · spaced practice",
+    "title": "Keep checked cards in a review routine",
+    "message": "Andrea reuses questions from the same book, then answers before revealing.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_KNOWT"
+    ],
+    "comparison": [
       {
         "label": "Knowt",
         "text": "Create a set from checked questions and use its study modes, including spaced repetition. An account is required; free AI features have limits."
@@ -4938,14 +5039,11 @@
         "download": true
       },
       {
-        "label": "AnkiWeb",
-        "url": "https://ankiweb.net/"
-      },
-      {
         "label": "Knowt",
         "url": "https://knowt.com/"
       }
-    ]
+    ],
+    "tool": "knowt"
   },
   {
     "id": "S67NOTES",
@@ -5076,6 +5174,20 @@
     "decision": "A chat-view link changes the view; recipients still need appropriate access."
   },
   {
+    "id": "S70TOOLNAPKIN",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Learner · summarise",
+    "tool": "napkin",
+    "title": "Napkin AI",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "id": "S70",
     "type": "workshop",
     "kind": "procedure",
@@ -5182,8 +5294,7 @@
     "sources": [
       "BOOK_CHAPTER",
       "TOOL_DRAWIO",
-      "TOOL_EXCALIDRAW",
-      "TOOL_MINDMEISTER_LIMIT"
+      "TOOL_EXCALIDRAW"
     ],
     "comparison": [
       {
@@ -5193,13 +5304,23 @@
       {
         "label": "Excalidraw",
         "text": "Sketch how retrieved passages enter the prompt context. Add the boundary: RAG does not retrain the weights."
-      },
-      {
-        "label": "MindMeister",
-        "text": "Alternative for a branching mind map. Basic requires an account and allows three maps per person, including maps shared with you."
       }
     ],
     "decision": "Compare your reconstruction with the AI visual: identify one missing relationship and justify a correction."
+  },
+  {
+    "id": "S72TOOLDRAWIO",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "draw.io · recorded book test",
+    "tool": "drawio",
+    "title": "draw.io",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
   },
   {
     "type": "workshop",
@@ -5222,6 +5343,20 @@
     "decision": "New context changes the input; ordinary inference keeps the learned parameters fixed."
   },
   {
+    "id": "S72TOOLEXCALIDRAW",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Excalidraw · recorded book test",
+    "tool": "excalidraw",
+    "title": "Excalidraw",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "type": "workshop",
     "section": "study",
     "body": [],
@@ -5240,6 +5375,43 @@
     "prompt": "Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.",
     "promptLabel": "Recorded task",
     "decision": "Explain why an irrelevant retrieved passage can still produce an unreliable answer."
+  },
+  {
+    "id": "S72TOOLMINDMEISTER",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Learner · reconstruct and explain",
+    "tool": "mindmeister",
+    "title": "MindMeister",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "id": "S72MINDMEISTER",
+    "kind": "compare",
+    "stage": "Learner · reconstruct and explain",
+    "title": "Rebuild a branching map from the book",
+    "message": "Close the book, reconstruct one relationship, then reopen §§1.2 and 1.7 to check it.",
+    "sources": [
+      "BOOK_CHAPTER",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "comparison": [
+      {
+        "label": "MindMeister",
+        "text": "Alternative for a branching mind map. Basic requires an account and allows three maps per person, including maps shared with you."
+      }
+    ],
+    "decision": "Compare your reconstruction with the AI visual: identify one missing relationship and justify a correction.",
+    "tool": "mindmeister"
   },
   {
     "id": "S82",
@@ -5267,6 +5439,20 @@
       }
     ],
     "decision": "Assess what the learner can justify, alongside the assisted product."
+  },
+  {
+    "id": "S83TOOLMAGICSCHOOL",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "teachers",
+    "stage": "Teacher · prepare",
+    "tool": "magicschool",
+    "title": "MagicSchool",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
   },
   {
     "id": "S83",
@@ -5486,6 +5672,20 @@
     "decision": "Keep the initial prediction, test outcome and justified revision."
   },
   {
+    "id": "S86TOOLFORMATIVE",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "teachers",
+    "stage": "Teacher · collect",
+    "tool": "formative",
+    "title": "Formative",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "id": "S86",
     "type": "workshop",
     "kind": "procedure",
@@ -5662,6 +5862,20 @@
     "decision": "Dyslexia and other specific learning difficulties vary; attention needs are distinct. No typeface or tool fits everyone."
   },
   {
+    "id": "S91TOOLEDGE",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "accessibility",
+    "stage": "Learner · access reading",
+    "tool": "edge",
+    "title": "Microsoft Edge",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
+  },
+  {
     "id": "S91",
     "type": "workshop",
     "kind": "procedure",
@@ -5710,6 +5924,20 @@
     "tool": "notebook",
     "prompt": "Rewrite this paragraph in three short segments. Define token, context and parameters. Preserve the condition “during inference” and flag each simplification. Do not remove essential relationships.",
     "decision": "A brief explanation helps when it preserves the concept’s conditions."
+  },
+  {
+    "id": "S93TOOLDICTATION",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "accessibility",
+    "stage": "Learner · express",
+    "tool": "dictation",
+    "title": "Dictation",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en"
   },
   {
     "id": "S93",

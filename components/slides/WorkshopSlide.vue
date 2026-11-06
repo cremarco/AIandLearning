@@ -40,13 +40,19 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 <template>
   <div class="workshop-content" :lang="s.lang" :class="[`kind-${s.kind}`, { 'has-media': !!s.media, 'has-character': !!s.character, 'has-prompt': !!s.prompt, 'has-comparison': !!s.comparison?.length, 'has-four-steps': (s.steps?.length || 0) >= 4, 'has-mixed-content': !!s.comparison?.length && !!s.steps?.length, 'has-long-title': s.title.length > 55 }]" @click="lucaReaction?.advance()">
     <img v-if="s.kind === 'section-divider' && s.media" class="section-divider-art pointer-events-none absolute right-0 top-0 h-full w-[54%] object-contain" :src="asset(s.media.src)" :alt="s.media.alt" />
-    <header v-if="!['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
+    <div v-if="s.kind === 'tool-divider'" class="hero h-full">
+      <div class="hero-content w-full max-w-none text-center">
+        <ToolLogos :ids="brandsForSlide(s)" prominent />
+        <h1>{{ s.title }}</h1>
+      </div>
+    </div>
+    <header v-if="!['chatgpt-intro', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
       <ToolLogos :ids="brandsForSlide(s)" />
       <h1><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
     <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.promptExcerpt || s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
-    <div v-if="s.kind !== 'section-divider'" class="workshop-stage">
+    <div v-if="!['section-divider', 'tool-divider'].includes(s.kind)" class="workshop-stage">
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
       <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
       <ShortcutDetail v-else-if="s.kind === 'shortcut-detail'" :slide="s" />

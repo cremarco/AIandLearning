@@ -1,6 +1,6 @@
 # Project structure
 
-The Slidev entry point remains `slides.md`. The 181-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
+The Slidev entry point remains `slides.md`. The 196-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
 
 | Folder | Responsibility |
 | --- | --- |
@@ -37,3 +37,5 @@ Renderers under `scripts/recordings/` keep their original capture formats. `rend
 The portable kit includes composables, docs, tests, Python renderers, editable `.drawio` / `.excalidraw` files and TSV cards. It excludes local diagnostics and downloaded model weights.
 
 Dedicated research slides display the original first PDF page without an added frame. Use `scripts/content/render-paper-page.py` to render and trim exterior blank margins; keep per-paper provenance under `assets/illustrations/papers/`. The [AI study evidence note](research/ai-study-evidence.md) records the selected sources and their limits.
+
+Tool blocks open with a `tool-divider` slide that reuses the shared brand catalogue and prominent `ToolLogos` treatment. Only name and original logo appear on these dividers; comparison-only resources stay in the summary tables.

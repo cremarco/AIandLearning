@@ -9,8 +9,12 @@ export function brandsForLabel(label: string): ToolBrandId[] {
   const matches: [ToolBrandId, RegExp][] = [
     ['chatgpt', /\bChatGPT\b/i],
     ['goblin', /\bGoblin(?:\.tools)?\b/i],
-    ['notebook', /\bNotebook\b/i],
+    ['notebook', /\bNotebook(?:LM)?\b/i],
     ['napkin', /\bNapkin\b/i],
+    ['drawio', /\bdraw\.io\b/i],
+    ['excalidraw', /\bExcalidraw\b/i],
+    ['anki', /\bAnki(?:Web)?\b/i],
+    ['knowt', /\bKnowt\b/i],
     ['claude', /\bClaude\b/i],
     ['magicschool', /\bMagicSchool\b/i],
     ['formative', /\bFormative\b/i],

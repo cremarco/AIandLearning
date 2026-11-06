@@ -5,6 +5,8 @@
 .workshop-heading .tool-logos { margin-top:3px; }
 .slidev-layout .workshop-heading h1 { font-size:44px; max-width:1080px; line-height:1.08; }
 .slidev-layout .has-long-title .workshop-heading h1 { font-size:40px; }
+.kind-tool-divider .hero-content { flex-direction:column; gap:48px; }
+.slidev-layout .kind-tool-divider h1 { max-width:1000px; font-size:88px; line-height:1.08; text-wrap:balance; }
 .kind-section-divider { justify-content:center; }
 .kind-section-divider.has-media { position:relative; }
 .kind-section-divider.has-media .workshop-heading { position:relative; z-index:1; width:46%; }
@@ -86,7 +88,7 @@
 .kind-access .workshop-media { order:1; width:38%; }
 .kind-access .workshop-media img { max-height:400px; image-rendering:pixelated; }
 /* Cream surfaces keep screenshots legible; tool brands live in the source imagery. */
-.slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation,.tool-desmos) {
+.slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation,.tool-desmos):not(:has(.kind-tool-divider)) {
   color-scheme:light;
   --deck-paper:var(--color-stone-50);
   --deck-ink:var(--color-zinc-950);

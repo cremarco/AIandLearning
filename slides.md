@@ -143,6 +143,14 @@ title: "The assigned book"
 
 ---
 layout: default
+routeAlias: s53toolchatgpt
+title: "ChatGPT"
+---
+
+<DeckSlide id="S53TOOLCHATGPT" />
+
+---
+layout: default
 routeAlias: s53gpt
 title: "What can ChatGPT do?"
 ---
@@ -967,6 +975,14 @@ title: "Tool"
 
 ---
 layout: default
+routeAlias: s58toolgoblin
+title: "Goblin.tools"
+---
+
+<DeckSlide id="S58TOOLGOBLIN" />
+
+---
+layout: default
 routeAlias: s58compiler
 title: "Compiler: turn thoughts into actions"
 ---
@@ -1036,6 +1052,14 @@ title: "Activity: choose the next support"
 ---
 
 <DeckSlide id="S60A" />
+
+---
+layout: default
+routeAlias: s61toolnotebook
+title: "NotebookLM"
+---
+
+<DeckSlide id="S61TOOLNOTEBOOK" />
 
 ---
 layout: default
@@ -1127,11 +1151,35 @@ title: "Practise recall with flashcards"
 
 ---
 layout: default
+routeAlias: s67toolanki
+title: "Anki / AnkiWeb"
+---
+
+<DeckSlide id="S67TOOLANKI" />
+
+---
+layout: default
 routeAlias: s67spaced
 title: "Keep checked cards in a review routine"
 ---
 
 <DeckSlide id="S67SPACED" />
+
+---
+layout: default
+routeAlias: s67toolknowt
+title: "Knowt"
+---
+
+<DeckSlide id="S67TOOLKNOWT" />
+
+---
+layout: default
+routeAlias: s67knowt
+title: "Keep checked cards in a review routine"
+---
+
+<DeckSlide id="S67KNOWT" />
 
 ---
 layout: default
@@ -1199,6 +1247,14 @@ title: "Review access before sharing a notebook"
 
 ---
 layout: default
+routeAlias: s70toolnapkin
+title: "Napkin AI"
+---
+
+<DeckSlide id="S70TOOLNAPKIN" />
+
+---
+layout: default
 routeAlias: s70
 title: "Napkin: start with checked text"
 ---
@@ -1231,11 +1287,27 @@ title: "Rebuild the map and explain every arrow"
 
 ---
 layout: default
+routeAlias: s72tooldrawio
+title: "draw.io"
+---
+
+<DeckSlide id="S72TOOLDRAWIO" />
+
+---
+layout: default
 routeAlias: s72drawio
 title: "draw.io: build the inference path"
 ---
 
 <DeckSlide id="S72DRAWIO" />
+
+---
+layout: default
+routeAlias: s72toolexcalidraw
+title: "Excalidraw"
+---
+
+<DeckSlide id="S72TOOLEXCALIDRAW" />
 
 ---
 layout: default
@@ -1247,11 +1319,35 @@ title: "Excalidraw: explain the RAG arrow"
 
 ---
 layout: default
+routeAlias: s72toolmindmeister
+title: "MindMeister"
+---
+
+<DeckSlide id="S72TOOLMINDMEISTER" />
+
+---
+layout: default
+routeAlias: s72mindmeister
+title: "Rebuild a branching map from the book"
+---
+
+<DeckSlide id="S72MINDMEISTER" />
+
+---
+layout: default
 routeAlias: s82
 title: "The teacher designs the evidence"
 ---
 
 <DeckSlide id="S82" />
+
+---
+layout: default
+routeAlias: s83toolmagicschool
+title: "MagicSchool"
+---
+
+<DeckSlide id="S83TOOLMAGICSCHOOL" />
 
 ---
 layout: default
@@ -1319,6 +1415,14 @@ title: "Prediction and transfer"
 
 ---
 layout: default
+routeAlias: s86toolformative
+title: "Formative"
+---
+
+<DeckSlide id="S86TOOLFORMATIVE" />
+
+---
+layout: default
 routeAlias: s86
 title: "Formative: set up the assessment"
 ---
@@ -1367,6 +1471,14 @@ title: "Accessibility and learning differences"
 
 ---
 layout: default
+routeAlias: s91tooledge
+title: "Microsoft Edge"
+---
+
+<DeckSlide id="S91TOOLEDGE" />
+
+---
+layout: default
 routeAlias: s91
 title: "Edge: another way to read the same chapter"
 ---
@@ -1380,6 +1492,14 @@ title: "Notebook: short segments and a glossary"
 ---
 
 <DeckSlide id="S92" />
+
+---
+layout: default
+routeAlias: s93tooldictation
+title: "Dictation"
+---
+
+<DeckSlide id="S93TOOLDICTATION" />
 
 ---
 layout: default
