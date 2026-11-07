@@ -10,7 +10,7 @@ The Slidev entry point remains `slides.md`. The 198-slide sequence is generated 
 | `components/media/` | Players, overlays, animated book, cover and character |
 | `composables/` | Slide lifecycle, document visibility, playback and selection motion |
 | `utils/` | Typed slide data, assets, text parsing and other presentation helpers |
-| `data/content/` | Editable slide content, media assignments, highlights and overrides |
+| `data/content/` | Editable slide content, speaker notes, media assignments, highlights and overrides |
 | `data/references/` | Source records and bibliography |
 | `data/catalogues/` | Tools, skills and shortcut descriptions |
 | `data/demos/` | Recorded execution metadata and provenance inputs |
@@ -27,6 +27,8 @@ The Slidev entry point remains `slides.md`. The 198-slide sequence is generated 
 | `output/` | Ignored captures, diagnostics and archived local work; not delivered |
 
 Run `pnpm generate`, then `pnpm check` and `pnpm build`. The structure check detects unresolved local imports, unreferenced Vue components, obsolete slide overlays and missing command entry points. Browser checks remain available through `pnpm check:browser`.
+
+English speaker notes live in `data/content/speaker-notes.json`, keyed by stable slide ID. `generate-slides.mjs` emits one Markdown note comment after each Slidev slide and generates `docs/speaker-notes.en.md` in the current slide order. Notes stay outside the audience content catalogue. Content checks require complete coverage, short text and bold key words, and verify that every comment belongs to the correct slide.
 
 There is one document visibility listener shared by mounted presentation components. Slidev navigation remains the authority for active slides; playback and motion pause when their slide or browser tab is left. Print uses the same slide catalogue with static media.
 

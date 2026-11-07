@@ -1,6 +1,6 @@
 # Beyond prompting
 
-Slidev presentation by Marco Cremaschi for three November 2026 events in Lithuania. One continuous sequence follows Andrea, a fictional computer science student, from an assigned generative AI chapter to an independent explanation and a teacher’s assessment. There are no presenter notes or event-specific routes.
+Slidev presentation by Marco Cremaschi for three November 2026 events in Lithuania. One continuous sequence follows Andrea, a fictional computer science student, from an assigned generative AI chapter to an independent explanation and a teacher’s assessment. Every slide has short English presenter notes with bold key words; the same sequence serves all events.
 
 The deck uses Vue, Tailwind CSS and daisyUI. It retains the interactive book, particle wave, videos, tool links and accessible reading materials. Event details are in [docs/workshop-brief.md](docs/workshop-brief.md).
 
@@ -20,6 +20,8 @@ pnpm dev
 
 Open `http://localhost:3047/`. Use the arrow keys to advance. Slidev’s native toolbar appears at the bottom left and is also reachable with Tab.
 
+Use the toolbar’s Presenter Mode or open `http://localhost:3047/presenter/` to read the notes while presenting. [Speaker notes in English](docs/speaker-notes.en.md) provides a numbered rehearsal copy. The notes contain 23–40 words per slide and keep Markdown emphasis in presenter mode.
+
 Edit the authoring sources, then regenerate:
 
 | Location | Purpose |
@@ -28,13 +30,14 @@ Edit the authoring sources, then regenerate:
 | `data/references/opening-sources.json`, `data/references/workshop-sources.json` | Citation records |
 | `data/content/media.json`, `data/content/editorial-overrides.json` | Workshop media and content refinements |
 | `data/content/highlights.json` | Terms highlighted in the slides |
+| `data/content/speaker-notes.json` | Short English speaker notes, keyed by stable slide ID |
 | `components/`, `composables/`, `utils/`, `styles/` | Typed Vue rendering, shared behavior and daisyUI theme |
 | `public/images/`, `public/icons/` | Referenced presentation images and icons only |
 | `assets/illustrations/` | Authoring originals and image provenance, excluded from the website |
 | `booklet-genai/` | Shared textbook content, Typst source and reading edition |
 | `public/materials/demo-genai/` | Canonical real-model app, runtime and verified recordings |
 
-`data/generated/slides.json`, `data/generated/sources.json`, `data/generated/flows.json`, `slides.md`, and the companion HTML/text materials are generated. Change their authoring inputs instead. `pnpm generate` is deterministic and does not recreate presenter notes.
+`data/generated/slides.json`, `data/generated/sources.json`, `data/generated/flows.json`, `slides.md`, `docs/speaker-notes.en.md`, and the companion HTML/text materials are generated. Change their authoring inputs instead. `pnpm generate` is deterministic and preserves each slide’s authored notes when the sequence changes.
 
 ## Validate and distribute
 

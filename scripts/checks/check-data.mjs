@@ -15,11 +15,21 @@ export function checkData() {
   assert.deepEqual(slides.map(slide => slide.id), [...opening, ...workshop].map(slide => slide.id), 'Generated slides must match the authored sequence')
   assert.equal(new Set(slides.map(slide => slide.id)).size, slides.length, 'Slide IDs must be unique')
   const markdown = fs.readFileSync(path.join(root, 'slides.md'), 'utf8')
-  assert(!markdown.includes('<!--'), 'The presentation must not contain presenter notes')
+  const speakerNotes = read('data/content/speaker-notes.json')
+  assert.deepEqual(Object.keys(speakerNotes).sort(), slides.map(slide => slide.id).sort(), 'Every slide must have its own speaker notes, without orphan entries')
+  const renderedNotes = [...markdown.matchAll(/<DeckSlide id="([^"]+)" \/>\s*<!--\n([\s\S]*?)\n-->/g)]
+  assert.equal(renderedNotes.length, slides.length, 'Include speaker notes after every Slidev slide')
   assert.equal([...markdown.matchAll(/<DeckSlide id="([^"]+)"/g)].length, slides.length)
   for (const [index, slide] of slides.entries()) {
     assert.equal(slide.number, index + 1, `${slide.id}: incorrect slide number`)
-    assert(!Object.hasOwn(slide, 'notes'), `${slide.id}: removed presenter notes must not return`)
+    assert(!Object.hasOwn(slide, 'notes'), `${slide.id}: keep speaker notes separate from audience content`)
+    const notes = speakerNotes[slide.id]
+    assert(typeof notes === 'string' && notes.trim(), `${slide.id}: missing speaker notes`)
+    assert(notes.split(/\s+/).length <= 60, `${slide.id}: keep the speaker notes short enough to read during the talk`)
+    assert(/\*\*[^*\n]+\*\*/.test(notes) && notes.match(/\*\*/g).length % 2 === 0, `${slide.id}: emphasise key words with balanced Markdown bold`)
+    assert(!/<!--|-->/.test(notes), `${slide.id}: notes must not contain nested HTML comments`)
+    assert.equal(renderedNotes[index][1], slide.id, `${slide.id}: notes must remain attached to the right slide after reordering`)
+    assert.equal(renderedNotes[index][2], notes, `${slide.id}: preserve the authored speaker notes`)
     for (const id of slide.sources) assert(sources[id], `${slide.id}: missing source ${id}`)
   }
   assert.equal(flows.length, 1, 'Only one complete presentation path is supported')
@@ -204,7 +214,7 @@ export function checkData() {
     for (const field of ['src', 'poster', 'captions']) assert(fs.existsSync(path.join(root, 'public', slide.media[field])), `${demo.key}: missing ${field}`)
     assert.equal(slide.media.transcript, fs.readFileSync(path.join(root, 'public/materials/notebook', `${demo.key}-transcript.txt`), 'utf8'))
   }
-  console.log(`Content checks passed: ${slides.length} ordered slides, separate Study and Read aloud actions, ${commands.length} unique informal shortcuts, references and QR, no presenter notes.`)
+  console.log(`Content checks passed: ${slides.length} ordered slides with concise presenter notes, separate Study and Read aloud actions, ${commands.length} unique informal shortcuts, references and QR.`)
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) checkData()

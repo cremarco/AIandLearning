@@ -16,7 +16,7 @@ const workshop = read('data/content/workshop-slides.json', []).map(slide => ({
 }))
 
 const slides = [...intro, ...workshop].map((slide, index) => {
-  // The deck has one sequence and no speaker scripts or per-event timing variants.
+  // Audience content has one sequence; speaker notes are authored separately by ID.
   const { notes, duration, ...content } = slide
   return {
     ...content,
