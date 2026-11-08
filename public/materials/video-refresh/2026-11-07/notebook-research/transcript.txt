@@ -1,0 +1,38 @@
+NotebookLM — NotebookLM
+
+REQUEST
+Find reliable primary sources that distinguish tokenization, document retrieval (RAG), and language-model training. Prefer official documentation or original research. I will inspect the source relevance before importing anything.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.208 Upload the workshop book as the source. (3× speed)
+00:00:01.204 Upload the workshop book. (3× speed)
+00:00:02.208 Search for additional primary sources. (3× speed)
+00:00:02.540 Write the complete source-discovery request. (3× speed)
+00:00:05.035 Read the complete research request.
+00:00:07.139 Start Fast Research. (3× speed)
+00:00:07.235 Fast Research discovers candidate sources. (4× speed)
+00:00:07.911 Review the discovered sources before importing anything.
+00:00:08.015 Inspect the source titles and relevance
+00:00:11.112 Inspect the primary tokenizer documentation.
+00:00:12.022 Inspect the published documentation and its legacy v0.10.0 notice.
+00:00:15.222 Inspect the primary tokenizer documentation.
+00:00:15.969 Deselect the suggested source batch
+00:00:17.018 Select the reviewed primary documentation
+00:00:18.314 Import only the selected documentation
+00:00:21.279 Widen the source comparison. (3× speed)
+00:00:21.582 Write the source-grounded request. (3× speed)
+00:00:23.833 Read the complete request.
+00:00:25.945 Send the question with the selected book. (3× speed)
+00:00:26.254 Generate the answer from the selected source. (4× speed)
+00:00:26.836 Read both source-grounded points and their citation numbers.
+00:00:34.179 Export the checked result.
+
+OBSERVED RESULT
+
+
+
+NATIVE ORIGINAL-SOURCE READING INSERTS
+3.2s reading https://huggingface.co/docs/tokenizers/python/latest/index.html after the recorded trigger action (Open the Hugging Face tokenizer documentation). Actual original capture: 2026-11-08T11:45:38.837313+00:00; SHA-256 b94fd4f0340d749e728e8e7ec6f2408cb44781a595ed0ac05fe3ddd84d87a4fa. Later native pixels are an explicit editorial insert, not backdated source frames.

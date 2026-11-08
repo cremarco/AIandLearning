@@ -1,0 +1,55 @@
+NotebookLM — 
+
+REQUEST
+Create a compact quiz from the uploaded book on context versus parameters, tokens versus words, and probability versus truth. Use six questions if the native controls allow it. Include hints and explanatory feedback. Answer in English.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.222 Upload the workshop book as the source. (3× speed)
+00:00:00.582 The workshop book is being indexed. (3× speed)
+00:00:00.825 Widen the quiz request. (3× speed)
+00:00:01.145 Write the source-grounded request. (3× speed)
+00:00:03.533 Read the complete request.
+00:00:05.639 Send the question with the selected book. (3× speed)
+00:00:05.908 Generate the answer from the selected source. (4× speed)
+00:00:05.928 Answer a quiz question and inspect the feedback.
+00:00:05.930 Choose native quiz settings (3× speed)
+00:00:09.480 Read the complete quiz request
+00:00:11.768 Read and scroll the native quiz configuration. (3× speed)
+00:00:13.491 Generate the configured native quiz. (4× speed)
+00:00:13.652 Read the question and ask for a hint.
+00:00:16.432 Ask for a source-based hint
+00:00:19.809 Read the native question and inspect the feedback.
+00:00:19.976 Try the continuous-weight-update answer
+00:00:24.342 Read the feedback, then continue to the next question.
+00:00:28.456 Try the next question
+00:00:31.477 Read the native question and inspect the feedback.
+00:00:31.797 Choose the tokenizer-based answer
+00:00:37.746 Continue to the next question
+00:00:40.578 Read the native question and inspect the feedback.
+00:00:40.984 Choose the lookup-index and embedding explanation
+00:00:47.025 Continue with another application
+00:00:50.094 Read the native question and inspect the feedback.
+00:00:50.506 Choose continuation likelihood rather than truth
+00:00:55.831 Try another source-based scenario
+00:00:58.388 Read the native question and inspect the feedback.
+00:00:58.788 Choose the flatter distribution
+00:01:04.035 Continue to the final question
+00:01:06.975 Read the native question and inspect the feedback.
+00:01:07.481 Choose the retrieval-augmented context explanation
+00:01:12.987 Review the result and return to the missed question.
+00:01:13.123 View the completed quiz result
+00:01:16.833 Retake the missed question after reading the explanation.
+00:01:17.333 Choose a new attempt
+00:01:19.938 Retake only the missed question
+00:01:23.734 Correct the missed context-versus-parameters answer
+00:01:30.282 Check the result of the missed-question retry
+NATIVE APPS ACTIVATION MARKERS
+Some markers identify the measured centre of a native iframe control activated through the documented locator. Exact delivered pointer coordinates are not exposed; these are not CDP pointer traces. The source retains its actual hit tests and input-request clocks.
+
+
+OBSERVED RESULT
+
+

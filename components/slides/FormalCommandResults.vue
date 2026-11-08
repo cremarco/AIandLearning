@@ -5,19 +5,21 @@ import type { PromptCommand } from '../../utils/deck'
 import { assetUrl } from '../../utils/assets'
 import CommandTag from '../shared/CommandTag.vue'
 import EmphasisText from '../shared/EmphasisText.vue'
+import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
 
 const props = defineProps<{ commands: PromptCommand[] }>()
 const selectedIndex = ref(0)
 const selected = computed(() => props.commands[selectedIndex.value] || props.commands[0])
 const result = computed(() => selected.value?.result)
+const studyVideo = computed(() => selected.value?.command === 'Study' && result.value?.media.type === 'video')
 const video = ref<HTMLVideoElement>()
 const pauseVideo = useSlideVideo(video)
 watch(selectedIndex, pauseVideo)
 </script>
 
 <template>
-  <div class="formal-command-results" :class="selected?.command === 'Study' ? 'formal-study-chat' : 'formal-split'">
-    <section v-if="selected?.command === 'Study' && result" class="formal-study-conversation" :data-command="selected.command" :data-result-status="result.status" aria-label="Recorded Study conversation" aria-live="polite">
+  <div class="formal-command-results" :class="[selected?.command === 'Study' && !studyVideo ? 'formal-study-chat' : 'formal-split', { 'formal-video': result?.media.type === 'video' }]">
+    <section v-if="selected?.command === 'Study' && result && !studyVideo" class="formal-study-conversation" :data-command="selected.command" :data-result-status="result.status" aria-label="Recorded Study conversation" aria-live="polite">
       <div class="chat chat-end">
         <div class="chat-header">You · Prompt after selecting Study</div>
         <div class="chat-bubble max-w-[850px] bg-base-200 text-base-content"><CommandTag text="/Study" class="mr-2" /><EmphasisText :text="result.instruction" /></div>
@@ -39,13 +41,13 @@ watch(selectedIndex, pauseVideo)
             </button>
           </li>
         </ul>
-        <p class="formal-instruction-label">Action</p>
+        <p class="formal-instruction-label">{{ result?.instructionExcerpt ? 'Prompt summary' : 'Action' }}</p>
         <CommandTag v-if="selected" :text="selected.command" class="mt-2" />
-        <p class="formal-instruction">{{ result?.instruction }}</p>
+        <p class="formal-instruction">{{ result?.instructionExcerpt || result?.instruction }}</p>
       </nav>
       <section v-if="result" class="formal-command-output" :data-command="selected.command" :data-result-status="result.status" aria-live="polite">
-        <h2>{{ result.label }}</h2>
-        <p v-if="result.text" class="formal-response">{{ result.text }}</p>
+        <h2 v-if="result.media.type !== 'video'">{{ result.label }}</h2>
+        <p v-if="result.text && result.media.type !== 'video'" class="formal-response">{{ result.text }}</p>
         <figure v-else-if="result.media.type === 'video'" class="formal-recording">
           <video ref="video" :key="result.media.src" controls playsinline preload="none" :poster="assetUrl(result.media.poster || '')" :aria-label="result.media.alt" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
             <source :src="assetUrl(result.media.src)" type="video/mp4" />
@@ -54,11 +56,14 @@ watch(selectedIndex, pauseVideo)
           <img class="formal-print-poster" :src="assetUrl(result.media.poster || '')" :alt="result.media.alt" />
         </figure>
         <img v-else class="formal-result-image" :src="assetUrl(result.media.src)" :alt="result.media.alt" />
-        <p class="formal-result-caption">{{ result.media.caption }}</p>
-        <div class="formal-result-links">
-          <a v-if="selected.command !== 'Study'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>{{ result.media.type === 'video' ? 'Open video' : 'Open original capture' }}</a>
-          <a v-if="result.media.type === 'video' && result.media.source" class="link" :href="result.media.source" target="_blank" rel="noopener" @click.stop @keydown.stop>Original conversation</a>
-        </div>
+        <footer class="formal-recording-caption">
+          <p class="formal-result-caption"><template v-if="result.media.type === 'video'">{{ result.label }} · </template>{{ result.media.caption }}</p>
+          <div class="formal-result-links">
+            <a v-if="selected.command !== 'Study' || result.media.type === 'video'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>{{ result.media.type === 'video' ? 'Open video' : 'Open original capture' }}</a>
+            <a v-if="result.media.type === 'video' && result.media.source && !result.media.result" class="link" :href="result.media.source" target="_blank" rel="noopener" @click.stop @keydown.stop>Original conversation</a>
+          </div>
+          <RecordingResultLinks compact :result="result.media.result" />
+        </footer>
       </section>
     </template>
   </div>
@@ -84,9 +89,7 @@ watch(selectedIndex, pauseVideo)
 .slidev-layout .formal-command-output h2 { font-size:23px; color:var(--deck-cyan); }
 .slidev-layout .formal-response { white-space:pre-line; font-size:22px; line-height:1.3; }
 .formal-result-image { display:block; width:100%; max-height:270px; object-fit:contain; object-position:left top; }
-.formal-recording { margin:0; min-width:0; }
-.formal-recording video,.formal-print-poster { display:block; width:100%; max-height:320px; aspect-ratio:8 / 3; object-fit:cover; object-position:center; border-radius:12px; }
-.formal-recording .formal-print-poster { display:none; }
+.formal-recording-caption { display:flex; flex-direction:column; gap:13px; }
 :global(.workshop-print) .formal-recording video { display:none; }
 :global(.workshop-print) .formal-recording .formal-print-poster { display:block; }
 @media print { .formal-recording video { display:none; } .formal-recording .formal-print-poster { display:block; } }

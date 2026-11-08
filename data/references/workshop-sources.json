@@ -826,18 +826,6 @@
     "license": "Summary and link; original terms apply.",
     "verified": "2026-11-05"
   },
-  "SKILL_CITATION_MANAGEMENT": {
-    "title": "K-Dense · citation-management",
-    "label": "K-Dense · citation-management",
-    "citation": "K-Dense. citation-management: publisher instructions, reviewed and tested 5 November 2026.",
-    "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/citation-management/SKILL.md",
-    "doi": null,
-    "publication_status": "Publisher source; package revision a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-    "claim_locator": "SKILL.md and supporting package files.",
-    "limitations": "Metadata verification does not verify that a paper supports a particular claim.",
-    "license": "Summary and link; original package terms apply.",
-    "verified": "2026-11-05"
-  },
   "SKILL_LITERATURE_REVIEW": {
     "title": "K-Dense · literature-review",
     "label": "K-Dense · literature-review",
@@ -1173,42 +1161,6 @@
     "license": "Original recorded demonstration.",
     "verified": "2026-11-05"
   },
-  "SKILL_CRITICAL_THINKING": {
-    "title": "K-Dense · scientific-critical-thinking",
-    "label": "K-Dense · scientific-critical-thinking",
-    "citation": "K-Dense. scientific-critical-thinking: publisher instructions, reviewed and tested 5 November 2026.",
-    "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-critical-thinking/SKILL.md",
-    "doi": null,
-    "publication_status": "Publisher source; package revision a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-    "claim_locator": "SKILL.md and supporting package files.",
-    "limitations": "This is a chapter-based critique, not a formal risk-of-bias assessment or a study of learning gains.",
-    "license": "Summary and link; original package terms apply.",
-    "verified": "2026-11-05"
-  },
-  "SKILL_DEMO_SCIENTIFIC_CRITICAL_THINKING": {
-    "title": "ChatGPT web · scientific-critical-thinking chapter test",
-    "label": "Recorded chapter test",
-    "citation": "Cremaschi, M. (2026, November 5). scientific-critical-thinking: recorded ChatGPT web test using the workshop book.",
-    "url": "https://chatgpt.com/c/6aecb43d-3578-83ed-a6ca-a770c362b923",
-    "doi": null,
-    "publication_status": "Real web execution; authored teaching inputs",
-    "claim_locator": "Recorded interaction, output files and materials/skills/provenance.json.",
-    "limitations": "One task demonstration using GPT-6.1 Sol Light in Work mode. Andrea’s messages are authored teaching inputs, not a student study. Conversation access may require the recording account.",
-    "license": "Original recorded demonstration.",
-    "verified": "2026-11-05"
-  },
-  "SKILL_DEMO_CITATION_MANAGEMENT": {
-    "title": "ChatGPT web · citation-management chapter test",
-    "label": "Recorded chapter test",
-    "citation": "Cremaschi, M. (2026, November 5). citation-management: recorded ChatGPT web test using the workshop book.",
-    "url": "https://chatgpt.com/c/6aecb499-5510-83eb-8d64-9a2419a39c35",
-    "doi": null,
-    "publication_status": "Real web execution; authored teaching inputs",
-    "claim_locator": "Recorded interaction, output files and materials/skills/provenance.json.",
-    "limitations": "One task demonstration using GPT-6.1 Sol Light in Work mode. Andrea’s messages are authored teaching inputs, not a student study. Conversation access may require the recording account.",
-    "license": "Original recorded demonstration.",
-    "verified": "2026-11-05"
-  },
   "TOOL_DRAWIO": {
     "title": "draw.io · free diagram editor",
     "label": "draw.io · free diagram editor",
@@ -1340,5 +1292,13 @@
     "url": "./materials/skills/outputs/chapter-quiz-reviewed.html",
     "claim_locator": "Questions 1–3 and visible manual self-assessment controls.",
     "limitations": "Post-recording workshop adaptation; not a publisher skill output, automated semantic grader or validated assessment."
+  },
+  "CHATGPT_WIDGET_RECHECK": {
+    "title": "ChatGPT · shortcut recheck · 7 Nov 2026",
+    "label": "ChatGPT · fresh shortcut control checks",
+    "citation": "Author’s live ChatGPT web tests, 7 November 2026. All 49 previously static prompt labels rerun with the original chapter in fresh temporary chats; 41 working interactive outputs and 8 static outcomes.",
+    "url": "./materials/chatgpt-widgets/recheck/provenance.json",
+    "verified": "2026-11-07",
+    "limitations": "One new execution per previously static label in the author’s account. The 30 earlier interactive labels were not rerun in this check. These are prompt labels, not registered commands. Output formats can vary between requests. Answer reveals and reviewer-selected scores are not automatic grading. Temporary-chat URLs do not remain accessible after closing their tabs. Private screenshots and UI snapshots preserve the observed actions; the published record contains prompts, actions and outcomes."
   }
 }

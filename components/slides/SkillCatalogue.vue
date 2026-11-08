@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useSelectionMotion } from '../../composables/useSelectionMotion'
 import research from '../../data/catalogues/skills-research.json'
 import { assetUrl } from '../../utils/assets'
+import type { StudyFocus } from '../../utils/deck'
 
 const props = defineProps<{ ids: string[] }>()
+const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const index = ref(0)
 const skills = computed(() => props.ids.map(id => research.skills.find(skill => skill.id === id)).filter(Boolean))
 const selected = computed(() => skills.value[index.value] || skills.value[0])
+watch(selected, skill => emit('studyPhaseChange', skill?.studyPhases as StudyFocus | undefined), { immediate: true })
 const detail = ref<HTMLElement>()
 useSelectionMotion(detail, () => selected.value?.id)
 </script>
@@ -28,10 +31,7 @@ useSelectionMotion(detail, () => selected.value?.id)
     </nav>
     <section v-if="selected" ref="detail" class="skill-detail" :data-skill="selected.id" aria-live="polite">
       <h2>{{ selected.summary }}</h2>
-      <div class="chat chat-end skill-prompt">
-        <div class="chat-header">{{ selected.executionStatus === 'executed' ? 'Tested request · excerpt' : 'Example request · not executed' }}</div>
-        <div class="chat-bubble max-w-full bg-base-200 text-base-content">{{ selected.promptExcerpt || selected.prompt }}</div>
-      </div>
+      <p class="skill-capabilities">{{ selected.capabilities || selected.summary }}</p>
       <div class="skill-expected"><h3>{{ selected.executionStatus === 'executed' ? 'Observed in the chapter test' : 'Expected deliverable' }}</h3><p>{{ selected.resultExcerpt || selected.expected }}</p></div>
       <p class="skill-caveat">{{ selected.caveat }}</p>
       <div class="skill-links">
@@ -53,9 +53,7 @@ useSelectionMotion(detail, () => selected.value?.id)
 .slidev-layout .skill-host p { font-size:18px; line-height:1.25; color:var(--deck-muted); }
 .skill-detail { min-width:0; display:flex; flex-direction:column; gap:20px; padding-top:6px; }
 .slidev-layout .skill-detail h2 { font-size:26px; line-height:1.2; }
-.skill-prompt { padding-block:0; row-gap:8px; }
-.slidev-layout .skill-prompt .chat-header { color:var(--deck-muted); font-size:var(--deck-text-label); line-height:1.25; font-weight:650; }
-.slidev-layout .skill-prompt .chat-bubble { padding:12px 20px; font-size:22px; line-height:1.3; white-space:pre-wrap; overflow-wrap:anywhere; user-select:text; }
+.slidev-layout .skill-capabilities { font-size:22px; line-height:1.35; overflow-wrap:anywhere; }
 .skill-expected { display:flex; flex-direction:column; gap:5px; }
 .slidev-layout .skill-expected h3 { font-size:var(--deck-text-label); color:var(--deck-cyan); font-weight:650; opacity:1; text-transform:none; letter-spacing:0; }
 .slidev-layout .skill-expected p { font-size:22px; line-height:1.25; }

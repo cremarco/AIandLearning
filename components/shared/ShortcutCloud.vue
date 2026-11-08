@@ -60,16 +60,15 @@ const height = 648
 const anchors: Record<string, { x: number; y: number; size: number; angle: number }> = {
   '/flashcard': { x: .53, y: .47, size: 72, angle: -10 },
   '/quiz': { x: .23, y: .25, size: 64, angle: -10 },
-  '/mindmap': { x: .74, y: .22, size: 52, angle: -10 },
-  '/summary': { x: .25, y: .72, size: 50, angle: -10 },
+  '/oral': { x: .74, y: .22, size: 52, angle: -10 },
+  '/caseStudy': { x: .25, y: .72, size: 50, angle: -10 },
   '/worksheet': { x: .66, y: .72, size: 43, angle: -10 },
-  '/eli5': { x: .88, y: .59, size: 43, angle: 90 },
   '/studyplan': { x: .25, y: .48, size: 36, angle: -90 },
-  '/rubric': { x: .49, y: .20, size: 34, angle: -10 },
+  '/mistakelog': { x: .49, y: .20, size: 34, angle: -10 },
 }
 // A clockwise reading cue starts with the central task, then visits the anchors.
-const focusOrder = ['/flashcard', '/quiz', '/rubric', '/mindmap', '/eli5', '/worksheet', '/summary', '/studyplan']
-const warm = new Set(['/quiz', '/worksheet', '/pomodoro', '/mistakelog', '/recall'])
+const focusOrder = ['/flashcard', '/quiz', '/mistakelog', '/oral', '/worksheet', '/caseStudy', '/studyplan']
+const warm = new Set(['/quiz', '/worksheet', '/mistakelog', '/oral'])
 const hash = (text: string) => [...text].reduce((seed, character) => (Math.imul(seed, 31) + character.charCodeAt(0)) >>> 0, 7)
 type WordBox = { x: number; y: number; width: number; height: number; halfWidth: number; halfHeight: number; cos: number; sin: number }
 const intersects = (a: WordBox, b: WordBox) => {

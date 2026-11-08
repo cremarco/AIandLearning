@@ -1,13 +1,13 @@
 {
   "verified": "2026-11-05",
-  "scope": "17 reusable Agent Skills for study, research and teaching. Six publisher packages were imported and tested in ChatGPT web, Work mode, using the workshop book. The other entries remain source-reviewed and unexecuted.",
+  "scope": "15 reusable Agent Skills for study, research and teaching. Four publisher packages were imported and tested in ChatGPT web, Work mode, using the workshop book. The other entries remain source-reviewed and unexecuted.",
   "method": [
     "Start from the skills.sh directory and authoritative vendor repositories.",
     "Read the actual skill or publisher documentation; identify runtime, tools, licensing and limits.",
     "Use install counts and repository stars only as dated discovery signals, not evidence of efficacy.",
     "Read the latest arXiv versions rather than relying on older search snippets.",
     "Distinguish proposed classroom uses from measured agent benchmarks and recorded ChatGPT outputs.",
-    "Import six version-pinned publisher packages through the ChatGPT web Skill library, attach the original workshop chapter, inspect the results and record real browser actions. Keep unexecuted catalogue examples labelled separately."
+    "Import four version-pinned publisher packages through the ChatGPT web Skill library, attach the original workshop chapter, inspect the results and record real browser actions. Keep unexecuted catalogue examples labelled separately."
   ],
   "skills": [
     {
@@ -113,48 +113,6 @@
         "url": "https://www.skills.sh/anthropics/skills/xlsx",
         "snapshot": "2026-11-05"
       }
-    },
-    {
-      "id": "citation-management",
-      "name": "citation-management",
-      "publisher": "K-Dense",
-      "origin": "community",
-      "platform": "Skills-compatible research agents",
-      "requirements": "Python 3.9+; network access to metadata services.",
-      "summary": "Verify references and build a bibliography.",
-      "prompt": "Verify only the three technical references listed in the attached workshop book: Vaswani et al. (2017), Attention Is All You Need, arXiv:1706.03762; Ouyang et al. (2022), Training language models to follow instructions with human feedback, arXiv:2203.02155; Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401. Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file. Explain briefly why correct metadata does not by itself verify a chapter claim. Answer in English.",
-      "expected": "Matched all three references to arXiv and NeurIPS records and produced a downloadable BibTeX file. Explicitly separated bibliographic identity from claim support.",
-      "caveat": "Metadata verification does not verify that a paper supports a particular claim.",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "sourceUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/citation-management/SKILL.md",
-      "sourceId": "SKILL_CITATION_MANAGEMENT",
-      "installCommand": "npx skills add K-Dense-AI/scientific-agent-skills --skill citation-management",
-      "license": "MIT",
-      "reviewStatus": "source-reviewed",
-      "executionStatus": "executed",
-      "verified": "2026-11-05",
-      "popularity": {
-        "installs": "2.3K",
-        "repositoryStars": "56.0K",
-        "url": "https://www.skills.sh/k-dense-ai/scientific-agent-skills/citation-management",
-        "snapshot": "2026-11-05"
-      },
-      "observed": "Matched all three references to arXiv and NeurIPS records and produced a downloadable BibTeX file. Explicitly separated bibliographic identity from claim support.",
-      "demoSlideId": "S53SKILLCITATIONS",
-      "conversationUrl": "https://chatgpt.com/c/6aecb499-5510-83eb-8d64-9a2419a39c35",
-      "sourceCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
-      "promptExcerpt": "Check identity, year and venue against primary records. Return a compact table, source links and a downloadable BibTeX file.",
-      "resultExcerpt": "Three book references matched to primary records; a BibTeX file downloaded.",
-      "artifacts": [
-        {
-          "label": "Download the verified BibTeX",
-          "url": "materials/skills/outputs/verified-references.bib",
-          "sha256": "cd914dbd792ee7756d7179eb397ea43369a009411d9ddb66f528a48f1e1d6e82",
-          "originalSha256": "cd914dbd792ee7756d7179eb397ea43369a009411d9ddb66f528a48f1e1d6e82",
-          "adaptations": []
-        }
-      ]
     },
     {
       "id": "literature-review",
@@ -346,6 +304,7 @@
       "platform": "Tested in ChatGPT web · Work mode",
       "requirements": "Instruction-only tutoring; visuals depend on host tools.",
       "summary": "Guide one step of Andrea’s understanding.",
+      "capabilities": "Guides learning through diagnostic questions, explanations and targeted feedback. Checks understanding before moving on and asks the learner to apply the idea to a new case.",
       "prompt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.",
       "expected": "Asked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.",
       "caveat": "Allow the learner to change pace or stop; the publisher’s pressure-handling rules need context.",
@@ -370,7 +329,13 @@
       "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7.",
       "resultExcerpt": "One question, source-linked feedback and a transfer check.",
-      "artifacts": []
+      "artifacts": [],
+      "studyPhases": {
+        "primary": "understand",
+        "secondary": [
+          "check"
+        ]
+      }
     },
     {
       "id": "the-learning-skill",
@@ -380,9 +345,10 @@
       "platform": "Tested in ChatGPT web · Work mode",
       "requirements": "Python for generators; a browser/PDF backend for the cheatsheet.",
       "summary": "Plan, practise and retain the chapter.",
+      "capabilities": "Combines retrieval practice with study planning. Creates notes, flashcards, quizzes and review sessions, bringing them together in a reusable study kit.",
       "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
-      "expected": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. A duplicated due-card count was corrected; reveal and Good → next card (3 due → 2) were checked. The recording shows one correct-answer quiz feedback path; the later review found unreliable keyword grading.",
-      "caveat": "The recorded quiz grades by keyword and rejects valid paraphrases. Use the separately reviewed manual self-assessment copy; the original recording is preserved.",
+      "expected": "Three flashcards with due-only review, a written quiz assessed against explicit criteria, a comparison sheet and two five-minute reviews.",
+      "caveat": "The shared chat shows readable code. Download the HTML kit to use its controls outside the author’s session.",
       "repo": "toddward/the-learning-skill",
       "sourceUrl": "https://github.com/toddward/the-learning-skill/blob/main/the-learning-skill/SKILL.md",
       "sourceId": "SKILL_LEARNING",
@@ -403,7 +369,7 @@
       "sourceCommit": "764f77764e9a731f74da297a4963959670e80e03",
       "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
       "promptExcerpt": "Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance.",
-      "resultExcerpt": "Recall first, then notes, three HTML flashcards, a quiz and two reviews.",
+      "resultExcerpt": "Recall, retry the difficult card, and correct one written answer before self-assessment.",
       "artifacts": [
         {
           "label": "Open the corrected HTML flashcards",
@@ -430,7 +396,13 @@
           "url": "materials/skills/outputs/chapter-quiz-reviewed.html",
           "role": "post-recording workshop adaptation"
         }
-      ]
+      ],
+      "studyPhases": {
+        "primary": "recall",
+        "secondary": [
+          "plan"
+        ]
+      }
     },
     {
       "id": "markdown-mermaid-writing",
@@ -440,6 +412,7 @@
       "platform": "Tested in ChatGPT web · Work mode",
       "requirements": "A Mermaid renderer for diagrams; Node/Chromium only for local export.",
       "summary": "Represent chapter relationships as editable text.",
+      "capabilities": "Organises explanations in Markdown and turns relationships into Mermaid diagrams. Keeps the diagram editable as text and provides a written alternative.",
       "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
       "expected": "Produced a rendered eight-node Mermaid flowchart, accessible title and description, text alternative and section references. The code editor opens.",
       "caveat": "Mermaid rendering and accessibility depend on the host; verify every relationship.",
@@ -479,7 +452,10 @@
           "originalSha256": "caf1605cf17e403f88fdd9c18715e77c95cfae06c90ec627b3f9eb9ebf34c9d4",
           "adaptations": []
         }
-      ]
+      ],
+      "studyPhases": {
+        "primary": "connect"
+      }
     },
     {
       "id": "flashcard-generator",
@@ -489,6 +465,7 @@
       "platform": "Tested in ChatGPT web · Work mode",
       "requirements": "PDF/Markdown input and file output; no interactive app generator.",
       "summary": "Create three source-linked recall questions.",
+      "capabilities": "Turns PDF or Markdown material into stand-alone question-and-answer cards for recall practice. Exports a plain-text deck for reuse in a flashcard tool.",
       "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.",
       "expected": "Created and downloaded a text file containing exactly three Question | Answer pairs. Each answer is under 30 words and cites §1.2 or §1.7.",
       "caveat": "Text-only cards exclude image-dependent questions; verify the content before repeated practice.",
@@ -521,41 +498,10 @@
           "originalSha256": "ed43f7dccafa2d5159504a31411572edbbab431cd6eeacb105fb9d9cbf23fafd",
           "adaptations": []
         }
-      ]
-    },
-    {
-      "id": "scientific-critical-thinking",
-      "name": "scientific-critical-thinking",
-      "publisher": "K-Dense",
-      "origin": "community",
-      "platform": "Tested in ChatGPT web · Work mode",
-      "requirements": "Analytical guidance needs no network; source text must be available.",
-      "summary": "Compare Andrea’s claims with chapter evidence.",
-      "prompt": "Using only the attached workshop book, review Andrea’s explanation: \"Adding the chapter to a prompt updates model weights. RAG retrieves passages and therefore guarantees a correct answer. Increasing temperature adds knowledge.\" Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7. Distinguish what the chapter states from anything not established. End with one question Andrea should answer independently. Keep the response under 220 words. Answer in English.",
-      "expected": "Checked all three claims against §§1.2, 1.6 and 1.7, gave specific corrections and ended with an independent question about isolating context and temperature effects.",
-      "caveat": "This is a chapter-based critique, not a formal risk-of-bias assessment or a study of learning gains.",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "sourceUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-critical-thinking/SKILL.md",
-      "sourceId": "SKILL_CRITICAL_THINKING",
-      "installCommand": "npx skills add https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-critical-thinking",
-      "license": "MIT",
-      "reviewStatus": "source-reviewed",
-      "executionStatus": "executed",
-      "verified": "2026-11-05",
-      "popularity": {
-        "installs": "Not recorded",
-        "repositoryStars": "Not recorded",
-        "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-        "snapshot": "2026-11-05"
-      },
-      "observed": "Checked all three claims against §§1.2, 1.6 and 1.7, gave specific corrections and ended with an independent question about isolating context and temperature effects.",
-      "demoSlideId": "S53SKILLCRITICAL",
-      "conversationUrl": "https://chatgpt.com/c/6aecb43d-3578-83ed-a6ca-a770c362b923",
-      "sourceCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "webInstall": "Observed in the author's account on 5 Nov 2026: Plugins → Skills → Add skill → Upload the reviewed package; then select the skill in Work mode. Use the skill/plugin controls available in your own account; this menu is not universal.",
-      "promptExcerpt": "Make a compact table: claim, verdict, chapter evidence, correction. Use §§1.2, 1.6 and 1.7.",
-      "resultExcerpt": "Three misconceptions checked against specific chapter sections.",
-      "artifacts": []
+      ],
+      "studyPhases": {
+        "primary": "recall"
+      }
     }
   ],
   "benchmarks": [
@@ -581,5 +527,5 @@
       "deltaPercentagePoints": 0.3
     }
   ],
-  "limitations": "The six demonstrations test outputs and controls on one chapter with one model and account. They do not establish learning gains or compare skill efficacy. Benchmark aggregates do not rank these packages or measure student learning."
+  "limitations": "The four demonstrations test outputs and controls on one chapter with one model and account. They do not establish learning gains or compare skill efficacy. Benchmark aggregates do not rank these packages or measure student learning."
 }

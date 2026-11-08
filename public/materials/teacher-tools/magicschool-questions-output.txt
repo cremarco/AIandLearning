@@ -1,0 +1,57 @@
+MagicSchool said:Language Model Concepts: Training, Inference, and Retrieval
+
+
+Why is it inaccurate to assume that a model's token count always equals its word count?
+A. Each token represents exactly one complete word.
+B. Tokens represent words, while punctuation is not tokenized.
+C. A token can represent a whole word, part of a word, or punctuation.
+D. Each token represents exactly one written character.
+
+
+A user adds a definition of a technical term to a prompt before requesting an answer. What is the most accurate description of this addition?
+A. It retrains the model so later prompts retain the definition.
+B. It changes the context available for inference without itself updating model parameters.
+C. It updates model parameters to store the definition permanently.
+D. It automatically retrieves supporting passages from an external source.
+
+
+A system uses retrieval-augmented generation (RAG) to provide relevant passages alongside a user's question. Which statement best distinguishes this from updating model parameters?
+A. Parameter updates supply passages without changing model parameters.
+B. RAG permanently incorporates retrieved passages into model parameters.
+C. RAG guarantees that the generated response is factually correct.
+D. RAG supplies retrieved passages as context; parameter updating changes the model's learned parameters.
+
+
+A model completes two different prompts without any parameter-update procedure. Which description best distinguishes this activity from training?
+A. Inference uses fixed parameters while the prompts provide different contexts.
+B. Training and inference both change parameters during use.
+C. Inference updates parameters each time a prompt is entered.
+D. Changing the prompt retrains the model on new examples.
+
+
+A language model assigns high probability to a particular next token. What does that probability indicate?
+A. That the model is certain about the topic discussed.
+B. How likely that token is as a continuation in context, not whether the complete answer is true.
+C. That the final claim is supported by reliable evidence.
+D. That the complete answer is factually true.
+
+
+
+Answer Key
+
+C
+B
+D
+A
+B
+Copy messageExportExportPrintTranslate messageRead aloudAdd to My ResourcesThumbs upThumbs down
+
+You said:Add the missing rationales. In the same question order, give the correct letter and one sentence explaining why. Keep all five explanations together under 100 words. Preserve the distinction between context and model parameters. Answer in English.Copy message
+
+MagicSchool said:
+C — A token may represent a complete word, part of a word, or punctuation.
+B — Adding a definition changes the prompt’s context, not the model’s parameters.
+D — RAG adds retrieved passages as context, while parameter updates change the model’s learned parameters.
+A — Inference uses fixed parameters, while different prompts provide different contexts.
+B — Next-token probability estimates a possible continuation, not the factual truth of the full answer.
+Copy messageExportExportPrintTranslate messageRead aloudRead aloudAdd to My ResourcesThumbs upThumbs down

@@ -1,0 +1,26 @@
+NotebookLM — NotebookLM
+
+REQUEST
+Using only the uploaded book, explain what stays fixed during ordinary inference. Answer in English in two short sentences.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.200 Upload the workshop book as the source. (3× speed)
+00:00:01.169 Upload the workshop book. (3× speed)
+00:00:02.196 Show how source selection controls the question scope.
+00:00:02.315 Deselect the book to show the source scope
+00:00:03.634 Select the book as the sole source
+00:00:06.148 Widen the question and result. (3× speed)
+00:00:06.505 Write the source-grounded request. (3× speed)
+00:00:07.986 Read the complete request.
+00:00:10.094 Send the question with the selected book. (3× speed)
+00:00:10.443 Generate the answer from the selected source. (4× speed)
+00:00:10.987 Read the answer before checking the original source.
+00:00:14.672 Check the cited statement in the original chapter.
+00:00:22.141 Export the checked source-grounded answer.
+
+OBSERVED RESULT
+
+

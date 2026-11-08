@@ -1,10 +1,13 @@
-import slideData from '../data/generated/slides.json'
+import slideData from '../data/generated/slides-runtime.json'
 
 export type Audience = 'student' | 'teacher' | 'both'
+export type StudyPhase = 'plan' | 'understand' | 'connect' | 'recall' | 'apply' | 'check'
+export type StudyFocus = { primary: StudyPhase | 'support'; secondary?: StudyPhase[] }
 export type SlideCard = { title: string; body?: string; backgroundImage?: string }
 export type CommandResult = {
   label: string
   instruction: string
+  instructionExcerpt?: string
   text?: string
   media: SlideMedia
   status: 'executed' | 'opened' | 'not-executed'
@@ -20,6 +23,27 @@ export type BookPreview = {
   portraitAlt: string
 }
 export type Character = { happy: string; worried: string; happyAlt: string; worriedAlt: string }
+export type ResultDownload = {
+  kind: 'file'
+  url: string
+  label: string
+  mediaType: string
+  download: true
+  sha256: string
+  bytes: number
+}
+export type VideoResult = {
+  kind: 'chatgpt-share' | 'native' | 'file'
+  url: string
+  label: string
+  interactiveVerified: boolean
+  recipientVerified: boolean
+  ownerIndependent: boolean
+  qualification?: string
+  mediaType?: string
+  download?: boolean
+  supplemental?: ResultDownload[]
+}
 export type SlideMedia = {
   src: string
   alt: string
@@ -33,6 +57,11 @@ export type SlideMedia = {
   caption?: string
   source?: string
   transcript?: string
+  transcriptFile?: string
+  provenance?: string
+  durationSeconds?: number
+  sha256?: string
+  result?: VideoResult
 }
 export type Reference = { label: string; citation: string; url?: string; display?: string; group?: string; shortTitle?: string }
 export type ToolTable = {
@@ -62,12 +91,14 @@ export type Slide = {
   shortcutLabels?: { command: string; retained: boolean }[]
   commandCategory?: CommandCategory
   skillIds?: string[]
+  studyPhases?: StudyFocus
   toolTable?: ToolTable
   references?: Reference[]
   prompt?: string
   promptExcerpt?: string
   promptLabel?: string
   promptStyle?: 'terminal' | 'chat'
+  videoLayout?: 'focus'
   comparison?: { label: string; text: string; audience?: Audience }[]
   steps?: { title: string; text: string }[]
   result?: string
@@ -79,5 +110,7 @@ export type Slide = {
 // Shared by interactive and print renderers; resolve a slide without rescanning
 // the catalogue every time a component updates.
 export const slides = slideData as Slide[]
+const thanksIndex = slides.findIndex(slide => slide.kind === 'thanks')
+export const presentationSlideCount = thanksIndex < 0 ? slides.length : thanksIndex + 1
 const slidesById = new Map(slides.map(slide => [slide.id, slide]))
 export const getSlide = (id: string) => slidesById.get(id)

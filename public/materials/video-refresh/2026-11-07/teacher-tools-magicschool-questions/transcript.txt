@@ -1,0 +1,33 @@
+MagicSchool — Multiple Choice Quiz / Assessment
+
+REQUEST
+Create five questions on the supplied chapter summary for second-year university students. Test training versus inference, a definition added to a prompt, tokens versus words, RAG versus parameter updates, and next-token probability versus truth. Provide the answer key and a brief rationale. Avoid trick questions. Source summary: training changes parameters; ordinary inference uses fixed parameters; a new prompt changes context; a token may be a word, word part or punctuation; RAG supplies retrieved passages as context and does not guarantee correctness; token probability measures a possible continuation, not the factual truth of the whole answer. Answer in English. Keep questions concise and provide one short rationale per correct answer.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start an empty MagicSchool assessment. (3× speed)
+00:00:00.364 Enter the approved brief and short source summary; PDF upload unavailable. (3× speed)
+00:00:09.486 Read the complete approved brief and short chapter summary.
+00:00:13.184 Generate five questions from the approved short summary. (3× speed)
+00:00:13.721 MagicSchool generates the original five-question assessment. (4× speed)
+00:00:14.458 Inspect the generated questions and their actual answer key.
+00:00:20.516 Request the missing explanations while preserving all five questions.
+00:00:20.557 Focus the answer field
+00:00:27.104 Generate the complete assessment with rationales
+00:00:27.493 Generate the missing answer rationales as a separate native response. (4× speed)
+00:00:28.114 Read question 1 and its answer options.
+00:00:31.058 Read question 2 and its answer options.
+00:00:33.865 Read question 3 and its answer options.
+00:00:36.654 Read question 4 and its answer options.
+00:00:39.418 Read question 5 and its answer options.
+00:00:42.183 Check each correct answer against its explanation.
+00:00:45.850 Export the native question set and its explanations together.
+00:00:45.955 Open the native assessment export options
+00:00:46.360 Export the actual assessment thread as Word
+00:00:49.412 Include the original questions and the separate rationales
+00:00:50.226 Download the original complete assessment thread
+
+OBSERVED RESULT
+Native MagicSchool five-question assessment created from the exact approved brief and short chapter summary only; PDF upload denied. Original key D,C,A,A,B. A genuine 1x follow-up requests missing rationales, generated in a separate native response. All five questions/options were read at1x for2.6s each and all five rationales for3.5s. Native Word Full Thread export preserves both actual responses; no manual merging.
+

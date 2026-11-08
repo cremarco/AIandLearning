@@ -35,7 +35,7 @@ const columns = computed(() => {
         </tbody>
       </table>
     </div>
-    <p v-if="category === 'informal'" class="command-video-hint">Select a shortcut to watch its prompt and widget generation.</p>
+    <p v-if="category === 'informal'" class="command-video-hint">Select a shortcut marked ▶ to watch its recorded demonstration.</p>
     <PromptVideoDialog ref="player" />
   </div>
 </template>

@@ -1,0 +1,10 @@
+During ordinary inference, the difference between learned parameters and context can be summarized in **three key points**:
+
+* **Permanence vs. input sequence:** **Learned parameters** are numerical values established during training that are used in the model's transformations, whereas **context** is the temporary sequence of tokens and information provided for a specific inference run.
+* **State during inference:** Ordinary inference operates with **fixed parameters** that do not update or change, while the **context** dynamically changes whenever a new message, prompt, or external passage is provided.
+* **Functional role:** **Parameters** define the internal calculation rules and transformations of the model, while **context** conditions the next-token probability distribution for that specific generation step.
+
+### Example Involving a Prompt Definition
+If a prompt includes a custom definition such as **"In this chapter, X means Y,"** the model can use this information from the conversation **context** to influence its output for that current message. However, using this definition in the prompt does not alter or update the model's underlying weights or parameters.
+
+💡 Would you like to explore how temperature or sampling settings affect token selection given a fixed context?

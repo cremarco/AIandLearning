@@ -17,7 +17,7 @@ async function assertNoPathControls(){
  assert.equal(await page.locator(pathControls).count(),0,'Route buttons, selectors and the custom navigation bar must be removed')
 }
 async function checkNativeUI(){
- const event=slides.find(s=>s.type==='brief'),luca=slides.find(s=>s.character)
+ const event=slides.find(s=>s.kind==='audience-legend'),luca=slides.find(s=>s.character)
  await page.goto(new URL(String(event.number),base).href,{waitUntil:'networkidle'})
  const next=page.getByRole('button',{name:'Go to next slide',exact:true})
  await next.focus()

@@ -45,6 +45,9 @@
 .has-four-steps:not(.has-media) .procedure-list li { padding-top:16px; border-top:1px solid var(--deck-line); }
 .slidev-layout .has-four-steps .procedure-list h2 { font-size:24px; }
 .slidev-layout .has-four-steps .procedure-list p { font-size:22px; }
+.slidev-layout .kind-study-phases .procedure-list { gap:20px 40px; }
+.slidev-layout .kind-study-phases .procedure-list li { padding-top:12px; }
+.slidev-layout .slide-S97 .tool-resource-table tbody :is(th,td) { padding-block:6px; }
 .has-mixed-content:not(.has-media) .workshop-copy { display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:start; }
 .has-mixed-content .comparison { grid-template-columns:minmax(0,1fr); gap:16px; }
 .has-mixed-content .procedure-list { padding-top:16px; border-top:1px solid var(--deck-line); }
@@ -62,24 +65,6 @@
 .slidev-layout .has-media .workshop-copy :where(p) { font-size:23px; }
 .slidev-layout .has-media .workshop-copy h2 { font-size:25px; }
 .has-media .procedure-list { gap:18px; }
-.slidev-layout .deck-slide.type-workshop:has(.kind-tool-demo) { --deck-inset-inline:56px; padding:48px var(--deck-inset-inline) 80px; }
-.kind-tool-demo { display:grid; grid-template-columns:336px minmax(0,1fr); grid-template-rows:auto auto minmax(0,1fr) auto; gap:20px 32px; }
-.kind-tool-demo.has-prompt { row-gap:16px; }
-.kind-tool-demo .workshop-heading { grid-area:1 / 1; }
-.kind-tool-demo .workshop-lead { grid-area:2 / 1; }
-.kind-tool-demo .workshop-stage { grid-area:1 / 2 / -1 / 3; align-items:stretch; justify-content:center; }
-.kind-tool-demo .workshop-media { width:100%; display:grid; grid-template-rows:minmax(0,1fr) auto; justify-items:center; gap:6px; }
-.kind-tool-demo .workshop-media .browser-video { width:100%; height:auto; max-height:100%; align-self:center; }
-.slidev-layout .kind-tool-demo .workshop-media figcaption { display:flex; align-items:center; justify-content:center; gap:8px; }
-.kind-tool-demo .workshop-media video,.kind-tool-demo .workshop-media .video-print-poster { width:100%; height:100%; max-height:100%; object-fit:contain; }
-.kind-tool-demo .workshop-copy { display:none; }
-.kind-tool-demo .tool-demo-prompt { grid-area:3 / 1; align-self:start; font-size:18px; }
-.kind-tool-demo .tool-demo-prompt .prompt-label { font-size:16px; }
-.kind-tool-demo .tool-demo-prompt .chat-bubble { padding:12px 16px; line-height:1.35; }
-.slidev-layout .kind-tool-demo .workshop-heading h1 { font-size:32px; }
-.slidev-layout .kind-tool-demo .workshop-lead { font-size:21px; }
-.slidev-layout .kind-tool-demo .workshop-decision { grid-area:4 / 1; align-self:end; font-size:18px; padding-top:12px; }
-.kind-tool-demo .workshop-heading .tool-logos .tool-logo { width:36px; height:36px; }
 .workshop-links { display:flex; flex-wrap:wrap; gap:12px; }
 .bibliography-links { flex-shrink:0; }
 .bibliography-links .btn { min-height:44px; height:44px; padding-inline:14px; font-size:16px; }

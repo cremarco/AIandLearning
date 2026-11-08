@@ -1,0 +1,401 @@
+{
+  "description": "Extended teacher-reviewed assessment examples for the standalone handout. These do not add slides to the presentation.",
+  "slides": [
+    {
+      "id": "S82",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · design",
+      "title": "The teacher designs the evidence",
+      "message": "The goal, task and criterion must concern the same knowledge",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "comparison": [
+        {
+          "label": "Goal",
+          "text": "Understand the roles of context, parameters and token selection."
+        },
+        {
+          "label": "Evidence",
+          "text": "An explanation, commented diagram, justified prediction and correction."
+        },
+        {
+          "label": "Criteria",
+          "text": "Concepts and relationships; process explanation; application and checking."
+        }
+      ],
+      "decision": "Assess what the learner can justify, alongside the assisted product."
+    },
+    {
+      "id": "S83",
+      "type": "workshop",
+      "kind": "procedure",
+      "section": "teachers",
+      "stage": "Teacher · prepare",
+      "title": "MagicSchool: draft a rubric",
+      "message": "The teacher provides goals, assignment and constraints",
+      "body": [],
+      "sources": [
+        "TOOL_MAGIC",
+        "TOOL_MAGIC_PRICE"
+      ],
+      "audience": "both",
+      "tool": "magicschool",
+      "prompt": "Prepare a rubric for the attached assignment. Three criteria: concepts and relationships; process explanation; application and checking. Four levels with observable descriptors. Assess GenAI knowledge, without rewarding only polished prose or code. Distinguish the assisted product from the independent explanation.",
+      "steps": [
+        {
+          "title": "Open Rubric Generator",
+          "text": "Enter goals and assignment, without learner personal data."
+        },
+        {
+          "title": "Generate a draft",
+          "text": "Check it against the chapter before using it."
+        }
+      ]
+    },
+    {
+      "id": "S84",
+      "type": "workshop",
+      "kind": "compare",
+      "section": "teachers",
+      "stage": "Teacher · review",
+      "title": "Review the rubric descriptors",
+      "message": "A constructed revision example, not automated assessment",
+      "body": [
+        "Keep three criteria separate and apply the same rubric to the responses."
+      ],
+      "sources": [
+        "TOOL_FORMATIVE"
+      ],
+      "audience": "both",
+      "tool": "magicschool",
+      "comparison": [
+        {
+          "label": "Too general",
+          "text": "“Shows a good understanding of the topic”."
+        },
+        {
+          "label": "Observable",
+          "text": "“Distinguishes parameters from context and explains why changing a prompt is not retraining”."
+        }
+      ],
+      "decision": "The rubric stays in the kit without Formative’s paid integrated rubric feature."
+    },
+    {
+      "id": "S84A",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · criteria",
+      "title": "Rubric: concepts and relationships",
+      "message": "Criterion 1 · four levels of evidence",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "tool": "magicschool",
+      "steps": [
+        {
+          "title": "1 · Needs reconstruction",
+          "text": "Confuses training and inference, or treats probabilities as truth."
+        },
+        {
+          "title": "2 · Partial",
+          "text": "Names concepts, but incompletely relates parameters and context."
+        },
+        {
+          "title": "3 · Coherent",
+          "text": "Distinguishes phases and states correct relationships."
+        },
+        {
+          "title": "4 · Justified",
+          "text": "Justifies relationships and identifies conditions and limits in a new example."
+        }
+      ],
+      "decision": "Apply the criterion to meaning in the agreed response mode."
+    },
+    {
+      "id": "S84B",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · criteria",
+      "title": "Rubric: process explanation",
+      "message": "Criterion 2 · make the links between stages explicit",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "tool": "magicschool",
+      "steps": [
+        {
+          "title": "1 · Absent",
+          "text": "Repeats output without describing the stages."
+        },
+        {
+          "title": "2 · Fragmentary",
+          "text": "Describes some stages but leaves gaps or reversals."
+        },
+        {
+          "title": "3 · Ordered",
+          "text": "Connects input, tokens, processing, distribution and selection."
+        },
+        {
+          "title": "4 · Justified",
+          "text": "Explains the links and separates the diagram from observed data."
+        }
+      ],
+      "decision": "A commented diagram or oral explanation can reveal the same process."
+    },
+    {
+      "id": "S84C",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · criteria",
+      "title": "Rubric: application and checking",
+      "message": "Criterion 3 · predict, test and revise",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "tool": "magicschool",
+      "steps": [
+        {
+          "title": "1 · Unjustified",
+          "text": "States a conclusion without a prediction or check."
+        },
+        {
+          "title": "2 · Incomplete",
+          "text": "Predicts, but changes multiple conditions or does not compare outcomes."
+        },
+        {
+          "title": "3 · Controlled",
+          "text": "Varies one condition, compares the outcome and corrects an error."
+        },
+        {
+          "title": "4 · Critical",
+          "text": "Justifies revision and recognises sampling, limitations and uncertainty."
+        }
+      ],
+      "decision": "Do not reward a lucky outcome from one generation."
+    },
+    {
+      "id": "S85",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · questions",
+      "title": "Prepare questions and expected answers",
+      "message": "The first question checks a fundamental distinction",
+      "body": [
+        "Q1 · During ordinary inference, what changes when a new prompt is entered? A: original training data. B: calculation context. C: learned parameters.",
+        "Expected: B, with justification; a correct choice alone provides limited evidence."
+      ],
+      "sources": [],
+      "audience": "both",
+      "tool": "magicschool",
+      "prompt": "Generate five chapter-based questions: distinction, explanation, diagram, prediction and transfer. For each, provide the expected answer, a detectable misconception and the rubric criterion. Avoid questions answered by copying a definition.",
+      "decision": "A teacher-reviewed teaching example, not a validated test."
+    },
+    {
+      "id": "S85B",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · questions",
+      "title": "Explanation and diagram completion",
+      "message": "Questions 2 and 3 · observe the connections",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "tool": "magicschool",
+      "comparison": [
+        {
+          "label": "Q2 · Explain",
+          "text": "Why does a token not always match a word? Expected: encoding may split words or represent other sequence elements."
+        },
+        {
+          "label": "Q3 · Complete a diagram",
+          "text": "Complete text → tokens → model → distribution → selection. What repeats? Expected: the selected token joins the context and calculation continues."
+        }
+      ],
+      "decision": "Read correctness and explanation without requiring code."
+    },
+    {
+      "id": "S85C",
+      "type": "workshop",
+      "kind": "assessment",
+      "section": "teachers",
+      "stage": "Teacher · questions",
+      "title": "Prediction and transfer",
+      "message": "Questions 4 and 5 · apply a concept and recognise an error",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "tool": "magicschool",
+      "comparison": [
+        {
+          "label": "Q4 · Predict",
+          "text": "Same input and scores: what changes from T = 0.5 to T = 1.2? Expected: less concentrated probabilities, without a guarantee about one sampled token."
+        },
+        {
+          "label": "Q5 · Correct an error",
+          "text": "“The most probable alternative will be true”. Refute using a new example. Expected: token plausibility differs from content truth."
+        }
+      ],
+      "decision": "Keep the initial prediction, test outcome and justified revision."
+    },
+    {
+      "id": "S86",
+      "type": "workshop",
+      "kind": "procedure",
+      "section": "teachers",
+      "stage": "Teacher · collect",
+      "title": "Formative: set up the assessment",
+      "message": "One collection point, with clear instructions and available criteria",
+      "body": [],
+      "sources": [
+        "TOOL_FORMATIVE"
+      ],
+      "audience": "both",
+      "tool": "formative",
+      "steps": [
+        {
+          "title": "Create the activity",
+          "text": "State the goal and when materials are allowed or chat must be closed."
+        },
+        {
+          "title": "Add five questions",
+          "text": "Use multiple choice, open response and drawing in the Free plan."
+        },
+        {
+          "title": "Prepare the review",
+          "text": "Key for Q1; teacher review for explanations and diagrams."
+        }
+      ],
+      "decision": "Use the standalone kit rubric; no premium integration is needed.",
+      "media": {
+        "src": "images/tools/formative-1.png",
+        "alt": "Formative: opening the Responses view for an assessment; vendor example.",
+        "caption": "Official guide screenshot; vendor example data.",
+        "source": "https://help.formative.com/en/articles/6198532-view-and-score-responses"
+      }
+    },
+    {
+      "id": "S87",
+      "type": "workshop",
+      "kind": "compare",
+      "section": "teachers",
+      "stage": "Teacher · collect",
+      "title": "Choose the format for the evidence",
+      "message": "Three response types, three opportunities to observe",
+      "body": [],
+      "sources": [
+        "TOOL_FORMATIVE"
+      ],
+      "audience": "both",
+      "tool": "formative",
+      "comparison": [
+        {
+          "label": "Multiple choice + reason",
+          "text": "Identify a distinction and inspect the reasoning."
+        },
+        {
+          "label": "Open response",
+          "text": "Observe explanations, predictions and corrections."
+        },
+        {
+          "label": "Drawing + commentary",
+          "text": "Make the sequence and relationships visible."
+        }
+      ],
+      "decision": "Integrated audio/video responses are paid features; agree alternatives when needed."
+    },
+    {
+      "id": "S88",
+      "type": "workshop",
+      "kind": "compare",
+      "section": "teachers",
+      "stage": "Teacher · interpret",
+      "title": "Read three simulated responses",
+      "message": "Invented examples for discussing teacher judgement",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "tool": "formative",
+      "comparison": [
+        {
+          "label": "Profile A · complete product",
+          "text": "The diagram is complete, but the explanation says every prompt updates parameters."
+        },
+        {
+          "label": "Profile B · vocabulary present",
+          "text": "Names tokens and probabilities, but omits the link between distribution and selection."
+        },
+        {
+          "label": "Profile C · coherent explanation",
+          "text": "Distinguishes phases, justifies a prediction and recognises the limit of one generation."
+        }
+      ],
+      "decision": "Read differences criterion by criterion before summarising with a grade."
+    },
+    {
+      "id": "S89",
+      "type": "workshop",
+      "kind": "compare",
+      "section": "teachers",
+      "stage": "Teacher · give feedback",
+      "title": "Feedback that specifies the next action",
+      "message": "Teacher-written examples address the observed difficulty",
+      "body": [],
+      "sources": [
+        "TOOL_FORMATIVE_RESP",
+        "TOOL_FORMATIVE"
+      ],
+      "audience": "both",
+      "tool": "formative",
+      "comparison": [
+        {
+          "label": "For profile A",
+          "text": "Revisit parameters versus context. Correct the arrow and explain why."
+        },
+        {
+          "label": "For profile B",
+          "text": "Add the selection rule between distribution and token. Explain the link."
+        },
+        {
+          "label": "For profile C",
+          "text": "Transfer your explanation to a new context and identify what remains uncertain."
+        }
+      ],
+      "decision": "Teacher-written feedback in the Free plan, followed by a new learner attempt."
+    },
+    {
+      "id": "S89A",
+      "type": "workshop",
+      "kind": "activity",
+      "section": "teachers",
+      "stage": "Audience · activity 2",
+      "title": "Activity: adapt an assessment",
+      "message": "Five minutes on your subject and an access barrier",
+      "body": [],
+      "sources": [],
+      "audience": "both",
+      "steps": [
+        {
+          "title": "Choose a goal · 1 minute",
+          "text": "Name a concept you teach or study."
+        },
+        {
+          "title": "Design evidence · 2 minutes",
+          "text": "Write a task and observable criterion, allowing AI to produce the initial product."
+        },
+        {
+          "title": "Remove a barrier · 2 minutes",
+          "text": "Offer an equivalent access or response option; share the reason for your choice."
+        }
+      ],
+      "decision": "A reusable example with a coherent goal, evidence and support."
+    }
+  ]
+}

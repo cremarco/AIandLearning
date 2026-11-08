@@ -1,0 +1,8 @@
+1. **Fixed Weights vs. Input Sequence**: **Learned parameters** are fixed numerical values established during training to transform data, whereas **context** is the sequence of input text (tokens) provided to the model for the current inference task.
+2. **Fixed Model vs. Temporary Input**: Ordinary inference runs calculations using **parameters that are already fixed**, while changing or adding to the context changes only the **information available for that specific execution**.
+3. **Training vs. Contextual Influence**: Updating parameters requires training or fine-tuning the model, whereas adding context merely influences output probabilities without changing the underlying weights.
+
+### Example: Definition Added to a Prompt
+If a student writes *"In this chapter, X means Y"* inside a prompt, the model uses this temporary definition directly from the conversation context to answer. Using this definition to generate a response does **not** update or change the model's parameters; the underlying weights remain fixed while the context guides the single inference step.
+
+💡 Would you like to explore how temperature or causal attention influences next-token generation during inference?

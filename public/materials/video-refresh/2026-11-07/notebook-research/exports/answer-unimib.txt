@@ -1,0 +1,7 @@
+Here are two concise points explaining why encoding text into token IDs differs from training a language model:
+
+1. **Structural preprocessing versus parameter optimization**: Encoding text is a pre-processing step that converts raw text strings into sequences of discrete numerical index identifiers (IDs) from a vocabulary, handling tasks like padding and truncation. In contrast, **language model training is an optimization process** that compares next-token predicted distributions against actual text targets to calculate prediction error and update the model's internal numerical parameters/weights.
+
+2. **Arbitrary indexing versus learned semantic representation**: A token ID generated during encoding is simply an arbitrary vocabulary lookup index; the assigned number does not measure meaning, nor do adjacent IDs represent similar concepts. Conversely, **training learns meaningful continuous vector representations** (embeddings and contextual decoder transformations) where numerical parameter values capture semantic relationships and context.
+
+💡 Would you like to explore how tokenization algorithms like BPE build their vocabulary, or see an analysis of token context window limits?

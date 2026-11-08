@@ -1,0 +1,23 @@
+flowchart TD
+    accTitle: Training, Ordinary Inference and RAG
+    accDescr: Training updates model parameters through optimisation. Ordinary inference keeps parameters fixed while using current context. RAG retrieves passages that change the available context without updating parameters.
+
+    examples["Training examples"]
+    training["Training (§1.2)"]
+    parameters["Model parameters"]
+    prompt["Prompt or new definition"]
+    context["Current context"]
+    inference["Inference uses fixed parameters (§§1.2, 1.7)"]
+    output["Generated continuation"]
+    documents["External documents"]
+    rag["RAG retrieval (§1.7)"]
+
+    examples -->|"Provide learning signal"| training
+    training -->|"Optimisation changes values"| parameters
+    parameters -->|"Stay fixed during inference"| inference
+    prompt -->|"Changes available information"| context
+    context -->|"Conditions calculations"| inference
+    inference -->|"Appends generated tokens"| output
+    output -->|"Extends context for next step"| context
+    documents -->|"Searched for relevant passages"| rag
+    rag -->|"Adds passages; weights unchanged"| context

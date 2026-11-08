@@ -1,16 +1,10 @@
 # Beyond prompting
 
-Slidev presentation by Marco Cremaschi for three November 2026 events in Lithuania. One continuous sequence follows Andrea, a fictional computer science student, from an assigned generative AI chapter to an independent explanation and a teacher’s assessment. Every slide has short English presenter notes with bold key words; the same sequence serves all events.
+Slidev presentation by Marco Cremaschi for the November 2026 workshops in Lithuania. The presentation follows Andrea, a fictional student, from an assigned GenAI chapter to independent explanation and assessment.
 
-The deck uses Vue, Tailwind CSS and daisyUI. It retains the interactive book, particle wave, videos, tool links and accessible reading materials. Event details are in [docs/workshop-brief.md](docs/workshop-brief.md).
+## Run
 
-The formal web-action slide includes selectable original interface captures and the verbatim Study response. Opening a panel is distinguished from completing its action. Dictation and desktop commands have no claimed execution; the local desktop app could not be controlled for this recording.
-
-The folder responsibilities and generation boundaries are documented in [Project structure](docs/architecture.md).
-
-## Run and edit
-
-Requires Node.js 24.12 or newer and pnpm. From the project root:
+Requires Node.js 24.12 or newer and pnpm.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -18,85 +12,53 @@ pnpm generate
 pnpm dev
 ```
 
-Open `http://localhost:3047/`. Use the arrow keys to advance. Slidev’s native toolbar appears at the bottom left and is also reachable with Tab.
+Open http://localhost:3047/. Arrow keys navigate. The Slidev toolbar provides presenter mode, an overview and keyboard controls.
 
-Use the toolbar’s Presenter Mode or open `http://localhost:3047/presenter/` to read the notes while presenting. [Speaker notes in English](docs/speaker-notes.en.md) provides a numbered rehearsal copy. The notes contain 23–40 words per slide and keep Markdown emphasis in presenter mode.
+## Edit
 
-Edit the authoring sources, then regenerate:
-
-| Location | Purpose |
+| Source | Responsibility |
 | --- | --- |
-| `data/content/opening-slides.json`, `data/content/workshop-slides.json` | Slide content and order |
-| `data/references/opening-sources.json`, `data/references/workshop-sources.json` | Citation records |
-| `data/content/media.json`, `data/content/editorial-overrides.json` | Workshop media and content refinements |
-| `data/content/highlights.json` | Terms highlighted in the slides |
-| `data/content/speaker-notes.json` | Short English speaker notes, keyed by stable slide ID |
-| `components/`, `composables/`, `utils/`, `styles/` | Typed Vue rendering, shared behavior and daisyUI theme |
-| `public/images/`, `public/icons/` | Referenced presentation images and icons only |
-| `assets/illustrations/` | Authoring originals and image provenance, excluded from the website |
-| `booklet-genai/` | Shared textbook content, Typst source and reading edition |
-| `public/materials/demo-genai/` | Canonical real-model app, runtime and verified recordings |
+| `data/content/opening-slides.json`, `workshop-slides.json` | Content and order |
+| `data/content/media.json` | One media assignment per slide |
+| `data/content/speaker-notes.json` | English notes keyed by stable slide ID |
+| `data/content/shortcut-selection.json` | The 15 selected shortcuts |
+| `data/catalogues/` | Tools and skill descriptions |
+| `data/references/` | Bibliography and sources |
+| `components/`, `composables/`, `utils/`, `styles/` | Vue interface, behavior and theme |
+| `booklet-genai/` | Canonical chapter and reading edition |
 
-`data/generated/slides.json`, `data/generated/sources.json`, `data/generated/flows.json`, `slides.md`, `docs/speaker-notes.en.md`, and the companion HTML/text materials are generated. Change their authoring inputs instead. `pnpm generate` is deterministic and preserves each slide’s authored notes when the sequence changes.
+Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, full reader data, lean runtime indexes, speaker notes and companion materials. Do not hand-edit `data/generated/`, `slides.md`, the generated notes or companion HTML/text files.
 
-## Validate and distribute
+The presentation has 98 numbered slides through Thank you, followed by two unnumbered reference appendices. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
-```sh
-pnpm check                # Structure, content, references, assets and probability maths
-pnpm build                # Lightweight static website in dist/
-pnpm check:browser        # Full browser checks against the running dev server
-pnpm export               # Tagged PDF in exports/EduForum-2026.pdf
-pnpm kit                  # Portable ZIP after building and exporting
-```
-
-Browser checks and PDF export need a compatible Playwright Chromium installation (`pnpm exec playwright install chromium`). Set `DECK_URL` to test a dev server on another port. Browser checks traverse every slide, validate image loading/layout, keyboard navigation, presenter previews, static print and the responsive materials page. Set `CAPTURE=0` to avoid saving per-slide screenshots. New reports go to ignored `output/review/`; generated distributions go to ignored `dist/` and `exports/`.
-
-The build omits downloaded model weights by default, avoiding a second copy of the local model. For a complete offline website that includes the prepared weights:
+## Check and build
 
 ```sh
-INCLUDE_MODEL_WEIGHTS=1 pnpm build
+pnpm check          # Content, assets, links, maths and player behavior
+pnpm videos:verify  # Published videos, hashes, result files and slide assignments
+pnpm build          # Static website in dist/
+pnpm export         # Tagged PDF in exports/EduForum-2026.pdf
+pnpm kit            # Portable source and website archive
 ```
 
-The portable ZIP always excludes weights. Its bundled server shares one prepared model between the source app and compiled deck. The archive contains editable source, the compiled deck, PDFs, runtime, recordings, licences, and a SHA-256 manifest. Packaging rejects stale material copies. It refreshes the exported textbook PDF from the canonical booklet build.
+Browser checks (`pnpm check:browser`) and PDF export require compatible Playwright Chromium. When working through an agent with browser controls, use the browser’s supported interface for rendered checks. The static checks and build require neither private recordings nor browser account sessions.
 
-Motion uses a brief 180 ms slide transition, a 680 ms ChatGPT logo focus, and action-driven feedback for skill selection, Andrea’s reaction and table focus. Text stays visible by default; rapid skill selections cancel the previous effect. The existing slide-motion lifecycle stops work outside the active slide or hidden browser tab. Reduced-motion preferences remove spatial effects while retaining short color/opacity feedback, and print output stays static.
+## Videos and results
 
-## Materials
+Forty reviewed recordings use 1440 × 900 delivery frames at 60 fps. Setup runs at 3×, generation at 4×, and meaningful use retains normal speed. Each player has English captions and an adjacent result link. Labels identify static PNG/PDF/CSV results, shared widgets and downloadable files. The Learning Skill shared chat shows readable code; its original HTML kit is provided separately.
 
-- `public/materials/kit.html`: chapter, prompts, activities, assessment and app.
-- `public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf`: the fictional textbook chapter.
-- `public/materials/booklet-genai/lettura.html`: equivalent HTML chapter.
-- `exports/EduForum-2026.pdf`: presentation PDF, generated by `pnpm export`.
+`data/demos/video-release.json` points to the current immutable release manifest under `public/materials/video-refresh/`. The manifest identifies every delivered file by size and SHA-256 hash. The current release preserves the previous NotebookLM Video Overview and the eight demonstrations excluded from the refresh. An available recording does not imply that its service is free or that it improves learning.
 
-Serve HTML over HTTP. Keep `exports/` and `public/` together when sharing the PDF: its local material links are relative. Rebuild the booklet separately with `pnpm booklet:build` after editing `booklet-genai/contenuti.mjs`; see [booklet-genai/README.md](booklet-genai/README.md) for Typst requirements and verification limits.
+The capture, review and release workflow is documented in [docs/recordings.md](docs/recordings.md). Nine obsolete capture/render scripts and unique historical recordings have been archived outside the project. Rebuildable encode caches, old builds and old delivery archives have been removed. Archive recovery pointers are described in that document.
 
-## Individual shortcuts
+## Materials and model lab
 
-All 79 reviewed informal shortcuts have a dedicated slide with their full recorded prompt and a brief purpose. The 30 retained interactive outputs include the original videos; the other 49 show a labelled static response excerpt or the recorded observation for an image. Original conversation links remain available. Hover or focus a shortcut in the animated cloud to read its description; click or press Enter to open its slide.
+- `public/materials/kit.html`: chapter, prompts, activities, assessment and guides.
+- `public/materials/skills-guide.html`: skill demonstrations and requirements.
+- `public/materials/teacher-tools.html`: teacher demonstrations and results.
+- `public/materials/booklet-genai/`: the chapter PDF and equivalent HTML.
+- `public/materials/demo-genai/`: canonical real-model application.
 
-## Real model exercise
+The lab runs actual Qwen inference through bundled Transformers.js and ONNX Runtime. Use `pnpm demo:dev`; prepare its pinned model with `node public/materials/demo-genai/prepare-model.mjs`. Downloaded weights stay in one ignored directory and are excluded from normal builds and portable ZIPs. Set `INCLUDE_MODEL_WEIGHTS=1` when intentionally building a complete offline website. See the [lab README](public/materials/demo-genai/README.md).
 
-The canonical app is `public/materials/demo-genai/`; `tests/demo-genai/` contains its maths, inference and UI checks. Deliberate recording publication lives in `scripts/recordings/`. The app uses actual quantised Qwen2.5-0.5B-Instruct inference through bundled Transformers.js and ONNX Runtime. The model preparation script pins a public revision and checks sizes and SHA-256 hashes:
-
-```sh
-node public/materials/demo-genai/prepare-model.mjs
-node public/materials/demo-genai/serve.mjs
-```
-
-Open `http://127.0.0.1:4176/`. The approximately 786 MB model stays in one ignored local directory. After preparation, CPU/WASM inference works offline; WebGPU is optional. The English recording, captions, transcript and measured results remain usable without loading the model. See the app’s [README](public/materials/demo-genai/README.md).
-
-The distributed application was implemented with Codex. Maps, student responses and classroom assessments are constructed teaching examples unless explicitly identified as real recorded executions. Tool conditions can change; product documentation and educational evidence remain distinct in the source index.
-
-The Agent Skills section presents six workflows tested in ChatGPT web, Work mode, using the original workshop book: Learn, The Learning Skill, Markdown Mermaid Writing, Flashcard Generator, Scientific Critical Thinking and Citation Management. Each has its own recorded demonstration. `data/demos/skill-demos.json` preserves original requests, observed checks, package revisions and generated-file hashes. `data/catalogues/skills-research.json` contains the full 17-skill catalogue and distinguishes the six executions from eleven source-reviewed examples. The generated `public/materials/skills-guide.html` includes recordings, transcripts, downloadable outputs, requirements, licensing and benchmark references.
-
-The six skill videos and their posters all use a 1440 × 900 pixel frame. They are edited from actual browser UI captures, including inspection of the generated files, and preserve source proportions and within-scene timing with reading holds. The Learn clip crops the relevant dialogue; other clips retain the full viewport. A duplicated due-card counter in the first Learning Skill output was corrected through a follow-up in the same chat, then tested again before recording the published kit. The public provenance is `public/materials/skills/provenance.json`; private captures and reviewed publisher packages remain in ignored `output/review/skill-web-tests/`. Re-render with `PYTHONPATH=output/video-tools python3 scripts/recordings/render-skill-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required), then `pnpm generate`. Source hyperlinks in the two distributed HTML outputs point to the local chapter; content, controls and styling are preserved, and the original template’s MIT notice is included. Slides show labelled excerpts; the guide and accessible materials preserve each full tested request.
-
-Six short Goblin Tools videos show real English executions of Compiler, Magic ToDo, Estimator, Taskmaster, Professor and Formalizer. Each has a separate slide with a flat browser frame, complete-page footage, optional WebVTT captions, a transcript and a poster. Inputs, exact outputs and editing details are in `public/materials/goblin/provenance.json`; private source frames stay in ignored `output/review/goblin-captures/`. Re-render with `python3 scripts/recordings/render-goblin-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required).
-
-All 30 retained ChatGPT prompt labels have independent recordings in fresh temporary chats with the English interface. The first message uploads the original chapter PDF and asks ChatGPT to wait; the second contains the complete shortcut request. Each clip then shows generation, the rendered widget and extended use of its actual controls. Fast prompt entry and accelerated processing lead into at least forty seconds of normal-speed use with at least seven recorded interactions. The requests explicitly ask for interactive controls; each slide displays the exact recorded request. The original 79-probe review remains a separate historical record: 49 responses were static in those probes, and the labels are prompt cues rather than registered commands in ChatGPT's slash menu.
-
-The recordings use native Retina browser screencast events and their timestamps. Native 1664 × 1040 close-ups are downsampled with Lanczos to the deck’s common 1440 × 900 delivery frame at 60 fps, H.264 CRF 14, with no upscaling. The home upload controls, shortcut composer and conversation each retain enough margin to avoid clipping text. Temporary chats avoid personalized home suggestions. Actions stay chronological: generation is accelerated and idle recording gaps are cut; widget use retains real timing and reading pauses, including answer entry. Optional English captions describe each action. Transcripts, response IDs, source-frame hashes, timing changes and the original chapter identify the evidence. Temporary chats have no permanent source links. Self-assessment scores and revealed expected answers are distinguished from automatic checking; suggested study intervals are distinguished from an elapsed timer. The new Pomodoro response changed its clock controls but did not demonstrate a real-time countdown; that observed limitation is preserved in its transcript and provenance.
-
-Private sources are in ignored `output/review/chatgpt-fresh-captures/`. Import `scripts/recordings/isolated-chat-session.mjs` into `cua_repl` to create each temporary chat, attach the PDF, send the second request and record interactions through its documented tab and CDP handles. It uses `scripts/recordings/browser-screencast.mjs`. Finish or suspend every capture before returning from a tool call; resume continues the same timestamped source. Export a selected clip with `python3 scripts/recordings/render-chatgpt-scenarios.py --only quiz`, or publish the complete set with `python3 scripts/recordings/render-chatgpt-scenarios.py --publish`, then run `pnpm generate`. Publication checks the empty initial chat, exactly two user messages, all seven phases and the interaction count and duration. FFmpeg and Pillow are required. The earlier generation captures, result-only interactions and first prompt-to-use versions remain archived in `materials/chatgpt-widgets/builds/`, `materials/chatgpt-widgets/videos/interaction-provenance.json` and `materials/chatgpt-widgets/scenarios/`.
-
-Seventeen NotebookLM videos cover sources, Fast Research, Deep Research, chat, citations, Learning Guide settings, Mind Maps, quizzes, flashcards, notes, reports, audio, video, infographics, slide decks, data tables and sharing. All were recorded again from scratch through @Browser in a new notebook, starting with the original chapter PDF upload. Consecutive viewport frames show actual UI actions, transitions and playback; generation waits are cut between scenes. Each dedicated slide has a poster, optional English captions and a transcript. Interface recordings are silent. `data/demos/notebook-demos.json` and `public/materials/notebook/provenance.json` distinguish completed operations from inspected controls, including sharing and export menus. Private recording frames remain in `output/review/notebook-browser-captures/`. Re-render with `python3 scripts/recordings/render-notebook-videos.py` (Pillow and FFmpeg or imageio-ffmpeg required); use `--only quiz` to update one clip, then run `pnpm generate` to refresh the deck and reading materials.
+See [project architecture](docs/architecture.md) for module boundaries and [the workshop brief](docs/workshop-brief.md) for the events and audience.

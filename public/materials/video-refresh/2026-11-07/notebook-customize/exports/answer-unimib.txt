@@ -1,0 +1,7 @@
+**Spot on!** Including the definition makes it part of the input token sequence, altering the context for that specific calculation while keeping the learned parameters completely fixed. Updating weights would require training or fine-tuning.
+
+Here is our next question to finish Andrea's explanation:
+
+**If Andrea starts a completely separate session without including that definition in the new prompt, will the model still know the definition? Why or why not?**
+
+💡 **Hint:** Consider whether information kept only in the context window lasts beyond the current inference step if the model parameters were never updated.

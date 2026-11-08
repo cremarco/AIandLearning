@@ -1,0 +1,30 @@
+NotebookLM — NotebookLM
+
+REQUEST
+Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.204 Upload the workshop book as the source. (3× speed)
+00:00:00.527 The workshop book is being indexed. (3× speed)
+00:00:01.668 Widen the question and answer. (3× speed)
+00:00:01.943 Write the source-grounded request. (3× speed)
+00:00:04.580 Read the complete request.
+00:00:06.685 Send the question with the selected book. (3× speed)
+00:00:06.978 Generate the answer from the selected source. (4× speed)
+00:00:07.547 Read the source-grounded answer before checking its citation.
+00:00:14.946 Open the first citation and read the supporting passage.
+00:00:20.878 Compare a second claim with its cited passage.
+00:00:29.281 Export the checked result.
+00:00:31.850 Check two claims against the original book.
+00:00:32.047 Read the source-grounded answer before checking its citation.
+00:00:35.161 Read the source supporting the first claim.
+00:00:35.339 Check the first citation
+00:00:41.692 Compare a second claim with its supporting passage.
+00:00:41.747 Check the second citation
+
+OBSERVED RESULT
+A new English-interface Unimib notebook contains only the workshop book. The complete249-character request produces three concise distinctions between learned parameters and ordinary-inference context plus the actual definition-in-a-prompt example. Both full answer views are read; two distinct book citations and supporting passages are actually opened. A later same-notebook continuation records the two citation clicks with actual nativeCDP points/hit tests and preserves each3.2s popup/source reading hold. The original1201-byte native copied answer remains unchanged and independently readable as the staged result.
+

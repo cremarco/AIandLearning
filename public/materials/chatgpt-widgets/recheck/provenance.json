@@ -1,0 +1,850 @@
+{
+  "status": "completed",
+  "recordedOn": "2026-11-07",
+  "book": {
+    "path": "public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981",
+    "uploadAuthorized": true
+  },
+  "modelLabel": "Medium in ChatGPT web",
+  "protocol": "Fresh temporary chat for each shortcut, original chapter PDF uploaded, setup message followed by the exact original probe. No explicit request for static output or interactive controls. Only content-level controls count as interactive.",
+  "acceptance": "Working controls in the generated learning content. Viewing, copying, downloading, favorites and product feedback controls do not qualify.",
+  "summary": {
+    "tested": 49,
+    "nowInteractive": 41,
+    "stillStatic": 8
+  },
+  "limitations": [
+    "One new execution per previously static label in the author’s account. The 30 earlier interactive labels were not rerun in this check.",
+    "These are prompt labels, not registered commands. Output formats can vary between requests.",
+    "Answer reveals and reviewer-selected scores are not automatic grading.",
+    "Temporary-chat URLs do not remain accessible after closing their tabs. Private screenshots and UI snapshots preserve the observed actions; the published record contains prompts, actions and outcomes."
+  ],
+  "results": [
+    {
+      "command": "/mindmap",
+      "prompt": "/mindmap Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:04:27.600Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer, then clicked Check answer.",
+        "observed": "The response displayed Correct! and explained that context changes do not update parameters."
+      }
+    },
+    {
+      "command": "/eli5",
+      "prompt": "/eli5 Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:04:43.775Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer.",
+        "observed": "Selecting the answer immediately displayed Correct! and explained that context changes do not update parameters."
+      }
+    },
+    {
+      "command": "/summary",
+      "prompt": "/summary Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:04:28.005Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the complete response.",
+        "observed": "Written summary, comparison table and visible expected answer; no content-level controls."
+      }
+    },
+    {
+      "command": "/blueprint",
+      "prompt": "/blueprint Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:06:19.877Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked the first Reveal expected answer control.",
+        "observed": "The expected answer appeared and the control changed to Hide expected answer."
+      }
+    },
+    {
+      "command": "/whiteboard",
+      "prompt": "/whiteboard Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:06:20.087Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected Training, Inference and RAG for the three scenarios, then clicked Check answers.",
+        "observed": "Criterion explanations and Score: 3/3 appeared."
+      }
+    },
+    {
+      "command": "/sketchnote",
+      "prompt": "/sketchnote Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:06:20.243Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the completed response.",
+        "observed": "Static visual study content with visible answer and no content-level controls."
+      }
+    },
+    {
+      "command": "/flowchart",
+      "prompt": "/flowchart Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:06:20.593Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the completed Mermaid diagram and response.",
+        "observed": "Diagram options and Expand diagram only affect viewing; no learning controls or answer feedback."
+      }
+    },
+    {
+      "command": "/infographic",
+      "prompt": "/infographic Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:06:20.752Z",
+      "modelLabel": "Medium in ChatGPT web",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer.",
+        "observed": "The selection displayed correct-answer feedback about unchanged model parameters."
+      }
+    },
+    {
+      "command": "/timeline",
+      "prompt": "/timeline Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:07:38.064Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context-use answer.",
+        "observed": "Correct! appeared with an explanation and chapter reference."
+      },
+      "responseText": "ChatGPT said:\nTimeline: Training vs. Inference\n\nBased exclusively on §1.2, Data, parameters and training, and §1.7, Generation, context and retrieval.\n\n1. Training — Learning from examples\n\nThe model predicts tokens, compares predictions with examples, and reduces error through optimisation.\n\nChanges: model parameters (weights).\n\nSource: §1.2, p. 5\n\n2. Inference — Using the trained model\n\nThe model processes the current input and calculates output probabilities. During generation, selected tokens become part of the next context.\n\nChanges: context and generated output; parameters stay fixed.\n\nSources: §1.2, p. 5; §1.7, pp. 13–14\n\n3. Retrieval (RAG) — Adding external context\n\nA retrieval component finds document passages and makes them available to generation.\n\nChanges: available context, not model parameters.\n\nSource: §1.7, p. 14\nQuick knowledge check\n\nAndrea adds a new definition to his prompt. The model uses it correctly. What does this demonstrate?\n\nThe model's weights have been updated.\nThe model can use information supplied in its context.\nThe model has been fine-tuned.\n\nCorrect!\n\nThe new definition changes the information available during inference, not the weights. Correct use does not establish training.\n\nSource: §1.2, p. 5, checkpoint p. 6\n\nKey takeaway: Training updates parameters; ordinary inference uses them; RAG supplies retrieved information as context without retraining."
+    },
+    {
+      "command": "/venn",
+      "prompt": "/venn Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:07:38.768Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the completed comparison and questions.",
+        "observed": "The comparison and review questions have no answer fields or learning controls."
+      },
+      "responseText": "ChatGPT said:\nVenn Diagram: Training vs. Inference\n\nBased on §1.2, Data, Parameters and Training (pp. 5–6).\n\nConceptual comparison based on the chapter's explanation and Figure 1.\n\nTraining only\n\n\t\n\nBoth\n\n\t\n\nInference only\n\n\n\n\nUses examples and prediction error to update parameters through optimisation.\n\n\t\n\nInvolve numerical model calculations.\n\n\t\n\nUses existing parameters to calculate an output distribution.\n\n\n\n\nChanges the model itself.\n\n\t\n\nProcess token-based information.\n\n\t\n\nChanges in context can affect output without changing weights.\n\nThree review questions\n\nWhat changes during training but remains fixed during ordinary inference?\n\nWhy can a new prompt produce a different answer without retraining?\n\nDoes retrieving a document update model parameters?\n\nKey takeaway: Training changes the model's parameters. Ordinary inference uses the available model; prompts and retrieved passages change the information supplied as context, not the weights.\n\nSource: Chapter 1, §1.2, pp. 5–6; §1.7, pp. 13–14."
+    },
+    {
+      "command": "/analogy",
+      "prompt": "/analogy Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:07:39.740Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the completed response and its controls.",
+        "observed": "Static analogy and question; only unrelated source-card and favorites controls appeared."
+      },
+      "responseText": "ChatGPT said:\nAnalogy: Training vs. Inference\n\nThink of a language model as a student preparing for and taking an exam.\n\n1. Training = Studying for the exam\n\nThe student practices with examples, identifies mistakes, and improves. Similarly, a model uses prediction errors to update its numerical parameters.\n\nWhat changes: Model parameters.\n\n2. Inference = Taking the exam\n\nThe student applies what they have learned to answer a question. Similarly, the model calculates an output using its existing parameters.\n\nWhat changes: The input and resulting output, not the parameters.\n\n3. RAG = Consulting reference material\n\nThe student receives relevant passages while answering. Similarly, retrieval supplies external text as additional context.\n\nWhat changes: Available context, not model parameters.\n\nSource: Chapter §1.2, pp. 5–6, and §1.7, pp. 13–14. The exam analogy is illustrative, not a literal description of model learning.\n\nKey takeaway: Training changes the model; ordinary inference uses the existing model; RAG adds retrieved information without retraining it.\n\nCheck your understanding: If a model correctly uses a new definition inserted into a prompt, does that prove its weights changed? Why or why not?"
+    },
+    {
+      "command": "/comic",
+      "prompt": "/comic Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:07:40.153Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer and clicked Check answer.",
+        "observed": "Correct! appeared with an explanation distinguishing context from parameter changes."
+      },
+      "responseText": "ChatGPT said:\nComic: Did the Model Learn That?\n\nA three-panel comic featuring Andrea, a computer science student.\n\nPanel 1 — Training: Changing the Model\n\nAndrea: “How does the model learn from examples?”\n\nModel: “Training compares predictions with example tokens. Optimisation updates my numerical parameters to reduce error.”\n\nSource: §1.2, p. 5\n\nPanel 2 — Inference: Using the Model\n\nAndrea: “In this chapter, X means Y. Have you learned something new?”\n\nModel: “I can use your definition from the current context, but my parameters remain fixed during ordinary inference.”\n\nAndrea: “So a different answer doesn't prove retraining!”\n\nSource: §1.2, pp. 5–6\n\nPanel 3 — RAG: Adding Retrieved Context\n\nAndrea: “What happens if I retrieve a page from the textbook?”\n\nModel: “The retrieved passage becomes available as context. My weights don't change—and the retrieved information doesn't guarantee a correct answer.”\n\nSource: §1.7, p. 14\n\nThe takeaway\n\nProcess\n\n\t\n\nWhat changes?\n\n\n\n\nTraining\n\n\t\n\nModel parameters\n\n\n\n\nOrdinary inference\n\n\t\n\nCurrent input and context, not parameters\n\n\n\n\nRAG\n\n\t\n\nRetrieved passages supplied as context, not parameters\n\nQuick check — Andrea's challenge\n\nAndrea adds a new definition to his prompt, and the model uses it correctly. Does this prove that its weights changed?\n\nYes, because it used new information.\nNo, because context can influence inference without parameter updates.\nCheck answer\n\nCorrect!\n\nThe definition changes the information available during inference. It does not demonstrate that training or fine-tuning occurred. (§1.2)"
+    },
+    {
+      "command": "/feynman",
+      "prompt": "/feynman Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:07:40.585Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked Reveal explanation.",
+        "observed": "The explanation became visible and the button changed to Hide explanation."
+      },
+      "responseText": "ChatGPT said:\nFeynman Technique: Training vs. Inference\n\nGoal: Explain the difference so clearly that a classmate with no AI background could understand it.\n\nBased on §1.2, Data, Parameters and Training, and §1.7, Generation, Context and Retrieval.\n\n1. Explain it simply\n\nDuring training, a model learns from examples by adjusting its numerical parameters to reduce prediction error.\n\nDuring ordinary inference, it uses those already available parameters to calculate an output. A different prompt changes the context, not the model's weights.\n\n2. Test your explanation\n\nAndrea writes: \"In this chapter, X means Y.\" The model then uses that definition correctly.\n\nQuestion: Has the model been trained on the new definition? Explain why or why not.\n\n3. Reveal and refine\n\nHide explanation\n\nNo. The model uses information supplied in the current context. Its parameters remain fixed during ordinary inference. Only training or fine-tuning updates parameters.Similarly, RAG retrieves external passages and supplies them as context without itself updating model weights.\n\nYour Feynman challenge: Explain training, ordinary inference, and RAG in three sentences without using the words weights, parameters, or optimisation.\n\nSource: Chapter 1, §§1.2 (pp. 5–6) and 1.7 (pp. 13–14)."
+    },
+    {
+      "command": "/glossary",
+      "prompt": "/glossary Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:08:27.869Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked Reveal explanation.",
+        "observed": "The hidden explanation appeared and the button changed to Hide explanation."
+      },
+      "responseText": "ChatGPT said:\nGlossary: Training vs. Inference\n\nBased exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7.\n\nTerm\n\n\t\n\nDefinition\n\n\t\n\nWhat changes?\n\n\n\n\nTraining\n\n\t\n\nThe model learns from examples by using prediction errors and optimisation.\n\n\t\n\nThe model’s numerical parameters (weights).\n\n\n\n\nInference\n\n\t\n\nThe model processes an input using its existing parameters to produce an output.\n\n\t\n\nThe output depends on the input and context; parameters remain fixed during ordinary inference.\n\n\n\n\nRAG (Retrieval-Augmented Generation)\n\n\t\n\nExternal documents are searched, and selected passages are supplied as context for generation.\n\n\t\n\nThe information available in context, not the model’s parameters.\n\nKey distinction\n\nTraining changes the model; inference uses the model; RAG supplies external information to the model.\n\nQuick self-check\n\nAndrea adds a new definition to his prompt, and the model uses it correctly.\n\nQuestion: Does this prove that the model has learned new parameters?\n\nThink of your answer before revealing the explanation.\n\nHide explanation\nNo. The definition changes the information available during inference. It does not demonstrate a parameter update. Only training or fine-tuning changes the model's parameters.\nSource: Chapter 1, §1.2, pp. 5–6; §1.7, pp. 13–14; Glossary, p. 18."
+    },
+    {
+      "command": "/conceptmap",
+      "prompt": "/conceptmap Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:08:28.248Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The available context changes.",
+        "observed": "Correct! and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nConcept Map: Training vs. Inference\n\nBased on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14).\n\nLanguage Model\n\nParameters · Input · Context\n\nThree interventions\n\nTraining\n\nExamples → prediction error → optimisation\n\nUpdates model parameters\n\nInference\n\nInput + fixed model → calculations\n\nProduces output probabilities\n\nRAG\n\nQuestion → retrieved passages → context\n\nUses external information\n\nTraining changes the model. Ordinary inference and RAG use the available model without updating its weights.\n\nThree key relationships\n\nTraining → Parameters: Optimisation modifies numerical values to reduce prediction error (§1.2).\n\nInference → Context: Changing the prompt changes available information, not the model's parameters (§1.2).\n\nRAG → Retrieval: External passages enrich the context, but do not guarantee correctness (§1.7).\n\nCheck your understanding\n\nAndrea adds a new definition to his prompt. What changes?\n\nThe model's weights are updated.\nThe available context changes.\nA new training phase begins.\n\nCorrect!\n\nThe definition influences the current inference through context. It does not demonstrate a parameter update (§1.2).\n\nSource: Chapter 1, Figure 1 and Table 1 (§1.2); Generation, Context and Retrieval (§1.7)."
+    },
+    {
+      "command": "/fishbone",
+      "prompt": "/fishbone Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:08:28.566Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked Reveal expected answer.",
+        "observed": "The expected answer appeared and the button changed to Hide expected answer."
+      },
+      "responseText": "ChatGPT said:\nFishbone Diagram: Training vs. Inference\n\nCentral question: Why does using new information in a prompt not mean that a language model has been retrained?\n\nConceptual fishbone based on §1.2, Table 1 and Figure 1 (pp. 5–6), and §1.7 (pp. 13–14).\nThree key distinctions\n\nIntervention\n\n\t\n\nWhat changes?\n\n\t\n\nWhat stays fixed?\n\n\n\n\n1. Training\n\n\t\n\nNumerical parameters are updated through optimisation.\n\n\t\n\nNo requirement that parameters stay fixed.\n\n\n\n\n2. Ordinary inference\n\n\t\n\nInput and available context can change the output.\n\n\t\n\nModel parameters.\n\n\n\n\n3. RAG\n\n\t\n\nRetrieved passages become available as context.\n\n\t\n\nModel parameters.\n\nCheck your understanding\n\nAndrea adds a new definition to his prompt, and the model uses it correctly.\n\nQuestion: Does this prove that the model has learned new parameters?\n\nHide expected answer\n\nNo. The definition changes the context available during inference. It does not demonstrate a parameter update. Training or fine-tuning changes parameters through optimisation.\n\nSource: §1.2, pp. 5–6.\n\nTakeaway: Training changes the model; ordinary inference and RAG change the information available to a fixed model."
+    },
+    {
+      "command": "/iceberg",
+      "prompt": "/iceberg Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:08:28.784Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the current-context answer.",
+        "observed": "Correct and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\n/iceberg — Training vs. Inference\n\nLearning goal: Distinguish what changes during training, ordinary inference, and retrieval-augmented generation (RAG).\n\nThe iceberg separates visible model behaviour from the underlying processes that explain it.\n\nConceptual iceberg adapted from the distinctions in §1.2 and Figure 1 (p. 6). Depth is illustrative, not a measure of computational importance.\nThree layers to understand\n\n1. Above the surface — Observable output. A different answer does not prove that the model has learned new parameters. Ordinary inference calculates outputs using the available model. (§1.2)\n\n2. Just below — Context and retrieval. Adding a definition to a prompt or retrieving passages through RAG changes the information available for inference, not the model's weights. (§§1.2, 1.7)\n\n3. Deep below — Training. During training, examples provide a learning signal, and optimisation updates numerical parameters to reduce prediction error. (§1.2)\n\nTest your understanding\n\nAndrea inserts a new definition into a prompt. The model uses it correctly. What does this demonstrate?\n\nThe model's weights have been updated.\nThe model used information from the current context.\nTraining occurred automatically.\n\nCorrect\n\nThe definition can influence ordinary inference without updating weights. Only training or fine-tuning changes the model's parameters.\n\nSource: §1.2, pp. 5–6.\n\nKey takeaway: A change in output is not necessarily a change in the model. To explain what happened, identify whether the intervention changed parameters, context, or retrieved information."
+    },
+    {
+      "command": "/pyramid",
+      "prompt": "/pyramid Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:08:29.005Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked the first Reveal answer control.",
+        "observed": "The training versus inference answer appeared and the button changed to Hide answer."
+      },
+      "responseText": "ChatGPT said:\nLearning Pyramid: Training vs. Inference\nThree progressively deeper learning tasks based on §§1.2 and 1.7.\n\n1. Recall\n\nLevel 1\n\nWhat changes during training, and what remains fixed during ordinary inference?\n\nTraining uses prediction error and optimisation to update numerical parameters. Ordinary inference uses the model's existing parameters to calculate outputs.\n\nHide answer\n\n2. Explain\n\nLevel 2\n\nWhy does adding a new definition to a prompt not demonstrate learning through training?\nReveal answer\n\n3. Apply\n\nLevel 3\n\nAndrea retrieves a new document using RAG. The model answers using that document. What changed?\nReveal answer\n\nKey takeaway: Training changes model parameters; ordinary inference uses fixed parameters; RAG supplies retrieved information as context.\n\nSource: Foundations of Generative Artificial Intelligence, §1.2 (pp. 5–6) and §1.7 (pp. 13–14)."
+    },
+    {
+      "command": "/tree",
+      "prompt": "/tree Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:09:13.246Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected Parameters, Available context and Information supplied as context.",
+        "observed": "Feedback appeared for each selection and the score changed to Correct: 3/3."
+      },
+      "responseText": "ChatGPT said:\nDecision tree: Training vs. Inference vs. RAG\n\nUse this decision tree to identify what changes when interacting with a language model.\n\nWhat happens to the model or its input?\n\n1\n\nTraining\n\nParameters are updated through optimisation.\n\n2\n\nInference\n\nFixed parameters process the current input.\n\n3\n\nRAG\n\nRetrieved passages provide additional context.\n\nThree review questions\n\n1. A model is optimised on examples to reduce prediction error. What changes?\n\nParameters\nOnly the prompt\n\nTraining updates the model's numerical parameters. (§1.2)\n\n2. Andrea adds a new definition to his prompt. What changes?\n\nModel weights\nAvailable context\n\nOrdinary inference uses existing parameters; the new definition changes the context. (§1.2)\n\n3. A system retrieves a recent document before generating an answer. What changes?\n\nModel parameters\nInformation supplied as context\n\nRAG supplies retrieved passages as context without itself changing weights. (§1.7)\n\nCorrect: 3 / 3\n\nTry again\n\nKey takeaway: Training changes parameters; ordinary inference uses fixed parameters; RAG adds retrieved context without itself retraining the model.\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, pp. 5–6 and 13–14."
+    },
+    {
+      "command": "/anatomydiagram",
+      "prompt": "/anatomydiagram Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:09:13.544Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The information available in the context.",
+        "observed": "Correct and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nAnatomy diagram: Training vs. Inference\n\nBased exclusively on §1.2, pp. 5–6, of Foundations of Generative Artificial Intelligence.\n\nAdapted from Figure 1, p. 6. Arrows show the sequence of operations, not numerical measurements.\nThree components to identify\n\nTraining: Examples provide a learning signal; optimisation updates numerical parameters, changing the model.\n\nOrdinary inference: The model uses fixed parameters to calculate an output distribution and select an output.\n\nRAG: Retrieved passages supply additional context to a fixed model. Retrieval does not itself update its parameters.\n\nQuick anatomy check\n\nAndrea inserts a new definition into his prompt. What changes?\n\nThe model's parameters\nThe information available in the context\nBoth parameters and context\n\nCorrect\n\nThe new definition can affect the answer without updating model weights.\n\nSource: §1.2, Table 1 and Figure 1, pp. 5–6; §1.7, p. 14."
+    },
+    {
+      "command": "/cyclediagram",
+      "prompt": "/cyclediagram Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:09:13.844Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the completed diagram, distinctions and review question.",
+        "observed": "No content-level controls or answer fields were present."
+      },
+      "responseText": "ChatGPT said:\nCycle diagram: Training vs. Inference\n\nBased on §1.2 and §1.7 of Foundations of Generative Artificial Intelligence.\n\nConceptual review loop, not an automatic training cycle: adding context does not trigger parameter updates.\nThree key distinctions\n\nTraining: Prediction error guides optimisation, changing model parameters.\n\nOrdinary inference: Uses fixed parameters to calculate outputs from the current input.\n\nNew context or RAG: Changes available information, not model weights.\n\nCheck your understanding: If Andrea adds a definition to his prompt and the model uses it, has training occurred? Why?\n\nSource: §1.2, pp. 5–6; §1.7, pp. 13–14."
+    },
+    {
+      "command": "/explodedview",
+      "prompt": "/explodedview Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:09:14.098Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The model used information from its context.",
+        "observed": "Correct! and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nExploded View: Training vs. Inference\n\nAn autoregressive language model uses numerical parameters to calculate probabilities for the next token. Let's separate the process into three components.\n\nExploded conceptual view based on Figure 1, §1.2, p. 6.\n\n1. Training — What changes?\n\nThe model compares predicted distributions with tokens in training examples. Optimisation reduces aggregate error by updating the parameters.\n\nSource: §1.2, p. 5\n\n2. Parameters — What is retained?\n\nThe learned numerical values determine the model's transformations. Ordinary inference uses these existing values without retraining.\n\nSource: §1.2, pp. 5–6\n\n3. Inference — What changes?\n\nThe model processes the current input and context with fixed parameters, calculates output probabilities and selects a token. Changing the prompt changes the available context, not the weights.\n\nSource: §§1.2, 1.5 and 1.7\n\nQuick knowledge check\n\nAndrea adds a new definition to his prompt, and the model uses it correctly. What does this demonstrate?\n\nThe model's parameters were updated.\nThe model used information from its context.\nThe model underwent fine-tuning.\n\nCorrect!\n\nA definition inserted into a prompt can influence the answer through context. Its use does not prove that training or parameter updates occurred. (§1.2, p. 5)\n\nKey takeaway: Training changes the model's parameters; ordinary inference uses those parameters to process the available context."
+    },
+    {
+      "command": "/handwritten",
+      "prompt": "/handwritten Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:09:14.306Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Entered an answer in the first answer field and clicked Reveal answer.",
+        "observed": "The field retained the written answer; the model answer appeared and the button changed to Hide answer."
+      },
+      "responseText": "ChatGPT said:\nHandwritten-style revision notes\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, pp. 5–6, 13–14.\n\n01 / TRAINING\n\nExamples → Prediction error → Parameter updates\n\nThe model learns by adjusting numerical parameters to reduce prediction error.\n\nRemember: Training changes the model.\n\n02 / ORDINARY INFERENCE\n\nInput + Fixed model → Calculations → Output\n\nThe model uses its existing parameters to generate a response. New information in the prompt changes the available context, not the weights.\n\nRemember: Inference uses the model.\n\n03 / RAG (RETRIEVAL-AUGMENTED GENERATION)\n\nQuestion → Retrieved passages → Context + Fixed model → Answer\n\nExternal documents provide information for generation without updating model parameters. Retrieval does not guarantee correctness.\n\nRemember: RAG adds context, not learned weights.\n\nQuick handwritten exercise\n\nWrite your answers from memory before checking the chapter.\n\n1. What changes during training?\n\nHide answer\n\nThe model’s numerical parameters are updated through optimisation. (§1.2)\n\n2. Andrea adds a new definition to his prompt. Have the weights changed?\n\nReveal answer\n\n3. How does RAG differ from training?\n\nReveal answer\n\nFinal memory cue: Training changes parameters. Inference uses fixed parameters. RAG supplies retrieved context."
+    },
+    {
+      "command": "/onepager",
+      "prompt": "/onepager Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:10:15.230Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the correct option for each of the three questions.",
+        "observed": "Per-question feedback appeared and the score became 3/3."
+      },
+      "responseText": "ChatGPT said:\nOne-Page Study Guide: Training vs. Inference\n\nFoundations of Generative Artificial Intelligence · Chapter 1, §§1.2 and 1.7\n\nLearning goal: Explain what changes during training, ordinary inference, and retrieval-augmented generation (RAG).\n\n1. Three processes, three different changes\n\nProcess\n\n\t\n\nWhat happens\n\n\t\n\nWhat changes?\n\n\n\n\nTraining / fine-tuning\n\n\t\n\nPrediction errors guide optimisation.\n\n\t\n\nModel parameters (weights)\n\n\n\n\nOrdinary inference\n\n\t\n\nThe model calculates an output using its existing parameters.\n\n\t\n\nAvailable input/context and potentially the output; weights stay fixed\n\n\n\n\nRAG\n\n\t\n\nExternal passages are retrieved and supplied to generation.\n\n\t\n\nInformation available in context; weights stay fixed\n\n2. Visual comparison\n\nTraining\n\nExamples\n\nPrediction error\n\nParameter updates\n\nChanged model\n\nInference\n\nInput + fixed model\n\nCalculations\n\nOutput distribution\n\nSelected output\n\nRAG\n\nQuestion\n\nRetrieved passages\n\nContext + fixed model\n\nGenerated answer\n\nAdapted from Figure 1, p. 6. Only training updates model parameters.\n3. Apply the distinction\n\nScenario: Andrea writes in a prompt, “In this chapter, X means Y.” The model subsequently uses that definition.\n\nWhat changed? The information available through conversation context.\n\nWhat did not necessarily change? The model's parameters.\n\nWhat if Andrea used RAG? Retrieved passages could provide the definition without retraining the model. Retrieval would not guarantee a correct answer.\n\nQuick self-check\n\n1. Which process updates the model's numerical parameters?\n\nOrdinary inference\nTraining or fine-tuning\nDocument retrieval\n\nTraining updates parameters through optimisation (§1.2).\n\n2. A model follows a definition added to the prompt. What does this demonstrate?\n\nIts weights changed\nContext can influence inference\nThe model was fine-tuned\n\nA new message changes available context, not necessarily the weights (§1.2).\n\n3. Does RAG guarantee a correct answer?\n\nYes, because it retrieves documents\nNo, retrieval and interpretation can fail\nYes, if the document is recent\n\nRetrieval may select irrelevant passages or the model may misinterpret them (§1.7).\n\nScore: 3/3\n\nTry again\n\nKey takeaway: Training changes the model; ordinary inference uses the existing model; RAG enriches the context with retrieved information.\n\nSource: Cremaschi, Foundations of Generative Artificial Intelligence (2026), §1.2, pp. 5–6; §1.7, pp. 13–14. No external sources used."
+    },
+    {
+      "command": "/labeleddiagram",
+      "prompt": "/labeleddiagram Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:10:16.669Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The information available in context.",
+        "observed": "Correct! and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nLabeled diagram: Training vs. Inference vs. RAG\n\n1. Training\n\nExamples\n\nPrediction error\n\nParameter updates\n\nChanged model\n\n2. Inference\n\nInput + fixed model\n\nModel calculations\n\nOutput distribution\n\nSelected output\n\n3. RAG\n\nQuestion\n\nRetrieved passages\n\nContext + fixed model\n\nGenerated answer\n\nWeights change\n\nWeights remain fixed\n\nRetrieved context changes; weights stay fixed\n\nAdapted from Figure 1, Chapter §1.2, p. 6, and §1.7, pp. 13–14.\nThree labels to remember\n\nTraining: Optimisation updates the model's numerical parameters using prediction error.\n\nOrdinary inference: The model produces output using fixed parameters and the available input context.\n\nRAG: Retrieved passages supplement the context without updating the model's parameters.\n\nQuick review\n\nA student adds a new definition to a prompt. What changes?\n\nThe model's learned parameters\nThe information available in context\nBoth parameters and context\n\nCorrect!\n\nThe definition changes the context available to inference, not the model's weights. (§1.2, p. 5)\n\nSource: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7."
+    },
+    {
+      "command": "/mnemonic",
+      "prompt": "/mnemonic Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:10:27.389Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The information available during inference.",
+        "observed": "Correct! and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nMnemonic: TIC — Train, Infer, Context\n\nRemember three concepts from §1.2 of Foundations of Generative Artificial Intelligence.\n\nT\n\nTrain = Transform parameters\n\nExamples → Prediction error → Parameter updates.\n\nTraining changes the model's numerical parameters.\n\nI\n\nInfer = Input through a fixed model\n\nInput → Model calculations → Output distribution.\n\nOrdinary inference uses the existing parameters without updating them.\n\nC\n\nContext = Change available information\n\nA new message or retrieved passage can influence the answer without changing model weights.\n\nSource: §§1.2 and 1.7, especially Table 1 and Figure 1, pp. 5–6.\n\nQuick memory check\n\nAndrea adds a new definition to his prompt. What changes?\n\nThe model's parameters\nThe information available during inference\nThe model is retrained\n\nCorrect!\n\nThe definition changes the context available to inference, not the model's parameters (§1.2).\n\nOne-sentence recall: Training changes parameters; inference uses fixed parameters; context changes what information the model can use."
+    },
+    {
+      "command": "/memorypalaceimage",
+      "prompt": "/memorypalaceimage Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:10:27.825Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected Room 2 — Inference and clicked Check answer.",
+        "observed": "Correct! appeared with an explanation about context and unchanged parameters."
+      },
+      "responseText": "ChatGPT said:\nMemory Palace: Training vs. Inference\n\nImagine walking through three rooms in an AI laboratory. Each room represents a different process described in the attached chapter (§§1.2 and 1.7).\n\nRoom 1 — The Training Workshop\n\nImagine a machine rebuilding its internal connections whenever it learns from prediction errors.\n\nRemember: Training optimizes and updates model parameters.\n\nRoom 2 — The Inference Terminal\n\nA fixed machine receives a question and produces an output without rebuilding itself.\n\nRemember: Ordinary inference uses existing parameters. Changing the prompt changes the available context, not the weights.\n\nRoom 3 — The Retrieval Library (RAG)\n\nA librarian brings selected document passages to the same fixed machine.\n\nRemember: RAG supplies retrieved information as context without updating model parameters. Retrieval does not guarantee correctness.\n\nSource: §1.2, Table 1 and Figure 1 (pp. 5–6); §1.7 (pp. 13–14). The rooms are mnemonic illustrations, not diagrams from the chapter.\nTest your memory\n\nYou add a new definition to a prompt, and the model uses it correctly. Which room explains what happened? Did the weights change?\n\nRoom 1 — Training\nRoom 2 — Inference\nRoom 3 — RAG\nCheck answer\n\nCorrect!\n\nA new definition changes the context available during ordinary inference. Its use does not prove that model parameters were updated (§1.2).\n\nRecall phrase: Training changes parameters. Inference uses parameters. RAG supplies context."
+    },
+    {
+      "command": "/memoryhooks",
+      "prompt": "/memoryhooks Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:10:28.115Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Used the Reveal answer controls.",
+        "observed": "The three expected answers became visible and all three controls changed to Hide answer."
+      },
+      "responseText": "ChatGPT said:\nMemory Hooks: Training vs. Inference\n\nThree memorable cues based on §§1.2 and 1.7 of the attached chapter.\n\n1. Training = Change the Model\n\nMemory hook: “Training changes the weights.”\n\nExamples and prediction errors guide optimisation, updating numerical parameters.\n\nSource: §1.2, pp. 5–6\n\n2. Inference = Use the Model\n\nMemory hook: “New prompt, same weights.”\n\nThe model uses fixed parameters to generate output. Changing the prompt changes the available context, not the model itself.\n\nSource: §1.2, pp. 5–6\n\n3. RAG = Retrieve, Then Generate\n\nMemory hook: “New documents, same weights.”\n\nRetrieved passages provide additional context. They do not automatically update parameters or guarantee correctness.\n\nSource: §1.7, pp. 13–14\n\nQuick recall challenge\n\n1. Andrea inserts a new definition into his prompt. What changes?\n\nThe available context changes; the model's parameters remain fixed.\n\nHide answer\n\n2. Which process updates the model's numerical parameters?\n\nTraining or fine-tuning, through optimisation.\n\nHide answer\n\n3. RAG retrieves a recent document. Does this prove the answer is correct?\n\nNo. Retrieval can fail, select irrelevant passages, or produce material that is misinterpreted.\n\nHide answer\n\nOne-sentence takeaway: Training changes parameters; ordinary inference uses fixed parameters; RAG supplies retrieved context to inference.\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, including Figure 1 and Table 1."
+    },
+    {
+      "command": "/mnemonicart",
+      "prompt": "/mnemonicart Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:12:33.308Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The available context and clicked Check answer.",
+        "observed": "Correct! appeared with a chapter-based explanation."
+      },
+      "responseText": "ChatGPT said:\nMnemonic Art: Training vs. Inference\n\nRemember the three processes using a visual metaphor: Change the machine, use the machine, feed the machine.\n\n1. TRAINING — Change the machine\n\nExamples → Prediction error → Parameter updates\n\nMemory hook: Training changes the model's numerical parameters.\n\n2. INFERENCE — Use the machine\n\nInput + fixed model → Calculations → Output distribution\n\nMemory hook: The model works without changing its parameters.\n\n3. RAG — Feed the machine information\n\nQuestion → Retrieved passages → Context + fixed model → Answer\n\nMemory hook: Retrieval supplies information, not parameter updates.\n\nSource: Chapter §1.2, Table 1 and Figure 1 (pp. 5–6); §1.7 (pp. 13–14). The machine imagery is a mnemonic analogy, not a literal depiction of model architecture.\nTest your memory\n\nA student adds a new definition to a prompt, and the model uses it correctly. What changed?\n\nThe model's parameters\nThe available context\nBoth parameters and context\nCheck answer\n\nCorrect!\n\nOnly the available context changed. Using the new definition does not demonstrate that model weights were updated (§1.2).\n\nOne-line recall: Training changes parameters; inference uses fixed parameters; RAG adds retrieved context without retraining."
+    },
+    {
+      "command": "/visualvocab",
+      "prompt": "/visualvocab Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:01.424Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The information available in context.",
+        "observed": "Correct and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nVisual Vocabulary: Training vs. Inference\n\nThree essential concepts from §1.2, Data, Parameters and Training, and §1.7, Generation, Context and Retrieval.\n\n1. Training\n\nExamples → Prediction error → Parameter updates\n\nTraining uses examples and optimisation to change the model's numerical parameters, reducing aggregate prediction error.\n\n2. Ordinary Inference\n\nInput + Fixed model → Calculations → Output\n\nInference uses existing parameters to calculate output probabilities. Changing the prompt changes the available context, not the model's weights.\n\n3. Retrieval-Augmented Generation (RAG)\n\nQuestion → Retrieved passages → Context + Fixed model → Answer\n\nRAG supplies passages from external documents during generation. It does not itself update parameters or guarantee a correct answer.\n\nQuick knowledge check\n\nAndrea adds a new definition to his prompt. What changes?\n\nThe model's learned parameters\nThe information available in context\nBoth parameters and context\n\nCorrect\n\nThe new definition influences inference through context. It does not demonstrate a parameter update. (§1.2)\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, particularly Figure 1 on page 6."
+    },
+    {
+      "command": "/emojisummary",
+      "prompt": "/emojisummary Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:01.776Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the available-context option.",
+        "observed": "Correct! and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\n🧠 Training vs. Inference — Emoji Summary\n🏋️\n\n1. Training = Changing the model\n\n📚 Examples → 🎯 Prediction error → 🔧 Parameter updates\n\nTraining uses examples and optimisation to modify the model's numerical parameters.\n\nSource: §1.2, pp. 5–6\n⚙️\n\n2. Inference = Using the model\n\n💬 Input + 🔒 Fixed parameters → 🧮 Calculations → 📝 Output\n\nIn ordinary inference, parameters stay fixed. Changing the prompt changes the available context, not the weights.\n\nSource: §1.2, pp. 5–6\n🔎\n\n3. RAG = Adding retrieved context\n\n❓ Question → 📄 Retrieved passages → 🤖 Fixed model → 💡 Answer\n\nRetrieval supplies external information without updating model parameters. It does not guarantee correctness.\n\nSource: §§1.2 and 1.7, pp. 6, 14\n\n🎓 Remember: Training changes parameters. Inference uses fixed parameters. RAG changes the available context.\n\n🧩 Quick check\n\nA student adds a new definition to a prompt. What changes?\n\n🧠 The model's weights\n📖 The available context\n🏋️ The training dataset\n\n✅ Correct!\n\nThe definition changes information available during inference, not the model's parameters (§1.2)."
+    },
+    {
+      "command": "/picturemnemonics",
+      "prompt": "/picturemnemonics Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:02.038Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer and clicked Check answer.",
+        "observed": "Correct! and explanatory feedback appeared."
+      },
+      "responseText": "ChatGPT said:\nPicture Mnemonics: Training vs. Inference\n\nThree visual memory aids based exclusively on §1.2 and Figure 1 (p. 6) of the attached chapter.\n\n1. Training — The adjustable machine\n\nPicture a machine adjusting its internal settings after comparing predictions with examples.\n\nRemember: Examples → prediction error → parameter updates.\n\nSource: §1.2, pp. 5–6.\n\n2. Inference — The locked machine\n\nPicture the same machine processing a new input without changing its internal settings.\n\nRemember: Input + fixed model → calculations → output distribution → selected token.\n\nSource: §1.2, pp. 5–6.\n\n3. New context — The reference note\n\nPicture attaching a note saying “X means Y” to the machine's input. It can use the note without being rebuilt.\n\nRemember: New information in the prompt changes the available context, not the model's weights.\n\nSource: §1.2, p. 5; §1.7, pp. 13–14.\n\nQuick memory check\n\nA model uses a definition supplied in a prompt. Which component changed?\n\nThe model's parameters\nThe information available in context\nBoth parameters and context\nCheck answer\n\nCorrect!\n\nThe prompt changes available context. This does not prove that parameters were updated (§1.2).\n\nOne-line memory rule: Training changes the machine; inference uses the machine; adding context changes what the machine can use."
+    },
+    {
+      "command": "/cheatsheet",
+      "prompt": "/cheatsheet Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:02.260Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the correct answer for all three questions.",
+        "observed": "Individual feedback appeared and the score changed to 3/3 correct."
+      },
+      "responseText": "ChatGPT said:\nCheat Sheet: Training vs. Inference\n\nFoundations of Generative Artificial Intelligence · §§1.2 and 1.7, pp. 5–6, 13–14\n\n1. Three key processes\n\nProcess\n\n\t\n\nWhat happens?\n\n\t\n\nWhat changes?\n\n\n\n\nTraining / Fine-tuning\n\n\t\n\nPrediction errors guide optimisation.\n\n\t\n\nModel parameters (weights).\n\n\n\n\nOrdinary inference\n\n\t\n\nThe model calculates outputs using its existing parameters.\n\n\t\n\nThe current output; parameters stay fixed.\n\n\n\n\nRAG\n\n\t\n\nRetrieved passages are supplied as context for generation.\n\n\t\n\nAvailable information, not model weights.\n\n2. Visual memory aid\n\nTraining\n\nExamples\n\nPrediction error\n\nParameter updates\n\nInference\n\nInput + fixed model\n\nCalculations\n\nOutput\n\nRAG\n\nQuestion\n\nRetrieved passages\n\nContext + fixed model\n\nAdapted from Figure 1, p. 6.\n3. Three misconceptions to avoid\n\n“Adding a definition to a prompt trains the model.” False. It changes the information available in context.\n\n“RAG updates the model's knowledge permanently.” False. Retrieval supplies external passages without changing parameters.\n\n“A retrieved document guarantees a correct answer.” False. Retrieval can fail, select irrelevant material, or be misinterpreted.\n\nQuick self-check\n\n1. What changes during training?\n\nContext only\nModel parameters\nTemperature\n\nCorrect. Optimisation updates the model's numerical parameters (§1.2).\n\n2. A model uses a new definition from a prompt. What does this demonstrate?\n\nWeights were updated\nThe model was retrained\nContext influenced inference\n\nCorrect. A message can influence output without updating weights (§1.2).\n\n3. What does RAG add?\n\nRetrieved passages as context\nNew model weights\nGuaranteed correctness\n\nCorrect. RAG supplies retrieved passages, but does not guarantee correctness (§1.7).\n\n3 / 3 correct\n\nTry again\n\nRemember: Training changes parameters. Inference uses them. RAG supplies additional context.\n\nSource: Chapter 1, §§1.2 and 1.7; Figure 1; Study Resource B, p. 19. No external sources used."
+    },
+    {
+      "command": "/deepdive",
+      "prompt": "/deepdive Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:57.879Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the correct answer for three conceptual challenges.",
+        "observed": "Explanatory feedback appeared and Score changed to 3/3."
+      },
+      "responseText": "ChatGPT said:\nDeep Dive: Training vs. Inference\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, pp. 5–6, 13–14.\n\nCore distinction: Training changes a model's parameters. Ordinary inference uses the existing parameters to generate output. Changing the context can change the answer without changing the model.\n\n1. What actually changes?\n\nProcess\n\n\t\n\nWhat happens\n\n\t\n\nWhat changes?\n\n\n\n\nTraining\n\n\t\n\nPredictions are compared with examples; optimisation reduces error.\n\n\t\n\nModel parameters\n\n\n\n\nInference\n\n\t\n\nThe model calculates outputs using its current parameters and input.\n\n\t\n\nOutput probabilities, depending on context\n\n\n\n\nRAG\n\n\t\n\nRetrieved passages are supplied to the model.\n\n\t\n\nAvailable context, not parameters\n\n2. Follow the three processes\n\nTraining\n\nExamples\n\nPrediction error\n\nOptimisation\n\nChanged model\n\nInference\n\nInput + fixed model\n\nCalculations\n\nOutput distribution\n\nSelected output\n\nRAG\n\nQuestion\n\nRetrieved passages\n\nContext + fixed model\n\nGenerated answer\n\nAdapted from Figure 1, p. 6. RAG supplies retrieved information to inference; it is not parameter training.\n3. Three conceptual challenges\n\n1. Andrea writes: “In this chapter, X means Y.” The model correctly uses the definition. Has it learned new weights?\n\nYes, because the answer changed.\nNo, the definition can influence the answer through context.\nYes, if it repeats the definition.\n\nCorrect\n\nA new message changes available context. It does not demonstrate parameter updates (§1.2).\n\n2. A RAG system retrieves a recent document. Which conclusion is justified?\n\nThe model was retrained.\nThe answer must be correct.\nThe retrieved passage can inform generation without changing weights.\n\nCorrect\n\nRetrieval supplies passages, but these can be irrelevant or misinterpreted (§1.7).\n\n3. What would demonstrate a change to the model itself?\n\nTraining or fine-tuning that updates parameters.\nA different prompt.\nAn additional retrieved page.\n\nCorrect\n\nTraining changes numerical parameters through optimisation; prompt and retrieval changes do not establish that (§1.2).\n\nScore: 3/3\n\nTry again\n\nIndependent recall: Without looking above, explain why changing a prompt can change a model's answer without changing its parameters. Then explain what additional operation training performs.\n\nChapter references: §1.2, Table 1 and Figure 1; §1.7, “Generation, context and retrieval.”"
+    },
+    {
+      "command": "/stepbystep",
+      "prompt": "/stepbystep Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:58.324Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer, then clicked Check answer.",
+        "observed": "Correct! and the expected explanation appeared."
+      },
+      "responseText": "ChatGPT said:\nStep-by-step: Training vs. Inference\n\nSource: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6.\n\nStep 1 — Training: Change the model\n\nThe model processes training examples, compares its predictions with the actual tokens, and uses optimisation to reduce prediction error.\n\nResult: The model's numerical parameters (weights) change.\n\nStep 2 — Inference: Use the model\n\nThe trained model receives an input and performs calculations using its existing parameters.\n\nResult: It produces an output without updating its parameters during ordinary inference.\n\nStep 3 — Change the context, not the weights\n\nAndrea writes: \"In this chapter, X means Y.\"\n\nThe model may use this definition when answering.\n\nResult: The available context changes, but this does not demonstrate that the model's parameters have been updated.\n\nCheck your understanding\n\nA model uses a new definition supplied in a prompt. What does this demonstrate?\n\nA. The model has been retrained.\nB. The model used information from its context.\nC. Its weights were automatically updated.\nCheck answer\n\nCorrect!\n\nThe correct answer is B. Ordinary inference uses fixed parameters. A new prompt changes the information available to the model, not necessarily its weights. (§1.2)\n\nKey takeaway: Training updates parameters; ordinary inference uses existing parameters. Changing a prompt changes context, not the trained model itself."
+    },
+    {
+      "command": "/twinexample",
+      "prompt": "/twinexample Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:58.573Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer, then clicked Check answer.",
+        "observed": "Correct! and the expected explanation appeared."
+      },
+      "responseText": "ChatGPT said:\nTwin Examples: Training vs. Inference\n\nCompare each pair of scenarios. Identify what changes and what stays fixed.\n\nExample A — Training\n\nA model processes training examples, compares predictions with actual tokens, and updates its parameters to reduce error.\n\nExample B — Inference\n\nA trained model receives a prompt and calculates output probabilities using its existing parameters.\n\nKey difference: Training changes parameters; ordinary inference uses fixed parameters. (§1.2)\n\nExample A — New definition\n\nAndrea writes, “In this chapter, X means Y.” The model uses this information when answering.\n\nExample B — Fine-tuning\n\nAdditional training optimizes the model's parameters using examples.\n\nKey difference: Adding a definition changes available context, not the model's weights. Fine-tuning changes parameters. (§1.2)\n\nExample A — RAG\n\nA retrieval component finds relevant passages and supplies them as context for generation.\n\nExample B — Training\n\nAn optimization process updates the model's learned parameters.\n\nKey difference: RAG changes the information available during inference, without updating model weights. (§§1.2, 1.7)\n\nQuick self-check\n\nA model correctly uses a definition introduced in a new prompt. What does this demonstrate?\n\nIts parameters have been updated.\nIts current context influences inference.\nIt has undergone fine-tuning.\nCheck answer\n\nCorrect!\n\nThe correct answer is B. Context can influence an answer without any parameter update. (§1.2, p. 5)\n\nSource: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7, pp. 5–6 and 13–14."
+    },
+    {
+      "command": "/workedexample",
+      "prompt": "/workedexample Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:58.810Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context answer, then clicked Check answer.",
+        "observed": "Correct! and the expected explanation appeared."
+      },
+      "responseText": "ChatGPT said:\nWorked example: Training vs. Inference\n\nLearning goal: Identify what changes in the model and what changes only in the information supplied to it.\n\nBased on §1.2, Data, parameters and training, and §1.7, Generation, context and retrieval.\n\n1. Training: Updating parameters\n\nAndrea trains a model using text examples. The system compares predicted tokens with actual tokens and uses the prediction error to update numerical parameters.\n\nWhat changes? The model's parameters.\n\nSource: §1.2, p. 5\n\n2. Inference: Using fixed parameters\n\nAndrea writes: \"In this chapter, X means Y.\" The model subsequently uses that definition to answer a question.\n\nWhat changes? The available context, not the model's weights.\n\nSource: §1.2, pp. 5–6\n\n3. RAG: Adding retrieved information\n\nAndrea's application retrieves a relevant passage from a document and supplies it to the model before generating an answer.\n\nWhat changes? The available context. Retrieval does not itself update parameters or guarantee correctness.\n\nSource: §1.7, p. 14\nCheck your understanding\n\nScenario: Andrea adds a new definition to his prompt. The model uses it correctly in its response. What does this demonstrate?\n\nThe model has been retrained.\nThe model used information from its context.\nThe application necessarily used RAG.\nCheck answer\n\nCorrect!\n\nUsing a definition from the prompt demonstrates the influence of context during inference. It does not establish that model parameters changed or that retrieval occurred.\n\nSource: §1.2, checkpoint, p. 6\n\nKey takeaway: Training updates parameters; ordinary inference uses fixed parameters; RAG supplies retrieved passages as additional context."
+    },
+    {
+      "command": "/socraticmode",
+      "prompt": "/socraticmode Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:13:58.984Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Entered a written answer, used Compare answer, then Next question.",
+        "observed": "An expected answer appeared, the reviewed counter increased to 1, and the widget advanced from question 1 to question 2. This is comparison with expected reasoning, not automatic grading."
+      },
+      "responseText": "ChatGPT said:\nSocratic Review: Training vs. Inference\n\nSource: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6.\n\nGoal: Discover the difference between training and inference through three guided questions.\n\nWe'll work through one question at a time. I'll respond to your reasoning with a follow-up question rather than immediately revealing the answer.\n\nQUESTION 2 OF 3\n\n1 reviewed\n\nWhat happens during inference?\nAndrea adds a new definition to his prompt, and the model uses it correctly. Does this show that the model's parameters changed? Why?\nHint\nCompare answer\nPrevious\nNext question\n\nKey distinction to discover: Training changes model parameters through optimisation; ordinary inference uses existing parameters to calculate outputs from the current input and context. (§1.2)"
+    },
+    {
+      "command": "/commonwrong",
+      "prompt": "/commonwrong Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:00.495Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The definition influenced inference through context.",
+        "observed": "Correct! appeared with an explanation and chapter reference."
+      },
+      "responseText": "ChatGPT said:\nCommon misconceptions: Training vs. Inference\n\nBased exclusively on §1.2 (Data, Parameters and Training) and §1.7 (Generation, Context and Retrieval) of the attached chapter.\n\n1. “Adding new information to a prompt trains the model.”\n\nCorrection: A new message changes the information available during inference, not the model's parameters. Training or fine-tuning updates parameters through optimisation.\n\nSource: §1.2, pp. 5–6\n\n2. “If the model gives a different answer, its weights must have changed.”\n\nCorrection: Ordinary inference uses fixed parameters. Changing the context can change the output without retraining. For example, asking about France's capital versus the imaginary capital in a story changes the task.\n\nSource: §§1.2 and 1.7, pp. 5 and 13–14\n\n3. “RAG updates the model's knowledge by changing its weights.”\n\nCorrection: Retrieval-augmented generation supplies selected external passages as context to a fixed model. Retrieval does not itself update parameters or guarantee a correct answer.\n\nSource: §1.7, p. 14\nQuick self-check\n\nA student writes: “In this chapter, X means Y.” The model subsequently uses that definition correctly.\n\nWhat does this observation demonstrate?\n\nThe model's weights have been updated.\nThe definition influenced inference through context.\nThe model has been fine-tuned.\n\nCorrect!\n\nThe observation is consistent with the definition being used as context. It does not establish that training occurred or weights changed.\n\nSource: §1.2, p. 5, checkpoint p. 6\n\nKey distinction: Training changes parameters; ordinary inference uses fixed parameters and available context; RAG changes the external passages made available as context."
+    },
+    {
+      "command": "/realworld",
+      "prompt": "/realworld Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:00.796Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected The available inference context has changed.",
+        "observed": "Correct! appeared with an explanation and chapter reference."
+      },
+      "responseText": "ChatGPT said:\nReal-world applications: Training vs. Inference\n\nThree practical scenarios adapted from §1.2 of Foundations of Generative Artificial Intelligence.\n\n1. Training an instruction-following model\n\nDevelopers use demonstrations and human preferences to adapt a model's behaviour.\n\nWhat changes? The model's numerical parameters are updated through optimisation.\n\nSource: §1.2, p. 5\n\n2. Providing a new definition in a chat\n\nAndrea writes: \"In this chapter, X means Y.\" The model uses that definition to answer.\n\nWhat changes? The available context, not the model's weights.\n\nSource: §1.2, p. 5\n\n3. Answering questions using retrieved documents (RAG)\n\nA retrieval component finds relevant passages and supplies them to the model during generation.\n\nWhat changes? The external information available as context. Model parameters remain fixed.\n\nSource: §§1.2 and 1.7, pp. 5, 14\n\nQuick knowledge check\n\nAndrea adds a page from the textbook to a prompt. The model then answers a question using that page.\n\nWhat does this demonstrate?\n\nThe model has been retrained.\nThe available inference context has changed.\nThe model's parameters have been updated.\n\nCorrect!\n\nAdding a page changes the available context. It does not itself update model parameters or guarantee a correct answer. (§§1.2, 1.7)\n\nKey takeaway: Training changes the model's parameters. Ordinary inference uses existing parameters with the current input. RAG adds retrieved context without retraining the model."
+    },
+    {
+      "command": "/connectit",
+      "prompt": "/connectit Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:01.161Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the three corresponding interventions and clicked Check connections.",
+        "observed": "Three explanations and Score: 3/3 appeared."
+      },
+      "responseText": "ChatGPT said:\nConnect It: Training vs. Inference\n\nConnect each concept to what changes in a language model, using §1.2 and §1.7 of the chapter.\n\n3 connections · Chapter 1\n\n3/3 answered\n\n1. Training or fine-tuning\n\nAndrea trains a new model version using examples and prediction error.\n\nThe model's parameters\nThe current input/context\nRetrieved passages supplied as context\n\nCorrect\n\nOptimisation updates the model’s numerical parameters.\n\n§1.2, p. 5\n\n2. Ordinary inference\n\nAndrea adds a new definition to his prompt and receives a different answer.\n\nThe model's parameters\nThe current input/context\nRetrieved passages supplied as context\n\nCorrect\n\nThe input context changes, while the available model parameters remain fixed.\n\n§1.2, pp. 5–6\n\n3. Retrieval-augmented generation (RAG)\n\nAndrea retrieves a passage from the chapter before generating an answer.\n\nThe model's parameters\nThe current input/context\nRetrieved passages supplied as context\n\nCorrect\n\nExternal passages become available as context without updating model weights. Retrieval does not guarantee correctness.\n\n§1.7, pp. 13–14\nScore: 3/3\nTry again\n\nKey takeaway: Training changes parameters. Ordinary inference uses the available parameters with the current context. RAG supplies retrieved information to inference without itself retraining the model.\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, including Figure 1 and Table 1."
+    },
+    {
+      "command": "/lessonplan",
+      "prompt": "/lessonplan Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:01.399Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked Reveal answers.",
+        "observed": "The answer-key table and assessment answer appeared, and the button changed to Hide answers."
+      },
+      "responseText": "ChatGPT said:\nMini Lesson Plan: Training vs. Inference\nUniversity students\n15 minutes\nConceptual review\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, pp. 5–6, 13–14.\n\nLearning objectives\n\nBy the end, students should be able to:\n\nExplain how training updates model parameters through prediction error and optimisation.\n\nDistinguish ordinary inference from training when the input changes.\n\nExplain why adding information through a prompt or RAG does not itself change model weights.\n\nThree-part lesson\n4\nmin\n\n1. Explain — Compare the processes\n\nPresent the chapter's distinction:\n\nTraining: examples → prediction error → parameter updates.\n\nInference: input + fixed model → calculations → output.\n\nRAG: retrieved passages → context + fixed model → answer.\n\nSource: §1.2, Figure 1, p. 6.\n6\nmin\n\n2. Apply — Classify three scenarios\n\nStudents work in pairs and identify what changes in each scenario.\n\nA. A model is fine-tuned using examples.\n\nB. Andrea adds a new definition to his prompt.\n\nC. A retrieval system supplies a recent document.\n\nFor each, students justify whether model parameters change.\n\n5\nmin\n\n3. Assess — Independent explanation\n\nStudents answer without notes:\n\n“Andrea adds a definition to his prompt, and the model uses it correctly. Does this prove the model learned new parameters? Explain.”\n\nDiscuss the distinction between available context and updated weights.\n\nInteractive answer key\n\nExpected answers\n\nHide answers\n\nScenario\n\n\t\n\nExpected explanation\n\n\n\n\nA. Fine-tuning\n\n\t\n\nParameters change through optimisation.\n\n\n\n\nB. New definition\n\n\t\n\nContext changes; parameters remain fixed during ordinary inference.\n\n\n\n\nC. Retrieval\n\n\t\n\nExternal passages become available as context; retrieval does not itself update weights.\n\nAssessment answer: No. Correctly using a definition in the prompt demonstrates the influence of available context, not parameter updates.\n\nSource: §§1.2 and 1.7, pp. 5–6, 14.\n\nSuccess criterion: Students correctly distinguish all three interventions and independently explain why a changed answer is not evidence of retraining.\n\nBased exclusively on the attached chapter."
+    },
+    {
+      "command": "/sourceanalysis",
+      "prompt": "/sourceanalysis Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:01.623Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the context interpretation and clicked Check interpretation.",
+        "observed": "Correct interpretation and a chapter-based explanation appeared."
+      },
+      "responseText": "ChatGPT said:\nSource Analysis: Training vs. Inference\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, pp. 5–6 and 13–14.\n\nLearning goal: Distinguish what changes during training, ordinary inference, and retrieval-augmented generation (RAG).\n\n1. Examine three claims from the chapter\n\nSource claim\n\n\t\n\nWhat it establishes\n\n\t\n\nWhat it does not establish\n\n\n\n\nTraining: Optimisation updates numerical parameters (§1.2).\n\n\t\n\nTraining changes the model itself.\n\n\t\n\nEvery new message causes training.\n\n\n\n\nInference: Calculations use already available parameters (§1.2).\n\n\t\n\nChanging the prompt can change the answer without changing weights.\n\n\t\n\nDifferent output means the model has learned new parameters.\n\n\n\n\nRAG: Retrieved passages are supplied as context (§1.7).\n\n\t\n\nExternal information can influence generation.\n\n\t\n\nRetrieval guarantees correctness or updates weights.\n\n2. Analyse the chapter's example\n\nAndrea writes: “In this chapter, X means Y.”\n\nThe model later uses this definition correctly.\n\nQuestion: Does this observation prove that the model's parameters changed? Explain using evidence from §1.2.\n\nYes, because it learned the definition.\nNo, because the definition may be used through context.\nIt cannot be determined whether training occurred.\nCheck interpretation\n\nCorrect interpretation\n\nSection 1.2 explains that information supplied in a conversation may influence inference without updating model weights. The observation alone is not evidence of parameter updates.\n3. Evaluate the evidence\n\nThe chapter's Figure 1 (p. 6) contrasts three processes:\n\nTraining\n\nExamples\n\nPrediction error\n\nParameter updates\n\nChanged model\n\nInference\n\nInput + fixed model\n\nModel calculations\n\nOutput distribution\n\nSelected output\n\nRAG\n\nQuestion\n\nRetrieved passages\n\nContext + fixed model\n\nGenerated answer\n\nAdapted from Figure 1, §1.2, p. 6.\n\nCritical interpretation: The figure explains which component changes in each process. It is a conceptual comparison, not experimental evidence that a particular service has or has not updated parameters.\n\nExit question: A model answers differently after a new document is retrieved. What additional evidence would you need before claiming that the model was retrained?\n\nSource: §§1.2 and 1.7, especially Table 1, Figure 1, and the retrieval discussion."
+    },
+    {
+      "command": "/learningobjectives",
+      "prompt": "/learningobjectives Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:15:48.431Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the complete learning-objectives response.",
+        "observed": "Written objectives and success criterion only; no content-level controls."
+      },
+      "responseText": "ChatGPT said:\nLearning Objectives: Training vs. Inference\n\nBy the end of this review, university students should be able to:\n\n1. Distinguish training from inference. Explain how training updates numerical parameters through prediction error and optimisation, while ordinary inference uses the model’s existing parameters to generate outputs.\n\n2. Identify what changes in different interventions. Differentiate parameter updates (training or fine-tuning), changes to the input context (new messages), and external passages supplied through retrieval (RAG).\n\n3. Apply the distinction to practical scenarios. Explain why adding a definition to a prompt can change a model’s response without demonstrating that its weights have changed.\n\nSource: Foundations of Generative Artificial Intelligence, §1.2, pp. 5–6; §1.7, pp. 13–14.\n\nSuccess criterion: Students can independently explain what changes and what remains fixed in training, ordinary inference, and RAG, using a concrete example."
+    },
+    {
+      "command": "/rubric",
+      "prompt": "/rubric Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:48.740Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Selected the two-point rating for each of the three criteria.",
+        "observed": "The running total changed from 0/6 to 6/6 and displayed Strong understanding. Scores are chosen by the reviewer, not automatically graded."
+      },
+      "responseText": "ChatGPT said:\nAssessment Rubric: Training vs. Inference\n\nUse this rubric to assess a university student's explanation of training, ordinary inference, and context changes.\n\nScoring: 0 = Incorrect or missing · 1 = Partially correct · 2 = Accurate and complete.\n\n1. Training and parameters\n\n§1.2, p. 5\n\n0 points: Does not explain parameter updates.\n\n1 points: Recognizes that training changes parameters but does not explain how.\n\n2 points: Explains that prediction error guides optimisation, which updates numerical parameters.\n\n2. Ordinary inference\n\n§1.2, pp. 5–6\n\n0 points: Claims ordinary inference updates model weights.\n\n1 points: Recognizes fixed parameters but gives an incomplete explanation.\n\n2 points: Explains that inference uses existing parameters to calculate outputs from the current input and context.\n\n3. Context and retrieval\n\n§§1.2 and 1.7, pp. 5–6, 13–14\n\n0 points: Confuses adding context or retrieval with training.\n\n1 points: Recognizes that context can change answers but does not clearly distinguish it from parameter updates.\n\n2 points: Explains that prompts and retrieved passages change available context, not model parameters, and do not guarantee correctness.\n\nTOTAL SCORE\n\n6 / 6\nStrong understanding\nReset scores\n\nIndependent review question: Andrea inserts a new definition into a prompt, and the model uses it correctly. Has the model been trained? Explain what changed and what remained fixed.\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7, including Table 1 and Figure 1."
+    },
+    {
+      "command": "/bloomquestions",
+      "prompt": "/bloomquestions Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:49.120Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked the first Reveal expected answer control.",
+        "observed": "The expected answer appeared and the button changed to Hide expected answer."
+      },
+      "responseText": "ChatGPT said:\nBloom’s Taxonomy: Training vs. Inference\n\nThree progressively challenging questions for university students, based exclusively on §1.2 (Data, Parameters and Training) and §1.7 (Generation, Context and Retrieval).\n\nLEVEL 1 · UNDERSTAND\n\n§1.2, pp. 5–6\n\nExplain the difference between training and ordinary inference. What happens to model parameters in each case?\n\nHide expected answer\n\nEXPECTED ANSWER\n\nTraining uses prediction error and optimisation to update model parameters. Ordinary inference uses the available parameters to calculate outputs without updating them.\n\nLEVEL 2 · APPLY\n\n§1.2, p. 5\n\nAndrea adds “In this chapter, X means Y” to his prompt. The model then uses this definition. Has training occurred? Explain.\n\nReveal expected answer\n\nLEVEL 3 · ANALYZE\n\n§§1.2 and 1.7, pp. 5–6, 14\n\nCompare three interventions: fine-tuning a model, adding a definition to a prompt, and retrieving a relevant passage through RAG. Identify what changes and what stays fixed.\n\nReveal expected answer\n\nLearning outcome: Students should distinguish changes to learned parameters from changes to the context used during inference, and explain why retrieved information does not constitute retraining.\n\nSource: Foundations of Generative Artificial Intelligence, Chapter 1, §§1.2 and 1.7."
+    },
+    {
+      "command": "/flippedclassroom",
+      "prompt": "/flippedclassroom Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:49.518Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked Reveal.",
+        "observed": "The expected-answer list appeared and the button changed to Hide."
+      },
+      "responseText": "ChatGPT said:\nFlipped Classroom: Training vs. Inference\n\nUniversity students 20-minute activity\n\nLearning objective: Distinguish changes to model parameters from changes to the context available during inference.\n\nBased exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14).\n\n1. Before class — Individual preparation (5 min)\n\nRead §1.2 and Figure 1. Write one sentence explaining each process: training, ordinary inference, and RAG.\n\nRecall question: What changes when a definition is added to a prompt?\n\n2. In class — Pair discussion (10 min)\n\nAndrea writes: “In this chapter, X means Y.” The model subsequently uses that definition.\n\nDiscuss three claims:\n\nThe model's weights have changed.\n\nThe available context has changed.\n\nRetrieving the definition through RAG guarantees correctness.\n\nAgree on which claims are supported and explain why.\n\n3. After discussion — Individual exit ticket (5 min)\n\nWithout consulting the chapter, complete:\n\n“Training changes ___; ordinary inference uses ___; RAG supplies ___.”\n\nExpected answers\n\nHide\n\nTraining: Updates numerical parameters through optimisation.\n\nInference: Uses existing parameters; a new prompt changes the available context, not the weights.\n\nRAG: Supplies retrieved passages as context without itself updating parameters or guaranteeing correctness.\n\nSource: §§1.2 and 1.7, including Table 1 and Figure 1.\n\nAssessment criterion: Students can independently identify what changes, what remains fixed, and why successful use of new information does not demonstrate retraining."
+    },
+    {
+      "command": "/differentiate",
+      "prompt": "/differentiate Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "keep",
+      "outputType": "verified-interactive-output",
+      "recordedAt": "2026-11-07T17:15:49.873Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Clicked Reveal answers.",
+        "observed": "Answers for the three levels appeared and the button changed to Hide answers."
+      },
+      "responseText": "ChatGPT said:\nDifferentiated Review: Training vs. Inference\n\nLearning objective: Distinguish changes to model parameters from changes to the information available during inference.\n\nBased exclusively on Foundations of Generative Artificial Intelligence, §§1.2 and 1.7 (pp. 5–6, 13–14).\n\nLevel 1\n\nFoundational — Identify\n\nComplete the statements:\n\nTraining changes the model's ______.\n\nOrdinary inference uses ______ parameters.\n\nAdding information to a prompt changes the ______.\n\nLevel 2\n\nIntermediate — Explain\n\nAndrea adds the definition “X means Y” to a prompt. The model subsequently uses that definition correctly.\n\nExplain why this observation does not demonstrate that the model has been retrained.\n\nLevel 3\n\nAdvanced — Apply\n\nCompare three interventions: fine-tuning, adding a message, and retrieving a document through RAG.\n\nFor each, identify what changes, what remains fixed, and whether a correct answer is guaranteed.\n\nExpected answers\n\nHide answers\n\nLevel 1: Parameters; fixed (already available); context.\n\nLevel 2: The definition changes the information available during inference, not necessarily the model's weights.\n\nLevel 3:\n\nIntervention\n\n\t\n\nWhat changes?\n\n\n\n\nFine-tuning\n\n\t\n\nModel parameters\n\n\n\n\nNew message\n\n\t\n\nCurrent inference context\n\n\n\n\nRAG\n\n\t\n\nRetrieved passages supplied as context\n\nOrdinary inference and RAG use the available model without updating its parameters. None of these interventions guarantees a correct answer.\n\nTeaching approach: Students select a level according to their confidence, explain their answers independently, then advance to the next level. Evaluate the conceptual distinction rather than the length of the response.\n\nSource: Chapter 1, §1.2, Table 1 and Figure 1; §1.7, “Generation, context and retrieval.”"
+    },
+    {
+      "command": "/slides",
+      "prompt": "/slides Using only the attached chapter, help university students review training versus inference. Keep the result compact; use three items where appropriate. Answer in English.",
+      "previousStatus": "remove",
+      "status": "remove",
+      "outputType": "static-response",
+      "recordedAt": "2026-11-07T17:16:44.379Z",
+      "modelLabel": "Thinking effort\nMedium",
+      "temporaryChat": true,
+      "userMessageCount": 2,
+      "responseComplete": true,
+      "interaction": {
+        "action": "Inspected the completed response, attached PowerPoint and its viewer controls.",
+        "observed": "The result is a downloadable three-slide PowerPoint. Preview, presentation navigation and download are document-viewer controls; the generated learning content has no answer fields, reveal controls or feedback."
+      },
+      "responseText": "ChatGPT said:\n\nCreated a compact 3-slide PowerPoint for university students, using only the attached chapter.\n\nDownload the PowerPoint slides\n\n3 editable slides · English\n\nSlide overview\n\nTraining: Examples → Prediction error → Parameter updates.\n\nOrdinary inference: Fixed parameters, changing inputs and context.\n\nKnowledge check: Compare fine-tuning, adding a definition to a prompt, and RAG.\n\nKey takeaway: Training changes model parameters. Ordinary inference uses existing parameters. Adding information to the context or retrieving documents does not itself retrain the model.\n\nSource: Foundations of Generative Artificial Intelligence, §§1.2 and 1.7.\n\ntraining_vs_inference_review.pptx\nPowerpoint"
+    }
+  ]
+}

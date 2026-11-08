@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, provide } from 'vue'
-import { getSlide, slides } from '../utils/deck'
+import { computed, provide, ref, watch } from 'vue'
+import { getSlide, presentationSlideCount, type StudyFocus } from '../utils/deck'
 import { imageUrl as image } from '../utils/assets'
 import highlights from '../data/content/highlights.json'
 import { EMPHASIS_TERMS_KEY, type EmphasisTerm } from '../utils/emphasis'
@@ -9,12 +9,16 @@ import BentoCard from './shared/BentoCard.vue'
 import SourceLine from './shared/SourceLine.vue'
 import WhattadataCubes from './media/WhattadataCubes.vue'
 import SlideAudience from './shared/SlideAudience.vue'
+import StudyPhaseRibbon from './shared/StudyPhaseRibbon.vue'
 import CoverBackground from './media/CoverBackground.vue'
 import WorkshopSlide from './slides/WorkshopSlide.vue'
 
 const props = defineProps<{ id: string }>()
 provide(EMPHASIS_TERMS_KEY, computed(() => (highlights as Record<string, EmphasisTerm[]>)[props.id] || []))
 const s = computed(() => getSlide(props.id))
+const selectedStudyPhases = ref<StudyFocus>()
+watch(() => props.id, () => { selectedStudyPhases.value = undefined })
+const studyPhases = computed(() => selectedStudyPhases.value || s.value?.studyPhases)
 const lead = computed(() => s.value && !['cover', 'profile'].includes(s.value.type) ? s.value.message : '')
 const cards = computed(() => s.value?.cards || [])
 const sourceIds = computed(() => s.value?.sources.filter(id => id !== 'BIO02').slice(0, 3) || [])
@@ -28,14 +32,15 @@ const bentoCards = computed(() => {
 })
 const slideProgress = computed(() => ({
   value: s.value?.number || 1,
-  max: slides.length,
-  label: 'Progress through all slides',
-  text: `Slide ${s.value?.number} of ${slides.length}`,
+  max: presentationSlideCount,
+  label: 'Progress through the presentation',
+  text: `Slide ${s.value?.number} of ${presentationSlideCount}`,
 }))
 </script>
 
 <template>
-  <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '']" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined">
+  <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '', { 'has-study-phases': !!studyPhases }]" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined">
+    <StudyPhaseRibbon v-if="studyPhases" v-bind="studyPhases" />
     <SlideAudience v-if="!['cover', 'profile', 'company'].includes(s.type) && !['S48', 'S49', 'S50QR'].includes(s.id) && !['thanks', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" :audience="s.audience" />
     <span v-if="s.todo" class="badge badge-warning absolute left-16 top-4 z-10 h-7 gap-2 text-sm font-medium" role="note">
       <strong>TODO</strong>{{ s.todo }}
@@ -59,7 +64,7 @@ const slideProgress = computed(() => ({
     </template>
 
     <template v-else-if="s.type === 'workshop'">
-      <WorkshopSlide :slide="s" />
+      <WorkshopSlide :slide="s" @study-phase-change="selectedStudyPhases = $event" />
       <SourceLine v-if="!['bibliography', 'web-resources', 'shortcut-cloud'].includes(s.kind)" :ids="sourceIds" />
     </template>
 
@@ -107,7 +112,7 @@ const slideProgress = computed(() => ({
       <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
       <SourceLine :ids="sourceIds" />
     </template>
-    <span v-if="s.kind !== 'shortcut-cloud'" class="slide-page" :aria-label="`Slide ${s.number} of ${slides.length}`">{{ s.number }} / {{ slides.length }}</span>
-    <progress v-if="s.kind !== 'shortcut-cloud'" class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
+    <span v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="slide-page" :aria-label="`Slide ${s.number} of ${presentationSlideCount}`">{{ s.number }} / {{ presentationSlideCount }}</span>
+    <progress v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
   </main>
 </template>

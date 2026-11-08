@@ -1,0 +1,118 @@
+Formative — Inspect fictional responses and evidence
+
+RECORDED TASK
+Use a clearly labelled fictional workshop learner or the service's built-in demonstration responses to inspect response evidence. Compare a context/weights misconception with a corrected explanation. Show response review and scoring controls without real student records.
+
+METHOD
+Actual @Browser interface actions. Silent recording, optional English captions. Source proportions and complete viewport preserved. Idle gaps, loading screens and marked processing waits shortened.
+
+00:00:00.000 Activate the authorized guest-only workshop test; no real class is selected.
+00:00:08.180 Enter an authored fictional response in the teacher’s student preview.
+00:00:15.676 Enter a deliberately incorrect answer for discussion; this is authored test data.
+00:00:25.481 Use the standalone teacher preview to enter the authored explanation.
+00:00:33.670 Add a simple labelled process sketch in the real drawing editor.
+00:00:49.646 Inspect the saved teacher-preview response; no real learner is represented.
+
+OBSERVED RESULT
+Authored and submitted an intentionally wrong multiple-choice answer, an explicitly fictional context/weights misconception and a source-consistent labelled process drawing in the teacher preview. The teacher response view shows the incorrect selected option and allows review of the written and drawn evidence.
+
+SCOPE AND LIMITATIONS
+No real students or class were used. A guest-only assignment was activated with explicit user authorization, but these saved test responses were entered through Teacher preview and appear under the author account. The multiple-choice response is automatically marked incorrect; open and drawn evidence still requires teacher judgement. Recorded in a Paid Teacher trial.
+
+RECORDED OUTPUT / RESPONSE EVIDENCE
+- status: Assignment created
+- link "Skip to main content":
+  - /url: "#main-content"
+- button "Menu":
+  - generic: menu
+- link "Exit":
+  - /url: /formatives
+  - generic: keyboard_arrow_left
+- generic: Formative title
+- textbox "Formative title":
+  - /placeholder: Beyond prompting — chapter check (fictional demo)
+  - text: Beyond prompting — chapter check (fictional demo)
+- button "Preview as a student":
+  - generic: visibility
+- button "Notifications":
+  - generic: notifications
+- button "Collaborators":
+  - generic: people
+- button "More options":
+  - generic: more_vert
+- button "Assign":
+  - generic: Assign
+- group "View options":
+  - radio "Edit":
+    - generic: Edit
+  - radio "Responses" [checked]:
+    - generic: Responses
+    - generic "Presence indicator"
+  - radio "Insights":
+    - generic: Insights
+- main:
+  - grid "grid":
+    - row "TOTALS 1 2 3":
+      - gridcell "TOTALS":
+        - button "TOTALS"
+      - gridcell "1":
+        - button "1"
+      - gridcell "2":
+        - button "2"
+      - gridcell "3":
+        - button "3" [active]
+  - heading "Question details Drawing Required" [level=3]:
+    - button "Question details Drawing":
+      - generic: expand_more
+      - generic: Question details
+      - generic: Drawing
+    - generic: Required
+  - region "Question details Drawing"
+  - group "View options":
+    - radio "Responses" [checked]:
+      - generic: Responses
+    - radio "Frequency":
+      - generic: Frequency
+  - generic: Responses per row
+  - button "Subtract":
+    - generic: remove
+  - generic: "3"
+  - button "Add" [disabled]:
+    - generic: add
+  - button "Active":
+    - button "Active":
+      - generic: sort_by_alpha
+      - text: Active
+      - generic: arrow_drop_down
+  - button "Grading method":
+    - generic: rule
+    - generic: Grading method
+  - status
+  - button "Settings 2":
+    - generic: settings
+    - text: Settings
+    - generic: "2"
+  - button "Filters 0":
+    - generic: filter_list
+    - text: Filters
+    - generic: "0"
+  - button "Toggle assignment" [expanded]:
+    - generic: visibility
+    - heading "Teacher preview" [level=4]
+    - generic: expand_less
+  - button "Open answer from Marco Cremaschi, Needs grading"
+  - generic "Marco Cremaschi":
+    - img "Marco Cremaschi"
+  - text: Marco Cremaschi
+  - generic: Select Marco Cremaschi
+  - checkbox "Select Marco Cremaschi"
+  - button "No feedback":
+  - button "Toggle assignment":
+    - generic "Guests":
+      - generic: language
+    - heading "Guest students" [level=4]
+    - generic: expand_more
+- status
+- status
+- status
+- status

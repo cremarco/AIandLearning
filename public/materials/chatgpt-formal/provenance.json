@@ -1,5 +1,5 @@
 {
-  "recordedOn": "2026-11-05",
+  "recordedOn": "2026-11-08",
   "sourceUrl": "https://chatgpt.com/c/6aebbb90-b074-83ed-9e97-8d7160a96079",
   "desktop": {
     "status": "not-executed",
@@ -9,12 +9,402 @@
     {
       "action": "Study",
       "status": "executed",
-      "prompt": "Using only the attached book, help me understand why adding text to context does not update model parameters. Ask me one short question at a time and wait for my answer. Answer in English.",
-      "result": "Let's work through this using Section 1.2: Data, Parameters and Training of your book.\n\nThe book distinguishes between training, which changes model parameters, and inference, which uses the parameters already available.\n\nQuestion 1:\n\nIf you add the sentence “In this chapter, X means Y” to a prompt, what do you think changes: the model's parameters or the information available in its context?\n\nExplain briefly in your own words.",
-      "inputCapture": "web-study-input.jpg",
-      "capture": "web-study-result.jpg",
-      "notes": "The Study action was selected from the native / menu. The composer contained the native Study pill before sending.",
-      "captureSha256": "8c16dde21694485c26f74156df7bc61a87a385283a3f9cd5c333dabff1e98c80"
+      "recordedAt": "2026-11-08T13:58:48.044Z",
+      "video": {
+        "key": "web-study",
+        "recordingKey": "chatgpt-formal-web-study",
+        "slideId": "S53FORMALWEB",
+        "command": "Study",
+        "status": "executed",
+        "accepted": true,
+        "browser": "@Browser",
+        "recordedAt": "2026-11-08T13:58:48.044Z",
+        "type": "video",
+        "src": "materials/video-refresh/2026-11-07/chatgpt-formal-web-study/video.mp4",
+        "poster": "materials/video-refresh/2026-11-07/chatgpt-formal-web-study/poster.jpg",
+        "captions": "materials/video-refresh/2026-11-07/chatgpt-formal-web-study/captions.en.vtt",
+        "transcriptFile": "materials/video-refresh/2026-11-07/chatgpt-formal-web-study/transcript.txt",
+        "captionsDefault": false,
+        "browserFrame": true,
+        "alt": "ChatGPT — Study: recorded demonstration and use.",
+        "caption": "ChatGPT · 90.9 s",
+        "prompt": "Using only the attached chapter, help me study three ideas: context versus parameters, tokens versus words, and probability versus truth. Ask one short question at a time and wait for my answer. Keep each reply under 60 words. Give a hint before the answer when I am wrong. Start with context versus parameters. End with an independent-check suggestion, not a mastery score. Answer in English.",
+        "result": {
+          "kind": "chatgpt-share",
+          "url": "https://chatgpt.com/share/6af093b1-cfb4-83ed-952e-bcc993014361",
+          "label": "Open shared result",
+          "interactiveVerified": false,
+          "recipientVerified": true,
+          "ownerIndependent": true,
+          "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+          "supplemental": []
+        },
+        "provenance": "materials/video-refresh/2026-11-07/provenance/chatgpt-formal-web-study.json",
+        "durationSeconds": 90.883333,
+        "width": 1440,
+        "height": 900,
+        "fps": 60,
+        "sha256": "3cb6e719d9140de5f1371a26d735f91b86c1404c85a41623e2406fa8bbd73d32",
+        "recordingMode": "accepted-native-refresh",
+        "refreshReleaseId": "2026-11-07",
+        "videoSha256": "3cb6e719d9140de5f1371a26d735f91b86c1404c85a41623e2406fa8bbd73d32",
+        "posterSha256": "8293d855903b0b41a180457c7e346b98d86e37b82ef3aa023fe03bf457d743cb",
+        "captureFrameCount": 757,
+        "scenes": [
+          {
+            "phase": "home",
+            "atSeconds": 0,
+            "rate": 3
+          },
+          {
+            "phase": "upload-menu",
+            "atSeconds": 0.45733333333333337,
+            "rate": 3
+          },
+          {
+            "phase": "upload",
+            "atSeconds": 0.748,
+            "rate": 3
+          },
+          {
+            "phase": "typing",
+            "atSeconds": 0.9553333333333335,
+            "rate": 3
+          },
+          {
+            "phase": "typing",
+            "atSeconds": 1.1343333333333332,
+            "rate": 3
+          },
+          {
+            "phase": "configuration",
+            "atSeconds": 5.277666666666669,
+            "rate": 3
+          },
+          {
+            "phase": "configuration",
+            "atSeconds": 5.423000000000003,
+            "rate": 3
+          },
+          {
+            "phase": "prompt-ready",
+            "atSeconds": 5.76866666666667,
+            "rate": 1
+          },
+          {
+            "phase": "send",
+            "atSeconds": 7.96366666666667,
+            "rate": 3
+          },
+          {
+            "phase": "generation",
+            "atSeconds": 8.369000000000002,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 8.854250000000002,
+            "rate": 1
+          },
+          {
+            "phase": "read",
+            "atSeconds": 11.775250000000003,
+            "rate": 1
+          },
+          {
+            "phase": "answer-0",
+            "atSeconds": 15.31225,
+            "rate": 1
+          },
+          {
+            "phase": "answer-0",
+            "atSeconds": 15.31625,
+            "rate": 1
+          },
+          {
+            "phase": "generation-turn-0",
+            "atSeconds": 20.274250000000027,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 20.895750000000024,
+            "rate": 1
+          },
+          {
+            "phase": "answer-1",
+            "atSeconds": 24.642750000000014,
+            "rate": 1
+          },
+          {
+            "phase": "generation-turn-1",
+            "atSeconds": 30.836750000000038,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 31.442500000000038,
+            "rate": 1
+          },
+          {
+            "phase": "answer-2",
+            "atSeconds": 35.20050000000004,
+            "rate": 1
+          },
+          {
+            "phase": "generation-turn-2",
+            "atSeconds": 41.612500000000026,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 42.15600000000002,
+            "rate": 1
+          },
+          {
+            "phase": "answer-3",
+            "atSeconds": 47.33500000000002,
+            "rate": 1
+          },
+          {
+            "phase": "generation-turn-3",
+            "atSeconds": 53.510000000000026,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 54.083250000000035,
+            "rate": 1
+          },
+          {
+            "phase": "answer-4",
+            "atSeconds": 59.00225000000003,
+            "rate": 1
+          },
+          {
+            "phase": "generation-turn-4",
+            "atSeconds": 67.62825000000002,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 68.20025000000003,
+            "rate": 1
+          },
+          {
+            "phase": "answer-5",
+            "atSeconds": 72.49825000000003,
+            "rate": 1
+          },
+          {
+            "phase": "generation-turn-5",
+            "atSeconds": 83.30925000000006,
+            "rate": 4
+          },
+          {
+            "phase": "read",
+            "atSeconds": 83.92650000000006,
+            "rate": 1
+          },
+          {
+            "phase": "share-result",
+            "atSeconds": 90.88050000000005,
+            "rate": 1
+          }
+        ],
+        "chapters": [
+          {
+            "label": "home",
+            "atSeconds": 0,
+            "rate": 3
+          },
+          {
+            "label": "upload menu",
+            "atSeconds": 0.45733333333333337,
+            "rate": 3
+          },
+          {
+            "label": "upload",
+            "atSeconds": 0.748,
+            "rate": 3
+          },
+          {
+            "label": "typing",
+            "atSeconds": 0.9553333333333335,
+            "rate": 3
+          },
+          {
+            "label": "typing",
+            "atSeconds": 1.1343333333333332,
+            "rate": 3
+          },
+          {
+            "label": "configuration",
+            "atSeconds": 5.277666666666669,
+            "rate": 3
+          },
+          {
+            "label": "configuration",
+            "atSeconds": 5.423000000000003,
+            "rate": 3
+          },
+          {
+            "label": "prompt ready",
+            "atSeconds": 5.76866666666667,
+            "rate": 1
+          },
+          {
+            "label": "send",
+            "atSeconds": 7.96366666666667,
+            "rate": 3
+          },
+          {
+            "label": "generation",
+            "atSeconds": 8.369000000000002,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 8.854250000000002,
+            "rate": 1
+          },
+          {
+            "label": "read",
+            "atSeconds": 11.775250000000003,
+            "rate": 1
+          },
+          {
+            "label": "answer 0",
+            "atSeconds": 15.31225,
+            "rate": 1
+          },
+          {
+            "label": "answer 0",
+            "atSeconds": 15.31625,
+            "rate": 1
+          },
+          {
+            "label": "generation turn 0",
+            "atSeconds": 20.274250000000027,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 20.895750000000024,
+            "rate": 1
+          },
+          {
+            "label": "answer 1",
+            "atSeconds": 24.642750000000014,
+            "rate": 1
+          },
+          {
+            "label": "generation turn 1",
+            "atSeconds": 30.836750000000038,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 31.442500000000038,
+            "rate": 1
+          },
+          {
+            "label": "answer 2",
+            "atSeconds": 35.20050000000004,
+            "rate": 1
+          },
+          {
+            "label": "generation turn 2",
+            "atSeconds": 41.612500000000026,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 42.15600000000002,
+            "rate": 1
+          },
+          {
+            "label": "answer 3",
+            "atSeconds": 47.33500000000002,
+            "rate": 1
+          },
+          {
+            "label": "generation turn 3",
+            "atSeconds": 53.510000000000026,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 54.083250000000035,
+            "rate": 1
+          },
+          {
+            "label": "answer 4",
+            "atSeconds": 59.00225000000003,
+            "rate": 1
+          },
+          {
+            "label": "generation turn 4",
+            "atSeconds": 67.62825000000002,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 68.20025000000003,
+            "rate": 1
+          },
+          {
+            "label": "answer 5",
+            "atSeconds": 72.49825000000003,
+            "rate": 1
+          },
+          {
+            "label": "generation turn 5",
+            "atSeconds": 83.30925000000006,
+            "rate": 4
+          },
+          {
+            "label": "read",
+            "atSeconds": 83.92650000000006,
+            "rate": 1
+          },
+          {
+            "label": "share result",
+            "atSeconds": 90.88050000000005,
+            "rate": 1
+          }
+        ],
+        "capture": {
+          "sha256": "4fc7a0715fee462455a3ab0341fb4eace3649a76368923ed743f436f2f5e26b8",
+          "sourceFrames": 757,
+          "usedFrames": 649,
+          "conversationFingerprint": "5b9d1700d6dab0f805450bc4e680e1925d4f561b60953d92df1db4236ae36645",
+          "newChat": true,
+          "temporaryChat": false,
+          "interfaceLanguage": "en"
+        },
+        "qa": {
+          "accepted": true,
+          "videoSha256": "3cb6e719d9140de5f1371a26d735f91b86c1404c85a41623e2406fa8bbd73d32",
+          "captureSha256": "4fc7a0715fee462455a3ab0341fb4eace3649a76368923ed743f436f2f5e26b8",
+          "recordSha256": "f551255243e10bdf81f5a1aa7b1abf774f7a25ac513cd8288195a2b6d5b99573"
+        },
+        "sourceBook": {
+          "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+          "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+        },
+        "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet."
+      },
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6af093b1-cfb4-83ed-952e-bcc993014361",
+        "label": "Open shared result",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+        "supplemental": []
+      }
     },
     {
       "action": "Model",
@@ -55,101 +445,211 @@
     {
       "action": "Read aloud",
       "status": "executed",
-      "capture": "web-read-aloud.jpg",
-      "result": "Native read-aloud playback started for the actual Study response. The control changed to “Interrompi lettura ad alta voce”. Playback was then stopped. The screenshot does not contain an audio recording.",
-      "captureSha256": "776277152b555714dc129c4ddab74b55c37e629f97465a3ba1f02d5c6321f7f6",
+      "recordedAt": "2026-11-08T13:51:44.946Z",
       "video": {
-        "recordedOn": "2026-11-05",
-        "sourceUrl": "https://chatgpt.com/c/6aecadb2-a9a8-83ed-bdc0-5b2547afc5d8",
-        "method": "Edited sequence of original ChatGPT UI captures, cropped at 1:1 with reading holds. No reconstructed interface, pointer movement or transitions. No audio track.",
-        "audio": false,
-        "src": "materials/chatgpt-formal/web-read-aloud.mp4",
-        "poster": "materials/chatgpt-formal/web-read-aloud-poster.jpg",
-        "captions": "materials/chatgpt-formal/web-read-aloud.en.vtt",
-        "transcriptFile": "materials/chatgpt-formal/web-read-aloud-transcript.txt",
-        "durationSeconds": 17,
+        "key": "web-read-aloud",
+        "recordingKey": "chatgpt-formal-web-read-aloud",
+        "slideId": "S53FORMALREADALOUD",
+        "command": "Read aloud",
+        "status": "executed",
+        "accepted": true,
+        "browser": "@Browser",
+        "recordedAt": "2026-11-08T13:51:44.946Z",
+        "type": "video",
+        "src": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/video.mp4",
+        "poster": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/poster.jpg",
+        "captions": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/captions.en.vtt",
+        "transcriptFile": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/transcript.txt",
+        "captionsDefault": false,
+        "browserFrame": true,
+        "alt": "ChatGPT — Read aloud · ChatGPT web: recorded demonstration and use.",
+        "caption": "ChatGPT · 17.2 s",
+        "prompt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
+        "result": {
+          "kind": "chatgpt-share",
+          "url": "https://chatgpt.com/share/6af08527-0b44-83ed-a53d-957cdad63a6e",
+          "label": "Open shared result",
+          "interactiveVerified": false,
+          "recipientVerified": true,
+          "ownerIndependent": true,
+          "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+          "supplemental": []
+        },
+        "provenance": "materials/video-refresh/2026-11-07/provenance/chatgpt-formal-web-read-aloud.json",
+        "durationSeconds": 17.183333,
         "width": 1440,
         "height": 900,
-        "fps": 24,
-        "sha256": "9b8c0b2a67b170332368c7da52174a3070fdfbe51bdba25107788ff924fc9c65",
-        "prompt": "Explain the difference between training and inference in two short sentences. Answer in English.",
-        "response": "Training is the process of learning patterns from data by adjusting a model’s parameters to reduce prediction errors. Inference is the process of using those learned parameters to generate predictions or outputs for new inputs without changing them.",
-        "frames": [
+        "fps": 60,
+        "sha256": "a63b9cfad74ade4632df4180d6c57b601991f0cc5651f8a17c4464cbeec3895d",
+        "recordingMode": "accepted-native-refresh",
+        "refreshReleaseId": "2026-11-07",
+        "videoSha256": "a63b9cfad74ade4632df4180d6c57b601991f0cc5651f8a17c4464cbeec3895d",
+        "posterSha256": "ef835185ff64f679a849f3d075c0be1effb474fee821f1bde13dfed677a0c31c",
+        "captureFrameCount": 419,
+        "scenes": [
           {
-            "file": "00-response.jpg",
-            "phase": "response",
-            "duration": 3,
-            "caption": "ChatGPT provides a short explanation of training and inference.",
-            "crop": [
-              266,
-              50,
-              1066,
-              320
-            ],
-            "sourceSha256": "8b00e6b150c5c8bdd26caeb993603499e8db7503bc61cebdb3409e35ce81c09e"
+            "phase": "home",
+            "atSeconds": 0,
+            "rate": 3
           },
           {
-            "file": "01-menu.jpg",
-            "phase": "menu",
-            "duration": 4,
-            "caption": "Open the / menu and choose Read aloud (Leggi ad alta voce).",
-            "crop": [
-              266,
-              350,
-              1066,
-              640
-            ],
-            "sourceSha256": "9ef3c855d4a2f6cd095e6380a36e7e37a029644a8a41e393777f0f29ba53347d"
+            "phase": "upload-menu",
+            "atSeconds": 0.4643333333333333,
+            "rate": 3
           },
           {
-            "file": "02-playing.jpg",
-            "phase": "loading",
-            "duration": 2,
-            "caption": "ChatGPT loads the read-aloud playback.",
-            "crop": [
-              266,
-              50,
-              1066,
-              320
-            ],
-            "sourceSha256": "5c3c371d76b7f3ce1968b45a9a6b7cba9f3082d1041608596cedc16f38a5fbd9"
+            "phase": "upload",
+            "atSeconds": 0.7253333333333334,
+            "rate": 3
           },
           {
-            "file": "03-playback.jpg",
+            "phase": "typing",
+            "atSeconds": 0.938,
+            "rate": 3
+          },
+          {
+            "phase": "typing",
+            "atSeconds": 1.0909999999999997,
+            "rate": 3
+          },
+          {
+            "phase": "prompt-ready",
+            "atSeconds": 2.8930000000000002,
+            "rate": 1
+          },
+          {
+            "phase": "send",
+            "atSeconds": 5.347,
+            "rate": 3
+          },
+          {
+            "phase": "generation",
+            "atSeconds": 5.704333333333334,
+            "rate": 4
+          },
+          {
+            "phase": "use",
+            "atSeconds": 5.891333333333335,
+            "rate": 1
+          },
+          {
             "phase": "playback",
-            "duration": 5,
-            "caption": "The active stop control shows that read-aloud playback has started.",
-            "crop": [
-              266,
-              50,
-              1066,
-              320
-            ],
-            "sourceSha256": "a2af8be3976af22aae631ce853101bcfb76bc9cdf3fb7f44cbfc56975d568d63"
+            "atSeconds": 9.793333333333333,
+            "rate": 1
           },
           {
-            "file": "04-stopped.jpg",
-            "phase": "finished",
-            "duration": 3,
-            "caption": "After playback finishes, the Read aloud control is available again.",
-            "crop": [
-              266,
-              50,
-              1066,
-              320
-            ],
-            "sourceSha256": "ddbc0c24028f909c8c970b3804eaa9ae54bfbdf0e7466684f6c8bede615ad40d"
+            "phase": "playback",
+            "atSeconds": 15.588333333333326,
+            "rate": 1
+          },
+          {
+            "phase": "result-link",
+            "atSeconds": 17.190333333333324,
+            "rate": 1
+          },
+          {
+            "phase": "result-link",
+            "atSeconds": 17.190333333333324,
+            "rate": 1
+          },
+          {
+            "phase": "result-link",
+            "atSeconds": 17.190333333333324,
+            "rate": 1
+          },
+          {
+            "phase": "result-link",
+            "atSeconds": 17.190333333333324,
+            "rate": 1
           }
         ],
-        "deliveryNormalization": {
-          "date": "2026-11-06",
-          "sourceSha256": "285d7e1228342a9f1e9de255ea64b8368a80f4ae594fff4607b165c7542c69dc",
-          "sourceDimensions": [
-            800,
-            300
-          ],
-          "method": "Aspect-preserving Lanczos resize; padding only when needed. H.264 CRF16; original cadence and duration preserved. Original media retained in ignored local review archive."
-        }
+        "chapters": [
+          {
+            "label": "home",
+            "atSeconds": 0,
+            "rate": 3
+          },
+          {
+            "label": "upload menu",
+            "atSeconds": 0.4643333333333333,
+            "rate": 3
+          },
+          {
+            "label": "upload",
+            "atSeconds": 0.7253333333333334,
+            "rate": 3
+          },
+          {
+            "label": "typing",
+            "atSeconds": 0.938,
+            "rate": 3
+          },
+          {
+            "label": "typing",
+            "atSeconds": 1.0909999999999997,
+            "rate": 3
+          },
+          {
+            "label": "prompt ready",
+            "atSeconds": 2.8930000000000002,
+            "rate": 1
+          },
+          {
+            "label": "send",
+            "atSeconds": 5.347,
+            "rate": 3
+          },
+          {
+            "label": "generation",
+            "atSeconds": 5.704333333333334,
+            "rate": 4
+          },
+          {
+            "label": "use",
+            "atSeconds": 5.891333333333335,
+            "rate": 1
+          },
+          {
+            "label": "playback",
+            "atSeconds": 9.793333333333333,
+            "rate": 1
+          },
+          {
+            "label": "playback",
+            "atSeconds": 15.588333333333326,
+            "rate": 1
+          }
+        ],
+        "capture": {
+          "sha256": "4c54b59d99a11ceac9588598e1c2a47e5dffa6373de36361303158f9dfd819f8",
+          "sourceFrames": 419,
+          "usedFrames": 222,
+          "conversationFingerprint": "25d2c37dee146b314e326bc2495c6c423e7d33fdb5bfcf87707f8499920f24fd",
+          "newChat": true,
+          "temporaryChat": false,
+          "interfaceLanguage": "en"
+        },
+        "qa": {
+          "accepted": true,
+          "videoSha256": "a63b9cfad74ade4632df4180d6c57b601991f0cc5651f8a17c4464cbeec3895d",
+          "captureSha256": "4c54b59d99a11ceac9588598e1c2a47e5dffa6373de36361303158f9dfd819f8",
+          "recordSha256": "1610f9a654f97d05568f9bf52b13fcce9272d41048f7b661238418c70f80d545"
+        },
+        "sourceBook": {
+          "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+          "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+        },
+        "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet."
+      },
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6af08527-0b44-83ed-a53d-957cdad63a6e",
+        "label": "Open shared result",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+        "supplemental": []
       }
     }
   ],
@@ -157,5 +657,6 @@
     "path": "public/materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
     "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981",
     "uploadAuthorized": true
-  }
+  },
+  "refreshReleaseId": "2026-11-07"
 }

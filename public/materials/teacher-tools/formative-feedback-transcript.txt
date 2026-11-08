@@ -1,0 +1,87 @@
+Formative — Give actionable feedback and review a correction
+
+RECORDED TASK
+On the fictional demonstration response, add teacher-written feedback: Revisit context versus parameters. Correct the statement that every prompt updates weights, then explain why. Inspect the student feedback view and, if available in the test workflow, submit a corrected explanation. Do not message real students.
+
+METHOD
+Actual @Browser interface actions. Silent recording, optional English captions. Source proportions and complete viewport preserved. Idle gaps and marked processing waits shortened.
+
+00:00:00.000 Open the fictional written misconception before composing feedback.
+00:00:05.869 Write feedback that identifies the misconception and a specific next action.
+00:00:13.491 Open the saved feedback from the learner preview.
+00:00:20.270 Check the learner preview after refreshing the saved submission.
+00:00:26.247 Reply with a corrected explanation in the feedback thread.
+
+OBSERVED RESULT
+Manually scored the authored misconception, wrote and sent actionable teacher feedback, verified that it appeared in the learner preview after a refresh, and posted a corrected explanation in the feedback conversation.
+
+SCOPE AND LIMITATIONS
+Recorded in a Paid Teacher trial, using the author’s Teacher preview and explicitly fictional responses. No real student received a message or grade. The original submitted answer remained locked; the correction was posted in the feedback conversation rather than replacing that answer. The first unrefreshed feedback check showed no messages; refresh made the saved feedback visible.
+
+RECORDED OUTPUT / RESPONSE EVIDENCE
+- status: Message sent
+- link "Skip to main content":
+  - /url: "#student-formative-content"
+- banner:
+  - heading "Beyond prompting — chapter check (fictional demo)" [level=1]
+- main:
+  - navigation:
+    - tablist "Question navigation":
+      - tab "Formative details":
+        - generic: assignment
+      - tab "Instructions":
+        - generic: sticky_note_2
+      - 'tab "Question 1: Incorrect"':
+        - generic: "1"
+      - 'tab "Question 2: Incorrect" [selected]':
+        - generic: "2"
+      - 'tab "Question 3: Complete"':
+        - generic: "3"
+      - tab "Student summary":
+        - generic: summarize
+  - 'tabpanel "Question 2: Incorrect"':
+    - generic: Required
+    - img "0 out of 1 point":
+      - generic: close
+      - generic: 0/1
+    - generic: Question 2
+    - generic: "2."
+    - heading "Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences." [level=2]:
+      - paragraph: Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences.
+      - status
+    - paragraph: "[Fictional example] The definition changes the weights. Each prompt retrains the model."
+    - status
+    - button "Feedback":
+      - generic: chat_bubble
+    - button "Previous":
+      - generic: arrow_back
+      - generic: Previous
+    - button "Next":
+      - generic: Next
+      - generic: arrow_forward
+  - toolbar "Learning tools":
+    - button "Color contrast":
+      - generic: contrast
+    - button "Notes":
+    - separator
+    - button "Focus tools":
+      - generic: center_focus_strong
+  - status
+- status
+- dialog "Feedback":
+  - paragraph: "Fictional workshop feedback: Revisit context versus parameters in §1.2. Adding a definition changes the information available in context; ordinary inference keeps the learned parameters fixed. Correct your two sentences, then explain one new example without copying the chapter."
+  - status
+  - time: 1 minute ago
+  - paragraph: "Fictional correction: Adding the definition changes the context available for this response. During ordinary inference, the learned parameters stay fixed; using a new definition does not show that the model was retrained."
+  - status
+  - time: Less than a minute ago
+  - textbox "Type a message":
+    - paragraph: Type a message
+  - button "Add enriched content":
+    - generic: add_circle_outline
+  - status
+  - button "Send" [disabled] [active]:
+    - generic: send
+- region "Notifications (F8)":
+  - list:
+    - generic: Message sent

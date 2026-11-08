@@ -1,0 +1,8 @@
+In **Retrieval-Augmented Generation (RAG)**, an external retrieval component searches a document collection and appends relevant excerpts directly into the input prompt context for the current inference step. 
+
+Because a model's **learned parameters and the external document collection are distinct components**, inserting retrieved text dynamically expands the information available within the context window while keeping the model's underlying weights completely fixed. During generation, the model simply runs its calculation using those static parameters across the updated input context.
+
+### Example
+When a user asks a question about a specific chapter, the RAG system retrieves a relevant paragraph from that document and attaches it to the prompt alongside the question. The model uses the newly added paragraph in its temporary context to generate an accurate answer, but its permanent weights remain untouched throughout the process.
+
+💡 Would you like to look into how retrieval failures or irrelevant retrieved passages affect the model's output generation?

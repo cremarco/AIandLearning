@@ -3,10 +3,13 @@ import { onScopeDispose, watch, type Ref } from 'vue'
 import { useDocumentVisibility } from './useDocumentVisibility'
 
 /** Recordings stop when their slide or browser tab is left. */
-export function useSlideVideo(video: Ref<HTMLVideoElement | undefined>) {
+export function useSlideVideo(video: Ref<HTMLVideoElement | undefined>, onLeave?: () => void) {
   const nav = useNav()
   const visible = useDocumentVisibility()
-  const pause = () => video.value?.pause()
+  const pause = () => {
+    video.value?.pause()
+    onLeave?.()
+  }
 
   watch([nav.currentSlideNo, nav.isPrintMode], pause)
   watch(visible, shown => { if (!shown) pause() })

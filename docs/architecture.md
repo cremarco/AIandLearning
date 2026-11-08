@@ -1,45 +1,35 @@
-# Project structure
+# Project architecture
 
-The Slidev entry point remains `slides.md`. The 198-slide sequence is generated from the authoring data. Public material URLs stay under `public/materials/`.
+The editable sources are separate from presentation runtime data and published media. `pnpm generate` is the only content-generation entry point.
 
-| Folder | Responsibility |
-| --- | --- |
-| `components/DeckSlide.vue`, `components/PrintDeck.vue` | Slidev entry points and shared static print rendering |
-| `components/slides/` | Content layouts: workshop, skills, commands and shortcut detail |
-| `components/shared/` | Text, logos, source lines, tables and reusable controls |
-| `components/media/` | Players, overlays, animated book, cover and character |
-| `composables/` | Slide lifecycle, document visibility, playback and selection motion |
-| `utils/` | Typed slide data, assets, text parsing and other presentation helpers |
-| `data/content/` | Editable slide content, speaker notes, media assignments, highlights and overrides |
-| `data/references/` | Source records and bibliography |
-| `data/catalogues/` | Tools, skills and shortcut descriptions |
-| `data/demos/` | Recorded execution metadata and provenance inputs |
-| `data/generated/` | Generated slides, sources and complete sequence; regenerate rather than edit |
-| `scripts/content/` | Content integration, Slidev Markdown and companion generation |
-| `scripts/checks/` | Structural, content, asset, link and browser checks |
-| `scripts/delivery/` | PDF export and portable source/website kit |
-| `scripts/recordings/` | Deliberate capture publication and video rendering |
-| `scripts/lib/` | Project-root, JSON and browser helpers shared by command-line tools |
-| `tests/demo-genai/` | Mathematics, inference and UI checks for the standalone lab |
-| `booklet-genai/` | Canonical textbook content, Typst sources and reader build |
-| `assets/` | Original illustrations and source provenance, excluded from the website |
-| `public/` | Published files and the standalone model lab |
-| `output/` | Ignored captures, diagnostics and archived local work; not delivered |
+## Content and runtime
 
-Run `pnpm generate`, then `pnpm check` and `pnpm build`. The structure check detects unresolved local imports, unreferenced Vue components, obsolete slide overlays and missing command entry points. Browser checks remain available through `pnpm check:browser`.
+1. `scripts/content/integrate-workshop.mjs` combines authoring JSON, references and the canonical media map.
+2. `generate-slides.mjs` writes `slides.md` and the English rehearsal notes.
+3. `generate-companions.mjs` writes accessible materials using full transcripts and original prompts.
 
-English speaker notes live in `data/content/speaker-notes.json`, keyed by stable slide ID. `generate-slides.mjs` emits one Markdown note comment after each Slidev slide and generates `docs/speaker-notes.en.md` in the current slide order. Notes stay outside the audience content catalogue. Content checks require complete coverage, short text and bold key words, and verify that every comment belongs to the correct slide.
+`data/generated/slides.json` retains complete reader content. `slides-runtime.json` and `shortcut-videos.json` omit inline transcripts. The Vue application imports only these lean indexes; the video dialog loads a transcript file when the reader opens its disclosure. The indexes are generated together so they cannot drift.
 
-There is one document visibility listener shared by mounted presentation components. Slidev navigation remains the authority for active slides; playback and motion pause when their slide or browser tab is left. Print uses the same slide catalogue with static media.
+`components/DeckSlide.vue` and `PrintDeck.vue` share slide rendering. `components/slides/` contains content layouts, `components/shared/` reusable content and result links, and `components/media/` players and visual media. `RecordingResultLinks.vue` renders the same typed primary result and optional downloads across players. `assetUrl` resolves local material URLs for both development and relative-base builds.
 
-The model lab has one server: `pnpm demo:dev`. Tests use that server at port 4176; set `GENAI_URL` to target another local instance. Inference and UI checks write to `output/review/demo-genai/`. `scripts/recordings/record-model-demo.mjs` intentionally publishes new captures and a recording; it is separate from validation.
+`useSlideVideo` stops playback on navigation, hidden tabs and disposal. Dialog players also cancel outstanding transcript requests and ignore late responses after closing or switching clips. A shared document-visibility listener avoids one listener per slide.
 
-Renderers under `scripts/recordings/` keep their original capture formats. `render-chatgpt-videos.py` reproduces the older result-only recordings; `render-chatgpt-build-videos.py` produces the retained prompt-to-widget demonstrations. Keep raw captures and original assets when cleaning generated outputs.
+Numbering uses the position of Thank you. Reference appendices remain navigable and printable, without a page counter or progress bar on their canvases. Stable slide IDs retain their notes when order changes.
 
-The portable kit includes composables, docs, tests, Python renderers, editable `.drawio` / `.excalidraw` files and TSV cards. It excludes local diagnostics and downloaded model weights.
+## Published recordings
 
-Dedicated research slides display the original first PDF page without an added frame. Use `scripts/content/render-paper-page.py` to render and trim exterior blank margins; keep per-paper provenance under `assets/illustrations/papers/`. The [AI study evidence note](research/ai-study-evidence.md) records the selected sources and their limits.
+`data/demos/video-release.json` selects a versioned release manifest. The public packet includes videos, posters, captions, transcripts, verified result files and concise provenance. It contains no private screenshots or local review paths. Individual registries and `data/content/media.json` assign those files to slides.
 
-Tool blocks open with a `tool-divider` slide that reuses the shared brand catalogue and prominent `ToolLogos` treatment. Only name and original logo appear on these dividers; comparison-only resources stay in the summary tables.
+`check-recordings.mjs` independently verifies published file hashes, sizes, result destinations and slide assignments. It uses only project/public files. Capture validation is a separate operation requiring private sources; ordinary generation and builds do not execute modules from ignored output directories.
 
-Published demo videos use 1440×900 delivery frames. Scenario captures retain their original Retina source geometry; the renderer downsamples only the delivery copy. The narrow Read aloud capture is padded, and its embedded player crops only that added padding. See `data/demos/video-normalization.json` for input hashes and delivery records. Static shortcut excerpts preserve every source word while grouping numbered items and label/description pairs.
+The active workflow uses `video-refresh.mjs`, `render-staged-video.py`, the native-source validators and `publish-accepted-videos.mjs`. The publisher prepares a complete packet, checks it, installs assets with an atomic rename, and updates registries with a transaction journal. Current release data never converts an unapproved clip into an approved one. Legacy renderers remain only for demonstrations whose earlier recordings are retained.
+
+## Other boundaries
+
+- `booklet-genai/` owns the canonical textbook source and PDF.
+- `public/materials/demo-genai/` owns the model lab, server, runtime and model preparation.
+- `tests/demo-genai/` checks lab behavior; `tests/media-playback.test.mjs` checks player lifecycle and transcript loading.
+- `assets/` holds illustration originals and provenance; `public/images/` and `public/icons/` hold referenced presentation assets.
+- `output/`, `dist/` and `exports/` are ignored working or delivery directories. Keep useful original evidence; delete reproducible caches.
+
+The portable kit includes editable source, compiled slides, chapter and materials, licences and a SHA-256 manifest. It excludes diagnostics, original private captures and model weights.

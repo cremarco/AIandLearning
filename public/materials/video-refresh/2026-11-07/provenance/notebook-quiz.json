@@ -1,0 +1,341 @@
+{
+  "key": "quiz",
+  "recordingKey": "notebook-quiz",
+  "slideId": "S67",
+  "status": "executed",
+  "accepted": true,
+  "browser": "@Browser",
+  "recordedAt": "2026-11-08T13:26:36.521Z",
+  "type": "video",
+  "src": "materials/video-refresh/2026-11-07/notebook-quiz/video.mp4",
+  "poster": "materials/video-refresh/2026-11-07/notebook-quiz/poster.jpg",
+  "captions": "materials/video-refresh/2026-11-07/notebook-quiz/captions.en.vtt",
+  "transcriptFile": "materials/video-refresh/2026-11-07/notebook-quiz/transcript.txt",
+  "captionsDefault": false,
+  "browserFrame": true,
+  "alt": "NotebookLM — Answer a quiz before reading feedback: recorded demonstration and use.",
+  "caption": "NotebookLM · 94.1 s",
+  "prompt": "Create a compact quiz from the uploaded book on context versus parameters, tokens versus words, and probability versus truth. Use six questions if the native controls allow it. Include hints and explanatory feedback. Answer in English.",
+  "result": {
+    "kind": "file",
+    "url": "/materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf",
+    "label": "Quiz and solutions (PDF, static)",
+    "interactiveVerified": false,
+    "recipientVerified": true,
+    "ownerIndependent": true,
+    "qualification": "Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.",
+    "mediaType": "application/pdf",
+    "download": true,
+    "sha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
+    "bytes": 110599,
+    "sourceMethod": "observed-ui-derived-pdf",
+    "supplemental": []
+  },
+  "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-quiz.json",
+  "durationSeconds": 94.1,
+  "width": 1440,
+  "height": 900,
+  "fps": 60,
+  "sha256": "b85ef7493bc6b392cc99bdd4b2a4bee793dd98746588d5b44f11de145e1e01da",
+  "recordingMode": "accepted-native-refresh",
+  "refreshReleaseId": "2026-11-07",
+  "videoSha256": "b85ef7493bc6b392cc99bdd4b2a4bee793dd98746588d5b44f11de145e1e01da",
+  "posterSha256": "89b42e001c41b7027dda7f8584c8a741336991d72aa802f1104c1cbb1193b60c",
+  "captureFrameCount": 981,
+  "scenes": [
+    {
+      "phase": "open",
+      "atSeconds": 0,
+      "rate": 3
+    },
+    {
+      "phase": "upload",
+      "atSeconds": 0.22199999999999998,
+      "rate": 3
+    },
+    {
+      "phase": "upload",
+      "atSeconds": 0.5820000000000001,
+      "rate": 3
+    },
+    {
+      "phase": "configure",
+      "atSeconds": 0.8253333333333334,
+      "rate": 3
+    },
+    {
+      "phase": "input",
+      "atSeconds": 1.1453333333333333,
+      "rate": 3
+    },
+    {
+      "phase": "prompt-ready",
+      "atSeconds": 3.5326666666666657,
+      "rate": 1
+    },
+    {
+      "phase": "send",
+      "atSeconds": 5.638666666666666,
+      "rate": 3
+    },
+    {
+      "phase": "generation",
+      "atSeconds": 5.907999999999998,
+      "rate": 4
+    },
+    {
+      "phase": "quiz-use",
+      "atSeconds": 5.927749999999997,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-configuration",
+      "atSeconds": 5.929749999999997,
+      "rate": 3
+    },
+    {
+      "phase": "native-quiz-prompt-read",
+      "atSeconds": 9.480416666666667,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-configuration-scroll",
+      "atSeconds": 11.768416666666667,
+      "rate": 3
+    },
+    {
+      "phase": "native-quiz-generation",
+      "atSeconds": 13.491416666666666,
+      "rate": 4
+    },
+    {
+      "phase": "native-quiz-use",
+      "atSeconds": 13.652416666666673,
+      "rate": 1
+    },
+    {
+      "phase": "native-app-loading-check",
+      "atSeconds": 13.652416666666673,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-open",
+      "atSeconds": 13.652416666666673,
+      "rate": 3
+    },
+    {
+      "phase": "native-quiz-hint",
+      "atSeconds": 13.652416666666673,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-feedback",
+      "atSeconds": 19.809416666666674,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-explanation",
+      "atSeconds": 24.342416666666672,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-correct-answer",
+      "atSeconds": 31.47741666666667,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-token-id",
+      "atSeconds": 40.578416666666676,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-probability",
+      "atSeconds": 50.09441666666666,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-temperature",
+      "atSeconds": 58.388416666666664,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-rag",
+      "atSeconds": 66.97541666666669,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-summary",
+      "atSeconds": 72.98741666666672,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-retry",
+      "atSeconds": 76.83341666666675,
+      "rate": 1
+    },
+    {
+      "phase": "native-quiz-export",
+      "atSeconds": 94.09841666666684,
+      "rate": 1
+    }
+  ],
+  "chapters": [
+    {
+      "label": "open",
+      "atSeconds": 0,
+      "rate": 3
+    },
+    {
+      "label": "upload",
+      "atSeconds": 0.22199999999999998,
+      "rate": 3
+    },
+    {
+      "label": "upload",
+      "atSeconds": 0.5820000000000001,
+      "rate": 3
+    },
+    {
+      "label": "configure",
+      "atSeconds": 0.8253333333333334,
+      "rate": 3
+    },
+    {
+      "label": "input",
+      "atSeconds": 1.1453333333333333,
+      "rate": 3
+    },
+    {
+      "label": "prompt ready",
+      "atSeconds": 3.5326666666666657,
+      "rate": 1
+    },
+    {
+      "label": "send",
+      "atSeconds": 5.638666666666666,
+      "rate": 3
+    },
+    {
+      "label": "generation",
+      "atSeconds": 5.907999999999998,
+      "rate": 4
+    },
+    {
+      "label": "quiz use",
+      "atSeconds": 5.927749999999997,
+      "rate": 1
+    },
+    {
+      "label": "native quiz configuration",
+      "atSeconds": 5.929749999999997,
+      "rate": 3
+    },
+    {
+      "label": "native quiz prompt read",
+      "atSeconds": 9.480416666666667,
+      "rate": 1
+    },
+    {
+      "label": "native quiz configuration scroll",
+      "atSeconds": 11.768416666666667,
+      "rate": 3
+    },
+    {
+      "label": "native quiz generation",
+      "atSeconds": 13.491416666666666,
+      "rate": 4
+    },
+    {
+      "label": "native quiz use",
+      "atSeconds": 13.652416666666673,
+      "rate": 1
+    },
+    {
+      "label": "native app loading check",
+      "atSeconds": 13.652416666666673,
+      "rate": 1
+    },
+    {
+      "label": "native quiz open",
+      "atSeconds": 13.652416666666673,
+      "rate": 3
+    },
+    {
+      "label": "native quiz hint",
+      "atSeconds": 13.652416666666673,
+      "rate": 1
+    },
+    {
+      "label": "native quiz feedback",
+      "atSeconds": 19.809416666666674,
+      "rate": 1
+    },
+    {
+      "label": "native quiz explanation",
+      "atSeconds": 24.342416666666672,
+      "rate": 1
+    },
+    {
+      "label": "native quiz correct answer",
+      "atSeconds": 31.47741666666667,
+      "rate": 1
+    },
+    {
+      "label": "native quiz token id",
+      "atSeconds": 40.578416666666676,
+      "rate": 1
+    },
+    {
+      "label": "native quiz probability",
+      "atSeconds": 50.09441666666666,
+      "rate": 1
+    },
+    {
+      "label": "native quiz temperature",
+      "atSeconds": 58.388416666666664,
+      "rate": 1
+    },
+    {
+      "label": "native quiz rag",
+      "atSeconds": 66.97541666666669,
+      "rate": 1
+    },
+    {
+      "label": "native quiz summary",
+      "atSeconds": 72.98741666666672,
+      "rate": 1
+    },
+    {
+      "label": "native quiz retry",
+      "atSeconds": 76.83341666666675,
+      "rate": 1
+    },
+    {
+      "label": "native quiz export",
+      "atSeconds": 94.09841666666684,
+      "rate": 1
+    }
+  ],
+  "capture": {
+    "sha256": "4baef56c6d3304e953440ef78a900daa7c0b64bb985639ed51b5f2613875139b",
+    "sourceFrames": 981,
+    "usedFrames": 810,
+    "conversationFingerprint": "d984cdb3722ae7b3e910b7e7c991a77dabe4bd50116cb962af38179d5bda3a8d",
+    "newChat": false,
+    "temporaryChat": false,
+    "interfaceLanguage": "en"
+  },
+  "qa": {
+    "accepted": true,
+    "videoSha256": "b85ef7493bc6b392cc99bdd4b2a4bee793dd98746588d5b44f11de145e1e01da",
+    "captureSha256": "4baef56c6d3304e953440ef78a900daa7c0b64bb985639ed51b5f2613875139b",
+    "recordSha256": "e885c89cbfd0ac212eef4f613854cb9b6bf57f0cb306f2ee98ad55a8c20f8a2d",
+    "rootReviewSha256": "854f3ac98623b1d77d547319827799f7c73ccbb43b3f3e098f492bbd39ddacf5",
+    "independentPeerReviewSha256": "46fee37c8e7abbe040074489e766cf19ea0dc3c1eb169deb9797ffa4a60e212c"
+  },
+  "sourceBook": {
+    "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+  },
+  "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet."
+}

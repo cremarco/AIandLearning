@@ -1,0 +1,31 @@
+**Learning Goal**
+
+Students will independently explain what changes in training, inference, and RAG.
+
+**Evidence of Mastery**
+
+The exit ticket is scored for accurate distinctions among parameters, context, and retrieved passages.
+
+**Lesson Sequence**
+
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| Time                                                                   | Activity                                                                                                               | Learner evidence                                                                         |
++========================================================================+========================================================================================================================+==========================================================================================+
+| 2 min                                                                  | Diagnostic: “When you give a chatbot a new document, what changes inside the model?”                                   | Initial explanation identifies a possible change and what the learner means by “inside.” |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 4 min                                                                  | Read the workshop chapter excerpt on training, inference, and RAG; mark what changes in each process.                  | Three marked distinctions from the source.                                               |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 5 min                                                                  | Complete a labelled three-column diagram: Training, Inference, RAG; label parameters, context, and retrieved passages. | Diagram shows which elements change or are added in each process.                        |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 7 min                                                                  | Misconception check: compare answers with a partner, then revise one claim using the source.                           | Learner corrects the idea that new context changes model parameters.                     |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 2 min                                                                  | Exit ticket: explain what changes in each process and whether RAG retrains the model.                                  | Independent, accurate explanation of all source distinctions.                            |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+
+**Simpler Prompt**
+
+Which are saved numerical settings inside the model, and which are text given or retrieved for this response? Sentence frame: “Training changes         . Inference keeps          fixed. A prompt changes         . RAG retrieves          and adds them to         .”
+
+**Exit Ticket Answer Key**
+
+Training updates numerical parameters. Ordinary inference keeps learned parameters fixed; prompt changes affect context. RAG retrieves passages and adds them to context, without itself retraining the model.

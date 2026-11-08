@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Andrea · Training, inference and RAG</title><style>
+:root{font-family:system-ui,sans-serif;color:#172e36;background:#edf2f2;line-height:1.55}body{max-width:920px;margin:auto;padding:24px}h1{font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.15}h2{color:#08675f}section{background:white;border:1px solid #cbd9d8;border-radius:16px;padding:24px;margin:24px 0}nav{display:flex;gap:16px;flex-wrap:wrap}a{color:#08675f}button,select,summary{font:inherit;cursor:pointer}button{padding:10px 18px;border-radius:8px;border:1px solid #08675f;background:#08675f;color:white;margin:6px 6px 6px 0}button:disabled{opacity:.45;cursor:default}button.secondary{background:white;color:#08675f}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #e39628;outline-offset:3px}#card{background:#eff7f5;border-radius:12px;padding:24px;min-height:150px;font-size:1.2rem}#back{border-top:1px solid #a5c5bf;padding-top:14px}#stats{font-weight:650}textarea{box-sizing:border-box;width:100%;font:inherit;padding:12px;border:1px solid #819b9d;border-radius:8px;margin:12px 0}article{border-top:1px solid #cbd9d8;padding:12px 0}select{display:block;padding:8px;max-width:100%;margin:8px 0}details{background:#f0f6f5;padding:12px;border-radius:8px;margin:8px 0}table{border-collapse:collapse;width:100%;font-size:.93rem}td,th{border:1px solid #cbd9d8;padding:10px;text-align:left;vertical-align:top}.muted{color:#46616a;font-size:.93rem}.controls{display:flex;flex-wrap:wrap}progress{width:100%;accent-color:#08675f}#saveStatus{font-size:.9rem}@media(max-width:550px){body{padding:12px}section{padding:16px}td,th{padding:6px}}[hidden]{display:none!important}</style>
+<header><p>ANDREA’S OFFLINE STUDY KIT</p><h1>Training, inference &amp; RAG</h1><p>Recall first. Check the source. Explain without help.</p><nav><a href="#flashcards">Flashcards</a><a href="#quiz">Quiz</a><a href="#cheatsheet">Cheatsheet</a><a href="#reviews">Review plans</a></nav><p class="muted">Source: Marco Cremaschi, <i>Foundations of Generative Artificial Intelligence</i>, November 2026. Only §1.2 (p. 5) and §1.7 (pp. 13–14). Consult the original workshop book: §1.2 (p. 5) and §1.7 (pp. 13–14). Every study interaction works offline.</p><p id="saveStatus"></p></header>
+<section id="flashcards"><h2>Three recall flashcards</h2><p>Say your answer before flipping. Good schedules the card for tomorrow; Again keeps it due today. Each pass visits each due card once.</p><p id="stats" aria-live="polite"></p><progress id="progress" max="3" value="0" aria-label="Cards rated this pass"></progress><p id="position"></p><div id="card"><p id="front"></p><p id="back" hidden></p></div><div class="controls"><button id="flip">Flip</button><button id="again" disabled>Again</button><button id="good" disabled>Good</button></div><p id="flashMessage" role="status"></p><button id="start" class="secondary">Start due-card pass</button><button id="resetCards" class="secondary">Reset flashcards</button></section>
+<section id="quiz"><h2>Three-item written quiz</h2><p>Write from memory, reveal the model answer, then assess your own answer against all criteria. No automatic grading.</p><article><h3>Question 1</h3><label for="q0">An optimisation procedure changes model parameters to reduce prediction error on examples. Is this training or ordinary inference? What changes?</label><textarea id="q0" rows="3" placeholder="Explain in your own words"></textarea><details id="answer0"><summary>Reveal / hide model answer</summary><p>Training: optimisation changes parameters to reduce error. Ordinary inference uses parameters already available. (§1.2, p. 5)</p><p><b>Self-check:</b> I identified training and explained that optimisation updates parameters.</p></details><label for="score0">My assessment</label><select id="score0"><option value="">Not assessed</option><option value="0">0 — Needs correction</option><option value="1">1 — Meets all criteria</option></select></article><article><h3>Question 2</h3><label for="q1">You keep the model fixed but add a chapter definition to the prompt. The answer changes. Does this establish retraining? What changed instead?</label><textarea id="q1" rows="3" placeholder="Explain in your own words"></textarea><details id="answer1"><summary>Reveal / hide model answer</summary><p>No. The available context changed; a different answer does not establish parameter updates. (§1.2, p. 5)</p><p><b>Self-check:</b> I stated that context changed and that a different answer does not demonstrate retraining.</p></details><label for="score1">My assessment</label><select id="score1"><option value="">Not assessed</option><option value="0">0 — Needs correction</option><option value="1">1 — Meets all criteria</option></select></article><article><h3>Question 3</h3><label for="q2">A RAG system retrieves a recent passage. A student says: “The weights are now updated, and the answer must be correct.” Correct both claims.</label><textarea id="q2" rows="3" placeholder="Explain in your own words"></textarea><details id="answer2"><summary>Reveal / hide model answer</summary><p>Retrieval supplies passages as context without itself changing weights. Correctness is not guaranteed: retrieval may fail, select irrelevant material or provide material the response misinterprets. (§1.7, pp. 13–14)</p><p><b>Self-check:</b> I corrected both claims: no weight update from retrieval itself, and no guarantee of correctness.</p></details><label for="score2">My assessment</label><select id="score2"><option value="">Not assessed</option><option value="0">0 — Needs correction</option><option value="1">1 — Meets all criteria</option></select></article><p id="quizTotal" aria-live="polite"></p><button id="resetQuiz" class="secondary">Reset quiz</button></section>
+<section id="cheatsheet"><h2>Cheatsheet</h2><table>
+<thead>
+<tr>
+<th>Process</th>
+<th>What changes or happens?</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training / fine-tuning</td>
+<td>Optimisation updates numerical model parameters. Pretraining uses examples and prediction error.</td>
+<td>Updated (§1.2)</td>
+</tr>
+<tr>
+<td>Ordinary inference</td>
+<td>Calculations use the available parameters and current input/context. Changing the prompt changes available information.</td>
+<td>Fixed (§1.2)</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>A retrieval component selects document passages and supplies them as context for generation.</td>
+<td>Retrieval itself does not update weights (§§1.2, 1.7)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong> Adding “In this chapter, X means Y” can influence an answer through context. Using that definition does not establish that training occurred. (§1.2)</p>
+<p><strong>Watch for:</strong> A newer document can supply newer information without changing weights. Retrieval may fail, choose irrelevant passages or provide material the response misinterprets. Check what the cited passage actually supports. (§1.7)</p></section><section id="reviews"><h2>Two five-minute reviews</h2><p>Suggested dates: <strong>Tuesday 10 November</strong> and <strong>Friday 13 November 2026</strong>. These are study instructions, not scheduled reminders.</p>
+<h3>Review 1 · Tuesday · 5 minutes</h3>
+<ul>
+<li><strong>0:00–1:00:</strong> Without notes, explain training and ordinary inference aloud, stating what happens to parameters.</li>
+<li><strong>1:00–3:00:</strong> Answer all three flashcards from memory.</li>
+<li><strong>3:00–4:00:</strong> Check the answers against §§1.2 and 1.7. Mark one missing or inaccurate distinction.</li>
+<li><strong>4:00–5:00:</strong> Close the kit and explain that distinction again with the prompt-definition example.</li>
+</ul>
+<h3>Review 2 · Friday · 5 minutes</h3>
+<ul>
+<li><strong>0:00–2:00:</strong> Complete the three-item quiz without notes.</li>
+<li><strong>2:00–3:00:</strong> Check and score it; verify any mistake in §§1.2 and 1.7.</li>
+<li><strong>3:00–4:00:</strong> Explain training, inference and RAG aloud to an imaginary classmate. State what changes and what stays fixed.</li>
+<li><strong>4:00–5:00:</strong> Explain why a retrieved passage does not establish either parameter updates or a correct answer. Check §1.7 only after speaking.</li>
+</ul>
+<p><strong>Independent success check:</strong> Can you explain all three processes, the prompt-definition example and RAG's limits without reading? Return prompt: “Test me on training, inference and RAG using only §§1.2 and 1.7.”</p></section><footer><p class="muted">Progress is saved in this browser when local storage is available. The file sends no data and loads no external assets. Reset controls affect only their named activity.</p></footer>
+<script>
+'use strict';
+const cards=[{"front": "What happens to model parameters during training, and during ordinary inference?", "back": "Training updates parameters through optimisation. Ordinary inference calculates using already available, fixed parameters. (§1.2, p. 5)"}, {"front": "A model uses a definition you just added to its prompt. What changed, and why does this not demonstrate training?", "back": "The context changed. The definition can influence inference without updating weights; using it does not demonstrate training. (§1.2, p. 5)"}, {"front": "How does RAG supply information, and why does retrieving a recent document not demonstrate a parameter update?", "back": "RAG retrieves selected passages as context. New information can enter that context without changing model weights. (§1.7, pp. 13–14)"}];
+const KEY='andrea-study-kit-v1-efbf3a9d578e6118';
+const $=id=>document.getElementById(id);
+const today=()=>{const d=new Date();return new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()};
+const tomorrow=()=>{const d=new Date();return new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime()};
+let state={due:[0,0,0],text:['','',''],scores:['','','']};let storageOK=true;
+try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&Array.isArray(s.due)&&s.due.length===3&&s.due.every(Number.isFinite)){state.due=s.due;if(Array.isArray(s.text)&&s.text.length===3)state.text=s.text.map(x=>typeof x==='string'?x:'');if(Array.isArray(s.scores)&&s.scores.length===3)state.scores=s.scores.map(x=>['','0','1'].includes(x)?x:'')}}catch(e){storageOK=false}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){storageOK=false} $('saveStatus').textContent=storageOK?'Progress saves locally in this browser.':'Browser storage unavailable. All activities work; progress lasts until this page closes.'}
+let queue=[],cursor=0,flipped=false,locked=false,token=0;
+function dueIDs(){return cards.map((_,i)=>i).filter(i=>state.due[i]<=today())}
+function counts(){ $('stats').textContent=`Total cards: 3 · Due today: ${dueIDs().length} · Rated this pass: ${cursor}/${queue.length}`;$('progress').max=queue.length||3;$('progress').value=cursor}
+function render(){counts();const active=cursor<queue.length;flipped=false;$('back').hidden=true;$('flip').textContent='Flip';$('flip').disabled=!active||locked;$('good').disabled=true;$('again').disabled=true;$('position').textContent=active?`Card ${cursor+1} of ${queue.length} in this pass`: 'Pass complete';$('front').textContent=active?cards[queue[cursor]].front:'No more cards in this pass.';$('back').textContent=active?cards[queue[cursor]].back:'';$('start').disabled=locked||active;$('flashMessage').textContent=active?'':dueIDs().length?'Cards rated Again remain due. Start another pass when ready.':'All three cards are scheduled for a later day.'}
+function start(){if(locked)return;queue=dueIDs();cursor=0;token++;render()}
+$('flip').onclick=()=>{if(locked||cursor>=queue.length)return;flipped=!flipped;$('back').hidden=!flipped;$('flip').textContent=flipped?'Flip to question':'Flip';$('good').disabled=!flipped;$('again').disabled=!flipped};
+function rate(good){if(locked||!flipped||cursor>=queue.length)return;locked=true;const currentToken=++token;const id=queue[cursor];state.due[id]=good?tomorrow():today();cursor++;save();render();$('flashMessage').textContent=good?'Rated Good. Scheduled for tomorrow.':'Rated Again. Still due today.';setTimeout(()=>{if(token!==currentToken)return;locked=false;render()},400)}
+$('good').onclick=()=>rate(true);$('again').onclick=()=>rate(false);$('start').onclick=start;
+$('resetCards').onclick=()=>{if(!confirm('Reset all three flashcards to due today?'))return;token++;locked=false;state.due=[0,0,0];save();start()};
+function totals(){const assessed=state.scores.filter(x=>x!=='').length;const total=state.scores.reduce((s,x)=>s+(x==='1'?1:0),0);$('quizTotal').textContent=`Self-assessed score: ${total}/3 · Assessed: ${assessed}/3`}
+for(let i=0;i<3;i++){ $('q'+i).value=state.text[i];$('score'+i).value=state.scores[i];$('q'+i).oninput=()=>{state.text[i]=$('q'+i).value;state.scores[i]='';$('score'+i).value='';save();totals()};$('score'+i).onchange=()=>{if(!$('answer'+i).open||!$('q'+i).value.trim()){ $('score'+i).value=state.scores[i];alert('Write your answer and reveal the model answer before self-assessing.');return}state.scores[i]=$('score'+i).value;save();totals()}}
+$('resetQuiz').onclick=()=>{if(!confirm('Clear written quiz answers and self-assessments?'))return;state.text=['','',''];state.scores=['','',''];for(let i=0;i<3;i++){$('q'+i).value='';$('score'+i).value='';$('answer'+i).open=false}save();totals()};save();totals();start();
+</script></html>

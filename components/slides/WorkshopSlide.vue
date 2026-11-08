@@ -13,6 +13,7 @@ import PromptVideoDialog from '../media/PromptVideoDialog.vue'
 import SkillCatalogue from './SkillCatalogue.vue'
 import DownloadIcon from '../shared/DownloadIcon.vue'
 import BrowserVideo from '../media/BrowserVideo.vue'
+import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
 import ShortcutCloud from '../shared/ShortcutCloud.vue'
 import ShortcutDetail from './ShortcutDetail.vue'
 import ToolLogos from '../shared/ToolLogos.vue'
@@ -21,9 +22,12 @@ import BibliographyGrid from '../shared/BibliographyGrid.vue'
 import { brandsForLabel, brandsForSlide } from '../../utils/tool-brands'
 import { assetUrl as asset } from '../../utils/assets'
 import { getShortcutVideo } from '../../utils/shortcut-videos'
-import type { Slide } from '../../utils/deck'
+import type { Slide, StudyFocus } from '../../utils/deck'
 const props = defineProps<{ slide: Slide }>()
+const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const s = computed(() => props.slide)
+const hasVideo = computed(() => s.value.media?.type === 'video'
+  || s.value.commands?.some(command => command.result?.media.type === 'video'))
 const headingCommand = computed(() => {
   const command = s.value.commandCategory === 'formal-web' && s.value.commands?.length === 1
     ? s.value.commands[0].command : ''
@@ -38,7 +42,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 </script>
 
 <template>
-  <div class="workshop-content" :lang="s.lang" :class="[`kind-${s.kind}`, { 'has-media': !!s.media, 'has-character': !!s.character, 'has-prompt': !!s.prompt, 'has-comparison': !!s.comparison?.length, 'has-four-steps': (s.steps?.length || 0) >= 4, 'has-mixed-content': !!s.comparison?.length && !!s.steps?.length, 'has-long-title': s.title.length > 55 }]" @click="lucaReaction?.advance()">
+  <div class="workshop-content" :lang="s.lang" :class="[`kind-${s.kind}`, { 'has-video': hasVideo, 'has-media': !!s.media, 'has-character': !!s.character, 'has-prompt': !!s.prompt, 'has-comparison': !!s.comparison?.length, 'has-four-steps': (s.steps?.length || 0) >= 4, 'has-mixed-content': !!s.comparison?.length && !!s.steps?.length, 'has-long-title': s.title.length > 55 }]" @click="lucaReaction?.advance()">
     <img v-if="s.kind === 'section-divider' && s.media" class="section-divider-art pointer-events-none absolute right-0 top-0 h-full w-[54%] object-contain" :src="asset(s.media.src)" :alt="s.media.alt" />
     <div v-if="s.kind === 'tool-divider'" class="hero h-full">
       <div class="hero-content w-full max-w-none text-center">
@@ -57,7 +61,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
       <ShortcutDetail v-else-if="s.kind === 'shortcut-detail'" :slide="s" />
       <FormalCommandResults v-else-if="s.commandCategory === 'formal-web' && s.commands?.some(command => command.result)" :commands="s.commands || []" />
-      <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" />
+      <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" @study-phase-change="emit('studyPhaseChange', $event)" />
       <ToolResourceTable v-else-if="s.toolTable" :table="s.toolTable" :label="s.title" />
       <BibliographyGrid v-else-if="s.kind === 'bibliography' || s.kind === 'web-resources'" :references="s.references || []" :spacious="s.kind === 'web-resources'" />
       <PromptCommandTables v-else-if="s.kind === 'prompt-commands'" :commands="s.commands || []" :category="s.commandCategory" />
@@ -68,14 +72,14 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <template v-else>
         <figure v-if="s.media" class="workshop-media">
           <AnimatedBook v-if="s.book" :book="s.book" :slide-number="s.number" />
-          <BrowserVideo v-else-if="s.media.type==='video' && s.media.browserFrame" :media="s.media" />
+          <BrowserVideo v-else-if="s.media.type==='video' && s.media.browserFrame" :media="s.media" :show-result="false" />
           <video v-else-if="s.media.type==='video'" ref="video" playsinline controls preload="none" :poster="asset(s.media.poster)" :aria-label="s.media.alt" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
             <source :src="asset(s.media.src)" :type="s.media.src.endsWith('webm') ? 'video/webm' : 'video/mp4'" />
             <track kind="captions" srclang="en" label="English" :src="asset(s.media.captions)" :default="s.media.captionsDefault !== false" />
           </video>
           <img v-else :src="asset(s.media.src)" :alt="s.media.alt" :style="s.media.fit ? {objectFit:s.media.fit} : undefined" />
           <img v-if="s.media.type==='video' && !s.media.browserFrame" class="video-print-poster" :src="asset(s.media.poster)" :alt="s.media.alt" />
-          <figcaption v-if="s.media.caption || s.media.source">{{ s.media.caption }}<a v-if="s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener"> Source</a><button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button></figcaption>
+          <figcaption v-if="s.media.caption || s.media.source || s.media.result"><span>{{ s.media.caption }}</span><a v-if="s.media.source && !s.media.result" class="link" :href="s.media.source" target="_blank" rel="noopener">Source</a><RecordingResultLinks compact :result="s.media.result" /><button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button></figcaption>
         </figure>
         <div class="workshop-copy">
           <PromptBlock v-if="s.prompt && s.kind !== 'tool-demo'" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />

@@ -1,5 +1,5 @@
 {
-  "recorded": "2026-11-05",
+  "recorded": "2026-11-08",
   "language": "en",
   "browser": "@Browser",
   "outputSize": {
@@ -12,18 +12,293 @@
     "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
   },
   "learnerInputs": "Andrea is fictional. Learner replies and misconceptions were authored for these demonstrations.",
-  "scope": "Six selected publisher packages imported through the native web Skill library and selected in Work mode. These demonstrations do not measure student learning or establish improvement over a baseline.",
+  "scope": "Four selected publisher packages imported through the native web Skill library and selected in Work mode. These demonstrations do not measure student learning or establish improvement over a baseline.",
   "discardedCaptures": "Early captures of the wrong tab and the first HTML counter version are excluded. The published kit video uses the corrected counter after an explicit follow-up in the same chat.",
   "clips": [
     {
       "key": "learn",
+      "recordingKey": "skills-learn",
       "slideId": "S53SKILLLEARN",
       "status": "executed",
       "accepted": true,
       "browser": "@Browser",
-      "surface": "ChatGPT web · Work mode",
-      "model": "GPT-6.1 Sol · Light",
-      "conversationUrl": "https://chatgpt.com/c/6aecb2f1-a814-83eb-8415-315a1d31e2ee",
+      "recordedAt": "2026-11-08T14:53:35.784Z",
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/skills-learn/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/skills-learn/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/skills-learn/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/skills-learn/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — Learn: explain before receiving feedback: recorded demonstration and use.",
+      "caption": "ChatGPT · 87.4 s",
+      "prompt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6af09625-b5fc-83eb-85f8-b6b7dd2685f2",
+        "label": "Open shared result",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/skills-learn.json",
+      "durationSeconds": 87.383333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "a9826302a28b2a63ec8e5ee75ffb534c394b3d2b4cf32b5fd9b9c627c9956d55",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "videoSha256": "a9826302a28b2a63ec8e5ee75ffb534c394b3d2b4cf32b5fd9b9c627c9956d55",
+      "posterSha256": "4856307b86ceaea30bfc3fec3dddfad3ff8c3079d37a944978c9e93a0c5e914a",
+      "captureFrameCount": 677,
+      "scenes": [
+        {
+          "phase": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "phase": "upload-menu",
+          "atSeconds": 0.37,
+          "rate": 3
+        },
+        {
+          "phase": "upload",
+          "atSeconds": 0.9083333333333332,
+          "rate": 3
+        },
+        {
+          "phase": "typing",
+          "atSeconds": 1.1099999999999999,
+          "rate": 3
+        },
+        {
+          "phase": "configuration",
+          "atSeconds": 6.179333333333334,
+          "rate": 3
+        },
+        {
+          "phase": "prompt-ready",
+          "atSeconds": 6.877333333333333,
+          "rate": 1
+        },
+        {
+          "phase": "send",
+          "atSeconds": 9.01533333333333,
+          "rate": 3
+        },
+        {
+          "phase": "generation",
+          "atSeconds": 9.46566666666666,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-0",
+          "atSeconds": 9.91891666666666,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-0",
+          "atSeconds": 15.798916666666662,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-0",
+          "atSeconds": 23.870916666666655,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-0",
+          "atSeconds": 24.540416666666662,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-1",
+          "atSeconds": 29.80541666666665,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-1",
+          "atSeconds": 37.70741666666666,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-1",
+          "atSeconds": 38.38366666666665,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-2",
+          "atSeconds": 43.676666666666655,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-2",
+          "atSeconds": 58.61366666666666,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-2",
+          "atSeconds": 59.215166666666654,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-3",
+          "atSeconds": 65.48916666666665,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-3",
+          "atSeconds": 74.95216666666659,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-3",
+          "atSeconds": 75.6121666666666,
+          "rate": 1
+        },
+        {
+          "phase": "share-result",
+          "atSeconds": 81.85316666666662,
+          "rate": 1
+        }
+      ],
+      "chapters": [
+        {
+          "label": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "label": "upload menu",
+          "atSeconds": 0.37,
+          "rate": 3
+        },
+        {
+          "label": "upload",
+          "atSeconds": 0.9083333333333332,
+          "rate": 3
+        },
+        {
+          "label": "typing",
+          "atSeconds": 1.1099999999999999,
+          "rate": 3
+        },
+        {
+          "label": "configuration",
+          "atSeconds": 6.179333333333334,
+          "rate": 3
+        },
+        {
+          "label": "prompt ready",
+          "atSeconds": 6.877333333333333,
+          "rate": 1
+        },
+        {
+          "label": "send",
+          "atSeconds": 9.01533333333333,
+          "rate": 3
+        },
+        {
+          "label": "generation",
+          "atSeconds": 9.46566666666666,
+          "rate": 4
+        },
+        {
+          "label": "read work 0",
+          "atSeconds": 9.91891666666666,
+          "rate": 1
+        },
+        {
+          "label": "answer work 0",
+          "atSeconds": 15.798916666666662,
+          "rate": 1
+        },
+        {
+          "label": "generation work 0",
+          "atSeconds": 23.870916666666655,
+          "rate": 4
+        },
+        {
+          "label": "read work 0",
+          "atSeconds": 24.540416666666662,
+          "rate": 1
+        },
+        {
+          "label": "answer work 1",
+          "atSeconds": 29.80541666666665,
+          "rate": 1
+        },
+        {
+          "label": "generation work 1",
+          "atSeconds": 37.70741666666666,
+          "rate": 4
+        },
+        {
+          "label": "read work 1",
+          "atSeconds": 38.38366666666665,
+          "rate": 1
+        },
+        {
+          "label": "answer work 2",
+          "atSeconds": 43.676666666666655,
+          "rate": 1
+        },
+        {
+          "label": "generation work 2",
+          "atSeconds": 58.61366666666666,
+          "rate": 4
+        },
+        {
+          "label": "read work 2",
+          "atSeconds": 59.215166666666654,
+          "rate": 1
+        },
+        {
+          "label": "answer work 3",
+          "atSeconds": 65.48916666666665,
+          "rate": 1
+        },
+        {
+          "label": "generation work 3",
+          "atSeconds": 74.95216666666659,
+          "rate": 4
+        },
+        {
+          "label": "read work 3",
+          "atSeconds": 75.6121666666666,
+          "rate": 1
+        },
+        {
+          "label": "share result",
+          "atSeconds": 81.85316666666662,
+          "rate": 1
+        }
+      ],
+      "capture": {
+        "sha256": "72d8909312d93d57c5be760e3f86961a3f652e85c641158676cc845a2a42b282",
+        "sourceFrames": 677,
+        "usedFrames": 677,
+        "conversationFingerprint": "a69f71a9df78f3596af54934edfa34dbdd41521567363baf85d3c7cc2efa5830",
+        "newChat": true,
+        "temporaryChat": false,
+        "interfaceLanguage": "en"
+      },
+      "qa": {
+        "accepted": true,
+        "videoSha256": "a9826302a28b2a63ec8e5ee75ffb534c394b3d2b4cf32b5fd9b9c627c9956d55",
+        "captureSha256": "72d8909312d93d57c5be760e3f86961a3f652e85c641158676cc845a2a42b282",
+        "recordSha256": "d149402c64f21b6c139a32760812e9d05a598d1a6f797b8b42f23ce58fe9843f",
+        "independentPeerReviewSha256": "d85f54982e8027a5382c9aaae0dded7c6d4f272c5906b7fc460ccab0746afd5a"
+      },
+      "sourceBook": {
+        "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+        "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+      },
+      "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet.",
       "packageSource": {
         "repo": "maaarcooo/agent-skills",
         "commit": "1566547ffb9834424810869c973082085b9fd83d",
@@ -45,332 +320,388 @@
             "bytes": 667
           }
         ]
-      },
-      "observed": "Asked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.",
-      "tests": [
-        {
-          "action": "Supply the context/weights misconception, then a corrected explanation.",
-          "observed": "One focused question, section-linked feedback and a RAG transfer question; no immediate final answer before the learner response."
-        }
-      ],
-      "artifacts": [],
-      "durationSeconds": 17.02,
-      "width": 1440,
-      "height": 900,
-      "scenes": [
-        {
-          "phase": "question",
-          "browserTabId": "1",
-          "startedAt": "2026-11-05T17:24:23.803Z",
-          "caption": "The imported Learn skill receives the original chapter and asks Andrea to explain what changed."
-        },
-        {
-          "phase": "feedback",
-          "browserTabId": "1",
-          "startedAt": "2026-11-05T17:24:28.919Z",
-          "caption": "Andrea’s misconception receives feedback grounded in §1.2 and a RAG transfer question from §1.7."
-        }
-      ],
-      "captureFrameCount": 19,
-      "sourceFrames": [
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 0.0
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 2.067
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 2.687
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 3.228
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 3.77
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 4.376
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 4.929
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 5.463
-        },
-        {
-          "phase": "question",
-          "sha256": "31f9c389d52a5ca00ab8624d70cf8ad2e8133406f1970339e5729260a505ea4f",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 5.999
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 6.642
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 8.71
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 9.231
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 9.845
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 10.484
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 11.03
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 11.648
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 12.285
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 12.932
-        },
-        {
-          "phase": "feedback",
-          "sha256": "30756521e1d1ee4bba386c12a24aa002df32803a0a5f4f474d7bb55782f33812",
-          "sourceSize": [
-            1684,
-            1217
-          ],
-          "crop": [
-            480,
-            100,
-            1280,
-            630
-          ],
-          "atSeconds": 13.471
-        }
-      ],
-      "videoSha256": "974c16aaa40d6cec27f78bc971f6ec4bdd31cb2d43389893dccb047964614e19",
-      "posterSha256": "6645c741607b0e06a417e7a2fd3d7b326c5ea3eb32c88bf6aecf3234c5f405d9"
+      }
     },
     {
       "key": "the-learning-skill",
+      "recordingKey": "skills-the-learning-skill",
       "slideId": "S53SKILLLEARNING",
       "status": "executed",
       "accepted": true,
       "browser": "@Browser",
-      "surface": "ChatGPT web · Work mode",
-      "model": "GPT-6.1 Sol · Light",
-      "conversationUrl": "https://chatgpt.com/c/6aecb38f-3c04-83ed-b26e-e8d199a1ea0e",
+      "recordedAt": "2026-11-08T14:32:23.025Z",
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/skills-the-learning-skill/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/skills-the-learning-skill/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/skills-the-learning-skill/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/skills-the-learning-skill/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — Build a study kit after recall: recorded demonstration and use.",
+      "caption": "ChatGPT · 215.2 s",
+      "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6af09b21-5ce0-83ed-a9d7-1f05a5639742",
+        "label": "Open public study-kit code",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Public-readable code companion with the exact original HTML file below. Live shared interactivity and actionable shared attachments were not verified.",
+        "supplemental": [
+          {
+            "kind": "file",
+            "url": "/materials/video-refresh/2026-11-07/skills-the-learning-skill/exports/andrea-study-kit.html",
+            "label": "Original result (HTML)",
+            "interactiveVerified": false,
+            "recipientVerified": true,
+            "ownerIndependent": true,
+            "qualification": "Public-readable code companion with the exact original HTML file below. Live shared interactivity and actionable shared attachments were not verified.",
+            "mediaType": "text/html; charset=utf-8",
+            "download": true,
+            "sha256": "68d736e04bcf2b3142e7123126ba8ab61c78ba35b6e9293c423c9cf5e82ead39",
+            "bytes": 13548,
+            "sourceMethod": "native-download"
+          }
+        ]
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/skills-the-learning-skill.json",
+      "durationSeconds": 215.183333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b809da5ba0d01d0cc6f5a26be1eaa1a37b11bbeaa4fab9b457c4f9ed02ec992b",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "videoSha256": "b809da5ba0d01d0cc6f5a26be1eaa1a37b11bbeaa4fab9b457c4f9ed02ec992b",
+      "posterSha256": "a56951d8f5f9929b319f69bdb7abec76dd9d38c3a6821b7f74b8c5b77c7b37d3",
+      "captureFrameCount": 1261,
+      "scenes": [
+        {
+          "phase": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "phase": "upload-menu",
+          "atSeconds": 0.3746666666666667,
+          "rate": 3
+        },
+        {
+          "phase": "upload",
+          "atSeconds": 0.3956666666666667,
+          "rate": 3
+        },
+        {
+          "phase": "typing",
+          "atSeconds": 0.6013333333333334,
+          "rate": 3
+        },
+        {
+          "phase": "configuration",
+          "atSeconds": 6.20066666666667,
+          "rate": 3
+        },
+        {
+          "phase": "prompt-ready",
+          "atSeconds": 8.972333333333335,
+          "rate": 1
+        },
+        {
+          "phase": "send",
+          "atSeconds": 11.133333333333336,
+          "rate": 3
+        },
+        {
+          "phase": "generation",
+          "atSeconds": 11.447000000000001,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-0",
+          "atSeconds": 12.0065,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-0",
+          "atSeconds": 16.2215,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-0",
+          "atSeconds": 27.11349999999999,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-0",
+          "atSeconds": 27.59924999999999,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-1",
+          "atSeconds": 31.89724999999999,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-1",
+          "atSeconds": 41.72625000000002,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-1",
+          "atSeconds": 42.27650000000001,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-2",
+          "atSeconds": 46.8355,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-2",
+          "atSeconds": 70.48050000000008,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-2",
+          "atSeconds": 70.97350000000009,
+          "rate": 1
+        },
+        {
+          "phase": "use-interactive-kit",
+          "atSeconds": 75.99050000000008,
+          "rate": 1
+        },
+        {
+          "phase": "answer-work-3",
+          "atSeconds": 78.8025000000001,
+          "rate": 1
+        },
+        {
+          "phase": "generation-work-3",
+          "atSeconds": 104.73150000000005,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-3",
+          "atSeconds": 105.25175000000006,
+          "rate": 1
+        },
+        {
+          "phase": "open-interactive-kit",
+          "atSeconds": 110.56675000000006,
+          "rate": 3
+        },
+        {
+          "phase": "use-flashcards",
+          "atSeconds": 112.45341666666674,
+          "rate": 1
+        },
+        {
+          "phase": "share-result",
+          "atSeconds": 112.45341666666674,
+          "rate": 1
+        },
+        {
+          "phase": "original-learning-use-use-original-study-kit",
+          "atSeconds": 112.45341666666674,
+          "rate": 1
+        },
+        {
+          "phase": "original-learning-use-use-original-study-kit",
+          "atSeconds": 147.7204166666667,
+          "rate": 1
+        },
+        {
+          "phase": "original-learning-use-use-original-written-quiz",
+          "atSeconds": 164.3784166666667,
+          "rate": 1
+        },
+        {
+          "phase": "original-learning-use-use-original-study-reference",
+          "atSeconds": 194.93641666666693,
+          "rate": 1
+        },
+        {
+          "phase": "original-learning-use-use-original-review-plans",
+          "atSeconds": 201.12541666666695,
+          "rate": 1
+        }
+      ],
+      "chapters": [
+        {
+          "label": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "label": "upload menu",
+          "atSeconds": 0.3746666666666667,
+          "rate": 3
+        },
+        {
+          "label": "upload",
+          "atSeconds": 0.3956666666666667,
+          "rate": 3
+        },
+        {
+          "label": "typing",
+          "atSeconds": 0.6013333333333334,
+          "rate": 3
+        },
+        {
+          "label": "configuration",
+          "atSeconds": 6.20066666666667,
+          "rate": 3
+        },
+        {
+          "label": "prompt ready",
+          "atSeconds": 8.972333333333335,
+          "rate": 1
+        },
+        {
+          "label": "send",
+          "atSeconds": 11.133333333333336,
+          "rate": 3
+        },
+        {
+          "label": "generation",
+          "atSeconds": 11.447000000000001,
+          "rate": 4
+        },
+        {
+          "label": "read work 0",
+          "atSeconds": 12.0065,
+          "rate": 1
+        },
+        {
+          "label": "answer work 0",
+          "atSeconds": 16.2215,
+          "rate": 1
+        },
+        {
+          "label": "generation work 0",
+          "atSeconds": 27.11349999999999,
+          "rate": 4
+        },
+        {
+          "label": "read work 0",
+          "atSeconds": 27.59924999999999,
+          "rate": 1
+        },
+        {
+          "label": "answer work 1",
+          "atSeconds": 31.89724999999999,
+          "rate": 1
+        },
+        {
+          "label": "generation work 1",
+          "atSeconds": 41.72625000000002,
+          "rate": 4
+        },
+        {
+          "label": "read work 1",
+          "atSeconds": 42.27650000000001,
+          "rate": 1
+        },
+        {
+          "label": "answer work 2",
+          "atSeconds": 46.8355,
+          "rate": 1
+        },
+        {
+          "label": "generation work 2",
+          "atSeconds": 70.48050000000008,
+          "rate": 4
+        },
+        {
+          "label": "read work 2",
+          "atSeconds": 70.97350000000009,
+          "rate": 1
+        },
+        {
+          "label": "use interactive kit",
+          "atSeconds": 75.99050000000008,
+          "rate": 1
+        },
+        {
+          "label": "answer work 3",
+          "atSeconds": 78.8025000000001,
+          "rate": 1
+        },
+        {
+          "label": "generation work 3",
+          "atSeconds": 104.73150000000005,
+          "rate": 4
+        },
+        {
+          "label": "read work 3",
+          "atSeconds": 105.25175000000006,
+          "rate": 1
+        },
+        {
+          "label": "open interactive kit",
+          "atSeconds": 110.56675000000006,
+          "rate": 3
+        },
+        {
+          "label": "use flashcards",
+          "atSeconds": 112.45341666666674,
+          "rate": 1
+        },
+        {
+          "label": "share result",
+          "atSeconds": 112.45341666666674,
+          "rate": 1
+        },
+        {
+          "label": "original learning use use original study kit",
+          "atSeconds": 112.45341666666674,
+          "rate": 1
+        },
+        {
+          "label": "original learning use use original study kit",
+          "atSeconds": 147.7204166666667,
+          "rate": 1
+        },
+        {
+          "label": "original learning use use original written quiz",
+          "atSeconds": 164.3784166666667,
+          "rate": 1
+        },
+        {
+          "label": "original learning use use original study reference",
+          "atSeconds": 194.93641666666693,
+          "rate": 1
+        },
+        {
+          "label": "original learning use use original review plans",
+          "atSeconds": 201.12541666666695,
+          "rate": 1
+        }
+      ],
+      "capture": {
+        "sha256": "9f4aeca52f8b64c17dcf56baf1865dcb1dc0063d1b1282614f07c9b1fcfe8209",
+        "sourceFrames": 1261,
+        "usedFrames": 1073,
+        "conversationFingerprint": "63e7fc4e22c48af84a1c0a8d7a1abb6c6612f04e6da82e526b0b59071d65c924",
+        "newChat": true,
+        "temporaryChat": false,
+        "interfaceLanguage": "en"
+      },
+      "qa": {
+        "accepted": true,
+        "videoSha256": "b809da5ba0d01d0cc6f5a26be1eaa1a37b11bbeaa4fab9b457c4f9ed02ec992b",
+        "captureSha256": "9f4aeca52f8b64c17dcf56baf1865dcb1dc0063d1b1282614f07c9b1fcfe8209",
+        "recordSha256": "23245acabc73f0fa7ccbe474abfc2dbdaa03142719a6bf699b290d6d6e8002aa",
+        "rootReviewSha256": "d5f690d4c1e09abc927e4923a143f23f16970e0840562e99dbfad39f8c0b8249",
+        "independentPeerReviewSha256": "02e7915cee68f1022c895297b0607f1e1af3f5af93371059b705abf441d32456"
+      },
+      "sourceBook": {
+        "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+        "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+      },
+      "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet.",
       "packageSource": {
         "repo": "toddward/the-learning-skill",
         "commit": "764f77764e9a731f74da297a4963959670e80e03",
@@ -487,653 +818,276 @@
             "bytes": 7651
           }
         ]
-      },
-      "observed": "Started with recall, then generated notes, three HTML flashcards, a quiz, two reviews and a cheatsheet. A duplicated due-card count was corrected; reveal and Good → next card (3 due → 2) were checked. The recording shows one correct-answer quiz feedback path; the later review found unreliable keyword grading.",
-      "tests": [
-        {
-          "action": "Reveal an HTML flashcard and rate it Good.",
-          "observed": "After the follow-up fix, Due today starts at 3 and changes to 2, Total cards stays 3, Reviewed becomes 1 and the next question appears."
-        },
-        {
-          "action": "Submit model parameters to the quiz’s training question.",
-          "observed": "CORRECT with an explanation citing §1.2."
-        }
-      ],
-      "artifacts": [
-        {
-          "label": "Open the corrected HTML flashcards",
-          "url": "materials/skills/outputs/chapter-flashcards.html",
-          "sha256": "bcf07e1d0a4ced1782dfab6109d09211bcd992688e1f2847adab6862c37b94c8",
-          "originalSha256": "f0d45b4545dc6a08112693c9a26941d9beda6302344c73d782a405549bea718b",
-          "adaptations": [
-            "Source hyperlink points to the distributed workshop chapter instead of the recording account’s file library; content, controls and styling unchanged.",
-            "Original MIT template copyright and permission notice included in a non-rendered HTML comment."
-          ]
-        },
-        {
-          "label": "Open the chapter quiz",
-          "url": "materials/skills/outputs/chapter-quiz.html",
-          "sha256": "4a434e91265b615d16fcdfe9c4c607cd13ceb6cb01c45fae05f24ad5bbc86469",
-          "originalSha256": "668093efcddf617267b9b278e4d5a83aedb6e1b69223d4cfaa5fb4ac0b669ded",
-          "adaptations": [
-            "Source hyperlink points to the distributed workshop chapter instead of the recording account’s file library; content, controls and styling unchanged.",
-            "Original MIT template copyright and permission notice included in a non-rendered HTML comment."
-          ]
-        }
-      ],
-      "durationSeconds": 42.837,
-      "width": 1440,
-      "height": 900,
-      "scenes": [
-        {
-          "phase": "original-request",
-          "browserTabId": "3",
-          "startedAt": "2026-11-05T17:06:36.286Z",
-          "caption": "The complete Learning Skill starts with the assigned book, Andrea’s goal and a short study budget."
-        },
-        {
-          "phase": "practice-and-kit",
-          "browserTabId": "3",
-          "startedAt": "2026-11-05T17:06:40.675Z",
-          "caption": "Andrea answers first; the chat then provides chapter-linked study files and two short review sessions."
-        },
-        {
-          "phase": "corrected-question",
-          "browserTabId": "8",
-          "startedAt": "2026-11-05T17:02:12.030Z",
-          "caption": "The corrected kit starts with three cards due out of three total cards."
-        },
-        {
-          "phase": "corrected-answer",
-          "browserTabId": "8",
-          "startedAt": "2026-11-05T17:02:20.778Z",
-          "caption": "Reveal shows the answer, chapter reference and recall-rating controls."
-        },
-        {
-          "phase": "corrected-progress",
-          "browserTabId": "8",
-          "startedAt": "2026-11-05T17:02:30.665Z",
-          "caption": "After Good, the next card appears and the due count falls from three to two."
-        },
-        {
-          "phase": "quiz-feedback",
-          "browserTabId": "9",
-          "startedAt": "2026-11-05T17:03:09.788Z",
-          "caption": "The quiz accepts a correct answer and explains it with a chapter reference."
-        }
-      ],
-      "captureFrameCount": 55,
-      "sourceFrames": [
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 0.0
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.112
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.725
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.262
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.797
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.426
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.954
-        },
-        {
-          "phase": "original-request",
-          "sha256": "d6afd8fe094682f6ae00882343401077c8f632ea56f78571ab2738cab83f9db1",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.476
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 6.003
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 8.085
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 8.677
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.225
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.855
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 10.47
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.103
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.635
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.269
-        },
-        {
-          "phase": "practice-and-kit",
-          "sha256": "41277c9500b7dda4e1afd53804add32aea9f7c89e58dbe15cd5762cabd863515",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.8
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 13.337
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 15.387
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 15.907
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 16.532
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 17.062
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 17.688
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 18.207
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 18.746
-        },
-        {
-          "phase": "corrected-question",
-          "sha256": "5efa80fb3d1d48ed90612a38f9ea1bb5622e7b12dbd0f35758e98111471a112e",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 19.274
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 19.803
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 21.853
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 22.406
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 23.032
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 23.6
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 24.203
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 24.719
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 25.249
-        },
-        {
-          "phase": "corrected-answer",
-          "sha256": "c7f536e6f445259ca51e2690eb14e2711996a0470a8707aeaef14c417856719b",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 25.783
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 26.324
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 28.377
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 28.931
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 29.533
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 30.062
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 30.598
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 31.24
-        },
-        {
-          "phase": "corrected-progress",
-          "sha256": "077fccc4a0e4f4dbf63c715918fc04d7fad2da0f6bea9687a7e72b48ff5b9221",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 31.782
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 32.375
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 34.425
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 34.955
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 35.555
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 36.106
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 36.625
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 37.174
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 37.703
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 38.238
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 38.772
-        },
-        {
-          "phase": "quiz-feedback",
-          "sha256": "07a58e0a0b6e630b7ec4fcfa8d1f8241c670e12838f0214190f7ae164f564f06",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 39.305
-        }
-      ],
-      "videoSha256": "21d57f5ec2ec75b748582100b57aa6df14af66c5a3da26a443ce7adbcbb4b515",
-      "posterSha256": "3ab66013f2d9d3e521d7ca079fd3a28af0432f711b51672b93244dd2f97bf8a5",
-      "postRecordingReview": {
-        "reviewedOn": "2026-11-06",
-        "finding": "Short-answer grading uses substring matching, causing false positives for negations and false negatives for valid paraphrases. Only one correct-answer feedback path was observed in the recording.",
-        "reviewedAdaptation": "materials/skills/outputs/chapter-quiz-reviewed.html",
-        "scope": "The adaptation uses explicit manual self-assessment; the original quiz, recording, transcript and artifact hashes are unchanged.",
-        "reviewedSha256": "05ee5b29c8568c11de2ce784db4f24d5cd3518143d6ebd00fa53615a68c5093a"
       }
     },
     {
       "key": "markdown-mermaid-writing",
+      "recordingKey": "skills-markdown-mermaid-writing",
       "slideId": "S53SKILLMERMAID",
       "status": "executed",
       "accepted": true,
       "browser": "@Browser",
-      "surface": "ChatGPT web · Work mode",
-      "model": "GPT-6.1 Sol · Light",
-      "conversationUrl": "https://chatgpt.com/c/6aecb3c3-b380-83eb-8743-7fddc0f7131e",
+      "recordedAt": "2026-11-08T14:56:45.126Z",
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — Compare the chapter in an editable diagram: recorded demonstration and use.",
+      "caption": "ChatGPT · 69.2 s",
+      "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6af095ec-c124-83ed-af58-5693b0291d7c",
+        "label": "Open shared result",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+        "supplemental": [
+          {
+            "kind": "file",
+            "url": "/materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/exports/training-inference-rag.mmd",
+            "label": "Original result (Mermaid)",
+            "interactiveVerified": false,
+            "recipientVerified": true,
+            "ownerIndependent": true,
+            "mediaType": "text/plain; charset=utf-8",
+            "download": true,
+            "sha256": "bf46e3f02384d2f845a50ffd87372850b1117a2b1129c4ac11208900f9148aa4",
+            "bytes": 1136,
+            "sourceMethod": "native-ui-copy"
+          }
+        ]
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/skills-markdown-mermaid-writing.json",
+      "durationSeconds": 69.166667,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "2df0db86a0c20ce091d5d4f3636a9b9b673700e29b97b1d5a7140365395d0e39",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "videoSha256": "2df0db86a0c20ce091d5d4f3636a9b9b673700e29b97b1d5a7140365395d0e39",
+      "posterSha256": "4856307b86ceaea30bfc3fec3dddfad3ff8c3079d37a944978c9e93a0c5e914a",
+      "captureFrameCount": 506,
+      "scenes": [
+        {
+          "phase": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "phase": "upload-menu",
+          "atSeconds": 0.3853333333333334,
+          "rate": 3
+        },
+        {
+          "phase": "upload",
+          "atSeconds": 1.2006666666666668,
+          "rate": 3
+        },
+        {
+          "phase": "typing",
+          "atSeconds": 1.410666666666667,
+          "rate": 3
+        },
+        {
+          "phase": "configuration",
+          "atSeconds": 5.908333333333335,
+          "rate": 3
+        },
+        {
+          "phase": "prompt-ready",
+          "atSeconds": 6.6803333333333335,
+          "rate": 1
+        },
+        {
+          "phase": "send",
+          "atSeconds": 8.781333333333334,
+          "rate": 3
+        },
+        {
+          "phase": "generation",
+          "atSeconds": 9.210666666666667,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-0",
+          "atSeconds": 9.670666666666667,
+          "rate": 1
+        },
+        {
+          "phase": "edit-diagram",
+          "atSeconds": 18.912666666666667,
+          "rate": 1
+        },
+        {
+          "phase": "edit-label",
+          "atSeconds": 26.677666666666656,
+          "rate": 1
+        },
+        {
+          "phase": "edit-label-corrected",
+          "atSeconds": 27.687666666666658,
+          "rate": 1
+        },
+        {
+          "phase": "export-diagram",
+          "atSeconds": 37.62666666666663,
+          "rate": 1
+        },
+        {
+          "phase": "read-work-2",
+          "atSeconds": 42.44866666666662,
+          "rate": 1
+        },
+        {
+          "phase": "share-result",
+          "atSeconds": 50.05566666666663,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-inspect",
+          "atSeconds": 54.43266666666667,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-expand",
+          "atSeconds": 59.15866666666667,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-code",
+          "atSeconds": 60.25666666666666,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-preview",
+          "atSeconds": 63.88166666666667,
+          "rate": 1
+        }
+      ],
+      "chapters": [
+        {
+          "label": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "label": "upload menu",
+          "atSeconds": 0.3853333333333334,
+          "rate": 3
+        },
+        {
+          "label": "upload",
+          "atSeconds": 1.2006666666666668,
+          "rate": 3
+        },
+        {
+          "label": "typing",
+          "atSeconds": 1.410666666666667,
+          "rate": 3
+        },
+        {
+          "label": "configuration",
+          "atSeconds": 5.908333333333335,
+          "rate": 3
+        },
+        {
+          "label": "prompt ready",
+          "atSeconds": 6.6803333333333335,
+          "rate": 1
+        },
+        {
+          "label": "send",
+          "atSeconds": 8.781333333333334,
+          "rate": 3
+        },
+        {
+          "label": "generation",
+          "atSeconds": 9.210666666666667,
+          "rate": 4
+        },
+        {
+          "label": "read work 0",
+          "atSeconds": 9.670666666666667,
+          "rate": 1
+        },
+        {
+          "label": "edit diagram",
+          "atSeconds": 18.912666666666667,
+          "rate": 1
+        },
+        {
+          "label": "edit label",
+          "atSeconds": 26.677666666666656,
+          "rate": 1
+        },
+        {
+          "label": "edit label corrected",
+          "atSeconds": 27.687666666666658,
+          "rate": 1
+        },
+        {
+          "label": "export diagram",
+          "atSeconds": 37.62666666666663,
+          "rate": 1
+        },
+        {
+          "label": "read work 2",
+          "atSeconds": 42.44866666666662,
+          "rate": 1
+        },
+        {
+          "label": "share result",
+          "atSeconds": 50.05566666666663,
+          "rate": 1
+        },
+        {
+          "label": "usage retake inspect",
+          "atSeconds": 54.43266666666667,
+          "rate": 1
+        },
+        {
+          "label": "usage retake expand",
+          "atSeconds": 59.15866666666667,
+          "rate": 1
+        },
+        {
+          "label": "usage retake code",
+          "atSeconds": 60.25666666666666,
+          "rate": 1
+        },
+        {
+          "label": "usage retake preview",
+          "atSeconds": 63.88166666666667,
+          "rate": 1
+        }
+      ],
+      "capture": {
+        "sha256": "f2e17de5512085105b838dec42e9479ee231f2b7ae95283eee2ac41bf780b986",
+        "sourceFrames": 506,
+        "usedFrames": 505,
+        "conversationFingerprint": "9c12422e16f213b19b02b944a3b9a14e5e48699a94cb3be3ea3aca3d93cba381",
+        "newChat": true,
+        "temporaryChat": false,
+        "interfaceLanguage": "en"
+      },
+      "qa": {
+        "accepted": true,
+        "videoSha256": "2df0db86a0c20ce091d5d4f3636a9b9b673700e29b97b1d5a7140365395d0e39",
+        "captureSha256": "f2e17de5512085105b838dec42e9479ee231f2b7ae95283eee2ac41bf780b986",
+        "recordSha256": "2a4d711dbec6410fe36519485f262c5e4821cd00ad09f26fe3af25c4ac1b763b",
+        "independentPeerReviewSha256": "9d79b83f60189f13b1ef695bd48606238c6191985f8362ce7b55c70f01a3fbd4"
+      },
+      "sourceBook": {
+        "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+        "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+      },
+      "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet.",
       "packageSource": {
         "repo": "K-Dense-AI/scientific-agent-skills",
         "commit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
@@ -1330,338 +1284,256 @@
             "bytes": 7336
           }
         ]
-      },
-      "observed": "Produced a rendered eight-node Mermaid flowchart, accessible title and description, text alternative and section references. The code editor opens.",
-      "tests": [
-        {
-          "action": "Expand the rendered diagram and open Edit code.",
-          "observed": "Eight source-linked nodes, labelled training/inference/RAG flows, accessible title/description and editable Mermaid source."
-        }
-      ],
-      "artifacts": [
-        {
-          "label": "Download the editable Mermaid source",
-          "url": "materials/skills/outputs/chapter-comparison.mmd",
-          "sha256": "60a10c9a87300204b6668d44d11c5a6815ae16237e400f59837a5ca8b45c3c12",
-          "originalSha256": "60a10c9a87300204b6668d44d11c5a6815ae16237e400f59837a5ca8b45c3c12",
-          "adaptations": []
-        },
-        {
-          "label": "Open the generated diagram",
-          "url": "materials/skills/outputs/chapter-comparison.png",
-          "sha256": "caf1605cf17e403f88fdd9c18715e77c95cfae06c90ec627b3f9eb9ebf34c9d4",
-          "originalSha256": "caf1605cf17e403f88fdd9c18715e77c95cfae06c90ec627b3f9eb9ebf34c9d4",
-          "adaptations": []
-        }
-      ],
-      "durationSeconds": 22.531,
-      "width": 1440,
-      "height": 900,
-      "scenes": [
-        {
-          "phase": "diagram",
-          "browserTabId": "4",
-          "startedAt": "2026-11-05T17:24:59.414Z",
-          "caption": "The rendered diagram and its text alternative use the same chapter sections."
-        },
-        {
-          "phase": "expanded",
-          "browserTabId": "4",
-          "startedAt": "2026-11-05T17:24:34.760Z",
-          "caption": "The source-linked diagram is inspected at the common 1440 × 900 viewport."
-        },
-        {
-          "phase": "source",
-          "browserTabId": "4",
-          "startedAt": "2026-11-05T17:24:39.879Z",
-          "caption": "The generated Mermaid source remains editable."
-        }
-      ],
-      "captureFrameCount": 27,
-      "sourceFrames": [
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 0.0
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.126
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.727
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.271
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.791
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.338
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.859
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.39
-        },
-        {
-          "phase": "diagram",
-          "sha256": "925fac39e7f3437ab2db588281c69c77ad3dfa423c42e8c6a378232d54d36b0f",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.916
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 6.456
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 8.558
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.082
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.702
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 10.241
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 10.773
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.293
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.816
-        },
-        {
-          "phase": "expanded",
-          "sha256": "f036d08767ea443ec62b9c8d873f8c44ce1d26829c717de670420ed0d6bda864",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.347
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.879
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 14.929
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 15.491
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 16.027
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 16.651
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 17.191
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 17.74
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 18.331
-        },
-        {
-          "phase": "source",
-          "sha256": "64043db016013c81683c6acb69230f976d00756ff1b5f23bdbec08474bb86bc7",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 18.91
-        }
-      ],
-      "videoSha256": "08c0b5f9391170e45613990ffae8df8341084aaa24d4ff7f5817a7adc2f5e687",
-      "posterSha256": "615296e52b779c9f2be590e10d1b8abe696a92d54ecfdf04110631fb93204707"
+      }
     },
     {
       "key": "flashcard-generator",
+      "recordingKey": "skills-flashcard-generator",
       "slideId": "S53SKILLFLASHCARDS",
       "status": "executed",
       "accepted": true,
       "browser": "@Browser",
-      "surface": "ChatGPT web · Work mode",
-      "model": "GPT-6.1 Sol · Light",
-      "conversationUrl": "https://chatgpt.com/c/6aecb461-8dd4-83ed-8900-5b4f811a4695",
+      "recordedAt": "2026-11-08T15:02:00.372Z",
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/skills-flashcard-generator/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/skills-flashcard-generator/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/skills-flashcard-generator/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/skills-flashcard-generator/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — Three questions to answer from memory: recorded demonstration and use.",
+      "caption": "ChatGPT · 33.8 s",
+      "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6af09502-10c8-83eb-9bc2-db2e9de801cb",
+        "label": "Open shared result",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
+        "supplemental": [
+          {
+            "kind": "file",
+            "url": "/materials/video-refresh/2026-11-07/skills-flashcard-generator/exports/andrea-flashcards.txt",
+            "label": "Original result (text)",
+            "interactiveVerified": false,
+            "recipientVerified": true,
+            "ownerIndependent": true,
+            "mediaType": "text/plain; charset=utf-8",
+            "download": true,
+            "sha256": "53c15df8c957960e8042ae48e129a0f4271761b993230ac907331b6c1fd4059b",
+            "bytes": 748,
+            "sourceMethod": "native-download"
+          }
+        ]
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/skills-flashcard-generator.json",
+      "durationSeconds": 33.833333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "9b37bf9662743ea93b4f2a67a1702c39eb6cf314110149c9cccac4425cd25112",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "videoSha256": "9b37bf9662743ea93b4f2a67a1702c39eb6cf314110149c9cccac4425cd25112",
+      "posterSha256": "caff6bfee3a5ee8104717601dbc0184660dba644dbf10982c35434ee94eb0f7a",
+      "captureFrameCount": 389,
+      "scenes": [
+        {
+          "phase": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "phase": "upload-menu",
+          "atSeconds": 0.6649999999999999,
+          "rate": 3
+        },
+        {
+          "phase": "upload",
+          "atSeconds": 1.4983333333333333,
+          "rate": 3
+        },
+        {
+          "phase": "typing",
+          "atSeconds": 1.7249999999999999,
+          "rate": 3
+        },
+        {
+          "phase": "configuration",
+          "atSeconds": 7.481333333333334,
+          "rate": 3
+        },
+        {
+          "phase": "prompt-ready",
+          "atSeconds": 8.596333333333332,
+          "rate": 1
+        },
+        {
+          "phase": "send",
+          "atSeconds": 10.74033333333333,
+          "rate": 3
+        },
+        {
+          "phase": "generation",
+          "atSeconds": 11.171999999999993,
+          "rate": 4
+        },
+        {
+          "phase": "read-work-0",
+          "atSeconds": 11.648999999999994,
+          "rate": 1
+        },
+        {
+          "phase": "read-flashcard-file",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "read-flashcard-file",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "check-export",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "check-export",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "share-result",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-open-result",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-open-original-txt",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "phase": "usage-retake-read-three-cards",
+          "atSeconds": 25.629,
+          "rate": 1
+        }
+      ],
+      "chapters": [
+        {
+          "label": "home",
+          "atSeconds": 0,
+          "rate": 3
+        },
+        {
+          "label": "upload menu",
+          "atSeconds": 0.6649999999999999,
+          "rate": 3
+        },
+        {
+          "label": "upload",
+          "atSeconds": 1.4983333333333333,
+          "rate": 3
+        },
+        {
+          "label": "typing",
+          "atSeconds": 1.7249999999999999,
+          "rate": 3
+        },
+        {
+          "label": "configuration",
+          "atSeconds": 7.481333333333334,
+          "rate": 3
+        },
+        {
+          "label": "prompt ready",
+          "atSeconds": 8.596333333333332,
+          "rate": 1
+        },
+        {
+          "label": "send",
+          "atSeconds": 10.74033333333333,
+          "rate": 3
+        },
+        {
+          "label": "generation",
+          "atSeconds": 11.171999999999993,
+          "rate": 4
+        },
+        {
+          "label": "read work 0",
+          "atSeconds": 11.648999999999994,
+          "rate": 1
+        },
+        {
+          "label": "read flashcard file",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "read flashcard file",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "check export",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "check export",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "share result",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "usage retake open result",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "usage retake open original txt",
+          "atSeconds": 21.842999999999993,
+          "rate": 1
+        },
+        {
+          "label": "usage retake read three cards",
+          "atSeconds": 25.629,
+          "rate": 1
+        }
+      ],
+      "capture": {
+        "sha256": "f4559bab6820b80a36b4afae6103943d80d9a9f4ef7624a67d3262d61f1aee2e",
+        "sourceFrames": 389,
+        "usedFrames": 298,
+        "conversationFingerprint": "57871ab20f9cb519e4d16738af5e66df23446cab03444ceea4065b549ee34880",
+        "newChat": true,
+        "temporaryChat": false,
+        "interfaceLanguage": "en"
+      },
+      "qa": {
+        "accepted": true,
+        "videoSha256": "9b37bf9662743ea93b4f2a67a1702c39eb6cf314110149c9cccac4425cd25112",
+        "captureSha256": "f4559bab6820b80a36b4afae6103943d80d9a9f4ef7624a67d3262d61f1aee2e",
+        "recordSha256": "eed4dfefdd8f70752dae1350686e1904b636c06c807176d1b22265159958b5ca",
+        "independentPeerReviewSha256": "5720495519d50448dac4300dfea045aed011ee25c16a97d3f26aa4ec84274cc2"
+      },
+      "sourceBook": {
+        "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+        "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+      },
+      "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet.",
       "packageSource": {
         "repo": "maaarcooo/agent-skills",
         "commit": "1566547ffb9834424810869c973082085b9fd83d",
@@ -1683,1144 +1555,8 @@
             "bytes": 1210
           }
         ]
-      },
-      "observed": "Created and downloaded a text file containing exactly three Question | Answer pairs. Each answer is under 30 words and cites §1.2 or §1.7.",
-      "tests": [
-        {
-          "action": "Open and download the generated .txt file.",
-          "observed": "Exactly three lines, one pipe per line, source references on all answers and answers under 30 words."
-        }
-      ],
-      "artifacts": [
-        {
-          "label": "Download the three text flashcards",
-          "url": "materials/skills/outputs/andrea-flashcards.txt",
-          "sha256": "ed43f7dccafa2d5159504a31411572edbbab431cd6eeacb105fb9d9cbf23fafd",
-          "originalSha256": "ed43f7dccafa2d5159504a31411572edbbab431cd6eeacb105fb9d9cbf23fafd",
-          "adaptations": []
-        }
-      ],
-      "durationSeconds": 17.956,
-      "width": 1440,
-      "height": 900,
-      "scenes": [
-        {
-          "phase": "request",
-          "browserTabId": "6",
-          "startedAt": "2026-11-05T17:04:50.396Z",
-          "caption": "The original request selects Flashcard Generator and attaches the workshop book."
-        },
-        {
-          "phase": "verified-output",
-          "browserTabId": "6",
-          "startedAt": "2026-11-05T17:04:55.427Z",
-          "caption": "Exactly three cards are inspected in the generated text file, each with a chapter reference."
-        }
-      ],
-      "captureFrameCount": 22,
-      "sourceFrames": [
-        {
-          "phase": "request",
-          "sha256": "4b61b7eaaec831f8fa4e79ac043423e2e5d17b03de591cd86a02359f66f297bb",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 0.0
-        },
-        {
-          "phase": "request",
-          "sha256": "eaea8086ed85797970fd3433ac51dd5d3f81b5586e5cf27a149162a3e07dfa19",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.083
-        },
-        {
-          "phase": "request",
-          "sha256": "210bd9a7ffdbf8f8b1d4ab71ecd11320e15e87a558df0bd2d788318bc3565970",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.606
-        },
-        {
-          "phase": "request",
-          "sha256": "c83f0046d6e8fa921810d2cd3ae474ba674231ebec5e231eb4cbc23251a390b3",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.137
-        },
-        {
-          "phase": "request",
-          "sha256": "210bd9a7ffdbf8f8b1d4ab71ecd11320e15e87a558df0bd2d788318bc3565970",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.663
-        },
-        {
-          "phase": "request",
-          "sha256": "c83f0046d6e8fa921810d2cd3ae474ba674231ebec5e231eb4cbc23251a390b3",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.181
-        },
-        {
-          "phase": "request",
-          "sha256": "210bd9a7ffdbf8f8b1d4ab71ecd11320e15e87a558df0bd2d788318bc3565970",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.728
-        },
-        {
-          "phase": "request",
-          "sha256": "c83f0046d6e8fa921810d2cd3ae474ba674231ebec5e231eb4cbc23251a390b3",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.271
-        },
-        {
-          "phase": "request",
-          "sha256": "c83f0046d6e8fa921810d2cd3ae474ba674231ebec5e231eb4cbc23251a390b3",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.905
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "00d5afd0e5a1e4e3adcad5d85e225f7e6fbe6d519f0b9e96bf71ff962b9201d0",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 6.46
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "00d5afd0e5a1e4e3adcad5d85e225f7e6fbe6d519f0b9e96bf71ff962b9201d0",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 8.523
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "00d5afd0e5a1e4e3adcad5d85e225f7e6fbe6d519f0b9e96bf71ff962b9201d0",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.09
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "00d5afd0e5a1e4e3adcad5d85e225f7e6fbe6d519f0b9e96bf71ff962b9201d0",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.657
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 10.2
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 10.727
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.259
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.784
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.313
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.846
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 13.373
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 13.906
-        },
-        {
-          "phase": "verified-output",
-          "sha256": "269db48f1b6f98176e72274d4be554b64145bc6fff612c00013cb77dc135a88d",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 14.427
-        }
-      ],
-      "videoSha256": "54b6465a567cb6013608a433e8bbe819773deac05af8053242761c162b059706",
-      "posterSha256": "2481bf5e178a7805ab72af5c5a7b0d9c81dce84fbedc864b13ecbbaeda3ba052"
-    },
-    {
-      "key": "scientific-critical-thinking",
-      "slideId": "S53SKILLCRITICAL",
-      "status": "executed",
-      "accepted": true,
-      "browser": "@Browser",
-      "surface": "ChatGPT web · Work mode",
-      "model": "GPT-6.1 Sol · Light",
-      "conversationUrl": "https://chatgpt.com/c/6aecb43d-3578-83ed-a6ca-a770c362b923",
-      "packageSource": {
-        "repo": "K-Dense-AI/scientific-agent-skills",
-        "commit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-        "directory": "skills/scientific-critical-thinking",
-        "files": [
-          {
-            "path": "SKILL.md",
-            "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4",
-            "bytes": 13146
-          },
-          {
-            "path": "references/common_biases.md",
-            "sha256": "641e8e8e6dfadac1643ea8691b7d3e4e58cf013f134cd42c71301878096a5a39",
-            "bytes": 12368
-          },
-          {
-            "path": "references/core_capabilities.md",
-            "sha256": "0f337b96aa2d7453433a17824368fbd0638b9469d4f90a5fd23f4167c9dee180",
-            "bytes": 16975
-          },
-          {
-            "path": "references/evidence_hierarchy.md",
-            "sha256": "534fbe991ecfb2d162f755004dc528118ce74a78862917c2911595a522d76e6c",
-            "bytes": 17435
-          },
-          {
-            "path": "references/experimental_design.md",
-            "sha256": "eca7e42025393984c07676f3d4bc354d217e5604dc2209c76215d31953a7c74c",
-            "bytes": 18227
-          },
-          {
-            "path": "references/logical_fallacies.md",
-            "sha256": "becfc5bfac7b831dca67cc442cd0fcb42d8eea527a6fc2921c1b704e592ff593",
-            "bytes": 18659
-          },
-          {
-            "path": "references/review_sources.md",
-            "sha256": "71e75106f36f3e69b28959ad1fec503ccdb21b7f5361ab230173e4812accbf62",
-            "bytes": 7557
-          },
-          {
-            "path": "references/scientific_method.md",
-            "sha256": "5aa925b97c7a916f819dafc8b42a9c24e4bd3eb2836594e724f1e7f9ae75ea0f",
-            "bytes": 7641
-          },
-          {
-            "path": "references/statistical_pitfalls.md",
-            "sha256": "0c43204a0a81110cfeb7c982fa4caa89f274bdcebf096e09e5adfccf31241cb9",
-            "bytes": 21151
-          }
-        ]
-      },
-      "observed": "Checked all three claims against §§1.2, 1.6 and 1.7, gave specific corrections and ended with an independent question about isolating context and temperature effects.",
-      "tests": [
-        {
-          "action": "Compare each generated verdict and correction with the cited chapter section.",
-          "observed": "All three misconceptions correctly rejected; review ends with an independent question."
-        }
-      ],
-      "artifacts": [],
-      "durationSeconds": 25.154,
-      "width": 1440,
-      "height": 900,
-      "scenes": [
-        {
-          "phase": "request",
-          "browserTabId": "5",
-          "startedAt": "2026-11-05T17:05:02.429Z",
-          "caption": "Andrea’s three statements are submitted with the original book as the evidence source."
-        },
-        {
-          "phase": "checked-claims",
-          "browserTabId": "5",
-          "startedAt": "2026-11-05T17:05:07.411Z",
-          "caption": "The generated table checks each claim against §§1.2, 1.6 and 1.7."
-        },
-        {
-          "phase": "independent-check",
-          "browserTabId": "5",
-          "startedAt": "2026-11-05T17:05:29.216Z",
-          "caption": "The critique ends with an independent question about separating context and temperature effects."
-        }
-      ],
-      "captureFrameCount": 31,
-      "sourceFrames": [
-        {
-          "phase": "request",
-          "sha256": "bae401230108e76bf427d57e9b365113b9855c6110c1f8d877580d8248584db6",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 0.0
-        },
-        {
-          "phase": "request",
-          "sha256": "bae401230108e76bf427d57e9b365113b9855c6110c1f8d877580d8248584db6",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.066
-        },
-        {
-          "phase": "request",
-          "sha256": "15cdd906e5cddccbd32f39b358000c24c1e253cc15e6600006c1bc2d6748a5e9",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 2.609
-        },
-        {
-          "phase": "request",
-          "sha256": "15cdd906e5cddccbd32f39b358000c24c1e253cc15e6600006c1bc2d6748a5e9",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.23
-        },
-        {
-          "phase": "request",
-          "sha256": "bae401230108e76bf427d57e9b365113b9855c6110c1f8d877580d8248584db6",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 3.754
-        },
-        {
-          "phase": "request",
-          "sha256": "15cdd906e5cddccbd32f39b358000c24c1e253cc15e6600006c1bc2d6748a5e9",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.287
-        },
-        {
-          "phase": "request",
-          "sha256": "bae401230108e76bf427d57e9b365113b9855c6110c1f8d877580d8248584db6",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 4.811
-        },
-        {
-          "phase": "request",
-          "sha256": "15cdd906e5cddccbd32f39b358000c24c1e253cc15e6600006c1bc2d6748a5e9",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.418
-        },
-        {
-          "phase": "request",
-          "sha256": "bae401230108e76bf427d57e9b365113b9855c6110c1f8d877580d8248584db6",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 5.962
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 6.496
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 8.575
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.19
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 9.751
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 10.37
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.008
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 11.542
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.156
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 12.772
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 13.337
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 13.854
-        },
-        {
-          "phase": "checked-claims",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 14.472
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 14.995
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 17.078
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 17.619
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 18.217
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 18.75
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 19.278
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 19.907
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 20.434
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "b534dfe5b459c376bba75181e7a4377c5b71dd177159e8ea52526fb400a480e8",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 20.971
-        },
-        {
-          "phase": "independent-check",
-          "sha256": "fcf2c6bf5e0c41e0511aa2309efeeba3e448103eafbb6e9ef28948b932ca1454",
-          "sourceSize": [
-            678,
-            857
-          ],
-          "crop": null,
-          "atSeconds": 21.602
-        }
-      ],
-      "videoSha256": "e505f60b254590f9acbd01462b6c3ad7c6119c4115dbfcdb4c68d5c0089f6c29",
-      "posterSha256": "0eae5f0386b335ebd534b8d440834ebfad1536bb1bf2353168bab95bf27dd854"
-    },
-    {
-      "key": "citation-management",
-      "slideId": "S53SKILLCITATIONS",
-      "status": "executed",
-      "accepted": true,
-      "browser": "@Browser",
-      "surface": "ChatGPT web · Work mode",
-      "model": "GPT-6.1 Sol · Light",
-      "conversationUrl": "https://chatgpt.com/c/6aecb499-5510-83eb-8d64-9a2419a39c35",
-      "packageSource": {
-        "repo": "K-Dense-AI/scientific-agent-skills",
-        "commit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-        "directory": "skills/citation-management",
-        "files": [
-          {
-            "path": "SKILL.md",
-            "sha256": "dc79fe1e8438dcf598040615d5323360c6a7ed0b868fc3ffc82512c871a1e3ff",
-            "bytes": 16630
-          },
-          {
-            "path": "assets/bibtex_template.bib",
-            "sha256": "08e21647fa68cad1aa1658264798c7d24775ba89bfbd2723ea6bfe4b562e2be1",
-            "bytes": 9305
-          },
-          {
-            "path": "assets/citation_checklist.md",
-            "sha256": "ce7317f2983f8b7fd02949aad726ebd6188319c7e57c929fffe689d5ae18ce36",
-            "bytes": 10434
-          },
-          {
-            "path": "references/api_contracts.md",
-            "sha256": "3e82a14f77133a215831d2627b65c93199589782f6907fc42af3c75f2ab3c5a8",
-            "bytes": 6712
-          },
-          {
-            "path": "references/best_practices.md",
-            "sha256": "df90d19c8f639590a6a430a889160b478dce61f4a5c0a5a36df5ab1be749b6b1",
-            "bytes": 2723
-          },
-          {
-            "path": "references/bibtex_formatting.md",
-            "sha256": "6337a8d2b87de96bf0f72c076feb0fc5d61ed9c342d9c8f19b3633efbfec6fed",
-            "bytes": 19394
-          },
-          {
-            "path": "references/citation_validation.md",
-            "sha256": "f235f82e02db282f0abdd23fd8d2973d870d427d355979e869f736259ba95774",
-            "bytes": 18996
-          },
-          {
-            "path": "references/core_workflow.md",
-            "sha256": "19e8b52c43f5822163c79904236016616dc4515d21a01d29073d968c9251af8d",
-            "bytes": 20986
-          },
-          {
-            "path": "references/example_workflows.md",
-            "sha256": "01c0a15e08e8115e10a07623f63565d119812fd2bb68c669eac413db2f9cd482",
-            "bytes": 3382
-          },
-          {
-            "path": "references/google_scholar_search.md",
-            "sha256": "5b705ec8d6276ef83b819b737ed10bd991815ccb413de27e046b7bfdf4da8399",
-            "bytes": 17993
-          },
-          {
-            "path": "references/metadata_extraction.md",
-            "sha256": "68c27886aff0d4efbf3a6f7e0a318dedd706d4cfd0f55dd859466de36ed78d46",
-            "bytes": 21419
-          },
-          {
-            "path": "references/pubmed_search.md",
-            "sha256": "fab82cda700a0dfc6dccc9465c9cc60b9df68cb58d0bec9abe7b2d8748a49cd1",
-            "bytes": 19233
-          },
-          {
-            "path": "references/script_reference.md",
-            "sha256": "bd23683cb3a7edb932fc5a13bb9215969a834a778a8765eea82553bf1b8b3417",
-            "bytes": 7536
-          },
-          {
-            "path": "references/search_strategies.md",
-            "sha256": "776c0dd1cbaf0432004ae80273640ff324b570401c569413c674829436385c85",
-            "bytes": 2727
-          },
-          {
-            "path": "scripts/_common.py",
-            "sha256": "87540160163671b972c2fccb4d0a42db3cca2603c664d26d5da3ca5dbc7dfdd2",
-            "bytes": 10912
-          },
-          {
-            "path": "scripts/doi_to_bibtex.py",
-            "sha256": "1b7d1ab2e8bf9bcf5a7d49bf45496e0f8b7d8e0d0cda8efd8fce4e527082dc4b",
-            "bytes": 6783
-          },
-          {
-            "path": "scripts/extract_metadata.py",
-            "sha256": "bebc7835b5e659cdeee0087980e881635894330bac5eda4ce01f490fd41df781",
-            "bytes": 29650
-          },
-          {
-            "path": "scripts/format_bibtex.py",
-            "sha256": "cc74fdc4d5819df8db3999e59f96469cebfb353ecf406a49a5a0fc60896707cb",
-            "bytes": 11075
-          },
-          {
-            "path": "scripts/search_google_scholar.py",
-            "sha256": "05cfd67aea6475029d017f1b4ff68e7ba727e1fa9b52f1e614c80287940b4985",
-            "bytes": 8746
-          },
-          {
-            "path": "scripts/search_openalex.py",
-            "sha256": "538b2f086625fd1e9a2cb2fe8bd46ee852d888f17d2d1e889b8f50592594f693",
-            "bytes": 12055
-          },
-          {
-            "path": "scripts/search_pubmed.py",
-            "sha256": "4543b74bf773747bae47a2bbb18acf2a4a050071119d88d1711db6049d157116",
-            "bytes": 14912
-          },
-          {
-            "path": "scripts/validate_citations.py",
-            "sha256": "a08e8e0774287e9aca2bd87c3a66cd3dfc751018eafb6cdee37987e3f416d2b5",
-            "bytes": 28361
-          }
-        ]
-      },
-      "observed": "Matched all three references to arXiv and NeurIPS records and produced a downloadable BibTeX file. Explicitly separated bibliographic identity from claim support.",
-      "tests": [
-        {
-          "action": "Inspect the three primary-record links and download BibTeX.",
-          "observed": "Three matching conference entries, arXiv IDs, correct years/venues, and an explicit limit on claim verification."
-        }
-      ],
-      "artifacts": [
-        {
-          "label": "Download the verified BibTeX",
-          "url": "materials/skills/outputs/verified-references.bib",
-          "sha256": "cd914dbd792ee7756d7179eb397ea43369a009411d9ddb66f528a48f1e1d6e82",
-          "originalSha256": "cd914dbd792ee7756d7179eb397ea43369a009411d9ddb66f528a48f1e1d6e82",
-          "adaptations": []
-        }
-      ],
-      "durationSeconds": 24.378,
-      "width": 1440,
-      "height": 900,
-      "scenes": [
-        {
-          "phase": "request",
-          "browserTabId": "7",
-          "startedAt": "2026-11-05T17:05:34.748Z",
-          "caption": "The original request checks only the three technical papers listed in the book."
-        },
-        {
-          "phase": "verified-records",
-          "browserTabId": "7",
-          "startedAt": "2026-11-05T17:05:39.184Z",
-          "caption": "The result matches the book’s references to arXiv and conference records."
-        },
-        {
-          "phase": "claim-limit",
-          "browserTabId": "7",
-          "startedAt": "2026-11-05T17:05:45.981Z",
-          "caption": "The downloadable bibliography is kept separate from verification of the chapter’s claims."
-        }
-      ],
-      "captureFrameCount": 30,
-      "sourceFrames": [
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 0.0
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 2.061
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 2.59
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 3.21
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 3.736
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 4.266
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 4.795
-        },
-        {
-          "phase": "request",
-          "sha256": "d9edde0ed7e6eaaba7484b9e94c25167293c232a92c9dd79b687c2a9e9514bbd",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 5.43
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 6.038
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 8.117
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 8.661
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 9.259
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 9.789
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 10.405
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 10.936
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 11.47
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 12.012
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 12.545
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 13.086
-        },
-        {
-          "phase": "verified-records",
-          "sha256": "139fb76921dca71651d2c84597d94e42df0df148de902de1b0f4dfb07b97c528",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 13.713
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 14.265
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 16.33
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 16.943
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 17.488
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 18.017
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 18.538
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 19.073
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 19.695
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 20.218
-        },
-        {
-          "phase": "claim-limit",
-          "sha256": "e8bdfa0cfc1e63d0d424a5372a1df9bc7cb9ef5e01e1d31ca2165358a9c00ddb",
-          "sourceSize": [
-            1280,
-            720
-          ],
-          "crop": null,
-          "atSeconds": 20.819
-        }
-      ],
-      "videoSha256": "dbf995bc12553c7c480bcd0f2d9370bf3cc550743f7a8f5fc9930be7e02b2980",
-      "posterSha256": "e9de07d2bb2d8ecdf6726a051943fa75e599d698729b4690e1501379c3ff83f2"
+      }
     }
-  ]
+  ],
+  "refreshReleaseId": "2026-11-07"
 }

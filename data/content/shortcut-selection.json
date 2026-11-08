@@ -1,0 +1,629 @@
+{
+  "reviewedOn": "2026-11-07",
+  "scope": "Presentation curation after technical verification; technical outcomes and original media are preserved.",
+  "criteria": [
+    "Support a distinct step in the workshop learning pathway.",
+    "Prefer the clearest demonstrated interaction over cosmetic labels or game themes.",
+    "Retain both student self-directed learning and teacher classroom workflows.",
+    "Describe only controls and behaviour actually observed.",
+    "Compare newer video transcripts before treating historical control differences as distinct capabilities."
+  ],
+  "summary": {
+    "eligible": 71,
+    "selected": 15,
+    "excluded": 56
+  },
+  "retained": [
+    {
+      "command": "/quiz",
+      "purpose": "Practice with feedback",
+      "rationale": "Canonical selectable-answer quiz; use this instead of several renamed quiz variants."
+    },
+    {
+      "command": "/matchinggame",
+      "purpose": "Connect concepts",
+      "rationale": "Matching concepts to definitions adds a different interaction from selecting a quiz answer."
+    },
+    {
+      "command": "/fillintheblanks",
+      "purpose": "Produce missing terms",
+      "rationale": "Requires producing missing terms rather than recognising a complete answer."
+    },
+    {
+      "command": "/flashcard",
+      "purpose": "Recall from memory",
+      "rationale": "One clear flip-card example covers answer reveal and recall ratings."
+    },
+    {
+      "command": "/sortinggame",
+      "purpose": "Classify examples",
+      "rationale": "Classifies several examples into conceptual categories."
+    },
+    {
+      "command": "/oral",
+      "purpose": "Explain independently",
+      "rationale": "The newer recording asks the learner to explain aloud, write a summary, reveal an expected answer and move through questions. No voice capture, automatic grading or submission to chat is claimed."
+    },
+    {
+      "command": "/studyplan",
+      "purpose": "Plan the next steps",
+      "rationale": "Breaks a goal into learning activities and records completion."
+    },
+    {
+      "command": "/conceptmap",
+      "purpose": "Explain relationships visually",
+      "rationale": "Keeps one concept-organisation format with labelled relationships and a tested knowledge check; no editable-map controls are claimed."
+    },
+    {
+      "command": "/mistakelog",
+      "purpose": "Reflect on mistakes",
+      "rationale": "Tracks reviewed misconceptions and corrections rather than only a generic checklist."
+    },
+    {
+      "command": "/caseStudy",
+      "purpose": "Apply concepts to a case",
+      "rationale": "Keeps one applied scenario with expected explanations to reveal."
+    },
+    {
+      "command": "/lessonplan",
+      "purpose": "Design a lesson",
+      "rationale": "Connects teacher-facing objectives, activities and an answer key."
+    },
+    {
+      "command": "/differentiate",
+      "purpose": "Adapt the level of support",
+      "rationale": "Offers tasks at three levels and expected answers, directly supporting classroom adaptation."
+    },
+    {
+      "command": "/peerassessment",
+      "purpose": "Assess with shared criteria",
+      "rationale": "Shows reviewer-selected criterion scores and a running total; no automatic assessment is claimed."
+    },
+    {
+      "command": "/worksheet",
+      "purpose": "Practise written explanations",
+      "rationale": "Combines open-answer fields, model-answer reveals and self-scores in one reusable activity."
+    },
+    {
+      "command": "/learningstations",
+      "purpose": "Organise classroom activities",
+      "rationale": "Adds a classroom station workflow with completion tracking."
+    }
+  ],
+  "excluded": [
+    {
+      "command": "/quizgame",
+      "reason": "The demonstrated answer-choice or answer-reveal loop overlaps the core quiz; scoring themes and game rules are secondary to the learning pathway.",
+      "coveredBy": [
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/memorygame",
+      "reason": "Hidden-pair mechanics add a second matching game without adding a needed learning step.",
+      "coveredBy": [
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/jeopardy",
+      "reason": "The demonstrated answer-choice or answer-reveal loop overlaps the core quiz; scoring themes and game rules are secondary to the learning pathway.",
+      "coveredBy": [
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/millionaire",
+      "reason": "The demonstrated answer-choice or answer-reveal loop overlaps the core quiz; scoring themes and game rules are secondary to the learning pathway.",
+      "coveredBy": [
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/crossword",
+      "reason": "Additional term-completion formats overlap the missing-term practice already retained.",
+      "coveredBy": [
+        "/fillintheblanks"
+      ]
+    },
+    {
+      "command": "/mindmap",
+      "reason": "Keep one explicit relationship-mapping example; the observed knowledge check overlaps other short quizzes.",
+      "coveredBy": [
+        "/conceptmap"
+      ]
+    },
+    {
+      "command": "/eli5",
+      "reason": "Alternative explanation labels mostly append the same answer reveal or context question. Guided reasoning and independent explanation already cover this learning action.",
+      "coveredBy": [
+        "/oral"
+      ]
+    },
+    {
+      "command": "/conceptquiz",
+      "reason": "The demonstrated answer-choice or answer-reveal loop overlaps the core quiz; scoring themes and game rules are secondary to the learning pathway.",
+      "coveredBy": [
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/languagedrill",
+      "reason": "Additional term-completion formats overlap the missing-term practice already retained.",
+      "coveredBy": [
+        "/fillintheblanks"
+      ]
+    },
+    {
+      "command": "/blueprint",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/multiplechoice",
+      "reason": "The demonstrated answer-choice or answer-reveal loop overlaps the core quiz; scoring themes and game rules are secondary to the learning pathway.",
+      "coveredBy": [
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/recall",
+      "reason": "Revealing expected answers and rating recall repeat the flashcard workflow. Suggested intervals did not demonstrate a scheduling system.",
+      "coveredBy": [
+        "/flashcard",
+        "/studyplan"
+      ]
+    },
+    {
+      "command": "/blackboard",
+      "reason": "Board-style presentation with reveal controls or a short quiz adds no distinct learning step beyond the worksheet and quiz.",
+      "coveredBy": [
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/whiteboard",
+      "reason": "Board-style presentation with reveal controls or a short quiz adds no distinct learning step beyond the worksheet and quiz.",
+      "coveredBy": [
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/infographic",
+      "reason": "Presentation-style variants change packaging while repeating the same quiz, reveal, or written-answer activity.",
+      "coveredBy": [
+        "/conceptmap",
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/timeline",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/comic",
+      "reason": "Presentation-style variants change packaging while repeating the same quiz, reveal, or written-answer activity.",
+      "coveredBy": [
+        "/conceptmap",
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/feynman",
+      "reason": "Alternative explanation labels mostly append the same answer reveal or context question. Guided reasoning and independent explanation already cover this learning action.",
+      "coveredBy": [
+        "/oral"
+      ]
+    },
+    {
+      "command": "/glossary",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/spacedrepetition",
+      "reason": "Revealing expected answers and rating recall repeat the flashcard workflow. Suggested intervals did not demonstrate a scheduling system.",
+      "coveredBy": [
+        "/flashcard",
+        "/studyplan"
+      ]
+    },
+    {
+      "command": "/checklist",
+      "reason": "Completion tracking overlaps the study plan. The Pomodoro test did not demonstrate a real-time countdown.",
+      "coveredBy": [
+        "/studyplan"
+      ]
+    },
+    {
+      "command": "/pomodoro",
+      "reason": "Completion tracking overlaps the study plan. The Pomodoro test did not demonstrate a real-time countdown.",
+      "coveredBy": [
+        "/studyplan"
+      ]
+    },
+    {
+      "command": "/fishbone",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/iceberg",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/pyramid",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/tree",
+      "reason": "Keep one explicit relationship-mapping example; the observed knowledge check overlaps other short quizzes.",
+      "coveredBy": [
+        "/conceptmap"
+      ]
+    },
+    {
+      "command": "/anatomydiagram",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/explodedview",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/handwritten",
+      "reason": "Presentation-style variants change packaging while repeating the same quiz, reveal, or written-answer activity.",
+      "coveredBy": [
+        "/conceptmap",
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/decisionmatrix",
+      "reason": "The tested classification or reveal activity overlaps the sorting game and concept relationships; a separate decision-making tool was not demonstrated.",
+      "coveredBy": [
+        "/sortinggame",
+        "/conceptmap"
+      ]
+    },
+    {
+      "command": "/onepager",
+      "reason": "Presentation-style variants change packaging while repeating the same quiz, reveal, or written-answer activity.",
+      "coveredBy": [
+        "/conceptmap",
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/labeleddiagram",
+      "reason": "Extra diagram metaphors, hierarchies or visual arrangements are secondary here; tested interaction was an answer reveal or a short quiz rather than manipulation of the diagram.",
+      "coveredBy": [
+        "/conceptmap",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/mnemonic",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/memorypalaceimage",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/memoryhooks",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/mnemonicart",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/visualvocab",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/emojisummary",
+      "reason": "Presentation-style variants change packaging while repeating the same quiz, reveal, or written-answer activity.",
+      "coveredBy": [
+        "/conceptmap",
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/picturemnemonics",
+      "reason": "Additional vocabulary and memory-cue formats mostly repeat the same context question or answer reveal. Flashcards and matching provide clearer representative practice.",
+      "coveredBy": [
+        "/flashcard",
+        "/matchinggame"
+      ]
+    },
+    {
+      "command": "/cheatsheet",
+      "reason": "Presentation-style variants change packaging while repeating the same quiz, reveal, or written-answer activity.",
+      "coveredBy": [
+        "/conceptmap",
+        "/worksheet",
+        "/quiz"
+      ]
+    },
+    {
+      "command": "/deepdive",
+      "reason": "Alternative explanation labels mostly append the same answer reveal or context question. Guided reasoning and independent explanation already cover this learning action.",
+      "coveredBy": [
+        "/oral"
+      ]
+    },
+    {
+      "command": "/stepbystep",
+      "reason": "Alternative explanation labels mostly append the same answer reveal or context question. Guided reasoning and independent explanation already cover this learning action.",
+      "coveredBy": [
+        "/oral"
+      ]
+    },
+    {
+      "command": "/twinexample",
+      "reason": "The observed interaction repeats a context-versus-parameters question; the case study and mistake log cover application and misconception review more directly. This source-analysis test did not demonstrate an independent source-verification workflow.",
+      "coveredBy": [
+        "/caseStudy",
+        "/mistakelog"
+      ]
+    },
+    {
+      "command": "/workedexample",
+      "reason": "Alternative explanation labels mostly append the same answer reveal or context question. Guided reasoning and independent explanation already cover this learning action.",
+      "coveredBy": [
+        "/oral"
+      ]
+    },
+    {
+      "command": "/commonwrong",
+      "reason": "The observed interaction repeats a context-versus-parameters question; the case study and mistake log cover application and misconception review more directly. This source-analysis test did not demonstrate an independent source-verification workflow.",
+      "coveredBy": [
+        "/caseStudy",
+        "/mistakelog"
+      ]
+    },
+    {
+      "command": "/realworld",
+      "reason": "The observed interaction repeats a context-versus-parameters question; the case study and mistake log cover application and misconception review more directly. This source-analysis test did not demonstrate an independent source-verification workflow.",
+      "coveredBy": [
+        "/caseStudy",
+        "/mistakelog"
+      ]
+    },
+    {
+      "command": "/connectit",
+      "reason": "The tested classification or reveal activity overlaps the sorting game and concept relationships; a separate decision-making tool was not demonstrated.",
+      "coveredBy": [
+        "/sortinggame",
+        "/conceptmap"
+      ]
+    },
+    {
+      "command": "/sourceanalysis",
+      "reason": "The observed interaction repeats a context-versus-parameters question; the case study and mistake log cover application and misconception review more directly. This source-analysis test did not demonstrate an independent source-verification workflow.",
+      "coveredBy": [
+        "/caseStudy",
+        "/mistakelog"
+      ]
+    },
+    {
+      "command": "/rubric",
+      "reason": "Criterion ratings and the running total repeat the peer-assessment example with an existing video.",
+      "coveredBy": [
+        "/peerassessment"
+      ]
+    },
+    {
+      "command": "/bloomquestions",
+      "reason": "Expected-answer reveals and lesson sequencing overlap the selected lesson plan and differentiated activities.",
+      "coveredBy": [
+        "/lessonplan",
+        "/differentiate"
+      ]
+    },
+    {
+      "command": "/questionbank",
+      "reason": "Revealing expected answers and rating recall repeat the flashcard workflow. Suggested intervals did not demonstrate a scheduling system.",
+      "coveredBy": [
+        "/flashcard",
+        "/studyplan"
+      ]
+    },
+    {
+      "command": "/flippedclassroom",
+      "reason": "Expected-answer reveals and lesson sequencing overlap the selected lesson plan and differentiated activities.",
+      "coveredBy": [
+        "/lessonplan",
+        "/differentiate"
+      ]
+    },
+    {
+      "command": "/exitTicket",
+      "reason": "The three written-answer fields and expected-answer review overlap the worksheet. Its end-of-lesson use can be explained with the same activity.",
+      "coveredBy": [
+        "/worksheet"
+      ]
+    },
+    {
+      "command": "/gapfinder",
+      "reason": "In the newer recording, correcting flawed explanations and revealing expected reasoning overlap the richer mistake log, which also tracks understanding and review decisions.",
+      "coveredBy": [
+        "/mistakelog"
+      ]
+    },
+    {
+      "command": "/socraticmode",
+      "reason": "Written reasoning, expected-answer comparison and question navigation overlap the newer oral-practice recording. Retain one sequential explanation-practice example.",
+      "coveredBy": [
+        "/oral"
+      ]
+    },
+    {
+      "command": "/exam",
+      "reason": "The newer exam and worksheet recordings both combine written answers, model answers, self-scoring and a total. Retain the more generally reusable worksheet.",
+      "coveredBy": [
+        "/worksheet"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "slideId": "S53CMD1",
+      "title": "Selected shortcuts · recall and reflection",
+      "message": "Recall first and revisit misconceptions",
+      "commands": [
+        {
+          "command": "/flashcard",
+          "description": "Flip cards and assess recall"
+        },
+        {
+          "command": "/mistakelog",
+          "description": "Review misconceptions and track corrections"
+        }
+      ]
+    },
+    {
+      "slideId": "S53CMD2",
+      "title": "Selected shortcuts · explain and connect",
+      "message": "Organise relationships, classify examples and explain your reasoning",
+      "commands": [
+        {
+          "command": "/conceptmap",
+          "description": "Label relationships and check understanding"
+        },
+        {
+          "command": "/matchinggame",
+          "description": "Match concepts with their definitions"
+        },
+        {
+          "command": "/sortinggame",
+          "description": "Classify examples and check categories"
+        },
+        {
+          "command": "/oral",
+          "description": "Explain aloud, write a summary and compare expected answers"
+        }
+      ]
+    },
+    {
+      "slideId": "S53CMD3",
+      "title": "Selected shortcuts · practice and assessment",
+      "message": "Answer before checking feedback, model answers or criteria",
+      "commands": [
+        {
+          "command": "/quiz",
+          "description": "Choose answers, read feedback and advance"
+        },
+        {
+          "command": "/fillintheblanks",
+          "description": "Enter missing terms and check answers"
+        },
+        {
+          "command": "/worksheet",
+          "description": "Write explanations; reveal model answers and self-score"
+        },
+        {
+          "command": "/caseStudy",
+          "description": "Apply concepts to a case, then reveal explanations"
+        }
+      ]
+    },
+    {
+      "slideId": "S53CMD4",
+      "title": "Selected shortcuts · plan and teach",
+      "message": "Plan learning, adapt activities and review work with shared criteria",
+      "commands": [
+        {
+          "command": "/studyplan",
+          "description": "Break a learning goal into tracked activities"
+        },
+        {
+          "command": "/lessonplan",
+          "description": "Connect objectives, lesson activities and answer keys"
+        },
+        {
+          "command": "/differentiate",
+          "description": "Offer tasks at different support and difficulty levels"
+        },
+        {
+          "command": "/peerassessment",
+          "description": "Select criterion scores and review the total"
+        },
+        {
+          "command": "/learningstations",
+          "description": "Organise stations and track completion"
+        }
+      ]
+    }
+  ],
+  "removedDuplicateSlides": [
+    {
+      "id": "S53EX3",
+      "replacedBy": "S53DETAILFLASHCARD",
+      "reason": "Replays the same flashcard recording already included in its dedicated slide."
+    },
+    {
+      "id": "S53WIDGETWORKSHEET",
+      "replacedBy": "S53DETAILWORKSHEET",
+      "reason": "Replays the same worksheet recording already included in its dedicated slide."
+    }
+  ]
+}

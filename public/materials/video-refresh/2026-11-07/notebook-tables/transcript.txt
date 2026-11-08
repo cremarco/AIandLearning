@@ -1,0 +1,49 @@
+NotebookLM — 
+
+REQUEST
+Build an English data table from the uploaded book with three rows: training or fine-tuning, ordinary inference, and document retrieval (RAG). Columns: what changes, what stays fixed, chapter evidence, and misconception to avoid. Treat misconceptions as errors to reject.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.207 Upload the workshop book as the source. (3× speed)
+00:00:00.587 The workshop book is being indexed. (3× speed)
+00:00:01.701 Widen the table specification. (3× speed)
+00:00:02.015 Write the source-grounded request. (3× speed)
+00:00:04.734 Read the complete request.
+00:00:06.845 Send the question with the selected book. (3× speed)
+00:00:07.123 Generate the answer from the selected source. (4× speed)
+00:00:07.731 Configure a native data table from the uploaded book. (3× speed)
+00:00:09.140 Generate a native comparison table from the book. (4× speed)
+00:00:09.425 Describe the table columns and the three processes. (3× speed)
+00:00:12.804 Read the complete table specification.
+00:00:15.732 Generate the source-based Data Table. (4× speed)
+00:00:15.995 Inspect the native comparison table and its evidence.
+00:00:17.596 Open the generated Data Table
+00:00:20.703 Open the generated Studio data table and check its columns.
+00:00:20.747 Open the generated Studio data table
+00:00:22.292 The first table lacks row labels; regenerate it with an explicit Process column.
+00:00:24.128 Return to Studio table creation
+00:00:24.626 Specify the missing process labels and explicit rejected misconceptions. (3× speed)
+00:00:25.617 Specify the explicit Process column and rejected errors. (3× speed)
+00:00:27.693 Read the complete corrected table specification.
+00:00:29.954 Generate the corrected native Studio Data Table. (3× speed)
+00:00:30.224 Generate the source-grounded comparison with explicit row labels. (4× speed)
+00:00:30.731 Inspect the revised table with explicit process labels.
+00:00:31.056 Open the revised comparison table
+00:00:31.732 Expand the native comparison table
+00:00:33.291 Training changes learned parameters; an unstated fixed element stays marked Not in source.
+00:00:36.262 Ordinary inference uses fixed parameters while the available input changes.
+00:00:39.152 RAG supplies external passages as context; reject claims that retrieval retrains the model.
+00:00:42.278 Inspect the native Data Table export
+00:00:45.007 Export the generated comparison to its original Google Sheets file.
+00:00:45.314 Export the revised table to Google Sheets
+00:00:48.015 Open the newly exported original spreadsheet.
+00:00:48.352 Open the exported Google Sheets result
+00:00:51.102 Check the original source and corrected table request.
+00:00:51.390 Inspect the corrected table source and request
+
+OBSERVED RESULT
+
+

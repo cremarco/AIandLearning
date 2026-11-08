@@ -6,7 +6,11 @@ const slides = read('data/generated/slides.json')
 const sources = read('data/generated/sources.json')
 const shortcutVideos = new Map(read('data/demos/chatgpt-videos.json').clips.map(clip => [clip.command.toLowerCase(), clip]))
 const skillResearch = read('data/catalogues/skills-research.json')
+const skillDemos = new Map(read('data/demos/skill-demos.json').map(demo => [demo.key, demo]))
+const presentationSlideCount = slides.findIndex(slide => slide.kind === 'thanks') + 1 || slides.length
+const teacherRecordings = read('public/materials/teacher-tools/provenance.json', { clips: [] })
 const catalogue = slide => (slide.skillIds || []).map(id => skillResearch.skills.find(skill => skill.id === id))
+const studyFocus = focus => focus ? `Study phase: ${focus.primary.toUpperCase()}${focus.secondary?.length ? ` · Secondary: ${focus.secondary[0].toUpperCase()}` : ''}` : ''
 const destination = path.join(root, 'public/materials')
 const uiDirectory = path.join(destination, 'ui')
 fs.mkdirSync(uiDirectory, { recursive: true })
@@ -27,7 +31,7 @@ function write(name, value) {
   const output = Array.isArray(value)
     ? `${value.filter(item => item !== undefined).join('\n').trim()}\n`
     : value
-  fs.writeFileSync(path.join(destination, name), name.endsWith('.txt') ? output.replace(/[ \t]+$/gm, '') : output)
+  fs.writeFileSync(path.join(destination, name), output.replace(/[ \t]+$/gm, ''))
 }
 
 const h = value => String(value ?? '')
@@ -50,15 +54,16 @@ function references(slide) {
 function textContent(slide) {
   return [
     slide.message,
+    studyFocus(slide.studyPhases),
     ...slide.body,
     ...(slide.shortcutLabels || []).map(item => item.command),
     ...(slide.commands || []).flatMap(row => [
       `${row.command}: ${row.description}`,
-      ...(row.result ? [row.result.label, row.result.instruction, row.result.text || '', row.result.media.alt, row.result.media.caption, row.result.media.transcript || ''] : []),
+      ...(row.result ? [row.result.label, row.result.instruction, row.result.text || '', row.result.media.alt, row.result.media.caption, row.result.media.transcript || '', ...resultText(row.result.media.result)] : []),
     ]),
     ...(slide.cards || []).flatMap(card => [card.title, card.body]),
     ...(slide.toolTable?.rows || []).map(row => `${row.tool} — ${row.purpose} — ${row.access} ${row.url}`),
-    ...catalogue(slide).flatMap(skill => [skill.name, `${skill.publisher} · ${skill.origin}`, skill.platform, skill.summary,
+    ...catalogue(slide).flatMap(skill => [skill.name, `${skill.publisher} · ${skill.origin}`, skill.platform, skill.summary, skill.capabilities, studyFocus(skill.studyPhases),
       `${skill.executionStatus === 'executed' ? 'Tested request' : 'Example request · not executed'}: ${skill.prompt}`, `${skill.executionStatus === 'executed' ? 'Observed result' : 'Expected deliverable'}: ${skill.expected}`, skill.caveat,
       `Requirements: ${skill.requirements}`, `Terminal installation for coding agents: ${skill.installCommand}`, skill.sourceUrl]),
     ...(slide.steps || []).flatMap((step, index) => [`${index + 1}. ${step.title}`, step.text]),
@@ -68,14 +73,14 @@ function textContent(slide) {
     slide.decision || '',
     ...(slide.references || []).flatMap(item => [item.label, item.citation, item.url]),
     ...(slide.links || []).map(link => `${link.label}: ${link.url}`),
-    ...(slide.media ? [slide.media.alt, slide.media.caption, slide.media.transcript || ''] : []),
+    ...(slide.media ? [slide.media.alt, slide.media.caption, slide.media.transcript || '', ...resultText(slide.media.result)] : []),
   ].filter(Boolean)
 }
 
 const introduction = [
   'BEYOND PROMPTING — STUDY, UNDERSTAND, ASSESS',
   'Marco Cremaschi · November 2026',
-  `${slides.length} slides in one complete sequence. Participants observe the method; Andrea is a fictional student in a teaching scenario.`,
+  `${presentationSlideCount} presentation slides, followed by ${slides.length - presentationSlideCount} reference appendices. Participants observe the method; Andrea is a fictional student in a teaching scenario.`,
   'Public materials in English.',
   '',
 ]
@@ -83,7 +88,7 @@ write('Accessible_Deck_EN.txt', [
   ...introduction,
   ...slides.flatMap(slide => [
     `SLIDE ${slide.id} — ${slide.title}`,
-    `Page ${slide.number} / ${slides.length}`,
+    slide.number <= presentationSlideCount ? `Page ${slide.number} / ${presentationSlideCount}` : 'Reference appendix',
     ...textContent(slide),
     ...references(slide),
     '',
@@ -177,23 +182,41 @@ function promptMarkup(text, label = 'Prompt to copy', prefix = '>', style = 'cha
 }
 
 function skillMarkup(skill, installation = false) {
+  const demo = skillDemos.get(skill.id)
+  const media = slides.find(slide => slide.id === demo?.slideId)?.media
+  const request = demo?.recordedPrompt || media?.prompt || skill.prompt
   return [
     `<article class="skill-entry" id="${h(skill.id)}"><h3>${h(skill.name)}</h3>`,
     `<p class="meta">${h(skill.publisher)} · ${h(skill.origin)} · ${h(skill.platform)}</p>`,
     `<p>${h(skill.summary)}</p>`,
-    promptMarkup(skill.prompt, skill.executionStatus === 'executed' ? 'Tested request · original workshop book' : 'Example request · not executed'),
+    skill.capabilities ? `<p>${h(skill.capabilities)}</p>` : '',
+    skill.studyPhases ? `<p class="meta">${h(studyFocus(skill.studyPhases))}</p>` : '',
+    promptMarkup(request, skill.executionStatus === 'executed' ? 'Tested request · original workshop book' : 'Example request · not executed'),
     `<p><strong>${skill.executionStatus === 'executed' ? 'Observed result' : 'Expected deliverable'}:</strong> ${h(skill.expected)}</p>`,
     `<p>${h(skill.caveat)}</p>`,
-    skill.executionStatus === 'executed' ? `<p>Recorded in ChatGPT web, Work mode, with GPT-6.1 Sol Light on 5 November 2026. This is a task demonstration, not evidence of learning gains. <a class="link link-primary" href="skills/${h(skill.id)}.mp4">Watch the recorded test</a> · <a class="link link-primary" href="skills/${h(skill.id)}-transcript.txt">Read the transcript</a>.</p>` : '',
+    skill.executionStatus === 'executed' && media ? `<p>Recorded in ChatGPT web, Work mode, using the original workshop book.</p>${mediaMarkup(media)}${transcriptMarkup(media)}` : '',
     skill.webInstall ? `<p><strong>Web installation used:</strong> ${h(skill.webInstall)}</p>` : '',
     skill.sourceCommit ? `<p><strong>Tested package revision:</strong> <a class="link link-primary" href="https://github.com/${h(skill.repo)}/commit/${h(skill.sourceCommit)}">${h(skill.sourceCommit.slice(0, 12))}</a>. Full test records: <a class="link link-primary" href="skills/provenance.json">recording provenance</a>.</p>` : '',
-    ...(skill.artifacts || []).map(file => `<p><a class="link link-primary" href="${h(relative(file.url))}">${h(file.label)}</a></p>`),
+    ...(!media?.result ? (skill.artifacts || []) : []).map(file => `<p><a class="link link-primary" href="${h(relative(file.url))}">${h(file.label)}</a></p>`),
     `<p><strong>Requirements:</strong> ${h(skill.requirements)} <strong>License:</strong> ${h(skill.license)}.</p>`,
     installation ? promptMarkup(skill.installCommand, 'Terminal installation · coding agents, not a ChatGPT message', '$', 'terminal') : '',
     `<p><a class="link link-primary" href="${h(skill.sourceUrl)}">Publisher’s skill and current instructions</a></p>`,
     installation ? `<p class="meta">Discovery snapshot · ${h(skill.verified)}: ${h(skill.popularity.installs)} directory installs; ${h(skill.popularity.repositoryStars)} repository stars. Counts are approximate, change over time and do not measure effectiveness. ${skill.popularity.installs !== 'Not recorded' ? `<a class="link link-primary" href="${h(skill.popularity.url)}">Directory entry</a>` : ''}</p>` : '',
     '</article>',
   ].join('')
+}
+
+function resultText(result) {
+  if (!result) return []
+  return [result, ...(result.supplemental || [])].map(link => `${link.label}: ${link.url}`).concat(result.qualification || [])
+}
+
+function resultMarkup(result) {
+  if (!result) return ''
+  const anchors = [result, ...(result.supplemental || [])].map(link =>
+    `<a class="link link-primary" href="${h(relative(link.url))}"${link.download ? ' download' : ' target="_blank" rel="noopener"'}>${h(link.label)}</a>`,
+  ).join(' ')
+  return `<div class="recording-result-links" aria-label="Recorded result">${anchors}${result.qualification ? `<p class="meta">${h(result.qualification)}</p>` : ''}</div>`
 }
 
 function mediaMarkup(media) {
@@ -207,7 +230,7 @@ function mediaMarkup(media) {
   const framed = media.browserFrame
     ? `<div class="mockup-browser browser-video${media.darkFrame ? ' browser-video-dark' : ''}"><div class="mockup-browser-toolbar"><div class="input browser-video-address">${h(media.source?.replace(/^https?:\/\//, ''))}</div></div><div class="browser-video-page">${content}<img class="video-print-poster" src="${h(relative(media.poster))}" alt="${h(media.alt)}"></div></div>`
     : content
-  return `<figure>${framed}<figcaption>${h(media.caption)}</figcaption></figure>`
+  return `<figure>${framed}<figcaption>${h(media.caption)}${resultMarkup(media.result)}</figcaption></figure>`
 }
 
 function transcriptMarkup(media) {
@@ -221,6 +244,7 @@ function transcriptMarkup(media) {
 function inner(slide) {
   return [
     `<p>${h(slide.message)}</p>`,
+    slide.studyPhases ? `<p class="meta">${h(studyFocus(slide.studyPhases))}</p>` : '',
     commandTable(slide),
     slide.toolTable ? `<div class="tool-resource-catalogue overflow-x-auto"><table class="table" aria-label="${h(slide.title)}"><thead><tr>${slide.toolTable.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${slide.toolTable.rows.map(row => `<tr><th scope="row"><a class="link" href="${h(relative(row.url))}">${h(row.tool)}</a></th><td>${h(row.purpose)}</td><td>${h(row.access)}</td></tr>`).join('')}</tbody></table></div>` : '',
     slide.shortcutLabels?.length ? `<ul class="shortcut-index">${slide.shortcutLabels.map(item => `<li><code>${h(item.command)}</code></li>`).join('')}</ul>` : '',
@@ -248,6 +272,7 @@ writePage('kit.html', 'Workshop materials', [
   '<li><a class="link link-primary" href="demo-genai/index.html">Real-model application</a></li>',
   '<li><a class="link link-primary" href="Prompt_Bank_EN.txt">Prompts and requests</a></li>',
   '<li><a class="link link-primary" href="skills-guide.html">Agent Skills: annotated catalogue and installation guide</a></li>',
+  '<li><a class="link link-primary" href="teacher-tools.html">MagicSchool and Formative: recorded demonstrations</a></li>',
   '<li><a class="link link-primary" href="activities.html">Participant activity sheets</a></li>',
   '<li><a class="link link-primary" href="formula-desmos.txt">Desmos expressions and numerical example</a></li>',
   '<li><a class="link link-primary" href="verifica.html">Assessment, expected answers and rubric</a></li>',
@@ -268,7 +293,7 @@ writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue'
   '</ul></nav></header><main id="content">',
   '<section class="slide"><h2>What is a skill?</h2><p>An Agent Skill is a folder with a SKILL.md file containing metadata and workflow instructions, plus optional references, scripts and assets. A product command invokes a feature; an informal shortcut labels a request. Skills require a host that can discover them and supply the necessary tools.</p>',
   '<p><a class="link link-primary" href="https://agentskills.io/specification">Agent Skills specification</a> · <a class="link link-primary" href="https://developers.openai.com/plugins/concepts/skills">OpenAI skill and plugin concepts</a></p></section>',
-  '<section class="slide"><h2>Installation depends on the host</h2><p>In the recorded account, ChatGPT web offered Plugins → Skills → Add skill → Upload from computer. The six reviewed packages were uploaded and selected in Work mode. Availability depends on the account and workspace. The terminal commands below are for compatible coding agents; they are not ChatGPT slash commands.</p>',
+  '<section class="slide"><h2>Installation depends on the host</h2><p>In the recorded account, ChatGPT web offered Plugins → Skills → Add skill → Upload from computer. The four reviewed packages were uploaded and selected in Work mode. Availability depends on the account and workspace. The terminal commands below are for compatible coding agents; they are not ChatGPT slash commands.</p>',
   '<p>For coding agents, review the publisher’s files, dependencies and license before installing. The Skills CLI asks which skills and agents to install for; installation is project-scoped by default. Installing the instructions does not install their Python, Node or external service dependencies. A portable format does not guarantee identical behaviour across hosts.</p>',
   '<p>The old openai/skills repository is deprecated; use current OpenAI plugin documentation and openai/plugins examples.</p>',
   '<p><a class="link link-primary" href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt">Skills in ChatGPT</a> · <a class="link link-primary" href="https://github.com/vercel-labs/skills">Skills CLI documentation</a> · <a class="link link-primary" href="https://github.com/openai/skills">Retired OpenAI catalogue notice</a> · <a class="link link-primary" href="https://github.com/openai/plugins">Current OpenAI examples</a></p></section>',
@@ -285,10 +310,29 @@ writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue'
   '</section></main><footer><a class="link link-primary" href="#">Back to top</a></footer>',
 ])
 
-const assessment = slides.filter(slide => {
-  const number = parseInt(slide.id.slice(1))
-  return number >= 82 && number <= 89 && slide.kind !== 'tool-divider'
-})
+const teacherOrder = ['magicschool-rubric', 'magicschool-questions', 'magicschool-lesson', 'formative-assessment', 'formative-responses', 'formative-feedback']
+const teacherClips = [...teacherRecordings.clips].sort((a, b) => teacherOrder.indexOf(a.key) - teacherOrder.indexOf(b.key))
+writePage('teacher-tools.html', 'MagicSchool and Formative · recorded demonstrations', [
+  '<header><h1>MagicSchool and Formative</h1>',
+  `<p>${teacherClips.length} real browser recordings: planning, assessment design, response review and feedback.</p>`,
+  '<p>The workshop chapter and all learner responses are teaching examples. No real students were assessed or contacted. Formative was recorded in an automatically enabled Paid Teacher trial; this recording does not establish availability of every feature on the free plan.</p>',
+  controls,
+  links({ links: [{ label: 'Workshop materials', url: 'kit.html' }, { label: 'Original workshop chapter', url: 'booklet-genai/lettura.html' }] }),
+  '</header><main id="content">',
+  ...teacherClips.map(clip => {
+    const media = { ...clip, alt: `${clip.service}: ${clip.name}`, caption: `${clip.recordedOn} · ${Math.round(clip.durationSeconds)} s · silent recording with optional English captions` }
+    return `<section class="slide" id="${h(clip.key)}"><h2>${h(clip.service)} · ${h(clip.name)}</h2>${mediaMarkup({ ...media, type: 'video', source: clip.sourceUrl })}<p>${h(clip.observed)}</p><p>${h(clip.scope)}</p>${links({ links: [{ label: 'Open video', url: clip.src }, { label: 'Download transcript', url: clip.transcriptFile }] })}<details><summary>Recorded task</summary><p>${h(clip.prompt)}</p></details></section>`
+  }),
+  '<section class="slide"><h2>Recorded outputs</h2>',
+  links({ links: [
+    { label: 'Generated lesson plan · text', url: 'teacher-tools/magicschool-lesson-output.txt' },
+    { label: 'Recording provenance', url: 'teacher-tools/provenance.json' },
+  ] }),
+  '</section></main>',
+])
+
+// Extended examples stay in the handout when the live tool section is shortened.
+const assessment = read('data/content/assessment-examples.json').slides
 writePage('verifica.html', 'Knowledge assessment · Andrea case', [
   '<header><h1>Knowledge assessment</h1>',
   '<p>Tasks, criteria and example responses for Andrea’s case. Class responses are simulated for a discussion of feedback.</p>',

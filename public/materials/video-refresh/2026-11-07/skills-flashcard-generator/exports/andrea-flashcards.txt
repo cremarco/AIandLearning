@@ -1,0 +1,3 @@
+How do training and ordinary inference differ in their treatment of model parameters? | Training updates parameters through optimisation. Ordinary inference calculates outputs using fixed, already available parameters. (§1.2)
+Andrea adds a new definition to a prompt, and the model uses it. What changes, and what does this demonstrate about weight updates? | The available context changes. Using the definition does not demonstrate that model weights were updated. (§1.2)
+In retrieval-augmented generation (RAG), what do retrieved passages change, and how does this differ from training or fine-tuning? | RAG changes the information available in context without changing weights. Training or fine-tuning updates model parameters. (§§1.2, 1.7)

@@ -37,8 +37,18 @@ export function makeRecorder(tab, cdp, root) {
         if (batch.truncated) capture.truncated = true
         for (const event of batch.events) {
           const file = String(capture.frames.length).padStart(6, '0') + '.png'
-          await fs.writeFile(path.join(root, key, file), Buffer.from(event.params.data, 'base64'))
-          capture.frames.push({ file, at: Math.round((event.params.metadata.timestamp * 1000) - capture.started), timestamp: event.params.metadata.timestamp, metadata: event.params.metadata })
+          let data = event.params.data
+          let timestamp = event.params.metadata.timestamp
+          if (capture.fullViewport) {
+            // Native screencasts may clip an emulated viewport to the host
+            // window. Capture the real complete page on each damage event.
+            const screenshot = await cdp.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true })
+            data = screenshot.data
+            timestamp = Date.now() / 1000
+          }
+          await fs.writeFile(path.join(root, key, file), Buffer.from(data, 'base64'))
+          capture.frames.push({ file, at: Math.round(timestamp * 1000 - capture.started), timestamp, metadata: event.params.metadata,
+            ...(capture.fullViewport ? { method: 'Page.captureScreenshot', nativeEventTimestamp: event.params.metadata.timestamp } : {}) })
           while (active) {
             try {
               await cdp.send('Page.screencastFrameAck', { sessionId: event.params.sessionId })
@@ -81,20 +91,21 @@ export function makeRecorder(tab, cdp, root) {
     capture.phases.push({ name, caption, speed, at: Date.now() - capture.started })
     await save()
   }
-  async function step(label, fn, hold = 1800) {
+  async function step(label, fn, hold = 1800, target) {
+    const bounds = target ? await target.evaluate(element => element.getBoundingClientRect().toJSON()) : undefined
     const at = Date.now() - capture.started
     await fn()
     const state = await tab.getAXState({ emit: false })
-    capture.actions.push({ at, label, state })
+    capture.actions.push({ at, label, state, ...(bounds ? { click: { x: bounds.x + bounds.width / 2, y: bounds.y + bounds.height / 2, bounds } } : {}) })
     await save()
     await pause(hold)
   }
-  async function type(locator, text) {
+  async function type(locator, text, interval = 35, chunkSize = 4) {
     await locator.fill('')
     await locator.click()
-    for (let i = 0; i < text.length; i += 4) {
-      await cdp.send('Input.insertText', { text: text.slice(i, i + 4) })
-      await pause(35)
+    for (let i = 0; i < text.length; i += chunkSize) {
+      await cdp.send('Input.insertText', { text: text.slice(i, i + chunkSize) })
+      await pause(interval)
     }
   }
   async function finish(evidence) {

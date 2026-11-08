@@ -29,6 +29,96 @@
         ],
         "createdAt": "2026-11-05T09:44:13.988Z",
         "reason": "Agent triage: the neutral stone-300 right border on .book-page-block models the physical edge of the animated book's page stack; this is a literal book detail, not a card accent."
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "output/review/video-refresh/2026-11-07/playback-review/index.html"
+        ],
+        "createdAt": "2026-11-08T16:50:23.038Z",
+        "reason": "Agent: false positive from unused daisyUI bundle rules. Source styles and computed styles of every visible element show no text clipping or gradient text; headings and metrics use solid inherited oklch color."
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "output/review/video-refresh/2026-11-07/playback-review/index.html"
+        ],
+        "createdAt": "2026-11-08T16:50:23.102Z",
+        "reason": "Agent: false positive from unused vendor utility rules. All visible DOM elements were checked with computed styles and none has a repeating-gradient background."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/materials/skills-guide.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.514Z",
+        "reason": "Root: computed padding is 20px on both block edges for all 15 terminal wrappers; the static scanner misses vendor CSS."
+      },
+      {
+        "rule": "oversized-h1",
+        "value": "*",
+        "files": [
+          "public/materials/skills-guide.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.585Z",
+        "reason": "Root: rendered heading is 48px and 104px high at 1280x720, below the 6rem craft ceiling with no overflow; preserved reader hierarchy."
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "public/materials/skills-guide.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.628Z",
+        "reason": "Root: rendered computed-style audit finds zero text-clipped backgrounds; linked vendor utilities are unused."
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "public/materials/skills-guide.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.744Z",
+        "reason": "Root: rendered computed-style audit finds zero repeating-gradient elements; linked vendor utilities are unused."
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "public/materials/skills-guide.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.805Z",
+        "reason": "Root: preserve the existing accessible reading theme during refinement; rgb(250,248,243) is the incumbent reading surface, not a new design choice."
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "public/materials/teacher-tools.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.864Z",
+        "reason": "Root: rendered computed-style audit finds zero text-clipped backgrounds; linked vendor utilities are unused."
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "public/materials/teacher-tools.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.932Z",
+        "reason": "Root: rendered computed-style audit finds zero repeating-gradient elements; linked vendor utilities are unused."
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "public/materials/teacher-tools.html"
+        ],
+        "createdAt": "2026-11-08T22:46:43.993Z",
+        "reason": "Root: preserve the existing accessible reading theme during refinement; rgb(250,248,243) is the incumbent reading surface, not a new design choice."
       }
     ]
   }

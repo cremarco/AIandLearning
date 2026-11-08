@@ -1,0 +1,13 @@
+During ordinary inference, the key differences between **learned parameters** and **context** are:
+
+1. **Definition and Role**: **Learned parameters** are fixed numerical values that govern the model's internal transformations, whereas **context** is the sequence of input tokens and information made available for a specific inference calculation.
+2. **State during Inference**: **Parameters remain fixed and unchanged** while the model generates text, while **context can be varied dynamically** from message to message.
+3. **Modification Mechanism**: **Parameters are only modified through training or fine-tuning** via an optimization process, whereas **context provides new information** to influence the current run without updating the underlying model weights.
+
+---
+
+### Example: Definition Added to a Prompt
+
+If a user includes a specific definition in their prompt—such as writing **"In this chapter, X means Y"**—that definition becomes part of the **conversation context**. The model uses this information during that specific inference step to shape its response. However, utilizing this inserted definition **does not update or alter the model's learned parameters**.
+
+💡 Would you like to explore how context length limits or temperature settings affect model generation next?

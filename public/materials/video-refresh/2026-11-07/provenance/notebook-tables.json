@@ -1,0 +1,348 @@
+{
+  "key": "tables",
+  "recordingKey": "notebook-tables",
+  "slideId": "S67TABLES",
+  "status": "executed",
+  "accepted": true,
+  "browser": "@Browser",
+  "recordedAt": "2026-11-08T13:30:31.198Z",
+  "type": "video",
+  "src": "materials/video-refresh/2026-11-07/notebook-tables/video.mp4",
+  "poster": "materials/video-refresh/2026-11-07/notebook-tables/poster.jpg",
+  "captions": "materials/video-refresh/2026-11-07/notebook-tables/captions.en.vtt",
+  "transcriptFile": "materials/video-refresh/2026-11-07/notebook-tables/transcript.txt",
+  "captionsDefault": false,
+  "browserFrame": true,
+  "alt": "NotebookLM — Organise chapter concepts in a table: recorded demonstration and use.",
+  "caption": "NotebookLM · 54.6 s",
+  "prompt": "Build an English data table from the uploaded book with three rows: training or fine-tuning, ordinary inference, and document retrieval (RAG). Columns: what changes, what stays fixed, chapter evidence, and misconception to avoid. Treat misconceptions as errors to reject.",
+  "result": {
+    "kind": "file",
+    "url": "/materials/video-refresh/2026-11-07/notebook-tables/exports/comparison-table.csv",
+    "label": "Open result (CSV)",
+    "interactiveVerified": false,
+    "recipientVerified": true,
+    "ownerIndependent": true,
+    "mediaType": "text/csv; charset=utf-8",
+    "download": true,
+    "sha256": "6363673782d1f73ad3712d08dcde59e1c6f4101e62ac207e8b444c6bb64461d7",
+    "bytes": 1468,
+    "sourceMethod": "native-download",
+    "supplemental": []
+  },
+  "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-tables.json",
+  "durationSeconds": 54.65,
+  "width": 1440,
+  "height": 900,
+  "fps": 60,
+  "sha256": "3cc9b0cbbcf5e8d5bc30c27cb7bcfefddfb7a7523766bd38bd9aad5381b59fbb",
+  "recordingMode": "accepted-native-refresh",
+  "refreshReleaseId": "2026-11-07",
+  "videoSha256": "3cc9b0cbbcf5e8d5bc30c27cb7bcfefddfb7a7523766bd38bd9aad5381b59fbb",
+  "posterSha256": "f49b1954735f263f871deed27f6b8cdb6d3b913410d40f5e55eb735748438528",
+  "captureFrameCount": 583,
+  "scenes": [
+    {
+      "phase": "open",
+      "atSeconds": 0,
+      "rate": 3
+    },
+    {
+      "phase": "upload",
+      "atSeconds": 0.20666666666666667,
+      "rate": 3
+    },
+    {
+      "phase": "upload",
+      "atSeconds": 0.5866666666666667,
+      "rate": 3
+    },
+    {
+      "phase": "configure",
+      "atSeconds": 1.7013333333333325,
+      "rate": 3
+    },
+    {
+      "phase": "input",
+      "atSeconds": 2.014999999999999,
+      "rate": 3
+    },
+    {
+      "phase": "prompt-ready",
+      "atSeconds": 4.734333333333332,
+      "rate": 1
+    },
+    {
+      "phase": "send",
+      "atSeconds": 6.845333333333332,
+      "rate": 3
+    },
+    {
+      "phase": "generation",
+      "atSeconds": 7.122999999999997,
+      "rate": 4
+    },
+    {
+      "phase": "configure-data-table",
+      "atSeconds": 7.730749999999996,
+      "rate": 3
+    },
+    {
+      "phase": "generate-data-table",
+      "atSeconds": 9.140083333333328,
+      "rate": 4
+    },
+    {
+      "phase": "describe-data-table",
+      "atSeconds": 9.424583333333327,
+      "rate": 3
+    },
+    {
+      "phase": "read-data-table-prompt",
+      "atSeconds": 12.803916666666655,
+      "rate": 1
+    },
+    {
+      "phase": "generate-data-table",
+      "atSeconds": 15.731916666666653,
+      "rate": 4
+    },
+    {
+      "phase": "use-data-table",
+      "atSeconds": 15.994916666666654,
+      "rate": 1
+    },
+    {
+      "phase": "review-generated-data-table",
+      "atSeconds": 20.702916666666656,
+      "rate": 1
+    },
+    {
+      "phase": "correct-missing-process-labels",
+      "atSeconds": 22.291916666666655,
+      "rate": 1
+    },
+    {
+      "phase": "configure-corrected-data-table",
+      "atSeconds": 24.625916666666654,
+      "rate": 3
+    },
+    {
+      "phase": "type-corrected-table-specification",
+      "atSeconds": 25.616583333333317,
+      "rate": 3
+    },
+    {
+      "phase": "read-corrected-table-specification",
+      "atSeconds": 27.692916666666612,
+      "rate": 1
+    },
+    {
+      "phase": "send-corrected-table-specification",
+      "atSeconds": 29.95391666666661,
+      "rate": 3
+    },
+    {
+      "phase": "generate-corrected-data-table",
+      "atSeconds": 30.224249999999934,
+      "rate": 4
+    },
+    {
+      "phase": "inspect-corrected-data-table",
+      "atSeconds": 30.731499999999933,
+      "rate": 1
+    },
+    {
+      "phase": "read-training-row",
+      "atSeconds": 33.29149999999994,
+      "rate": 1
+    },
+    {
+      "phase": "read-inference-row",
+      "atSeconds": 36.262499999999946,
+      "rate": 1
+    },
+    {
+      "phase": "read-rag-row",
+      "atSeconds": 39.15249999999995,
+      "rate": 1
+    },
+    {
+      "phase": "export-original-table-to-sheets",
+      "atSeconds": 45.007499999999936,
+      "rate": 1
+    },
+    {
+      "phase": "open-exported-original-table",
+      "atSeconds": 48.015499999999946,
+      "rate": 1
+    },
+    {
+      "phase": "check-corrected-table-source",
+      "atSeconds": 51.10249999999995,
+      "rate": 1
+    }
+  ],
+  "chapters": [
+    {
+      "label": "open",
+      "atSeconds": 0,
+      "rate": 3
+    },
+    {
+      "label": "upload",
+      "atSeconds": 0.20666666666666667,
+      "rate": 3
+    },
+    {
+      "label": "upload",
+      "atSeconds": 0.5866666666666667,
+      "rate": 3
+    },
+    {
+      "label": "configure",
+      "atSeconds": 1.7013333333333325,
+      "rate": 3
+    },
+    {
+      "label": "input",
+      "atSeconds": 2.014999999999999,
+      "rate": 3
+    },
+    {
+      "label": "prompt ready",
+      "atSeconds": 4.734333333333332,
+      "rate": 1
+    },
+    {
+      "label": "send",
+      "atSeconds": 6.845333333333332,
+      "rate": 3
+    },
+    {
+      "label": "generation",
+      "atSeconds": 7.122999999999997,
+      "rate": 4
+    },
+    {
+      "label": "configure data table",
+      "atSeconds": 7.730749999999996,
+      "rate": 3
+    },
+    {
+      "label": "generate data table",
+      "atSeconds": 9.140083333333328,
+      "rate": 4
+    },
+    {
+      "label": "describe data table",
+      "atSeconds": 9.424583333333327,
+      "rate": 3
+    },
+    {
+      "label": "read data table prompt",
+      "atSeconds": 12.803916666666655,
+      "rate": 1
+    },
+    {
+      "label": "generate data table",
+      "atSeconds": 15.731916666666653,
+      "rate": 4
+    },
+    {
+      "label": "use data table",
+      "atSeconds": 15.994916666666654,
+      "rate": 1
+    },
+    {
+      "label": "review generated data table",
+      "atSeconds": 20.702916666666656,
+      "rate": 1
+    },
+    {
+      "label": "correct missing process labels",
+      "atSeconds": 22.291916666666655,
+      "rate": 1
+    },
+    {
+      "label": "configure corrected data table",
+      "atSeconds": 24.625916666666654,
+      "rate": 3
+    },
+    {
+      "label": "type corrected table specification",
+      "atSeconds": 25.616583333333317,
+      "rate": 3
+    },
+    {
+      "label": "read corrected table specification",
+      "atSeconds": 27.692916666666612,
+      "rate": 1
+    },
+    {
+      "label": "send corrected table specification",
+      "atSeconds": 29.95391666666661,
+      "rate": 3
+    },
+    {
+      "label": "generate corrected data table",
+      "atSeconds": 30.224249999999934,
+      "rate": 4
+    },
+    {
+      "label": "inspect corrected data table",
+      "atSeconds": 30.731499999999933,
+      "rate": 1
+    },
+    {
+      "label": "read training row",
+      "atSeconds": 33.29149999999994,
+      "rate": 1
+    },
+    {
+      "label": "read inference row",
+      "atSeconds": 36.262499999999946,
+      "rate": 1
+    },
+    {
+      "label": "read rag row",
+      "atSeconds": 39.15249999999995,
+      "rate": 1
+    },
+    {
+      "label": "export original table to sheets",
+      "atSeconds": 45.007499999999936,
+      "rate": 1
+    },
+    {
+      "label": "open exported original table",
+      "atSeconds": 48.015499999999946,
+      "rate": 1
+    },
+    {
+      "label": "check corrected table source",
+      "atSeconds": 51.10249999999995,
+      "rate": 1
+    }
+  ],
+  "capture": {
+    "sha256": "a6c4a9335d0d7833043afa5329ab95ea5ef046c664c8e0d3cd5175027da407e2",
+    "sourceFrames": 583,
+    "usedFrames": 583,
+    "conversationFingerprint": "1a94708e4e55d2bc9acf604ab95a85a82b9339d649bb8550b0155d407d23dc79",
+    "newChat": false,
+    "temporaryChat": false,
+    "interfaceLanguage": "en"
+  },
+  "qa": {
+    "accepted": true,
+    "videoSha256": "3cc9b0cbbcf5e8d5bc30c27cb7bcfefddfb7a7523766bd38bd9aad5381b59fbb",
+    "captureSha256": "a6c4a9335d0d7833043afa5329ab95ea5ef046c664c8e0d3cd5175027da407e2",
+    "recordSha256": "182703296aa29a1862b7e2760f4bae357db1858126943e0fb64579f7e16e0978"
+  },
+  "sourceBook": {
+    "path": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+  },
+  "sourceMethod": "Genuine native recording; setup/input3x, generation4x and actual use1x. Exact reviewed technical exclusions and source lineage remain in the retained private QA packet."
+}
