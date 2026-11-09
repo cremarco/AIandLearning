@@ -47,7 +47,11 @@ export function checkPublishedRecordings(slides) {
     }
     const provenance = JSON.parse(fs.readFileSync(localFile(media.provenance), 'utf8'))
     assert(!privateReference.test(JSON.stringify(provenance)), `${clip.key}: public provenance exposes private paths`)
-    assert(slides.some(slide => slide.media?.src === media.src || slide.commands?.some(command => command.result?.media.src === media.src)), `${clip.key}: recording missing from its slide`)
+    if (clip.materialsPage) {
+      assert(fs.existsSync(localFile(clip.materialsPage)), `${clip.key}: supplementary recording needs its materials page`)
+    } else {
+      assert(slides.some(slide => slide.media?.src === media.src || slide.commands?.some(command => command.result?.media.src === media.src)), `${clip.key}: recording missing from its slide`)
+    }
     assert(!records.has(media.src), `${clip.key}: duplicate released video`)
     records.set(media.src, media)
   }
@@ -66,8 +70,32 @@ export function checkReleasedMedia(media, records) {
   return true
 }
 
+export function checkNativeVideoExport(media) {
+  if (media?.recordingMode !== 'native-video-export') return false
+  const provenance = readJson(`public/${media.provenance}`)
+  assert.equal(provenance.kind, 'notebooklm-native-video-export')
+  assert.equal(media.type, 'video')
+  assert.equal(provenance.notebookUrl, media.source)
+  assert(provenance.hasAudio && provenance.durationSeconds > 0, 'Native video must preserve its original audio and duration')
+  assert.equal(media.durationSeconds, provenance.durationSeconds)
+  assert.equal(media.sha256, provenance.files.src.sha256)
+  const publicRoot = projectPath('public')
+  for (const field of ['src', 'poster', 'captions', 'transcriptFile']) {
+    const asset = provenance.files[field]
+    assert.equal(media[field], asset.path, `Native video: stale ${field}`)
+    const filename = path.resolve(publicRoot, asset.path)
+    assert(filename.startsWith(publicRoot + path.sep), 'Native video asset escapes public/')
+    const bytes = fs.readFileSync(filename)
+    assert.equal(bytes.length, asset.bytes, `Native video: ${field} size changed`)
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256, `Native video: ${field} hash changed`)
+  }
+  return true
+}
+
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const records = checkPublishedRecordings(readJson('data/generated/slides.json'))
+  const slides = readJson('data/generated/slides.json')
+  const records = checkPublishedRecordings(slides)
+  const nativeExports = slides.filter(slide => checkNativeVideoExport(slide.media)).length
   assert(records.size, 'No recording release is configured')
-  console.log(`Verified ${records.size} published recordings, result files and slide assignments.`)
+  console.log(`Verified ${records.size} published recordings and ${nativeExports} native video exports.`)
 }

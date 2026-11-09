@@ -98,6 +98,22 @@
 .slidev-layout .has-video .formal-result-caption { font-size:inherit; }
 .has-video .formal-result-links { gap:8px 24px; }
 
+/* Complete recorded prompts lead these demos; the video stays alongside them. */
+.workshop-content.has-video.has-full-prompt {
+  grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+}
+.has-video.has-full-prompt > .workshop-heading { grid-area:1 / 1 / 2 / -1; }
+.has-video.has-full-prompt > .workshop-lead { grid-area:2 / 1 / 3 / -1; }
+.has-video.has-full-prompt > .workshop-stage { grid-area:3 / 2; }
+.has-video.has-full-prompt .workshop-media { grid-area:auto; }
+.slidev-layout .has-video.has-full-prompt .workshop-heading h1 { font-size:36px; }
+.slidev-layout .has-video.has-full-prompt .tool-demo-prompt { font-size:24px; }
+.slidev-layout .deck-slide .has-video.has-full-prompt > .workshop-decision { grid-area:4 / 1 / 5 / -1; }
+.workshop-content.has-video.has-full-prompt.has-long-prompt {
+  grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);
+}
+.slidev-layout .has-video.has-full-prompt.has-long-prompt .tool-demo-prompt { font-size:20px; }
+
 /* The poster occupies the identical frame in the static deck and PDF. */
 .has-video .shortcut-detail-recording .shortcut-detail-print-poster,
 .has-video .formal-recording .formal-print-poster { display:none; }

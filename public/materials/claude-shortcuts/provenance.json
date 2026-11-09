@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-09",
+  "product": "Claude web",
+  "modelLabel": "Sonnet 5.5 Medium",
+  "planLabel": "Free",
+  "interfaceLanguage": "en-US",
+  "method": "Original slide prompts were submitted verbatim in fresh Claude chats with the original workshop PDF attached. The interface and prompts are in English. Final images are unaltered crops of native browser screenshots. For the first three runs the interface was switched to English before capture; subsequent runs started with English selected.",
+  "book": {
+    "src": "materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+    "sha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981"
+  },
+  "scope": "Five original shortcut prompts have verified interactive outputs in Claude: /flashcard, /quiz, /oral, /mistakelog and /conceptmap. Ten shortcuts remain unverified because the Free account reached its 5-hour usage limit. Two new interactive outputs were produced before their surrounding responses paused. This is interface evidence, not a learning-outcome or full factual-content evaluation.",
+  "results": [
+    {
+      "command": "/flashcard",
+      "sourceSlideId": "S53DETAILFLASHCARD",
+      "prompt": "/flashcard Help me study the attached chapter.",
+      "promptUnmodified": true,
+      "freshChat": true,
+      "conversationUrl": "https://claude.ai/chat/60b65f74-37bf-4c89-a20f-532c67dfd116",
+      "responseComplete": true,
+      "format": "Native flashcard widget",
+      "observed": "12 flashcards. Revealed an answer, moved to the next card, and verified Back and Next controls.",
+      "screenshot": {
+        "src": "materials/claude-shortcuts/flashcard.png",
+        "sha256": "6a0073952afb6c12d93c04c3939790b264eef25de77c3eb298b7c885f6fdfebb",
+        "width": 737,
+        "height": 550,
+        "originalSha256": "0d4a74e3988982ca41b597c9524febe5abf4001c7411aa264ce909e8f4c5c62b",
+        "crop": {
+          "left": 80,
+          "top": 82,
+          "right": 817,
+          "bottom": 632
+        }
+      }
+    },
+    {
+      "command": "/quiz",
+      "sourceSlideId": "S53DETAILQUIZ",
+      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+      "promptUnmodified": true,
+      "freshChat": true,
+      "conversationUrl": "https://claude.ai/chat/b3f63775-6eef-45cd-906c-1661b3a8a634",
+      "responseComplete": true,
+      "format": "Native quiz widget",
+      "observed": "3 questions. Opened a hint, tested feedback for a wrong answer, completed a full attempt with feedback and a 3/3 score, then used Start over to return to question 1.",
+      "screenshot": {
+        "src": "materials/claude-shortcuts/quiz.png",
+        "sha256": "e512017a894e74628b172c9879f841407f6034f713b60d7dd28692eaf598fe80",
+        "width": 737,
+        "height": 582,
+        "originalSha256": "93487f96c632a5722afb89fc31b8cbeb84d08345c0a9fecb6769bcd1890ea18d",
+        "crop": {
+          "left": 80,
+          "top": 85,
+          "right": 817,
+          "bottom": 667
+        }
+      }
+    },
+    {
+      "command": "/oral",
+      "sourceSlideId": "S53DETAILORAL",
+      "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+      "promptUnmodified": true,
+      "freshChat": true,
+      "conversationUrl": "https://claude.ai/chat/10455e62-f583-49be-8843-453262f99eb1",
+      "artifactUrl": "https://claude.ai/artifact/UdeQ2X7HbhRfdTHdju4Cyn",
+      "responseComplete": true,
+      "format": "Interactive Artifact",
+      "observed": "10 questions in an Artifact. Entered an answer, revealed and hid the expected answer, advanced to question 2 and returned to question 1; the typed answer was retained during navigation. Screenshot shows a demonstrator-authored answer, not a student response.",
+      "screenshot": {
+        "src": "materials/claude-shortcuts/oral.png",
+        "sha256": "e30ffa0edc5aa9e77f4b1f89e9a33cd3f66b105ad28d9a743a8fb017663ba727",
+        "width": 668,
+        "height": 600,
+        "originalSha256": "4a94a8a4be60ef934d34b74a10a493ae69587394e6699eaf70951c1087bb4420",
+        "crop": {
+          "left": 450,
+          "top": 60,
+          "right": 1118,
+          "bottom": 660
+        }
+      }
+    },
+    {
+      "command": "/mistakelog",
+      "sourceSlideId": "S53DETAILMISTAKELOG",
+      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+      "promptUnmodified": true,
+      "freshChat": true,
+      "conversationUrl": "https://claude.ai/chat/1a32ef74-8579-4ed5-9ff6-4d8139b055c1",
+      "responseComplete": false,
+      "interactiveOutputVerified": true,
+      "responsePausedReason": "Free usage limit reached after the interactive output was generated.",
+      "format": "Interactive HTML preview",
+      "observed": "The generated HTML contains all three misconceptions, correction reveals, quick checks, self-review buttons and progress. Revealed and hid the first correction, answered its quick check and observed the correct-answer feedback and progress increase. Marked Review again and observed To review increase to 1. Generation of the surrounding response paused at the Free limit after the interactive HTML had been produced.",
+      "screenshot": {
+        "src": "materials/claude-shortcuts/mistakelog.png",
+        "sha256": "4cad53694e3acd5406ae8f6ee9a4ad22885badceda249e294c33a3952e270e37",
+        "width": 730,
+        "height": 537,
+        "originalSha256": "6b73f8e41caeffdfad186e4f19a3867f3f1226ba3a20baa641035a56e513dd61",
+        "crop": {
+          "left": 84,
+          "top": 191,
+          "right": 814,
+          "bottom": 728
+        }
+      }
+    },
+    {
+      "command": "/conceptmap",
+      "sourceSlideId": "S53DETAILCONCEPTMAP",
+      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+      "promptUnmodified": true,
+      "freshChat": true,
+      "conversationUrl": "https://claude.ai/chat/2ce1f0b4-41ad-476e-bbc3-3ad523834ce4",
+      "responseComplete": false,
+      "interactiveOutputVerified": true,
+      "responsePausedReason": "Free usage limit reached after the interactive output was generated.",
+      "format": "Interactive in-chat visualization",
+      "observed": "Selected RAG and Inference and observed different labelled relationships and explanations. Answered all three check questions and clicked Check answers: each showed explanatory feedback and the score was 3 of 3. Retry cleared the selected answers. Generation of the surrounding response paused at the Free limit after the interactive visualization had been produced.",
+      "screenshot": {
+        "src": "materials/claude-shortcuts/conceptmap.png",
+        "sha256": "7209b758f0595de47a231fdfd0f56f68fb809b54e91d76cbd98051dda1f8c4b6",
+        "width": 737,
+        "height": 464,
+        "originalSha256": "eba866762fbf9921e8be1988d4e1286d504e4ef9ef14a7526b271be41f20291f",
+        "crop": {
+          "left": 80,
+          "top": 74,
+          "right": 817,
+          "bottom": 538
+        }
+      }
+    }
+  ],
+  "status": "partially-completed-usage-limit",
+  "summary": {
+    "selectedShortcuts": 15,
+    "verifiedInteractive": 5,
+    "remaining": 10
+  },
+  "blocker": {
+    "type": "Claude Free 5-hour message limit",
+    "observedResetTime": "11:00 PM",
+    "date": "2026-11-09",
+    "evidence": "Claude displayed “You are out of free messages until 11:00 PM” and disabled Continue/Retry. No plan change or additional account was used."
+  },
+  "pending": [
+    {
+      "command": "/matchinggame",
+      "sourceSlideId": "S53DETAILMATCHINGGAME",
+      "prompt": "/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.",
+      "status": "send-rejected-usage-limit"
+    },
+    {
+      "command": "/sortinggame",
+      "sourceSlideId": "S53DETAILSORTINGGAME",
+      "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.",
+      "status": "send-rejected-usage-limit"
+    },
+    {
+      "command": "/fillintheblanks",
+      "sourceSlideId": "S53DETAILFILLINTHEBLANKS",
+      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/worksheet",
+      "sourceSlideId": "S53DETAILWORKSHEET",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/caseStudy",
+      "sourceSlideId": "S53DETAILCASESTUDY",
+      "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/studyplan",
+      "sourceSlideId": "S53DETAILSTUDYPLAN",
+      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/lessonplan",
+      "sourceSlideId": "S53DETAILLESSONPLAN",
+      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/differentiate",
+      "sourceSlideId": "S53DETAILDIFFERENTIATE",
+      "prompt": "/differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/peerassessment",
+      "sourceSlideId": "S53DETAILPEERASSESSMENT",
+      "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.",
+      "status": "not-started-usage-limit"
+    },
+    {
+      "command": "/learningstations",
+      "sourceSlideId": "S53DETAILLEARNINGSTATIONS",
+      "prompt": "/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.",
+      "status": "not-started-usage-limit"
+    }
+  ]
+}

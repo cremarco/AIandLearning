@@ -506,6 +506,18 @@ A broader activity can divide those checks across several concepts. The **learni
 
 ---
 layout: default
+routeAlias: s53claude
+title: "These shortcuts also work in Claude"
+---
+
+<DeckSlide id="S53CLAUDE" />
+
+<!--
+These **five examples** use the **same prompts and chapter** as the ChatGPT demonstrations. Claude produced working flashcards, a quiz, oral practice, a mistake log and a concept map. The **interface varies**, but the learning request transfers. The screenshots open at full size. Other shortcuts remain unverified because the account reached its message limit.
+-->
+
+---
+layout: default
 routeAlias: s53tryshortcuts
 title: "Your turn: try a few shortcuts"
 ---
@@ -610,6 +622,18 @@ title: "Three questions to answer from memory"
 
 <!--
 To revisit those distinctions later, we can prepare **recall questions**. This skill produces an importable text deck, not an interactive app. Andrea attempts each question first, then checks the **source-based answer**.
+-->
+
+---
+layout: default
+routeAlias: s53tryskills
+title: "Your turn: try a skill"
+---
+
+<DeckSlide id="S53TRYSKILLS" />
+
+<!--
+Take **ten minutes** to try a skill. Choose one of the **four reviewed skills** or find a new one, then **install and enable it** in a compatible host. Use the GenAI book or your own source to **create study material**. Try the result, check it against the source and improve the request.
 -->
 
 ---
@@ -730,18 +754,6 @@ title: "Andrea’s selected plan"
 
 <!--
 Andrea can now select a plan from the suggestions. He chooses **read, ask, reconstruct and apply**. Each block ends with something he can inspect. The completed tasks record activity; their content shows **what he understands**.
--->
-
----
-layout: default
-routeAlias: s60a
-title: "Activity: choose the next support"
----
-
-<DeckSlide id="S60A" />
-
-<!--
-Let us practise that selection ourselves. Take **five minutes** to reduce Andrea's twenty subtasks to **three actions** and add one understanding check. Explain your choice and keep one decision for Andrea himself.
 -->
 
 ---
@@ -921,7 +933,7 @@ title: "Watch a Video Overview"
 <DeckSlide id="S67VIDEO" />
 
 <!--
-For learners who want a visual sequence, there is a **Video Overview**. Compare its examples and claims with the chapter. Changing the format may support access, while **checking the explanation** remains part of the task.
+This is the **original Video Overview** generated on 8 November, with its English audio. Pause after an example and compare it with the chapter. The video distinguishes training, ordinary inference and RAG; **checking its claims** remains part of the learning task.
 -->
 
 ---
@@ -974,194 +986,14 @@ Check **recipient access** before planning a shared activity. In this Unimib rec
 
 ---
 layout: default
-routeAlias: s67spaced
-title: "Anki: practise recall over time"
+routeAlias: s67trynotebook
+title: "Your turn: create materials for students"
 ---
 
-<DeckSlide id="S67SPACED" />
+<DeckSlide id="S67TRYNOTEBOOK" />
 
 <!--
-Anki gives checked questions a **review routine**. Andrea answers before revealing the card, then rates recall honestly. The downloadable cards are prepared examples; this **account workflow was not recorded**.
--->
-
----
-layout: default
-routeAlias: s67knowt
-title: "Knowt: build a checked study set"
----
-
-<DeckSlide id="S67KNOWT" />
-
-<!--
-Knowt is another way to organise a **checked study set**. Start with questions from the same chapter and answer before revealing. These cards are prepared examples; this **account workflow was not recorded**.
--->
-
----
-layout: default
-routeAlias: s70
-title: "Napkin: start with checked text"
----
-
-<DeckSlide id="S70" />
-
-<!--
-Napkin starts from **checked text**. Select the passage and generate a visual, then inspect the relationships. The screenshot is an official guide example; it is not a recorded execution of Andrea’s task.
--->
-
----
-layout: default
-routeAlias: s71
-title: "Napkin: check the visual"
----
-
-<DeckSlide id="S71" />
-
-<!--
-Choose a visual that preserves the **meaning**. Training updates parameters; ordinary inference uses fixed parameters and repeats token selection. Andrea explains each **label and arrow**, then checks the chapter.
--->
-
----
-layout: default
-routeAlias: s72drawio
-title: "draw.io: build the inference path"
----
-
-<DeckSlide id="S72DRAWIO" />
-
-<!--
-Let us apply that approach to **ordinary inference**. Andrea draws the path from prompt and context to the next token. He explains each arrow and why new context changes the input while learned **parameters stay fixed**.
--->
-
----
-layout: default
-routeAlias: s72excalidraw
-title: "Excalidraw: explain the RAG arrow"
----
-
-<DeckSlide id="S72EXCALIDRAW" />
-
-<!--
-Here we use the sketch to isolate the **RAG relationship**. Retrieved passages enter context; retrieval itself does not retrain the model. Ask why an irrelevant passage can still lead to an **unreliable answer**.
--->
-
----
-layout: default
-routeAlias: s72mindmeister
-title: "MindMeister: rebuild a branching map"
----
-
-<DeckSlide id="S72MINDMEISTER" />
-
-<!--
-MindMeister offers a **branching map** for reconstructing ideas. Close the book, explain one relationship and reopen the source to check it. This account workflow was not recorded; compare the reconstruction with the AI visual.
--->
-
----
-layout: default
-routeAlias: s81teachertools
-title: "Tools for teachers"
----
-
-<DeckSlide id="S81TEACHERTOOLS" />
-
-<!--
-So far, we have followed Andrea's learning choices. We now take the **teacher's perspective**: how do we design a task and collect **evidence** that shows what he understands?
--->
-
----
-layout: default
-routeAlias: s82
-title: "The teacher designs the evidence"
----
-
-<DeckSlide id="S82" />
-
-<!--
-That question requires a link between **goal, task and criterion**. If the goal concerns relationships, ask for an explanation or a justified diagram. Judge the learner's reasoning alongside the **assisted product**.
--->
-
----
-layout: default
-routeAlias: s83
-title: "MagicSchool: draft and review a rubric"
----
-
-<DeckSlide id="S83" />
-
-<!--
-Read one **rubric criterion** across its four levels. Can you identify observable differences in the learner’s explanation? The teacher asks for shorter descriptors and a clear distinction between the assisted diagram and the **independent explanation**. Before reusing the Word export, check whether each descriptor would help you judge actual student work.
--->
-
----
-layout: default
-routeAlias: s85
-title: "MagicSchool: check questions and answers"
----
-
-<DeckSlide id="S85" />
-
-<!--
-These **five questions** target specific misconceptions from the chapter summary. The first response omits the requested rationales, so the teacher asks again. Pause at one question: what understanding does it test, and could a learner guess correctly? Check the key and rationale against the chapter before using the **Word export**.
--->
-
----
-layout: default
-routeAlias: s86
-title: "Formative: build and preview an assessment"
----
-
-<DeckSlide id="S86" />
-
-<!--
-Watch what happens when a **valid explanation** is marked incorrect by exact-match grading. The teacher removes that key and keeps the expected meaning for **teacher review**. On retry, only the multiple-choice item is scored; the written answer and drawing await review. The recording uses fictional responses in a **Paid Teacher trial**.
--->
-
----
-layout: default
-routeAlias: s89
-title: "Formative: feedback and a corrected explanation"
----
-
-<DeckSlide id="S89" />
-
-<!--
-The **teacher-written feedback** identifies the context-versus-weights error and asks for a new explanation. After refreshing, the learner preview shows the feedback and a **corrected reply**. These are fictional examples under the author account, recorded in a Paid Teacher trial. The original submission stays locked; the correction is posted in the conversation.
--->
-
----
-layout: default
-routeAlias: s89a
-title: "Activity: adapt an assessment"
----
-
-<DeckSlide id="S89A" />
-
-<!--
-Let us transfer this design process to your subject. Take **five minutes** to choose a goal, create a task and name an observable criterion. Then identify one access barrier and offer an **equivalent way to respond**.
--->
-
----
-layout: default
-routeAlias: s95
-title: "Reuse the learning path in another subject"
----
-
-<DeckSlide id="S95" />
-
-<!--
-We can now take the method **beyond generative AI**. In another subject, keep the sequence: source and goal, visible initial ideas, checked support and an independent explanation. Change the content and the **evidence you collect**.
--->
-
----
-layout: default
-routeAlias: s96
-title: "The evidence collected along the way"
----
-
-<DeckSlide id="S96" />
-
-<!--
-Before choosing more tools, review what this path has produced: records of the **learning process**, an assisted product and an independent explanation. Together, these help us decide what Andrea understands and what his **next step** should be.
+Take **thirty minutes** to create materials for **your students** on a **topic of your choice**, using **any tools you prefer**. Choose suitable sources and adapt the materials to your students’ level. **Test and check** the output against the sources, then verify how students will access and use it.
 -->
 
 ---
@@ -1234,16 +1066,4 @@ title: "Bibliography"
 
 <!--
 This **reference appendix** is available after the closing slide for questions and further reading. Use the research papers to examine claims about learning outcomes and limits. A successful tool demonstration shows what happened in that example; judging **learning** requires evidence from the learner.
--->
-
----
-layout: default
-routeAlias: s102
-title: "Web resources"
----
-
-<DeckSlide id="S102" />
-
-<!--
-These **documentation links** support preparation after the workshop. Use them to check current features, account requirements and access before adapting an activity. Keep a **prepared alternative** for learners who cannot use the chosen tool. There is no need to visit every link during the presentation.
 -->

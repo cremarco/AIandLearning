@@ -1,0 +1,34 @@
+{
+  "tool": "image_gen built-in",
+  "intent": "Generate the professor from the supplied portrait in the deck illustration style, as eight typing poses for an animated GIF.",
+  "prompt": "Use case: illustration-story / identity-preserving stylization. Asset: transparent animation sprite sheet for a looping GIF in a workshop slide. REFERENCE 1 is the actual woman's face and appearance to depict. REFERENCE 2 is ONLY the drawing style to match. Depict the professor from reference 1 recognizably: mature adult woman, long straight golden-blonde hair parted to one side, large black rectangular eyeglasses, warm smile, dark navy blouse and a simple dark layered necklace. Preserve her facial proportions and age; do not turn her into a young student, do not give her short hair. Render her with the same polished hand-drawn editorial/anime illustration, dark clean outlines and soft cel shading as reference 2. She is seated leaning energetically over a dark gray laptop, typing furiously, smiling with comical concentration. BOTH HANDS must be visible over the keyboard. No book, no scenery, no text, no logos. Camera locked at front-left three-quarter view, waist-up whole character and entire laptop visible. Produce ONE 1536x1024 sprite sheet with EXACTLY FOUR columns and TWO rows: EIGHT equal 384x512 cells, poses in row-major animation order. True transparent alpha background; no grid lines, frame borders, checkerboard, captions or cell numbers. Keep character, laptop, camera, lighting and scale identical and registered in all cells; the entire subject stays within each cell with at least 14 pixels of empty alpha at left/right/bottom. ACTUAL ANIMATION POSES: alternate raised and lowered fingers/wrists pressing keys, left hand up while right presses then right up while left presses, hands moving fast by 10-25 pixels, with tiny shoulder bounce and hair-tip movement. Friendly frantic typing, not fear or anger. Eight distinct hand poses, laptop immobile and the body anchored; do not move the entire scene. Small sketch motion arcs by the hands optional. Last pose leads seamlessly back to the first. Each pose is a real illustration, not a warped duplicate. No background fill, preserve clean transparent cutout edges.",
+  "referenceRoles": [
+    "User-supplied professor portrait: appearance and facial likeness",
+    "Andrea laptop illustration: rendering style only"
+  ],
+  "spriteSheet": "originals/professor-typing-sprites-v2.png",
+  "animation": {
+    "framework": "HyperFrames",
+    "version": "0.9.26",
+    "upgradedFrom": "0.8.145",
+    "fps": 12.5,
+    "durationSeconds": 1.92,
+    "loop": 0,
+    "dimensions": [
+      384,
+      512
+    ]
+  },
+  "files": {
+    "src": {
+      "path": "images/activities/professor-frantic-typing-v1.gif",
+      "bytes": 2086770,
+      "sha256": "f0a95e8653b57ac74e37e4e64f2642e6fab94a3bd7a861bdcd08f4a98627de48"
+    },
+    "poster": {
+      "path": "images/activities/professor-typing-still-v1.png",
+      "bytes": 313267,
+      "sha256": "33d1dcdf615f0eae9b4db60b82084169101f6a804af239865d9fcb8863c264b7"
+    }
+  }
+}

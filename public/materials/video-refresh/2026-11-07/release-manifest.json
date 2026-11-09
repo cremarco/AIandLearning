@@ -1653,8 +1653,8 @@
           "qualification": "Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.",
           "mediaType": "application/pdf",
           "download": true,
-          "sha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
-          "bytes": 110599,
+          "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+          "bytes": 110398,
           "sourceMethod": "observed-ui-derived-pdf",
           "supplemental": []
         },
@@ -3291,13 +3291,13 @@
     },
     {
       "path": "materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf",
-      "sha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
-      "bytes": 110599
+      "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+      "bytes": 110398
     },
     {
       "path": "materials/video-refresh/2026-11-07/provenance/notebook-quiz.json",
-      "sha256": "72b11fe62cc98cbd1ff0dc8ace4d5f9679e54c6416ca235ac953d99afa214d3b",
-      "bytes": 8893
+      "sha256": "5db60a87f1c5f91535744add71be620e093c74a6982c96713e1c054502c031ad",
+      "bytes": 9537
     },
     {
       "path": "materials/video-refresh/2026-11-07/notebook-flashcards/video.mp4",
@@ -3720,5 +3720,20 @@
     ],
     "existingAssetsUnchanged": true
   },
-  "scopePolicySha256": "9e062e39644c5bbdae7e33e4fbfe9ceb68bd21ab0fe3c3784a83e12439e34df5"
+  "scopePolicySha256": "9e062e39644c5bbdae7e33e4fbfe9ceb68bd21ab0fe3c3784a83e12439e34df5",
+  "linkMaintenance": [
+    {
+      "date": "2026-11-09",
+      "operation": "Replace one obsolete NotebookLM hyperlink with the unified workshop notebook.",
+      "file": "materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf",
+      "notebookUrl": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec",
+      "updatedAnnotations": 1,
+      "page": 7,
+      "textUnchanged": true,
+      "originalSha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
+      "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+      "bytes": 110398,
+      "visualRenderingUnchanged": true
+    }
+  ]
 }

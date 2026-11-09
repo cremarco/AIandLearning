@@ -22,7 +22,7 @@ Numbering uses the position of Thank you. Reference appendices remain navigable 
 
 `check-recordings.mjs` independently verifies published file hashes, sizes, result destinations and slide assignments. It uses only project/public files. Capture validation is a separate operation requiring private sources; ordinary generation and builds do not execute modules from ignored output directories.
 
-The active workflow uses `video-refresh.mjs`, `render-staged-video.py`, the native-source validators and `publish-accepted-videos.mjs`. The publisher prepares a complete packet, checks it, installs assets with an atomic rename, and updates registries with a transaction journal. Current release data never converts an unapproved clip into an approved one. Legacy renderers remain only for demonstrations whose earlier recordings are retained.
+The active workflow uses `video-refresh.mjs`, `render-staged-video.py`, the native-source validators and `publish-accepted-videos.mjs`. The publisher prepares a complete packet, checks it, installs assets with an atomic rename, and updates registries with a transaction journal. Current release data never converts an unapproved clip into an approved one. Superseded legacy renderers and their exclusive metadata are archived outside the project; see `docs/recordings.md` for recovery before rebuilding a historical recording.
 
 ## Other boundaries
 

@@ -68,6 +68,16 @@ export type ToolTable = {
   headers: [string, string, string]
   rows: { tool: string; purpose: string; access: string; url: string }[]
 }
+export type ScreenshotResult = {
+  label: string
+  src: string
+  width?: number
+  height?: number
+  alt: string
+  caption: string
+  format: string
+  prompt: string
+}
 export type Slide = {
   id: string
   number: number
@@ -85,6 +95,7 @@ export type Slide = {
   cardBackground?: string
   cards?: SlideCard[]
   media?: SlideMedia
+  screenshots?: ScreenshotResult[]
   book?: BookPreview
   character?: Character
   commands?: PromptCommand[]
@@ -95,12 +106,12 @@ export type Slide = {
   toolTable?: ToolTable
   references?: Reference[]
   prompt?: string
-  promptExcerpt?: string
   promptLabel?: string
   promptStyle?: 'terminal' | 'chat'
-  videoLayout?: 'focus'
+  videoLayout?: 'focus' | 'prompt'
   comparison?: { label: string; text: string; audience?: Audience }[]
   steps?: { title: string; text: string }[]
+  activityTimer?: { minutes: number; id: string }
   result?: string
   resultLabel?: string
   decision?: string

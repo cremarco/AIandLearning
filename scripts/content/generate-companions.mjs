@@ -3,6 +3,7 @@ import path from 'node:path'
 
 import { projectRoot as root, readJson as read } from '../lib/project.mjs'
 const slides = read('data/generated/slides.json')
+const notebookUrl = slides.find(slide => slide.tool === 'notebook' && slide.media?.source)?.media.source
 const sources = read('data/generated/sources.json')
 const shortcutVideos = new Map(read('data/demos/chatgpt-videos.json').clips.map(clip => [clip.command.toLowerCase(), clip]))
 const skillResearch = read('data/catalogues/skills-research.json')
@@ -55,6 +56,7 @@ function textContent(slide) {
   return [
     slide.message,
     studyFocus(slide.studyPhases),
+    slide.activityTimer ? `${slide.activityTimer.minutes}-minute practice` : '',
     ...slide.body,
     ...(slide.shortcutLabels || []).map(item => item.command),
     ...(slide.commands || []).flatMap(row => [
@@ -62,17 +64,19 @@ function textContent(slide) {
       ...(row.result ? [row.result.label, row.result.instruction, row.result.text || '', row.result.media.alt, row.result.media.caption, row.result.media.transcript || '', ...resultText(row.result.media.result)] : []),
     ]),
     ...(slide.cards || []).flatMap(card => [card.title, card.body]),
+    ...(slide.screenshots || []).flatMap(item => [item.label, item.format, item.alt, item.caption, `Original prompt: ${item.prompt}`, `Screenshot: ${item.src}`]),
     ...(slide.toolTable?.rows || []).map(row => `${row.tool} — ${row.purpose} — ${row.access} ${row.url}`),
     ...catalogue(slide).flatMap(skill => [skill.name, `${skill.publisher} · ${skill.origin}`, skill.platform, skill.summary, skill.capabilities, studyFocus(skill.studyPhases),
       `${skill.executionStatus === 'executed' ? 'Tested request' : 'Example request · not executed'}: ${skill.prompt}`, `${skill.executionStatus === 'executed' ? 'Observed result' : 'Expected deliverable'}: ${skill.expected}`, skill.caveat,
       `Requirements: ${skill.requirements}`, `Terminal installation for coding agents: ${skill.installCommand}`, skill.sourceUrl]),
     ...(slide.steps || []).flatMap((step, index) => [`${index + 1}. ${step.title}`, step.text]),
     ...(slide.comparison || []).flatMap(item => [item.label, item.text]),
-    slide.prompt ? `${slide.promptExcerpt ? 'Original tested request · full text' : slide.promptLabel || 'Prompt / excerpt'}: ${slide.prompt}` : '',
+    slide.prompt ? `${slide.promptLabel || 'Prompt / excerpt'}: ${slide.prompt}` : '',
     slide.result ? `${slide.resultLabel || 'Result'}: ${slide.result}` : '',
     slide.decision || '',
     ...(slide.references || []).flatMap(item => [item.label, item.citation, item.url]),
     ...(slide.links || []).map(link => `${link.label}: ${link.url}`),
+    slide.tool === 'notebook' && slide.media?.source ? `Open notebook: ${slide.media.source}` : '',
     ...(slide.media ? [slide.media.alt, slide.media.caption, slide.media.transcript || '', ...resultText(slide.media.result)] : []),
   ].filter(Boolean)
 }
@@ -82,6 +86,7 @@ const introduction = [
   'Marco Cremaschi · November 2026',
   `${presentationSlideCount} presentation slides, followed by ${slides.length - presentationSlideCount} reference appendices. Participants observe the method; Andrea is a fictional student in a teaching scenario.`,
   'Public materials in English.',
+  notebookUrl ? `NotebookLM workshop notebook: ${notebookUrl}` : '',
   '',
 ]
 write('Accessible_Deck_EN.txt', [
@@ -226,7 +231,9 @@ function mediaMarkup(media) {
     `<source src="${h(relative(media.src))}" type="${media.src.endsWith('webm') ? 'video/webm' : 'video/mp4'}">`,
     `<track kind="captions" srclang="en" label="English" src="${h(relative(media.captions))}"${media.captionsDefault === false ? '' : ' default'}>`,
     '</video>',
-  ].join('') : `<img src="${h(relative(media.src))}" alt="${h(media.alt)}">`
+  ].join('') : media.src.endsWith('.gif') && media.poster
+    ? `<picture><source media="print, (prefers-reduced-motion: reduce)" srcset="${h(relative(media.poster))}"><img src="${h(relative(media.src))}" alt="${h(media.alt)}"></picture>`
+    : `<img src="${h(relative(media.src))}" alt="${h(media.alt)}">`
   const framed = media.browserFrame
     ? `<div class="mockup-browser browser-video${media.darkFrame ? ' browser-video-dark' : ''}"><div class="mockup-browser-toolbar"><div class="input browser-video-address">${h(media.source?.replace(/^https?:\/\//, ''))}</div></div><div class="browser-video-page">${content}<img class="video-print-poster" src="${h(relative(media.poster))}" alt="${h(media.alt)}"></div></div>`
     : content
@@ -245,12 +252,14 @@ function inner(slide) {
   return [
     `<p>${h(slide.message)}</p>`,
     slide.studyPhases ? `<p class="meta">${h(studyFocus(slide.studyPhases))}</p>` : '',
+    slide.activityTimer ? `<p class="meta">${slide.activityTimer.minutes}-minute practice</p>` : '',
     commandTable(slide),
     slide.toolTable ? `<div class="tool-resource-catalogue overflow-x-auto"><table class="table" aria-label="${h(slide.title)}"><thead><tr>${slide.toolTable.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${slide.toolTable.rows.map(row => `<tr><th scope="row"><a class="link" href="${h(relative(row.url))}">${h(row.tool)}</a></th><td>${h(row.purpose)}</td><td>${h(row.access)}</td></tr>`).join('')}</tbody></table></div>` : '',
     slide.shortcutLabels?.length ? `<ul class="shortcut-index">${slide.shortcutLabels.map(item => `<li><code>${h(item.command)}</code></li>`).join('')}</ul>` : '',
     ...catalogue(slide).map(skill => skillMarkup(skill)),
     mediaMarkup(slide.media),
-    slide.prompt ? promptMarkup(slide.prompt, slide.promptExcerpt ? 'Original tested request · full text' : slide.promptLabel || 'Prompt / excerpt') : '',
+    ...(slide.screenshots || []).map(item => `<figure><h3>${h(item.label)} · ${h(item.format)}</h3><a class="link" href="${h(relative(item.src))}"><img src="${h(relative(item.src))}" alt="${h(item.alt)}" style="max-width:100%;height:auto"></a><figcaption>${h(item.caption)}</figcaption></figure>${promptMarkup(item.prompt, 'Original slide prompt · tested unchanged in Claude')}`),
+    slide.prompt ? promptMarkup(slide.prompt, slide.promptLabel || 'Prompt / excerpt') : '',
     ...(slide.body || []).map(text => `<p>${h(text)}</p>`),
     slide.steps?.length ? `<ol>${slide.steps.map(step => `<li><strong>${h(step.title)}</strong><p>${h(step.text)}</p></li>`).join('')}</ol>` : '',
     ...(slide.cards || []).map(card => `<h3>${h(card.title)}</h3><p>${h(card.body)}</p>`),
@@ -270,6 +279,7 @@ writePage('kit.html', 'Workshop materials', [
   '</header><main id="content"><h2>Study and understand</h2><ul>',
   '<li><a class="link link-primary" href="booklet-genai/Fondamenti_GenAI_Cremaschi.pdf">Textbook chapter PDF</a> · <a class="link link-primary" href="booklet-genai/lettura.html">Chapter reading HTML</a></li>',
   '<li><a class="link link-primary" href="demo-genai/index.html">Real-model application</a></li>',
+  ...(notebookUrl ? [`<li><a class="link link-primary" href="${h(notebookUrl)}" target="_blank" rel="noopener">NotebookLM: Foundations of Generative Artificial Intelligence · EduForum</a></li>`] : []),
   '<li><a class="link link-primary" href="Prompt_Bank_EN.txt">Prompts and requests</a></li>',
   '<li><a class="link link-primary" href="skills-guide.html">Agent Skills: annotated catalogue and installation guide</a></li>',
   '<li><a class="link link-primary" href="teacher-tools.html">MagicSchool and Formative: recorded demonstrations</a></li>',

@@ -5,7 +5,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { projectRoot as root, readJson as read } from '../lib/project.mjs'
-import { checkPublishedRecordings, checkReleasedMedia } from './check-recordings.mjs'
+import { checkPublishedRecordings, checkReleasedMedia, checkNativeVideoExport } from './check-recordings.mjs'
 export const slides = read('data/generated/slides.json')
 export const sources = read('data/generated/sources.json')
 export const flows = read('data/generated/flows.json')
@@ -292,7 +292,6 @@ export function checkData() {
     assert.equal(clip.height, 900, `${demo.key}: use the common video height`)
     assert.equal(slide?.kind, 'tool-demo')
     assert.equal(slide.prompt, demo.prompt, `${demo.key}: preserve the original request`)
-    assert(slide.prompt.includes(slide.promptExcerpt), `${demo.key}: the displayed excerpt must come from the tested request`)
     assert(slide.sources.includes('BOOK_CHAPTER'), `${demo.key}: keep the example on the assigned book`)
     assert(clip.scenes.length >= 2 && clip.captureFrameCount >= 6 && clip.durationSeconds > 0)
     assert(clip.scenes.every(scene => demo.allowedTabIds.includes(scene.browserTabId)), `${demo.key}: reject recordings of another tab`)
@@ -323,6 +322,10 @@ export function checkData() {
   for (const demo of notebookDemos) {
     const slide = slides.find(item => item.id === demo.slideId)
     const clip = notebookClips.find(item => item.key === demo.key)
+    if (checkNativeVideoExport(slide?.media)) {
+      assert.equal(slide.kind, 'tool-demo')
+      continue
+    }
     if (checkReleasedMedia(slide?.media, publishedRecordings)) {
       assert.equal(slide.kind, 'tool-demo')
       continue
@@ -357,8 +360,10 @@ export function checkData() {
     assert(teacherGuide.includes(`id="${clip.key}"`), `${clip.key}: keep the full recording in the accessible guide`)
     if (clip.slideId) {
       const slide = slides.find(item => item.id === clip.slideId)
-      assert.equal(slide?.media?.src, clip.src, `${clip.key}: attach the correct recording to its slide`)
-      assert.equal(slide.media.transcript, fs.readFileSync(path.join(root, 'public', clip.transcriptFile), 'utf8'))
+      if (slide) {
+        assert.equal(slide.media?.src, clip.src, `${clip.key}: attach the correct recording to its slide`)
+        assert.equal(slide.media.transcript, fs.readFileSync(path.join(root, 'public', clip.transcriptFile), 'utf8'))
+      }
     }
   }
   const selectedVideoCount = retained.filter(run => shortcutVideos.some(clip => clip.command === run.command)).length

@@ -29,7 +29,7 @@ Open http://localhost:3047/. Arrow keys navigate. The Slidev toolbar provides pr
 
 Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, full reader data, lean runtime indexes, speaker notes and companion materials. Do not hand-edit `data/generated/`, `slides.md`, the generated notes or companion HTML/text files.
 
-The presentation has 98 numbered slides through Thank you, followed by two unnumbered reference appendices. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
+The presentation has 85 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
 ## Check and build
 
@@ -49,7 +49,7 @@ Forty reviewed recordings use 1440 × 900 delivery frames at 60 fps. Setup runs 
 
 `data/demos/video-release.json` points to the current immutable release manifest under `public/materials/video-refresh/`. The manifest identifies every delivered file by size and SHA-256 hash. The current release preserves the previous NotebookLM Video Overview and the eight demonstrations excluded from the refresh. An available recording does not imply that its service is free or that it improves learning.
 
-The capture, review and release workflow is documented in [docs/recordings.md](docs/recordings.md). Nine obsolete capture/render scripts and unique historical recordings have been archived outside the project. Rebuildable encode caches, old builds and old delivery archives have been removed. Archive recovery pointers are described in that document.
+The capture, review and release workflow is documented in [docs/recordings.md](docs/recordings.md). Obsolete capture/render scripts, historical recordings and older review files have been archived outside the project with verified recovery manifests. Rebuildable caches, old builds, booklet previews and temporary PDF experiments have been removed. Archive recovery pointers are described in that document.
 
 ## Materials and model lab
 

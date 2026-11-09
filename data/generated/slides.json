@@ -1771,6 +1771,82 @@
     "number": 39
   },
   {
+    "id": "S53CLAUDE",
+    "type": "workshop",
+    "kind": "screenshot-results",
+    "section": "chatgpt",
+    "stage": "The same requests in Claude",
+    "tool": "claude",
+    "title": "These shortcuts also work in Claude",
+    "message": "",
+    "body": [],
+    "sources": [
+      "CLAUDE_SHORTCUT_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "screenshots": [
+      {
+        "label": "/flashcard",
+        "src": "materials/claude-shortcuts/flashcard.png",
+        "alt": "Claude flashcard widget in English, showing the revealed answer that adding a prompt definition changes context rather than model parameters, with Back and Next buttons.",
+        "caption": "12 cards · answer reveal and navigation",
+        "format": "Native flashcard widget",
+        "prompt": "/flashcard Help me study the attached chapter.",
+        "width": 737,
+        "height": 550
+      },
+      {
+        "label": "/quiz",
+        "src": "materials/claude-shortcuts/quiz.png",
+        "alt": "Claude quiz widget in English with a question about tokens, four selectable answers, a Show hint control, three progress steps and a Next button.",
+        "caption": "3 questions · hints, feedback and retry",
+        "format": "Native quiz widget",
+        "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+        "width": 737,
+        "height": 582
+      },
+      {
+        "label": "/oral",
+        "src": "materials/claude-shortcuts/oral.png",
+        "alt": "Claude oral-practice Artifact in English showing a training-versus-inference question, a typed demonstration answer, Reveal expected answer, Back and Next controls.",
+        "caption": "10 questions · written answer and reveal",
+        "format": "Interactive Artifact",
+        "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+        "width": 668,
+        "height": 600
+      },
+      {
+        "label": "/mistakelog",
+        "src": "materials/claude-shortcuts/mistakelog.png",
+        "width": 730,
+        "height": 537,
+        "alt": "Native Claude HTML preview of a mistake-log card with a written rewrite field, Reveal correction, selectable quick-check answers, and Got it, Review again and Retry card buttons.",
+        "caption": "Interactive mistake log with correction reveal, checks and review controls",
+        "format": "Interactive HTML preview",
+        "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English."
+      },
+      {
+        "label": "/conceptmap",
+        "src": "materials/claude-shortcuts/conceptmap.png",
+        "width": 737,
+        "height": 464,
+        "alt": "Native Claude concept-map visualization in English with selectable Training, Inference and RAG branches. The selected Inference branch shows fixed parameters, changing context and a labelled flow from input to output.",
+        "caption": "Selectable branches and three check questions with feedback and retry",
+        "format": "Interactive in-chat visualization",
+        "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English."
+      }
+    ],
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 40,
+    "links": []
+  },
+  {
     "id": "S53TRYSHORTCUTS",
     "type": "workshop",
     "kind": "activity",
@@ -1802,12 +1878,16 @@
         "check"
       ]
     },
+    "activityTimer": {
+      "minutes": 5,
+      "id": "shortcut-practice"
+    },
     "media": {
-      "src": "images/andrea/andrea-focused-laptop-v1.webp",
-      "alt": "Andrea leans towards his laptop, concentrating intently as he types, wearing his teal hoodie.",
+      "src": "images/andrea/andrea-focused-laptop-book-v2.webp",
+      "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 40,
+    "number": 41,
     "links": []
   },
   {
@@ -1829,7 +1909,7 @@
       "src": "images/sections/skills-title-v1.webp",
       "alt": "A reusable kit of reading, guided practice and self-assessment cards, organised with a resource folder above an open textbook."
     },
-    "number": 41,
+    "number": 42,
     "links": []
   },
   {
@@ -1863,7 +1943,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 42,
+    "number": 43,
     "links": []
   },
   {
@@ -1875,10 +1955,15 @@
     "title": "Where skills can run",
     "message": "Check the product and the runtime before choosing a skill.",
     "body": [],
+    "links": [
+      {
+        "label": "Video tutorial: plugins and skills",
+        "url": "https://learn.chatgpt.com/training/walkthroughs/plugins-and-skills"
+      }
+    ],
     "audience": "both",
     "sources": [
-      "SKILL_CHATGPT",
-      "SKILL_STANDARD"
+      "SKILL_CHATGPT"
     ],
     "comparison": [
       {
@@ -1894,8 +1979,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 43,
-    "links": []
+    "number": 44
   },
   {
     "id": "S53SKILLSTUDY",
@@ -1926,7 +2010,7 @@
         "check"
       ]
     },
-    "number": 44,
+    "number": 45,
     "links": []
   },
   {
@@ -1952,9 +2036,9 @@
       "SKILL_DEMO_LEARN"
     ],
     "prompt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.",
-    "promptLabel": "Recorded prompt excerpt",
+    "promptLabel": "Recorded prompt",
     "decision": "Explain what changed before reading the feedback.",
-    "promptExcerpt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and",
+    "videoLayout": "prompt",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/skills-learn/video.mp4",
@@ -1986,7 +2070,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 45,
+    "number": 46,
     "links": []
   },
   {
@@ -2007,15 +2091,15 @@
       "SKILL_DEMO_THE_LEARNING_SKILL"
     ],
     "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
-    "promptLabel": "Recorded prompt excerpt",
+    "promptLabel": "Recorded prompt",
     "decision": "Compare your explanation with the model answer, then assess it against the criteria.",
-    "promptExcerpt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes",
     "studyPhases": {
       "primary": "recall",
       "secondary": [
         "plan"
       ]
     },
+    "videoLayout": "prompt",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/skills-the-learning-skill/video.mp4",
@@ -2062,7 +2146,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 46,
+    "number": 47,
     "links": []
   },
   {
@@ -2082,12 +2166,12 @@
       "SKILL_DEMO_MARKDOWN_MERMAID_WRITING"
     ],
     "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
-    "promptLabel": "Recorded prompt excerpt",
+    "promptLabel": "Recorded prompt",
     "decision": "Check each arrow against the chapter, then explain the diagram independently.",
-    "promptExcerpt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays",
     "studyPhases": {
       "primary": "connect"
     },
+    "videoLayout": "prompt",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/video.mp4",
@@ -2133,7 +2217,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 47,
+    "number": 48,
     "links": []
   },
   {
@@ -2153,12 +2237,12 @@
       "SKILL_DEMO_FLASHCARD_GENERATOR"
     ],
     "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.",
-    "promptLabel": "Recorded prompt excerpt",
+    "promptLabel": "Recorded prompt",
     "decision": "Attempt each answer first; the text file is a deck, not an interactive app.",
-    "promptExcerpt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question",
     "studyPhases": {
       "primary": "recall"
     },
+    "videoLayout": "prompt",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/skills-flashcard-generator/video.mp4",
@@ -2204,8 +2288,57 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 48,
+    "number": 49,
     "links": []
+  },
+  {
+    "id": "S53TRYSKILLS",
+    "type": "workshop",
+    "kind": "activity",
+    "section": "study",
+    "stage": "Audience · skill practice",
+    "title": "Your turn: try a skill",
+    "message": "10 minutes · Use the GenAI book or a source from your subject.",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "steps": [
+      {
+        "title": "Choose and install a skill",
+        "text": "Use one of the four reviewed skills, or find a new one. Install it in a compatible host."
+      },
+      {
+        "title": "Create study material",
+        "text": "Try the skill with your source: make flashcards, a diagram or a study kit."
+      },
+      {
+        "title": "Test and improve",
+        "text": "Use the material, check it against the source and refine your request."
+      }
+    ],
+    "links": [
+      {
+        "label": "Skills and installation guide",
+        "url": "./materials/skills-guide.html"
+      }
+    ],
+    "activityTimer": {
+      "minutes": 10,
+      "id": "skill-practice"
+    },
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "media": {
+      "src": "images/andrea/andrea-focused-laptop-book-v2.webp",
+      "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
+      "fit": "contain"
+    },
+    "number": 50
   },
   {
     "id": "S53TOOLSSECTION",
@@ -2226,7 +2359,7 @@
       "src": "images/sections/tool-title-v1.webp",
       "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
     },
-    "number": 49,
+    "number": 51,
     "links": []
   },
   {
@@ -2245,7 +2378,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 50,
+    "number": 52,
     "links": []
   },
   {
@@ -2278,7 +2411,7 @@
       "transcript": "Compiler — real execution, recorded 5 November 2026\n\nINPUT\nI have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.\n\nACTUAL RESULT\nStudy the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking\n\n00:00:00.000 Describe the study goal in your own words.\n00:00:04.000 Compiler extracts actions from the unstructured note.\n00:00:06.000 Actual result: four suggested study tasks.\n00:00:10.000 Review the list: keep the learning goal and remove overlap.",
       "browserFrame": true
     },
-    "number": 51,
+    "number": 53,
     "links": []
   },
   {
@@ -2311,7 +2444,7 @@
       "transcript": "Magic ToDo — real execution, recorded 5 November 2026\n\nINPUT\nRead the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nLocate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.\n\n00:00:00.000 Start with one concrete task from the chapter.\n00:00:04.000 Use the magic-wand button to break the task down.\n00:00:06.000 Actual result: 4 smaller steps.\n00:00:10.000 Choose the steps that help; revise generic or repeated advice.",
       "browserFrame": true
     },
-    "number": 52,
+    "number": 54,
     "links": []
   },
   {
@@ -2344,7 +2477,7 @@
       "transcript": "Estimator — real execution, recorded 5 November 2026\n\nINPUT\nRead two pages about training and inference, write a three-line comparison, and explain it aloud once.\n\nACTUAL RESULT\n10-20 minutes\n\n00:00:00.000 Describe the activity and its expected output.\n00:00:04.000 Ask Estimator for a rough time window.\n00:00:06.000 Actual result: 10-20 minutes.\n00:00:10.000 Record the real time, then adjust the next study session.",
       "browserFrame": true
     },
-    "number": 53,
+    "number": 55,
     "links": []
   },
   {
@@ -2377,7 +2510,7 @@
       "transcript": "Taskmaster — real execution, recorded 5 November 2026\n\nINPUT\nAndrea · full-page demo — Read the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nTaskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.\n\n00:00:00.000 Open the study list and choose one current task.\n00:00:03.000 Press Play and work with one item in view.\n00:00:07.000 Pause the timer. This demonstration records three seconds.\n00:00:10.000 Elapsed time shows activity; check understanding separately.",
       "browserFrame": true
     },
-    "number": 54,
+    "number": 56,
     "links": []
   },
   {
@@ -2410,7 +2543,7 @@
       "transcript": "Professor — real execution, recorded 5 November 2026\n\nINPUT\nTraining versus inference in a language model. Explain the difference briefly and give one short example.\n\nACTUAL RESULT\nEXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.\n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.\nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.\nExample: Asking the model to write a summary of today's news after it has already been trained.\n\n00:00:00.000 Ask a focused question about training and inference.\n00:00:04.000 Professor generates an explanation and an example.\n00:00:07.000 Read the actual explanation; an analogy still needs checking.\n00:00:11.000 Return to the chapter: which parameters change, and when?",
       "browserFrame": true
     },
-    "number": 55,
+    "number": 57,
     "links": []
   },
   {
@@ -2443,7 +2576,7 @@
       "transcript": "Formalizer — real execution, recorded 5 November 2026\n\nINPUT\nTraining is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.\n\nACTUAL RESULT\nTraining refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.\n\n00:00:00.000 Start with a draft that includes an unresolved question.\n00:00:04.000 Choose More professional, then Convert.\n00:00:06.000 Read the actual rewrite and compare its meaning.\n00:00:10.000 The uncertainty about context remains. Check the science too.",
       "browserFrame": true
     },
-    "number": 56,
+    "number": 58,
     "links": []
   },
   {
@@ -2484,7 +2617,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 57,
+    "number": 59,
     "links": []
   },
   {
@@ -2521,42 +2654,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 58,
-    "links": []
-  },
-  {
-    "id": "S60A",
-    "type": "workshop",
-    "kind": "activity",
-    "section": "study",
-    "stage": "Audience · activity 1",
-    "title": "Activity: choose the next support",
-    "message": "Five minutes on the method; no GenAI knowledge required",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "steps": [
-      {
-        "title": "Read the case · 1 minute",
-        "text": "Andrea has twenty subtasks but cannot decide which to start."
-      },
-      {
-        "title": "Decide in pairs · 2 minutes",
-        "text": "Reduce the plan to three actions and add one check of understanding."
-      },
-      {
-        "title": "Share · 2 minutes",
-        "text": "Name your selection criterion and one decision you would leave to Andrea."
-      }
-    ],
-    "decision": "A justified support choice that can transfer to another subject.",
-    "studyPhases": {
-      "primary": "plan",
-      "secondary": [
-        "check"
-      ]
-    },
-    "number": 59,
+    "number": 60,
     "links": []
   },
   {
@@ -2578,7 +2676,7 @@
         "connect"
       ]
     },
-    "number": 60,
+    "number": 61,
     "links": []
   },
   {
@@ -2648,9 +2746,10 @@
       "fps": 60,
       "sha256": "a8ceb24285bd2f603667c3f2cb22d44c59e0eba05e6e1042df2782d5c83c4050",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 61,
+    "number": 62,
     "links": []
   },
   {
@@ -2704,9 +2803,10 @@
       "fps": 60,
       "sha256": "d6ef44f7d64e037c6ebfbbf04911cc595ada81887144cc564fe6c132c87a2c60",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 62,
+    "number": 63,
     "links": []
   },
   {
@@ -2764,9 +2864,10 @@
       "fps": 60,
       "sha256": "6413b954fab0480f9933528c8577e9c5509aac5a8183e9c5c685d1a8a6127842",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 63,
+    "number": 64,
     "links": []
   },
   {
@@ -2790,8 +2891,8 @@
     "studyPhases": {
       "primary": "understand"
     },
-    "promptExcerpt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added",
-    "promptLabel": "Recorded prompt excerpt",
+    "promptLabel": "Recorded prompt",
+    "videoLayout": "prompt",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/notebook-chat/video.mp4",
@@ -2825,9 +2926,10 @@
       "fps": 60,
       "sha256": "bbbedbdc2c0c9ef7557dff1271dd8c2f271afff11d12807633dde1f59142d9ad",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 64,
+    "number": 65,
     "links": []
   },
   {
@@ -2895,19 +2997,16 @@
       "fps": 60,
       "sha256": "7187d83f706bb3917521cc96e99348b73678e2f5c139c1e999af23f6da277869",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
     "links": [
-      {
-        "label": "Check the original chapter",
-        "url": "./materials/booklet-genai/lettura.html"
-      },
       {
         "label": "Earlier PDF citation capture",
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 65
+    "number": 66
   },
   {
     "id": "S64SETTINGS",
@@ -2960,9 +3059,10 @@
       "fps": 60,
       "sha256": "3f74bfbc5080523ea03b5f34b5a181b3ff4c6078862f3c418149b3e626aa310e",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 66,
+    "number": 67,
     "links": []
   },
   {
@@ -2998,7 +3098,7 @@
         "connect"
       ]
     },
-    "number": 67,
+    "number": 68,
     "links": []
   },
   {
@@ -3071,9 +3171,10 @@
       "fps": 60,
       "sha256": "7a768fe87ebeec9f3bae869513afbc591cb302ba546ba60ebe6ae7f1ca7c5c38",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 68,
+    "number": 69,
     "links": []
   },
   {
@@ -3122,8 +3223,8 @@
         "qualification": "Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.",
         "mediaType": "application/pdf",
         "download": true,
-        "sha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
-        "bytes": 110599,
+        "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+        "bytes": 110398,
         "sourceMethod": "observed-ui-derived-pdf",
         "supplemental": []
       },
@@ -3134,9 +3235,10 @@
       "fps": 60,
       "sha256": "b85ef7493bc6b392cc99bdd4b2a4bee793dd98746588d5b44f11de145e1e01da",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 69,
+    "number": 70,
     "links": []
   },
   {
@@ -3190,9 +3292,10 @@
       "fps": 60,
       "sha256": "fa2cf4f325a4d21198f4b0d186cbbbf620591a761701167febbc7c6fe8aeb800",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 70,
+    "number": 71,
     "links": []
   },
   {
@@ -3246,9 +3349,10 @@
       "fps": 60,
       "sha256": "d6368cf0fbc42cbc161dfed6adb5053d12dd744d7ce2df6827be84d572094513",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 71,
+    "number": 72,
     "links": []
   },
   {
@@ -3306,9 +3410,10 @@
       "fps": 60,
       "sha256": "41b1760a2d7c890c3d2fad960a505bf9a08e940d59b4c33f7fad181dd4cb1a17",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 72,
+    "number": 73,
     "links": []
   },
   {
@@ -3362,9 +3467,10 @@
       "fps": 60,
       "sha256": "a1f42017065f31360a322202f419033b8dc3cb022280178bc5db02843e31d9bb",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 73,
+    "number": 74,
     "links": []
   },
   {
@@ -3387,17 +3493,21 @@
     },
     "media": {
       "type": "video",
-      "src": "materials/notebook/video.mp4",
-      "poster": "materials/notebook/video-poster.jpg",
-      "captions": "materials/notebook/video.en.vtt",
+      "src": "materials/notebook/video-overview-2026-11-08/overview.mp4",
+      "poster": "materials/notebook/video-overview-2026-11-08/poster.jpg",
+      "captions": "materials/notebook/video-overview-2026-11-08/captions.en.vtt",
+      "transcriptFile": "materials/notebook/video-overview-2026-11-08/transcript.txt",
       "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "NotebookLM · Video Overview: real actions recorded from scratch in @Browser.",
-      "caption": "Recorded in @Browser · 21 s",
-      "source": "https://notebook.google.com/",
-      "transcript": "NotebookLM · Video Overview — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nNew Explainer: Training vs. Inference, duration 7:04, Whiteboard style. Playback was started in its standalone @Browser tab, then Skip forward and Pause were exercised.\n\nSCOPE\nVideo generated anew from the uploaded PDF with an explicit training-versus-inference focus. All recorded video frames come from @Browser. The interface demonstration is silent.\n\nCAPTIONS\n00:00:00.000 Open Video Overview in Studio.\n00:00:01.876 Choose an Explainer video for a structured explanation of the chapter.\n00:00:03.817 Set a visual style and focus, then generate the source-based video.\n00:00:06.616 Open the new Training vs. Inference Explainer generated from the chapter.\n00:00:08.966 Play the new 7:04 Explainer, Training vs. Inference.\n00:00:17.400 Skip forward and pause to inspect a concept against the chapter.\n"
+      "alt": "Original English NotebookLM Video Overview: Training vs. Inference & RAG, generated 8 November 2026.",
+      "caption": "8 Nov 2026 · 6:56 · original audio",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec",
+      "durationSeconds": 416.867846,
+      "sha256": "cf78bafa2b23aec48abbc1c9ce38e920cd21fb0b1a5ef1d054630fc26d94c0b6",
+      "recordingMode": "native-video-export",
+      "provenance": "materials/notebook/video-overview-2026-11-08/provenance.json",
+      "transcript": "Welcome to today's explainer. We are jumping right into what is easily one of the most fascinating, and honestly most misunderstood, topics in tech right now. How generative AI systems actually process and retain information. Look, we all interact with these tools every single day, but there's a ton of confusion about what's actually happening under the hood. Does the AI learn from every conversation we have with it? Does it secretly keep a giant memory bank of facts? Well, today we're going beyond the prompt to decode the reality of how AI really learns. Here's our roadmap for the explainer today. First, models versus complete applications. Second, training updates the parameters. Third, inference with fixed models. Fourth, retrieval-augmented generation, or RAG, and finally, reliability and limitations. Okay, let's kick things off with a question that gets right to the heart of a massive misconception. If you type in this chapter, X means Y into a prompt. Does the model permanently learn that fact? Does it update its internal weights? Take a second to really think about your answer. You know, a lot of people just assume that because the AI uses that new info in its very next reply, its brain must have been permanently rewired. But as we're going to see, the reality of how these systems hold on to information is totally different from human memory. Before we get into the heavy mechanics, we need to establish a baseline vocabulary. What exactly is the engine driving all of this? At its core, a generative language model is an auto-regressive system. Now, all that fancy term means is that it assigns probabilities to token sequences. It looks at the context it already has and calculates which token, well, which word, part of a word, or even punctuation mark, might logically come next. That is literally it. Repeating that specific calculation over and over again is what builds out a response. It's a probability engine, folks. Not a conscious fact-checker. Models versus complete applications. So there is a hard, absolute boundary we have to draw between the core model itself and the software wrapped around it. The core model simply calculates token probabilities based on context. That's the engine. But the complete application, like the slick chat interfaces we use daily, that adds system instructions, web search capabilities, file retrieval, filters, and managed memory. The fluent human-sounding writing? That comes from the core model. But pulling up a PDF or browsing the web, that entirely belongs to the surrounding application. Training updates the parameters. This definitive line is absolutely crucial when we look at different ways we intervene with the AI. If you want to permanently change the model's core numerical values, you have to actually train or fine-tune it. Just adding a new message in the context window or uploading an external document only changes the information available for that one specific calculation. It does not, in any way, update the permanent weights of the model. So what does actual training look like? It's a highly mechanical, computationally heavy flow. First, massive amounts of text examples are fed into the system. The system tries to predict the next tokens, compares them to the actual text, and calculates its prediction error. Next, these intense optimization algorithms execute physical numerical updates to the parameter values to reduce that aggregate error. The end result is a permanently changed model. The text just supplies the learning signal. The mathematical optimization does the actual rewiring. It's serious heavy lifting, and it's completely separate from you just typing a prompt into a chat box. Inference with fixed models. Now contrast all that heavy lifting with ordinary inference. When you send a prompt, the model is completely frozen. Its parameters do not change. It takes your input, runs calculations based purely on that prompt and its frozen parameters, and creates a probability distribution for the next token. Finally, an output is selected. Keeping the model fixed while changing your input is really just exploring the effective context. You aren't teaching the AI anything permanent. You're just giving it different starting conditions for its math. Let's actually ground this math in reality with a recorded run from a real model, Qwen 2.5. Given the context, the capital of Italy is. The model calculates continuation probabilities. As you can see, the token for Rome gets the highest probability at 44.86%. Located gets 10.35% and so on. Notice that these values are continuation probabilities, not absolute truth scores. The model doesn't know Rome is the capital in the way you or I do. It merely calculated that Rome is the most probable next token based entirely on its fixed parameters and the context you gave it. Retrieval Augmented Generation, or RAG. So if a fixed model can't learn new facts on the fly, how in the world do we get it to answer questions about a brand new document, or today's news? Well, we use RAG. Think of it as an open book test for the AI. You ask a question, and a separate search component goes out and retrieves relevant passages from an external database, like a PDF you just uploaded. Those passages are stuffed right into the context window alongside your question and handed over to the fixed model to read. The model then generates an answer based purely on that newly provided temporary context. Let's make this crystal clear. RAG searches external documents and makes those passages available to the generation context. Crucially, it does not change the model's parameters or weights. Uploading a PDF just updates the available information for that one conversation, not the AI's permanent brain. And remember the limits here. The retrieval part can fail. It can grab completely irrelevant data. Or the model might just misinterpret the material you supplied it entirely. Reliability and Limitations. It is incredibly important to remember what we've unpacked today when you're evaluating AI outputs. A model can easily produce plausible but totally incorrect text, what we call hallucinations. There isn't just one single cause for this. And lowering the model's temperature or creativity settings isn't a magic fix. Think back to that Qwen model predicting Rome. Even when it produces a highly confident token probability, it is still just predicting the next word based on frozen parameters. An 80% probability for a token absolutely does not mean the claim has an 80% chance of being factually true. I want to leave you with this final really important thought from our source material. A link is not automatic proof. If the text does not contain the answer, the student should recognize that limit and seek another appropriate source. Because generative AI is ultimately a probability engine, running fixed parameters on the context it's given. Human verification remains absolutely essential. Fluent writing simply doesn't equal factual accuracy. So the next time you use an AI tool, ask yourself this. Are you trusting the machine's frozen math or the context you actually provided? Thanks so much for joining me for this explainer."
     },
-    "number": 74,
+    "number": 75,
     "links": []
   },
   {
@@ -3454,9 +3564,10 @@
       "fps": 60,
       "sha256": "b4f9e19371b95fb95efc6b74628db2a2cd2e5c45ba0b0250ddf659c686de9cbf",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 75,
+    "number": 76,
     "links": []
   },
   {
@@ -3513,9 +3624,10 @@
       "fps": 60,
       "sha256": "b5908881ba8a1f79c4a335b0f2e5ab500813812c48b39622568a0d60f40774c4",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 76,
+    "number": 77,
     "links": []
   },
   {
@@ -3569,9 +3681,10 @@
       "fps": 60,
       "sha256": "3cc9b0cbbcf5e8d5bc30c27cb7bcfefddfb7a7523766bd38bd9aad5381b59fbb",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 77,
+    "number": 78,
     "links": []
   },
   {
@@ -3625,681 +3738,56 @@
       "fps": 60,
       "sha256": "17c069abb9fae81abf1fc7b78aa039d541391f60a8b0b8bd7bd26400c5971955",
       "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 78,
+    "number": 79,
     "links": []
   },
   {
-    "type": "workshop",
-    "section": "study",
-    "body": [
-      "Book §1.2: Does adding a definition to a prompt update the model’s weights? Explain why before revealing the answer."
-    ],
-    "audience": "both",
-    "id": "S67SPACED",
-    "kind": "compare",
-    "stage": "Learner · spaced practice",
-    "title": "Anki: practise recall over time",
-    "message": "Andrea reuses questions from the same book, then answers before revealing.",
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_ANKI",
-      "TOOL_ANKIWEB"
-    ],
-    "comparison": [
-      {
-        "label": "Anki / AnkiWeb",
-        "text": "Create or import checked cards in free Anki Desktop; sync and review in AnkiWeb with an account. Rate recall honestly to schedule the next review."
-      }
-    ],
-    "decision": "The downloadable cards are prepared examples; these account-based workflows were not executed in this session.",
-    "links": [
-      {
-        "label": "Book cards · TSV",
-        "url": "./materials/study-tools/book-cards.tsv",
-        "download": true
-      },
-      {
-        "label": "AnkiWeb",
-        "url": "https://ankiweb.net/"
-      }
-    ],
-    "tool": "anki",
-    "studyPhases": {
-      "primary": "recall",
-      "secondary": [
-        "check"
-      ]
-    },
-    "number": 79
-  },
-  {
-    "type": "workshop",
-    "section": "study",
-    "body": [
-      "Book §1.2: Does adding a definition to a prompt update the model’s weights? Explain why before revealing the answer."
-    ],
-    "audience": "both",
-    "id": "S67KNOWT",
-    "kind": "compare",
-    "stage": "Learner · spaced practice",
-    "title": "Knowt: build a checked study set",
-    "message": "Andrea reuses questions from the same book, then answers before revealing.",
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_KNOWT"
-    ],
-    "comparison": [
-      {
-        "label": "Knowt",
-        "text": "Create a set from checked questions and use its study modes, including spaced repetition. An account is required; free AI features have limits."
-      }
-    ],
-    "decision": "The downloadable cards are prepared examples; these account-based workflows were not executed in this session.",
-    "links": [
-      {
-        "label": "Book cards · TSV",
-        "url": "./materials/study-tools/book-cards.tsv",
-        "download": true
-      },
-      {
-        "label": "Knowt",
-        "url": "https://knowt.com/"
-      }
-    ],
-    "tool": "knowt",
-    "studyPhases": {
-      "primary": "recall",
-      "secondary": [
-        "check"
-      ]
-    },
-    "number": 80
-  },
-  {
-    "id": "S70",
-    "type": "workshop",
-    "kind": "procedure",
-    "section": "study",
-    "stage": "Learner · summarise",
-    "title": "Napkin: start with checked text",
-    "message": "Choose the relationships before generating the visual",
-    "body": [],
-    "sources": [
-      "TOOL_NAPKIN_GUIDE"
-    ],
-    "audience": "both",
-    "tool": "napkin",
-    "prompt": "Training updates parameters. During inference, the context text becomes a token sequence. The model calculates probabilities for the next token. A selection rule chooses a token and the process repeats.",
-    "steps": [
-      {
-        "title": "Paste the text",
-        "text": "Use a summary checked against the chapter."
-      },
-      {
-        "title": "Select and generate",
-        "text": "Request a visual for that specific passage."
-      }
-    ],
-    "decision": "Napkin proposes a representation; it does not certify the text.",
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "media": {
-      "src": "images/tools/napkin-2.png",
-      "alt": "Napkin: selected text and the blue Generate Visual control on its left.",
-      "caption": "Generate control in the official guide; the vendor’s example text is unrelated to Andrea.",
-      "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
-    },
-    "number": 81,
-    "links": []
-  },
-  {
-    "id": "S71",
-    "type": "workshop",
-    "kind": "compare",
-    "section": "study",
-    "stage": "Learner · summarise",
-    "title": "Napkin: check the visual",
-    "message": "Prefer a representation that preserves the meaning",
-    "body": [],
-    "sources": [
-      "TOOL_NAPKIN_GUIDE",
-      "BOOK_CHAPTER"
-    ],
-    "audience": "both",
-    "tool": "napkin",
-    "comparison": [
-      {
-        "label": "Avoid",
-        "text": "One arrow labelled “prompt → training → answer” mixes different processes."
-      },
-      {
-        "label": "Look for",
-        "text": "Separate training; show a cycle for token-by-token inference."
-      }
-    ],
-    "steps": [
-      {
-        "title": "Review labels and arrows",
-        "text": "Correct the terms, then explain why the visual matches the chapter."
-      }
-    ],
-    "decision": "Explain each arrow, then check the inference cycle against the chapter.",
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "media": {
-      "src": "images/tools/napkin-3.png",
-      "alt": "Napkin interface showing alternative generated visual representations.",
-      "caption": "Official guide: choosing a visual.",
-      "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
-    },
-    "number": 82,
-    "links": []
-  },
-  {
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "id": "S72DRAWIO",
-    "kind": "tool-demo",
-    "stage": "draw.io · recorded book test",
-    "tool": "drawio",
-    "title": "draw.io: build the inference path",
-    "message": "A student-built flow from the workshop book.",
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_DRAWIO",
-      "TOOL_DEMO_DRAWIO"
-    ],
-    "prompt": "Using book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.",
-    "promptLabel": "Recorded task",
-    "decision": "New context changes the input; ordinary inference keeps the learned parameters fixed.",
-    "studyPhases": {
-      "primary": "connect",
-      "secondary": [
-        "apply"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/study-tools/drawio.mp4",
-      "poster": "materials/study-tools/drawio-poster.jpg",
-      "captions": "materials/study-tools/drawio.en.vtt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "darkFrame": true,
-      "alt": "draw.io: real manual web-editor task using the workshop book.",
-      "caption": "Recorded book test · 38 s",
-      "source": "https://app.diagrams.net/",
-      "transcript": "draw.io — recorded book test\n\nBOOK\nFoundations of Generative Artificial Intelligence, sections 1.2, 1.7.\n\nRECORDED TASK\nUsing book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.\n\n00:00:00.000 Place the context before inference. Its content changes between requests.\n00:00:04.767 Add inference: the model uses its learned parameters to predict the next token.\n00:00:09.524 Complete the path from context to inference to the next token.\n00:00:14.530 Arrange the three concepts in reading order.\n00:00:19.375 Connect context to inference. The arrow means input to the model, not retraining.\n00:00:24.212 Connect inference to the next token. Generation appends that token and repeats.\n00:00:29.136 Check sections 1.2 and 1.7: prompt and context feed inference with fixed weights, followed by next-token generation.\n\nOBSERVED RESULT\nBuilt three labelled nodes and two attached directional connectors; added the source distinction and downloaded the editable diagram.\n\nCHECKS AGAINST THE BOOK\nPrompt/context precedes inference.\nInference explicitly uses fixed weights.\nNext-token generation follows inference.\nThe source note states new context is not new weights.\n\nEDITABLE ARTIFACT\nbook-context-inference.drawio\n"
-    },
-    "number": 83,
-    "links": []
-  },
-  {
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "id": "S72EXCALIDRAW",
-    "kind": "tool-demo",
-    "stage": "Excalidraw · recorded book test",
-    "tool": "excalidraw",
-    "title": "Excalidraw: explain the RAG arrow",
-    "message": "A freehand reconstruction of a relationship in §1.7.",
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_EXCALIDRAW",
-      "TOOL_DEMO_EXCALIDRAW"
-    ],
-    "prompt": "Using book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.",
-    "promptLabel": "Recorded task",
-    "decision": "Explain why an irrelevant retrieved passage can still produce an unreliable answer.",
-    "studyPhases": {
-      "primary": "connect",
-      "secondary": [
-        "apply"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/study-tools/excalidraw.mp4",
-      "poster": "materials/study-tools/excalidraw-poster.jpg",
-      "captions": "materials/study-tools/excalidraw.en.vtt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "darkFrame": false,
-      "alt": "Excalidraw: real manual web-editor task using the workshop book.",
-      "caption": "Recorded book test · 27 s",
-      "source": "https://excalidraw.com/",
-      "transcript": "Excalidraw — recorded book test\n\nBOOK\nFoundations of Generative Artificial Intelligence, sections 1.7.\n\nRECORDED TASK\nUsing book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.\n\n00:00:00.000 Rebuild the book relationship with a hand-drawn box for retrieved passages.\n00:00:04.634 Retrieved passages become part of the prompt context: section 1.7.\n00:00:09.260 Label the arrow: retrieval adds selected passages to the context.\n00:00:13.887 Add the source check: RAG changes context, not model weights. Retrieval can still fail.\n00:00:18.323 Explain each arrow aloud and check it against section 1.7 before comparing with an AI visual.\n\nOBSERVED RESULT\nDrew and labelled two nodes, connected them with an adds-to arrow, and annotated fixed weights plus the possibility of irrelevant retrieval.\n\nCHECKS AGAINST THE BOOK\nRetrieved passages feed prompt context.\nThe arrow is explicitly labelled adds to.\nThe source note preserves fixed weights.\nThe note states that retrieval may be irrelevant.\n\nEDITABLE ARTIFACT\nbook-rag.excalidraw\n"
-    },
-    "number": 84,
-    "links": []
-  },
-  {
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "id": "S72MINDMEISTER",
-    "kind": "compare",
-    "stage": "Learner · reconstruct and explain",
-    "title": "MindMeister: rebuild a branching map",
-    "message": "Close the book, reconstruct one relationship, then reopen §§1.2 and 1.7 to check it.",
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_MINDMEISTER_LIMIT"
-    ],
-    "comparison": [
-      {
-        "label": "MindMeister",
-        "text": "Alternative for a branching mind map. Basic requires an account and allows three maps per person, including maps shared with you."
-      }
-    ],
-    "decision": "Compare your reconstruction with the AI visual: identify one missing relationship and justify a correction.",
-    "tool": "mindmeister",
-    "studyPhases": {
-      "primary": "connect",
-      "secondary": [
-        "recall"
-      ]
-    },
-    "number": 85,
-    "links": []
-  },
-  {
-    "id": "S81TEACHERTOOLS",
-    "type": "workshop",
-    "kind": "section-divider",
-    "section": "teachers",
-    "stage": "Teacher tools",
-    "title": "Tools for teachers",
-    "message": "",
-    "body": [],
-    "sources": [],
-    "audience": "teacher",
-    "lang": "en",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
-    },
-    "number": 86,
-    "links": []
-  },
-  {
-    "id": "S82",
-    "type": "workshop",
-    "kind": "assessment",
-    "section": "teachers",
-    "stage": "Teacher · design",
-    "title": "The teacher designs the evidence",
-    "message": "The goal, task and criterion must concern the same knowledge",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "comparison": [
-      {
-        "label": "Goal",
-        "text": "Understand the roles of context, parameters and token selection."
-      },
-      {
-        "label": "Evidence",
-        "text": "An explanation, commented diagram, justified prediction and correction."
-      },
-      {
-        "label": "Criteria",
-        "text": "Concepts and relationships; process explanation; application and checking."
-      }
-    ],
-    "decision": "Assess what the learner can justify, alongside the assisted product.",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
-    },
-    "number": 87,
-    "links": []
-  },
-  {
-    "id": "S83",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "teachers",
-    "stage": "Teacher · prepare",
-    "title": "MagicSchool: draft and review a rubric",
-    "message": "Generate three criteria and four levels; review the descriptors and export.",
-    "body": [],
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_MAGIC",
-      "TOOL_MAGIC_PRICE"
-    ],
-    "audience": "both",
-    "tool": "magicschool",
-    "prompt": "Create a four-level rubric for a second-year university student who studies the workshop chapter, builds a labelled diagram and independently explains language-model generation. Use exactly three criteria: concepts and relationships; process explanation; application and checking. Describe observable evidence at each level. Distinguish the assisted product from the independent explanation. Do not reward writing polish or code complexity alone. Source distinctions: training updates numerical parameters; ordinary inference uses fixed parameters; adding a prompt definition changes context; RAG supplies retrieved passages as context and does not itself update weights; next-token probability is not a guarantee of truth.",
-    "promptLabel": "Recorded prompt excerpt",
-    "promptExcerpt": "Create a four-level rubric for a second-year university student who studies the workshop chapter, builds a labelled diagram and independently explains language-model generation. Use exactly three criteria: concepts and",
-    "decision": "Teacher check: distinguish context from parameters and assisted work from independent explanation.",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-rubric/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-rubric/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-rubric/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-rubric/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "MagicSchool — MagicSchool: draft and review a rubric: recorded demonstration and use.",
-      "caption": "MagicSchool · 58.6 s",
-      "transcript": "MagicSchool — Rubric Generator\n\nREQUEST\nCreate a four-level rubric for a second-year university student who studies the workshop chapter, builds a labelled diagram and independently explains language-model generation. Use exactly three criteria: concepts and relationships; process explanation; application and checking. Describe observable evidence at each level. Distinguish the assisted product from the independent explanation. Do not reward writing polish or code complexity alone. Source distinctions: training updates numerical parameters; ordinary inference uses fixed parameters; adding a prompt definition changes context; RAG supplies retrieved passages as context and does not itself update weights; next-token probability is not a guarantee of truth.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new MagicSchool rubric. (3× speed)\n00:00:00.218 Choose University and four levels. (3× speed)\n00:00:00.643 Enter the approved brief and short source distinctions; PDF upload unavailable. (3× speed)\n00:00:13.037 Read the complete approved brief; short source distinctions only.\n00:00:15.585 Generate the rubric from the approved brief. (3× speed)\n00:00:16.187 Generate from the approved brief and short source distinctions. (4× speed)\n00:00:16.430 Review the first rubric across all four levels.\n00:00:24.313 Refine to 18 words per descriptor and a genuinely unaided explanation.\n00:00:24.489 Focus the native refinement field\n00:00:41.083 Generate the revised rubric\n00:00:41.963 Generate the concise observable descriptors. (4× speed)\n00:00:42.106 Read the revised three-criterion rubric across four levels.\n00:00:54.166 Export the reviewed final rubric\n00:00:55.023 Choose Microsoft Word and review Selected Resource.\n00:00:55.643 Open Microsoft Word export options\n00:00:56.612 Export the selected final rubric as the original Word file.\n00:00:57.934 Download the selected final rubric as Word\n\nOBSERVED RESULT\nGenuine MagicSchool rubric created from the exact approved task and short chapter distinctions only. PDF upload was denied; no PDF contents were uploaded or read by this tool. Native revision limits all 12 descriptors to 18 words and treats independence as an explanation without assistance. Actual final three criteria/four levels were read in the UI, then Selected Resource exported through Microsoft Word as the original 59,721-byte DOCX.\n\n",
-      "prompt": "Create a four-level rubric for a second-year university student who studies the workshop chapter, builds a labelled diagram and independently explains language-model generation. Use exactly three criteria: concepts and relationships; process explanation; application and checking. Describe observable evidence at each level. Distinguish the assisted product from the independent explanation. Do not reward writing polish or code complexity alone. Source distinctions: training updates numerical parameters; ordinary inference uses fixed parameters; adding a prompt definition changes context; RAG supplies retrieved passages as context and does not itself update weights; next-token probability is not a guarantee of truth.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/teacher-tools-magicschool-rubric/exports/rubric.docx",
-        "label": "Open result (Word)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "download": true,
-        "sha256": "ded350e02ac42085ef8ada0dc8203836441206e36ad8cfed0336a1d97efe7501",
-        "bytes": 59721,
-        "sourceMethod": "native-download",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/teacher-tools-magicschool-rubric.json",
-      "durationSeconds": 58.616667,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "3827fd20553ebbdb846a84400ab24c46d7c3f81d992b57fcb544078aa4cfdca1",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 88,
-    "links": []
-  },
-  {
-    "id": "S85",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "teachers",
-    "stage": "Teacher · questions",
-    "title": "MagicSchool: check questions and answers",
-    "message": "Generate five questions, check the key and request missing explanations.",
-    "body": [],
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_MAGIC"
-    ],
-    "audience": "both",
-    "tool": "magicschool",
-    "prompt": "Create five questions on the supplied chapter summary for second-year university students. Test training versus inference, a definition added to a prompt, tokens versus words, RAG versus parameter updates, and next-token probability versus truth. Provide the answer key and a brief rationale. Avoid trick questions. Source summary: training changes parameters; ordinary inference uses fixed parameters; a new prompt changes context; a token may be a word, word part or punctuation; RAG supplies retrieved passages as context and does not guarantee correctness; token probability measures a possible continuation, not the factual truth of the whole answer. Answer in English. Keep questions concise and provide one short rationale per correct answer.",
-    "decision": "Check each answer and its rationale against the chapter before assigning the questions.",
-    "promptLabel": "Recorded prompt excerpt",
-    "promptExcerpt": "Create five questions on the supplied chapter summary for second-year university students. Test training versus inference, a definition added to a prompt, tokens versus words, RAG versus parameter updates, and",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-questions/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-questions/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-questions/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/teacher-tools-magicschool-questions/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "MagicSchool — MagicSchool: check questions and answers: recorded demonstration and use.",
-      "caption": "MagicSchool · 50.7 s",
-      "transcript": "MagicSchool — Multiple Choice Quiz / Assessment\n\nREQUEST\nCreate five questions on the supplied chapter summary for second-year university students. Test training versus inference, a definition added to a prompt, tokens versus words, RAG versus parameter updates, and next-token probability versus truth. Provide the answer key and a brief rationale. Avoid trick questions. Source summary: training changes parameters; ordinary inference uses fixed parameters; a new prompt changes context; a token may be a word, word part or punctuation; RAG supplies retrieved passages as context and does not guarantee correctness; token probability measures a possible continuation, not the factual truth of the whole answer. Answer in English. Keep questions concise and provide one short rationale per correct answer.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start an empty MagicSchool assessment. (3× speed)\n00:00:00.364 Enter the approved brief and short source summary; PDF upload unavailable. (3× speed)\n00:00:09.486 Read the complete approved brief and short chapter summary.\n00:00:13.184 Generate five questions from the approved short summary. (3× speed)\n00:00:13.721 MagicSchool generates the original five-question assessment. (4× speed)\n00:00:14.458 Inspect the generated questions and their actual answer key.\n00:00:20.516 Request the missing explanations while preserving all five questions.\n00:00:20.557 Focus the answer field\n00:00:27.104 Generate the complete assessment with rationales\n00:00:27.493 Generate the missing answer rationales as a separate native response. (4× speed)\n00:00:28.114 Read question 1 and its answer options.\n00:00:31.058 Read question 2 and its answer options.\n00:00:33.865 Read question 3 and its answer options.\n00:00:36.654 Read question 4 and its answer options.\n00:00:39.418 Read question 5 and its answer options.\n00:00:42.183 Check each correct answer against its explanation.\n00:00:45.850 Export the native question set and its explanations together.\n00:00:45.955 Open the native assessment export options\n00:00:46.360 Export the actual assessment thread as Word\n00:00:49.412 Include the original questions and the separate rationales\n00:00:50.226 Download the original complete assessment thread\n\nOBSERVED RESULT\nNative MagicSchool five-question assessment created from the exact approved brief and short chapter summary only; PDF upload denied. Original key D,C,A,A,B. A genuine 1x follow-up requests missing rationales, generated in a separate native response. All five questions/options were read at1x for2.6s each and all five rationales for3.5s. Native Word Full Thread export preserves both actual responses; no manual merging.\n\n",
-      "prompt": "Create five questions on the supplied chapter summary for second-year university students. Test training versus inference, a definition added to a prompt, tokens versus words, RAG versus parameter updates, and next-token probability versus truth. Provide the answer key and a brief rationale. Avoid trick questions. Source summary: training changes parameters; ordinary inference uses fixed parameters; a new prompt changes context; a token may be a word, word part or punctuation; RAG supplies retrieved passages as context and does not guarantee correctness; token probability measures a possible continuation, not the factual truth of the whole answer. Answer in English. Keep questions concise and provide one short rationale per correct answer.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/teacher-tools-magicschool-questions/exports/assessment-and-rationales.docx",
-        "label": "Open result (Word)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "download": true,
-        "sha256": "2617465095d6c69a7613fa632d55f60718feed67848ae688fffde52c52db8f56",
-        "bytes": 67562,
-        "sourceMethod": "native-download",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/teacher-tools-magicschool-questions.json",
-      "durationSeconds": 50.666667,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "a77afa3ae3f0dd3dfc7a18e680384ed5307d8324597aba63849de5031ee4d704",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 89,
-    "links": []
-  },
-  {
-    "id": "S86",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "teachers",
-    "stage": "Teacher · collect",
-    "title": "Formative: build and preview an assessment",
-    "message": "Build three questions, check the key and preview the learner’s view.",
-    "body": [],
-    "sources": [
-      "TOOL_FORMATIVE"
-    ],
-    "audience": "both",
-    "tool": "formative",
-    "decision": "Recorded in a Paid Teacher trial. The teacher checks the AI draft before learners see it.",
-    "prompt": "Create three questions for a private workshop demonstration, in English. Use only these chapter facts: training updates model parameters; ordinary inference keeps parameters fixed; a new prompt changes context; RAG supplies retrieved passages as context. Q1 Multiple Choice: During ordinary inference, what changes when a new prompt is entered? Options: A The original training data; B The available context; C The learned parameters. Correct answer B, 1 point. Q2 Free Response: Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences. Expected: context changes, learned parameters remain fixed during ordinary inference. Q3 Drawing: Draw and label prompt plus context -> inference with fixed parameters -> next token. Add a brief note explaining what changes when a definition is added. Use only these three basic question types. This is an authored example; no real student records.",
-    "promptExcerpt": "Create three questions for a private workshop demonstration, in English. Use only these chapter facts: training updates model parameters; ordinary inference keeps parameters fixed; a new prompt changes context; RAG",
-    "promptLabel": "Recorded prompt excerpt",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/teacher-tools-formative-assessment/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/teacher-tools-formative-assessment/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/teacher-tools-formative-assessment/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/teacher-tools-formative-assessment/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "Formative — Formative: build and preview an assessment: recorded demonstration and use.",
-      "caption": "Formative · 146.7 s",
-      "transcript": "Formative — Create a private formative\n\nREQUEST\nCreate three questions for a private workshop demonstration, in English. Use only these chapter facts: training updates model parameters; ordinary inference keeps parameters fixed; a new prompt changes context; RAG supplies retrieved passages as context. Q1 Multiple Choice: During ordinary inference, what changes when a new prompt is entered? Options: A The original training data; B The available context; C The learned parameters. Correct answer B, 1 point. Q2 Free Response: Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences. Expected: context changes, learned parameters remain fixed during ordinary inference. Q3 Drawing: Draw and label prompt plus context -> inference with fixed parameters -> next token. Add a brief note explaining what changes when a definition is added. Use only these three basic question types. This is an authored example; no real student records.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. The original sent request is revisited later in four genuine chronological native scroll views at1x. No single-frame complete-prompt hold is claimed. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a private fictional workshop assessment. (3× speed)\n00:00:00.001 Name the private fictional workshop activity. (3× speed)\n00:00:01.285 Enter the approved short facts and three-question task. (3× speed)\n00:00:11.249 Luna generates three basic question types from the approved short facts. (4× speed)\n00:00:11.926 Review the three proposed basic question types.\n00:00:19.104 Add the three reviewed questions to the private activity\n00:00:19.779 Remove the model answer from the student question.\n00:00:20.542 Focus the answer field\n00:00:26.126 Set an expected answer before testing the actual grading behavior.\n00:00:26.357 Focus the answer field\n00:00:31.369 Remove the optional hints from this independent check.\n00:00:31.421 Remove a generated free-response hint\n00:00:32.930 Check the correct option, then remove the remaining optional hints.\n00:00:33.798 Inspect the multiple-choice key below the fixed toolbar\n00:00:35.186 Remove an optional multiple-choice hint\n00:00:36.692 Inspect the drawing question settings\n00:00:38.183 Remove an optional drawing hint\n00:00:39.105 Keep only the requested drawing response.\n00:00:40.097 Inspect the generated drawing settings\n00:00:41.524 Disable the optional extra show-work response\n00:00:45.170 Try the three response formats in student preview.\n00:00:45.556 Open the actual student preview\n00:00:46.232 Open the fictional student attempt in Preview.\n00:00:46.551 Start the three-question preview\n00:00:47.712 Read the first question\n00:00:48.378 Try an answer, reconsider fixed parameters, and revise it.\n00:00:48.696 Try the common parameters misconception\n00:00:51.484 Mark the uncertain response for review\n00:00:52.482 Revise the answer to available context\n00:00:54.862 Continue to the written explanation\n00:00:55.457 Explain how context changes while learned parameters stay fixed.\n00:00:55.760 Focus the answer field\n00:01:03.115 Continue to the drawing response\n00:01:03.817 Open the native drawing response and build the flow.\n00:01:04.077 Open the native drawing canvas\n00:01:05.559 Widen the actual drawing canvas\n00:01:06.238 Choose native text labels\n00:01:06.954 Place the first flow label on the native canvas\n00:01:07.638 Focus the answer field\n00:01:09.414 Commit the first label\n00:01:10.007 Choose the next text label\n00:01:10.524 Place the inference label\n00:01:10.824 Focus the answer field\n00:01:12.977 Commit the inference text\n00:01:13.538 Choose the output label tool\n00:01:14.048 Place the next-token output\n00:01:14.336 Focus the answer field\n00:01:15.755 Commit the output text\n00:01:16.087 Add the explanatory note\n00:01:16.387 Place the note below the flow\n00:01:16.688 Focus the answer field\n00:01:20.228 Commit the explanatory note\n00:01:20.891 Choose a native directional arrow\n00:01:21.767 Select single-headed arrows\n00:01:25.379 Review the completed flow\n00:01:28.556 Save the fictional drawing in preview\n00:01:29.289 Review the completed preview before submitting.\n00:01:29.322 Submit only the fictional preview attempt\n00:01:30.004 Return to the marked question and confirm the corrected answer.\n00:01:30.366 Review the marked question first\n00:01:31.171 Return to the corrected choice\n00:01:36.814 Confirm the corrected choice and remove the marker\n00:01:38.408 Return to the completed drawing\n00:01:39.027 Submit the fictional preview only\n00:01:40.006 Confirm the fictional preview submission\n00:01:40.925 A valid explanation is marked Incorrect: inspect the exact-match grading.\n00:01:41.088 Inspect the written-answer feedback\n00:01:44.042 Use teacher review for a semantically correct written explanation.\n00:01:44.989 Inspect the written-answer grading settings\n00:01:45.656 Clear the exact-match key and preserve expected meaning for teacher review.\n00:01:45.976 Focus the answer field\n00:01:48.535 Keep expected meaning in teacher-only instructions\n00:01:49.629 Focus the answer field\n00:02:01.109 Close the private teacher instructions\n00:02:01.664 Recheck preview after removing exact-match grading\n00:02:02.296 Retry the same completed preview after the grading change.\n00:02:02.519 Retry with the preserved fictional responses\n00:02:03.266 Confirm the preview retry\n00:02:04.904 Q1 scores 1/1; written and drawing responses remain ungraded.\n00:02:07.450 Verify the same written explanation now awaits review\n00:02:09.691 Inspect the activity’s native sharing and export options.\n00:02:10.092 Open the activity menu\n00:02:11.422 Open the native printable assessment\n00:02:12.027 Create the native blank assessment for use without the author session.\n00:02:12.479 Choose the blank assessment handout\n00:02:12.934 Build the printable native handout\n00:02:13.921 Revisit the original sent task (1/4): short source facts and Q1.\n00:02:16.878 Revisit the original sent task (2/4): Q1 options and Q2.\n00:02:19.545 Revisit the original sent task (3/4): expected meaning and drawing flow.\n00:02:22.183 Revisit the original sent task (4/4): three types and fictional records only.\n00:02:24.425 Copy the actual printable assessment as a plain-text handout.\n\nOBSERVED RESULT\nActual private fictional Formative activity created from the exact approved short chapter facts, not an uploaded PDF. Three real basic question types; generated hints and extra show-work removed. Real student preview: Q1 misconception corrected to context, a valid written answer and a natively drawn labelled flow with two real arrow drags. The exact-match key initially marks the valid explanation Incorrect0/2. Native correction clears that key and puts expected meaning in teacher-only instructions; retry preserves the same responses. Only Q1 is scored1/1; four authored points remain ungraded for teacher review. Later chronological four-view reading shows the same original942-character Luna request. Genuine browser-native Copy from the actual Blank formative print view preserves the969-byte plain-text handout; no public interactive activity or PDF export is claimed.\n\n\nCHRONOLOGICAL NATIVE PROMPT REVIEW\nThe original942-character Luna request is read in four actual overlapping scroll views after the grading retest and native print preparation, before the final native Copy. These views remain at their actual later source timestamps; they are not inserted before generation. The history popup is excluded with exact native crop pixels.\nnative-state-3145496-0131.png at3145496ms; actual capture2026-11-08T17:17:14.468Z; actual1x read2.101s; SHA2567647a95c0666b1cb70aac6cdbda732cc76d1a67a4f4d8c8d99f8f9cbecaaf39b\nnative-state-3183751-0133.png at3183751ms; actual capture2026-11-08T17:17:52.723Z; actual1x read2.102s; SHA256166653d922c0929e56efedabe1153086891d223335910fba1390ae342029799c\nnative-state-3186407-0135.png at3186407ms; actual capture2026-11-08T17:17:55.379Z; actual1x read2.102s; SHA256e4f42cb0638537132d82cabd857e85e6461bb9afa45939d6a552f8de61b557ad\nnative-state-3189055-0137.png at3189055ms; actual capture2026-11-08T17:17:58.027Z; actual1x read2.102s; SHA256f15e71dc2a6d65d66b60a74833cbfc11b565f99388775157fceb1324de41d2fb\n",
-      "prompt": "Create three questions for a private workshop demonstration, in English. Use only these chapter facts: training updates model parameters; ordinary inference keeps parameters fixed; a new prompt changes context; RAG supplies retrieved passages as context. Q1 Multiple Choice: During ordinary inference, what changes when a new prompt is entered? Options: A The original training data; B The available context; C The learned parameters. Correct answer B, 1 point. Q2 Free Response: Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences. Expected: context changes, learned parameters remain fixed during ordinary inference. Q3 Drawing: Draw and label prompt plus context -> inference with fixed parameters -> next token. Add a brief note explaining what changes when a definition is added. Use only these three basic question types. This is an authored example; no real student records.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/teacher-tools-formative-assessment/exports/assessment-handout.txt",
-        "label": "Open result (text)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "text/plain; charset=utf-8",
-        "download": true,
-        "sha256": "55cef7464b227f8c20c6a94f4564047ea52a094630c965a7a19e98a065e4051f",
-        "bytes": 969,
-        "sourceMethod": "native-ui-copy",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/teacher-tools-formative-assessment.json",
-      "durationSeconds": 146.666667,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "d52153c04924c7085b3f1b7389f9875aa5e4c728de4239ee277fe33550ac9bce",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 90,
-    "links": []
-  },
-  {
-    "id": "S89",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "teachers",
-    "stage": "Teacher · give feedback",
-    "title": "Formative: feedback and a corrected explanation",
-    "message": "Write a specific next step, read the feedback and reply.",
-    "body": [],
-    "sources": [
-      "BOOK_CHAPTER",
-      "TOOL_FORMATIVE_RESP",
-      "TOOL_FORMATIVE"
-    ],
-    "audience": "both",
-    "tool": "formative",
-    "decision": "Paid Teacher trial · fictional Teacher preview. The correction is a message; the original submitted answer stays locked.",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "understand"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/teacher-tools/formative-feedback.mp4",
-      "poster": "materials/teacher-tools/formative-feedback-poster.jpg",
-      "captions": "materials/teacher-tools/formative-feedback.en.vtt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "darkFrame": false,
-      "alt": "Formative: Give actionable feedback and review a correction — real @Browser workshop demonstration.",
-      "caption": "Paid Teacher trial · Recorded example · 34 s",
-      "source": "https://app.formative.com/formatives/6aef670e2bf0ef0a672e0925/results/2?columnGroupBy=questions",
-      "transcript": "Formative — Give actionable feedback and review a correction\n\nRECORDED TASK\nOn the fictional demonstration response, add teacher-written feedback: Revisit context versus parameters. Correct the statement that every prompt updates weights, then explain why. Inspect the student feedback view and, if available in the test workflow, submit a corrected explanation. Do not message real students.\n\nMETHOD\nActual @Browser interface actions. Silent recording, optional English captions. Source proportions and complete viewport preserved. Idle gaps and marked processing waits shortened.\n\n00:00:00.000 Open the fictional written misconception before composing feedback.\n00:00:05.869 Write feedback that identifies the misconception and a specific next action.\n00:00:13.491 Open the saved feedback from the learner preview.\n00:00:20.270 Check the learner preview after refreshing the saved submission.\n00:00:26.247 Reply with a corrected explanation in the feedback thread.\n\nOBSERVED RESULT\nManually scored the authored misconception, wrote and sent actionable teacher feedback, verified that it appeared in the learner preview after a refresh, and posted a corrected explanation in the feedback conversation.\n\nSCOPE AND LIMITATIONS\nRecorded in a Paid Teacher trial, using the author’s Teacher preview and explicitly fictional responses. No real student received a message or grade. The original submitted answer remained locked; the correction was posted in the feedback conversation rather than replacing that answer. The first unrefreshed feedback check showed no messages; refresh made the saved feedback visible.\n\nRECORDED OUTPUT / RESPONSE EVIDENCE\n- status: Message sent\n- link \"Skip to main content\":\n  - /url: \"#student-formative-content\"\n- banner:\n  - heading \"Beyond prompting — chapter check (fictional demo)\" [level=1]\n- main:\n  - navigation:\n    - tablist \"Question navigation\":\n      - tab \"Formative details\":\n        - generic: assignment\n      - tab \"Instructions\":\n        - generic: sticky_note_2\n      - 'tab \"Question 1: Incorrect\"':\n        - generic: \"1\"\n      - 'tab \"Question 2: Incorrect\" [selected]':\n        - generic: \"2\"\n      - 'tab \"Question 3: Complete\"':\n        - generic: \"3\"\n      - tab \"Student summary\":\n        - generic: summarize\n  - 'tabpanel \"Question 2: Incorrect\"':\n    - generic: Required\n    - img \"0 out of 1 point\":\n      - generic: close\n      - generic: 0/1\n    - generic: Question 2\n    - generic: \"2.\"\n    - heading \"Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences.\" [level=2]:\n      - paragraph: Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences.\n      - status\n    - paragraph: \"[Fictional example] The definition changes the weights. Each prompt retrains the model.\"\n    - status\n    - button \"Feedback\":\n      - generic: chat_bubble\n    - button \"Previous\":\n      - generic: arrow_back\n      - generic: Previous\n    - button \"Next\":\n      - generic: Next\n      - generic: arrow_forward\n  - toolbar \"Learning tools\":\n    - button \"Color contrast\":\n      - generic: contrast\n    - button \"Notes\":\n    - separator\n    - button \"Focus tools\":\n      - generic: center_focus_strong\n  - status\n- status\n- dialog \"Feedback\":\n  - paragraph: \"Fictional workshop feedback: Revisit context versus parameters in §1.2. Adding a definition changes the information available in context; ordinary inference keeps the learned parameters fixed. Correct your two sentences, then explain one new example without copying the chapter.\"\n  - status\n  - time: 1 minute ago\n  - paragraph: \"Fictional correction: Adding the definition changes the context available for this response. During ordinary inference, the learned parameters stay fixed; using a new definition does not show that the model was retrained.\"\n  - status\n  - time: Less than a minute ago\n  - textbox \"Type a message\":\n    - paragraph: Type a message\n  - button \"Add enriched content\":\n    - generic: add_circle_outline\n  - status\n  - button \"Send\" [disabled] [active]:\n    - generic: send\n- region \"Notifications (F8)\":\n  - list:\n    - generic: Message sent\n"
-    },
-    "number": 91,
-    "links": []
-  },
-  {
-    "id": "S89A",
+    "id": "S67TRYNOTEBOOK",
     "type": "workshop",
     "kind": "activity",
-    "section": "teachers",
-    "stage": "Audience · activity 2",
-    "title": "Activity: adapt an assessment",
-    "message": "Five minutes on your subject and an access barrier",
+    "section": "study",
+    "stage": "Audience · materials workshop",
+    "title": "Your turn: create materials for students",
+    "message": "30 minutes · Choose your topic and use any tools you prefer.",
     "body": [],
     "sources": [],
     "audience": "both",
+    "lang": "en",
     "steps": [
       {
-        "title": "Choose a goal · 1 minute",
-        "text": "Name a concept you teach or study."
+        "title": "Choose a topic and suitable sources",
+        "text": "Choose a topic, your students’ level and reliable sources to work from."
       },
       {
-        "title": "Design evidence · 2 minutes",
-        "text": "Write a task and observable criterion, allowing AI to produce the initial product."
+        "title": "Create materials with your chosen tools",
+        "text": "Make materials for your students: for example a guide, quiz, flashcards, slides or an activity."
       },
       {
-        "title": "Remove a barrier · 2 minutes",
-        "text": "Offer an equivalent access or response option; share the reason for your choice."
+        "title": "Check and prepare to share",
+        "text": "Test the materials, verify facts and answers against the sources, and check student access."
       }
     ],
-    "decision": "A reusable example with a coherent goal, evidence and support.",
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
+    "activityTimer": {
+      "minutes": 30,
+      "id": "notebook-practice"
     },
-    "number": 92,
-    "links": []
-  },
-  {
-    "id": "S95",
-    "type": "workshop",
-    "kind": "diagram",
-    "section": "transfer",
-    "stage": "Transfer",
-    "title": "Reuse the learning path in another subject",
-    "message": "Keep the sequence; change the content and evidence",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "steps": [
-      {
-        "title": "Start with a source and a goal",
-        "text": "For example: understand a historical interpretation from an assigned chapter."
-      },
-      {
-        "title": "Make ideas visible",
-        "text": "Record an initial explanation, uncertainties and a manageable plan."
-      },
-      {
-        "title": "Use tools, then check",
-        "text": "Compare a generated explanation with the source and revise relationships."
-      },
-      {
-        "title": "Demonstrate and reflect",
-        "text": "Explain a new example independently; identify the next learning step."
-      }
-    ],
-    "decision": "Choose a tool for a specific need and decide what evidence it should leave.",
     "studyPhases": {
       "primary": "apply",
       "secondary": [
-        "plan"
+        "check"
       ]
     },
-    "number": 93,
-    "links": []
-  },
-  {
-    "id": "S96",
-    "type": "workshop",
-    "kind": "compare",
-    "section": "transfer",
-    "stage": "Reflection",
-    "title": "The evidence collected along the way",
-    "message": "A product and an explanation answer different assessment needs",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "comparison": [
-      {
-        "label": "Learning process",
-        "text": "Selected plan, checked passages, a generated Mind Map and self-check responses."
-      },
-      {
-        "label": "Assisted product",
-        "text": "Diagram, checked study materials, practice responses and revision history."
-      },
-      {
-        "label": "Demonstrated knowledge",
-        "text": "Independent explanation, prediction, error correction and reflection."
-      }
-    ],
-    "decision": "Compare these records before deciding what the learner needs next.",
-    "studyPhases": {
-      "primary": "check"
+    "media": {
+      "type": "image",
+      "src": "images/activities/professor-frantic-typing-v1.gif",
+      "poster": "images/activities/professor-typing-still-v1.png",
+      "alt": "A smiling blonde professor with dark glasses types furiously on her laptop.",
+      "fit": "contain"
     },
-    "number": 94,
+    "number": 80,
     "links": []
   },
   {
@@ -4338,7 +3826,7 @@
           "tool": "Gemini Notebook",
           "purpose": "Study sources and check citations",
           "access": "Account + quotas; some generation features are adult-only.",
-          "url": "https://notebook.google.com/"
+          "url": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
         },
         {
           "tool": "Napkin",
@@ -4375,7 +3863,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 95,
+    "number": 81,
     "links": []
   },
   {
@@ -4438,7 +3926,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 96,
+    "number": 82,
     "links": []
   },
   {
@@ -4522,7 +4010,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 97,
+    "number": 83,
     "links": []
   },
   {
@@ -4571,7 +4059,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 98,
+    "number": 84,
     "links": []
   },
   {
@@ -4593,7 +4081,12 @@
         "url": "mailto:marco.cremaschi@unimib.it"
       }
     ],
-    "number": 99
+    "media": {
+      "src": "images/andrea/andrea-thumbs-up-30-e-lode-v1.webp",
+      "alt": "Andrea smiles, gives a thumbs-up with one hand and holds a sheet marked 30 e lode in the other.",
+      "type": "image"
+    },
+    "number": 85
   },
   {
     "id": "S99",
@@ -4612,16 +4105,11 @@
       "EDU_HUANG",
       "EDU_RETRIEVAL",
       "EDU_SRL",
-      "TECH_EXPLAINER",
-      "TECH_TRANSFORMER",
-      "TECH_INSTRUCT",
-      "TECH_RAG",
       "EDU_MAPS",
       "EDU_UNESCO",
       "ACC_CAST",
       "ACC_COGA",
       "ACC_AID",
-      "SKILL_LIBRARY_PAPER",
       "EDU_SELF_ASSESSMENT",
       "EDU_SELF_DIRECTED"
     ],
@@ -4699,41 +4187,6 @@
         "shortTitle": "AI competency framework for students"
       },
       {
-        "label": "Cho et al. (2026)",
-        "citation": "Cho, A., Kim, G. C., Karpekov, A., Lee, S., Helbling, A., Hoover, B., Wang, Z. J., Kahng, M., & Chau, D. H. (2026). Transformer Explainer: Learning LLM Transformers with interactive visual explanation and experimentation. Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, 1–21. https://doi.org/10.1145/3772318.3791725",
-        "url": "https://doi.org/10.1145/3772318.3791725",
-        "group": "Generative AI",
-        "shortTitle": "Transformer Explainer · CHI 2026"
-      },
-      {
-        "citation": "Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent Skills: A library of procedural knowledge for research agents. [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2609.00065",
-        "url": "https://arxiv.org/abs/2609.00065",
-        "group": "Generative AI",
-        "shortTitle": "Scientific Agent Skills · preprint",
-        "label": "Kassis et al. (2026)"
-      },
-      {
-        "label": "Lewis et al. (2020)",
-        "citation": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33, 9459–9474. https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
-        "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
-        "group": "Generative AI",
-        "shortTitle": "Retrieval-augmented generation"
-      },
-      {
-        "label": "Ouyang et al. (2022)",
-        "citation": "Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P. F., Leike, J., & Lowe, R. (2022). Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35, 27730–27744. https://doi.org/10.52202/068431-2011",
-        "url": "https://doi.org/10.52202/068431-2011",
-        "group": "Generative AI",
-        "shortTitle": "Training models to follow instructions"
-      },
-      {
-        "label": "Vaswani et al. (2017)",
-        "citation": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30. https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
-        "url": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
-        "group": "Generative AI",
-        "shortTitle": "Attention Is All You Need"
-      },
-      {
         "label": "AID (n.d.)",
         "citation": "Associazione Italiana Dislessia (n.d.). Gli strumenti compensativi [Compensatory tools]. https://www.aiditalia.org/gli-strumenti-compensativi",
         "url": "https://www.aiditalia.org/gli-strumenti-compensativi",
@@ -4755,94 +4208,7 @@
         "shortTitle": "Cognitive accessibility guidance"
       }
     ],
-    "links": [
-      {
-        "label": "Download bibliography (BibTeX / BibLaTeX)",
-        "url": "./materials/references.bib",
-        "download": true
-      }
-    ],
-    "number": 100
-  },
-  {
-    "id": "S102",
-    "type": "workshop",
-    "kind": "web-resources",
-    "section": "resources",
-    "stage": "Web resources",
-    "title": "Web resources",
-    "message": "",
-    "body": [],
-    "audience": "both",
-    "sources": [
-      "TECH_QWEN",
-      "TECH_JS",
-      "TECH_DEMO",
-      "ACC_EDGE",
-      "ACC_MAC",
-      "ACC_WINDOWS",
-      "ACC_WCAG",
-      "ACC_MEDIA"
-    ],
-    "references": [
-      {
-        "label": "Qwen · model card",
-        "citation": "Qwen Team. (2024). Qwen2.5-0.5B-Instruct: Model card. Hugging Face.",
-        "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
-        "group": "Models & runtime",
-        "shortTitle": "Qwen2.5-0.5B-Instruct model card"
-      },
-      {
-        "label": "Hugging Face · Transformers.js",
-        "citation": "Hugging Face. (2025). Transformers.js v3.8.1: Using quantized models (dtypes).",
-        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/en/guides/dtypes",
-        "group": "Models & runtime",
-        "shortTitle": "Transformers.js: quantized models"
-      },
-      {
-        "label": "Transformer Explainer · demo",
-        "citation": "Polo Club of Data Science. (2026). Transformer Explainer.",
-        "url": "https://poloclub.github.io/transformer-explainer/",
-        "group": "Models & runtime",
-        "shortTitle": "Transformer Explainer live demo"
-      },
-      {
-        "label": "Microsoft · Reading mode",
-        "citation": "Microsoft. (n.d.). Use Reading mode in Microsoft Edge.",
-        "url": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge",
-        "group": "Access & accessible media",
-        "shortTitle": "Reading mode and Read aloud"
-      },
-      {
-        "label": "Apple · Dictation",
-        "citation": "Apple. (2026). Dictate messages and documents on Mac. Mac User Guide.",
-        "url": "https://support.apple.com/it-it/guide/mac-help/mh40584/27/mac/27",
-        "group": "Access & accessible media",
-        "shortTitle": "Dictation on Mac"
-      },
-      {
-        "label": "Microsoft · voice typing",
-        "citation": "Microsoft. (s.d.). Use voice typing to talk instead of type on your PC.",
-        "url": "https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc",
-        "group": "Access & accessible media",
-        "shortTitle": "Voice typing on Windows"
-      },
-      {
-        "label": "W3C · WCAG 2.2",
-        "citation": "World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
-        "url": "https://www.w3.org/TR/2023/REC-WCAG22-20231005/",
-        "group": "Access & accessible media",
-        "shortTitle": "Web Content Accessibility Guidelines"
-      },
-      {
-        "label": "W3C WAI · accessible media",
-        "citation": "World Wide Web Consortium. (s.d.). Making audio and video media accessible.",
-        "url": "https://www.w3.org/WAI/media/av/",
-        "group": "Access & accessible media",
-        "shortTitle": "Making audio and video accessible"
-      }
-    ],
-    "number": 101,
+    "number": 86,
     "links": []
   }
 ]

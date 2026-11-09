@@ -79,9 +79,9 @@
 .kind-access .workshop-stage { gap:72px; }
 .kind-access .workshop-media { order:1; width:38%; }
 .kind-access .workshop-media img { max-height:400px; image-rendering:pixelated; }
-.slide-S53TRYSHORTCUTS .workshop-stage { gap:40px; }
-.slide-S53TRYSHORTCUTS .workshop-media { order:1; width:38%; --media-paper:transparent; }
-.slide-S53TRYSHORTCUTS .workshop-media img { max-height:430px; }
+.kind-activity.has-media .workshop-stage { gap:40px; }
+.kind-activity.has-media .workshop-media { order:1; width:38%; --media-paper:transparent; }
+.kind-activity.has-media .workshop-media img { max-height:430px; }
 /* Cream surfaces keep screenshots legible; tool brands live in the source imagery. */
 .slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation,.tool-desmos):not(:has(.kind-tool-divider)) {
   color-scheme:light;

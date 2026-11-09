@@ -2,7 +2,11 @@
 import { computed } from 'vue'
 import { useActivityTimer } from '../../composables/useActivityTimer'
 
-const { seconds, running, pristine, status, toggle, reset } = useActivityTimer()
+const props = withDefaults(defineProps<{ minutes?: number; timerId?: string }>(), {
+  minutes: 5,
+  timerId: 'shortcut-practice',
+})
+const { seconds, running, pristine, status, toggle, reset } = useActivityTimer(props.minutes, props.timerId)
 const minutes = computed(() => Math.floor(seconds.value / 60))
 const remainder = computed(() => seconds.value % 60)
 const action = computed(() => running.value ? 'Pause' : seconds.value === 0
@@ -10,7 +14,7 @@ const action = computed(() => running.value ? 'Pause' : seconds.value === 0
 </script>
 
 <template>
-  <section class="activity-timer border-t border-base-300 pt-4" aria-label="Five-minute practice timer" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
+  <section class="activity-timer border-t border-base-300 pt-4" :aria-label="`${props.minutes}-minute practice timer`" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
     <div class="activity-timer-live">
       <div class="flex items-center justify-between gap-4 sm:gap-6">
         <div class="flex items-center gap-3 sm:gap-4">
@@ -26,9 +30,9 @@ const action = computed(() => running.value ? 'Pause' : seconds.value === 0
           <button class="btn btn-sm btn-ghost" type="button" :disabled="pristine" @click="reset">Reset</button>
         </div>
       </div>
-      <progress class="progress progress-primary mt-3 h-1 w-full" :value="seconds" max="300" aria-label="Time remaining" />
+      <progress class="progress progress-primary mt-3 h-1 w-full" :value="seconds" :max="props.minutes * 60" aria-label="Time remaining" />
     </div>
-    <span class="activity-timer-print">5-minute practice · 05:00</span>
+    <span class="activity-timer-print">{{ props.minutes }}-minute practice · {{ String(props.minutes).padStart(2, '0') }}:00</span>
   </section>
 </template>
 

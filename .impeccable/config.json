@@ -119,6 +119,15 @@
         ],
         "createdAt": "2026-11-08T22:46:43.993Z",
         "reason": "Root: preserve the existing accessible reading theme during refinement; rgb(250,248,243) is the incumbent reading surface, not a new design choice."
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "output/animations/frantic-typing/index.html"
+        ],
+        "createdAt": "2026-11-09T16:52:35.815Z",
+        "reason": "Codex: intentional frame-by-frame sprite animation. The paused GSAP timeline sets all poses to opacity 0 and the active pose to opacity 1 every 80 ms. The rendered GIF was verified to contain eight distinct fully visible poses; there is no wash or hidden decorative raster."
       }
     ]
   }

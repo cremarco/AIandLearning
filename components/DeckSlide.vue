@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, provide, ref, watch } from 'vue'
 import { getSlide, presentationSlideCount, type StudyFocus } from '../utils/deck'
-import { imageUrl as image } from '../utils/assets'
+import { assetUrl, imageUrl as image } from '../utils/assets'
 import highlights from '../data/content/highlights.json'
 import { EMPHASIS_TERMS_KEY, type EmphasisTerm } from '../utils/emphasis'
 import EmphasisText from './shared/EmphasisText.vue'
@@ -41,7 +41,7 @@ const slideProgress = computed(() => ({
 <template>
   <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '', { 'has-study-phases': !!studyPhases }]" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined">
     <StudyPhaseRibbon v-if="studyPhases" v-bind="studyPhases" />
-    <SlideAudience v-if="!['cover', 'profile', 'company'].includes(s.type) && !['S48', 'S49', 'S50QR'].includes(s.id) && !['thanks', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" :audience="s.audience" />
+    <SlideAudience v-if="!['cover', 'profile', 'company'].includes(s.type) && !['S48', 'S49', 'S50QR', 'S99'].includes(s.id) && !['thanks', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" :audience="s.audience" />
     <span v-if="s.todo" class="badge badge-warning absolute left-16 top-4 z-10 h-7 gap-2 text-sm font-medium" role="note">
       <strong>TODO</strong>{{ s.todo }}
     </span>
@@ -56,7 +56,7 @@ const slideProgress = computed(() => ({
     </template>
 
     <template v-else-if="s.kind === 'thanks'">
-      <CoverBackground />
+      <img v-if="s.media" class="absolute right-16 top-[50px] h-[620px] w-[540px] object-contain" :src="assetUrl(s.media.src)" :alt="s.media.alt" />
       <div class="cover-copy thank-you-copy">
         <h1 class="thank-you-title">{{ s.title }}</h1>
         <p class="cover-author">{{ s.message }}<br /><span>{{ s.body[0] }}</span><br /><a v-for="link in s.links" :key="link.url" class="link link-hover cover-email" :href="link.url">{{ link.label }}</a></p>
@@ -65,7 +65,7 @@ const slideProgress = computed(() => ({
 
     <template v-else-if="s.type === 'workshop'">
       <WorkshopSlide :slide="s" @study-phase-change="selectedStudyPhases = $event" />
-      <SourceLine v-if="!['bibliography', 'web-resources', 'shortcut-cloud'].includes(s.kind)" :ids="sourceIds" />
+      <SourceLine v-if="!['S97', 'S97STUDY', 'S97P', 'S97ACCESS'].includes(s.id) && !['bibliography', 'web-resources', 'shortcut-cloud'].includes(s.kind)" :ids="sourceIds" />
     </template>
 
     <template v-else>

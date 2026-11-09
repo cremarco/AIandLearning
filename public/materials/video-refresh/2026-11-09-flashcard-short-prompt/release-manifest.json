@@ -367,7 +367,7 @@
         "durationSeconds": 38.55,
         "width": 1440,
         "height": 900,
-        "fps": 60.0,
+        "fps": 60,
         "sha256": "a2e46b15838d37fdf2e12899aea910e24d361d1eb6d45ad96b49b3efe76537fd",
         "recordingMode": "reviewed-native-short-prompt-retake",
         "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
@@ -1655,8 +1655,8 @@
           "qualification": "Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.",
           "mediaType": "application/pdf",
           "download": true,
-          "sha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
-          "bytes": 110599,
+          "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+          "bytes": 110398,
           "sourceMethod": "observed-ui-derived-pdf",
           "supplemental": []
         },
@@ -2279,7 +2279,8 @@
       },
       "captureSha256": "83cfab211d9e368a25a356037b4813e83777934e1a6c5ef1963aacb25018d332",
       "qaSha256": "c69b1fecb6aa9d2485270d9868014bef25672b0b38dd51b49a10a68cee8200b2",
-      "resultRecordSha256": "388a361bcf3e25187d98533b2df5c614d5911b3ad3b7fc60f2cd6dcf30e2a5ca"
+      "resultRecordSha256": "388a361bcf3e25187d98533b2df5c614d5911b3ad3b7fc60f2cd6dcf30e2a5ca",
+      "materialsPage": "materials/teacher-tools.html"
     },
     {
       "key": "teacher-tools-magicschool-questions",
@@ -2344,7 +2345,8 @@
       },
       "captureSha256": "0ff0a692ef6ca0896447ec898ddc9bec9c14e0f5f896d1e31c1689914f007c51",
       "qaSha256": "778bd0f1501a52815cf2a67dfc7e89f8c14bb8e6c108a2d5e7b1c3e04f7a62c0",
-      "resultRecordSha256": "d6e61be74391e78cf4eaf02a51b4d3472e6b597f59de077b396eceaf2f75ff2c"
+      "resultRecordSha256": "d6e61be74391e78cf4eaf02a51b4d3472e6b597f59de077b396eceaf2f75ff2c",
+      "materialsPage": "materials/teacher-tools.html"
     },
     {
       "key": "teacher-tools-formative-assessment",
@@ -2409,7 +2411,8 @@
       },
       "captureSha256": "95c8e98eae239b01840fc0d89ee0bd4d15e2626b33a71d52558438a94cc931b3",
       "qaSha256": "f92574f12ed68c6544c5c505ab48d61eacd0be8fedf73bb76f7c79ab03ae4404",
-      "resultRecordSha256": "f861a1120c732b7186a86852ad165ea0faaff4f7e5bc0b7693dc26e9f2d6d2aa"
+      "resultRecordSha256": "f861a1120c732b7186a86852ad165ea0faaff4f7e5bc0b7693dc26e9f2d6d2aa",
+      "materialsPage": "materials/teacher-tools.html"
     },
     {
       "key": "widget-conceptmap",
@@ -3268,13 +3271,13 @@
     },
     {
       "path": "materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf",
-      "sha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
-      "bytes": 110599
+      "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+      "bytes": 110398
     },
     {
       "path": "materials/video-refresh/2026-11-07/provenance/notebook-quiz.json",
-      "sha256": "72b11fe62cc98cbd1ff0dc8ace4d5f9679e54c6416ca235ac953d99afa214d3b",
-      "bytes": 8893
+      "sha256": "5db60a87f1c5f91535744add71be620e093c74a6982c96713e1c054502c031ad",
+      "bytes": 9537
     },
     {
       "path": "materials/video-refresh/2026-11-07/notebook-flashcards/video.mp4",
@@ -3738,5 +3741,20 @@
     "existingAssetsUnchanged": true
   },
   "scopePolicySha256": "9e062e39644c5bbdae7e33e4fbfe9ceb68bd21ab0fe3c3784a83e12439e34df5",
-  "previousManifest": "materials/video-refresh/2026-11-07/release-manifest.json"
+  "previousManifest": "materials/video-refresh/2026-11-07/release-manifest.json",
+  "linkMaintenance": [
+    {
+      "date": "2026-11-09",
+      "operation": "Replace one obsolete NotebookLM hyperlink with the unified workshop notebook.",
+      "file": "materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf",
+      "notebookUrl": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec",
+      "updatedAnnotations": 1,
+      "page": 7,
+      "textUnchanged": true,
+      "originalSha256": "e3c0086194a928f882a4c15dd09ba47b5ceaf83567f810ff72a7c3f5605299ef",
+      "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+      "bytes": 110398,
+      "visualRenderingUnchanged": true
+    }
+  ]
 }
