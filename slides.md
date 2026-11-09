@@ -45,7 +45,7 @@ title: "Whattadata"
 <DeckSlide id="S44" />
 
 <!--
-\
+I'm also a founder of **Whattadata**, a spin-off of the University of Milano-Bicocca. This connects my research with **practical applications**. We work on data analysis, responsible AI and modular solutions. The website link below gives more information about our work and possible collaborations.
 -->
 
 ---

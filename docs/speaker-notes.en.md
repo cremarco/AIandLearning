@@ -12,7 +12,7 @@ I am Marco Cremaschi, an assistant professor at the University of Milano-Bicocca
 
 ## 3. Whattadata
 
-\
+I'm also a founder of **Whattadata**, a spin-off of the University of Milano-Bicocca. This connects my research with **practical applications**. We work on data analysis, responsible AI and modular solutions. The website link below gives more information about our work and possible collaborations.
 
 ## 4. A visual path for learning with AI
 
