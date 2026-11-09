@@ -159,3 +159,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
   .slidev-layout .deck-slide { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .deck-slide * { animation:none!important; transition:none!important; }
 }
+
+/* Hide Slidev's floating toolbar only in the published audience view. */
+html.published-deck #page-root #slide-container > :has(> nav) {
+  display: none;
+}

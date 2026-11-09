@@ -4,6 +4,8 @@ import { watch } from 'vue'
 
 // One linear presentation. Old event links must not re-enable skipped slides.
 export default defineRootSetup(() => {
+  // Keep author controls in development and presenter mode, outside the published viewer.
+  document.documentElement.classList.toggle('published-deck', import.meta.env.PROD)
   const nav = useNav()
   watch(() => nav.router.currentRoute.value.query.flow, id => {
     if (id === undefined) return
