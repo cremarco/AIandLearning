@@ -477,7 +477,6 @@
         "description": "Review misconceptions and track corrections"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "recall",
@@ -520,7 +519,6 @@
         "description": "Explain aloud, write a summary and compare expected answers"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "connect",
@@ -562,7 +560,6 @@
         "description": "Apply concepts to a case, then reveal explanations"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "apply",
@@ -609,7 +606,6 @@
         "description": "Organise stations and track completion"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "plan",
@@ -619,31 +615,80 @@
     }
   },
   {
-    "id": "S53DETAILQUIZ",
+    "id": "S53DETAILFLASHCARD",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/quiz",
-    "message": "Answer questions, review feedback and move through a quiz.",
+    "title": "/flashcard",
+    "message": "Practise recall with questions and answers on flip cards.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+    "prompt": "/flashcard Help me study the attached chapter.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Ten native flashcards",
+    "result": "ChatGPT · 38.5 s",
+    "links": [],
+    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "videoLayout": "focus"
+  },
+  {
+    "id": "S53DETAILMISTAKELOG",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/mistakelog",
+    "message": "Record misconceptions, review corrections and track progress.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 98.1 s",
+    "result": "ChatGPT · 99.8 s",
     "links": [],
-    "videoLayout": "focus",
     "studyPhases": {
       "primary": "check",
       "secondary": [
-        "recall"
+        "plan"
       ]
-    }
+    },
+    "videoLayout": "focus"
+  },
+  {
+    "id": "S53DETAILCONCEPTMAP",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/conceptmap",
+    "message": "Connect concepts with labelled relationships.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+    "promptLabel": "Retested prompt · 7 Nov 2026",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 83.8 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "connect"
+    },
+    "videoLayout": "focus"
   },
   {
     "id": "S53DETAILMATCHINGGAME",
@@ -669,55 +714,6 @@
       "secondary": [
         "connect"
       ]
-    },
-    "videoLayout": "focus"
-  },
-  {
-    "id": "S53DETAILFILLINTHEBLANKS",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/fillintheblanks",
-    "message": "Complete missing terms and check your answers.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 49.6 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "recall"
-    },
-    "videoLayout": "focus"
-  },
-  {
-    "id": "S53DETAILFLASHCARD",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/flashcard",
-    "message": "Practise recall with questions and answers on flip cards.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 58.4 s",
-    "links": [],
-    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
-    "studyPhases": {
-      "primary": "recall"
     },
     "videoLayout": "focus"
   },
@@ -755,8 +751,10 @@
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
     "title": "/oral",
-    "message": "Practise explaining answers and receive follow-up feedback in chat.",
-    "body": [],
+    "message": "Practise explaining answers and receive follow-up feedback in chat.*",
+    "body": [
+      "* You can also dictate your answer."
+    ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
@@ -771,6 +769,111 @@
       "primary": "check",
       "secondary": [
         "apply"
+      ]
+    },
+    "videoLayout": "focus"
+  },
+  {
+    "id": "S53DETAILQUIZ",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/quiz",
+    "message": "Answer questions, review feedback and move through a quiz.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 98.1 s",
+    "links": [],
+    "videoLayout": "focus",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "recall"
+      ]
+    }
+  },
+  {
+    "id": "S53DETAILFILLINTHEBLANKS",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/fillintheblanks",
+    "message": "Complete missing terms and check your answers.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 49.6 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "videoLayout": "focus"
+  },
+  {
+    "id": "S53DETAILWORKSHEET",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/worksheet",
+    "message": "Practise with answer fields and model answers to reveal.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 111.5 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "videoLayout": "focus"
+  },
+  {
+    "id": "S53DETAILCASESTUDY",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/caseStudy",
+    "message": "Analyse a concrete case, then compare with suggested answers.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 87.9 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
       ]
     },
     "videoLayout": "focus"
@@ -800,57 +903,6 @@
     "videoLayout": "focus"
   },
   {
-    "id": "S53DETAILCONCEPTMAP",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/conceptmap",
-    "message": "Connect concepts with labelled relationships.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_RECHECK"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
-    "promptLabel": "Retested prompt · 7 Nov 2026",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 83.8 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "videoLayout": "focus"
-  },
-  {
-    "id": "S53DETAILMISTAKELOG",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/mistakelog",
-    "message": "Record misconceptions, review corrections and track progress.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 99.8 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "check",
-      "secondary": [
-        "plan"
-      ]
-    },
-    "videoLayout": "focus"
-  },
-  {
     "id": "S53DETAILLESSONPLAN",
     "type": "workshop",
     "kind": "shortcut-detail",
@@ -871,33 +923,6 @@
     "links": [],
     "studyPhases": {
       "primary": "plan"
-    },
-    "videoLayout": "focus"
-  },
-  {
-    "id": "S53DETAILCASESTUDY",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/caseStudy",
-    "message": "Analyse a concrete case, then compare with suggested answers.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 87.9 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "apply",
-      "secondary": [
-        "check"
-      ]
     },
     "videoLayout": "focus"
   },
@@ -950,33 +975,6 @@
     "videoLayout": "focus"
   },
   {
-    "id": "S53DETAILWORKSHEET",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/worksheet",
-    "message": "Practise with answer fields and model answers to reveal.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 111.5 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "apply",
-      "secondary": [
-        "check"
-      ]
-    },
-    "videoLayout": "focus"
-  },
-  {
     "id": "S53DETAILLEARNINGSTATIONS",
     "type": "workshop",
     "kind": "shortcut-detail",
@@ -1002,6 +1000,39 @@
       ]
     },
     "videoLayout": "focus"
+  },
+  {
+    "id": "S53TRYSHORTCUTS",
+    "type": "workshop",
+    "kind": "activity",
+    "section": "chatgpt",
+    "stage": "Audience · shortcut practice",
+    "title": "Your turn: try a few shortcuts",
+    "message": "Use your own ChatGPT account. The Free plan is fine.",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "steps": [
+      {
+        "title": "Choose a document",
+        "text": "Use the GenAI book or another document you want to study."
+      },
+      {
+        "title": "Try different shortcuts",
+        "text": "Start with /flashcard, /quiz or /oral. Ask ChatGPT to use only your document."
+      },
+      {
+        "title": "Use and check the result",
+        "text": "Try the activity, compare its answers with the source and refine your request."
+      }
+    ],
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    }
   },
   {
     "id": "S53SKILLSSECTION",

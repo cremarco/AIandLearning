@@ -46,7 +46,14 @@
 .slidev-layout .has-four-steps .procedure-list h2 { font-size:24px; }
 .slidev-layout .has-four-steps .procedure-list p { font-size:22px; }
 .slidev-layout .kind-study-phases .procedure-list { gap:20px 40px; }
-.slidev-layout .kind-study-phases .procedure-list li { padding-top:12px; }
+.slidev-layout .kind-study-phases .procedure-list li { padding-top:12px; border-top-color:color-mix(in oklab,var(--study-phase-accent) 45%,var(--deck-line)); }
+.kind-study-phases .procedure-list li:nth-child(1) { --study-phase-accent:var(--color-sky-300); }
+.kind-study-phases .procedure-list li:nth-child(2) { --study-phase-accent:var(--color-teal-400); }
+.kind-study-phases .procedure-list li:nth-child(3) { --study-phase-accent:var(--color-violet-300); }
+.kind-study-phases .procedure-list li:nth-child(4) { --study-phase-accent:var(--color-amber-300); }
+.kind-study-phases .procedure-list li:nth-child(5) { --study-phase-accent:var(--color-orange-300); }
+.kind-study-phases .procedure-list li:nth-child(6) { --study-phase-accent:var(--color-rose-300); }
+.slidev-layout .kind-study-phases .procedure-list :is(.step-number,h2) { color:var(--study-phase-accent); }
 .slidev-layout .slide-S97 .tool-resource-table tbody :is(th,td) { padding-block:6px; }
 .has-mixed-content:not(.has-media) .workshop-copy { display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:start; }
 .has-mixed-content .comparison { grid-template-columns:minmax(0,1fr); gap:16px; }
@@ -72,6 +79,9 @@
 .kind-access .workshop-stage { gap:72px; }
 .kind-access .workshop-media { order:1; width:38%; }
 .kind-access .workshop-media img { max-height:400px; image-rendering:pixelated; }
+.slide-S53TRYSHORTCUTS .workshop-stage { gap:40px; }
+.slide-S53TRYSHORTCUTS .workshop-media { order:1; width:38%; --media-paper:transparent; }
+.slide-S53TRYSHORTCUTS .workshop-media img { max-height:430px; }
 /* Cream surfaces keep screenshots legible; tool brands live in the source imagery. */
 .slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation,.tool-desmos):not(:has(.kind-tool-divider)) {
   color-scheme:light;

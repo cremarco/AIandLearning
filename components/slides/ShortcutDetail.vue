@@ -94,7 +94,7 @@ useSlideVideo(video)
         </video>
         <img class="shortcut-detail-print-poster" :src="assetUrl(clip.poster)" :alt="clip.alt" />
       </figure>
-      <footer v-if="clip" class="shortcut-detail-caption"><p>{{ slide.resultLabel || 'Recorded output' }}</p><RecordingResultLinks compact :result="clip.result" /></footer>
+      <footer v-if="clip" class="shortcut-detail-caption"><RecordingResultLinks links-only :result="clip.result" /></footer>
       <div v-else class="chat chat-start shortcut-detail-static">
         <div class="chat-bubble w-full max-w-full bg-base-200 text-base-content">
           <p v-for="(block,index) in staticResultBlocks" :key="index" class="shortcut-detail-excerpt"><strong v-if="block.label">{{ block.label + ' ' }}</strong>{{ block.text }}</p>

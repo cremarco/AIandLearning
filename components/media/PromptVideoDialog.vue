@@ -97,7 +97,7 @@ defineExpose({ open })
           <source :src="assetUrl(selected.src)" type="video/mp4" />
           <track v-if="selected.captions" kind="captions" srclang="en" label="English" :src="assetUrl(selected.captions)" />
         </video>
-        <RecordingResultLinks class="shortcut-video-results" :result="selected.result" />
+        <RecordingResultLinks links-only class="shortcut-video-results" :result="selected.result" />
         <details :key="selected.command" class="collapse collapse-arrow shortcut-video-prompt" @toggle="onTranscriptToggle">
           <summary class="collapse-title">Tested prompt and transcript</summary>
           <div class="collapse-content">

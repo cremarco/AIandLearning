@@ -41,9 +41,9 @@ watch(selectedIndex, pauseVideo)
             </button>
           </li>
         </ul>
-        <p class="formal-instruction-label">{{ result?.instructionExcerpt ? 'Prompt summary' : 'Action' }}</p>
+        <p class="formal-instruction-label">Prompt</p>
         <CommandTag v-if="selected" :text="selected.command" class="mt-2" />
-        <p class="formal-instruction">{{ result?.instructionExcerpt || result?.instruction }}</p>
+        <p class="formal-instruction">{{ result?.instruction }}</p>
       </nav>
       <section v-if="result" class="formal-command-output" :data-command="selected.command" :data-result-status="result.status" aria-live="polite">
         <h2 v-if="result.media.type !== 'video'">{{ result.label }}</h2>
@@ -57,12 +57,11 @@ watch(selectedIndex, pauseVideo)
         </figure>
         <img v-else class="formal-result-image" :src="assetUrl(result.media.src)" :alt="result.media.alt" />
         <footer class="formal-recording-caption">
-          <p class="formal-result-caption"><template v-if="result.media.type === 'video'">{{ result.label }} · </template>{{ result.media.caption }}</p>
           <div class="formal-result-links">
-            <a v-if="selected.command !== 'Study' || result.media.type === 'video'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>{{ result.media.type === 'video' ? 'Open video' : 'Open original capture' }}</a>
+            <a v-if="selected.command !== 'Study' && result.media.type !== 'video'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>Open original capture</a>
             <a v-if="result.media.type === 'video' && result.media.source && !result.media.result" class="link" :href="result.media.source" target="_blank" rel="noopener" @click.stop @keydown.stop>Original conversation</a>
           </div>
-          <RecordingResultLinks compact :result="result.media.result" />
+          <RecordingResultLinks links-only :result="result.media.result" />
         </footer>
       </section>
     </template>
@@ -93,6 +92,5 @@ watch(selectedIndex, pauseVideo)
 :global(.workshop-print) .formal-recording video { display:none; }
 :global(.workshop-print) .formal-recording .formal-print-poster { display:block; }
 @media print { .formal-recording video { display:none; } .formal-recording .formal-print-poster { display:block; } }
-.slidev-layout .formal-result-caption { font-size:17px; line-height:1.3; color:var(--deck-muted); }
 .formal-result-links { display:flex; flex-wrap:wrap; gap:10px 24px; font-size:16px; }
 </style>

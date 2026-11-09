@@ -1,0 +1,11 @@
+Front,Back
+"What changes during training but not ordinary inference?","Training updates model parameters; ordinary inference uses fixed parameters. §1.2, p. 5"
+"Does adding a definition to a prompt update model weights?","No. It changes the available context, not the model parameters. §1.2, p. 5"
+"How are tokens different from words?","Tokens may be words, word parts, punctuation, or spaces; segmentation depends on the tokenizer. §1.3, p. 6"
+"How does a token ID differ from its embedding?","An ID indexes the vocabulary; an embedding is a learned numerical vector. §1.4, pp. 7–8"
+"What does causal attention prevent?","A position cannot access future tokens; it can use earlier and currently available tokens. §1.5, p. 9"
+"What roles do queries, keys, and values play?","Queries match keys; normalized scores weight values from permitted positions. §1.5, p. 9"
+"What happens when temperature increases at fixed logits?","Probabilities become less concentrated, without changing token ranking or adding knowledge. §1.6, p. 10"
+"Does a token's 80% probability mean an answer is 80% true?","No. It measures next-token probability given the context and model, not truth. §§1.6, 1.8, pp. 10, 15"
+"How does RAG provide information without retraining?","It retrieves external passages and supplies them as context while model parameters remain fixed. §1.7, p. 14"
+"How can you test an AI-generated explanation?","Use independent explanations, controlled comparisons, and error-detecting checks. §§1.8–1.10, pp. 14–17"

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "reviewed-native-browser-retake",
+  "key": "widget-flashcard",
+  "recordedAt": "2026-11-09T10:48:20.721Z",
+  "ownerConversationUrl": "https://chatgpt.com/c/6af1a4d8-b07c-83ed-9581-b962502d4407",
+  "prompt": "/flashcard Help me study the attached chapter.",
+  "sourceBookSha256": "f8131615212f15aeb864847af774fc79184d22b1193bb5e5c5b99147aa7c9981",
+  "rawCaptureSha256": "5453361ba84c2b964adc1ad57334e75039d6e4f226f5acb6570b99615d7850b2",
+  "sourceFrameCount": 1050,
+  "inputActivations": [
+    {
+      "at": 2313,
+      "label": "Send the short flashcard request"
+    },
+    {
+      "at": 41170,
+      "label": "Reveal the first answer"
+    },
+    {
+      "at": 45326,
+      "label": "Mark the first card for practice"
+    },
+    {
+      "at": 48092,
+      "label": "Reveal the second answer"
+    },
+    {
+      "at": 52301,
+      "label": "Mark the second card remembered"
+    },
+    {
+      "at": 55041,
+      "label": "Reveal the third answer"
+    },
+    {
+      "at": 59206,
+      "label": "Mark the third card remembered"
+    }
+  ],
+  "captureMethod": "Page.screencastFrame native browser pixels",
+  "inputMethod": "Native CDP mouse input using observed control bounds and the actual delivered coordinates; the video includes corresponding click markers.",
+  "edit": {
+    "rates": {
+      "setup": 3,
+      "generation": 4,
+      "usage": 1
+    },
+    "excludedRanges": [],
+    "allUsageAtNormalSpeed": true,
+    "excludedNativeRanges": []
+  },
+  "result": {
+    "schemaVersion": 1,
+    "kind": "native-chatgpt-flashcard-export",
+    "ownerConversationUrl": "https://chatgpt.com/c/6af1a4d8-b07c-83ed-9581-b962502d4407",
+    "prompt": "/flashcard Help me study the attached chapter.",
+    "cardCount": 10,
+    "nativeExport": {
+      "path": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/flashcards.csv",
+      "sha256": "57456ed2d6547b385499b3e92e58872b3fa932dc874802010c83bda2e6e0030f",
+      "bytes": 1545,
+      "columns": [
+        "Front",
+        "Back"
+      ]
+    },
+    "nativeControlsObserved": [
+      "Flip to answer",
+      "Flip to question",
+      "I missed this",
+      "I got this",
+      "View all",
+      "Download"
+    ],
+    "independentMasteryOrCrossChatReviewVerified": false
+  },
+  "qa": {
+    "checks": {
+      "productionChecksPassed": true,
+      "nativeSourceComplete": true,
+      "shortPromptExact": true,
+      "delivery1440x900at60fps": true,
+      "usageAtNormalSpeed": true,
+      "sevenActualClicks": true,
+      "allSourcePixelsUnchanged": true,
+      "tenOriginalExportedCards": true,
+      "noCutInputActions": true,
+      "promptHold": true,
+      "nativeCardsVisible": true,
+      "twoStableAnswerRevealsObserved": true,
+      "threeRatingsAdvanceToNextCard": true,
+      "originalCSVMatchesRecordedDeck": true,
+      "completePromptReadable": true,
+      "noPrivateHomeSuggestions": true
+    },
+    "videoSha256": "a2e46b15838d37fdf2e12899aea910e24d361d1eb6d45ad96b49b3efe76537fd",
+    "durationSeconds": 38.55,
+    "schemaVersion": 1,
+    "kind": "reviewed-native-short-prompt-video",
+    "accepted": true,
+    "reviewedBy": "/root",
+    "reviewedAt": "2026-11-09T10:54:59.155657+00:00",
+    "visualReview": "Reviewed the complete prompt, native generation, question and answer states, actual click markers and progression. The first card is marked for practice; the next two answers are revealed and marked remembered. Ten cards are independently present in the original native CSV export.",
+    "qualifications": [
+      "The deck finishes populating during initial display. Its final count is ten.",
+      "Recall ratings are demonstration inputs, not an assessment of learner mastery.",
+      "The CSV is a static original export; no public interactive sharing is claimed."
+    ]
+  }
+}

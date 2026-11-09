@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import type { CommandCategory, PromptCommand } from '../../utils/deck'
-import { getShortcutVideo } from '../../utils/shortcut-videos'
+import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
 import CommandTag from './CommandTag.vue'
 import PromptVideoDialog from '../media/PromptVideoDialog.vue'
 const player = ref<InstanceType<typeof PromptVideoDialog>>()
@@ -26,6 +26,7 @@ const columns = computed(() => {
           <tr v-for="row in rows" :key="row.command">
             <th scope="row">
               <button v-if="getShortcutVideo(row.command)" class="btn btn-link command-video-trigger" type="button" :aria-label="`Play ${row.command} video`" @click.stop="player?.open(row.command)">
+                <svg v-if="category === 'informal' && explainedShortcuts.has(row.command)" class="command-example-dot" role="img" aria-label="Example explained in the speaker notes" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg>
                 <CommandTag :text="row.command" /><svg aria-hidden="true" class="command-video-icon" viewBox="0 0 16 16"><path d="M5 3.5 12 8l-7 4.5Z" fill="currentColor" /></svg>
               </button>
               <CommandTag v-else :text="row.command" />
@@ -35,7 +36,6 @@ const columns = computed(() => {
         </tbody>
       </table>
     </div>
-    <p v-if="category === 'informal'" class="command-video-hint">Select a shortcut marked ▶ to watch its recorded demonstration.</p>
     <PromptVideoDialog ref="player" />
   </div>
 </template>
@@ -53,10 +53,10 @@ const columns = computed(() => {
 .slidev-layout .command-table .command-video-trigger { display:inline-flex; align-items:center; gap:8px; min-height:44px; height:auto; margin:-4px 0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:var(--deck-cyan); font:inherit; text-decoration:none; }
 .command-video-trigger:is(:hover,:focus-visible) .command-token { text-decoration:underline; text-underline-offset:4px; }
 .command-video-icon { width:16px; height:16px; flex:none; }
-.slidev-layout .command-video-hint { grid-column:1 / -1; color:var(--deck-muted); font-size:16px; }
+.command-example-dot { width:8px; height:8px; flex:none; color:var(--deck-important); }
 /* Keep the selected tool or shortcut aligned with its explanation. */
 .command-table tbody tr { transition:background-color var(--deck-motion-feedback) var(--deck-motion-ease); }
 .command-table tbody tr:has(:focus-visible) { background:var(--deck-surface); }
 @media (hover:hover) { .command-table tbody tr:hover { background:var(--deck-surface); } }
-@media print { .command-video-icon,.command-video-hint,.shortcut-video-dialog { display:none; } }
+@media print { .command-video-icon,.shortcut-video-dialog { display:none; } }
 </style>

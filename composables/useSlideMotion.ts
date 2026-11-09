@@ -9,9 +9,10 @@ export function useSlideMotion(slideNumber?: MaybeRefOrGetter<number>) {
   const visible = useDocumentVisibility()
   const reduced = ref(typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const printing = ref(typeof window !== 'undefined' && window.matchMedia('print').matches)
-  const active = computed(() => nav.currentSlideNo.value === (slideNumber === undefined
-    ? context?.$page.value
-    : toValue(slideNumber)))
+  // Slidev renumbers the visible deck when authored slides are hidden. Use
+  // the rendered page's index; authored numbers are only a context-free fallback.
+  const active = computed(() => nav.currentSlideNo.value === (context?.$page.value
+    ?? (slideNumber === undefined ? undefined : toValue(slideNumber))))
   const isStatic = computed(() => reduced.value || printing.value || nav.isPrintMode.value
     || !['slide', 'presenter'].includes(context?.$renderContext.value || ''))
   const running = computed(() => active.value && visible.value && !isStatic.value)

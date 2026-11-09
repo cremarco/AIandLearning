@@ -33,6 +33,7 @@ const slideBlocks = slides.map((slide, index) => {
     'layout: default',
     `routeAlias: ${slide.id.toLowerCase()}`,
     `title: ${yaml(slide.title)}`,
+    ...(slide.hide ? ['hide: true'] : []),
     ...(slide.clicks ? [`clicks: ${slide.clicks}`] : []),
     '---',
     '',

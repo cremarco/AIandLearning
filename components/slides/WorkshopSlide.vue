@@ -19,9 +19,10 @@ import ShortcutDetail from './ShortcutDetail.vue'
 import ToolLogos from '../shared/ToolLogos.vue'
 import ToolResourceTable from '../shared/ToolResourceTable.vue'
 import BibliographyGrid from '../shared/BibliographyGrid.vue'
+import ActivityTimer from '../shared/ActivityTimer.vue'
 import { brandsForLabel, brandsForSlide } from '../../utils/tool-brands'
 import { assetUrl as asset } from '../../utils/assets'
-import { getShortcutVideo } from '../../utils/shortcut-videos'
+import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
 import type { Slide, StudyFocus } from '../../utils/deck'
 const props = defineProps<{ slide: Slide }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
@@ -52,7 +53,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
     </div>
     <header v-if="!['chatgpt-intro', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
       <ToolLogos :ids="brandsForSlide(s)" />
-      <h1><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
+      <h1><svg v-if="s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title)" class="command-example-dot" role="img" aria-label="Example explained in the speaker notes" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
     <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.promptExcerpt || s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
@@ -79,7 +80,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           </video>
           <img v-else :src="asset(s.media.src)" :alt="s.media.alt" :style="s.media.fit ? {objectFit:s.media.fit} : undefined" />
           <img v-if="s.media.type==='video' && !s.media.browserFrame" class="video-print-poster" :src="asset(s.media.poster)" :alt="s.media.alt" />
-          <figcaption v-if="s.media.caption || s.media.source || s.media.result"><span>{{ s.media.caption }}</span><a v-if="s.media.source && !s.media.result" class="link" :href="s.media.source" target="_blank" rel="noopener">Source</a><RecordingResultLinks compact :result="s.media.result" /><button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button></figcaption>
+          <figcaption v-if="s.media.caption || s.media.source || s.media.result"><span v-if="s.media.type !== 'video'">{{ s.media.caption }}</span><a v-if="s.media.source && !s.media.result" class="link" :href="s.media.source" target="_blank" rel="noopener">Source</a><RecordingResultLinks compact :links-only="s.media.type === 'video'" :result="s.media.result" /><button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button></figcaption>
         </figure>
         <div class="workshop-copy">
           <PromptBlock v-if="s.prompt && s.kind !== 'tool-demo'" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
@@ -89,6 +90,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           <ol v-if="s.steps?.length" class="procedure-list">
             <li v-for="(step,i) in s.steps" :key="i"><span class="step-number">{{ i+1 }}</span><div><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div></li>
           </ol>
+          <ActivityTimer v-if="s.id === 'S53TRYSHORTCUTS'" />
           <div v-if="s.body?.length" class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div>
           <div v-if="s.result" class="workshop-result"><h2>{{ s.resultLabel || 'Result of this step' }}</h2><p><EmphasisText :text="s.result" /></p></div>
           <div v-if="s.links?.length" class="workshop-links">
@@ -111,6 +113,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 
 <style scoped>
 .workshop-heading h1 { min-width:0; }
+.command-example-dot { display:inline-block; width:8px; height:8px; margin-right:10px; vertical-align:middle; color:var(--deck-important); }
 .comparison-heading { display:flex; align-items:center; gap:10px; }
 .workshop-video-open { margin-left:12px; vertical-align:middle; }
 @media print { .workshop-video-open { display:none; } }

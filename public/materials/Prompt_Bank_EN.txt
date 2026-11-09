@@ -1,19 +1,19 @@
 BEYOND PROMPTING — STUDY, UNDERSTAND, ASSESS
 Marco Cremaschi · November 2026
-98 presentation slides, followed by 2 reference appendices. Participants observe the method; Andrea is a fictional student in a teaching scenario.
+99 presentation slides, followed by 2 reference appendices. Participants observe the method; Andrea is a fictional student in a teaching scenario.
 Public materials in English.
 
-S53DETAILQUIZ · /quiz
-/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.
+S53DETAILFLASHCARD · /flashcard
+/flashcard Help me study the attached chapter.
+
+S53DETAILMISTAKELOG · /mistakelog
+/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.
+
+S53DETAILCONCEPTMAP · /conceptmap
+/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.
 
 S53DETAILMATCHINGGAME · /matchinggame
 /matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.
-
-S53DETAILFILLINTHEBLANKS · /fillintheblanks
-/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.
-
-S53DETAILFLASHCARD · /flashcard
-/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.
 
 S53DETAILSORTINGGAME · /sortinggame
 /sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.
@@ -21,29 +21,29 @@ S53DETAILSORTINGGAME · /sortinggame
 S53DETAILORAL · /oral
 /oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.
 
-S53DETAILSTUDYPLAN · /studyplan
-/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.
+S53DETAILQUIZ · /quiz
+/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.
 
-S53DETAILCONCEPTMAP · /conceptmap
-/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.
+S53DETAILFILLINTHEBLANKS · /fillintheblanks
+/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.
 
-S53DETAILMISTAKELOG · /mistakelog
-/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.
-
-S53DETAILLESSONPLAN · /lessonplan
-/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.
+S53DETAILWORKSHEET · /worksheet
+/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
 
 S53DETAILCASESTUDY · /caseStudy
 /caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.
+
+S53DETAILSTUDYPLAN · /studyplan
+/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.
+
+S53DETAILLESSONPLAN · /lessonplan
+/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.
 
 S53DETAILDIFFERENTIATE · /differentiate
 /differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.
 
 S53DETAILPEERASSESSMENT · /peerassessment
 /peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.
-
-S53DETAILWORKSHEET · /worksheet
-/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.
 
 S53DETAILLEARNINGSTATIONS · /learningstations
 /learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.

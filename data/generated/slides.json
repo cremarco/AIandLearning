@@ -108,6 +108,7 @@
   {
     "id": "S48",
     "number": 5,
+    "hide": true,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
@@ -141,6 +142,7 @@
   {
     "id": "S50",
     "number": 6,
+    "hide": true,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
@@ -768,7 +770,6 @@
         "description": "Review misconceptions and track corrections"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "recall",
@@ -813,7 +814,6 @@
         "description": "Explain aloud, write a summary and compare expected answers"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "connect",
@@ -857,7 +857,6 @@
         "description": "Apply concepts to a case, then reveal explanations"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "apply",
@@ -906,7 +905,6 @@
         "description": "Organise stations and track completion"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "plan",
@@ -918,62 +916,176 @@
     "links": []
   },
   {
-    "id": "S53DETAILQUIZ",
+    "id": "S53DETAILFLASHCARD",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/quiz",
-    "message": "Answer questions, review feedback and move through a quiz.",
+    "title": "/flashcard",
+    "message": "Practise recall with questions and answers on flip cards.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+    "prompt": "/flashcard Help me study the attached chapter.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Ten native flashcards",
+    "result": "ChatGPT · 38.5 s",
+    "links": [],
+    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/video.mp4",
+      "poster": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — ten native flashcards generated with a short prompt, with answer reveal and recall ratings.",
+      "caption": "ChatGPT · 38.5 s",
+      "transcript": "ChatGPT — /flashcard\n\nREQUEST\n/flashcard Help me study the attached chapter.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Read the complete prompt.\n00:00:02.000 The chapter is attached. This is the complete request.\n00:00:04.218 Send the short request with the attached chapter. (3× speed)\n00:00:04.607 ChatGPT generates native flashcards from the attached chapter. (4× speed)\n00:00:13.412 Read the first question before revealing the answer.\n00:00:15.958 Select the first flashcard\n00:00:20.114 Mark the first card for practice\n00:00:22.832 Read the next question, then compare with its answer.\n00:00:22.880 Reveal the second answer\n00:00:27.089 Mark the second card remembered\n00:00:29.795 Recall first, reveal the answer and rate your own recall.\n00:00:29.829 Reveal the third answer\n00:00:33.994 Mark the third card remembered\n\nOBSERVED RESULT\nTen native flashcards generated from the attached chapter using the short request. The first card is marked for practice. The second and third answers are revealed and marked remembered. Each rating advances to the next question.\n\n",
+      "prompt": "/flashcard Help me study the attached chapter.",
+      "result": {
+        "kind": "file",
+        "url": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/flashcards.csv",
+        "label": "Download flashcards (CSV)",
+        "download": true,
+        "mediaType": "text/csv",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Original ten-card CSV exported through ChatGPT’s native Download control. Interactive controls are demonstrated in the video; the downloadable CSV is a static export.",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-09-flashcard-short-prompt/provenance.json",
+      "durationSeconds": 38.55,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "a2e46b15838d37fdf2e12899aea910e24d361d1eb6d45ad96b49b3efe76537fd",
+      "recordingMode": "reviewed-native-short-prompt-retake",
+      "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
+    },
+    "number": 25
+  },
+  {
+    "id": "S53DETAILMISTAKELOG",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/mistakelog",
+    "message": "Record misconceptions, review corrections and track progress.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 98.1 s",
+    "result": "ChatGPT · 99.8 s",
     "links": [],
-    "videoLayout": "focus",
     "studyPhases": {
       "primary": "check",
       "secondary": [
-        "recall"
+        "plan"
       ]
     },
+    "videoLayout": "focus",
     "media": {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-quiz/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-quiz/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-quiz/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-quiz/transcript.txt",
+      "src": "materials/video-refresh/2026-11-07/widget-mistakelog/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-mistakelog/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-mistakelog/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-mistakelog/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /quiz: recorded demonstration and use.",
-      "caption": "ChatGPT · 98.1 s",
-      "transcript": "ChatGPT — /quiz\n\nREQUEST\n/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.898 Choose the workshop book from the computer. (3× speed)\n00:00:01.331 The workshop book is attached. (3× speed)\n00:00:01.834 Write the request using the attached book. (3× speed)\n00:00:04.139 Read the complete prompt.\n00:00:06.139 Write the request using the attached book. (3× speed)\n00:00:06.808 Send the book and the request. (3× speed)\n00:00:07.938 The interactive quiz is generated from the book. (4× speed)\n00:00:09.561 Use hints, compare answers and read the feedback.\n00:00:09.626 Bring the generated quiz into view\n00:00:11.484 Reveal the hint for question1\n00:00:15.377 Choose a wrong answer and read the correction\n00:00:20.916 Continue to question2\n00:00:30.699 Reveal the context hint\n00:00:34.184 Choose the correct context explanation\n00:00:39.541 Continue to question3\n00:00:49.317 Reveal the parameter-update hint\n00:00:52.848 Keep all answer controls in view\n00:00:54.217 Choose fine-tuning and read the explanation\n00:00:59.740 Show the final score and explanations\n00:01:07.963 Review the score and explanations before trying again.\n00:01:14.340 Retry the quiz and correct the earlier mistake.\n00:01:14.374 Try again\n00:01:30.929 Correct the earlier mistake\n\nOBSERVED RESULT\nHint; wrong answer and explanation; next question; two correct answers with explanations; score 2/3; retry and correction.\n\n",
-      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+      "alt": "ChatGPT — /mistakelog: recorded demonstration and use.",
+      "caption": "ChatGPT · 99.8 s",
+      "transcript": "ChatGPT — /mistakelog\n\nREQUEST\n/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.828 Choose the workshop book from the computer. (3× speed)\n00:00:01.234 The workshop book is attached. (3× speed)\n00:00:01.739 Write the request using the attached book. (3× speed)\n00:00:03.496 Read the complete prompt.\n00:00:05.496 Write the request using the attached book. (3× speed)\n00:00:06.166 Send the book and the request. (3× speed)\n00:00:07.279 ChatGPT generates the interactive activity. (4× speed)\n00:00:09.133 Review a misconception, explain the correction, and record confidence.\n00:00:09.258 Reveal correction\n00:00:13.672 Focus the answer field\n00:00:19.663 Show expected answer\n00:00:24.328 Select confidence: Can explain independently\n00:00:26.146 Mark the training item reviewed\n00:00:29.573 Next\n00:00:39.765 Reveal correction\n00:00:43.506 Focus the answer field\n00:00:48.626 Show expected answer\n00:00:52.794 Select confidence: Partly understood\n00:00:55.455 Mark inference reviewed\n00:00:58.359 Next\n00:01:01.636 Reveal correction\n00:01:05.450 Focus the answer field\n00:01:12.989 Show expected answer\n00:01:17.438 Select confidence: Can explain independently\n00:01:19.471 Mark the final item reviewed\n00:01:28.886 Revisit the saved explanation before resetting the log.\n00:01:29.941 ✓ Training\n00:01:33.186 Reset the completed log for another practice session.\n00:01:34.059 Reset log\n\nOBSERVED RESULT\nThree misconceptions; native correction and expected-answer controls; three written notes; confidence ratings; 3/3 reviewed; saved explanation revisited; reset. Every retained usage click uses exact native CDP mouse input with hit-test proof.\n\n",
+      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
       "result": {
         "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7ac2-c51c-83eb-bbce-92e9f2459a9c",
+        "url": "https://chatgpt.com/share/6aef7f23-2568-83eb-b08b-3e449f031776",
         "label": "Open shared result",
         "interactiveVerified": true,
         "recipientVerified": true,
         "ownerIndependent": true,
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-quiz.json",
-      "durationSeconds": 98.133333,
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-mistakelog.json",
+      "durationSeconds": 99.75,
       "width": 1440,
       "height": 900,
       "fps": 60,
-      "sha256": "d1a6c7b91929f3a6eada311bd6f6d5162cd86d027904336929714492509c6220",
+      "sha256": "97c6414614bbd8057db334ddc0681d1fb40fd575f976372933c18ad653861954",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 25
+    "number": 26
+  },
+  {
+    "id": "S53DETAILCONCEPTMAP",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/conceptmap",
+    "message": "Connect concepts with labelled relationships.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+    "promptLabel": "Retested prompt · 7 Nov 2026",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 83.8 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "connect"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-conceptmap/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-conceptmap/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-conceptmap/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-conceptmap/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /conceptmap: recorded demonstration and use.",
+      "caption": "ChatGPT · 83.8 s",
+      "transcript": "ChatGPT — /conceptmap\n\nREQUEST\n/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.828 Choose the workshop book from the computer. (3× speed)\n00:00:01.172 The workshop book is attached. (3× speed)\n00:00:01.677 Write the request using the attached book. (3× speed)\n00:00:06.845 Send the book and the request. (3× speed)\n00:00:08.023 Read the complete sent prompt.\n00:00:10.023 ChatGPT generates the interactive activity. (4× speed)\n00:00:11.857 Explore the relationships for training, inference, and RAG.\n00:00:29.512 Answer the three checks and inspect an incorrect answer.\n00:00:46.332 Retry the check and correct the distinction about training.\n00:01:06.528 Revisit each branch after correcting the check questions.\n00:01:07.449 Training\n00:01:12.293 Inference\n00:01:17.163 RAG\n\nOBSERVED RESULT\nThree map branches;2/3checkfeedback;retry3/3;native branchreview.\n\n\nNATIVE EDITORIAL INSERT\nThe complete sent prompt is shown in a later native review of the exact same conversation and owner response. Mainline source frames and their times are unchanged.\nActual capture: 2026-11-07T20:07:29.940Z\nOwner response: 0fccd71f-3795-4828-91ec-d7e234bd024b\nNative pixels SHA-256: 4b82bad146763fdb03b2f174de24896e1173dce33b428bd4d65ad698f9b2385a\nExact prompt SHA-256: a9602362319e4ed9261020b000b3a307d788ba4f0e3a5c309d93ac98bc1dd7c9\n",
+      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef808d-4418-83eb-9fda-9024fb1f0014",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-conceptmap.json",
+      "durationSeconds": 83.85,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "4405f48a71efd34d50a0dec54d4fc2cf0b7eaf4545ee76c3d4f30e6d9530717f",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 27
   },
   {
     "id": "S53DETAILMATCHINGGAME",
@@ -1028,117 +1140,6 @@
       "height": 900,
       "fps": 60,
       "sha256": "fbcc4032c639913fa5bac680cc51a05fe227a02ca97067f12302f6c6fc139162",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 26
-  },
-  {
-    "id": "S53DETAILFILLINTHEBLANKS",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/fillintheblanks",
-    "message": "Complete missing terms and check your answers.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 49.6 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "recall"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-fillintheblanks/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-fillintheblanks/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-fillintheblanks/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-fillintheblanks/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /fillintheblanks: recorded demonstration and use.",
-      "caption": "ChatGPT · 49.6 s",
-      "transcript": "ChatGPT — /fillintheblanks\n\nREQUEST\n/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.836 Choose the workshop book from the computer. (3× speed)\n00:00:01.198 The workshop book is attached. (3× speed)\n00:00:01.702 Write the request using the attached book. (3× speed)\n00:00:03.473 Read the complete prompt.\n00:00:05.473 Write the request using the attached book. (3× speed)\n00:00:06.144 Send the book and the request. (3× speed)\n00:00:07.289 ChatGPT generates the interactive activity. (4× speed)\n00:00:09.774 Complete the blanks, check an error, and use a hint.\n00:00:12.502 Check\n00:00:27.516 Correct the answer, complete the exercise, and inspect the explanations.\n00:00:37.968 Check all answers\n00:00:43.440 Reset the exercise for another attempt.\n00:00:43.474 Try again\n\nOBSERVED RESULT\nIncorrect training blank; check and expected answer; inference hint; correction; three answers checked; explanations; reset.\n\n",
-      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7bcc-53cc-83ed-a596-930a4499007b",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-fillintheblanks.json",
-      "durationSeconds": 49.6,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "5f8fd65729cc4fb3cb170816683c95a18d39ec6b2bdef4a168fb923913594108",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 27
-  },
-  {
-    "id": "S53DETAILFLASHCARD",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/flashcard",
-    "message": "Practise recall with questions and answers on flip cards.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 58.4 s",
-    "links": [],
-    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
-    "studyPhases": {
-      "primary": "recall"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-flashcard/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-flashcard/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-flashcard/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-flashcard/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /flashcard: recorded demonstration and use.",
-      "caption": "ChatGPT · 58.4 s",
-      "transcript": "ChatGPT — /flashcard\n\nREQUEST\n/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.\n\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.267 The workshop book is attached. (3× speed)\n00:00:00.587 Insert the complete request using the attached book. (3× speed)\n00:00:01.574 Send the book and the request. (3× speed)\n00:00:01.897 Read the complete sent prompt.\n00:00:03.897 ChatGPT generates the inline recall activity. (4× speed)\n00:00:04.029 Read, reveal and review the original flashcards.\n00:00:06.306 Reveal the tokens answer\n00:00:11.704 Mark the tokens answer remembered\n00:00:14.315 Move to the context question\n00:00:16.921 Reveal how context differs from weight updates\n00:00:22.115 Read, reveal and review the original flashcards.\n00:00:22.215 Mark the context answer for practice\n00:00:25.081 Revisit the earlier card without losing its rating\n00:00:27.609 Return to the context card\n00:00:29.691 Move to probability versus truth\n00:00:32.201 Reveal why probability does not measure truth\n00:00:37.697 Mark the probability answer remembered\n00:00:40.919 Read, reveal and review the original flashcards.\n00:00:41.083 Review only the card needing practice\n00:00:44.854 Reveal the missed context explanation\n00:00:49.961 Mark the recalled answer remembered\n00:00:52.932 Read, reveal and review the original flashcards.\n00:00:53.456 Reset the complete flashcard activity\nNATIVE ROOT WIDGET ACTIVATION MARKERS\nSome markers identify the measured centre of the actual root-document control activated through native accessibility or a documented locator. Exact delivered pointer coordinates are not exposed. Two actual prompt activations retain no geometry and receive no invented marker. Native CDP actions retain their separate actual pointer profile.\n\n\nOBSERVED RESULT\n\n\n\nNATIVE EDITORIAL INSERT\nThe complete sent prompt is shown in a later native review of the exact same conversation and owner response. Mainline source frames and their times are unchanged.\nActual capture: 2026-11-08T20:35:51.050Z\nOwner response: 0c19a03a-bd45-4d77-a0f5-163a7f61bb7a\nNative pixels SHA-256: 92faf595ec1db43d9496cab6fc794ab974802a317e858a396c89297d360dec8a\nExact prompt SHA-256: 944942201a0120894684cea80cdee954f55609a05b08f11ff70f407d3b637b90\n",
-      "prompt": "/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.\n",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/s/t_6af0e4033d448191a60771c983d47b9a",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-flashcard.json",
-      "durationSeconds": 58.366667,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "32a7797f879658d78d4e37d5cfcd519da5ff0a6085d997b10edba5015cdc6157",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
@@ -1209,8 +1210,10 @@
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
     "title": "/oral",
-    "message": "Practise explaining answers and receive follow-up feedback in chat.",
-    "body": [],
+    "message": "Practise explaining answers and receive follow-up feedback in chat.*",
+    "body": [
+      "* You can also dictate your answer."
+    ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
@@ -1261,227 +1264,175 @@
     "number": 30
   },
   {
-    "id": "S53DETAILSTUDYPLAN",
+    "id": "S53DETAILQUIZ",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/studyplan",
-    "message": "Break a learning goal into activities and track completion.",
+    "title": "/quiz",
+    "message": "Answer questions, review feedback and move through a quiz.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 50.0 s",
+    "result": "ChatGPT · 98.1 s",
     "links": [],
-    "studyPhases": {
-      "primary": "plan"
-    },
     "videoLayout": "focus",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "recall"
+      ]
+    },
     "media": {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-studyplan/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-studyplan/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-studyplan/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-studyplan/transcript.txt",
+      "src": "materials/video-refresh/2026-11-07/widget-quiz/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-quiz/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-quiz/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-quiz/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /studyplan: recorded demonstration and use.",
-      "caption": "ChatGPT · 50.0 s",
-      "transcript": "ChatGPT — /studyplan\n\nREQUEST\n/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.898 Choose the workshop book from the computer. (3× speed)\n00:00:01.221 The workshop book is attached. (3× speed)\n00:00:01.724 Write the request using the attached book. (3× speed)\n00:00:03.511 Read the complete prompt.\n00:00:05.511 Write the request using the attached book. (3× speed)\n00:00:06.182 Send the book and the request. (3× speed)\n00:00:07.305 ChatGPT generates the interactive activity. (4× speed)\n00:00:08.813 Use the native controls and review the result.\n00:00:09.947 Complete activities and follow progress through the three study steps.\n00:00:10.870 Mark a training activity complete\n00:00:18.329 Next step\n00:00:21.632 Mark an inference activity complete\n00:00:28.556 Next step\n00:00:33.606 Mark a context activity complete\n00:00:43.286 Reset all progress for a fresh study session.\n00:00:44.297 Reset\n\nOBSERVED RESULT\nNine native check clicks across3steps;100%completion;reset0/9.\n\n",
-      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "alt": "ChatGPT — /quiz: recorded demonstration and use.",
+      "caption": "ChatGPT · 98.1 s",
+      "transcript": "ChatGPT — /quiz\n\nREQUEST\n/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.898 Choose the workshop book from the computer. (3× speed)\n00:00:01.331 The workshop book is attached. (3× speed)\n00:00:01.834 Write the request using the attached book. (3× speed)\n00:00:04.139 Read the complete prompt.\n00:00:06.139 Write the request using the attached book. (3× speed)\n00:00:06.808 Send the book and the request. (3× speed)\n00:00:07.938 The interactive quiz is generated from the book. (4× speed)\n00:00:09.561 Use hints, compare answers and read the feedback.\n00:00:09.626 Bring the generated quiz into view\n00:00:11.484 Reveal the hint for question1\n00:00:15.377 Choose a wrong answer and read the correction\n00:00:20.916 Continue to question2\n00:00:30.699 Reveal the context hint\n00:00:34.184 Choose the correct context explanation\n00:00:39.541 Continue to question3\n00:00:49.317 Reveal the parameter-update hint\n00:00:52.848 Keep all answer controls in view\n00:00:54.217 Choose fine-tuning and read the explanation\n00:00:59.740 Show the final score and explanations\n00:01:07.963 Review the score and explanations before trying again.\n00:01:14.340 Retry the quiz and correct the earlier mistake.\n00:01:14.374 Try again\n00:01:30.929 Correct the earlier mistake\n\nOBSERVED RESULT\nHint; wrong answer and explanation; next question; two correct answers with explanations; score 2/3; retry and correction.\n\n",
+      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
       "result": {
         "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7ddc-700c-83ed-ae0a-325ad2224d12",
+        "url": "https://chatgpt.com/share/6aef7ac2-c51c-83eb-bbce-92e9f2459a9c",
         "label": "Open shared result",
         "interactiveVerified": true,
         "recipientVerified": true,
         "ownerIndependent": true,
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-studyplan.json",
-      "durationSeconds": 49.95,
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-quiz.json",
+      "durationSeconds": 98.133333,
       "width": 1440,
       "height": 900,
       "fps": 60,
-      "sha256": "96c79f6dc1f1bf8c22634ee8bae1d17ed7aae27cd519d41f0252c70d04e5da61",
+      "sha256": "d1a6c7b91929f3a6eada311bd6f6d5162cd86d027904336929714492509c6220",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
     "number": 31
   },
   {
-    "id": "S53DETAILCONCEPTMAP",
+    "id": "S53DETAILFILLINTHEBLANKS",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/conceptmap",
-    "message": "Connect concepts with labelled relationships.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_RECHECK"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
-    "promptLabel": "Retested prompt · 7 Nov 2026",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 83.8 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-conceptmap/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-conceptmap/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-conceptmap/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-conceptmap/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /conceptmap: recorded demonstration and use.",
-      "caption": "ChatGPT · 83.8 s",
-      "transcript": "ChatGPT — /conceptmap\n\nREQUEST\n/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.828 Choose the workshop book from the computer. (3× speed)\n00:00:01.172 The workshop book is attached. (3× speed)\n00:00:01.677 Write the request using the attached book. (3× speed)\n00:00:06.845 Send the book and the request. (3× speed)\n00:00:08.023 Read the complete sent prompt.\n00:00:10.023 ChatGPT generates the interactive activity. (4× speed)\n00:00:11.857 Explore the relationships for training, inference, and RAG.\n00:00:29.512 Answer the three checks and inspect an incorrect answer.\n00:00:46.332 Retry the check and correct the distinction about training.\n00:01:06.528 Revisit each branch after correcting the check questions.\n00:01:07.449 Training\n00:01:12.293 Inference\n00:01:17.163 RAG\n\nOBSERVED RESULT\nThree map branches;2/3checkfeedback;retry3/3;native branchreview.\n\n\nNATIVE EDITORIAL INSERT\nThe complete sent prompt is shown in a later native review of the exact same conversation and owner response. Mainline source frames and their times are unchanged.\nActual capture: 2026-11-07T20:07:29.940Z\nOwner response: 0fccd71f-3795-4828-91ec-d7e234bd024b\nNative pixels SHA-256: 4b82bad146763fdb03b2f174de24896e1173dce33b428bd4d65ad698f9b2385a\nExact prompt SHA-256: a9602362319e4ed9261020b000b3a307d788ba4f0e3a5c309d93ac98bc1dd7c9\n",
-      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef808d-4418-83eb-9fda-9024fb1f0014",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-conceptmap.json",
-      "durationSeconds": 83.85,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "4405f48a71efd34d50a0dec54d4fc2cf0b7eaf4545ee76c3d4f30e6d9530717f",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 32
-  },
-  {
-    "id": "S53DETAILMISTAKELOG",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/mistakelog",
-    "message": "Record misconceptions, review corrections and track progress.",
+    "title": "/fillintheblanks",
+    "message": "Complete missing terms and check your answers.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 99.8 s",
+    "result": "ChatGPT · 49.6 s",
     "links": [],
     "studyPhases": {
-      "primary": "check",
+      "primary": "recall"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-fillintheblanks/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-fillintheblanks/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-fillintheblanks/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-fillintheblanks/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /fillintheblanks: recorded demonstration and use.",
+      "caption": "ChatGPT · 49.6 s",
+      "transcript": "ChatGPT — /fillintheblanks\n\nREQUEST\n/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.836 Choose the workshop book from the computer. (3× speed)\n00:00:01.198 The workshop book is attached. (3× speed)\n00:00:01.702 Write the request using the attached book. (3× speed)\n00:00:03.473 Read the complete prompt.\n00:00:05.473 Write the request using the attached book. (3× speed)\n00:00:06.144 Send the book and the request. (3× speed)\n00:00:07.289 ChatGPT generates the interactive activity. (4× speed)\n00:00:09.774 Complete the blanks, check an error, and use a hint.\n00:00:12.502 Check\n00:00:27.516 Correct the answer, complete the exercise, and inspect the explanations.\n00:00:37.968 Check all answers\n00:00:43.440 Reset the exercise for another attempt.\n00:00:43.474 Try again\n\nOBSERVED RESULT\nIncorrect training blank; check and expected answer; inference hint; correction; three answers checked; explanations; reset.\n\n",
+      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7bcc-53cc-83ed-a596-930a4499007b",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-fillintheblanks.json",
+      "durationSeconds": 49.6,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "5f8fd65729cc4fb3cb170816683c95a18d39ec6b2bdef4a168fb923913594108",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 32
+  },
+  {
+    "id": "S53DETAILWORKSHEET",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/worksheet",
+    "message": "Practise with answer fields and model answers to reveal.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 111.5 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "apply",
       "secondary": [
-        "plan"
+        "check"
       ]
     },
     "videoLayout": "focus",
     "media": {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-mistakelog/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-mistakelog/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-mistakelog/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-mistakelog/transcript.txt",
+      "src": "materials/video-refresh/2026-11-07/widget-worksheet/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-worksheet/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-worksheet/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-worksheet/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /mistakelog: recorded demonstration and use.",
-      "caption": "ChatGPT · 99.8 s",
-      "transcript": "ChatGPT — /mistakelog\n\nREQUEST\n/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.828 Choose the workshop book from the computer. (3× speed)\n00:00:01.234 The workshop book is attached. (3× speed)\n00:00:01.739 Write the request using the attached book. (3× speed)\n00:00:03.496 Read the complete prompt.\n00:00:05.496 Write the request using the attached book. (3× speed)\n00:00:06.166 Send the book and the request. (3× speed)\n00:00:07.279 ChatGPT generates the interactive activity. (4× speed)\n00:00:09.133 Review a misconception, explain the correction, and record confidence.\n00:00:09.258 Reveal correction\n00:00:13.672 Focus the answer field\n00:00:19.663 Show expected answer\n00:00:24.328 Select confidence: Can explain independently\n00:00:26.146 Mark the training item reviewed\n00:00:29.573 Next\n00:00:39.765 Reveal correction\n00:00:43.506 Focus the answer field\n00:00:48.626 Show expected answer\n00:00:52.794 Select confidence: Partly understood\n00:00:55.455 Mark inference reviewed\n00:00:58.359 Next\n00:01:01.636 Reveal correction\n00:01:05.450 Focus the answer field\n00:01:12.989 Show expected answer\n00:01:17.438 Select confidence: Can explain independently\n00:01:19.471 Mark the final item reviewed\n00:01:28.886 Revisit the saved explanation before resetting the log.\n00:01:29.941 ✓ Training\n00:01:33.186 Reset the completed log for another practice session.\n00:01:34.059 Reset log\n\nOBSERVED RESULT\nThree misconceptions; native correction and expected-answer controls; three written notes; confidence ratings; 3/3 reviewed; saved explanation revisited; reset. Every retained usage click uses exact native CDP mouse input with hit-test proof.\n\n",
-      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+      "alt": "ChatGPT — /worksheet: recorded demonstration and use.",
+      "caption": "ChatGPT · 111.5 s",
+      "transcript": "ChatGPT — /worksheet\n\nREQUEST\n/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.838 Choose the workshop book from the computer. (3× speed)\n00:00:01.195 The workshop book is attached. (3× speed)\n00:00:01.699 Write the request using the attached book. (3× speed)\n00:00:03.741 Read the complete prompt.\n00:00:05.741 Write the request using the attached book. (3× speed)\n00:00:06.411 Send the book and the request. (3× speed)\n00:00:07.538 ChatGPT generates the interactive activity. (4× speed)\n00:00:09.365 Write a response, reveal the model answer, and self-score.\n00:00:10.388 Focus the answer field\n00:00:24.634 Reveal model answer\n00:00:30.507 Assign yourself 2 points for exercise 1\n00:00:32.730 Next\n00:00:38.522 Focus the answer field\n00:00:51.317 Reveal model answer\n00:00:57.149 Assign yourself 2 points for exercise 2\n00:00:59.300 Next\n00:01:05.035 Focus the answer field\n00:01:19.237 Reveal model answer\n00:01:25.059 Assign yourself 2 points for exercise 3\n00:01:37.788 Review the self-assessed6/6 total and reset the worksheet.\n00:01:42.062 Reset worksheet\n\nOBSERVED RESULT\nThree written answers,modelanswer reveals,learner-assigned2/2/2scores,6/6total,reset.\n\n",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
       "result": {
         "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7f23-2568-83eb-b08b-3e449f031776",
+        "url": "https://chatgpt.com/share/6aef8f1c-4440-83eb-95d8-12cfcaeb7c0d",
         "label": "Open shared result",
         "interactiveVerified": true,
         "recipientVerified": true,
         "ownerIndependent": true,
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-mistakelog.json",
-      "durationSeconds": 99.75,
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-worksheet.json",
+      "durationSeconds": 111.55,
       "width": 1440,
       "height": 900,
       "fps": 60,
-      "sha256": "97c6414614bbd8057db334ddc0681d1fb40fd575f976372933c18ad653861954",
+      "sha256": "7a23642ad3085c3262446343879487171e2677e99b305b6aabc8c733573c9ddb",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
     "number": 33
-  },
-  {
-    "id": "S53DETAILLESSONPLAN",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/lessonplan",
-    "message": "Outline learning goals, activities and checks for a lesson.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_RECHECK"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
-    "promptLabel": "Retested prompt · 7 Nov 2026",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 98.6 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "plan"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-lessonplan/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-lessonplan/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-lessonplan/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-lessonplan/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /lessonplan: recorded demonstration and use.",
-      "caption": "ChatGPT · 98.6 s",
-      "transcript": "ChatGPT — /lessonplan\n\nREQUEST\n/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.838 Choose the workshop book from the computer. (3× speed)\n00:00:01.203 The workshop book is attached. (3× speed)\n00:00:01.715 Write the request using the attached book. (3× speed)\n00:00:07.609 Send the book and the request. (3× speed)\n00:00:07.714 Read the complete sent prompt.\n00:00:09.714 ChatGPT generates the interactive activity. (4× speed)\n00:00:12.911 Explain the three processes, then apply the distinction to scenarios.\n00:00:28.346 Classify the scenarios and inspect the explanatory feedback.\n00:01:18.379 Write an independent explanation and compare the feedback.\n00:01:18.452 Focus the answer field\n00:01:26.237 Check my explanation\n00:01:32.024 Restart the lesson for another learner.\n00:01:32.907 Restart lesson\n\nOBSERVED RESULT\nExplain;Apply3scenarios;2/3feedback;answer-key reveal/hide;correction3/3;Assess independentwritten explanation;feedback;restart.\n\n\nNATIVE EDITORIAL INSERT\nThe complete sent prompt is shown in a later native review of the exact same conversation and owner response. Mainline source frames and their times are unchanged.\nActual capture: 2026-11-07T20:07:30.870Z\nOwner response: 6c6ad1ae-7c04-4fbc-9ce9-6571d32f7c7f\nNative pixels SHA-256: 33d16e8fe937d221f487ba93b3f6688f0e612087f3a7bc40b1298d718ad0c91d\nExact prompt SHA-256: f955b89c150353605b080e79018a33ae597a4ac611d4acc039f0d30e3f59e2c5\n",
-      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef81cc-9870-83ed-9885-2c0a3910092b",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-lessonplan.json",
-      "durationSeconds": 98.583333,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "b6d0559b8b86ebfc44248b1672f2d012fed4f794fc7d21b94cb41d9e9faa3935",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 34
   },
   {
     "id": "S53DETAILCASESTUDY",
@@ -1539,7 +1490,117 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
+    "number": 34
+  },
+  {
+    "id": "S53DETAILSTUDYPLAN",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/studyplan",
+    "message": "Break a learning goal into activities and track completion.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 50.0 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-studyplan/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-studyplan/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-studyplan/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-studyplan/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /studyplan: recorded demonstration and use.",
+      "caption": "ChatGPT · 50.0 s",
+      "transcript": "ChatGPT — /studyplan\n\nREQUEST\n/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.898 Choose the workshop book from the computer. (3× speed)\n00:00:01.221 The workshop book is attached. (3× speed)\n00:00:01.724 Write the request using the attached book. (3× speed)\n00:00:03.511 Read the complete prompt.\n00:00:05.511 Write the request using the attached book. (3× speed)\n00:00:06.182 Send the book and the request. (3× speed)\n00:00:07.305 ChatGPT generates the interactive activity. (4× speed)\n00:00:08.813 Use the native controls and review the result.\n00:00:09.947 Complete activities and follow progress through the three study steps.\n00:00:10.870 Mark a training activity complete\n00:00:18.329 Next step\n00:00:21.632 Mark an inference activity complete\n00:00:28.556 Next step\n00:00:33.606 Mark a context activity complete\n00:00:43.286 Reset all progress for a fresh study session.\n00:00:44.297 Reset\n\nOBSERVED RESULT\nNine native check clicks across3steps;100%completion;reset0/9.\n\n",
+      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7ddc-700c-83ed-ae0a-325ad2224d12",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-studyplan.json",
+      "durationSeconds": 49.95,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "96c79f6dc1f1bf8c22634ee8bae1d17ed7aae27cd519d41f0252c70d04e5da61",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
     "number": 35
+  },
+  {
+    "id": "S53DETAILLESSONPLAN",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/lessonplan",
+    "message": "Outline learning goals, activities and checks for a lesson.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+    "promptLabel": "Retested prompt · 7 Nov 2026",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 98.6 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-lessonplan/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-lessonplan/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-lessonplan/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-lessonplan/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /lessonplan: recorded demonstration and use.",
+      "caption": "ChatGPT · 98.6 s",
+      "transcript": "ChatGPT — /lessonplan\n\nREQUEST\n/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.838 Choose the workshop book from the computer. (3× speed)\n00:00:01.203 The workshop book is attached. (3× speed)\n00:00:01.715 Write the request using the attached book. (3× speed)\n00:00:07.609 Send the book and the request. (3× speed)\n00:00:07.714 Read the complete sent prompt.\n00:00:09.714 ChatGPT generates the interactive activity. (4× speed)\n00:00:12.911 Explain the three processes, then apply the distinction to scenarios.\n00:00:28.346 Classify the scenarios and inspect the explanatory feedback.\n00:01:18.379 Write an independent explanation and compare the feedback.\n00:01:18.452 Focus the answer field\n00:01:26.237 Check my explanation\n00:01:32.024 Restart the lesson for another learner.\n00:01:32.907 Restart lesson\n\nOBSERVED RESULT\nExplain;Apply3scenarios;2/3feedback;answer-key reveal/hide;correction3/3;Assess independentwritten explanation;feedback;restart.\n\n\nNATIVE EDITORIAL INSERT\nThe complete sent prompt is shown in a later native review of the exact same conversation and owner response. Mainline source frames and their times are unchanged.\nActual capture: 2026-11-07T20:07:30.870Z\nOwner response: 6c6ad1ae-7c04-4fbc-9ce9-6571d32f7c7f\nNative pixels SHA-256: 33d16e8fe937d221f487ba93b3f6688f0e612087f3a7bc40b1298d718ad0c91d\nExact prompt SHA-256: f955b89c150353605b080e79018a33ae597a4ac611d4acc039f0d30e3f59e2c5\n",
+      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef81cc-9870-83ed-9885-2c0a3910092b",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-lessonplan.json",
+      "durationSeconds": 98.583333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b6d0559b8b86ebfc44248b1672f2d012fed4f794fc7d21b94cb41d9e9faa3935",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 36
   },
   {
     "id": "S53DETAILDIFFERENTIATE",
@@ -1594,7 +1655,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 36
+    "number": 37
   },
   {
     "id": "S53DETAILPEERASSESSMENT",
@@ -1646,64 +1707,6 @@
       "height": 900,
       "fps": 60,
       "sha256": "6213988add546c35a70aa8a2a97b27b416792492374130b5310d40e76c1cb6d7",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 37
-  },
-  {
-    "id": "S53DETAILWORKSHEET",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/worksheet",
-    "message": "Practise with answer fields and model answers to reveal.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 111.5 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "apply",
-      "secondary": [
-        "check"
-      ]
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-worksheet/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-worksheet/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-worksheet/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-worksheet/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /worksheet: recorded demonstration and use.",
-      "caption": "ChatGPT · 111.5 s",
-      "transcript": "ChatGPT — /worksheet\n\nREQUEST\n/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.838 Choose the workshop book from the computer. (3× speed)\n00:00:01.195 The workshop book is attached. (3× speed)\n00:00:01.699 Write the request using the attached book. (3× speed)\n00:00:03.741 Read the complete prompt.\n00:00:05.741 Write the request using the attached book. (3× speed)\n00:00:06.411 Send the book and the request. (3× speed)\n00:00:07.538 ChatGPT generates the interactive activity. (4× speed)\n00:00:09.365 Write a response, reveal the model answer, and self-score.\n00:00:10.388 Focus the answer field\n00:00:24.634 Reveal model answer\n00:00:30.507 Assign yourself 2 points for exercise 1\n00:00:32.730 Next\n00:00:38.522 Focus the answer field\n00:00:51.317 Reveal model answer\n00:00:57.149 Assign yourself 2 points for exercise 2\n00:00:59.300 Next\n00:01:05.035 Focus the answer field\n00:01:19.237 Reveal model answer\n00:01:25.059 Assign yourself 2 points for exercise 3\n00:01:37.788 Review the self-assessed6/6 total and reset the worksheet.\n00:01:42.062 Reset worksheet\n\nOBSERVED RESULT\nThree written answers,modelanswer reveals,learner-assigned2/2/2scores,6/6total,reset.\n\n",
-      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef8f1c-4440-83eb-95d8-12cfcaeb7c0d",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-worksheet.json",
-      "durationSeconds": 111.55,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "7a23642ad3085c3262446343879487171e2677e99b305b6aabc8c733573c9ddb",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
@@ -1768,6 +1771,46 @@
     "number": 39
   },
   {
+    "id": "S53TRYSHORTCUTS",
+    "type": "workshop",
+    "kind": "activity",
+    "section": "chatgpt",
+    "stage": "Audience · shortcut practice",
+    "title": "Your turn: try a few shortcuts",
+    "message": "Use your own ChatGPT account. The Free plan is fine.",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "steps": [
+      {
+        "title": "Choose a document",
+        "text": "Use the GenAI book or another document you want to study."
+      },
+      {
+        "title": "Try different shortcuts",
+        "text": "Start with /flashcard, /quiz or /oral. Ask ChatGPT to use only your document."
+      },
+      {
+        "title": "Use and check the result",
+        "text": "Try the activity, compare its answers with the source and refine your request."
+      }
+    ],
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "media": {
+      "src": "images/andrea/andrea-focused-laptop-v1.webp",
+      "alt": "Andrea leans towards his laptop, concentrating intently as he types, wearing his teal hoodie.",
+      "fit": "contain"
+    },
+    "number": 40,
+    "links": []
+  },
+  {
     "id": "S53SKILLSSECTION",
     "type": "workshop",
     "kind": "section-divider",
@@ -1786,7 +1829,7 @@
       "src": "images/sections/skills-title-v1.webp",
       "alt": "A reusable kit of reading, guided practice and self-assessment cards, organised with a resource folder above an open textbook."
     },
-    "number": 40,
+    "number": 41,
     "links": []
   },
   {
@@ -1820,7 +1863,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 41,
+    "number": 42,
     "links": []
   },
   {
@@ -1851,7 +1894,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 42,
+    "number": 43,
     "links": []
   },
   {
@@ -1883,7 +1926,7 @@
         "check"
       ]
     },
-    "number": 43,
+    "number": 44,
     "links": []
   },
   {
@@ -1943,7 +1986,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 44,
+    "number": 45,
     "links": []
   },
   {
@@ -2019,7 +2062,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 45,
+    "number": 46,
     "links": []
   },
   {
@@ -2090,7 +2133,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 46,
+    "number": 47,
     "links": []
   },
   {
@@ -2161,7 +2204,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 47,
+    "number": 48,
     "links": []
   },
   {
@@ -2183,7 +2226,7 @@
       "src": "images/sections/tool-title-v1.webp",
       "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
     },
-    "number": 48,
+    "number": 49,
     "links": []
   },
   {
@@ -2202,7 +2245,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 49,
+    "number": 50,
     "links": []
   },
   {
@@ -2235,7 +2278,7 @@
       "transcript": "Compiler — real execution, recorded 5 November 2026\n\nINPUT\nI have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.\n\nACTUAL RESULT\nStudy the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking\n\n00:00:00.000 Describe the study goal in your own words.\n00:00:04.000 Compiler extracts actions from the unstructured note.\n00:00:06.000 Actual result: four suggested study tasks.\n00:00:10.000 Review the list: keep the learning goal and remove overlap.",
       "browserFrame": true
     },
-    "number": 50,
+    "number": 51,
     "links": []
   },
   {
@@ -2268,7 +2311,7 @@
       "transcript": "Magic ToDo — real execution, recorded 5 November 2026\n\nINPUT\nRead the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nLocate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.\n\n00:00:00.000 Start with one concrete task from the chapter.\n00:00:04.000 Use the magic-wand button to break the task down.\n00:00:06.000 Actual result: 4 smaller steps.\n00:00:10.000 Choose the steps that help; revise generic or repeated advice.",
       "browserFrame": true
     },
-    "number": 51,
+    "number": 52,
     "links": []
   },
   {
@@ -2301,7 +2344,7 @@
       "transcript": "Estimator — real execution, recorded 5 November 2026\n\nINPUT\nRead two pages about training and inference, write a three-line comparison, and explain it aloud once.\n\nACTUAL RESULT\n10-20 minutes\n\n00:00:00.000 Describe the activity and its expected output.\n00:00:04.000 Ask Estimator for a rough time window.\n00:00:06.000 Actual result: 10-20 minutes.\n00:00:10.000 Record the real time, then adjust the next study session.",
       "browserFrame": true
     },
-    "number": 52,
+    "number": 53,
     "links": []
   },
   {
@@ -2334,7 +2377,7 @@
       "transcript": "Taskmaster — real execution, recorded 5 November 2026\n\nINPUT\nAndrea · full-page demo — Read the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nTaskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.\n\n00:00:00.000 Open the study list and choose one current task.\n00:00:03.000 Press Play and work with one item in view.\n00:00:07.000 Pause the timer. This demonstration records three seconds.\n00:00:10.000 Elapsed time shows activity; check understanding separately.",
       "browserFrame": true
     },
-    "number": 53,
+    "number": 54,
     "links": []
   },
   {
@@ -2367,7 +2410,7 @@
       "transcript": "Professor — real execution, recorded 5 November 2026\n\nINPUT\nTraining versus inference in a language model. Explain the difference briefly and give one short example.\n\nACTUAL RESULT\nEXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.\n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.\nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.\nExample: Asking the model to write a summary of today's news after it has already been trained.\n\n00:00:00.000 Ask a focused question about training and inference.\n00:00:04.000 Professor generates an explanation and an example.\n00:00:07.000 Read the actual explanation; an analogy still needs checking.\n00:00:11.000 Return to the chapter: which parameters change, and when?",
       "browserFrame": true
     },
-    "number": 54,
+    "number": 55,
     "links": []
   },
   {
@@ -2400,7 +2443,7 @@
       "transcript": "Formalizer — real execution, recorded 5 November 2026\n\nINPUT\nTraining is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.\n\nACTUAL RESULT\nTraining refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.\n\n00:00:00.000 Start with a draft that includes an unresolved question.\n00:00:04.000 Choose More professional, then Convert.\n00:00:06.000 Read the actual rewrite and compare its meaning.\n00:00:10.000 The uncertainty about context remains. Check the science too.",
       "browserFrame": true
     },
-    "number": 55,
+    "number": 56,
     "links": []
   },
   {
@@ -2441,7 +2484,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 56,
+    "number": 57,
     "links": []
   },
   {
@@ -2478,7 +2521,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 57,
+    "number": 58,
     "links": []
   },
   {
@@ -2513,7 +2556,7 @@
         "check"
       ]
     },
-    "number": 58,
+    "number": 59,
     "links": []
   },
   {
@@ -2535,7 +2578,7 @@
         "connect"
       ]
     },
-    "number": 59,
+    "number": 60,
     "links": []
   },
   {
@@ -2607,7 +2650,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 60,
+    "number": 61,
     "links": []
   },
   {
@@ -2663,7 +2706,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 61,
+    "number": 62,
     "links": []
   },
   {
@@ -2723,7 +2766,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 62,
+    "number": 63,
     "links": []
   },
   {
@@ -2784,7 +2827,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 63,
+    "number": 64,
     "links": []
   },
   {
@@ -2864,7 +2907,7 @@
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 64
+    "number": 65
   },
   {
     "id": "S64SETTINGS",
@@ -2919,7 +2962,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 65,
+    "number": 66,
     "links": []
   },
   {
@@ -2955,7 +2998,7 @@
         "connect"
       ]
     },
-    "number": 66,
+    "number": 67,
     "links": []
   },
   {
@@ -3030,7 +3073,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 67,
+    "number": 68,
     "links": []
   },
   {
@@ -3093,7 +3136,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 68,
+    "number": 69,
     "links": []
   },
   {
@@ -3149,7 +3192,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 69,
+    "number": 70,
     "links": []
   },
   {
@@ -3205,7 +3248,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 70,
+    "number": 71,
     "links": []
   },
   {
@@ -3265,7 +3308,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 71,
+    "number": 72,
     "links": []
   },
   {
@@ -3321,7 +3364,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 72,
+    "number": 73,
     "links": []
   },
   {
@@ -3354,7 +3397,7 @@
       "source": "https://notebook.google.com/",
       "transcript": "NotebookLM · Video Overview — recorded from scratch in @Browser, 5 November 2026\n\nAuthentic UI actions and playback, with generation waits cut between scenes.\nThe interface recording is silent; English captions are available.\n\nOBSERVED RESULT\nNew Explainer: Training vs. Inference, duration 7:04, Whiteboard style. Playback was started in its standalone @Browser tab, then Skip forward and Pause were exercised.\n\nSCOPE\nVideo generated anew from the uploaded PDF with an explicit training-versus-inference focus. All recorded video frames come from @Browser. The interface demonstration is silent.\n\nCAPTIONS\n00:00:00.000 Open Video Overview in Studio.\n00:00:01.876 Choose an Explainer video for a structured explanation of the chapter.\n00:00:03.817 Set a visual style and focus, then generate the source-based video.\n00:00:06.616 Open the new Training vs. Inference Explainer generated from the chapter.\n00:00:08.966 Play the new 7:04 Explainer, Training vs. Inference.\n00:00:17.400 Skip forward and pause to inspect a concept against the chapter.\n"
     },
-    "number": 73,
+    "number": 74,
     "links": []
   },
   {
@@ -3413,7 +3456,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 74,
+    "number": 75,
     "links": []
   },
   {
@@ -3472,7 +3515,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 75,
+    "number": 76,
     "links": []
   },
   {
@@ -3528,7 +3571,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 76,
+    "number": 77,
     "links": []
   },
   {
@@ -3584,7 +3627,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 77,
+    "number": 78,
     "links": []
   },
   {
@@ -3629,7 +3672,7 @@
         "check"
       ]
     },
-    "number": 78
+    "number": 79
   },
   {
     "type": "workshop",
@@ -3672,7 +3715,7 @@
         "check"
       ]
     },
-    "number": 79
+    "number": 80
   },
   {
     "id": "S70",
@@ -3709,7 +3752,7 @@
       "caption": "Generate control in the official guide; the vendor’s example text is unrelated to Andrea.",
       "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
     },
-    "number": 80,
+    "number": 81,
     "links": []
   },
   {
@@ -3753,7 +3796,7 @@
       "caption": "Official guide: choosing a visual.",
       "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
     },
-    "number": 81,
+    "number": 82,
     "links": []
   },
   {
@@ -3794,7 +3837,7 @@
       "source": "https://app.diagrams.net/",
       "transcript": "draw.io — recorded book test\n\nBOOK\nFoundations of Generative Artificial Intelligence, sections 1.2, 1.7.\n\nRECORDED TASK\nUsing book §§1.2 and 1.7, build prompt + context → inference with fixed weights → next token. Explain what changes when a definition is added to the prompt.\n\n00:00:00.000 Place the context before inference. Its content changes between requests.\n00:00:04.767 Add inference: the model uses its learned parameters to predict the next token.\n00:00:09.524 Complete the path from context to inference to the next token.\n00:00:14.530 Arrange the three concepts in reading order.\n00:00:19.375 Connect context to inference. The arrow means input to the model, not retraining.\n00:00:24.212 Connect inference to the next token. Generation appends that token and repeats.\n00:00:29.136 Check sections 1.2 and 1.7: prompt and context feed inference with fixed weights, followed by next-token generation.\n\nOBSERVED RESULT\nBuilt three labelled nodes and two attached directional connectors; added the source distinction and downloaded the editable diagram.\n\nCHECKS AGAINST THE BOOK\nPrompt/context precedes inference.\nInference explicitly uses fixed weights.\nNext-token generation follows inference.\nThe source note states new context is not new weights.\n\nEDITABLE ARTIFACT\nbook-context-inference.drawio\n"
     },
-    "number": 82,
+    "number": 83,
     "links": []
   },
   {
@@ -3835,7 +3878,7 @@
       "source": "https://excalidraw.com/",
       "transcript": "Excalidraw — recorded book test\n\nBOOK\nFoundations of Generative Artificial Intelligence, sections 1.7.\n\nRECORDED TASK\nUsing book §1.7, sketch retrieved passages → prompt context. Label the arrow and add the limit: retrieval changes the context, not the model’s weights.\n\n00:00:00.000 Rebuild the book relationship with a hand-drawn box for retrieved passages.\n00:00:04.634 Retrieved passages become part of the prompt context: section 1.7.\n00:00:09.260 Label the arrow: retrieval adds selected passages to the context.\n00:00:13.887 Add the source check: RAG changes context, not model weights. Retrieval can still fail.\n00:00:18.323 Explain each arrow aloud and check it against section 1.7 before comparing with an AI visual.\n\nOBSERVED RESULT\nDrew and labelled two nodes, connected them with an adds-to arrow, and annotated fixed weights plus the possibility of irrelevant retrieval.\n\nCHECKS AGAINST THE BOOK\nRetrieved passages feed prompt context.\nThe arrow is explicitly labelled adds to.\nThe source note preserves fixed weights.\nThe note states that retrieval may be irrelevant.\n\nEDITABLE ARTIFACT\nbook-rag.excalidraw\n"
     },
-    "number": 83,
+    "number": 84,
     "links": []
   },
   {
@@ -3866,7 +3909,7 @@
         "recall"
       ]
     },
-    "number": 84,
+    "number": 85,
     "links": []
   },
   {
@@ -3887,7 +3930,7 @@
         "plan"
       ]
     },
-    "number": 85,
+    "number": 86,
     "links": []
   },
   {
@@ -3922,7 +3965,7 @@
         "plan"
       ]
     },
-    "number": 86,
+    "number": 87,
     "links": []
   },
   {
@@ -3986,7 +4029,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 87,
+    "number": 88,
     "links": []
   },
   {
@@ -4049,7 +4092,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 88,
+    "number": 89,
     "links": []
   },
   {
@@ -4111,7 +4154,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 89,
+    "number": 90,
     "links": []
   },
   {
@@ -4150,7 +4193,7 @@
       "source": "https://app.formative.com/formatives/6aef670e2bf0ef0a672e0925/results/2?columnGroupBy=questions",
       "transcript": "Formative — Give actionable feedback and review a correction\n\nRECORDED TASK\nOn the fictional demonstration response, add teacher-written feedback: Revisit context versus parameters. Correct the statement that every prompt updates weights, then explain why. Inspect the student feedback view and, if available in the test workflow, submit a corrected explanation. Do not message real students.\n\nMETHOD\nActual @Browser interface actions. Silent recording, optional English captions. Source proportions and complete viewport preserved. Idle gaps and marked processing waits shortened.\n\n00:00:00.000 Open the fictional written misconception before composing feedback.\n00:00:05.869 Write feedback that identifies the misconception and a specific next action.\n00:00:13.491 Open the saved feedback from the learner preview.\n00:00:20.270 Check the learner preview after refreshing the saved submission.\n00:00:26.247 Reply with a corrected explanation in the feedback thread.\n\nOBSERVED RESULT\nManually scored the authored misconception, wrote and sent actionable teacher feedback, verified that it appeared in the learner preview after a refresh, and posted a corrected explanation in the feedback conversation.\n\nSCOPE AND LIMITATIONS\nRecorded in a Paid Teacher trial, using the author’s Teacher preview and explicitly fictional responses. No real student received a message or grade. The original submitted answer remained locked; the correction was posted in the feedback conversation rather than replacing that answer. The first unrefreshed feedback check showed no messages; refresh made the saved feedback visible.\n\nRECORDED OUTPUT / RESPONSE EVIDENCE\n- status: Message sent\n- link \"Skip to main content\":\n  - /url: \"#student-formative-content\"\n- banner:\n  - heading \"Beyond prompting — chapter check (fictional demo)\" [level=1]\n- main:\n  - navigation:\n    - tablist \"Question navigation\":\n      - tab \"Formative details\":\n        - generic: assignment\n      - tab \"Instructions\":\n        - generic: sticky_note_2\n      - 'tab \"Question 1: Incorrect\"':\n        - generic: \"1\"\n      - 'tab \"Question 2: Incorrect\" [selected]':\n        - generic: \"2\"\n      - 'tab \"Question 3: Complete\"':\n        - generic: \"3\"\n      - tab \"Student summary\":\n        - generic: summarize\n  - 'tabpanel \"Question 2: Incorrect\"':\n    - generic: Required\n    - img \"0 out of 1 point\":\n      - generic: close\n      - generic: 0/1\n    - generic: Question 2\n    - generic: \"2.\"\n    - heading \"Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences.\" [level=2]:\n      - paragraph: Andrea says that adding a definition to the prompt updates the model weights. Explain the error in two sentences.\n      - status\n    - paragraph: \"[Fictional example] The definition changes the weights. Each prompt retrains the model.\"\n    - status\n    - button \"Feedback\":\n      - generic: chat_bubble\n    - button \"Previous\":\n      - generic: arrow_back\n      - generic: Previous\n    - button \"Next\":\n      - generic: Next\n      - generic: arrow_forward\n  - toolbar \"Learning tools\":\n    - button \"Color contrast\":\n      - generic: contrast\n    - button \"Notes\":\n    - separator\n    - button \"Focus tools\":\n      - generic: center_focus_strong\n  - status\n- status\n- dialog \"Feedback\":\n  - paragraph: \"Fictional workshop feedback: Revisit context versus parameters in §1.2. Adding a definition changes the information available in context; ordinary inference keeps the learned parameters fixed. Correct your two sentences, then explain one new example without copying the chapter.\"\n  - status\n  - time: 1 minute ago\n  - paragraph: \"Fictional correction: Adding the definition changes the context available for this response. During ordinary inference, the learned parameters stay fixed; using a new definition does not show that the model was retrained.\"\n  - status\n  - time: Less than a minute ago\n  - textbox \"Type a message\":\n    - paragraph: Type a message\n  - button \"Add enriched content\":\n    - generic: add_circle_outline\n  - status\n  - button \"Send\" [disabled] [active]:\n    - generic: send\n- region \"Notifications (F8)\":\n  - list:\n    - generic: Message sent\n"
     },
-    "number": 90,
+    "number": 91,
     "links": []
   },
   {
@@ -4185,7 +4228,7 @@
         "plan"
       ]
     },
-    "number": 91,
+    "number": 92,
     "links": []
   },
   {
@@ -4224,7 +4267,7 @@
         "plan"
       ]
     },
-    "number": 92,
+    "number": 93,
     "links": []
   },
   {
@@ -4256,7 +4299,7 @@
     "studyPhases": {
       "primary": "check"
     },
-    "number": 93,
+    "number": 94,
     "links": []
   },
   {
@@ -4332,7 +4375,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 94,
+    "number": 95,
     "links": []
   },
   {
@@ -4395,7 +4438,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 95,
+    "number": 96,
     "links": []
   },
   {
@@ -4479,7 +4522,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 96,
+    "number": 97,
     "links": []
   },
   {
@@ -4528,7 +4571,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 97,
+    "number": 98,
     "links": []
   },
   {
@@ -4550,7 +4593,7 @@
         "url": "mailto:marco.cremaschi@unimib.it"
       }
     ],
-    "number": 98
+    "number": 99
   },
   {
     "id": "S99",
@@ -4719,7 +4762,7 @@
         "download": true
       }
     ],
-    "number": 99
+    "number": 100
   },
   {
     "id": "S102",
@@ -4799,7 +4842,7 @@
         "shortTitle": "Making audio and video accessible"
       }
     ],
-    "number": 100,
+    "number": 101,
     "links": []
   }
 ]

@@ -3,11 +3,12 @@ import { computed, useId } from 'vue'
 import type { VideoResult } from '../../utils/deck'
 import { assetUrl } from '../../utils/assets'
 
-const props = defineProps<{ result?: VideoResult; compact?: boolean }>()
+const props = defineProps<{ result?: VideoResult; compact?: boolean; linksOnly?: boolean }>()
 const qualificationId = `${useId()}-result-qualification`
 // Keep forensic qualifications in the packet and reader; live slides need the
 // short instruction that helps someone choose the result they can actually use.
 const qualification = computed(() => {
+  if (props.linksOnly) return undefined
   const result = props.result
   if (!props.compact) return result?.qualification
   if (!result?.qualification || result.kind === 'file') return undefined

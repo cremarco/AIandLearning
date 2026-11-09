@@ -45,8 +45,6 @@ const cubes = [
   top: 21%;
   width: 34%;
   height: 57%;
-  perspective: 1100px;
-  perspective-origin: 50% 45%;
 }
 .cube-anchor {
   position: absolute;
@@ -55,7 +53,10 @@ const cubes = [
   width: var(--size);
   height: var(--size);
   transform: translate(-50%, -50%);
-  transform-style: preserve-3d;
+  /* Composite each cube independently: neighbouring faces must not intersect
+     in a shared perspective context when Chrome scales the Slidev canvas. */
+  perspective: 1100px;
+  perspective-origin: 50% 50%;
 }
 .cube-violet {
   --face: var(--color-violet-500);
@@ -76,6 +77,7 @@ const cubes = [
   transform: rotateX(-24deg) rotateY(-34deg) rotateZ(var(--tilt));
   animation: cube-drift var(--duration) ease-in-out var(--delay) infinite;
   animation-play-state: paused;
+  will-change: transform;
 }
 .is-running .brand-cube { animation-play-state: running; }
 .cube-face {
@@ -94,12 +96,13 @@ const cubes = [
 .cube-face-bottom { transform: rotateX(-90deg) translateZ(calc(var(--size) / 2)); background: var(--face-shade); }
 @keyframes cube-drift {
   0%, 100% { transform: translate3d(0, 5px, 0) rotateX(-24deg) rotateY(-34deg) rotateZ(var(--tilt)); }
-  50% { transform: translate3d(0, -13px, 22px) rotateX(-14deg) rotateY(18deg) rotateZ(calc(var(--tilt) + 6deg)); }
+  /* Keep side faces away from edge-on backface culling during the drift. */
+  50% { transform: translate3d(0, -13px, 0) rotateX(-18deg) rotateY(-20deg) rotateZ(calc(var(--tilt) + 6deg)); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .brand-cube { animation: none; }
+  .brand-cube { animation: none; will-change: auto; }
 }
 @media print {
-  .brand-cube { animation: none; }
+  .brand-cube { animation: none; will-change: auto; }
 }
 </style>

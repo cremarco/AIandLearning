@@ -23,7 +23,7 @@ useSlideVideo(video)
       <img class="video-print-poster" :src="asset(media.poster)" :alt="media.alt" />
     </div>
   </div>
-  <RecordingResultLinks v-if="showResult" :result="media.result" />
+  <RecordingResultLinks v-if="showResult" links-only :result="media.result" />
 </template>
 
 <style src="../../styles/browser-video.css"></style>

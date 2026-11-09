@@ -33,7 +33,7 @@ title: "Marco Cremaschi"
 <DeckSlide id="S02" />
 
 <!--
-Before we begin, a short introduction. I am Marco Cremaschi, an assistant professor at the University of Milano-Bicocca. My work connects **AI**, knowledge and practical applications. This is the background to today's focus on **learning choices**.
+I am Marco Cremaschi, an assistant professor at the University of Milano-Bicocca. My research connects **AI**, knowledge and practical applications. I also teach at several universities, covering **visual communication, interface design and programming**, as well as the use of technology in **psychology and psychiatry**.
 -->
 
 ---
@@ -45,7 +45,7 @@ title: "Whattadata"
 <DeckSlide id="S44" />
 
 <!--
-I'm also a founder of **Whattadata**, a spin-off of the University of Milano-Bicocca. This connects my research with **practical applications**. We work on data analysis, responsible AI and modular solutions. The website link below gives more information about our work and possible collaborations.
+\
 -->
 
 ---
@@ -57,13 +57,14 @@ title: "A visual path for learning with AI"
 <DeckSlide id="S49" />
 
 <!--
-With that practical focus, today we will follow a simple **learning path**: set a goal, make ideas visible and check them. We will use examples to see how **AI tools** can support your own work.
+Through a **fictional scenario**, today we will follow a simple **learning path**: set a goal, make ideas visible and check them. We will use examples to see how **AI tools** can support the student's work. Along the way, we will ask what the learner needs, which suggestions are useful and how to check understanding. The aim is to leave with a **reusable activity** for your own study or teaching.
 -->
 
 ---
 layout: default
 routeAlias: s48
 title: "From curiosity to classroom practice"
+hide: true
 ---
 
 <DeckSlide id="S48" />
@@ -76,6 +77,7 @@ The same path raises questions for classroom practice: how do we plan, give feed
 layout: default
 routeAlias: s50
 title: "Visual tools for learning with AI"
+hide: true
 ---
 
 <DeckSlide id="S50" />
@@ -105,7 +107,7 @@ title: "Who is this slide for?"
 <DeckSlide id="S50LEGEND" />
 
 <!--
-The icons identify **teachers**, **students**, or both. The ribbon names the **learning phase** supported by each example. Use these cues to choose an activity: who needs the support, and what should that person do with it? The same tool can serve several purposes.
+You will see these **icons** throughout the presentation. They identify activities for **teachers**, **students**, or both. The ribbon shows the **learning phase** each example supports. Use these cues to ask: who is this activity for, and what should it help them do? The same tool can support several phases.
 -->
 
 ---
@@ -118,7 +120,7 @@ clicks: 1
 <DeckSlide id="S51" />
 
 <!--
-To make the method concrete, we will follow **Andrea**, a fictional computer science student preparing for an exam about generative AI. He still confuses some key ideas, so we will follow his **learning process**. You do not need programming knowledge to follow the example.
+To make the method concrete, we will follow **Andrea**, a computer science student preparing for an exam about generative AI. He still confuses some key ideas, so we will follow his **learning process**. You do not need programming knowledge to follow the example.
 -->
 
 ---
@@ -134,7 +136,7 @@ To prepare for his exam, Andrea needs to **learn the key ideas** and show that h
 
 First, he must **read** the chapter, identify the main concepts and note what is unclear. Then he must **represent** these ideas in a diagram, using labelled arrows to show how they connect.
 
-Next, he must **check** his explanation and any AI suggestions against the chapter. If he finds an error, he revises the diagram and explains the correction.
+Next, he **checks** his explanation and the AI’s suggestions against the chapter. If he finds an error, he updates the diagram and explains what he changed and why.
 
 Finally, he must **explain** the process in his own words, without AI help. He should use a new example and correct a wrong explanation. These actions give us **evidence of understanding**, beyond a finished activity.
 -->
@@ -148,7 +150,7 @@ title: "Self-directed learning: making choices"
 <DeckSlide id="S52SDL" />
 
 <!--
-These four activities require Andrea to make **learning choices**. This is why we introduce **self-directed learning**: taking an active role in setting goals, choosing resources and strategies, and reviewing progress. Teachers and peers can help him, while he keeps responsibility for his own learning.
+These four activities require Andrea to make **learning choices**. He decides where to focus his effort and when to ask for support. After checking his explanation, he also needs to judge whether he is ready to move on or should return to a difficult concept. This is why we introduce **self-directed learning**: taking an active role in setting goals, choosing resources and strategies, and reviewing progress. **Teachers** can help him set realistic goals and give feedback on his reasoning. **Peers** can compare approaches with him and ask questions that reveal gaps in understanding. Andrea uses this support to decide his next steps, while keeping responsibility for his own learning.
 -->
 
 ---
@@ -176,7 +178,13 @@ title: "A study process in six phases"
 <DeckSlide id="S52PHASES" />
 
 <!--
-These six phases describe **Andrea’s actions**: plan, understand, connect, recall, apply and check. He can move between them as a difficulty emerges. Checking may send him back to a passage, a relationship or another attempt. The ribbon highlights the **main phase**; **Support** marks setup, sources and sharing.
+These six phases describe **Andrea’s actions**: plan, understand, connect, recall, apply and check. They help him choose the support he needs at each point in his study.
+
+He starts by **planning** a goal and organising his time. To **understand** a difficult idea, he works through an explanation or example. He then **connects** it to what he already knows, using a map to explain the relationships.
+
+Next, he tries to **recall** the idea without looking at the chapter, and returns to it over time. To **apply** it, he uses a new example. Finally, he **checks** his explanation against the source and the learning criteria, then decides what needs more work.
+
+He can move between these phases as a difficulty emerges. For example, an error during recall may send him back to a passage or a link in his map. The ribbon highlights the **main phase**, with a smaller secondary phase where relevant. **Support** marks setup, sources and sharing.
 -->
 
 ---
@@ -188,7 +196,8 @@ title: "The assigned book"
 <DeckSlide id="S53" />
 
 <!--
-To try this method, Andrea needs a **great book**, written by a **great author**... Very modest, I know! Joking aside, this is a **fictional book**, created only for this workshop. Its explanations and technical references are real. We will use the chapter to check **AI suggestions and Andrea's understanding**.
+To try this method, Andrea needs a **great book**, written by a **great author**...
+Joking aside, this is a **fictional book**, created only for this workshop. Its explanations and technical references are real. We will use the chapter to check **AI suggestions and Andrea's understanding**.
 -->
 
 ---
@@ -212,7 +221,7 @@ title: "Formal and informal shortcuts"
 <DeckSlide id="S53SHORTCUTS" />
 
 <!--
-To request these materials clearly, we need one distinction: **formal actions** and **informal shortcuts**. It explains which behaviour comes from the application and which behaviour we are describing in a prompt.
+**Shortcuts** are quick ways to ask ChatGPT to carry out a task. **Formal shortcuts** are features built into the app; **informal shortcuts** are words or labels we use in a prompt to describe what we want.
 -->
 
 ---
@@ -252,7 +261,7 @@ title: "Read aloud · ChatGPT web"
 <DeckSlide id="S53FORMALREADALOUD" />
 
 <!--
-**Read aloud** offers another way to access a response. This silent recording shows where to find the menu and playback controls. Andrea could pause after a short passage and **explain it in his own words**, then compare his explanation with the text. Choose the format with the learner.
+**Read aloud** is a general ChatGPT feature, available beyond its study tools. It reads a response aloud so Andrea can **listen to an explanation again**. As we will see, this gives him another way to revisit the material and work through a difficult idea.
 -->
 
 ---
@@ -276,7 +285,7 @@ title: "Selected shortcuts · recall and reflection"
 <DeckSlide id="S53CMD1" />
 
 <!--
-Begin with **recall and reflection**. Andrea attempts an answer with flashcards, then returns to misconceptions in a mistake log. He writes corrections, checks the chapter explanation and decides **what needs another review**.
+Take **/flashcard** as an example. Andrea asks for cards based on the chapter. One card asks: “Does adding a definition to a prompt change the model’s parameters?” He answers **before revealing** the explanation, then rates his recall. This helps him identify what he needs to review.
 -->
 
 ---
@@ -288,7 +297,7 @@ title: "Selected shortcuts · explain and connect"
 <DeckSlide id="S53CMD2" />
 
 <!--
-Andrea now needs to **explain relationships**. A concept map organises them; matching and sorting test connections and categories. The oral-practice form asks him to explain aloud, write a **brief summary**, and compare it with an expected answer before advancing. No voice recording or automatic grading is claimed.
+For example, **/conceptmap** helps Andrea organise the chapter’s ideas. He asks for a map connecting training, inference and context. He then explains one relationship: **training changes parameters**, while adding information to a prompt changes context. Checking each connection against the chapter makes the map useful for learning.
 -->
 
 ---
@@ -300,7 +309,7 @@ title: "Selected shortcuts · practice and assessment"
 <DeckSlide id="S53CMD3" />
 
 <!--
-These examples move from **recognising an answer** to producing terms, writing explanations and applying a concept to a case. The worksheet includes model answers and **self-assessment**. Ask Andrea to attempt each task before opening feedback or the expected answer.
+Consider **/quiz**. Andrea asks for questions about the chapter, with feedback explaining each answer.
 -->
 
 ---
@@ -312,19 +321,43 @@ title: "Selected shortcuts · plan and teach"
 <DeckSlide id="S53CMD4" />
 
 <!--
-Planning connects the **student and teacher** perspectives. Andrea tracks his study activities. The teacher designs a lesson, adapts difficulty and supports, uses shared assessment criteria, and organises stations. The examples serve different classroom purposes rather than adding more names for the same quiz.
+With **/studyplan**, Andrea turns a broad goal into manageable activities. He asks for a plan to understand training and inference using the chapter. The plan could include reading a passage, drawing a comparison and answering a question from memory. He tracks completion, then checks **what he can explain independently**.
 -->
 
 ---
 layout: default
-routeAlias: s53detailquiz
-title: "/quiz"
+routeAlias: s53detailflashcard
+title: "/flashcard"
 ---
 
-<DeckSlide id="S53DETAILQUIZ" />
+<DeckSlide id="S53DETAILFLASHCARD" />
 
 <!--
-Let us turn that idea into a first check of understanding. In this **quiz**, Andrea answers first and then reads the feedback. An incorrect choice gives him something specific to revise. I would ask him to explain the **reason for the correction**.
+The key action is **recall before reveal**. This deck was generated with a short request and the attached chapter. Andrea answers from memory, reveals the explanation and rates his recall. Watch how the rating moves to the next card. The **CSV download** contains the ten original questions and answers.
+-->
+
+---
+layout: default
+routeAlias: s53detailmistakelog
+title: "/mistakelog"
+---
+
+<DeckSlide id="S53DETAILMISTAKELOG" />
+
+<!--
+Corrections from these checks are useful material for the next review. The **mistake log** records misconceptions and written corrections. Andrea can mark an item understood or leave it for another review. The important record is **why the original claim was wrong**.
+-->
+
+---
+layout: default
+routeAlias: s53detailconceptmap
+title: "/conceptmap"
+---
+
+<DeckSlide id="S53DETAILCONCEPTMAP" />
+
+<!--
+Open the **training, inference and RAG** branches in turn. Ask Andrea to explain each labelled relationship before reading the chapter explanation. Then use the check questions to test the distinction: where do **parameters change**, and where does information enter the context? After feedback, ask him to justify a corrected answer.
 -->
 
 ---
@@ -337,30 +370,6 @@ title: "/matchinggame"
 
 <!--
 If the difficulty is connecting terms with meanings, matching offers a starting point. Here Andrea matches **concepts and definitions**. After each pair, he should explain the connection in a sentence. This gives us more information than a **correct match** alone.
--->
-
----
-layout: default
-routeAlias: s53detailfillintheblanks
-title: "/fillintheblanks"
----
-
-<DeckSlide id="S53DETAILFILLINTHEBLANKS" />
-
-<!--
-To check how those terms work in context, we can remove key words. Andrea completes the **missing terms** and checks his answers. Notice how he can correct an initial mistake. I would then ask him to explain the **whole sentence**, including why the chosen term fits.
--->
-
----
-layout: default
-routeAlias: s53detailflashcard
-title: "/flashcard"
----
-
-<DeckSlide id="S53DETAILFLASHCARD" />
-
-<!--
-The key action is **recall before reveal**. Andrea attempts each question, reveals the answer and rates what he remembered independently. Watch the **missed-card review** return to the difficult distinction. Before rating it again, he should explain the answer from memory and compare it with the chapter reference.
 -->
 
 ---
@@ -384,7 +393,55 @@ title: "/oral"
 <DeckSlide id="S53DETAILORAL" />
 
 <!--
-Because Andrea is preparing for an exam, **spoken explanation** matters. He explains aloud, writes a brief summary, then reveals the expected answer. The widget lets him move between questions and revisit earlier answers. This supports **comparison and revision**; it does not record his voice or automatically grade his explanation.
+Because Andrea is preparing for an exam, **spoken explanation** matters. He can type or **dictate his answer**, then reveal the expected answer. The widget lets him move between questions and revisit earlier answers. This supports **comparison and revision**: he checks his explanation against the chapter and improves it.
+-->
+
+---
+layout: default
+routeAlias: s53detailquiz
+title: "/quiz"
+---
+
+<DeckSlide id="S53DETAILQUIZ" />
+
+<!--
+Let us turn that idea into a first check of understanding. In this **quiz**, Andrea answers first and then reads the feedback. An incorrect choice gives him something specific to revise. I would ask him to explain the **reason for the correction**.
+-->
+
+---
+layout: default
+routeAlias: s53detailfillintheblanks
+title: "/fillintheblanks"
+---
+
+<DeckSlide id="S53DETAILFILLINTHEBLANKS" />
+
+<!--
+To check how those terms work in context, we can remove key words. Andrea completes the **missing terms** and checks his answers. Notice how he can correct an initial mistake. I would then ask him to explain the **whole sentence**, including why the chosen term fits.
+-->
+
+---
+layout: default
+routeAlias: s53detailworksheet
+title: "/worksheet"
+---
+
+<DeckSlide id="S53DETAILWORKSHEET" />
+
+<!--
+We can bring an attempt, comparison and self-assessment into one activity. In this **worksheet**, Andrea writes an answer, reveals a model answer and compares the criteria. He assigns his own points. Watch how the **written explanation** and the running total serve different purposes.
+-->
+
+---
+layout: default
+routeAlias: s53detailcasestudy
+title: "/caseStudy"
+---
+
+<DeckSlide id="S53DETAILCASESTUDY" />
+
+<!--
+A concrete case lets Andrea apply those checked distinctions. Andrea compares three **experiments**: training a model, changing a prompt and adding retrieved material. He writes his reasoning before revealing explanations. The key question is **what changes in each experiment**.
 -->
 
 ---
@@ -401,30 +458,6 @@ The result of that attempt should help Andrea choose what to study next. The **s
 
 ---
 layout: default
-routeAlias: s53detailconceptmap
-title: "/conceptmap"
----
-
-<DeckSlide id="S53DETAILCONCEPTMAP" />
-
-<!--
-Open the **training, inference and RAG** branches in turn. Ask Andrea to explain each labelled relationship before reading the chapter explanation. Then use the check questions to test the distinction: where do **parameters change**, and where does information enter the context? After feedback, ask him to justify a corrected answer.
--->
-
----
-layout: default
-routeAlias: s53detailmistakelog
-title: "/mistakelog"
----
-
-<DeckSlide id="S53DETAILMISTAKELOG" />
-
-<!--
-Corrections from these checks are useful material for the next review. The **mistake log** records misconceptions and written corrections. Andrea can mark an item understood or leave it for another review. The important record is **why the original claim was wrong**.
--->
-
----
-layout: default
 routeAlias: s53detaillessonplan
 title: "/lessonplan"
 ---
@@ -433,18 +466,6 @@ title: "/lessonplan"
 
 <!--
 This **15-minute lesson** gives four minutes to explanation, six to application and five to assessment. In the application stage, compare fine-tuning, a prompt definition and a retrieved passage. Ask learners to explain **what changes** before revealing the key. End with an explanation they can give independently.
--->
-
----
-layout: default
-routeAlias: s53detailcasestudy
-title: "/caseStudy"
----
-
-<DeckSlide id="S53DETAILCASESTUDY" />
-
-<!--
-A concrete case lets Andrea apply those checked distinctions. Andrea compares three **experiments**: training a model, changing a prompt and adding retrieved material. He writes his reasoning before revealing explanations. The key question is **what changes in each experiment**.
 -->
 
 ---
@@ -473,18 +494,6 @@ The same criteria can also guide feedback between learners. **Peer assessment** 
 
 ---
 layout: default
-routeAlias: s53detailworksheet
-title: "/worksheet"
----
-
-<DeckSlide id="S53DETAILWORKSHEET" />
-
-<!--
-We can bring an attempt, comparison and self-assessment into one activity. In this **worksheet**, Andrea writes an answer, reveals a model answer and compares the criteria. He assigns his own points. Watch how the **written explanation** and the running total serve different purposes.
--->
-
----
-layout: default
 routeAlias: s53detaillearningstations
 title: "/learningstations"
 ---
@@ -493,6 +502,18 @@ title: "/learningstations"
 
 <!--
 A broader activity can divide those checks across several concepts. The **learning stations** separate training, inference and context into short activities. Andrea writes, compares and marks each station complete. Returning to an earlier answer helps him see what he should **revise**.
+-->
+
+---
+layout: default
+routeAlias: s53tryshortcuts
+title: "Your turn: try a few shortcuts"
+---
+
+<DeckSlide id="S53TRYSHORTCUTS" />
+
+<!--
+Take **five minutes** to try different shortcuts with **your own ChatGPT account**; the **Free plan is fine**. Use the GenAI book or another document you want to study. Try /flashcard, /quiz or /oral. Use the activity, **check the answers against your source** and refine the request if needed.
 -->
 
 ---

@@ -180,11 +180,12 @@ export function checkData() {
   assert(selectedCommands.every(command => shortcutVideos.some(clip => clip.command === command)), 'Every selected shortcut needs its current recording')
   const shortcutDetails = slides.filter(slide => slide.kind === 'shortcut-detail')
   assert.equal(shortcutDetails.length, retained.length, 'Every retained interactive shortcut needs its own detail slide')
-  assert.deepEqual(shortcutDetails.map(slide => slide.title), retained.map(run => run.command), 'Show only interactive shortcuts, exactly once and in reviewed order')
+  assert.deepEqual(shortcutDetails.map(slide => slide.title).sort(), retained.map(run => run.command).sort(), 'Show every retained interactive shortcut exactly once')
+  assert.deepEqual(shortcutDetails.map(slide => slide.title), commands, 'Present shortcut videos in the same order as the overview tables')
   const detailsIndex = slides.findIndex(slide => slide.id === 'S53CMD4') + 1
   assert.deepEqual(slides.slice(detailsIndex, detailsIndex + shortcutDetails.length).map(slide => slide.id), shortcutDetails.map(slide => slide.id), 'Keep the individual shortcut slides together after the four overview tables')
-  for (const [index, detail] of shortcutDetails.entries()) {
-    const run = retained[index]
+  for (const detail of shortcutDetails) {
+    const run = retained.find(run => run.command === detail.title)
     const video = shortcutVideos.find(clip => clip.command.toLowerCase() === run.command.toLowerCase())
     assert.equal(detail.id, `S53DETAIL${run.command.replace(/[^a-z0-9]/gi, '').toUpperCase()}`)
     assert.equal(detail.message, shortcutDescriptions[run.command], `${run.command}: use the authored purpose`)

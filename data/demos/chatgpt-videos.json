@@ -3,111 +3,63 @@
   "clips": [
     {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-flashcard/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-flashcard/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-flashcard/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-flashcard/transcript.txt",
+      "src": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/video.mp4",
+      "poster": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /flashcard: recorded demonstration and use.",
-      "caption": "ChatGPT · 58.4 s",
-      "transcript": "ChatGPT — /flashcard\n\nREQUEST\n/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.\n\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.267 The workshop book is attached. (3× speed)\n00:00:00.587 Insert the complete request using the attached book. (3× speed)\n00:00:01.574 Send the book and the request. (3× speed)\n00:00:01.897 Read the complete sent prompt.\n00:00:03.897 ChatGPT generates the inline recall activity. (4× speed)\n00:00:04.029 Read, reveal and review the original flashcards.\n00:00:06.306 Reveal the tokens answer\n00:00:11.704 Mark the tokens answer remembered\n00:00:14.315 Move to the context question\n00:00:16.921 Reveal how context differs from weight updates\n00:00:22.115 Read, reveal and review the original flashcards.\n00:00:22.215 Mark the context answer for practice\n00:00:25.081 Revisit the earlier card without losing its rating\n00:00:27.609 Return to the context card\n00:00:29.691 Move to probability versus truth\n00:00:32.201 Reveal why probability does not measure truth\n00:00:37.697 Mark the probability answer remembered\n00:00:40.919 Read, reveal and review the original flashcards.\n00:00:41.083 Review only the card needing practice\n00:00:44.854 Reveal the missed context explanation\n00:00:49.961 Mark the recalled answer remembered\n00:00:52.932 Read, reveal and review the original flashcards.\n00:00:53.456 Reset the complete flashcard activity\nNATIVE ROOT WIDGET ACTIVATION MARKERS\nSome markers identify the measured centre of the actual root-document control activated through native accessibility or a documented locator. Exact delivered pointer coordinates are not exposed. Two actual prompt activations retain no geometry and receive no invented marker. Native CDP actions retain their separate actual pointer profile.\n\n\nOBSERVED RESULT\n\n\n\nNATIVE EDITORIAL INSERT\nThe complete sent prompt is shown in a later native review of the exact same conversation and owner response. Mainline source frames and their times are unchanged.\nActual capture: 2026-11-08T20:35:51.050Z\nOwner response: 0c19a03a-bd45-4d77-a0f5-163a7f61bb7a\nNative pixels SHA-256: 92faf595ec1db43d9496cab6fc794ab974802a317e858a396c89297d360dec8a\nExact prompt SHA-256: 944942201a0120894684cea80cdee954f55609a05b08f11ff70f407d3b637b90\n",
-      "prompt": "/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.\n",
+      "alt": "ChatGPT — ten native flashcards generated with a short prompt, with answer reveal and recall ratings.",
+      "caption": "ChatGPT · 38.5 s",
+      "transcript": "ChatGPT — /flashcard\n\nREQUEST\n/flashcard Help me study the attached chapter.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Read the complete prompt.\n00:00:02.000 The chapter is attached. This is the complete request.\n00:00:04.218 Send the short request with the attached chapter. (3× speed)\n00:00:04.607 ChatGPT generates native flashcards from the attached chapter. (4× speed)\n00:00:13.412 Read the first question before revealing the answer.\n00:00:15.958 Select the first flashcard\n00:00:20.114 Mark the first card for practice\n00:00:22.832 Read the next question, then compare with its answer.\n00:00:22.880 Reveal the second answer\n00:00:27.089 Mark the second card remembered\n00:00:29.795 Recall first, reveal the answer and rate your own recall.\n00:00:29.829 Reveal the third answer\n00:00:33.994 Mark the third card remembered\n\nOBSERVED RESULT\nTen native flashcards generated from the attached chapter using the short request. The first card is marked for practice. The second and third answers are revealed and marked remembered. Each rating advances to the next question.\n\n",
+      "prompt": "/flashcard Help me study the attached chapter.",
       "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/s/t_6af0e4033d448191a60771c983d47b9a",
-        "label": "Open shared result",
-        "interactiveVerified": true,
+        "kind": "file",
+        "url": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/flashcards.csv",
+        "label": "Download flashcards (CSV)",
+        "download": true,
+        "mediaType": "text/csv",
+        "interactiveVerified": false,
         "recipientVerified": true,
         "ownerIndependent": true,
+        "qualification": "Original ten-card CSV exported through ChatGPT’s native Download control. Interactive controls are demonstrated in the video; the downloadable CSV is a static export.",
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-flashcard.json",
-      "durationSeconds": 58.366667,
+      "provenance": "materials/video-refresh/2026-11-09-flashcard-short-prompt/provenance.json",
+      "durationSeconds": 38.55,
       "width": 1440,
       "height": 900,
-      "fps": 60,
-      "sha256": "32a7797f879658d78d4e37d5cfcd519da5ff0a6085d997b10edba5015cdc6157",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07",
+      "fps": 60.0,
+      "sha256": "a2e46b15838d37fdf2e12899aea910e24d361d1eb6d45ad96b49b3efe76537fd",
+      "recordingMode": "reviewed-native-short-prompt-retake",
+      "refreshReleaseId": "2026-11-09-flashcard-short-prompt",
       "command": "/flashcard",
       "temporaryChat": false,
       "interfaceLanguage": "en",
       "chapters": [
         {
-          "label": "home",
-          "atSeconds": 0,
-          "rate": 3
-        },
-        {
-          "label": "upload menu",
-          "atSeconds": 0.26699999999999996,
-          "rate": 3
-        },
-        {
-          "label": "upload menu",
-          "atSeconds": 0.26699999999999996,
-          "rate": 3
-        },
-        {
-          "label": "upload",
-          "atSeconds": 0.26699999999999996,
-          "rate": 3
-        },
-        {
-          "label": "typing",
-          "atSeconds": 0.5869999999999999,
-          "rate": 3
-        },
-        {
-          "label": "typing",
-          "atSeconds": 0.5869999999999999,
-          "rate": 3
+          "label": "read-prompt",
+          "seconds": 2.0
         },
         {
           "label": "send",
-          "atSeconds": 1.5736666666666665,
-          "rate": 3
+          "seconds": 4.218
         },
         {
           "label": "generation",
-          "atSeconds": 3.8966666666666665,
-          "rate": 4
+          "seconds": 4.607333333333336
         },
         {
-          "label": "usage",
-          "atSeconds": 4.028916666666667,
-          "rate": 1
+          "label": "usage-question-1",
+          "seconds": 13.412083333333378
         },
         {
-          "label": "practice",
-          "atSeconds": 4.028916666666667,
-          "rate": 1
+          "label": "usage-question-2",
+          "seconds": 22.832083333333227
         },
         {
-          "label": "summary",
-          "atSeconds": 4.028916666666667,
-          "rate": 1
-        },
-        {
-          "label": "inline widget reader use inline flashcards",
-          "atSeconds": 4.028916666666667,
-          "rate": 1
-        },
-        {
-          "label": "inline widget reader use inline flashcards",
-          "atSeconds": 22.114916666666666,
-          "rate": 1
-        },
-        {
-          "label": "inline widget reader use inline flashcards",
-          "atSeconds": 40.91891666666669,
-          "rate": 1
-        },
-        {
-          "label": "inline widget reader use inline flashcards",
-          "atSeconds": 52.931916666666716,
-          "rate": 1
+          "label": "usage-question-3",
+          "seconds": 29.7950833333332
         }
       ]
     },

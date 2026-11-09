@@ -15,6 +15,7 @@ export type ShortcutVideo = SlideMedia & {
 export const shortcutVideos = catalogue as ShortcutVideo[]
 const byCommand = new Map(shortcutVideos.map(clip => [clip.command.toLowerCase(), clip]))
 export const getShortcutVideo = (command: string) => byCommand.get(command.toLowerCase())
+export const explainedShortcuts = new Set(['/flashcard', '/conceptmap', '/quiz', '/studyplan'])
 
 const transcripts = new Map<string, string>()
 

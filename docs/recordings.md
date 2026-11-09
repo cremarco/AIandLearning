@@ -13,6 +13,8 @@ pnpm build
 
 These operations work without private capture directories. Edit teaching prose in the authoring data, not the immutable packet. Updating a recording requires a new reviewed packet and matching registry entries.
 
+The 9 November flashcard retake uses the request `/flashcard Help me study the attached chapter.` with the chapter PDF attached. It demonstrates ChatGPT's native cards, answer reveal and recall ratings. Its result link downloads the original ten-card CSV exported from that same chat. The new release manifest preserves the other recordings and the previous packet.
+
 ## Capture and release
 
 Use the supported browser interface for authentic recording. Keep separate tabs and folders for parallel producers. Finish or suspend every capture before returning control. Preserve source pixels, action clocks and the distinction between pointer coordinates and verified accessibility activations.

@@ -108,6 +108,7 @@
   {
     "id": "S48",
     "number": 5,
+    "hide": true,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
@@ -141,6 +142,7 @@
   {
     "id": "S50",
     "number": 6,
+    "hide": true,
     "type": "brief",
     "kind": "event-brief",
     "section": "opening",
@@ -766,7 +768,6 @@
         "description": "Review misconceptions and track corrections"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "recall",
@@ -811,7 +812,6 @@
         "description": "Explain aloud, write a summary and compare expected answers"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "connect",
@@ -855,7 +855,6 @@
         "description": "Apply concepts to a case, then reveal explanations"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "apply",
@@ -904,7 +903,6 @@
         "description": "Organise stations and track completion"
       }
     ],
-    "decision": "Selected for distinct learning actions · observed outputs may vary.",
     "commandCategory": "informal",
     "studyPhases": {
       "primary": "plan",
@@ -916,61 +914,173 @@
     "links": []
   },
   {
-    "id": "S53DETAILQUIZ",
+    "id": "S53DETAILFLASHCARD",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/quiz",
-    "message": "Answer questions, review feedback and move through a quiz.",
+    "title": "/flashcard",
+    "message": "Practise recall with questions and answers on flip cards.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+    "prompt": "/flashcard Help me study the attached chapter.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Ten native flashcards",
+    "result": "ChatGPT · 38.5 s",
+    "links": [],
+    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/video.mp4",
+      "poster": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — ten native flashcards generated with a short prompt, with answer reveal and recall ratings.",
+      "caption": "ChatGPT · 38.5 s",
+      "prompt": "/flashcard Help me study the attached chapter.",
+      "result": {
+        "kind": "file",
+        "url": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/flashcards.csv",
+        "label": "Download flashcards (CSV)",
+        "download": true,
+        "mediaType": "text/csv",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Original ten-card CSV exported through ChatGPT’s native Download control. Interactive controls are demonstrated in the video; the downloadable CSV is a static export.",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-09-flashcard-short-prompt/provenance.json",
+      "durationSeconds": 38.55,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "a2e46b15838d37fdf2e12899aea910e24d361d1eb6d45ad96b49b3efe76537fd",
+      "recordingMode": "reviewed-native-short-prompt-retake",
+      "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
+    },
+    "number": 25
+  },
+  {
+    "id": "S53DETAILMISTAKELOG",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/mistakelog",
+    "message": "Record misconceptions, review corrections and track progress.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 98.1 s",
+    "result": "ChatGPT · 99.8 s",
     "links": [],
-    "videoLayout": "focus",
     "studyPhases": {
       "primary": "check",
       "secondary": [
-        "recall"
+        "plan"
       ]
     },
+    "videoLayout": "focus",
     "media": {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-quiz/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-quiz/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-quiz/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-quiz/transcript.txt",
+      "src": "materials/video-refresh/2026-11-07/widget-mistakelog/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-mistakelog/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-mistakelog/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-mistakelog/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /quiz: recorded demonstration and use.",
-      "caption": "ChatGPT · 98.1 s",
-      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+      "alt": "ChatGPT — /mistakelog: recorded demonstration and use.",
+      "caption": "ChatGPT · 99.8 s",
+      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
       "result": {
         "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7ac2-c51c-83eb-bbce-92e9f2459a9c",
+        "url": "https://chatgpt.com/share/6aef7f23-2568-83eb-b08b-3e449f031776",
         "label": "Open shared result",
         "interactiveVerified": true,
         "recipientVerified": true,
         "ownerIndependent": true,
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-quiz.json",
-      "durationSeconds": 98.133333,
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-mistakelog.json",
+      "durationSeconds": 99.75,
       "width": 1440,
       "height": 900,
       "fps": 60,
-      "sha256": "d1a6c7b91929f3a6eada311bd6f6d5162cd86d027904336929714492509c6220",
+      "sha256": "97c6414614bbd8057db334ddc0681d1fb40fd575f976372933c18ad653861954",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 25
+    "number": 26
+  },
+  {
+    "id": "S53DETAILCONCEPTMAP",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/conceptmap",
+    "message": "Connect concepts with labelled relationships.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+    "promptLabel": "Retested prompt · 7 Nov 2026",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 83.8 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "connect"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-conceptmap/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-conceptmap/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-conceptmap/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-conceptmap/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /conceptmap: recorded demonstration and use.",
+      "caption": "ChatGPT · 83.8 s",
+      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef808d-4418-83eb-9fda-9024fb1f0014",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-conceptmap.json",
+      "durationSeconds": 83.85,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "4405f48a71efd34d50a0dec54d4fc2cf0b7eaf4545ee76c3d4f30e6d9530717f",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 27
   },
   {
     "id": "S53DETAILMATCHINGGAME",
@@ -1024,115 +1134,6 @@
       "height": 900,
       "fps": 60,
       "sha256": "fbcc4032c639913fa5bac680cc51a05fe227a02ca97067f12302f6c6fc139162",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 26
-  },
-  {
-    "id": "S53DETAILFILLINTHEBLANKS",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/fillintheblanks",
-    "message": "Complete missing terms and check your answers.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 49.6 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "recall"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-fillintheblanks/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-fillintheblanks/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-fillintheblanks/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-fillintheblanks/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /fillintheblanks: recorded demonstration and use.",
-      "caption": "ChatGPT · 49.6 s",
-      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7bcc-53cc-83ed-a596-930a4499007b",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-fillintheblanks.json",
-      "durationSeconds": 49.6,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "5f8fd65729cc4fb3cb170816683c95a18d39ec6b2bdef4a168fb923913594108",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 27
-  },
-  {
-    "id": "S53DETAILFLASHCARD",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/flashcard",
-    "message": "Practise recall with questions and answers on flip cards.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 58.4 s",
-    "links": [],
-    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
-    "studyPhases": {
-      "primary": "recall"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-flashcard/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-flashcard/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-flashcard/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-flashcard/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /flashcard: recorded demonstration and use.",
-      "caption": "ChatGPT · 58.4 s",
-      "prompt": "/flashcard Using only the attached chapter, create a compact three-card recall activity on tokens, context and probability versus truth. Use a self-contained inline worksheet widget in this ChatGPT response, independently usable from its shared link. Show one card at a time, Reveal/Hide answer, Previous/Next, I remember this/Needs practice, reviewed progress, summary, Review missed cards and Reset. Cite chapter sections and pages in each answer. Disable and visibly dim both rating buttons until the current answer is revealed, with “Reveal the answer before rating.” Count each card once; changing a rating replaces it; navigation preserves state. Missed-only review hides answers for fresh recall. When its last missed card becomes remembered, automatically show the updated summary; never show 0 of 0 or a fallback card. Reset everywhere clears ratings, reveals and review modes, returning to Question 1 with 0 of 3 reviewed. Use inline response controls rather than an account-saved deck, file or external app. Use English learner-facing text only.\n",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/s/t_6af0e4033d448191a60771c983d47b9a",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-flashcard.json",
-      "durationSeconds": 58.366667,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "32a7797f879658d78d4e37d5cfcd519da5ff0a6085d997b10edba5015cdc6157",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
@@ -1202,8 +1203,10 @@
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
     "title": "/oral",
-    "message": "Practise explaining answers and receive follow-up feedback in chat.",
-    "body": [],
+    "message": "Practise explaining answers and receive follow-up feedback in chat.*",
+    "body": [
+      "* You can also dictate your answer."
+    ],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
@@ -1253,223 +1256,172 @@
     "number": 30
   },
   {
-    "id": "S53DETAILSTUDYPLAN",
+    "id": "S53DETAILQUIZ",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/studyplan",
-    "message": "Break a learning goal into activities and track completion.",
+    "title": "/quiz",
+    "message": "Answer questions, review feedback and move through a quiz.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 50.0 s",
+    "result": "ChatGPT · 98.1 s",
     "links": [],
-    "studyPhases": {
-      "primary": "plan"
-    },
     "videoLayout": "focus",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "recall"
+      ]
+    },
     "media": {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-studyplan/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-studyplan/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-studyplan/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-studyplan/transcript.txt",
+      "src": "materials/video-refresh/2026-11-07/widget-quiz/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-quiz/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-quiz/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-quiz/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /studyplan: recorded demonstration and use.",
-      "caption": "ChatGPT · 50.0 s",
-      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "alt": "ChatGPT — /quiz: recorded demonstration and use.",
+      "caption": "ChatGPT · 98.1 s",
+      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
       "result": {
         "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7ddc-700c-83ed-ae0a-325ad2224d12",
+        "url": "https://chatgpt.com/share/6aef7ac2-c51c-83eb-bbce-92e9f2459a9c",
         "label": "Open shared result",
         "interactiveVerified": true,
         "recipientVerified": true,
         "ownerIndependent": true,
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-studyplan.json",
-      "durationSeconds": 49.95,
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-quiz.json",
+      "durationSeconds": 98.133333,
       "width": 1440,
       "height": 900,
       "fps": 60,
-      "sha256": "96c79f6dc1f1bf8c22634ee8bae1d17ed7aae27cd519d41f0252c70d04e5da61",
+      "sha256": "d1a6c7b91929f3a6eada311bd6f6d5162cd86d027904336929714492509c6220",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
     "number": 31
   },
   {
-    "id": "S53DETAILCONCEPTMAP",
+    "id": "S53DETAILFILLINTHEBLANKS",
     "type": "workshop",
     "kind": "shortcut-detail",
     "section": "chatgpt",
     "stage": "ChatGPT · individual shortcut",
-    "title": "/conceptmap",
-    "message": "Connect concepts with labelled relationships.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_RECHECK"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
-    "promptLabel": "Retested prompt · 7 Nov 2026",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 83.8 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-conceptmap/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-conceptmap/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-conceptmap/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-conceptmap/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /conceptmap: recorded demonstration and use.",
-      "caption": "ChatGPT · 83.8 s",
-      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef808d-4418-83eb-9fda-9024fb1f0014",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-conceptmap.json",
-      "durationSeconds": 83.85,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "4405f48a71efd34d50a0dec54d4fc2cf0b7eaf4545ee76c3d4f30e6d9530717f",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 32
-  },
-  {
-    "id": "S53DETAILMISTAKELOG",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/mistakelog",
-    "message": "Record misconceptions, review corrections and track progress.",
+    "title": "/fillintheblanks",
+    "message": "Complete missing terms and check your answers.",
     "body": [],
     "sources": [
       "CHATGPT_WIDGET_TESTS"
     ],
     "audience": "both",
     "lang": "en",
-    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
     "promptLabel": "Recorded prompt",
     "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 99.8 s",
+    "result": "ChatGPT · 49.6 s",
     "links": [],
     "studyPhases": {
-      "primary": "check",
+      "primary": "recall"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-fillintheblanks/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-fillintheblanks/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-fillintheblanks/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-fillintheblanks/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /fillintheblanks: recorded demonstration and use.",
+      "caption": "ChatGPT · 49.6 s",
+      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7bcc-53cc-83ed-a596-930a4499007b",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-fillintheblanks.json",
+      "durationSeconds": 49.6,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "5f8fd65729cc4fb3cb170816683c95a18d39ec6b2bdef4a168fb923913594108",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 32
+  },
+  {
+    "id": "S53DETAILWORKSHEET",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/worksheet",
+    "message": "Practise with answer fields and model answers to reveal.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 111.5 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "apply",
       "secondary": [
-        "plan"
+        "check"
       ]
     },
     "videoLayout": "focus",
     "media": {
       "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-mistakelog/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-mistakelog/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-mistakelog/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-mistakelog/transcript.txt",
+      "src": "materials/video-refresh/2026-11-07/widget-worksheet/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-worksheet/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-worksheet/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-worksheet/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — /mistakelog: recorded demonstration and use.",
-      "caption": "ChatGPT · 99.8 s",
-      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+      "alt": "ChatGPT — /worksheet: recorded demonstration and use.",
+      "caption": "ChatGPT · 111.5 s",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
       "result": {
         "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef7f23-2568-83eb-b08b-3e449f031776",
+        "url": "https://chatgpt.com/share/6aef8f1c-4440-83eb-95d8-12cfcaeb7c0d",
         "label": "Open shared result",
         "interactiveVerified": true,
         "recipientVerified": true,
         "ownerIndependent": true,
         "supplemental": []
       },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-mistakelog.json",
-      "durationSeconds": 99.75,
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-worksheet.json",
+      "durationSeconds": 111.55,
       "width": 1440,
       "height": 900,
       "fps": 60,
-      "sha256": "97c6414614bbd8057db334ddc0681d1fb40fd575f976372933c18ad653861954",
+      "sha256": "7a23642ad3085c3262446343879487171e2677e99b305b6aabc8c733573c9ddb",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
     "number": 33
-  },
-  {
-    "id": "S53DETAILLESSONPLAN",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/lessonplan",
-    "message": "Outline learning goals, activities and checks for a lesson.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_RECHECK"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
-    "promptLabel": "Retested prompt · 7 Nov 2026",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 98.6 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "plan"
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-lessonplan/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-lessonplan/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-lessonplan/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-lessonplan/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /lessonplan: recorded demonstration and use.",
-      "caption": "ChatGPT · 98.6 s",
-      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef81cc-9870-83ed-9885-2c0a3910092b",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-lessonplan.json",
-      "durationSeconds": 98.583333,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "b6d0559b8b86ebfc44248b1672f2d012fed4f794fc7d21b94cb41d9e9faa3935",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 34
   },
   {
     "id": "S53DETAILCASESTUDY",
@@ -1526,7 +1478,115 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
+    "number": 34
+  },
+  {
+    "id": "S53DETAILSTUDYPLAN",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/studyplan",
+    "message": "Break a learning goal into activities and track completion.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 50.0 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-studyplan/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-studyplan/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-studyplan/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-studyplan/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /studyplan: recorded demonstration and use.",
+      "caption": "ChatGPT · 50.0 s",
+      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7ddc-700c-83ed-ae0a-325ad2224d12",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-studyplan.json",
+      "durationSeconds": 49.95,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "96c79f6dc1f1bf8c22634ee8bae1d17ed7aae27cd519d41f0252c70d04e5da61",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
     "number": 35
+  },
+  {
+    "id": "S53DETAILLESSONPLAN",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/lessonplan",
+    "message": "Outline learning goals, activities and checks for a lesson.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+    "promptLabel": "Retested prompt · 7 Nov 2026",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 98.6 s",
+    "links": [],
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-lessonplan/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-lessonplan/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-lessonplan/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-lessonplan/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /lessonplan: recorded demonstration and use.",
+      "caption": "ChatGPT · 98.6 s",
+      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef81cc-9870-83ed-9885-2c0a3910092b",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-lessonplan.json",
+      "durationSeconds": 98.583333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b6d0559b8b86ebfc44248b1672f2d012fed4f794fc7d21b94cb41d9e9faa3935",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 36
   },
   {
     "id": "S53DETAILDIFFERENTIATE",
@@ -1580,7 +1640,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 36
+    "number": 37
   },
   {
     "id": "S53DETAILPEERASSESSMENT",
@@ -1631,63 +1691,6 @@
       "height": 900,
       "fps": 60,
       "sha256": "6213988add546c35a70aa8a2a97b27b416792492374130b5310d40e76c1cb6d7",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07"
-    },
-    "number": 37
-  },
-  {
-    "id": "S53DETAILWORKSHEET",
-    "type": "workshop",
-    "kind": "shortcut-detail",
-    "section": "chatgpt",
-    "stage": "ChatGPT · individual shortcut",
-    "title": "/worksheet",
-    "message": "Practise with answer fields and model answers to reveal.",
-    "body": [],
-    "sources": [
-      "CHATGPT_WIDGET_TESTS"
-    ],
-    "audience": "both",
-    "lang": "en",
-    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "resultLabel": "Recorded interactive output",
-    "result": "ChatGPT · 111.5 s",
-    "links": [],
-    "studyPhases": {
-      "primary": "apply",
-      "secondary": [
-        "check"
-      ]
-    },
-    "videoLayout": "focus",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/widget-worksheet/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/widget-worksheet/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/widget-worksheet/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/widget-worksheet/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "ChatGPT — /worksheet: recorded demonstration and use.",
-      "caption": "ChatGPT · 111.5 s",
-      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
-      "result": {
-        "kind": "chatgpt-share",
-        "url": "https://chatgpt.com/share/6aef8f1c-4440-83eb-95d8-12cfcaeb7c0d",
-        "label": "Open shared result",
-        "interactiveVerified": true,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-worksheet.json",
-      "durationSeconds": 111.55,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "7a23642ad3085c3262446343879487171e2677e99b305b6aabc8c733573c9ddb",
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
@@ -1751,6 +1754,46 @@
     "number": 39
   },
   {
+    "id": "S53TRYSHORTCUTS",
+    "type": "workshop",
+    "kind": "activity",
+    "section": "chatgpt",
+    "stage": "Audience · shortcut practice",
+    "title": "Your turn: try a few shortcuts",
+    "message": "Use your own ChatGPT account. The Free plan is fine.",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "steps": [
+      {
+        "title": "Choose a document",
+        "text": "Use the GenAI book or another document you want to study."
+      },
+      {
+        "title": "Try different shortcuts",
+        "text": "Start with /flashcard, /quiz or /oral. Ask ChatGPT to use only your document."
+      },
+      {
+        "title": "Use and check the result",
+        "text": "Try the activity, compare its answers with the source and refine your request."
+      }
+    ],
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "media": {
+      "src": "images/andrea/andrea-focused-laptop-v1.webp",
+      "alt": "Andrea leans towards his laptop, concentrating intently as he types, wearing his teal hoodie.",
+      "fit": "contain"
+    },
+    "number": 40,
+    "links": []
+  },
+  {
     "id": "S53SKILLSSECTION",
     "type": "workshop",
     "kind": "section-divider",
@@ -1769,7 +1812,7 @@
       "src": "images/sections/skills-title-v1.webp",
       "alt": "A reusable kit of reading, guided practice and self-assessment cards, organised with a resource folder above an open textbook."
     },
-    "number": 40,
+    "number": 41,
     "links": []
   },
   {
@@ -1803,7 +1846,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 41,
+    "number": 42,
     "links": []
   },
   {
@@ -1834,7 +1877,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 42,
+    "number": 43,
     "links": []
   },
   {
@@ -1866,7 +1909,7 @@
         "check"
       ]
     },
-    "number": 43,
+    "number": 44,
     "links": []
   },
   {
@@ -1925,7 +1968,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 44,
+    "number": 45,
     "links": []
   },
   {
@@ -2000,7 +2043,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 45,
+    "number": 46,
     "links": []
   },
   {
@@ -2070,7 +2113,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 46,
+    "number": 47,
     "links": []
   },
   {
@@ -2140,7 +2183,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 47,
+    "number": 48,
     "links": []
   },
   {
@@ -2162,7 +2205,7 @@
       "src": "images/sections/tool-title-v1.webp",
       "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
     },
-    "number": 48,
+    "number": 49,
     "links": []
   },
   {
@@ -2181,7 +2224,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 49,
+    "number": 50,
     "links": []
   },
   {
@@ -2213,7 +2256,7 @@
       "source": "https://goblin.tools/Compiler",
       "browserFrame": true
     },
-    "number": 50,
+    "number": 51,
     "links": []
   },
   {
@@ -2245,7 +2288,7 @@
       "source": "https://goblin.tools/ToDo",
       "browserFrame": true
     },
-    "number": 51,
+    "number": 52,
     "links": []
   },
   {
@@ -2277,7 +2320,7 @@
       "source": "https://goblin.tools/Estimator",
       "browserFrame": true
     },
-    "number": 52,
+    "number": 53,
     "links": []
   },
   {
@@ -2309,7 +2352,7 @@
       "source": "https://goblin.tools/Taskmaster",
       "browserFrame": true
     },
-    "number": 53,
+    "number": 54,
     "links": []
   },
   {
@@ -2341,7 +2384,7 @@
       "source": "https://goblin.tools/Professor",
       "browserFrame": true
     },
-    "number": 54,
+    "number": 55,
     "links": []
   },
   {
@@ -2373,7 +2416,7 @@
       "source": "https://goblin.tools/Formalizer",
       "browserFrame": true
     },
-    "number": 55,
+    "number": 56,
     "links": []
   },
   {
@@ -2414,7 +2457,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 56,
+    "number": 57,
     "links": []
   },
   {
@@ -2451,7 +2494,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 57,
+    "number": 58,
     "links": []
   },
   {
@@ -2486,7 +2529,7 @@
         "check"
       ]
     },
-    "number": 58,
+    "number": 59,
     "links": []
   },
   {
@@ -2508,7 +2551,7 @@
         "connect"
       ]
     },
-    "number": 59,
+    "number": 60,
     "links": []
   },
   {
@@ -2579,7 +2622,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 60,
+    "number": 61,
     "links": []
   },
   {
@@ -2634,7 +2677,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 61,
+    "number": 62,
     "links": []
   },
   {
@@ -2693,7 +2736,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 62,
+    "number": 63,
     "links": []
   },
   {
@@ -2753,7 +2796,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 63,
+    "number": 64,
     "links": []
   },
   {
@@ -2832,7 +2875,7 @@
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 64
+    "number": 65
   },
   {
     "id": "S64SETTINGS",
@@ -2886,7 +2929,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 65,
+    "number": 66,
     "links": []
   },
   {
@@ -2922,7 +2965,7 @@
         "connect"
       ]
     },
-    "number": 66,
+    "number": 67,
     "links": []
   },
   {
@@ -2996,7 +3039,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 67,
+    "number": 68,
     "links": []
   },
   {
@@ -3058,7 +3101,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 68,
+    "number": 69,
     "links": []
   },
   {
@@ -3113,7 +3156,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 69,
+    "number": 70,
     "links": []
   },
   {
@@ -3168,7 +3211,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 70,
+    "number": 71,
     "links": []
   },
   {
@@ -3227,7 +3270,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 71,
+    "number": 72,
     "links": []
   },
   {
@@ -3282,7 +3325,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 72,
+    "number": 73,
     "links": []
   },
   {
@@ -3314,7 +3357,7 @@
       "caption": "Recorded in @Browser · 21 s",
       "source": "https://notebook.google.com/"
     },
-    "number": 73,
+    "number": 74,
     "links": []
   },
   {
@@ -3372,7 +3415,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 74,
+    "number": 75,
     "links": []
   },
   {
@@ -3430,7 +3473,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 75,
+    "number": 76,
     "links": []
   },
   {
@@ -3485,7 +3528,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 76,
+    "number": 77,
     "links": []
   },
   {
@@ -3540,7 +3583,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 77,
+    "number": 78,
     "links": []
   },
   {
@@ -3585,7 +3628,7 @@
         "check"
       ]
     },
-    "number": 78
+    "number": 79
   },
   {
     "type": "workshop",
@@ -3628,7 +3671,7 @@
         "check"
       ]
     },
-    "number": 79
+    "number": 80
   },
   {
     "id": "S70",
@@ -3665,7 +3708,7 @@
       "caption": "Generate control in the official guide; the vendor’s example text is unrelated to Andrea.",
       "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
     },
-    "number": 80,
+    "number": 81,
     "links": []
   },
   {
@@ -3709,7 +3752,7 @@
       "caption": "Official guide: choosing a visual.",
       "source": "https://help.napkin.ai/en/articles/15923699-visuals-generation"
     },
-    "number": 81,
+    "number": 82,
     "links": []
   },
   {
@@ -3749,7 +3792,7 @@
       "caption": "Recorded book test · 38 s",
       "source": "https://app.diagrams.net/"
     },
-    "number": 82,
+    "number": 83,
     "links": []
   },
   {
@@ -3789,7 +3832,7 @@
       "caption": "Recorded book test · 27 s",
       "source": "https://excalidraw.com/"
     },
-    "number": 83,
+    "number": 84,
     "links": []
   },
   {
@@ -3820,7 +3863,7 @@
         "recall"
       ]
     },
-    "number": 84,
+    "number": 85,
     "links": []
   },
   {
@@ -3841,7 +3884,7 @@
         "plan"
       ]
     },
-    "number": 85,
+    "number": 86,
     "links": []
   },
   {
@@ -3876,7 +3919,7 @@
         "plan"
       ]
     },
-    "number": 86,
+    "number": 87,
     "links": []
   },
   {
@@ -3939,7 +3982,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 87,
+    "number": 88,
     "links": []
   },
   {
@@ -4001,7 +4044,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 88,
+    "number": 89,
     "links": []
   },
   {
@@ -4062,7 +4105,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 89,
+    "number": 90,
     "links": []
   },
   {
@@ -4100,7 +4143,7 @@
       "caption": "Paid Teacher trial · Recorded example · 34 s",
       "source": "https://app.formative.com/formatives/6aef670e2bf0ef0a672e0925/results/2?columnGroupBy=questions"
     },
-    "number": 90,
+    "number": 91,
     "links": []
   },
   {
@@ -4135,7 +4178,7 @@
         "plan"
       ]
     },
-    "number": 91,
+    "number": 92,
     "links": []
   },
   {
@@ -4174,7 +4217,7 @@
         "plan"
       ]
     },
-    "number": 92,
+    "number": 93,
     "links": []
   },
   {
@@ -4206,7 +4249,7 @@
     "studyPhases": {
       "primary": "check"
     },
-    "number": 93,
+    "number": 94,
     "links": []
   },
   {
@@ -4282,7 +4325,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 94,
+    "number": 95,
     "links": []
   },
   {
@@ -4345,7 +4388,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 95,
+    "number": 96,
     "links": []
   },
   {
@@ -4429,7 +4472,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 96,
+    "number": 97,
     "links": []
   },
   {
@@ -4478,7 +4521,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 97,
+    "number": 98,
     "links": []
   },
   {
@@ -4500,7 +4543,7 @@
         "url": "mailto:marco.cremaschi@unimib.it"
       }
     ],
-    "number": 98
+    "number": 99
   },
   {
     "id": "S99",
@@ -4669,7 +4712,7 @@
         "download": true
       }
     ],
-    "number": 99
+    "number": 100
   },
   {
     "id": "S102",
@@ -4749,7 +4792,7 @@
         "shortTitle": "Making audio and video accessible"
       }
     ],
-    "number": 100,
+    "number": 101,
     "links": []
   }
 ]
