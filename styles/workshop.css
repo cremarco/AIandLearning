@@ -20,6 +20,11 @@
 .kind-audience-legend .comparison { gap:64px; }
 .kind-audience-legend .comparison section { gap:24px; }
 .kind-audience-legend .audience-icon { width:64px; height:64px; }
+.audience-questions { width:100%; margin:0; padding:0; border-bottom:1px solid var(--deck-line); }
+.audience-questions .list-row { grid-template-columns:64px minmax(0,1fr); align-items:center; gap:28px; padding:28px 0; border-top:1px solid var(--deck-line); border-radius:0; }
+.audience-questions .list-row::after { display:none; }
+.audience-question-symbol { display:flex; align-items:center; justify-content:center; color:var(--deck-cyan); }
+.slidev-layout .kind-audience-questions .audience-question-text { margin:0; max-width:1020px; font-size:32px; line-height:1.25; font-weight:600; text-wrap:balance; }
 .has-character .workshop-stage { gap:48px; }
 .has-character .workshop-copy { position:relative; z-index:1; flex:0 1 720px; max-width:720px; }
 .has-character > :not(.workshop-stage) { position:relative; z-index:1; width:720px; }

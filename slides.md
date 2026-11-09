@@ -112,6 +112,18 @@ You will see these **icons** throughout the presentation. They identify activiti
 
 ---
 layout: default
+routeAlias: s50checkin
+title: "Before we begin…"
+---
+
+<DeckSlide id="S50CHECKIN" />
+
+<!--
+Before we start, **raise your hand** for each question. First, who already uses **generative AI** to study or prepare materials? Next, who has a **ChatGPT account**? Finally, who is familiar with **NotebookLM**? Use these answers to adjust the examples and offer setup help where needed.
+-->
+
+---
+layout: default
 routeAlias: s51
 title: "Andrea needs to understand GenAI"
 clicks: 1
@@ -233,7 +245,7 @@ title: "Formal actions and informal shortcuts"
 <DeckSlide id="S53TYPES" />
 
 <!--
-A **formal action** is offered by the application, such as Study. An informal label is part of our **request**. We selected 15 complementary examples rather than presenting every possible label. The task, source and format still need to be specified; a label alone does not guarantee an interactive result.
+A **formal action** is offered by the application, such as Study. An **informal label** is part of our request: writing /quiz does not select a menu action or install a feature. We selected **15 complementary examples**. Specify the task, source and format, including any buttons or feedback you need. A label alone does not guarantee an **interactive result**.
 -->
 
 ---

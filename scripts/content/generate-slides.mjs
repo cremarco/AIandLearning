@@ -48,7 +48,7 @@ const slideBlocks = slides.map((slide, index) => {
 
 writeFileSync(path.join(root, 'slides.md'), `${headmatter}\n${slideBlocks.join('\n')}`)
 const readingCopy = ['# Speaker notes · Beyond prompting',
-  'Short English notes for rehearsal. Bold text marks the key words. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.',
+  'English notes for rehearsal, with no word-count limit. Bold text marks the key words. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.',
   ...slides.map(slide => `## ${slide.number}. ${slide.title}\n\n${speakerNotes[slide.id]}`),
 ].join('\n\n')
 writeFileSync(path.join(root, 'docs/speaker-notes.en.md'), `${readingCopy}\n`)

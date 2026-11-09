@@ -41,8 +41,6 @@ export function checkData() {
     assert(!Object.hasOwn(slide, 'notes'), `${slide.id}: keep speaker notes separate from audience content`)
     const notes = speakerNotes[slide.id]
     assert(typeof notes === 'string' && notes.trim(), `${slide.id}: missing speaker notes`)
-    const maxNoteWords = slide.id === 'S52' ? 160 : 60
-    assert(notes.split(/\s+/).length <= maxNoteWords, `${slide.id}: keep speaker notes brief, allowing the longer assignment explanation`)
     assert(/\*\*[^*\n]+\*\*/.test(notes) && notes.match(/\*\*/g).length % 2 === 0, `${slide.id}: emphasise key words with balanced Markdown bold`)
     assert(!/<!--|-->/.test(notes), `${slide.id}: notes must not contain nested HTML comments`)
     assert.equal(renderedNotes[index][1], slide.id, `${slide.id}: notes must remain attached to the right slide after reordering`)
@@ -188,7 +186,8 @@ export function checkData() {
     const run = retained.find(run => run.command === detail.title)
     const video = shortcutVideos.find(clip => clip.command.toLowerCase() === run.command.toLowerCase())
     assert.equal(detail.id, `S53DETAIL${run.command.replace(/[^a-z0-9]/gi, '').toUpperCase()}`)
-    assert.equal(detail.message, shortcutDescriptions[run.command], `${run.command}: use the authored purpose`)
+    const footnoteMarker = detail.body?.some(text => text.startsWith('* ')) ? '*' : ''
+    assert.equal(detail.message, `${shortcutDescriptions[run.command]}${footnoteMarker}`, `${run.command}: use the authored purpose, with its footnote marker`)
     assert.equal(detail.prompt?.trim(), (video?.prompt || run.prompt).trim(), `${run.command}: preserve the full prompt that belongs to the recording`)
     if (video) {
       if (checkReleasedMedia(video, publishedRecordings)) {
@@ -315,7 +314,8 @@ export function checkData() {
   assert.equal(qr.decodedPayload, 'https://cremarco.github.io/EduForum/')
   assert.equal(slides.find(slide => slide.id === 'S50QR').links[0].url, qr.decodedPayload)
   assert.equal(slides[slides.findIndex(slide => slide.id === 'S50QR') + 1]?.id, 'S50LEGEND')
-  assert.equal(slides[slides.findIndex(slide => slide.id === 'S51') - 1]?.id, 'S50LEGEND')
+  assert.equal(slides[slides.findIndex(slide => slide.id === 'S50LEGEND') + 1]?.id, 'S50CHECKIN')
+  assert.equal(slides[slides.findIndex(slide => slide.id === 'S51') - 1]?.id, 'S50CHECKIN')
   const notebookDemos = read('data/demos/notebook-demos.json')
   const notebookClips = read('public/materials/notebook/provenance.json').clips
   assert.deepEqual(notebookClips.map(clip => clip.key), notebookDemos.map(demo => demo.key), 'Every NotebookLM demonstration needs its recorded clip')
@@ -367,7 +367,7 @@ export function checkData() {
     }
   }
   const selectedVideoCount = retained.filter(run => shortcutVideos.some(clip => clip.command === run.command)).length
-  console.log(`Content checks passed: ${slides.length} ordered slides with concise presenter notes, separate Study and Read aloud actions, ${retained.length} selected shortcuts (${selectedVideoCount} videos and ${retained.length - selectedVideoCount} fresh interaction checks), references and QR.`)
+  console.log(`Content checks passed: ${slides.length} ordered slides with English presenter notes, separate Study and Read aloud actions, ${retained.length} selected shortcuts (${selectedVideoCount} videos and ${retained.length - selectedVideoCount} fresh interaction checks), references and QR.`)
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) checkData()

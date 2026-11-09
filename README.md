@@ -29,7 +29,9 @@ Open http://localhost:3047/. Arrow keys navigate. The Slidev toolbar provides pr
 
 Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, full reader data, lean runtime indexes, speaker notes and companion materials. Do not hand-edit `data/generated/`, `slides.md`, the generated notes or companion HTML/text files.
 
-The presentation has 85 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
+Speaker notes have no word-count limit. Use as much detail as the presenter needs.
+
+The presentation has 86 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
 ## Check and build
 

@@ -62,6 +62,19 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
       <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
       <ShortcutDetail v-else-if="s.kind === 'shortcut-detail'" :slide="s" />
+      <ul v-else-if="s.kind === 'audience-questions'" class="list audience-questions" :aria-label="s.title">
+        <li v-for="(question, index) in s.body" :key="question" class="list-row">
+          <span class="audience-question-symbol" aria-hidden="true">
+            <svg v-if="index === 0" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 11v5a3 3 0 0 1-3 3H8l-5 3V6a3 3 0 0 1 3-3h6" />
+              <path d="m18 2 1.3 3.7L23 7l-3.7 1.3L18 12l-1.3-3.7L13 7l3.7-1.3Z" />
+              <path d="M7 12h4m-4 3h8" />
+            </svg>
+            <ToolLogos v-else :ids="index === 1 ? ['chatgpt'] : ['notebook']" />
+          </span>
+          <p class="audience-question-text">{{ question }}</p>
+        </li>
+      </ul>
       <ScreenshotResults v-else-if="s.screenshots?.length" :items="s.screenshots" />
       <FormalCommandResults v-else-if="s.commandCategory === 'formal-web' && s.commands?.some(command => command.result)" :commands="s.commands || []" />
       <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" @study-phase-change="emit('studyPhaseChange', $event)" />
