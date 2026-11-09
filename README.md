@@ -31,7 +31,7 @@ Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, ful
 
 Speaker notes have no word-count limit. Use as much detail as the presenter needs.
 
-The presentation has 86 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
+The presentation has 88 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
 ## Check and build
 

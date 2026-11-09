@@ -1,0 +1,257 @@
+{
+  "title": "Gemini shortcut tests — 9 November 2026",
+  "date": "2026-11-09",
+  "product": "Gemini web",
+  "mode": "Thinking (UI label)",
+  "sourceBook": "../booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+  "method": "Each original shortcut prompt used the workshop book in a separate temporary chat. English interface selected with hl=en. Code-only responses were regenerated in the same temporary chat with Canvas and explicit rendering follow-ups. Exported HTML is unchanged and was tested in a local browser. Screenshots are native browser captures, not mock-ups.",
+  "screenshotDimensions": {
+    "width": 1280,
+    "height": 720
+  },
+  "summary": {
+    "tested": 15,
+    "nativeInteractive": 2,
+    "exportedInteractive": 5,
+    "staticText": 4,
+    "generationErrors": 4
+  },
+  "limitations": [
+    "One Workspace account and one test session; results can vary.",
+    "Canvas previews were blank in the capture browser. Five exported files were verified locally; their screenshots are not presented as in-chat previews.",
+    "The first concept-map export was incomplete; Gemini generated the complete replacement.",
+    "Scores are demonstration interactions, not evidence of learning.",
+    "Some generated apps use external styling CDNs.",
+    "Temporary chat URLs are not durable public evidence; published records contain prompts, follow-ups, outcomes, original exports and screenshots."
+  ],
+  "tests": [
+    {
+      "command": "/quiz",
+      "purpose": "Practice with feedback",
+      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "native-interactive",
+      "observed": "Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.",
+      "screenshot": "screenshots/quiz.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/matchinggame",
+      "purpose": "Connect concepts",
+      "prompt": "/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": true,
+      "status": "generation-error",
+      "observed": "Canvas generation returned errors on both versions. No working output verified.",
+      "screenshot": "screenshots/matchinggame.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/fillintheblanks",
+      "purpose": "Produce missing terms",
+      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "exported-interactive",
+      "observed": "Regenerated in Canvas. Unmodified exported HTML verified locally: wrong answer, 2/3 then 3/3, explanations and progress.",
+      "screenshot": "screenshots/fillintheblanks.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720,
+      "followUps": [
+        "Render the activity from my original prompt above as a working Canvas app with an interactive Preview, rather than a source-code block in the chat. Keep the same three items, hints, answer checking, explanations and progress, grounded only in the attached book. Use English for all content and controls.",
+        "The Canvas Preview is blank and contains no rendered content. Rebuild this as a minimal, self-contained HTML/CSS/JavaScript Canvas app with no external scripts, packages, fonts or network requests. Keep exactly three chapter-grounded fill-in questions, text inputs, hints, a Check answers button, explanatory feedback, progress and Reset. Use English throughout. Show the working Preview rather than code in the chat."
+      ],
+      "app": "apps/fillintheblanks.html",
+      "sha256": "8f57bcc0cdc488d463ebd335ae029f7a481d9afc54e9ad0c14c10b741e2071f0",
+      "exportModified": false
+    },
+    {
+      "command": "/flashcard",
+      "purpose": "Recall from memory",
+      "prompt": "/flashcard Help me study the attached chapter.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "native-interactive",
+      "observed": "Native 25-card set after retry: answer flip, Next and Previous verified.",
+      "screenshot": "screenshots/flashcard.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/sortinggame",
+      "purpose": "Classify examples",
+      "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "exported-interactive",
+      "observed": "Regenerated in Canvas. Unmodified exported HTML verified locally: three classifications, 3/3 score and explanatory feedback.",
+      "screenshot": "screenshots/sortinggame.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720,
+      "followUps": [
+        "Render the activity from my original prompt above as a working Canvas app with an interactive Preview, rather than source code in the chat. Preserve all the requirements and controls in that original prompt and use only the attached book. Use English for all content and controls."
+      ],
+      "app": "apps/sortinggame.html",
+      "sha256": "f439c46ee0a8365f612874f6c6803d4313d8ebff90a7fcac0660d4df4edf5d04",
+      "exportModified": false
+    },
+    {
+      "command": "/oral",
+      "purpose": "Explain independently",
+      "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": true,
+      "status": "generation-error",
+      "observed": "Canvas generation returned an error, including after retry. No working output verified.",
+      "screenshot": "screenshots/oral.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/studyplan",
+      "purpose": "Plan the next steps",
+      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "static-text",
+      "observed": "Textual plan; no working in-chat checkboxes, progress or reset observed.",
+      "screenshot": "screenshots/studyplan.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/conceptmap",
+      "purpose": "Explain relationships visually",
+      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "exported-interactive",
+      "observed": "Regenerated in Canvas; the first export was incomplete. Complete unmodified replacement verified locally: Training, Inference and RAG branches, three checked answers and feedback.",
+      "screenshot": "screenshots/conceptmap.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720,
+      "followUps": [
+        "Render the activity from my original prompt above as a working Canvas app with an interactive Preview, rather than source code in the chat. Preserve all the requirements and controls in that original prompt and use only the attached book. Use English for all content and controls.",
+        "The exported Canvas HTML is incomplete: it stops at the Training Pipeline heading and the branch buttons have no working implementation. Replace it with a COMPLETE minimal self-contained HTML/CSS/JavaScript Canvas app, with all closing tags and functions, no external dependencies, and under 200 lines. Keep exactly three selectable branches (Training, Inference, RAG), labelled relationships and chapter explanations, three multiple-choice checks with feedback, Check answers and Retry. Use English throughout. Finish the whole app and show its Preview."
+      ],
+      "app": "apps/conceptmap.html",
+      "sha256": "7e957449760bc56fe3671e47afe66b1f97039d52584fbc462db814e187168a08",
+      "exportModified": false
+    },
+    {
+      "command": "/mistakelog",
+      "purpose": "Reflect on mistakes",
+      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "static-text",
+      "observed": "Textual dashboard and corrections; no working in-chat review controls observed.",
+      "screenshot": "screenshots/mistakelog.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/caseStudy",
+      "purpose": "Apply concepts to a case",
+      "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "static-text",
+      "observed": "Textual case study; no working answer fields or reveal controls observed.",
+      "screenshot": "screenshots/caseStudy.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/lessonplan",
+      "purpose": "Design a lesson",
+      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "exported-interactive",
+      "observed": "Regenerated in Canvas. Unmodified exported HTML verified locally: Explain/Apply/Assess stages, three scenario checks, written response and answer reveal.",
+      "screenshot": "screenshots/lessonplan.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720,
+      "followUps": [
+        "Render the activity from my original prompt above as a working Canvas app with an interactive Preview, rather than source code in the chat. Preserve all the requirements and controls in that original prompt and use only the attached book. Use English for all content and controls."
+      ],
+      "app": "apps/lessonplan.html",
+      "sha256": "88c97e7e97c9ca7c05f8bab327604928b55e6c611aa09cb046ad6a7b8144f200",
+      "exportModified": false
+    },
+    {
+      "command": "/differentiate",
+      "purpose": "Adapt the level of support",
+      "prompt": "/differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "generation-error",
+      "observed": "Generation returned errors, including after retry. No working output verified.",
+      "screenshot": "screenshots/differentiate.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/peerassessment",
+      "purpose": "Assess with shared criteria",
+      "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "exported-interactive",
+      "observed": "Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.",
+      "screenshot": "screenshots/peerassessment.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720,
+      "followUps": [
+        "Render the activity from my original prompt above as a working Canvas app with an interactive Preview, rather than source code in the chat. Preserve all the requirements and controls in that original prompt and use only the attached book. Use English for all content and controls.",
+        "Rebuild the peer-assessment rubric from my original prompt as a minimal, self-contained HTML/CSS/JavaScript Canvas app with no external dependencies or network requests. Include training, inference and context criteria, 0/1/2 score selectors, feedback fields, expected-evidence reveals and a live total. Ground it only in the attached chapter. Use English throughout. Show the interactive Preview."
+      ],
+      "app": "apps/peerassessment.html",
+      "sha256": "23a95ea8905e3b79d4beb01f221aac0e32cd9c0ccca47a2b5e2e48742b29b979",
+      "exportModified": false
+    },
+    {
+      "command": "/worksheet",
+      "purpose": "Practise written explanations",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "generation-error",
+      "observed": "Generation returned an error. No working output verified.",
+      "screenshot": "screenshots/worksheet.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    },
+    {
+      "command": "/learningstations",
+      "purpose": "Organise classroom activities",
+      "prompt": "/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.",
+      "language": "en",
+      "temporaryChat": true,
+      "initialCanvasSelected": false,
+      "status": "static-text",
+      "observed": "Textual stations after retry; no working station tabs, answer fields or progress controls observed.",
+      "screenshot": "screenshots/learningstations.jpg",
+      "screenshotWidth": 1280,
+      "screenshotHeight": 720
+    }
+  ]
+}

@@ -236,7 +236,7 @@
     "message": "Three quick questions. A show of hands is enough.",
     "body": [
       "Do you already use GenAI to study or prepare teaching materials?",
-      "Do you have a ChatGPT account?",
+      "Do you have a ChatGPT account (or Gemini, or Claude)?",
       "Are you familiar with NotebookLM?"
     ],
     "sources": [],
@@ -377,7 +377,7 @@
     "section": "scenario",
     "stage": "Learning method · six phases",
     "title": "A study process in six phases",
-    "message": "Choose support for your next learning action. The corner ribbon shows the main phase, with a smaller secondary phase.",
+    "message": "",
     "body": [],
     "sources": [],
     "audience": "both",
@@ -457,6 +457,46 @@
     "number": 15
   },
   {
+    "id": "S53WHYTOOLS",
+    "type": "workshop",
+    "kind": "tool-choice",
+    "section": "scenario",
+    "stage": "Tool choice · rationale",
+    "title": "Why these tools?",
+    "message": "Flexibility, continuity and fewer subscriptions.",
+    "body": [
+      "ChatGPT, Gemini or Claude — with NotebookLM"
+    ],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "comparison": [
+      {
+        "label": "More control",
+        "icon": "icons/heroicons/adjustments-horizontal.svg",
+        "text": "Adapt explanations, questions and outputs to your learning goal."
+      },
+      {
+        "label": "A connected workflow",
+        "icon": "icons/heroicons/link.svg",
+        "text": "Use the same materials across different study activities."
+      },
+      {
+        "label": "Transferable skills",
+        "icon": "icons/heroicons/arrows-right-left.svg",
+        "text": "Reuse the method across subjects and AI assistants."
+      },
+      {
+        "label": "Potential savings",
+        "icon": "icons/heroicons/banknotes.svg",
+        "text": "Cover several needs before paying for additional tools."
+      }
+    ],
+    "decision": "",
+    "number": 16,
+    "links": []
+  },
+  {
     "type": "workshop",
     "section": "chatgpt",
     "body": [
@@ -478,7 +518,7 @@
         "connect"
       ]
     },
-    "number": 16,
+    "number": 17,
     "links": []
   },
   {
@@ -500,7 +540,7 @@
       "src": "images/sections/shortcuts-title-v1.webp",
       "alt": "An open textbook gives rise to flashcards, a quiz, a concept map, a summary and a prompt card."
     },
-    "number": 17,
+    "number": 18,
     "links": []
   },
   {
@@ -535,7 +575,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 18,
+    "number": 19,
     "links": []
   },
   {
@@ -607,7 +647,7 @@
         "check"
       ]
     },
-    "number": 19,
+    "number": 20,
     "links": []
   },
   {
@@ -676,7 +716,7 @@
     "studyPhases": {
       "primary": "understand"
     },
-    "number": 20,
+    "number": 21,
     "links": []
   },
   {
@@ -761,7 +801,7 @@
         "retained": true
       }
     ],
-    "number": 21,
+    "number": 22,
     "links": []
   },
   {
@@ -796,7 +836,7 @@
         "check"
       ]
     },
-    "number": 22,
+    "number": 23,
     "links": []
   },
   {
@@ -840,7 +880,7 @@
         "understand"
       ]
     },
-    "number": 23,
+    "number": 24,
     "links": []
   },
   {
@@ -883,7 +923,7 @@
         "check"
       ]
     },
-    "number": 24,
+    "number": 25,
     "links": []
   },
   {
@@ -931,7 +971,7 @@
         "check"
       ]
     },
-    "number": 25,
+    "number": 26,
     "links": []
   },
   {
@@ -991,7 +1031,7 @@
       "recordingMode": "reviewed-native-short-prompt-retake",
       "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
     },
-    "number": 26
+    "number": 27
   },
   {
     "id": "S53DETAILMISTAKELOG",
@@ -1049,7 +1089,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 27
+    "number": 28
   },
   {
     "id": "S53DETAILCONCEPTMAP",
@@ -1104,7 +1144,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 28
+    "number": 29
   },
   {
     "id": "S53DETAILMATCHINGGAME",
@@ -1162,7 +1202,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 29
+    "number": 30
   },
   {
     "id": "S53DETAILSORTINGGAME",
@@ -1220,7 +1260,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 30
+    "number": 31
   },
   {
     "id": "S53DETAILORAL",
@@ -1280,7 +1320,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 31
+    "number": 32
   },
   {
     "id": "S53DETAILQUIZ",
@@ -1338,7 +1378,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 32
+    "number": 33
   },
   {
     "id": "S53DETAILFILLINTHEBLANKS",
@@ -1393,7 +1433,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 33
+    "number": 34
   },
   {
     "id": "S53DETAILWORKSHEET",
@@ -1451,7 +1491,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 34
+    "number": 35
   },
   {
     "id": "S53DETAILCASESTUDY",
@@ -1509,7 +1549,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 35
+    "number": 36
   },
   {
     "id": "S53DETAILSTUDYPLAN",
@@ -1564,7 +1604,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 36
+    "number": 37
   },
   {
     "id": "S53DETAILLESSONPLAN",
@@ -1619,7 +1659,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 37
+    "number": 38
   },
   {
     "id": "S53DETAILDIFFERENTIATE",
@@ -1674,7 +1714,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 38
+    "number": 39
   },
   {
     "id": "S53DETAILPEERASSESSMENT",
@@ -1729,7 +1769,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 39
+    "number": 40
   },
   {
     "id": "S53DETAILLEARNINGSTATIONS",
@@ -1787,7 +1827,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 40
+    "number": 41
   },
   {
     "id": "S53CLAUDE",
@@ -1862,7 +1902,92 @@
         "check"
       ]
     },
-    "number": 41,
+    "number": 42,
+    "links": []
+  },
+  {
+    "id": "S53GEMINI",
+    "type": "workshop",
+    "kind": "screenshot-results",
+    "section": "chatgpt",
+    "stage": "The same requests in Gemini",
+    "title": "Trying the shortcuts in Gemini",
+    "message": "Quiz and flashcards in Gemini · Canvas apps regenerated, exported and tested locally.",
+    "body": [],
+    "sources": [
+      "GEMINI_SHORTCUT_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "screenshots": [
+      {
+        "label": "/quiz · Gemini",
+        "src": "materials/gemini-shortcuts/screenshots/quiz.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Gemini native quiz in English showing a selected answer, chapter-grounded feedback and navigation.",
+        "caption": "Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.",
+        "format": "Native Gemini widget",
+        "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English."
+      },
+      {
+        "label": "/flashcard · Gemini",
+        "src": "materials/gemini-shortcuts/screenshots/flashcard.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Gemini native 25-card deck in English with a revealed answer, navigation and learning tracking.",
+        "caption": "Native 25-card set after retry: answer flip, Next and Previous verified.",
+        "format": "Native Gemini widget",
+        "prompt": "/flashcard Help me study the attached chapter."
+      },
+      {
+        "label": "/fillintheblanks · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/fillintheblanks.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing checked fill-in answers and explanations.",
+        "caption": "Regenerated in Canvas. Unmodified exported HTML verified locally: wrong answer, 2/3 then 3/3, explanations and progress.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English."
+      },
+      {
+        "label": "/sortinggame · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/sortinggame.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing the 3/3 classification result and explanations.",
+        "caption": "Regenerated in Canvas. Unmodified exported HTML verified locally: three classifications, 3/3 score and explanatory feedback.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English."
+      },
+      {
+        "label": "/conceptmap · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/conceptmap.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, with the RAG branch selected and labelled relationships.",
+        "caption": "Regenerated in Canvas; the first export was incomplete. Complete unmodified replacement verified locally: Training and RAG branches, three checked answers and feedback.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English."
+      },
+      {
+        "label": "/peerassessment · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/peerassessment.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, chapter evidence and written feedback.",
+        "caption": "Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English."
+      }
+    ],
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 43,
     "links": []
   },
   {
@@ -1906,7 +2031,7 @@
       "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 42,
+    "number": 44,
     "links": []
   },
   {
@@ -1928,7 +2053,7 @@
       "src": "images/sections/skills-title-v1.webp",
       "alt": "A reusable kit of reading, guided practice and self-assessment cards, organised with a resource folder above an open textbook."
     },
-    "number": 43,
+    "number": 45,
     "links": []
   },
   {
@@ -1962,7 +2087,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 44,
+    "number": 46,
     "links": []
   },
   {
@@ -1998,7 +2123,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 45
+    "number": 47
   },
   {
     "id": "S53SKILLSTUDY",
@@ -2029,7 +2154,7 @@
         "check"
       ]
     },
-    "number": 46,
+    "number": 48,
     "links": []
   },
   {
@@ -2089,7 +2214,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 47,
+    "number": 49,
     "links": []
   },
   {
@@ -2165,7 +2290,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 48,
+    "number": 50,
     "links": []
   },
   {
@@ -2236,7 +2361,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 49,
+    "number": 51,
     "links": []
   },
   {
@@ -2307,7 +2432,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 50,
+    "number": 52,
     "links": []
   },
   {
@@ -2357,7 +2482,7 @@
       "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 51
+    "number": 53
   },
   {
     "id": "S53TOOLSSECTION",
@@ -2378,7 +2503,7 @@
       "src": "images/sections/tool-title-v1.webp",
       "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
     },
-    "number": 52,
+    "number": 54,
     "links": []
   },
   {
@@ -2397,7 +2522,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 53,
+    "number": 55,
     "links": []
   },
   {
@@ -2430,7 +2555,7 @@
       "transcript": "Compiler — real execution, recorded 5 November 2026\n\nINPUT\nI have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.\n\nACTUAL RESULT\nStudy the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking\n\n00:00:00.000 Describe the study goal in your own words.\n00:00:04.000 Compiler extracts actions from the unstructured note.\n00:00:06.000 Actual result: four suggested study tasks.\n00:00:10.000 Review the list: keep the learning goal and remove overlap.",
       "browserFrame": true
     },
-    "number": 54,
+    "number": 56,
     "links": []
   },
   {
@@ -2463,7 +2588,7 @@
       "transcript": "Magic ToDo — real execution, recorded 5 November 2026\n\nINPUT\nRead the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nLocate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.\n\n00:00:00.000 Start with one concrete task from the chapter.\n00:00:04.000 Use the magic-wand button to break the task down.\n00:00:06.000 Actual result: 4 smaller steps.\n00:00:10.000 Choose the steps that help; revise generic or repeated advice.",
       "browserFrame": true
     },
-    "number": 55,
+    "number": 57,
     "links": []
   },
   {
@@ -2496,7 +2621,7 @@
       "transcript": "Estimator — real execution, recorded 5 November 2026\n\nINPUT\nRead two pages about training and inference, write a three-line comparison, and explain it aloud once.\n\nACTUAL RESULT\n10-20 minutes\n\n00:00:00.000 Describe the activity and its expected output.\n00:00:04.000 Ask Estimator for a rough time window.\n00:00:06.000 Actual result: 10-20 minutes.\n00:00:10.000 Record the real time, then adjust the next study session.",
       "browserFrame": true
     },
-    "number": 56,
+    "number": 58,
     "links": []
   },
   {
@@ -2529,7 +2654,7 @@
       "transcript": "Taskmaster — real execution, recorded 5 November 2026\n\nINPUT\nAndrea · full-page demo — Read the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nTaskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.\n\n00:00:00.000 Open the study list and choose one current task.\n00:00:03.000 Press Play and work with one item in view.\n00:00:07.000 Pause the timer. This demonstration records three seconds.\n00:00:10.000 Elapsed time shows activity; check understanding separately.",
       "browserFrame": true
     },
-    "number": 57,
+    "number": 59,
     "links": []
   },
   {
@@ -2562,7 +2687,7 @@
       "transcript": "Professor — real execution, recorded 5 November 2026\n\nINPUT\nTraining versus inference in a language model. Explain the difference briefly and give one short example.\n\nACTUAL RESULT\nEXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.\n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.\nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.\nExample: Asking the model to write a summary of today's news after it has already been trained.\n\n00:00:00.000 Ask a focused question about training and inference.\n00:00:04.000 Professor generates an explanation and an example.\n00:00:07.000 Read the actual explanation; an analogy still needs checking.\n00:00:11.000 Return to the chapter: which parameters change, and when?",
       "browserFrame": true
     },
-    "number": 58,
+    "number": 60,
     "links": []
   },
   {
@@ -2595,7 +2720,7 @@
       "transcript": "Formalizer — real execution, recorded 5 November 2026\n\nINPUT\nTraining is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.\n\nACTUAL RESULT\nTraining refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.\n\n00:00:00.000 Start with a draft that includes an unresolved question.\n00:00:04.000 Choose More professional, then Convert.\n00:00:06.000 Read the actual rewrite and compare its meaning.\n00:00:10.000 The uncertainty about context remains. Check the science too.",
       "browserFrame": true
     },
-    "number": 59,
+    "number": 61,
     "links": []
   },
   {
@@ -2636,7 +2761,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 60,
+    "number": 62,
     "links": []
   },
   {
@@ -2673,7 +2798,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 61,
+    "number": 63,
     "links": []
   },
   {
@@ -2695,7 +2820,7 @@
         "connect"
       ]
     },
-    "number": 62,
+    "number": 64,
     "links": []
   },
   {
@@ -2768,7 +2893,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 63,
+    "number": 65,
     "links": []
   },
   {
@@ -2825,7 +2950,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 64,
+    "number": 66,
     "links": []
   },
   {
@@ -2886,7 +3011,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 65,
+    "number": 67,
     "links": []
   },
   {
@@ -2948,7 +3073,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 66,
+    "number": 68,
     "links": []
   },
   {
@@ -3025,7 +3150,7 @@
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 67
+    "number": 69
   },
   {
     "id": "S64SETTINGS",
@@ -3081,7 +3206,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 68,
+    "number": 70,
     "links": []
   },
   {
@@ -3117,7 +3242,7 @@
         "connect"
       ]
     },
-    "number": 69,
+    "number": 71,
     "links": []
   },
   {
@@ -3193,7 +3318,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 70,
+    "number": 72,
     "links": []
   },
   {
@@ -3257,7 +3382,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 71,
+    "number": 73,
     "links": []
   },
   {
@@ -3314,7 +3439,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 72,
+    "number": 74,
     "links": []
   },
   {
@@ -3371,7 +3496,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 73,
+    "number": 75,
     "links": []
   },
   {
@@ -3432,7 +3557,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 74,
+    "number": 76,
     "links": []
   },
   {
@@ -3489,7 +3614,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 75,
+    "number": 77,
     "links": []
   },
   {
@@ -3526,7 +3651,7 @@
       "provenance": "materials/notebook/video-overview-2026-11-08/provenance.json",
       "transcript": "Welcome to today's explainer. We are jumping right into what is easily one of the most fascinating, and honestly most misunderstood, topics in tech right now. How generative AI systems actually process and retain information. Look, we all interact with these tools every single day, but there's a ton of confusion about what's actually happening under the hood. Does the AI learn from every conversation we have with it? Does it secretly keep a giant memory bank of facts? Well, today we're going beyond the prompt to decode the reality of how AI really learns. Here's our roadmap for the explainer today. First, models versus complete applications. Second, training updates the parameters. Third, inference with fixed models. Fourth, retrieval-augmented generation, or RAG, and finally, reliability and limitations. Okay, let's kick things off with a question that gets right to the heart of a massive misconception. If you type in this chapter, X means Y into a prompt. Does the model permanently learn that fact? Does it update its internal weights? Take a second to really think about your answer. You know, a lot of people just assume that because the AI uses that new info in its very next reply, its brain must have been permanently rewired. But as we're going to see, the reality of how these systems hold on to information is totally different from human memory. Before we get into the heavy mechanics, we need to establish a baseline vocabulary. What exactly is the engine driving all of this? At its core, a generative language model is an auto-regressive system. Now, all that fancy term means is that it assigns probabilities to token sequences. It looks at the context it already has and calculates which token, well, which word, part of a word, or even punctuation mark, might logically come next. That is literally it. Repeating that specific calculation over and over again is what builds out a response. It's a probability engine, folks. Not a conscious fact-checker. Models versus complete applications. So there is a hard, absolute boundary we have to draw between the core model itself and the software wrapped around it. The core model simply calculates token probabilities based on context. That's the engine. But the complete application, like the slick chat interfaces we use daily, that adds system instructions, web search capabilities, file retrieval, filters, and managed memory. The fluent human-sounding writing? That comes from the core model. But pulling up a PDF or browsing the web, that entirely belongs to the surrounding application. Training updates the parameters. This definitive line is absolutely crucial when we look at different ways we intervene with the AI. If you want to permanently change the model's core numerical values, you have to actually train or fine-tune it. Just adding a new message in the context window or uploading an external document only changes the information available for that one specific calculation. It does not, in any way, update the permanent weights of the model. So what does actual training look like? It's a highly mechanical, computationally heavy flow. First, massive amounts of text examples are fed into the system. The system tries to predict the next tokens, compares them to the actual text, and calculates its prediction error. Next, these intense optimization algorithms execute physical numerical updates to the parameter values to reduce that aggregate error. The end result is a permanently changed model. The text just supplies the learning signal. The mathematical optimization does the actual rewiring. It's serious heavy lifting, and it's completely separate from you just typing a prompt into a chat box. Inference with fixed models. Now contrast all that heavy lifting with ordinary inference. When you send a prompt, the model is completely frozen. Its parameters do not change. It takes your input, runs calculations based purely on that prompt and its frozen parameters, and creates a probability distribution for the next token. Finally, an output is selected. Keeping the model fixed while changing your input is really just exploring the effective context. You aren't teaching the AI anything permanent. You're just giving it different starting conditions for its math. Let's actually ground this math in reality with a recorded run from a real model, Qwen 2.5. Given the context, the capital of Italy is. The model calculates continuation probabilities. As you can see, the token for Rome gets the highest probability at 44.86%. Located gets 10.35% and so on. Notice that these values are continuation probabilities, not absolute truth scores. The model doesn't know Rome is the capital in the way you or I do. It merely calculated that Rome is the most probable next token based entirely on its fixed parameters and the context you gave it. Retrieval Augmented Generation, or RAG. So if a fixed model can't learn new facts on the fly, how in the world do we get it to answer questions about a brand new document, or today's news? Well, we use RAG. Think of it as an open book test for the AI. You ask a question, and a separate search component goes out and retrieves relevant passages from an external database, like a PDF you just uploaded. Those passages are stuffed right into the context window alongside your question and handed over to the fixed model to read. The model then generates an answer based purely on that newly provided temporary context. Let's make this crystal clear. RAG searches external documents and makes those passages available to the generation context. Crucially, it does not change the model's parameters or weights. Uploading a PDF just updates the available information for that one conversation, not the AI's permanent brain. And remember the limits here. The retrieval part can fail. It can grab completely irrelevant data. Or the model might just misinterpret the material you supplied it entirely. Reliability and Limitations. It is incredibly important to remember what we've unpacked today when you're evaluating AI outputs. A model can easily produce plausible but totally incorrect text, what we call hallucinations. There isn't just one single cause for this. And lowering the model's temperature or creativity settings isn't a magic fix. Think back to that Qwen model predicting Rome. Even when it produces a highly confident token probability, it is still just predicting the next word based on frozen parameters. An 80% probability for a token absolutely does not mean the claim has an 80% chance of being factually true. I want to leave you with this final really important thought from our source material. A link is not automatic proof. If the text does not contain the answer, the student should recognize that limit and seek another appropriate source. Because generative AI is ultimately a probability engine, running fixed parameters on the context it's given. Human verification remains absolutely essential. Fluent writing simply doesn't equal factual accuracy. So the next time you use an AI tool, ask yourself this. Are you trusting the machine's frozen math or the context you actually provided? Thanks so much for joining me for this explainer."
     },
-    "number": 76,
+    "number": 78,
     "links": []
   },
   {
@@ -3586,7 +3711,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 77,
+    "number": 79,
     "links": []
   },
   {
@@ -3646,7 +3771,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 78,
+    "number": 80,
     "links": []
   },
   {
@@ -3703,7 +3828,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 79,
+    "number": 81,
     "links": []
   },
   {
@@ -3760,7 +3885,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 80,
+    "number": 82,
     "links": []
   },
   {
@@ -3806,7 +3931,7 @@
       "alt": "A smiling blonde professor with dark glasses types furiously on her laptop.",
       "fit": "contain"
     },
-    "number": 81,
+    "number": 83,
     "links": []
   },
   {
@@ -3882,7 +4007,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 82,
+    "number": 84,
     "links": []
   },
   {
@@ -3945,7 +4070,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 83,
+    "number": 85,
     "links": []
   },
   {
@@ -4029,7 +4154,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 84,
+    "number": 86,
     "links": []
   },
   {
@@ -4078,7 +4203,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 85,
+    "number": 87,
     "links": []
   },
   {
@@ -4105,7 +4230,7 @@
       "alt": "Andrea smiles, gives a thumbs-up with one hand and holds a sheet marked 30 e lode in the other.",
       "type": "image"
     },
-    "number": 86
+    "number": 88
   },
   {
     "id": "S99",
@@ -4227,7 +4352,7 @@
         "shortTitle": "Cognitive accessibility guidance"
       }
     ],
-    "number": 87,
+    "number": 89,
     "links": []
   }
 ]

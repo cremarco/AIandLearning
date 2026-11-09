@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI Foundations: Training, Inference & Context</title>
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-color: #e2e8f0;
+      --brand-primary: #0284c7;
+      --brand-hover: #0369a1;
+      --brand-light: #e0effe;
+      --success-bg: #f0fdf4;
+      --success-border: #22c55e;
+      --success-text: #15803d;
+      --error-bg: #fef2f2;
+      --error-border: #ef4444;
+      --error-text: #b91c1c;
+      --hint-bg: #fffbe6;
+      --hint-border: #f59e0b;
+      --hint-text: #78350f;
+      --exp-bg: #f0f7ff;
+      --exp-border: #3b82f6;
+      --exp-text: #1e40af;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 24px 16px;
+    }
+
+    .app-container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-title h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .header-title p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      background-color: var(--brand-light);
+      color: var(--brand-primary);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Progress Card */
+    .progress-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .progress-header h2 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .score-counter {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 10px;
+      background-color: #e2e8f0;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background-color: var(--brand-primary);
+      transition: width 0.4s ease;
+    }
+
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Controls */
+    button {
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s, opacity 0.2s;
+    }
+
+    .btn-primary {
+      background-color: var(--brand-primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--brand-hover);
+    }
+
+    .btn-secondary {
+      background-color: #f1f5f9;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: #e2e8f0;
+    }
+
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+
+    /* Question Cards */
+    .question-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .question-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background-color: #f1f5f9;
+      color: var(--text-main);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .question-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .status-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background-color: #f1f5f9;
+      color: var(--text-muted);
+    }
+
+    .status-tag.correct {
+      background-color: #dcfce7;
+      color: var(--success-text);
+    }
+
+    .status-tag.incorrect {
+      background-color: #fee2e2;
+      color: var(--error-text);
+    }
+
+    /* Sentence & Inline Inputs */
+    .sentence-box {
+      background-color: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .blank-input {
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border: 2px solid #cbd5e1;
+      border-radius: 6px;
+      background-color: #ffffff;
+      color: var(--text-main);
+      width: 140px;
+      text-align: center;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .blank-input:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .blank-input.correct {
+      border-color: var(--success-border);
+      background-color: var(--success-bg);
+      color: var(--success-text);
+    }
+
+    .blank-input.incorrect {
+      border-color: var(--error-border);
+      background-color: var(--error-bg);
+      color: var(--error-text);
+    }
+
+    /* Toggleable Callouts */
+    .callout {
+      display: none;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .callout-hint {
+      background-color: var(--hint-bg);
+      border-left: 4px solid var(--hint-border);
+      color: var(--hint-text);
+    }
+
+    .callout-exp {
+      background-color: var(--exp-bg);
+      border-left: 4px solid var(--exp-border);
+      color: var(--exp-text);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* Success Banner */
+    .celebration-banner {
+      display: none;
+      background-color: #dcfce7;
+      border: 1px solid #86efac;
+      color: #14532d;
+      padding: 16px;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .celebration-banner h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    /* Comparison Table Card */
+    .table-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      margin-top: 28px;
+    }
+
+    .table-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    .tag-yes {
+      display: inline-block;
+      padding: 2px 6px;
+      background-color: #dcfce7;
+      color: #15803d;
+      font-weight: 700;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+
+    .tag-no {
+      display: inline-block;
+      padding: 2px 6px;
+      background-color: #fee2e2;
+      color: #b91c1c;
+      font-weight: 700;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- App Header -->
+    <header>
+      <div class="header-title">
+        <h1>Foundations of Generative AI</h1>
+        <p>Chapter 01 Practice: Training, Inference & Context</p>
+      </div>
+      <span class="badge">Interactive</span>
+    </header>
+
+    <!-- Success Banner -->
+    <div id="celebrationBanner" class="celebration-banner">
+      <h3>🎉 Perfect Score! All 3 Items Correct</h3>
+      <p>You have mastered the distinctions between training parameters, fixed inference, and prompt context grounded in Chapter 01!</p>
+    </div>
+
+    <!-- Progress Card -->
+    <div class="progress-card">
+      <div class="progress-header">
+        <h2>Knowledge Progress</h2>
+        <div class="score-counter" id="scoreDisplay">0 / 3</div>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+      <div class="action-bar">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Fill in the missing technical terms from the textbook reading.</span>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn-primary" onclick="checkAllItems()">Check Answers</button>
+          <button class="btn-secondary" onclick="resetActivity()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="question-card">
+      <div class="question-header">
+        <div>
+          <span class="question-num">1</span>
+          <span class="question-title">Model Training & Learning Signal</span>
+        </div>
+        <span class="status-tag" id="status-1">Pending</span>
+      </div>
+      <div class="sentence-box">
+        During pretraining or fine-tuning, the optimization process compares predicted outputs against training examples and changes the model's 
+        <input type="text" id="input-1" class="blank-input" placeholder="blank 1" onkeydown="handleEnter(event, 1)">
+        to reduce aggregate prediction error.
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn-secondary btn-sm" onclick="checkItem(1)">Check</button>
+        <button class="btn-secondary btn-sm" onclick="toggleCallout('hint-1')">Toggle Hint</button>
+        <button class="btn-secondary btn-sm" onclick="toggleCallout('exp-1')">Toggle Explanation</button>
+      </div>
+      <div id="hint-1" class="callout callout-hint">
+        <div class="callout-title">Hint (Section 1.2):</div>
+        Refers to the learned numerical values stored in the model's transformations that are updated during pretraining to minimize error.
+      </div>
+      <div id="exp-1" class="callout callout-exp">
+        <div class="callout-title">Explanatory Grounding Note (Section 1.2 & Glossary):</div>
+        <em>"Parameters are numerical values used in the model's transformations. During pretraining, the system compares its predicted distribution with the tokens actually present in examples, then changes the parameters to reduce an aggregate error."</em>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card">
+      <div class="question-header">
+        <div>
+          <span class="question-num">2</span>
+          <span class="question-title">Model Execution & Fixed State</span>
+        </div>
+        <span class="status-tag" id="status-2">Pending</span>
+      </div>
+      <div class="sentence-box">
+        Ordinary 
+        <input type="text" id="input-2" class="blank-input" placeholder="blank 2" onkeydown="handleEnter(event, 2)">
+        runs token generation calculations with parameters that are already available, keeping the model fixed while processing input.
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn-secondary btn-sm" onclick="checkItem(2)">Check</button>
+        <button class="btn-secondary btn-sm" onclick="toggleCallout('hint-2')">Toggle Hint</button>
+        <button class="btn-secondary btn-sm" onclick="toggleCallout('exp-2')">Toggle Explanation</button>
+      </div>
+      <div id="hint-2" class="callout callout-hint">
+        <div class="callout-title">Hint (Section 1.2 & Figure 1):</div>
+        The technical term for executing a trained model to calculate output probabilities for a given input without updating weights.
+      </div>
+      <div id="exp-2" class="callout callout-exp">
+        <div class="callout-title">Explanatory Grounding Note (Section 1.2):</div>
+        <em>"Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context. Training a new version changes the model itself."</em>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card">
+      <div class="question-header">
+        <div>
+          <span class="question-num">3</span>
+          <span class="question-title">Prompts, Documents & Scope of Information</span>
+        </div>
+        <span class="status-tag" id="status-3">Pending</span>
+      </div>
+      <div class="sentence-box">
+        Inserting a definition in a prompt or retrieving passages via RAG changes the information available in 
+        <input type="text" id="input-3" class="blank-input" placeholder="blank 3" onkeydown="handleEnter(event, 3)">
+        for that execution step, but does not update the model's weights.
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn-secondary btn-sm" onclick="checkItem(3)">Check</button>
+        <button class="btn-secondary btn-sm" onclick="toggleCallout('hint-3')">Toggle Hint</button>
+        <button class="btn-secondary btn-sm" onclick="toggleCallout('exp-3')">Toggle Explanation</button>
+      </div>
+      <div id="hint-3" class="callout callout-hint">
+        <div class="callout-title">Hint (Section 1.2 & 1.7):</div>
+        The sequence of tokens or passages made available to the current inference execution step.
+      </div>
+      <div id="exp-3" class="callout callout-exp">
+        <div class="callout-title">Explanatory Grounding Note (Section 1.2 & Assessment B):</div>
+        <em>"This information may influence the answer through the conversation context. That does not mean the application updates the model's weights after every message... Uploading material or defining terms in context does not automatically update parameters."</em>
+      </div>
+    </div>
+
+    <!-- Reference Table -->
+    <div class="table-card">
+      <h3>Summary of Interventions (Table 1 from Chapter 01)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Intervention</th>
+            <th>What Changes?</th>
+            <th>Changes Weights?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Training or Fine-Tuning</strong></td>
+            <td>The model's internal <strong>parameters</strong></td>
+            <td><span class="tag-yes">YES</span></td>
+          </tr>
+          <tr>
+            <td><strong>New Message in Prompt</strong></td>
+            <td>Information available to current <strong>inference</strong></td>
+            <td><span class="tag-no">NO</span></td>
+          </tr>
+          <tr>
+            <td><strong>Document Retrieval (RAG)</strong></td>
+            <td>External passages supplied into <strong>context</strong></td>
+            <td><span class="tag-no">NO</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script>
+    const answerKeys = {
+      1: ["parameters", "parameter", "weights", "weight"],
+      2: ["inference", "inferencing"],
+      3: ["context", "prompt context", "conversation context"]
+    };
+
+    const itemStatus = { 1: false, 2: false, 3: false };
+
+    function checkItem(id) {
+      const inputEl = document.getElementById(`input-${id}`);
+      const statusEl = document.getElementById(`status-${id}`);
+      const expEl = document.getElementById(`exp-${id}`);
+      const val = inputEl.value.trim().toLowerCase();
+
+      if (!val) return;
+
+      if (answerKeys[id].includes(val)) {
+        itemStatus[id] = true;
+        inputEl.className = "blank-input correct";
+        statusEl.className = "status-tag correct";
+        statusEl.textContent = "Correct";
+        expEl.style.display = "block";
+      } else {
+        itemStatus[id] = false;
+        inputEl.className = "blank-input incorrect";
+        statusEl.className = "status-tag incorrect";
+        statusEl.textContent = "Incorrect";
+      }
+
+      updateProgress();
+    }
+
+    function checkAllItems() {
+      [1, 2, 3].forEach(id => checkItem(id));
+    }
+
+    function handleEnter(event, id) {
+      if (event.key === 'Enter') {
+        checkItem(id);
+      }
+    }
+
+    function toggleCallout(elementId) {
+      const el = document.getElementById(elementId);
+      if (el.style.display === "block") {
+        el.style.display = "none";
+      } else {
+        el.style.display = "block";
+      }
+    }
+
+    function updateProgress() {
+      const correctCount = Object.values(itemStatus).filter(Boolean).length;
+      document.getElementById('scoreDisplay').textContent = `${correctCount} / 3`;
+      const percentage = (correctCount / 3) * 100;
+      document.getElementById('progressBar').style.width = `${percentage}%`;
+
+      const banner = document.getElementById('celebrationBanner');
+      if (correctCount === 3) {
+        banner.style.display = "block";
+      } else {
+        banner.style.display = "none";
+      }
+    }
+
+    function resetActivity() {
+      [1, 2, 3].forEach(id => {
+        itemStatus[id] = false;
+        const inputEl = document.getElementById(`input-${id}`);
+        inputEl.value = "";
+        inputEl.className = "blank-input";
+
+        const statusEl = document.getElementById(`status-${id}`);
+        statusEl.className = "status-tag";
+        statusEl.textContent = "Pending";
+
+        document.getElementById(`hint-${id}`).style.display = "none";
+        document.getElementById(`exp-${id}`).style.display = "none";
+      });
+
+      updateProgress();
+    }
+  </script>
+</body>
+</html>

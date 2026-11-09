@@ -109,7 +109,7 @@ export type Slide = {
   promptLabel?: string
   promptStyle?: 'terminal' | 'chat'
   videoLayout?: 'focus' | 'prompt'
-  comparison?: { label: string; text: string; audience?: Audience }[]
+  comparison?: { label: string; text: string; audience?: Audience; icon?: string }[]
   steps?: { title: string; text: string }[]
   activityTimer?: { minutes: number; id: string }
   result?: string

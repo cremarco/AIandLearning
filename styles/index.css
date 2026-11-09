@@ -16,13 +16,13 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
   width: 100%; height: 100%; padding: var(--deck-inset-top) var(--deck-inset-inline) var(--deck-inset-bottom);
   overflow: hidden; position: relative; isolation: isolate;
   color: var(--deck-ink); background: var(--deck-paper); font-family: var(--deck-font);
-  font-size: var(--deck-text-body); line-height: 1.3; letter-spacing: -.012em; -webkit-font-smoothing: antialiased;
+  font-size: var(--deck-text-body); line-height: 1.35; letter-spacing: -.005em; -webkit-font-smoothing: antialiased;
 }
 .slidev-layout .deck-slide :where(h1,h2,h3,p,figure,blockquote) { margin: 0; }
-.slidev-layout .deck-slide h1 { max-width: 1120px; font-size: 48px; line-height: 1.06; font-weight: 720; letter-spacing: -.035em; text-wrap: balance; }
-.slidev-layout .deck-slide h2 { font-size: 32px; line-height: 1.12; font-weight: 680; letter-spacing: -.025em; }
+.slidev-layout .deck-slide h1 { max-width: 1120px; font-size: var(--deck-text-heading); line-height: 1.08; font-weight: 720; letter-spacing: -.03em; text-wrap: balance; }
+.slidev-layout .deck-slide h2 { font-size: var(--deck-text-subheading); line-height: 1.15; font-weight: 680; letter-spacing: -.02em; }
 .slidev-layout .deck-slide h3 { font-size: 26px; line-height: 1.15; font-weight: 670; }
-.slidev-layout .deck-slide p { line-height: 1.3; }
+.slidev-layout .deck-slide p { line-height: 1.35; text-wrap:pretty; }
 .slidev-layout .deck-slide strong { font-weight: 700; }
 .deck-slide {
   --reading-emphasis: var(--deck-emphasis);

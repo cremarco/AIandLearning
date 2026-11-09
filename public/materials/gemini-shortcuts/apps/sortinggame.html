@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-900 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Operations Sorting Widget: Training vs. Inference</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .draggable-item {
+      touch-action: none;
+      user-select: none;
+    }
+    .drop-zone.drag-over {
+      border-color: #60a5fa !important;
+      background-color: rgba(59, 130, 246, 0.15) !important;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.8);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="h-full font-sans antialiased bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Header Banner -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <i class="fa-solid fa-layer-group text-white text-lg"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+            LLM Operations Classifier
+            <span class="text-xs font-normal px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Chapter 01</span>
+          </h1>
+          <p class="text-xs text-slate-400">Classify parameter updates, fixed-model calculations, and prompt context</p>
+        </div>
+      </div>
+
+      <!-- Navigation / Tabs -->
+      <div class="flex items-center space-x-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700/60 text-xs sm:text-sm">
+        <button id="tab-game" onclick="switchTab('game')" class="px-3 py-1.5 rounded-lg font-medium transition-all bg-blue-600 text-white shadow-sm">
+          <i class="fa-solid fa-gamepad mr-1.5"></i> Sorting Challenge
+        </button>
+        <button id="tab-diagram" onclick="switchTab('diagram')" class="px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200">
+          <i class="fa-solid fa-sitemap mr-1.5"></i> Chapter Dataflow
+        </button>
+        <button id="tab-glossary" onclick="switchTab('glossary')" class="px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200">
+          <i class="fa-solid fa-book mr-1.5"></i> References & Proof
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6">
+
+    <!-- VIEW 1: SORTING GAME VIEW -->
+    <section id="view-game" class="flex flex-col gap-6">
+      
+      <!-- Instructions & Status bar -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2 text-sm font-semibold text-blue-400 uppercase tracking-wider">
+            <i class="fa-solid fa-circle-info"></i> Interactive Task
+          </div>
+          <p class="text-sm text-slate-300">
+            Drag each of the 3 operation cards below (or click target buttons) into either <span class="text-emerald-400 font-semibold">Training</span> or <span class="text-purple-400 font-semibold">Inference</span> based on Chapter 01.
+          </p>
+        </div>
+        
+        <div class="flex items-center gap-3 self-end md:self-auto">
+          <button onclick="resetGame()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition border border-slate-700 flex items-center gap-1.5">
+            <i class="fa-solid fa-rotate-right"></i> Reset
+          </button>
+          <button onclick="checkAnswers()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold transition shadow-lg shadow-blue-600/30 flex items-center gap-2">
+            <i class="fa-solid fa-circle-check"></i> Check Answers
+          </button>
+        </div>
+      </div>
+
+      <!-- Item Pool (Unsorted items) -->
+      <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 shadow-inner">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-box-archive text-blue-400"></i> Items to Classify (<span id="unassigned-count">3</span> Remaining)
+          </h2>
+          <span class="text-xs text-slate-500">Drag or use target buttons</span>
+        </div>
+        
+        <div id="pool-zone" class="grid grid-cols-1 md:grid-cols-3 gap-4 min-h-[110px] items-stretch">
+          <!-- Item Cards rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Sorting Buckets Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- BUCKET 1: TRAINING -->
+        <div class="flex flex-col bg-slate-900 border-2 border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg">
+          <div class="bg-gradient-to-r from-emerald-950/80 to-slate-900 p-4 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                <i class="fa-solid fa-sliders"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base">Training / Fine-Tuning</h3>
+                <p class="text-xs text-emerald-400/80">Modifies model weights & parameters</p>
+              </div>
+            </div>
+            <span id="badge-training" class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 font-medium">0 items</span>
+          </div>
+
+          <div id="bucket-training" 
+               ondragover="allowDrop(event)" 
+               ondragleave="dragLeave(event)" 
+               ondrop="dropItem(event, 'training')" 
+               class="drop-zone flex-1 p-4 min-h-[180px] flex flex-col gap-3 transition-colors duration-200">
+            <!-- Items dropped here -->
+          </div>
+          <div class="p-3 bg-slate-950/40 border-t border-slate-800/60 text-xs text-slate-400 flex items-center gap-2">
+            <i class="fa-solid fa-lightbulb text-amber-400/80"></i>
+            <span>Chapter Signal: <em>"Training or fine-tuning changes the model's parameters."</em></span>
+          </div>
+        </div>
+
+        <!-- BUCKET 2: INFERENCE -->
+        <div class="flex flex-col bg-slate-900 border-2 border-slate-800 hover:border-purple-500/40 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg">
+          <div class="bg-gradient-to-r from-purple-950/80 to-slate-900 p-4 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base">Inference & RAG</h3>
+                <p class="text-xs text-purple-400/80">Uses fixed, existing model parameters</p>
+              </div>
+            </div>
+            <span id="badge-inference" class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 font-medium">0 items</span>
+          </div>
+
+          <div id="bucket-inference" 
+               ondragover="allowDrop(event)" 
+               ondragleave="dragLeave(event)" 
+               ondrop="dropItem(event, 'inference')" 
+               class="drop-zone flex-1 p-4 min-h-[180px] flex flex-col gap-3 transition-colors duration-200">
+            <!-- Items dropped here -->
+          </div>
+          <div class="p-3 bg-slate-950/40 border-t border-slate-800/60 text-xs text-slate-400 flex items-center gap-2">
+            <i class="fa-solid fa-lightbulb text-amber-400/80"></i>
+            <span>Chapter Signal: <em>"Ordinary inference runs calculations with parameters that are already available."</em></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feedback & Results Section (Hidden until Checked) -->
+      <div id="results-panel" class="hidden flex-col gap-4 bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl transition-all">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div class="flex items-center gap-3">
+            <div id="score-icon" class="w-10 h-10 rounded-xl flex items-center justify-center text-xl font-bold"></div>
+            <div>
+              <h3 id="score-title" class="text-lg font-bold text-white">Verification Results</h3>
+              <p id="score-subtitle" class="text-xs text-slate-400"></p>
+            </div>
+          </div>
+          <span id="score-badge" class="px-3 py-1 rounded-full text-xs font-bold"></span>
+        </div>
+
+        <div id="explanations-list" class="space-y-4">
+          <!-- Item by Item Breakdown inserted dynamically -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 2: CHAPTER DATAFLOW DIAGRAM -->
+    <section id="view-diagram" class="hidden flex-col gap-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
+        <div>
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-diagram-project text-blue-400"></i> Figure 1: Training vs. Inference vs. RAG Dataflow
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            As detailed in Section 1.2 & Figure 1 of Chapter 01, notice where parameter updates occur versus where fixed-model calculations occur.
+          </p>
+        </div>
+
+        <!-- 3 Flow Comparison Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Column 1: Training -->
+          <div class="bg-slate-950/60 border border-emerald-500/30 rounded-xl p-4 flex flex-col items-center text-center gap-3">
+            <div class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              Training
+            </div>
+            
+            <div class="w-full space-y-2 text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200">Examples</div>
+              <i class="fa-solid fa-arrow-down text-emerald-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200">Prediction error</div>
+              <i class="fa-solid fa-arrow-down text-emerald-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-bold shadow-lg shadow-emerald-500/10">
+                Parameter updates
+              </div>
+              <i class="fa-solid fa-arrow-down text-emerald-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200 font-semibold text-emerald-400">Changed model</div>
+            </div>
+
+            <p class="text-[11px] text-slate-400 mt-2 border-t border-slate-800 pt-2">
+              Updates weights ($\theta$) to reduce aggregate loss. Modifies model baseline capabilities.
+            </p>
+          </div>
+
+          <!-- Column 2: Inference -->
+          <div class="bg-slate-950/60 border border-blue-500/30 rounded-xl p-4 flex flex-col items-center text-center gap-3">
+            <div class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider">
+              Inference
+            </div>
+            
+            <div class="w-full space-y-2 text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200">Input + fixed model</div>
+              <i class="fa-solid fa-arrow-down text-blue-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-blue-500/20 border border-blue-500/40 text-blue-300 font-bold shadow-lg shadow-blue-500/10">
+                Fixed-model calculations
+              </div>
+              <i class="fa-solid fa-arrow-down text-blue-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200">Output distribution</div>
+              <i class="fa-solid fa-arrow-down text-blue-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200 font-semibold text-blue-400">Selected output</div>
+            </div>
+
+            <p class="text-[11px] text-slate-400 mt-2 border-t border-slate-800 pt-2">
+              Parameters remain completely fixed. Input vector passes through static Transformer decoder blocks.
+            </p>
+          </div>
+
+          <!-- Column 3: RAG -->
+          <div class="bg-slate-950/60 border border-purple-500/30 rounded-xl p-4 flex flex-col items-center text-center gap-3">
+            <div class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">
+              RAG / Context
+            </div>
+            
+            <div class="w-full space-y-2 text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200">Question</div>
+              <i class="fa-solid fa-arrow-down text-purple-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200">Retrieved passages</div>
+              <i class="fa-solid fa-arrow-down text-purple-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-purple-500/20 border border-purple-500/40 text-purple-300 font-bold shadow-lg shadow-purple-500/10">
+                Context + fixed model
+              </div>
+              <i class="fa-solid fa-arrow-down text-purple-500 text-xs"></i>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-200 font-semibold text-purple-400">Generated answer</div>
+            </div>
+
+            <p class="text-[11px] text-slate-400 mt-2 border-t border-slate-800 pt-2">
+              Adding context modifies only available input information for the current inference step. No parameter changes occur.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIEW 3: CHAPTER PROOF & GLOSSARY -->
+    <section id="view-glossary" class="hidden flex-col gap-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
+        <div>
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-quote-left text-blue-400"></i> Evidence & Theoretical Foundation
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            Exact citations and explanations from Chapter 01 ("Foundations of Generative Artificial Intelligence" by Marco Cremaschi).
+          </p>
+        </div>
+
+        <div class="space-y-4 text-sm">
+          <!-- Citation 1 -->
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Item 1: Parameter Updates</span>
+              <span class="text-xs text-slate-500">Section 1.2, Page 5</span>
+            </div>
+            <blockquote class="italic text-slate-300 border-l-2 border-emerald-500 pl-3">
+              "Parameters are numerical values used in the model's transformations... While pretraining, the system compares its predicted distribution with the tokens actually present in examples, then changes the parameters to reduce an aggregate error."
+            </blockquote>
+            <p class="text-xs text-slate-400">
+              <strong>Takeaway:</strong> Any intervention that alters model weights is part of training or fine-tuning.
+            </p>
+          </div>
+
+          <!-- Citation 2 -->
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Item 2: Fixed-Model Calculations</span>
+              <span class="text-xs text-slate-500">Section 1.2 & Glossary, Page 5 & 18</span>
+            </div>
+            <blockquote class="italic text-slate-300 border-l-2 border-blue-500 pl-3">
+              "Ordinary inference runs calculations with parameters that are already available. Keeping the model fixed while changing the input studies the effect of context."
+            </blockquote>
+            <p class="text-xs text-slate-400">
+              <strong>Takeaway:</strong> Standard generation uses fixed parameters to compute next-token output distributions without modifying weights.
+            </p>
+          </div>
+
+          <!-- Citation 3 -->
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">Item 3: Adding Prompt Context</span>
+              <span class="text-xs text-slate-500">Section 1.2, Table 1 & Study Resource B</span>
+            </div>
+            <blockquote class="italic text-slate-300 border-l-2 border-purple-500 pl-3">
+              "A new message in the context... changes information available to the current inference... Does uploading the chapter automatically update model weights? No. Making material available to context or retrieval does not itself update parameters."
+            </blockquote>
+            <p class="text-xs text-slate-400">
+              <strong>Takeaway:</strong> Prompt engineering, system instructions, and RAG affect context for inference, not model parameters.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-4 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-500">
+      Based on <em>Foundations of Generative AI</em> (Chapter 01: Language Models and Basic Architecture) by Marco Cremaschi.
+    </div>
+  </footer>
+
+  <!-- Inline Script for Game Engine -->
+  <script>
+    // Data definition strictly based on Chapter 01
+    const itemsData = [
+      {
+        id: 'item-1',
+        title: 'Parameter updates',
+        subtitle: 'Updating numerical weights via optimization to reduce prediction error',
+        target: 'training',
+        chapterRef: 'Section 1.2 & Table 1 (Page 5)',
+        icon: 'fa-pen-ruler',
+        badgeColor: 'emerald',
+        explanation: 'Training and fine-tuning compare predicted output distributions against targets and alter numerical parameters (weights) to reduce prediction error. This changes the model itself.'
+      },
+      {
+        id: 'item-2',
+        title: 'Fixed-model calculations',
+        subtitle: 'Evaluating token probabilities using already available, unchanged parameters',
+        target: 'inference',
+        chapterRef: 'Section 1.2 & Figure 1 (Pages 5-6)',
+        icon: 'fa-gears',
+        badgeColor: 'blue',
+        explanation: 'Ordinary inference executes Transformer decoder calculations with fixed, available parameters. It transforms inputs into output probability distributions without altering weights.'
+      },
+      {
+        id: 'item-3',
+        title: 'Adding prompt context',
+        subtitle: 'Including instructions, conversation history, or RAG passages in the input',
+        target: 'inference',
+        chapterRef: 'Section 1.2, Table 1 & Study Resource B (Pages 5 & 19)',
+        icon: 'fa-message',
+        badgeColor: 'purple',
+        explanation: 'Adding context or document passages modifies the information available for the current inference pass. As explicitly stated in Study Resource B, uploading text or inserting prompt context does NOT update model parameters.'
+      }
+    ];
+
+    // State
+    let userAssignments = {
+      'item-1': null, // 'training' | 'inference'
+      'item-2': null,
+      'item-3': null
+    };
+
+    let draggedItemId = null;
+
+    // DOM Ready Initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGame();
+    });
+
+    function renderGame() {
+      const poolZone = document.getElementById('pool-zone');
+      const bucketTraining = document.getElementById('bucket-training');
+      const bucketInference = document.getElementById('bucket-inference');
+
+      poolZone.innerHTML = '';
+      bucketTraining.innerHTML = '';
+      bucketInference.innerHTML = '';
+
+      let unassignedCount = 0;
+      let countTraining = 0;
+      let countInference = 0;
+
+      itemsData.forEach(item => {
+        const assigned = userAssignments[item.id];
+        const cardElem = createItemCard(item);
+
+        if (!assigned) {
+          poolZone.appendChild(cardElem);
+          unassignedCount++;
+        } else if (assigned === 'training') {
+          bucketTraining.appendChild(cardElem);
+          countTraining++;
+        } else if (assigned === 'inference') {
+          bucketInference.appendChild(cardElem);
+          countInference++;
+        }
+      });
+
+      // Update counters & placeholders
+      document.getElementById('unassigned-count').innerText = unassignedCount;
+      document.getElementById('badge-training').innerText = `${countTraining} item${countTraining !== 1 ? 's' : ''}`;
+      document.getElementById('badge-inference').innerText = `${countInference} item${countInference !== 1 ? 's' : ''}`;
+
+      if (unassignedCount === 0 && poolZone.children.length === 0) {
+        poolZone.innerHTML = `
+          <div class="col-span-full py-4 text-center text-slate-500 text-xs italic flex items-center justify-center gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-500"></i> All items have been assigned! Click "Check Answers" above.
+          </div>
+        `;
+      }
+
+      if (countTraining === 0) {
+        bucketTraining.innerHTML = `
+          <div class="h-full border-2 border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center text-slate-600 p-6 text-xs gap-2">
+            <i class="fa-solid fa-arrow-down text-base opacity-40"></i>
+            <span>Drag items here for <strong>Training</strong></span>
+          </div>
+        `;
+      }
+
+      if (countInference === 0) {
+        bucketInference.innerHTML = `
+          <div class="h-full border-2 border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center text-slate-600 p-6 text-xs gap-2">
+            <i class="fa-solid fa-arrow-down text-base opacity-40"></i>
+            <span>Drag items here for <strong>Inference</strong></span>
+          </div>
+        `;
+      }
+    }
+
+    function createItemCard(item) {
+      const assigned = userAssignments[item.id];
+      const card = document.createElement('div');
+      card.id = `card-${item.id}`;
+      card.className = `draggable-item bg-slate-800/90 border border-slate-700 hover:border-slate-500 rounded-xl p-3.5 shadow-md transition-all cursor-grab active:cursor-grabbing flex flex-col justify-between gap-3 group`;
+      card.draggable = true;
+
+      // Drag Events
+      card.ondragstart = (e) => {
+        draggedItemId = item.id;
+        e.dataTransfer.setData('text/plain', item.id);
+        card.classList.add('opacity-50', 'scale-95');
+      };
+
+      card.ondragend = () => {
+        card.classList.remove('opacity-50', 'scale-95');
+        draggedItemId = null;
+      };
+
+      card.innerHTML = `
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-7 h-7 rounded-lg bg-slate-700 text-slate-300 flex items-center justify-center text-xs group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <i class="fa-solid ${item.icon}"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm leading-tight">${item.title}</h4>
+              <p class="text-[11px] text-slate-400 line-clamp-2 mt-0.5">${item.subtitle}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-2 border-t border-slate-700/60 text-xs">
+          <span class="text-[10px] text-slate-500 font-mono">${item.chapterRef}</span>
+          
+          <div class="flex items-center space-x-1">
+            ${assigned ? `
+              <button onclick="assignItem('${item.id}', null)" class="px-2 py-1 rounded bg-slate-700 hover:bg-slate-600 text-slate-300 text-[10px] font-medium transition">
+                <i class="fa-solid fa-rotate-left mr-1"></i> Unassign
+              </button>
+            ` : `
+              <button onclick="assignItem('${item.id}', 'training')" class="px-2 py-1 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold transition">
+                + Training
+              </button>
+              <button onclick="assignItem('${item.id}', 'inference')" class="px-2 py-1 rounded bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 border border-purple-500/30 text-[10px] font-semibold transition">
+                + Inference
+              </button>
+            `}
+          </div>
+        </div>
+      `;
+
+      return card;
+    }
+
+    // Drag & Drop handlers
+    function allowDrop(e) {
+      e.preventDefault();
+      e.currentTarget.classList.add('drag-over');
+    }
+
+    function dragLeave(e) {
+      e.currentTarget.classList.remove('drag-over');
+    }
+
+    function dropItem(e, bucketName) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('drag-over');
+      const itemId = e.dataTransfer.getData('text/plain') || draggedItemId;
+      if (itemId) {
+        assignItem(itemId, bucketName);
+      }
+    }
+
+    function assignItem(itemId, bucketName) {
+      userAssignments[itemId] = bucketName;
+      // Hide results when changing selection
+      document.getElementById('results-panel').classList.add('hidden');
+      renderGame();
+    }
+
+    function resetGame() {
+      userAssignments = {
+        'item-1': null,
+        'item-2': null,
+        'item-3': null
+      };
+      document.getElementById('results-panel').classList.add('hidden');
+      renderGame();
+    }
+
+    function checkAnswers() {
+      const resultsPanel = document.getElementById('results-panel');
+      const listElem = document.getElementById('explanations-list');
+      listElem.innerHTML = '';
+
+      let score = 0;
+      let total = itemsData.length;
+      let unassignedFound = false;
+
+      itemsData.forEach(item => {
+        const assigned = userAssignments[item.id];
+        if (!assigned) {
+          unassignedFound = true;
+        } else if (assigned === item.target) {
+          score++;
+        }
+      });
+
+      if (unassignedFound) {
+        // Show inline feedback requesting completion
+        resultsPanel.className = 'flex flex-col gap-4 bg-amber-950/40 border border-amber-500/40 rounded-2xl p-6 shadow-2xl';
+        document.getElementById('score-icon').className = 'w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center';
+        document.getElementById('score-icon').innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+        document.getElementById('score-title').innerText = 'Incomplete Sorting';
+        document.getElementById('score-subtitle').innerText = 'Please place all 3 items into a category before checking.';
+        document.getElementById('score-badge').className = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30';
+        document.getElementById('score-badge').innerText = 'Action Required';
+        resultsPanel.classList.remove('hidden');
+        return;
+      }
+
+      const allCorrect = score === total;
+
+      // Header summary
+      if (allCorrect) {
+        resultsPanel.className = 'flex flex-col gap-4 bg-emerald-950/30 border border-emerald-500/40 rounded-2xl p-6 shadow-2xl';
+        document.getElementById('score-icon').className = 'w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center';
+        document.getElementById('score-icon').innerHTML = '<i class="fa-solid fa-trophy"></i>';
+        document.getElementById('score-title').innerText = 'Perfect Classification!';
+        document.getElementById('score-subtitle').innerText = `You correctly sorted ${score} out of ${total} LLM operations according to Chapter 01.`;
+        document.getElementById('score-badge').className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+        document.getElementById('score-badge').innerText = '100% Correct';
+      } else {
+        resultsPanel.className = 'flex flex-col gap-4 bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl';
+        document.getElementById('score-icon').className = 'w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center';
+        document.getElementById('score-icon').innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+        document.getElementById('score-title').innerText = 'Review & Learn';
+        document.getElementById('score-subtitle').innerText = `You scored ${score} out of ${total}. Review the detailed explanations below.`;
+        document.getElementById('score-badge').className = 'px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30';
+        document.getElementById('score-badge').innerText = `${score}/${total} Score`;
+      }
+
+      // Detailed breakdown cards
+      itemsData.forEach(item => {
+        const userChoice = userAssignments[item.id];
+        const isCorrect = userChoice === item.target;
+
+        const card = document.createElement('div');
+        card.className = `p-4 rounded-xl border ${isCorrect ? 'bg-emerald-950/20 border-emerald-500/30' : 'bg-red-950/20 border-red-500/30'} space-y-2`;
+        
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid ${isCorrect ? 'fa-circle-check text-emerald-400' : 'fa-circle-xmark text-red-400'} text-base"></i>
+              <h4 class="font-bold text-white text-sm">${item.title}</h4>
+            </div>
+            <div class="flex items-center gap-2 text-xs">
+              <span class="text-slate-400">Your choice: <strong class="capitalize ${isCorrect ? 'text-emerald-400' : 'text-red-400'}">${userChoice}</strong></span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px] font-mono">${item.chapterRef}</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">${item.explanation}</p>
+        `;
+
+        listElem.appendChild(card);
+      });
+
+      resultsPanel.classList.remove('hidden');
+      resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Navigation Tabs Switcher
+    function switchTab(tabId) {
+      document.getElementById('view-game').classList.add('hidden');
+      document.getElementById('view-diagram').classList.add('hidden');
+      document.getElementById('view-glossary').classList.add('hidden');
+
+      document.getElementById('tab-game').className = 'px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200';
+      document.getElementById('tab-diagram').className = 'px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200';
+      document.getElementById('tab-glossary').className = 'px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200';
+
+      if (tabId === 'game') {
+        document.getElementById('view-game').classList.remove('hidden');
+        document.getElementById('tab-game').className = 'px-3 py-1.5 rounded-lg font-medium transition-all bg-blue-600 text-white shadow-sm';
+      } else if (tabId === 'diagram') {
+        document.getElementById('view-diagram').classList.remove('hidden');
+        document.getElementById('tab-diagram').className = 'px-3 py-1.5 rounded-lg font-medium transition-all bg-blue-600 text-white shadow-sm';
+      } else if (tabId === 'glossary') {
+        document.getElementById('view-glossary').classList.remove('hidden');
+        document.getElementById('tab-glossary').className = 'px-3 py-1.5 rounded-lg font-medium transition-all bg-blue-600 text-white shadow-sm';
+      }
+    }
+  </script>
+</body>
+</html>

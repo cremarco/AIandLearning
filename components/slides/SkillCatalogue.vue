@@ -49,7 +49,7 @@ useSelectionMotion(detail, () => selected.value?.id)
 .slidev-layout .skill-menu li { padding:0; margin:0; }
 .slidev-layout .skill-menu button { min-height:48px; padding:9px 12px; border-radius:6px; line-height:1.2; overflow-wrap:anywhere; color:var(--deck-ink); transition:color var(--deck-motion-feedback) var(--deck-motion-ease), background-color var(--deck-motion-feedback) var(--deck-motion-ease); }
 .slidev-layout .skill-menu button.menu-active { color:var(--deck-cyan); background:var(--deck-surface); font-weight:700; }
-.skill-host { display:flex; flex-direction:column; gap:10px; margin-top:20px; padding-inline:12px; }
+.skill-host { display:flex; flex-direction:column; gap:8px; margin-top:12px; padding-inline:12px; }
 .slidev-layout .skill-host p { font-size:18px; line-height:1.25; color:var(--deck-muted); }
 .skill-detail { min-width:0; display:flex; flex-direction:column; gap:20px; padding-top:6px; }
 .slidev-layout .skill-detail h2 { font-size:26px; line-height:1.2; }

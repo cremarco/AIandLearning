@@ -119,7 +119,7 @@ title: "Before we begin…"
 <DeckSlide id="S50CHECKIN" />
 
 <!--
-Before we start, **raise your hand** for each question. First, who already uses **generative AI** to study or prepare materials? Next, who has a **ChatGPT account**? Finally, who is familiar with **NotebookLM**? Use these answers to adjust the examples and offer setup help where needed.
+Before we start, **raise your hand** for each question. First, who already uses **generative AI** to study or prepare materials? Next, who has a **ChatGPT account (or Gemini, or Claude)**? Finally, who is familiar with **NotebookLM**? Use these answers to adjust the examples and offer setup help where needed.
 -->
 
 ---
@@ -210,6 +210,28 @@ title: "The assigned book"
 <!--
 To try this method, Andrea needs a **great book**, written by a **great author**...
 Joking aside, this is a **fictional book**, created only for this workshop. Its explanations and technical references are real. We will use the chapter to check **AI suggestions and Andrea's understanding**.
+-->
+
+---
+layout: default
+routeAlias: s53whytools
+title: "Why these tools?"
+---
+
+<DeckSlide id="S53WHYTOOLS" />
+
+<!--
+Before we introduce the tools, let me explain **why we chose this small set**. ChatGPT, Gemini and Claude are **alternative assistants**: you can choose one for flexible tasks. NotebookLM adds a workspace for working with selected sources. You do not need a paid subscription to all of them.
+
+First, **more control**. We can ask for a simpler explanation, change the level of difficulty, choose a format or request one question at a time. The learning goal guides the request.
+
+Second, **a connected workflow**. Andrea can use the same chapter for explanations, diagrams and practice questions, while checking the outputs against the source. This can reduce the need to move between separate tools for each activity.
+
+Third, **transferable skills**. Defining a goal, providing relevant sources, refining a request and checking an answer are useful across subjects and assistants.
+
+Fourth, **potential savings**. One assistant may cover several needs that would otherwise require separate subscriptions. Free access has limits, and some specialist tools are also free, so a lower cost is a possibility rather than a guarantee.
+
+**Specialist tools still have a place**: dedicated spaced repetition, classroom management or a guided interface may offer a concrete advantage. We add them when that feature helps the learner. Now we will start with ChatGPT and see what Andrea can do with his chapter.
 -->
 
 ---
@@ -526,6 +548,22 @@ title: "These shortcuts also work in Claude"
 
 <!--
 These **five examples** use the **same prompts and chapter** as the ChatGPT demonstrations. Claude produced working flashcards, a quiz, oral practice, a mistake log and a concept map. The **interface varies**, but the learning request transfers. The screenshots open at full size. Other shortcuts remain unverified because the account reached its message limit.
+-->
+
+---
+layout: default
+routeAlias: s53gemini
+title: "Trying the shortcuts in Gemini"
+---
+
+<DeckSlide id="S53GEMINI" />
+
+<!--
+These examples were tested in **Gemini**, with the workshop chapter attached and a **separate temporary chat** for every original prompt. The interface and output are in English. The quiz and flashcards produced native interactive activities. I tested hints, correct and incorrect answers, a **2 out of 3** score and review in the quiz, and answer reveal and navigation in the flashcards.
+
+Five prompts initially returned code rather than a usable activity. I selected **Canvas** and asked Gemini to render the original requirements. The previews stayed blank in this browser, so I downloaded the generated files and tested the **unchanged exports locally**. These screenshots are labelled exported app. They show working fill-in checking, sorting feedback, concept-map branches and peer-assessment controls. The exported lesson also supports three stages, scenario checks and an answer reveal; it is included in the materials. The first concept-map export was incomplete, so Gemini generated a complete replacement.
+
+Across all **15 prompts**, this session produced two native interactive activities, five verified exported apps, four static responses and four generation errors. The full record includes the original prompts, follow-ups, screenshots and exports. These are **informal prompt labels**: a label alone does not guarantee the same interface, and a generated score does not establish understanding. Test the controls and check the content against the source before using an activity.
 -->
 
 ---

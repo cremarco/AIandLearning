@@ -3,8 +3,8 @@
 .workshop-content { display:flex; flex-direction:column; height:100%; gap:20px; min-height:0; }
 .slidev-layout .workshop-heading { flex-shrink:0; align-items:flex-start; }
 .workshop-heading .tool-logos { margin-top:3px; }
-.slidev-layout .workshop-heading h1 { font-size:44px; max-width:1080px; line-height:1.08; }
-.slidev-layout .has-long-title .workshop-heading h1 { font-size:40px; }
+.slidev-layout .workshop-heading h1 { font-size:var(--deck-text-heading); max-width:1080px; line-height:1.08; }
+.slidev-layout .has-long-title .workshop-heading h1 { font-size:var(--deck-text-heading-long); }
 .kind-tool-divider .hero-content { flex-direction:column; gap:48px; }
 .slidev-layout .kind-tool-divider h1 { max-width:1000px; font-size:88px; line-height:1.08; text-wrap:balance; }
 .kind-section-divider { justify-content:center; }
@@ -30,7 +30,7 @@
 .has-character > :not(.workshop-stage) { position:relative; z-index:1; width:720px; }
 .slidev-layout .workshop-body { display:flex; flex-direction:column; gap:20px; }
 .slidev-layout .workshop-body p { max-width:72ch; font-size:var(--deck-text-body); line-height:1.36; }
-.slidev-layout .workshop-content h2 { font-size:27px; line-height:1.15; font-weight:700; }
+.slidev-layout .workshop-content h2 { font-size:var(--deck-text-subheading); line-height:1.15; font-weight:680; }
 .slidev-layout .workshop-content .workshop-prompt { font-size:var(--deck-text-prompt); }
 .prompt-label { display:block; color:var(--deck-muted); font-size:var(--deck-text-label); margin-bottom:10px; font-weight:650; }
 .slidev-layout .workshop-content .procedure-list { display:flex; flex-direction:column; gap:24px; padding:0; list-style:none; }
@@ -70,6 +70,15 @@
 .slidev-layout .kind-concept .comparison h2 { font-size:24px; }
 .slidev-layout .kind-concept .comparison p,.slidev-layout .kind-concept .workshop-result p { font-size:22px; line-height:1.35; }
 .slidev-layout .kind-concept .workshop-result h2 { font-size:17px; color:var(--deck-cyan); }
+.kind-tool-choice { gap:16px; }
+.slidev-layout .kind-tool-choice .workshop-heading h1 { font-size:56px; line-height:1.04; }
+.slidev-layout .kind-tool-choice .tool-choice-context { color:var(--deck-cyan); font-size:21px; line-height:1.3; }
+.kind-tool-choice .comparison { gap:32px 64px; }
+.kind-tool-choice .comparison section { gap:10px; }
+.slidev-layout .kind-tool-choice .comparison h2 { font-size:30px; line-height:1.12; font-weight:650; }
+.slidev-layout .kind-tool-choice .comparison-heading { gap:14px; }
+.slidev-layout .kind-tool-choice .comparison p { max-width:35ch; color:var(--deck-muted); }
+.kind-tool-choice .comparison section:has(.comparison-icon) p { margin-left:46px; }
 .workshop-media { display:flex; flex-direction:column; gap:10px; width:54%; flex-shrink:0; align-self:stretch; justify-content:center; min-height:0; }
 .workshop-media img,.workshop-media video { display:block; object-fit:contain; width:100%; max-height:345px; background:var(--media-paper,var(--color-white)); }
 .slidev-layout .deck-slide .workshop-media figcaption { font-size:var(--deck-text-caption); line-height:1.3; color:var(--deck-muted); }
@@ -87,6 +96,10 @@
 .kind-activity.has-media .workshop-stage { gap:40px; }
 .kind-activity.has-media .workshop-media { order:1; width:38%; --media-paper:transparent; }
 .kind-activity.has-media .workshop-media img { max-height:430px; }
+.kind-activity.has-media .workshop-copy { gap:16px; }
+.kind-activity.has-media .procedure-list { gap:18px; }
+.slidev-layout .kind-activity.has-media .procedure-list h2 { font-size:24px; }
+.slidev-layout .kind-activity.has-media .procedure-list p { font-size:22px; line-height:1.32; }
 /* Cream surfaces keep screenshots legible; tool brands live in the source imagery. */
 .slidev-layout .deck-slide:is(.tool-goblin,.tool-excalidraw,.tool-notebook,.tool-napkin,.tool-claude,.tool-magicschool,.tool-formative,.tool-edge,.tool-dictation,.tool-desmos):not(:has(.kind-tool-divider)) {
   color-scheme:light;
@@ -99,7 +112,7 @@
   --deck-emphasis:var(--color-teal-800);
   --deck-important:var(--color-orange-800);
   --deck-critical:var(--color-orange-800);
-  --deck-link:var(--color-stone-600);
+  --deck-link:var(--color-teal-800);
   --deck-red:var(--deck-link);
   --deck-cyan:var(--deck-emphasis);
   --deck-wine:var(--color-stone-200);

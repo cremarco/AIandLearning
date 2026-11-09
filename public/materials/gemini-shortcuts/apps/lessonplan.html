@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-Minute University Lesson: Training, Inference, and Context</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tab-active { border-bottom: 3px solid #2563eb; color: #2563eb; font-weight: 600; }
+        .tab-inactive { border-bottom: 3px solid transparent; color: #4b5563; }
+        .tab-inactive:hover { color: #1f2937; border-color: #d1d5db; }
+        .transition-all-200 { transition: all 0.2s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col items-center justify-start p-4 sm:p-6 md:p-8">
+
+    <!-- Main Container -->
+    <main class="w-full max-w-4xl bg-white rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden my-auto">
+        
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 sm:p-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider rounded-full border border-indigo-500/30 mb-2">
+                        Foundations of Generative AI • University Workshop
+                    </span>
+                    <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Training, Ordinary Inference, and Context</h1>
+                    <p class="text-slate-300 text-sm mt-1">Based on original teaching material by Marco Cremaschi</p>
+                </div>
+                <div class="flex items-center space-x-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700/60 shadow-inner">
+                    <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-sm font-semibold text-slate-200">15 min total</span>
+                </div>
+            </div>
+
+            <!-- Stage Navigation Tabs -->
+            <nav class="flex border-b border-slate-700/60 mt-8 space-x-2 sm:space-x-8" aria-label="Lesson Stages">
+                <button id="tab-stage1" onclick="switchStage(1)" class="tab-active pb-3 px-1 text-sm sm:text-base flex items-center space-x-2 transition-all-200">
+                    <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">1</span>
+                    <span>Explain <span class="text-xs opacity-75 font-normal">(4 min)</span></span>
+                </button>
+                <button id="tab-stage2" onclick="switchStage(2)" class="tab-inactive pb-3 px-1 text-sm sm:text-base flex items-center space-x-2 transition-all-200">
+                    <span class="w-6 h-6 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center" id="badge-stage2">2</span>
+                    <span>Apply <span class="text-xs opacity-75 font-normal">(6 min)</span></span>
+                </button>
+                <button id="tab-stage3" onclick="switchStage(3)" class="tab-inactive pb-3 px-1 text-sm sm:text-base flex items-center space-x-2 transition-all-200">
+                    <span class="w-6 h-6 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center" id="badge-stage3">3</span>
+                    <span>Assess <span class="text-xs opacity-75 font-normal">(5 min)</span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Content Body -->
+        <div class="p-6 sm:p-8">
+
+            <!-- STAGE 1: EXPLAIN (4 MIN) -->
+            <section id="stage1" class="space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900">Stage 1: Core Concepts & Flow</h2>
+                        <p class="text-slate-600 text-sm">Distinguishing training, inference, context, and retrieval mechanisms.</p>
+                    </div>
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 font-medium text-xs rounded-lg border border-blue-200">Estimated: 4 Minutes</span>
+                </div>
+
+                <!-- Conceptual Summary Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-4 hover:shadow-sm transition-all">
+                        <div class="flex items-center space-x-2 text-indigo-700 font-semibold mb-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            <h3>1. Training / Fine-tuning</h3>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            Updates the internal <strong>model parameters</strong> (weights). Optimization compares predicted probabilities with training examples to reduce error, creating a changed version of the model.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 hover:shadow-sm transition-all">
+                        <div class="flex items-center space-x-2 text-slate-800 font-semibold mb-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <h3>2. Ordinary Inference</h3>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            Calculates output distributions using <strong>fixed parameters</strong>. Changing the prompt context alters available input data for that step, but does not update internal weights.
+                        </p>
+                    </div>
+
+                    <div class="bg-emerald-50/50 border border-emerald-100 rounded-xl p-4 hover:shadow-sm transition-all">
+                        <div class="flex items-center space-x-2 text-emerald-700 font-semibold mb-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <h3>3. Document Retrieval (RAG)</h3>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            Fetches external passages dynamically and inserts them into the prompt <strong>context window</strong>. The model parameters remain strictly fixed while retrieved content is read.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Figure 1 Flow Chart Interactive Display -->
+                <div class="bg-slate-900 text-white p-5 rounded-xl space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <h3 class="text-sm font-semibold text-slate-200 flex items-center gap-2">
+                            <span>Figure 1: Compare System Pipeline Flows</span>
+                            <span class="text-xs font-normal text-slate-400">(Section 1.2)</span>
+                        </h3>
+                        <div class="flex space-x-2">
+                            <button onclick="setFlowView('training')" id="flow-btn-training" class="px-2.5 py-1 text-xs rounded-lg bg-indigo-600 text-white font-medium">Training</button>
+                            <button onclick="setFlowView('inference')" id="flow-btn-inference" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800 text-slate-300 font-medium">Inference</button>
+                            <button onclick="setFlowView('rag')" id="flow-btn-rag" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800 text-slate-300 font-medium">RAG</button>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline Display Area -->
+                    <div id="flow-pipeline-container" class="bg-slate-950/80 p-4 rounded-lg border border-slate-800">
+                        <!-- Dynamic JS render of flow steps -->
+                    </div>
+                </div>
+
+                <!-- Reference Table from Book -->
+                <div class="overflow-x-auto">
+                    <h3 class="text-sm font-bold text-slate-900 mb-2">Table 1: Key Interventions & What Changes</h3>
+                    <table class="w-full text-left text-xs border-collapse border border-slate-200 rounded-lg">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700">
+                                <th class="p-2.5 border-b border-slate-200 font-semibold">Intervention</th>
+                                <th class="p-2.5 border-b border-slate-200 font-semibold">What Changes</th>
+                                <th class="p-2.5 border-b border-slate-200 font-semibold">Model Parameters State</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2.5 font-medium">Training or fine-tuning</td>
+                                <td class="p-2.5">The model's parameters.</td>
+                                <td class="p-2.5"><span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-semibold text-[10px]">UPDATED</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2.5 font-medium">A new message in the context</td>
+                                <td class="p-2.5">Information available to the current inference.</td>
+                                <td class="p-2.5"><span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded font-semibold text-[10px]">FIXED</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-2.5 font-medium">Document retrieval (RAG)</td>
+                                <td class="p-2.5">External passages supplied as context.</td>
+                                <td class="p-2.5"><span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded font-semibold text-[10px]">FIXED</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Next Button -->
+                <div class="flex justify-end pt-2">
+                    <button onclick="switchStage(2)" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-semibold flex items-center space-x-2 shadow-sm transition-all">
+                        <span>Proceed to Stage 2: Apply</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- STAGE 2: APPLY (6 MIN) -->
+            <section id="stage2" class="space-y-6 hidden">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900">Stage 2: Scenario Analysis</h2>
+                        <p class="text-slate-600 text-sm">Select what changes in each scenario and verify your understanding.</p>
+                    </div>
+                    <span class="px-3 py-1 bg-amber-50 text-amber-700 font-medium text-xs rounded-lg border border-amber-200">Estimated: 6 Minutes</span>
+                </div>
+
+                <!-- Scenario Form -->
+                <form id="apply-form" onsubmit="event.preventDefault(); checkApplyAnswers();" class="space-y-5">
+                    
+                    <!-- Scenario 1 -->
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50/50 space-y-3" id="scen-card-1">
+                        <div class="flex items-start space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                            <div>
+                                <h3 class="text-sm font-bold text-slate-900">Scenario A: Fine-tuning a model on a domain dataset</h3>
+                                <p class="text-xs text-slate-600 mt-0.5">An engineer trains a base language model on thousands of specialized medical records.</p>
+                            </div>
+                        </div>
+
+                        <div class="pl-9 space-y-2 text-xs">
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen1" value="params" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">The model's parameters</span>
+                            </label>
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen1" value="context" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">Information available to the current inference</span>
+                            </label>
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen1" value="rag" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">External passages supplied as context</span>
+                            </label>
+                        </div>
+                        <div id="fb-scen1" class="hidden pl-9 text-xs p-3 rounded-lg border"></div>
+                    </div>
+
+                    <!-- Scenario 2 -->
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50/50 space-y-3" id="scen-card-2">
+                        <div class="flex items-start space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                            <div>
+                                <h3 class="text-sm font-bold text-slate-900">Scenario B: Adding a custom definition to a prompt</h3>
+                                <p class="text-xs text-slate-600 mt-0.5">A user writes: <em>"In this conversation, X means Y. Now answer this question..."</em></p>
+                            </div>
+                        </div>
+
+                        <div class="pl-9 space-y-2 text-xs">
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen2" value="params" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">The model's parameters</span>
+                            </label>
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen2" value="context" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">Information available to the current inference</span>
+                            </label>
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen2" value="rag" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">External passages supplied as context</span>
+                            </label>
+                        </div>
+                        <div id="fb-scen2" class="hidden pl-9 text-xs p-3 rounded-lg border"></div>
+                    </div>
+
+                    <!-- Scenario 3 -->
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50/50 space-y-3" id="scen-card-3">
+                        <div class="flex items-start space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                            <div>
+                                <h3 class="text-sm font-bold text-slate-900">Scenario C: Retrieving a passage with RAG</h3>
+                                <p class="text-xs text-slate-600 mt-0.5">An assistant queries a database and inserts three relevant book passages into the prompt context.</p>
+                            </div>
+                        </div>
+
+                        <div class="pl-9 space-y-2 text-xs">
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen3" value="params" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">The model's parameters</span>
+                            </label>
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen3" value="context" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">Information available to the current inference</span>
+                            </label>
+                            <label class="flex items-center space-x-2.5 p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-100/60 cursor-pointer transition-all">
+                                <input type="radio" name="scen3" value="rag" class="text-indigo-600 focus:ring-indigo-500">
+                                <span class="font-medium text-slate-800">External passages supplied as context</span>
+                            </label>
+                        </div>
+                        <div id="fb-scen3" class="hidden pl-9 text-xs p-3 rounded-lg border"></div>
+                    </div>
+
+                    <!-- Controls Row -->
+                    <div class="flex items-center justify-between pt-2">
+                        <button type="button" onclick="switchStage(1)" class="px-4 py-2 border border-slate-300 rounded-xl text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-all">
+                            Back to Stage 1
+                        </button>
+                        <div class="flex items-center space-x-3">
+                            <button type="submit" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all flex items-center space-x-1.5">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Check answers</span>
+                            </button>
+                            <button id="apply-next-btn" type="button" onclick="switchStage(3)" class="hidden px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow-sm transition-all flex items-center space-x-1.5">
+                                <span>Proceed to Stage 3: Assess</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- STAGE 3: ASSESS (5 MIN) -->
+            <section id="stage3" class="space-y-6 hidden">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900">Stage 3: Independent Explanation Check</h2>
+                        <p class="text-slate-600 text-sm">Synthesize core concepts and evaluate your reasoning.</p>
+                    </div>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 font-medium text-xs rounded-lg border border-purple-200">Estimated: 5 Minutes</span>
+                </div>
+
+                <!-- Independent Checkpoint Exercise -->
+                <div class="p-5 border border-slate-200 rounded-xl bg-slate-50/50 space-y-4">
+                    <div class="space-y-2">
+                        <span class="px-2.5 py-1 bg-indigo-100 text-indigo-800 font-semibold text-[11px] rounded-md uppercase tracking-wider">Checkpoint Question (Section 1.2)</span>
+                        <h3 class="text-sm font-bold text-slate-900 leading-snug">
+                            "The model correctly uses a custom definition inserted into the prompt during a chat session. Does that result prove that its parameters have been updated? Explain your answer."
+                        </h3>
+                    </div>
+
+                    <!-- User Textarea -->
+                    <div>
+                        <textarea id="user-explanation" rows="4" oninput="updateWordCount()" class="w-full p-3 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white text-slate-900 placeholder-slate-400" placeholder="Write your explanation here before revealing the answer key..."></textarea>
+                        <div class="flex justify-between items-center text-[11px] text-slate-500 mt-1">
+                            <span>Focus on the difference between context availability and weight updates.</span>
+                            <span id="word-count">0 words</span>
+                        </div>
+                    </div>
+
+                    <!-- Answer Key Toggle Controls -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 border-t border-slate-200">
+                        <button id="toggle-answer-btn" onclick="toggleAnswerKey()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-semibold flex items-center space-x-2 transition-all shadow-sm">
+                            <svg id="toggle-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <span id="toggle-text">Reveal answers</span>
+                        </button>
+                        <span class="text-xs text-slate-500">Study Resource B • Assessment Key</span>
+                    </div>
+
+                    <!-- Answer Key Box -->
+                    <div id="answer-key-box" class="hidden p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-3 text-xs text-emerald-950">
+                        <div class="flex items-center space-x-2 text-emerald-800 font-bold">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Expected Answer & Conceptual Breakdown</span>
+                        </div>
+                        <p class="leading-relaxed">
+                            <strong>No, it does not prove parameter updates.</strong> Ordinary inference runs calculations using parameters that are already available (fixed weights). Making information or definitions available in the prompt changes only the <em>information available to the current inference pass</em>. It does not update or retrain the model's internal weights.
+                        </p>
+                        <div class="bg-white/80 p-3 rounded-lg border border-emerald-200 space-y-1.5 text-[11px] text-slate-700">
+                            <span class="font-bold text-slate-900 block">Self-Assessment Checklist (Verify your written response):</span>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>I explicitly stated <strong>No</strong> (parameters are not changed).</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>I distinguished <strong>ordinary inference (fixed model)</strong> from <strong>training/fine-tuning (updating parameters)</strong>.</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>I noted that prompt definitions modify only the <strong>active conversation context window</strong>.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Lesson Conclusion -->
+                <div class="flex justify-between items-center pt-2">
+                    <button type="button" onclick="switchStage(2)" class="px-4 py-2 border border-slate-300 rounded-xl text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-all">
+                        Back to Stage 2
+                    </button>
+                    <button onclick="resetLesson()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-all">
+                        Restart Lesson
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Widget Footer -->
+        <footer class="bg-slate-100 border-t border-slate-200 p-4 text-center text-xs text-slate-500">
+            Interactive University Module • <em>Beyond Prompting: Foundations of Generative AI</em> (Cremaschi, 2026)
+        </footer>
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Flow pipeline data from Figure 1 (p. 6)
+        const flowData = {
+            training: {
+                title: "Training / Fine-Tuning Pipeline",
+                badge: "Updates Weights",
+                badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+                steps: [
+                    { label: "1. Examples", desc: "Training text sequence" },
+                    { label: "2. Prediction Error", desc: "Compare output vs example" },
+                    { label: "3. Parameter Updates", desc: "Optimization step changes weights" },
+                    { label: "4. Changed Model", desc: "New version of model saved" }
+                ]
+            },
+            inference: {
+                title: "Ordinary Inference Pipeline",
+                badge: "Fixed Weights",
+                badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+                steps: [
+                    { label: "1. Input + Fixed Model", desc: "Prompt provided to static weights" },
+                    { label: "2. Model Calculations", desc: "Decoder processing & logits" },
+                    { label: "3. Output Distribution", desc: "Softmax produces probabilities" },
+                    { label: "4. Selected Output", desc: "Token selected & appended" }
+                ]
+            },
+            rag: {
+                title: "Retrieval-Augmented Generation (RAG) Pipeline",
+                badge: "Fixed Weights + Retrieved Context",
+                badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+                steps: [
+                    { label: "1. Question", desc: "User query submitted" },
+                    { label: "2. Retrieved Passages", desc: "External search component matches text" },
+                    { label: "3. Context + Fixed Model", desc: "Passages appended into prompt" },
+                    { label: "4. Generated Answer", desc: "Model generates grounded output" }
+                ]
+            }
+        };
+
+        // Initialize flow view
+        setFlowView('training');
+
+        function setFlowView(type) {
+            const data = flowData[type];
+            const container = document.getElementById('flow-pipeline-container');
+            
+            // Highlight buttons
+            ['training', 'inference', 'rag'].forEach(key => {
+                const btn = document.getElementById(`flow-btn-${key}`);
+                if (key === type) {
+                    btn.className = "px-2.5 py-1 text-xs rounded-lg bg-indigo-600 text-white font-medium shadow";
+                } else {
+                    btn.className = "px-2.5 py-1 text-xs rounded-lg bg-slate-800 text-slate-300 font-medium hover:bg-slate-700";
+                }
+            });
+
+            let stepsHTML = data.steps.map((step, idx) => `
+                <div class="flex items-center space-x-2">
+                    <div class="bg-slate-800 border border-slate-700 p-2.5 rounded-lg flex-1 min-w-0">
+                        <div class="text-[11px] font-bold text-indigo-300">${step.label}</div>
+                        <div class="text-[10px] text-slate-400 truncate">${step.desc}</div>
+                    </div>
+                    ${idx < data.steps.length - 1 ? `<svg class="w-4 h-4 text-slate-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>` : ''}
+                </div>
+            `).join('');
+
+            container.innerHTML = `
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-xs font-semibold text-white">${data.title}</span>
+                    <span class="px-2 py-0.5 text-[10px] font-semibold uppercase rounded-full border ${data.badgeColor}">${data.badge}</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                    ${stepsHTML}
+                </div>
+            `;
+        }
+
+        // Switch Lesson Stage Tabs
+        function switchStage(stageNum) {
+            [1, 2, 3].forEach(n => {
+                const sec = document.getElementById(`stage${n}`);
+                const tab = document.getElementById(`tab-stage${n}`);
+                const badge = document.getElementById(`badge-stage${n}`);
+
+                if (n === stageNum) {
+                    sec.classList.remove('hidden');
+                    tab.className = 'tab-active pb-3 px-1 text-sm sm:text-base flex items-center space-x-2 transition-all-200';
+                    if (badge) badge.className = 'w-6 h-6 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center';
+                } else {
+                    sec.classList.add('hidden');
+                    tab.className = 'tab-inactive pb-3 px-1 text-sm sm:text-base flex items-center space-x-2 transition-all-200';
+                    if (badge) badge.className = 'w-6 h-6 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center';
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Check Stage 2 Answers
+        function checkApplyAnswers() {
+            const answers = {
+                scen1: document.querySelector('input[name="scen1"]:checked')?.value,
+                scen2: document.querySelector('input[name="scen2"]:checked')?.value,
+                scen3: document.querySelector('input[name="scen3"]:checked')?.value,
+            };
+
+            const feedbackConfig = {
+                scen1: {
+                    correct: 'params',
+                    correctFB: '<strong>Correct!</strong> Fine-tuning updates the model\'s internal numerical parameters (weights) based on training loss.',
+                    incorrectFB: '<strong>Incorrect.</strong> Fine-tuning modifies internal model parameters, not temporary context or external passages.'
+                },
+                scen2: {
+                    correct: 'context',
+                    correctFB: '<strong>Correct!</strong> Adding a definition to a prompt changes the information available to the current inference pass, while model parameters stay fixed.',
+                    incorrectFB: '<strong>Incorrect.</strong> Prompt definitions alter the active context sequence for that inference pass, but do NOT update model parameters.'
+                },
+                scen3: {
+                    correct: 'rag',
+                    correctFB: '<strong>Correct!</strong> RAG retrieves external passages from a collection and attaches them as context for the fixed model.',
+                    incorrectFB: '<strong>Incorrect.</strong> RAG supplies external passages into the context window without updating the underlying model parameters.'
+                }
+            };
+
+            let score = 0;
+            let total = 3;
+
+            [1, 2, 3].forEach(idx => {
+                const key = `scen${idx}`;
+                const val = answers[key];
+                const fbBox = document.getElementById(`fb-scen${idx}`);
+                const config = feedbackConfig[key];
+
+                fbBox.classList.remove('hidden', 'bg-emerald-100', 'border-emerald-300', 'text-emerald-900', 'bg-rose-100', 'border-rose-300', 'text-rose-900', 'bg-amber-100', 'border-amber-300', 'text-amber-900');
+
+                if (!val) {
+                    fbBox.classList.add('bg-amber-100', 'border-amber-300', 'text-amber-900');
+                    fbBox.innerHTML = '<strong>Please make a selection</strong> for this scenario before checking.';
+                } else if (val === config.correct) {
+                    score++;
+                    fbBox.classList.add('bg-emerald-100', 'border-emerald-300', 'text-emerald-900');
+                    fbBox.innerHTML = config.correctFB;
+                } else {
+                    fbBox.classList.add('bg-rose-100', 'border-rose-300', 'text-rose-900');
+                    fbBox.innerHTML = config.incorrectFB;
+                }
+            });
+
+            if (answers.scen1 && answers.scen2 && answers.scen3) {
+                const nextBtn = document.getElementById('apply-next-btn');
+                nextBtn.classList.remove('hidden');
+            }
+        }
+
+        // Toggle Stage 3 Answer Key
+        function toggleAnswerKey() {
+            const keyBox = document.getElementById('answer-key-box');
+            const toggleBtnText = document.getElementById('toggle-text');
+            const isHidden = keyBox.classList.contains('hidden');
+
+            if (isHidden) {
+                keyBox.classList.remove('hidden');
+                toggleBtnText.textContent = 'Hide answers';
+            } else {
+                keyBox.classList.add('hidden');
+                toggleBtnText.textContent = 'Reveal answers';
+            }
+        }
+
+        // Live Word Counter
+        function updateWordCount() {
+            const text = document.getElementById('user-explanation').value.trim();
+            const count = text ? text.split(/\s+/).length : 0;
+            document.getElementById('word-count').textContent = `${count} word${count === 1 ? '' : 's'}`;
+        }
+
+        // Reset Lesson
+        function resetLesson() {
+            document.getElementById('apply-form').reset();
+            document.getElementById('user-explanation').value = '';
+            updateWordCount();
+            
+            [1, 2, 3].forEach(idx => {
+                const fbBox = document.getElementById(`fb-scen${idx}`);
+                fbBox.classList.add('hidden');
+            });
+
+            document.getElementById('answer-key-box').classList.add('hidden');
+            document.getElementById('toggle-text').textContent = 'Reveal answers';
+            document.getElementById('apply-next-btn').classList.add('hidden');
+
+            switchStage(1);
+        }
+    </script>
+</body>
+</html>

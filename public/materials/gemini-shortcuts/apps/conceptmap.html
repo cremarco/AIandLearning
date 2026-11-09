@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Concept Map: Training, Inference & RAG</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+  body { background: #0f172a; color: #f8fafc; padding: 16px; max-width: 860px; margin: 0 auto; line-height: 1.4; }
+  h1 { font-size: 1.3rem; margin-bottom: 2px; text-align: center; color: #f8fafc; }
+  .subtitle { font-size: 0.8rem; color: #94a3b8; text-align: center; margin-bottom: 12px; }
+  .banner { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 0.82rem; display: flex; gap: 12px; flex-wrap: wrap; }
+  .banner-box { flex: 1; min-width: 220px; background: #0f172a; padding: 8px 10px; border-radius: 6px; border-left: 3px solid #38bdf8; }
+  .banner-box.ctx { border-left-color: #22c55e; }
+  .banner-box strong { color: #f8fafc; display: block; margin-bottom: 2px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 14px; }
+  .tab-btn { flex: 1; padding: 10px; border: 2px solid #334155; background: #1e293b; color: #94a3b8; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; text-align: center; transition: 0.2s; }
+  .tab-btn:hover { border-color: #64748b; color: #fff; }
+  .tab-btn.active-training { background: #1e3a8a; border-color: #3b82f6; color: #fff; }
+  .tab-btn.active-inference { background: #14532d; border-color: #22c55e; color: #fff; }
+  .tab-btn.active-rag { background: #581c87; border-color: #a855f7; color: #fff; }
+  .panel { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+  .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+  .badge-param { background: #1d4ed8; color: #dbeafe; }
+  .badge-ctx { background: #15803d; color: #dcfce7; }
+  .pipeline { display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 10px; border-radius: 6px; margin: 10px 0; gap: 4px; overflow-x: auto; }
+  .step { background: #1e293b; border: 1px solid #475569; padding: 6px 8px; border-radius: 4px; font-size: 0.78rem; text-align: center; font-weight: 600; white-space: nowrap; flex: 1; }
+  .arrow { color: #64748b; font-weight: bold; font-size: 0.9rem; }
+  .rel-list { font-size: 0.82rem; color: #cbd5e1; margin-top: 8px; padding-left: 16px; }
+  .rel-list li { margin-bottom: 4px; }
+  .exp-box { font-size: 0.84rem; color: #e2e8f0; margin-top: 10px; background: #0f172a; padding: 10px; border-radius: 6px; border: 1px solid #334155; }
+  .cite { font-size: 0.75rem; color: #94a3b8; margin-top: 6px; font-style: italic; }
+  .quiz { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 14px; }
+  .quiz-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; border-bottom: 1px solid #334155; padding-bottom: 6px; }
+  .q-item { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #334155; }
+  .q-item:last-child { border-bottom: none; }
+  .q-txt { font-size: 0.83rem; font-weight: 600; margin-bottom: 6px; color: #f1f5f9; }
+  .opt { display: block; font-size: 0.8rem; color: #cbd5e1; margin: 4px 0; cursor: pointer; }
+  .opt input { margin-right: 6px; }
+  .fb { display: none; margin-top: 6px; padding: 8px 10px; border-radius: 4px; font-size: 0.78rem; line-height: 1.35; }
+  .fb.correct { display: block; background: #14532d; color: #dcfce7; border: 1px solid #22c55e; }
+  .fb.incorrect { display: block; background: #7f1d1d; color: #fecaca; border: 1px solid #ef4444; }
+  .btn-bar { display: flex; gap: 10px; margin-top: 12px; }
+  .btn { padding: 8px 16px; border-radius: 6px; border: none; font-weight: 600; font-size: 0.82rem; cursor: pointer; }
+  .btn-chk { background: #2563eb; color: #fff; }
+  .btn-chk:hover { background: #1d4ed8; }
+  .btn-rst { background: #475569; color: #fff; }
+  .btn-rst:hover { background: #334155; }
+</style>
+</head>
+<body>
+  <h1>Generative AI Concept Map</h1>
+  <div class="subtitle">Comparing Training, Ordinary Inference, and RAG (Cremaschi, 2026)</div>
+
+  <div class="banner">
+    <div class="banner-box">
+      <strong>Parameter Updates (Training)</strong>
+      Modifies internal numerical weights ($z$). Changes the model itself permanently (Sec 1.2).
+    </div>
+    <div class="banner-box ctx">
+      <strong>Context Changes (Inference &amp; RAG)</strong>
+      Modifies available text tokens for current step. Model parameters remain strictly fixed (Sec 1.2, 1.7).
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button id="tab-training" class="tab-btn active-training" onclick="setBranch('training')">1. Training</button>
+    <button id="tab-inference" class="tab-btn" onclick="setBranch('inference')">2. Ordinary Inference</button>
+    <button id="tab-rag" class="tab-btn" onclick="setBranch('rag')">3. RAG</button>
+  </div>
+
+  <div class="panel">
+    <span id="b-badge" class="badge badge-param">Intervention: Parameter Updates</span>
+    <h2 id="b-title" style="font-size: 1.1rem; margin-bottom: 6px;">Training / Fine-Tuning</h2>
+    <div class="pipeline" id="b-pipe"></div>
+    <strong style="font-size: 0.83rem; color: #38bdf8;">Labelled Relationships:</strong>
+    <ul class="rel-list" id="b-rels"></ul>
+    <div class="exp-box">
+      <strong>Chapter Explanation:</strong>
+      <p id="b-exp" style="margin-top: 4px;"></p>
+      <div class="cite" id="b-cite"></div>
+    </div>
+  </div>
+
+  <div class="quiz">
+    <div class="quiz-title">Branch Knowledge Check (One Question per Branch)</div>
+    <div class="q-item">
+      <div class="q-txt">1. [Training] What is permanently modified during pretraining or fine-tuning?</div>
+      <label class="opt"><input type="radio" name="q1" value="A"> A) Vocabulary index IDs in the tokenizer</label>
+      <label class="opt"><input type="radio" name="q1" value="B"> B) Internal parameter weights of the model</label>
+      <label class="opt"><input type="radio" name="q1" value="C"> C) The total context window limit</label>
+      <div id="fb1" class="fb"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-txt">2. [Inference] What happens when a user sends a prompt during ordinary inference?</div>
+      <label class="opt"><input type="radio" name="q2" value="A"> A) It provides context for current inference while model parameters remain fixed</label>
+      <label class="opt"><input type="radio" name="q2" value="B"> B) It automatically updates model weight parameters after every message</label>
+      <label class="opt"><input type="radio" name="q2" value="C"> C) It rewrites the softmax temperature formula</label>
+      <div id="fb2" class="fb"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-txt">3. [RAG] Does supplying retrieved documents to a prompt update model parameters?</div>
+      <label class="opt"><input type="radio" name="q3" value="A"> A) Yes, retrieved facts overwrite internal weights</label>
+      <label class="opt"><input type="radio" name="q3" value="B"> B) No, retrieval provides external passages to context for a fixed model</label>
+      <label class="opt"><input type="radio" name="q3" value="C"> C) Yes, but only when temperature is below 0.5</label>
+      <div id="fb3" class="fb"></div>
+    </div>
+    <div class="btn-bar">
+      <button class="btn btn-chk" onclick="checkQuiz()">Check answers</button>
+      <button class="btn btn-rst" onclick="resetQuiz()">Retry</button>
+    </div>
+  </div>
+
+<script>
+const branches = {
+  training: {
+    title: 'Training / Fine-Tuning',
+    badge: 'Intervention: Parameter Updates',
+    badgeCls: 'badge-param',
+    tabCls: 'active-training',
+    steps: ['Examples', 'Prediction Error', 'Parameter Updates', 'Changed Model'],
+    rels: [
+      'Training Examples → Prediction Error: Text data provides learning signal.',
+      'Prediction Error → Parameter Updates: System optimizes weights to reduce loss.',
+      'Updates → Changed Model: Pretraining/fine-tuning modifies parameter weights (z).'
+    ],
+    exp: 'Pretraining and fine-tuning compare predicted distributions with tokens present in examples, updating internal numerical weights to reduce error. Training changes the model itself (Sec 1.2, Fig 1).',
+    cite: 'Ref: Cremaschi (2026), Sec 1.2 "Data, parameters and training" & Fig 1'
+  },
+  inference: {
+    title: 'Ordinary Inference',
+    badge: 'Intervention: Context Change Only',
+    badgeCls: 'badge-ctx',
+    tabCls: 'active-inference',
+    steps: ['Input + Fixed Model', 'Model Calculations', 'Output Distribution', 'Selected Output'],
+    rels: [
+      'Input Prompt → Context Window: Tokenized IDs enter contextual representation layer.',
+      'Fixed Model → Decoder Pass: Multi-head attention & FFN run on fixed weights.',
+      'Softmax (z/T) → Selected Token: Temperature scales logits to produce probabilities.'
+    ],
+    exp: 'Ordinary inference runs forward calculations using an available fixed model. Adding prompt messages updates the contextual information available for that calculation, but does not update model weights (Sec 1.2, 1.5).',
+    cite: 'Ref: Cremaschi (2026), Sec 1.2, Sec 1.5 & Tab 1'
+  },
+  rag: {
+    title: 'Retrieval-Augmented Generation (RAG)',
+    badge: 'Intervention: Context Change Only',
+    badgeCls: 'badge-ctx',
+    tabCls: 'active-rag',
+    steps: ['Question', 'Retrieved Passages', 'Context + Fixed Model', 'Generated Answer'],
+    rels: [
+      'User Question → Document Search: Retrieval component queries external collection.',
+      'Retrieved Passages → Context Injection: Passages append directly to prompt.',
+      'Augmented Context → Fixed Generator: Model generates text conditioned on context without changing weights.'
+    ],
+    exp: 'In RAG, model parameters and consulted document collections are distinct components. Passages are retrieved and injected into prompt context, supplying information without modifying model weights (Sec 1.7, Fig 1).',
+    cite: 'Ref: Cremaschi (2026), Sec 1.7 "Generation, context and retrieval" & Fig 1'
+  }
+};
+
+function setBranch(key) {
+  const b = branches[key];
+  ['training', 'inference', 'rag'].forEach(k => {
+    const btn = document.getElementById('tab-' + k);
+    btn.className = 'tab-btn' + (k === key ? ' ' + b.tabCls : '');
+  });
+  document.getElementById('b-title').textContent = b.title;
+  const badge = document.getElementById('b-badge');
+  badge.textContent = b.badge;
+  badge.className = 'badge ' + b.badgeCls;
+  
+  document.getElementById('b-pipe').innerHTML = b.steps.map((s, i) => 
+    `<div class="step">${s}</div>` + (i < 3 ? '<div class="arrow">→</div>' : '')
+  ).join('');
+
+  document.getElementById('b-rels').innerHTML = b.rels.map(r => `<li>${r}</li>`).join('');
+  document.getElementById('b-exp').textContent = b.exp;
+  document.getElementById('b-cite').textContent = b.cite;
+}
+
+function checkQuiz() {
+  const ans = { q1: 'B', q2: 'A', q3: 'B' };
+  const fbs = {
+    q1: { ok: 'Correct! Training modifies numerical parameter weights to reduce prediction error (Sec 1.2).', err: 'Incorrect. Training changes internal parameter weights, not vocabulary IDs or context window limits.' },
+    q2: { ok: 'Correct! Prompts supply information to context for current inference while model weights remain fixed (Sec 1.2, Tab 1).', err: 'Incorrect. Sending a prompt does not update model weights after messages.' },
+    q3: { ok: 'Correct! Document retrieval injects passages into context; parameters remain distinct and fixed (Sec 1.7).', err: 'Incorrect. RAG supplies external passages to context without updating model parameters.' }
+  };
+  [1, 2, 3].forEach(i => {
+    const sel = document.querySelector(`input[name="q${i}"]:checked`)?.value;
+    const fb = document.getElementById(`fb${i}`);
+    if (sel === ans[`q${i}`]) {
+      fb.className = 'fb correct';
+      fb.textContent = fbs[`q${i}`].ok;
+    } else {
+      fb.className = 'fb incorrect';
+      fb.textContent = fbs[`q${i}`].err;
+    }
+  });
+}
+
+function resetQuiz() {
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  [1, 2, 3].forEach(i => {
+    const fb = document.getElementById(`fb${i}`);
+    fb.className = 'fb';
+    fb.textContent = '';
+  });
+}
+
+setBranch('training');
+</script>
+</body>
+</html>

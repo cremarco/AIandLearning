@@ -28,6 +28,10 @@ import type { Slide, StudyFocus } from '../../utils/deck'
 const props = defineProps<{ slide: Slide }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const s = computed(() => props.slide)
+const toolChoiceContext = computed(() => (s.value.body[0] || '')
+  .split(/(ChatGPT|Gemini|Claude|NotebookLM)/g)
+  .filter(Boolean)
+  .map(text => ({ text, brands: brandsForLabel(text) })))
 const hasVideo = computed(() => s.value.media?.type === 'video'
   || s.value.commands?.some(command => command.result?.media.type === 'video'))
 const headingCommand = computed(() => {
@@ -57,6 +61,9 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <h1><svg v-if="s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title)" class="command-example-dot" role="img" aria-label="Example explained in the speaker notes" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
+    <p v-if="s.kind === 'tool-choice'" class="tool-choice-context">
+      <template v-for="(part, index) in toolChoiceContext" :key="index"><span v-if="part.brands.length" class="tool-choice-name"><ToolLogos :ids="part.brands" compact aria-hidden="true" /><EmphasisText :text="part.text" /></span><template v-else>{{ part.text }}</template></template>
+    </p>
     <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
     <div v-if="!['section-divider', 'tool-divider'].includes(s.kind)" class="workshop-stage">
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
@@ -112,13 +119,21 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
         <div class="workshop-copy">
           <PromptBlock v-if="s.prompt && s.kind !== 'tool-demo'" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
           <div v-if="s.comparison?.length" class="comparison" :class="{three:s.comparison.length===3}">
-            <section v-for="(item,i) in s.comparison" :key="i"><SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline /><h2 class="comparison-heading"><ToolLogos :ids="brandsForLabel(item.label)" compact /><EmphasisText :text="item.label" /></h2><p><EmphasisText :text="item.text" /></p></section>
+            <section v-for="(item,i) in s.comparison" :key="i">
+              <SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline />
+              <h2 class="comparison-heading">
+                <span v-if="item.icon" class="comparison-icon" aria-hidden="true" :style="{ maskImage: `url(${asset(item.icon)})` }" />
+                <ToolLogos :ids="brandsForLabel(item.label)" compact />
+                <EmphasisText :text="item.label" />
+              </h2>
+              <p><EmphasisText :text="item.text" /></p>
+            </section>
           </div>
           <ol v-if="s.steps?.length" class="procedure-list">
             <li v-for="(step,i) in s.steps" :key="i"><span class="step-number">{{ i+1 }}</span><div><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div></li>
           </ol>
           <ActivityTimer v-if="s.activityTimer" :minutes="s.activityTimer.minutes" :timer-id="s.activityTimer.id" />
-          <div v-if="s.body?.length" class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div>
+          <div v-if="s.body?.length && s.kind !== 'tool-choice'" class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div>
           <div v-if="s.result" class="workshop-result"><h2>{{ s.resultLabel || 'Result of this step' }}</h2><p><EmphasisText :text="s.result" /></p></div>
           <div v-if="s.links?.length" class="workshop-links">
             <a v-for="l in s.links" :key="l.url" class="btn gap-3" :class="s.kind === 'book' && l.download ? 'btn-primary btn-xl' : s.kind === 'access' ? 'text-3xl' : 'text-xl'"
@@ -142,6 +157,8 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 .workshop-heading h1 { min-width:0; }
 .command-example-dot { display:inline-block; width:8px; height:8px; margin-right:10px; vertical-align:middle; color:var(--deck-important); }
 .comparison-heading { display:flex; align-items:center; gap:10px; }
+.tool-choice-name { display:inline-flex; align-items:center; gap:8px; vertical-align:middle; white-space:nowrap; }
+.comparison-icon { display:block; flex:0 0 32px; width:32px; height:32px; color:var(--deck-cyan); background:currentColor; mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
 .workshop-video-open { margin-left:12px; vertical-align:middle; }
 @media print { .workshop-video-open { display:none; } }
 </style>

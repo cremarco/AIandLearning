@@ -9,7 +9,7 @@ const gallery = ref<HTMLElement>()
 const bounds = ref({ width: 1152, height: 520 })
 const naturalSizes = ref<Record<string, { width: number; height: number }>>({})
 const gutter = 16
-const labelHeight = 24
+const labelHeight = 32
 let observer: ResizeObserver | undefined
 
 function rememberSize(item: GalleryItem, event: Event) {
@@ -37,13 +37,14 @@ const layout = computed(() => {
     shortest.items.push(item)
     shortest.imageHeight += columnWidth * ratio
   }
-  // Shrink the complete screenshots together when their natural heights would
-  // exceed the slide. Their aspect ratios and all visible source content remain intact.
-  const scale = Math.max(0, Math.min(1, ...columns.filter(column => column.items.length).map(column => {
+  // Fit each column independently so a tall screenshot cannot shrink every
+  // column. Keep source images complete and labels on the shared column grid.
+  const fittedColumns = columns.map(column => {
     const fixedHeight = column.items.length * labelHeight + (column.items.length - 1) * gutter
-    return (bounds.value.height - fixedHeight) / column.imageHeight
-  })))
-  return { columns, itemWidth: columnWidth * scale }
+    const scale = column.imageHeight ? Math.max(0, Math.min(1, (bounds.value.height - fixedHeight) / column.imageHeight)) : 1
+    return { ...column, itemWidth: columnWidth * scale }
+  })
+  return { columns: fittedColumns }
 })
 
 onMounted(() => {
@@ -59,11 +60,11 @@ onBeforeUnmount(() => observer?.disconnect())
 </script>
 
 <template>
-  <div ref="gallery" class="screenshot-results grid gap-4 md:gap-4" :style="{ gridTemplateColumns: `repeat(${layout.columns.length}, minmax(0, 1fr))` }" aria-label="Claude results from the original slide prompts">
+  <div ref="gallery" class="screenshot-results grid gap-4 md:gap-4" :style="{ gridTemplateColumns: `repeat(${layout.columns.length}, minmax(0, 1fr))` }" aria-label="Results from the original slide prompts">
     <div v-for="(column, index) in layout.columns" :key="index" class="masonry-column">
-      <figure v-for="item in column.items" :key="item.label" class="screenshot-result" :style="{ width: `${layout.itemWidth}px` }">
+      <figure v-for="item in column.items" :key="item.label" class="screenshot-result">
         <figcaption class="command-token" :title="item.label">{{ item.label }}</figcaption>
-        <a class="link screenshot-image" :href="assetUrl(item.src)" target="_blank" rel="noopener" :aria-label="`Open full-size ${item.label} screenshot`" @click.stop>
+        <a class="link screenshot-image" :style="{ width: `${column.itemWidth}px` }" :href="assetUrl(item.src)" target="_blank" rel="noopener" :aria-label="`Open full-size ${item.label} screenshot`" @click.stop>
           <img :src="assetUrl(item.src)" :alt="item.alt" :width="item.width" :height="item.height" @load="rememberSize(item, $event)" />
         </a>
       </figure>
@@ -74,8 +75,8 @@ onBeforeUnmount(() => observer?.disconnect())
 <style scoped>
 .screenshot-results { width:100%; height:100%; min-width:0; min-height:0; align-self:stretch; align-items:start; }
 .masonry-column { display:flex; flex-direction:column; align-items:center; gap:16px; min-width:0; }
-.screenshot-result { min-width:0; max-width:100%; }
-.slidev-layout .screenshot-results .screenshot-result figcaption { height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:13px; line-height:18px; }
-.screenshot-image { display:block; }
+.screenshot-result { width:100%; min-width:0; max-width:100%; }
+.slidev-layout .screenshot-results .screenshot-result figcaption { height:32px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:var(--deck-text-caption); line-height:24px; }
+.screenshot-image { display:block; max-width:100%; margin-inline:0; }
 .screenshot-image img { display:block; width:100%; height:auto; }
 </style>

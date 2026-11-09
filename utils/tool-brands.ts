@@ -8,6 +8,7 @@ export type ToolBrandId = keyof typeof toolBrands
 export function brandsForLabel(label: string): ToolBrandId[] {
   const matches: [ToolBrandId, RegExp][] = [
     ['chatgpt', /\bChatGPT\b/i],
+    ['gemini', /\bGemini\b(?!\s+Notebook)/i],
     ['goblin', /\bGoblin(?:\.tools)?\b/i],
     ['notebook', /\bNotebook(?:LM)?\b/i],
     ['napkin', /\bNapkin\b/i],

@@ -59,7 +59,7 @@
     "message": "Three quick questions. A show of hands is enough.",
     "body": [
       "Do you already use GenAI to study or prepare teaching materials?",
-      "Do you have a ChatGPT account?",
+      "Do you have a ChatGPT account (or Gemini, or Claude)?",
       "Are you familiar with NotebookLM?"
     ],
     "sources": [],
@@ -183,7 +183,7 @@
     "section": "scenario",
     "stage": "Learning method · six phases",
     "title": "A study process in six phases",
-    "message": "Choose support for your next learning action. The corner ribbon shows the main phase, with a smaller secondary phase.",
+    "message": "",
     "body": [],
     "sources": [],
     "audience": "both",
@@ -235,6 +235,44 @@
         "label": "Download PDF",
         "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
         "download": true
+      }
+    ],
+    "decision": ""
+  },
+  {
+    "id": "S53WHYTOOLS",
+    "type": "workshop",
+    "kind": "tool-choice",
+    "section": "scenario",
+    "stage": "Tool choice · rationale",
+    "title": "Why these tools?",
+    "message": "Flexibility, continuity and fewer subscriptions.",
+    "body": [
+      "ChatGPT, Gemini or Claude — with NotebookLM"
+    ],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "comparison": [
+      {
+        "label": "More control",
+        "icon": "icons/heroicons/adjustments-horizontal.svg",
+        "text": "Adapt explanations, questions and outputs to your learning goal."
+      },
+      {
+        "label": "A connected workflow",
+        "icon": "icons/heroicons/link.svg",
+        "text": "Use the same materials across different study activities."
+      },
+      {
+        "label": "Transferable skills",
+        "icon": "icons/heroicons/arrows-right-left.svg",
+        "text": "Reuse the method across subjects and AI assistants."
+      },
+      {
+        "label": "Potential savings",
+        "icon": "icons/heroicons/banknotes.svg",
+        "text": "Cover several needs before paying for additional tools."
       }
     ],
     "decision": ""
@@ -1083,6 +1121,89 @@
         "caption": "Selectable branches and three check questions with feedback and retry",
         "format": "Interactive in-chat visualization",
         "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English."
+      }
+    ],
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "check"
+      ]
+    }
+  },
+  {
+    "id": "S53GEMINI",
+    "type": "workshop",
+    "kind": "screenshot-results",
+    "section": "chatgpt",
+    "stage": "The same requests in Gemini",
+    "title": "Trying the shortcuts in Gemini",
+    "message": "Quiz and flashcards in Gemini · Canvas apps regenerated, exported and tested locally.",
+    "body": [],
+    "sources": [
+      "GEMINI_SHORTCUT_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "screenshots": [
+      {
+        "label": "/quiz · Gemini",
+        "src": "materials/gemini-shortcuts/screenshots/quiz.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Gemini native quiz in English showing a selected answer, chapter-grounded feedback and navigation.",
+        "caption": "Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.",
+        "format": "Native Gemini widget",
+        "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English."
+      },
+      {
+        "label": "/flashcard · Gemini",
+        "src": "materials/gemini-shortcuts/screenshots/flashcard.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Gemini native 25-card deck in English with a revealed answer, navigation and learning tracking.",
+        "caption": "Native 25-card set after retry: answer flip, Next and Previous verified.",
+        "format": "Native Gemini widget",
+        "prompt": "/flashcard Help me study the attached chapter."
+      },
+      {
+        "label": "/fillintheblanks · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/fillintheblanks.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing checked fill-in answers and explanations.",
+        "caption": "Regenerated in Canvas. Unmodified exported HTML verified locally: wrong answer, 2/3 then 3/3, explanations and progress.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English."
+      },
+      {
+        "label": "/sortinggame · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/sortinggame.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing the 3/3 classification result and explanations.",
+        "caption": "Regenerated in Canvas. Unmodified exported HTML verified locally: three classifications, 3/3 score and explanatory feedback.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English."
+      },
+      {
+        "label": "/conceptmap · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/conceptmap.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, with the RAG branch selected and labelled relationships.",
+        "caption": "Regenerated in Canvas; the first export was incomplete. Complete unmodified replacement verified locally: Training and RAG branches, three checked answers and feedback.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English."
+      },
+      {
+        "label": "/peerassessment · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/peerassessment.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, chapter evidence and written feedback.",
+        "caption": "Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English."
       }
     ],
     "studyPhases": {

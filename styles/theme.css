@@ -45,7 +45,7 @@
 }
 :root {
   color-scheme: dark;
-  --deck-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Inter", "Segoe UI", sans-serif;
+  --deck-font: "Public Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
   --deck-command-font: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   --deck-ink: var(--color-stone-50);
   --deck-muted: var(--color-stone-300);
@@ -78,6 +78,10 @@
   --deck-inset-inline: 64px;
   --deck-inset-top: 52px;
   --deck-inset-bottom: 80px;
+  --deck-text-heading: 48px;
+  --deck-text-heading-long: 44px;
+  --deck-text-heading-demo: 32px;
+  --deck-text-subheading: 28px;
   --deck-text-body: 24px;
   --deck-text-prompt: 22px;
   --deck-text-label: 18px;

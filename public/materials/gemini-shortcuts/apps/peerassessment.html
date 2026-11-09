@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer Assessment Rubric: Training, Inference & Context</title>
+    <style>
+        /* CSS Custom Properties & Base Styling */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
+            --slate-400: #94a3b8;
+            --slate-500: #64748b;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            
+            --score-0: #ef4444;
+            --score-0-bg: #fef2f2;
+            --score-0-border: #fca5a5;
+            --score-1: #f59e0b;
+            --score-1-bg: #fffbe completed;
+            --score-1-border: #fcd34d;
+            --score-2: #10b981;
+            --score-2-bg: #ecfdf5;
+            --score-2-border: #6ee7b7;
+
+            --radius: 8px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--slate-50);
+            color: var(--slate-800);
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* Layout & Header */
+        .header {
+            background-color: var(--slate-900);
+            color: #ffffff;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .title-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badge-chapter {
+            background-color: var(--primary);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 12px;
+            color: var(--slate-400);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        select, input[type="text"], input[type="date"], textarea {
+            border: 1px solid var(--slate-300);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 13px;
+            background-color: #ffffff;
+            color: var(--slate-800);
+            outline: none;
+            transition: border-color 0.15s ease;
+        }
+
+        select:focus, input:focus, textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background-color 0.15s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--slate-300);
+            color: var(--slate-700);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--slate-100);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 24px auto 0;
+            padding: 0 16px;
+        }
+
+        /* Metadata & Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 868px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .card-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--slate-500);
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .meta-field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .meta-field label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--slate-600);
+        }
+
+        /* Score Gauge Display */
+        .score-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .score-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .score-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .score-max {
+            font-size: 14px;
+            color: var(--slate-400);
+            font-weight: 500;
+        }
+
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-revision { background-color: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; }
+        .badge-proficient { background-color: #fffbe6; color: #d97706; border: 1px solid #fcd34d; }
+        .badge-exemplary { background-color: #ecfdf5; color: #059669; border: 1px solid #6ee7b7; }
+
+        .progress-bar-bg {
+            background-color: var(--slate-100);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 12px;
+            border: 1px solid var(--slate-200);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background-color: var(--primary);
+            transition: width 0.4s ease, background-color 0.4s ease;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 4px;
+            border-bottom: 2px solid var(--slate-200);
+            margin-bottom: 24px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            background: none;
+            border: none;
+            color: var(--slate-500);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--slate-800);
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Rubric Criteria Cards */
+        .pillar-card {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .pillar-header {
+            background-color: var(--slate-900);
+            color: #ffffff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pillar-title {
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pillar-tag {
+            background: rgba(255, 255, 255, 0.15);
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .criterion-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .criterion-item:last-child {
+            border-bottom: none;
+        }
+
+        .criterion-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .criterion-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .criterion-info p {
+            font-size: 13px;
+            color: var(--slate-600);
+            margin-top: 2px;
+        }
+
+        /* Score Button Selector */
+        .score-selector {
+            display: flex;
+            background-color: var(--slate-100);
+            padding: 4px;
+            border-radius: 8px;
+            border: 1px solid var(--slate-200);
+            gap: 4px;
+            shrink: 0;
+        }
+
+        .score-opt-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--slate-600);
+            transition: all 0.15s ease;
+        }
+
+        .score-opt-btn:hover {
+            background-color: rgba(255,255,255,0.6);
+        }
+
+        .score-opt-btn.active-0 {
+            background-color: var(--score-0);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .score-opt-btn.active-1 {
+            background-color: var(--score-1);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .score-opt-btn.active-2 {
+            background-color: var(--score-2);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        /* Evidence Toggle Drawer */
+        .evidence-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+
+        .evidence-btn:hover {
+            text-decoration: underline;
+        }
+
+        .evidence-drawer {
+            background-color: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 6px;
+            padding: 14px 16px;
+            font-size: 12px;
+            margin-bottom: 14px;
+            display: none;
+        }
+
+        .evidence-drawer.open {
+            display: block;
+        }
+
+        .evidence-title {
+            font-weight: 700;
+            color: var(--slate-800);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .evidence-list {
+            padding-left: 18px;
+            color: var(--slate-700);
+        }
+
+        .evidence-list li {
+            margin-bottom: 4px;
+        }
+
+        .chapter-ref {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
+
+        /* Feedback Section & Tags */
+        .feedback-area {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .tags-row {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .tag-btn {
+            background-color: var(--slate-100);
+            border: 1px solid var(--slate-200);
+            color: var(--slate-700);
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .tag-btn:hover {
+            background-color: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Calculator & Required Evidence Artifacts Tab */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .calc-box {
+            background-color: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .calc-output-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background-color: var(--slate-50);
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .prob-bar-container {
+            width: 100%;
+            background-color: var(--slate-200);
+            height: 14px;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            margin-top: 12px;
+        }
+
+        .prob-seg-A { background-color: #3b82f6; transition: width 0.3s ease; }
+        .prob-seg-B { background-color: #06b6d4; transition: width 0.3s ease; }
+        .prob-seg-C { background-color: #64748b; transition: width 0.3s ease; }
+
+        /* Checklist Items */
+        .checklist-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 14px;
+            background-color: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 6px;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        /* Modal Export */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            padding: 16px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: var(--radius);
+            max-width: 650px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .modal-header {
+            padding: 16px 20px;
+            background-color: var(--slate-900);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            font-size: 13px;
+        }
+
+        .modal-footer {
+            padding: 12px 20px;
+            background-color: var(--slate-50);
+            border-top: 1px solid var(--slate-200);
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        pre {
+            background-color: var(--slate-900);
+            color: #38bdf8;
+            padding: 14px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--slate-900);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 13px;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 200;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast Notice -->
+    <div id="toast" class="toast">Action completed successfully</div>
+
+    <!-- Main Navigation Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="title-area">
+                <span class="badge-chapter">Ch. 01 Grounded</span>
+                <div>
+                    <h1>Interactive Peer-Assessment Rubric</h1>
+                    <p>Training, Inference & Context • Cremaschi (2026) Framework</p>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <select id="samplePreset" onchange="loadPresetSample(this.value)">
+                    <option value="" disabled selected>Load Evaluation Preset...</option>
+                    <option value="exemplary">Exemplary Submission (12 / 12 pts)</option>
+                    <option value="partial">Partial Submission (6 / 12 pts)</option>
+                    <option value="misconceptions">Common Misconceptions (2 / 12 pts)</option>
+                    <option value="reset">Clear Form / Reset</option>
+                </select>
+
+                <button class="btn" onclick="openExportModal()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Export Report
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Dashboard & Score Counter -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Assessment Metadata
+                </div>
+                <div class="meta-inputs">
+                    <div class="meta-field">
+                        <label for="studentName">Student / Author</label>
+                        <input type="text" id="studentName" value="Andrea" oninput="saveState()">
+                    </div>
+                    <div class="meta-field">
+                        <label for="evaluatorName">Peer Evaluator</label>
+                        <input type="text" id="evaluatorName" value="Peer Evaluator" oninput="saveState()">
+                    </div>
+                    <div class="meta-field">
+                        <label for="evalDate">Evaluation Date</label>
+                        <input type="date" id="evalDate" oninput="saveState()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="score-box">
+                    <div class="score-header">
+                        <div>
+                            <div class="card-title">Total Score</div>
+                            <div style="display: flex; align-items: baseline; gap: 4px;">
+                                <span id="totalScoreNum" class="score-number">0</span>
+                                <span class="score-max">/ 12 pts</span>
+                            </div>
+                        </div>
+                        <span id="statusBadge" class="status-badge badge-revision">Needs Revision</span>
+                    </div>
+
+                    <div>
+                        <div class="progress-bar-bg">
+                            <div id="progressBar" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('rubricTab', this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Assessment Rubric (6 Criteria)
+            </button>
+            <button class="tab-btn" onclick="switchTab('artifactsTab', this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Required Deliverables Checklist
+            </button>
+            <button class="tab-btn" onclick="switchTab('calcTab', this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
+                Softmax & Temperature Verifier
+            </button>
+        </div>
+
+        <!-- TAB 1: RUBRIC FORM -->
+        <div id="rubricTab" class="tab-panel active">
+
+            <!-- PILLAR 1: TRAINING -->
+            <div class="pillar-card">
+                <div class="pillar-header">
+                    <div class="pillar-title">
+                        <span class="pillar-tag">Pillar 1</span>
+                        Model Data, Parameters & Training
+                    </div>
+                    <span style="font-size: 12px; color: var(--slate-400);">Sections 1.1, 1.2 & Table 1</span>
+                </div>
+
+                <!-- Criterion 1.1 -->
+                <div class="criterion-item">
+                    <div class="criterion-top">
+                        <div class="criterion-info">
+                            <h4>1.1 Parameter Updates vs. Weight Constancy</h4>
+                            <p>Distinguishes pretraining parameter optimization from changing prompt text or conversation context.</p>
+                        </div>
+                        <div class="score-selector">
+                            <button class="score-opt-btn" onclick="setScore('c11', 0, this)">0 (Unsatisfactory)</button>
+                            <button class="score-opt-btn" onclick="setScore('c11', 1, this)">1 (Partial)</button>
+                            <button class="score-opt-btn" onclick="setScore('c11', 2, this)">2 (Complete)</button>
+                        </div>
+                    </div>
+
+                    <button class="evidence-btn" onclick="toggleEvidence('ev-c11')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Show Expected Evidence & Chapter References
+                    </button>
+
+                    <div id="ev-c11" class="evidence-drawer">
+                        <div class="evidence-title">Expected Evidence from Chapter (Sec. 1.1, 1.2, Tab. 1, Resource B Q1):</div>
+                        <ul class="evidence-list">
+                            <li><strong>Pretraining:</strong> System compares predicted distribution with actual tokens in training examples to reduce aggregate prediction error by updating numerical parameter weights.</li>
+                            <li><strong>In-Context Text Injection:</strong> Supplying text like "In this chapter, X means Y" or uploading a document alters available inference context only; it does <em>not</em> update model parameters.</li>
+                            <li><strong>Assistant vs. Model:</strong> Correctly separates service application features (web search, file retrieval, memory, UI filters) from the fixed core language model.</li>
+                        </ul>
+                        <span class="chapter-ref">Chapter Checkpoint: "Does a definition in prompt prove parameter update? No, weights remain fixed."</span>
+                    </div>
+
+                    <div class="feedback-area">
+                        <textarea id="fb-c11" rows="2" placeholder="Record feedback and evidence observed for Criterion 1.1..." oninput="saveState()"></textarea>
+                        <div class="tags-row">
+                            <span style="font-size: 11px; color: var(--slate-500); font-weight: 600;">Quick Tags:</span>
+                            <button class="tag-btn" onclick="addTag('fb-c11', 'Correctly distinguished prompt context from weight training.')">+ Context vs Weights Correct</button>
+                            <button class="tag-btn" onclick="addTag('fb-c11', 'Incorrectly assumed prompt text updates model parameters.')">+ Weight Misconception</button>
+                            <button class="tag-btn" onclick="addTag('fb-c11', 'Accurately separated assistant search features from core model.')">+ Assistant Tools Separated</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Criterion 1.2 -->
+                <div class="criterion-item">
+                    <div class="criterion-top">
+                        <div class="criterion-info">
+                            <h4>1.2 Instruction Tuning & Model Limitations</h4>
+                            <p>Evaluates understanding of post-pretraining instruction adaptation and inherent limits.</p>
+                        </div>
+                        <div class="score-selector">
+                            <button class="score-opt-btn" onclick="setScore('c12', 0, this)">0 (Unsatisfactory)</button>
+                            <button class="score-opt-btn" onclick="setScore('c12', 1, this)">1 (Partial)</button>
+                            <button class="score-opt-btn" onclick="setScore('c12', 2, this)">2 (Complete)</button>
+                        </div>
+                    </div>
+
+                    <button class="evidence-btn" onclick="toggleEvidence('ev-c12')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Show Expected Evidence & Chapter References
+                    </button>
+
+                    <div id="ev-c12" class="evidence-drawer">
+                        <div class="evidence-title">Expected Evidence from Chapter (Sec. 1.2, 1.8):</div>
+                        <ul class="evidence-list">
+                            <li><strong>Instruction Alignment:</strong> Explains post-pretraining alignment (e.g., InstructGPT using demonstrations and human preferences) to orient the model to follow instructions.</li>
+                            <li><strong>Model Limitations:</strong> States clearly that instruction tuning ("Instruct") does <em>not</em> guarantee factual truthfulness, freedom from bias, or error-free task execution.</li>
+                            <li><strong>Hallucination Reality:</strong> Recognizes that plausible but unsupported outputs (hallucinations) do not disappear simply by lowering temperature; deterministic selection can consistently reproduce mistakes.</li>
+                        </ul>
+                        <span class="chapter-ref">Chapter Ref: Section 1.2 (Ouyang et al., 2022) & Section 1.8 (Reliability and Limitations)</span>
+                    </div>
+
+                    <div class="feedback-area">
+                        <textarea id="fb-c12" rows="2" placeholder="Record feedback and evidence observed for Criterion 1.2..." oninput="saveState()"></textarea>
+                        <div class="tags-row">
+                            <span style="font-size: 11px; color: var(--slate-500); font-weight: 600;">Quick Tags:</span>
+                            <button class="tag-btn" onclick="addTag('fb-c12', 'Explains InstructGPT alignment accurately.')">+ Instruct Alignment Noted</button>
+                            <button class="tag-btn" onclick="addTag('fb-c12', 'Recognizes that lower temperature does not eliminate hallucinations.')">+ Hallucination Limits Recognized</button>
+                            <button class="tag-btn" onclick="addTag('fb-c12', 'Falsely assumed Instruct models are guaranteed truthful.')">+ Truthfulness Assumption Error</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PILLAR 2: INFERENCE -->
+            <div class="pillar-card">
+                <div class="pillar-header">
+                    <div class="pillar-title">
+                        <span class="pillar-tag">Pillar 2</span>
+                        Model Inference & Decoding Architecture
+                    </div>
+                    <span style="font-size: 12px; color: var(--slate-400);">Sections 1.4, 1.5, 1.6 & Figures 3-6</span>
+                </div>
+
+                <!-- Criterion 2.1 -->
+                <div class="criterion-item">
+                    <div class="criterion-top">
+                        <div class="criterion-info">
+                            <h4>2.1 Flow Architecture & Causal Mask Constraint</h4>
+                            <p>Traces the sequence transformation pipeline and explains the autoregressive causal mask rule.</p>
+                        </div>
+                        <div class="score-selector">
+                            <button class="score-opt-btn" onclick="setScore('c21', 0, this)">0 (Unsatisfactory)</button>
+                            <button class="score-opt-btn" onclick="setScore('c21', 1, this)">1 (Partial)</button>
+                            <button class="score-opt-btn" onclick="setScore('c21', 2, this)">2 (Complete)</button>
+                        </div>
+                    </div>
+
+                    <button class="evidence-btn" onclick="toggleEvidence('ev-c21')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Show Expected Evidence & Chapter References
+                    </button>
+
+                    <div id="ev-c21" class="evidence-drawer">
+                        <div class="evidence-title">Expected Evidence from Chapter (Sec. 1.4, 1.5, Fig. 3, Fig. 4, Fig. 5, Resource B Q2):</div>
+                        <ul class="evidence-list">
+                            <li><strong>Pipeline Flow:</strong> Text $\rightarrow$ Token ID $\rightarrow$ Initial Embedding $\rightarrow$ Decoder Blocks (Causal Attention + Feed-Forward + Residuals) $\rightarrow$ Logits $\rightarrow$ Softmax Probabilities $\rightarrow$ Token Selection.</li>
+                            <li><strong>Causal Masking Constraint:</strong> When predicting the next token, query position $q$ can attend to earlier keys ($k \le q$) and itself, but is strictly blocked from attending to future positions ($k > q$).</li>
+                            <li><strong>Query, Key, Value & Attention:</strong> Queries compare with keys to weight values. Attention is a mathematical operation; it does not imply human consciousness or fixed head labels like "grammar".</li>
+                        </ul>
+                        <span class="chapter-ref">Chapter Ref: Section 1.5 & Figure 5 (Causal Access Mask Matrix)</span>
+                    </div>
+
+                    <div class="feedback-area">
+                        <textarea id="fb-c21" rows="2" placeholder="Record feedback and evidence observed for Criterion 2.1..." oninput="saveState()"></textarea>
+                        <div class="tags-row">
+                            <span style="font-size: 11px; color: var(--slate-500); font-weight: 600;">Quick Tags:</span>
+                            <button class="tag-btn" onclick="addTag('fb-c21', 'Traced pipeline flow from Token ID to Softmax accurately.')">+ Pipeline Flow Clear</button>
+                            <button class="tag-btn" onclick="addTag('fb-c21', 'Explained causal mask restriction correctly (k > q blocked).')">+ Causal Mask Rule Verified</button>
+                            <button class="tag-btn" onclick="addTag('fb-c21', 'Confused initial token embedding with contextual representation.')">+ Embedding vs Context Vector Mixup</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Criterion 2.2 -->
+                <div class="criterion-item">
+                    <div class="criterion-top">
+                        <div class="criterion-info">
+                            <h4>2.2 Softmax Distribution, Temperature & Probabilities</h4>
+                            <p>Evaluates Softmax calculation over full vocabulary, controlled temperature experiments, and truth distinction.</p>
+                        </div>
+                        <div class="score-selector">
+                            <button class="score-opt-btn" onclick="setScore('c22', 0, this)">0 (Unsatisfactory)</button>
+                            <button class="score-opt-btn" onclick="setScore('c22', 1, this)">1 (Partial)</button>
+                            <button class="score-opt-btn" onclick="setScore('c22', 2, this)">2 (Complete)</button>
+                        </div>
+                    </div>
+
+                    <button class="evidence-btn" onclick="toggleEvidence('ev-c22')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Show Expected Evidence & Chapter References
+                    </button>
+
+                    <div id="ev-c22" class="evidence-drawer">
+                        <div class="evidence-title">Expected Evidence from Chapter (Sec. 1.6, Fig. 6-7, Tab. 2, Sec. 1.8):</div>
+                        <ul class="evidence-list">
+                            <li><strong>Softmax Formula:</strong> $p_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)}$. Calculates probabilities across full vocabulary; top tokens plus remaining mass must equal 100%.</li>
+                            <li><strong>Controlled Temperature Experiment:</strong> Keeping input and logits fixed, increasing $T$ flattens probability concentration across alternatives without changing logit ranking or model parameters.</li>
+                            <li><strong>Probability $\neq$ Truth Error Correction:</strong> Corrects the false claim "80% token probability = 80% truth probability", specifying that probability measures continuation likelihood under learned distribution, not truth.</li>
+                        </ul>
+                        <span class="chapter-ref">Chapter Ref: Section 1.6 & Section 1.8 ("Correct the error")</span>
+                    </div>
+
+                    <div class="feedback-area">
+                        <textarea id="fb-c22" rows="2" placeholder="Record feedback and evidence observed for Criterion 2.2..." oninput="saveState()"></textarea>
+                        <div class="tags-row">
+                            <span style="font-size: 11px; color: var(--slate-500); font-weight: 600;">Quick Tags:</span>
+                            <button class="tag-btn" onclick="addTag('fb-c22', 'Demonstrated full vocabulary Softmax normalization including remaining mass.')">+ Full Vocabulary Distribution Correct</button>
+                            <button class="tag-btn" onclick="addTag('fb-c22', 'Controlled single-variable temperature experiment performed.')">+ Single-Variable Temp Protocol</button>
+                            <button class="tag-btn" onclick="addTag('fb-c22', 'Correctly stated that continuation probability does not measure truth.')">+ Probability vs Truth Corrected</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PILLAR 3: CONTEXT -->
+            <div class="pillar-card">
+                <div class="pillar-header">
+                    <div class="pillar-title">
+                        <span class="pillar-tag">Pillar 3</span>
+                        Context, Tokenization & Retrieval (RAG)
+                    </div>
+                    <span style="font-size: 12px; color: var(--slate-400);">Sections 1.3, 1.7, 1.8 & Figures 2, 8</span>
+                </div>
+
+                <!-- Criterion 3.1 -->
+                <div class="criterion-item">
+                    <div class="criterion-top">
+                        <div class="criterion-info">
+                            <h4>3.1 Tokenization Mechanics & Context Limits</h4>
+                            <p>Inspects actual tokenizer output IDs, character sensitivity, and context window allocation.</p>
+                        </div>
+                        <div class="score-selector">
+                            <button class="score-opt-btn" onclick="setScore('c31', 0, this)">0 (Unsatisfactory)</button>
+                            <button class="score-opt-btn" onclick="setScore('c31', 1, this)">1 (Partial)</button>
+                            <button class="score-opt-btn" onclick="setScore('c31', 2, this)">2 (Complete)</button>
+                        </div>
+                    </div>
+
+                    <button class="evidence-btn" onclick="toggleEvidence('ev-c31')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Show Expected Evidence & Chapter References
+                    </button>
+
+                    <div id="ev-c31" class="evidence-drawer">
+                        <div class="evidence-title">Expected Evidence from Chapter (Sec. 1.3, Fig. 2, Sec. 1.9):</div>
+                        <ul class="evidence-list">
+                            <li><strong>Actual Token Inspection:</strong> Displays actual model tokenizer output IDs (e.g. Qwen tokenizer IDs 785, 6722, 315, 15344, 374) rather than assuming words equal tokens.</li>
+                            <li><strong>Sensitivity Check:</strong> Tests how capitalization, extra spaces, or punctuation change token segmentation and assigned IDs.</li>
+                            <li><strong>Context Allocation:</strong> Context window length is measured in tokens, containing system instructions, conversation history, and uploaded snippets. Token IDs are arbitrary indices, not semantic measurements.</li>
+                        </ul>
+                        <span class="chapter-ref">Chapter Ref: Section 1.3 ("Tokens and text") & Figure 2</span>
+                    </div>
+
+                    <div class="feedback-area">
+                        <textarea id="fb-c31" rows="2" placeholder="Record feedback and evidence observed for Criterion 3.1..." oninput="saveState()"></textarea>
+                        <div class="tags-row">
+                            <span style="font-size: 11px; color: var(--slate-500); font-weight: 600;">Quick Tags:</span>
+                            <button class="tag-btn" onclick="addTag('fb-c31', 'Inspected actual numerical tokenizer IDs using real tokenizer.')">+ Actual Token IDs Verified</button>
+                            <button class="tag-btn" onclick="addTag('fb-c31', 'Tested capitalization/spacing impact on token counts.')">+ Tokenizer Sensitivity Tested</button>
+                            <button class="tag-btn" onclick="addTag('fb-c31', 'Equated word count directly to token count without checking.')">+ Word=Token Misconception</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Criterion 3.2 -->
+                <div class="criterion-item">
+                    <div class="criterion-top">
+                        <div class="criterion-info">
+                            <h4>3.2 Context Framing, RAG & Citation Verification</h4>
+                            <p>Evaluates prompt framing variations, document retrieval (RAG), and independent citation checking.</p>
+                        </div>
+                        <div class="score-selector">
+                            <button class="score-opt-btn" onclick="setScore('c32', 0, this)">0 (Unsatisfactory)</button>
+                            <button class="score-opt-btn" onclick="setScore('c32', 1, this)">1 (Partial)</button>
+                            <button class="score-opt-btn" onclick="setScore('c32', 2, this)">2 (Complete)</button>
+                        </div>
+                    </div>
+
+                    <button class="evidence-btn" onclick="toggleEvidence('ev-c32')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Show Expected Evidence & Chapter References
+                    </button>
+
+                    <div id="ev-c32" class="evidence-drawer">
+                        <div class="evidence-title">Expected Evidence from Chapter (Sec. 1.7, 1.8, Fig. 1):</div>
+                        <ul class="evidence-list">
+                            <li><strong>Context Framing Experiment:</strong> Keeps temperature fixed and varies prompt framing (e.g. "The capital of France is" vs "In my story, the imaginary capital..."), showing that output changes reflect task definition, not weight loss.</li>
+                            <li><strong>RAG Mechanics:</strong> Explains RAG as document search providing external passages to inference context without changing model parameters.</li>
+                            <li><strong>Citation Verification Check:</strong> Opens and reads cited source passages directly to verify if they support claims; recognizes generated link presence is not automatic proof.</li>
+                        </ul>
+                        <span class="chapter-ref">Chapter Ref: Section 1.7 ("Generation, context and retrieval") & Section 1.8</span>
+                    </div>
+
+                    <div class="feedback-area">
+                        <textarea id="fb-c32" rows="2" placeholder="Record feedback and evidence observed for Criterion 3.2..." oninput="saveState()"></textarea>
+                        <div class="tags-row">
+                            <span style="font-size: 11px; color: var(--slate-500); font-weight: 600;">Quick Tags:</span>
+                            <button class="tag-btn" onclick="addTag('fb-c32', 'Altered prompt framing under controlled temperature.')">+ Prompt Framing Experiment Done</button>
+                            <button class="tag-btn" onclick="addTag('fb-c32', 'Correctly distinguished RAG context injection from parameter training.')">+ RAG vs Pretraining Clear</button>
+                            <button class="tag-btn" onclick="addTag('fb-c32', 'Verified generated citations against actual source text.')">+ Source Citations Verified</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Evaluation Summary Textarea -->
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-title">Synthesized Peer Feedback & Actionable Recommendations</div>
+                <textarea id="overallComments" rows="4" style="width: 100%;" placeholder="Provide an overall synthesis evaluating the student's process map, controlled experiments, code verification, and conceptual understanding..." oninput="saveState()"></textarea>
+            </div>
+
+        </div>
+
+        <!-- TAB 2: REQUIRED DELIVERABLES CHECKLIST -->
+        <div id="artifactsTab" class="tab-panel">
+            <div class="card" style="margin-bottom: 24px;">
+                <div class="card-title">Required Evidence Artifacts (Cremaschi Ch. 01, Sec. 1.9 & 1.10)</div>
+                <p style="font-size: 13px; color: var(--slate-600); margin-bottom: 16px;">
+                    To complete assessment, verify the submission includes all four mandatory evidence artifacts required by the study path:
+                </p>
+
+                <div class="checklist-group">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="art1" onchange="saveState()">
+                        <div>
+                            <strong style="font-size: 14px; color: var(--slate-900);">1. Process & Architecture Map (Sec. 1.10)</strong>
+                            <p style="font-size: 12px; color: var(--slate-600);">Structured conceptual diagram/map with named functional relationships (Text $\rightarrow$ Token ID $\rightarrow$ Initial Vector $\rightarrow$ Decoder Transformation $\rightarrow$ Logits $\rightarrow$ Softmax $\rightarrow$ Selection) rather than an unlinked list of terms.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="art2" onchange="saveState()">
+                        <div>
+                            <strong style="font-size: 14px; color: var(--slate-900);">2. Justified Predictions & Controlled Lab Protocol (Sec. 1.9)</strong>
+                            <p style="font-size: 12px; color: var(--slate-600);">Recorded log of at least two single-variable experiments (Exp A vs Exp B): keeping context fixed while varying temperature, or keeping temperature fixed while varying context framing. Records saved top tokens, probabilities, and remaining mass before sampling.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="art3" onchange="saveState()">
+                        <div>
+                            <strong style="font-size: 14px; color: var(--slate-900);">3. Independent Flow Explanation (Sec. 1.9, 1.10)</strong>
+                            <p style="font-size: 12px; color: var(--slate-600);">Concise, unassisted verbal or written explanation demonstrating personal understanding of how input text converts to token IDs and how causal masking governs next-token prediction.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="art4" onchange="saveState()">
+                        <div>
+                            <strong style="font-size: 14px; color: var(--slate-900);">4. Error Detection, Reason & Verification Check (Sec. 1.8, 1.9, 1.10)</strong>
+                            <p style="font-size: 12px; color: var(--slate-600);">Identified error from initial code/understanding (e.g. unnormalized top-5 probabilities, incorrect causal mask, or probability = truth misconception) specifying the exact test performed to detect and correct it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: SOFTMAX & TEMPERATURE VERIFIER CALCULATOR -->
+        <div id="calcTab" class="tab-panel">
+            <div class="calc-box">
+                <div class="card-title">Interactive Softmax & Temperature Verifier</div>
+                <p style="font-size: 13px; color: var(--slate-600);">
+                    Verify candidate probability calculations against Chapter Section 1.6 (Table 2 worked three-token example with fixed logits 2, 1, 0).
+                </p>
+
+                <div class="calc-grid">
+                    <div>
+                        <div class="meta-field" style="margin-bottom: 12px;">
+                            <label>Token A Logit ($z_A$)</label>
+                            <input type="number" id="logitA" value="2.0" step="0.1" oninput="calculateSoftmax()">
+                        </div>
+                        <div class="meta-field" style="margin-bottom: 12px;">
+                            <label>Token B Logit ($z_B$)</label>
+                            <input type="number" id="logitB" value="1.0" step="0.1" oninput="calculateSoftmax()">
+                        </div>
+                        <div class="meta-field" style="margin-bottom: 12px;">
+                            <label>Token C Logit ($z_C$)</label>
+                            <input type="number" id="logitC" value="0.0" step="0.1" oninput="calculateSoftmax()">
+                        </div>
+                        <div class="meta-field">
+                            <label>Temperature ($T$)</label>
+                            <input type="range" id="tempRange" min="0.1" max="3.0" step="0.1" value="1.0" oninput="syncTemp(this.value)">
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--slate-500); margin-top: 2px;">
+                                <span>T = <strong id="tempVal">1.0</strong></span>
+                                <span onclick="syncTemp(0.5)" style="cursor:pointer; text-decoration:underline;">T=0.5</span>
+                                <span onclick="syncTemp(1.0)" style="cursor:pointer; text-decoration:underline;">T=1.0</span>
+                                <span onclick="syncTemp(2.0)" style="cursor:pointer; text-decoration:underline;">T=2.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background-color: var(--slate-50); padding: 16px; border-radius: 6px; border: 1px solid var(--slate-200);">
+                        <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px;">Calculated Distribution:</div>
+                        <div class="calc-output-row">
+                            <span>Token A Prob ($p_A$)</span>
+                            <strong id="probA">66.52%</strong>
+                        </div>
+                        <div class="calc-output-row">
+                            <span>Token B Prob ($p_B$)</span>
+                            <strong id="probB">24.47%</strong>
+                        </div>
+                        <div class="calc-output-row">
+                            <span>Token C Prob ($p_C$)</span>
+                            <strong id="probC">9.00%</strong>
+                        </div>
+                        <div class="calc-output-row" style="background: white; border: 1px solid var(--slate-200);">
+                            <span>Denominator Sum ($\sum \exp$)</span>
+                            <strong id="denomSum">11.1073</strong>
+                        </div>
+
+                        <div class="prob-bar-container">
+                            <div id="barA" class="prob-seg-A" style="width: 66.52%;"></div>
+                            <div id="barB" class="prob-seg-B" style="width: 24.47%;"></div>
+                            <div id="barC" class="prob-seg-C" style="width: 9.00%;"></div>
+                        </div>
+                        <p style="font-size: 11px; color: var(--slate-500); margin-top: 6px; text-align: center;">
+                            Logit ordering remains unchanged while temperature redistributes mass.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- EXPORT MODAL -->
+    <div id="exportModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="font-size: 16px; font-weight: 700;">Peer Assessment Summary Report</h3>
+                <button onclick="closeExportModal()" style="background: none; border: none; color: white; cursor: pointer; font-size: 18px;">&times;</button>
+            </div>
+            <div class="modal-body">
+                <pre id="exportText"></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="copyReportText()">Copy to Clipboard</button>
+                <button class="btn" onclick="closeExportModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // State Management
+        const state = {
+            studentName: 'Andrea',
+            evaluatorName: 'Peer Evaluator',
+            evalDate: new Date().toISOString().split('T')[0],
+            scores: {
+                c11: 0, c12: 0,
+                c21: 0, c22: 0,
+                c31: 0, c32: 0
+            },
+            feedback: {
+                c11: '', c12: '',
+                c21: '', c22: '',
+                c31: '', c32: '',
+                overall: ''
+            },
+            checklist: {
+                art1: false, art2: false, art3: false, art4: false
+            }
+        };
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('evalDate').value = state.evalDate;
+            calculateSoftmax();
+            updateTotalScore();
+        });
+
+        // Tab Switcher
+        function switchTab(tabId, btnEl) {
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            btnEl.classList.add('active');
+        }
+
+        // Toggle Evidence Drawer
+        function toggleEvidence(drawerId) {
+            const drawer = document.getElementById(drawerId);
+            if (drawer.style.display === 'block') {
+                drawer.style.display = 'none';
+            } else {
+                drawer.style.display = 'block';
+            }
+        }
+
+        // Set Score for Criterion
+        function setScore(critId, val, btnEl) {
+            state.scores[critId] = val;
+            
+            // Update button styles within group
+            const container = btnEl.parentElement;
+            const buttons = container.querySelectorAll('.score-opt-btn');
+            buttons.forEach((btn, index) => {
+                btn.className = 'score-opt-btn';
+                if (index === val) {
+                    btn.classList.add(`active-${val}`);
+                }
+            });
+
+            updateTotalScore();
+            saveState();
+        }
+
+        // Update Total Score & Status Gauge
+        function updateTotalScore() {
+            let total = 0;
+            Object.values(state.scores).forEach(score => total += score);
+
+            const scoreEl = document.getElementById('totalScoreNum');
+            const badgeEl = document.getElementById('statusBadge');
+            const progressEl = document.getElementById('progressBar');
+
+            scoreEl.textContent = total;
+            const pct = (total / 12) * 100;
+            progressEl.style.width = pct + '%';
+
+            if (total >= 10) {
+                badgeEl.textContent = 'Exemplary (10-12 pts)';
+                badgeEl.className = 'status-badge badge-exemplary';
+                progressEl.style.backgroundColor = 'var(--score-2)';
+            } else if (total >= 6) {
+                badgeEl.textContent = 'Proficient (6-9 pts)';
+                badgeEl.className = 'status-badge badge-proficient';
+                progressEl.style.backgroundColor = 'var(--score-1)';
+            } else {
+                badgeEl.textContent = 'Needs Revision (0-5 pts)';
+                badgeEl.className = 'status-badge badge-revision';
+                progressEl.style.backgroundColor = 'var(--score-0)';
+            }
+        }
+
+        // Quick Tag Insertion
+        function addTag(textareaId, text) {
+            const textarea = document.getElementById(textareaId);
+            if (textarea.value.trim().length > 0) {
+                textarea.value += ' ' + text;
+            } else {
+                textarea.value = text;
+            }
+            saveState();
+            showToast('Tag inserted into feedback');
+        }
+
+        // Save State
+        function saveState() {
+            state.studentName = document.getElementById('studentName').value;
+            state.evaluatorName = document.getElementById('evaluatorName').value;
+            state.evalDate = document.getElementById('evalDate').value;
+            state.feedback.overall = document.getElementById('overallComments').value;
+
+            ['c11','c12','c21','c22','c31','c32'].forEach(id => {
+                const el = document.getElementById('fb-' + id);
+                if (el) state.feedback[id] = el.value;
+            });
+
+            ['art1','art2','art3','art4'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) state.checklist[id] = el.checked;
+            });
+        }
+
+        // Load Preset Evaluation Samples
+        function loadPresetSample(type) {
+            if (type === 'reset') {
+                document.querySelectorAll('.score-opt-btn').forEach(btn => btn.className = 'score-opt-btn');
+                Object.keys(state.scores).forEach(k => state.scores[k] = 0);
+                Object.keys(state.feedback).forEach(k => {
+                    state.feedback[k] = '';
+                    const el = document.getElementById('fb-' + k);
+                    if (el) el.value = '';
+                });
+                document.getElementById('overallComments').value = '';
+                ['art1','art2','art3','art4'].forEach(id => document.getElementById(id).checked = false);
+                updateTotalScore();
+                showToast('Form reset successfully');
+                return;
+            }
+
+            const presets = {
+                exemplary: {
+                    scores: { c11: 2, c12: 2, c21: 2, c22: 2, c31: 2, c32: 2 },
+                    feedback: {
+                        c11: 'Correctly separated prompt context from model weights.',
+                        c12: 'Recognizes that lower temperature does not eliminate hallucinations.',
+                        c21: 'Explained causal mask restriction correctly (k > q blocked).',
+                        c22: 'Demonstrated full vocabulary Softmax normalization including remaining mass.',
+                        c31: 'Inspected actual numerical tokenizer IDs using real tokenizer.',
+                        c32: 'Verified generated citations against actual source text.',
+                        overall: 'Outstanding submission. Demonstrates complete mastery of training vs inference, causal attention constraints, full Softmax normalization, and empirical verification.'
+                    },
+                    checklist: { art1: true, art2: true, art3: true, art4: true }
+                },
+                partial: {
+                    scores: { c11: 1, c12: 1, c21: 1, c22: 1, c31: 1, c32: 1 },
+                    feedback: {
+                        c11: 'Understands context vs weights but missed assistant tool distinctions.',
+                        c12: 'Noted Instruct alignment but did not discuss hallucination limits.',
+                        c21: 'Traced general flow but lacked detail on causal mask matrix.',
+                        c22: 'Calculated top 5 tokens correctly but omitted remaining mass.',
+                        c31: 'Checked token count but did not inspect raw numerical IDs.',
+                        c32: 'Altered prompt framing but skipped citation source verification.',
+                        overall: 'Solid foundation, but requires more rigorous single-variable controlled lab protocols and complete full-vocabulary normalization.'
+                    },
+                    checklist: { art1: true, art2: true, art3: false, art4: false }
+                },
+                misconceptions: {
+                    scores: { c11: 0, c12: 0, c21: 0, c22: 1, c31: 0, c32: 1 },
+                    feedback: {
+                        c11: 'Confused prompt text injection with parameter updates.',
+                        c12: 'Falsely assumed Instruct models are guaranteed truthful.',
+                        c21: 'Confused initial token embedding with contextual representation.',
+                        c22: 'Equated high token probability with factual truth.',
+                        c31: 'Equated word count directly to token count without checking.',
+                        c32: 'Trusted generated citation link without reading source text.',
+                        overall: 'Major conceptual errors regarding weight updates vs context and probability vs truth. Re-read Sections 1.1, 1.6, and Resource B.'
+                    },
+                    checklist: { art1: true, art2: false, art3: false, art4: false }
+                }
+            };
+
+            const data = presets[type];
+            if (!data) return;
+
+            // Apply Scores
+            Object.keys(data.scores).forEach(critId => {
+                const val = data.scores[critId];
+                state.scores[critId] = val;
+                const container = document.getElementById('fb-' + critId).parentElement.parentElement;
+                const buttons = container.querySelectorAll('.score-opt-btn');
+                buttons.forEach((btn, idx) => {
+                    btn.className = 'score-opt-btn';
+                    if (idx === val) btn.classList.add(`active-${val}`);
+                });
+            });
+
+            // Apply Feedback
+            Object.keys(data.feedback).forEach(k => {
+                state.feedback[k] = data.feedback[k];
+                if (k === 'overall') {
+                    document.getElementById('overallComments').value = data.feedback[k];
+                } else {
+                    const el = document.getElementById('fb-' + k);
+                    if (el) el.value = data.feedback[k];
+                }
+            });
+
+            // Apply Checklist
+            Object.keys(data.checklist).forEach(artId => {
+                document.getElementById(artId).checked = data.checklist[artId];
+            });
+
+            updateTotalScore();
+            showToast(`Loaded ${type} sample evaluation`);
+        }
+
+        // Softmax Math Calculator
+        function syncTemp(val) {
+            document.getElementById('tempRange').value = val;
+            document.getElementById('tempVal').textContent = parseFloat(val).toFixed(1);
+            calculateSoftmax();
+        }
+
+        function calculateSoftmax() {
+            const zA = parseFloat(document.getElementById('logitA').value) || 0;
+            const zB = parseFloat(document.getElementById('logitB').value) || 0;
+            const zC = parseFloat(document.getElementById('logitC').value) || 0;
+            const T = parseFloat(document.getElementById('tempRange').value) || 1.0;
+
+            const expA = Math.exp(zA / T);
+            const expB = Math.exp(zB / T);
+            const expC = Math.exp(zC / T);
+
+            const denom = expA + expB + expC;
+
+            const pA = (expA / denom) * 100;
+            const pB = (expB / denom) * 100;
+            const pC = (expC / denom) * 100;
+
+            document.getElementById('probA').textContent = pA.toFixed(2) + '%';
+            document.getElementById('probB').textContent = pB.toFixed(2) + '%';
+            document.getElementById('probC').textContent = pC.toFixed(2) + '%';
+            document.getElementById('denomSum').textContent = denom.toFixed(4);
+
+            document.getElementById('barA').style.width = pA + '%';
+            document.getElementById('barB').style.width = pB + '%';
+            document.getElementById('barC').style.width = pC + '%';
+        }
+
+        // Modal & Report Export
+        function openExportModal() {
+            saveState();
+            let total = 0;
+            Object.values(state.scores).forEach(s => total += s);
+
+            let status = 'Needs Revision';
+            if (total >= 10) status = 'Exemplary';
+            else if (total >= 6) status = 'Proficient';
+
+            const report = `=====================================================
+PEER ASSESSMENT REPORT: GENERATIVE AI FOUNDATIONS
+Grounded in Marco Cremaschi (2026) Chapter 01
+=====================================================
+
+Student / Author:   ${state.studentName}
+Peer Evaluator:     ${state.evaluatorName}
+Date:               ${state.evalDate}
+Overall Score:      ${total} / 12 pts (${status})
+
+-----------------------------------------------------
+SCORES & OBSERVED EVIDENCE BY CRITERION:
+-----------------------------------------------------
+
+[Pillar 1: Model Data, Parameters & Training]
+1.1 Parameter Updates vs. Weight Constancy: ${state.scores.c11} / 2 pts
+    Feedback: ${state.feedback.c11 || 'No specific notes recorded.'}
+
+1.2 Instruction Tuning & Model Limitations: ${state.scores.c12} / 2 pts
+    Feedback: ${state.feedback.c12 || 'No specific notes recorded.'}
+
+[Pillar 2: Model Inference & Decoding Architecture]
+2.1 Flow Architecture & Causal Mask Rule:   ${state.scores.c21} / 2 pts
+    Feedback: ${state.feedback.c21 || 'No specific notes recorded.'}
+
+2.2 Softmax Distribution & Temperature:    ${state.scores.c22} / 2 pts
+    Feedback: ${state.feedback.c22 || 'No specific notes recorded.'}
+
+[Pillar 3: Context, Tokenization & Retrieval (RAG)]
+3.1 Tokenization & Context Limits:          ${state.scores.c31} / 2 pts
+    Feedback: ${state.feedback.c31 || 'No specific notes recorded.'}
+
+3.2 Context Framing & RAG Citation Check:   ${state.scores.c32} / 2 pts
+    Feedback: ${state.feedback.c32 || 'No specific notes recorded.'}
+
+-----------------------------------------------------
+REQUIRED DELIVERABLES CHECKLIST VERIFICATION:
+-----------------------------------------------------
+[${document.getElementById('art1').checked ? 'X' : ' '}] 1. Process & Architecture Map (Named transformations)
+[${document.getElementById('art2').checked ? 'X' : ' '}] 2. Justified Predictions & Controlled Lab Protocol (Exp A/B)
+[${document.getElementById('art3').checked ? 'X' : ' '}] 3. Independent Flow Reconstruction & Explanation
+[${document.getElementById('art4').checked ? 'X' : ' '}] 4. Error Detection & Verification Check
+
+-----------------------------------------------------
+SYNTHESIZED EVALUATION & RECOMMENDATIONS:
+-----------------------------------------------------
+${state.feedback.overall || 'No overall synthesis provided.'}
+=====================================================`;
+
+            document.getElementById('exportText').textContent = report;
+            document.getElementById('exportModal').classList.add('open');
+        }
+
+        function closeExportModal() {
+            document.getElementById('exportModal').classList.remove('open');
+        }
+
+        function copyReportText() {
+            const text = document.getElementById('exportText').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Report copied to clipboard');
+            }).catch(() => {
+                // Fallback copy
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('Report copied to clipboard');
+            });
+        }
+
+        // Toast Helper
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
