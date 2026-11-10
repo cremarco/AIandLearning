@@ -23,6 +23,7 @@ import ToolLogos from '../shared/ToolLogos.vue'
 import ToolResourceTable from '../shared/ToolResourceTable.vue'
 import BibliographyGrid from '../shared/BibliographyGrid.vue'
 import ActivityTimer from '../shared/ActivityTimer.vue'
+import NotebookOutput from './NotebookOutput.vue'
 import { brandsForLabel, brandsForSlide } from '../../utils/tool-brands'
 import { assetUrl as asset } from '../../utils/assets'
 import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
@@ -35,8 +36,8 @@ const nav = useNav()
 const revealOnClick = computed(() => !!s.value.clicks && !nav.isPrintMode.value && nav.currentRoute.value.name !== 'print')
 const toolChoiceContext = computed(() => s.value.body
   .map(text => ({ text, brands: brandsForLabel(text) })))
-const hasVideo = computed(() => s.value.media?.type === 'video'
-  || s.value.commands?.some(command => command.result?.media.type === 'video'))
+const hasVideo = computed(() => !s.value.notebookOutput && (s.value.media?.type === 'video'
+  || s.value.commands?.some(command => command.result?.media.type === 'video')))
 const audioResult = computed(() => s.value.media?.result?.mediaType?.startsWith('audio/') ? s.value.media.result : undefined)
 function pauseOtherMedia(event: Event) {
   const current = event.target as HTMLMediaElement
@@ -77,7 +78,8 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
     </ul>
     <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
     <div v-if="!['section-divider', 'tool-divider'].includes(s.kind)" class="workshop-stage">
-      <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
+      <NotebookOutput v-if="s.notebookOutput" :output-id="s.notebookOutput" />
+      <ChatGPTIntro v-else-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
       <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
       <ShortcutDetail v-else-if="s.kind === 'shortcut-detail'" :slide="s" />
       <ul v-else-if="s.kind === 'audience-questions'" class="list audience-questions" :aria-label="s.title">

@@ -3,6 +3,7 @@ import path from 'node:path'
 
 import { projectRoot as root, readJson as read } from '../lib/project.mjs'
 const slides = read('data/generated/slides.json')
+const notebookOutputs = read('data/content/notebook-outputs.json')
 const notebookUrl = slides.find(slide => slide.tool === 'notebook' && slide.media?.source)?.media.source
 const sources = read('data/generated/sources.json')
 const shortcutVideos = new Map(read('data/demos/chatgpt-videos.json').clips.map(clip => [clip.command.toLowerCase(), clip]))
@@ -77,7 +78,7 @@ function textContent(slide) {
     ...(slide.references || []).flatMap(item => [item.label, item.citation, item.url]),
     ...(slide.links || []).map(link => `${link.label}: ${link.url}`),
     slide.tool === 'notebook' && slide.media?.source ? `Open notebook: ${slide.media.source}` : '',
-    ...(slide.media ? [slide.media.alt, slide.media.caption, slide.media.transcript || '', ...resultText(slide.media.result)] : []),
+    ...(slide.notebookOutput ? outputText(notebookOutputs[slide.notebookOutput]) : slide.media ? [slide.media.alt, slide.media.caption, slide.media.transcript || '', ...resultText(slide.media.result)] : []),
   ].filter(Boolean)
 }
 
@@ -224,6 +225,28 @@ function resultMarkup(result) {
   return `<div class="recording-result-links" aria-label="Recorded result">${anchors}${result.qualification ? `<p class="meta">${h(result.qualification)}</p>` : ''}</div>`
 }
 
+function outputText(output) {
+  return [
+    `Created with NotebookLM: ${output.feature}`, `Original output: ${output.src}`,
+    ...(output.cards || []).flatMap(card => [card.question, card.answer]),
+    ...(output.questions || []).flatMap(q => [q.question, ...q.options, `Hint: ${q.hint}`, `Correct answer: ${String.fromCharCode(65 + q.correctIndex)}`, ...q.explanations]),
+    ...(output.rows || []).map(row => row.map((cell, i) => `${output.headers[i]}: ${cell}`).join(' · ')),
+  ]
+}
+
+function outputMarkup(output) {
+  const url = h(relative(output.src))
+  let content = ''
+  if (output.type === 'audio') content = `<audio controls preload="none" src="${url}"></audio>`
+  if (output.type === 'video') content = `<video controls preload="none" poster="${h(relative(output.poster))}" src="${url}"><track kind="captions" srclang="en" label="English" src="${h(relative(output.captions))}"></video>`
+  if (output.type === 'pdf') content = output.pages.map((page, i) => `<figure><img loading="lazy" src="${h(relative(page))}" alt="${h(output.feature)} page ${i + 1}"><figcaption>Page ${i + 1} of ${output.pages.length}</figcaption></figure>`).join('')
+  if (output.type === 'image') content = `<a class="link" href="${url}"><img loading="lazy" src="${url}" alt="${h(output.feature)} generated from the chapter"></a>`
+  if (output.type === 'flashcards') content = output.cards.map(card => `<details><summary>${h(card.question)}</summary><p>${h(card.answer)}</p></details>`).join('')
+  if (output.type === 'quiz') content = output.questions.map(q => `<section><h3>${h(q.question)}</h3><ol type="A">${q.options.map(option => `<li>${h(option)}</li>`).join('')}</ol><details><summary>Show answer</summary><p>Correct answer: ${String.fromCharCode(65 + q.correctIndex)}</p><p>${h(q.explanations[q.correctIndex])}</p></details></section>`).join('')
+  if (output.type === 'table') content = `<div class="overflow-x-auto"><table class="table"><thead><tr>${output.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${output.rows.map(row => `<tr>${row.map(cell => `<td>${h(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
+  return `<section class="notebook-output"><h3>${h(output.feature)}</h3><p>Created in NotebookLM${['quiz', 'flashcards', 'table'].includes(output.type) ? ' · local viewer with original content' : ''}</p>${content}<p><a class="link" href="${url}">Open original output</a></p></section>`
+}
+
 function mediaMarkup(media) {
   if (!media) return ''
   const content = media.type === 'video' ? [
@@ -257,7 +280,7 @@ function inner(slide) {
     slide.toolTable ? `<div class="tool-resource-catalogue overflow-x-auto"><table class="table" aria-label="${h(slide.title)}"><thead><tr>${slide.toolTable.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${slide.toolTable.rows.map(row => `<tr><th scope="row"><a class="link" href="${h(relative(row.url))}">${h(row.tool)}</a></th><td>${h(row.purpose)}</td><td>${h(row.access)}</td></tr>`).join('')}</tbody></table></div>` : '',
     slide.shortcutLabels?.length ? `<ul class="shortcut-index">${slide.shortcutLabels.map(item => `<li><code>${h(item.command)}</code></li>`).join('')}</ul>` : '',
     ...catalogue(slide).map(skill => skillMarkup(skill)),
-    mediaMarkup(slide.media),
+    slide.notebookOutput ? outputMarkup(notebookOutputs[slide.notebookOutput]) : mediaMarkup(slide.media),
     ...(slide.screenshots || []).map(item => `<figure><h3>${h(item.label)} · ${h(item.format)}</h3><a class="link" href="${h(relative(item.src))}"><img src="${h(relative(item.src))}" alt="${h(item.alt)}" style="max-width:100%;height:auto"></a><figcaption>${h(item.caption)}</figcaption></figure>${promptMarkup(item.prompt, 'Original slide prompt · tested unchanged in Claude')}`),
     slide.prompt ? promptMarkup(slide.prompt, slide.promptLabel || 'Prompt / excerpt') : '',
     ...(slide.body || []).map(text => `<p>${h(text)}</p>`),

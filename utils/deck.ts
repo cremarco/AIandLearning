@@ -98,6 +98,7 @@ export type Slide = {
   cardBackground?: string
   cards?: SlideCard[]
   media?: SlideMedia
+  notebookOutput?: string
   screenshots?: ScreenshotResult[]
   book?: BookPreview
   character?: Character

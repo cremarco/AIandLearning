@@ -4,417 +4,394 @@ English notes for rehearsal, with no word-count limit. Bold text marks the key w
 
 ## 1. Beyond prompting
 
-Welcome. Today we will follow one **learning path** and explore the visual tools that can support it. Our main question is how AI can help people learn while keeping **independent thinking** at the centre.
+Welcome. Today we will follow one **learning path** and see how AI can help. Our main question is simple: how can we use these tools while keeping **independent thinking** at the centre?
 
 ## 2. Marco Cremaschi
 
-I am Marco Cremaschi, an assistant professor at the University of Milano-Bicocca. My research connects **AI**, knowledge and practical applications. I also teach at several universities, covering **visual communication, interface design and programming**, as well as the use of technology in **psychology and psychiatry**.
+I am Marco Cremaschi, an assistant professor at the University of Milano-Bicocca. My work connects **AI** with practical problems. I also teach visual communication, interface design and programming, including the use of technology in psychology and psychiatry.
 
 ## 3. Whattadata
 
-I'm also a founder of **Whattadata**, a spin-off of the University of Milano-Bicocca. This connects my research with **practical applications**. We work on data analysis, responsible AI and modular solutions. The website link below gives more information about our work and possible collaborations.
+I also helped start **Whattadata**, a university spin-off. We use data and AI to solve practical problems, with attention to people and the limits of the technology. This work connects my research with real applications.
 
-## 4. A visual path for learning with AI
+## 4. From curiosity to classroom practice
 
-Through a **fictional scenario**, today we will follow a simple **learning path**: set a goal, make ideas visible and check them. We will use examples to see how **AI tools** can support the student's work. Along the way, we will ask what the learner needs, which suggestions are useful and how to check understanding. The aim is to leave with a **reusable activity** for your own study or teaching.
+Today we will bring these ideas into **classroom practice**. We will use learning maps and short activities to explore goals, feedback and self-assessment. The aim is to give you ideas you can adapt to your own students.
 
-## 5. From curiosity to classroom practice
+## 5. Visual tools for learning with AI
 
-The same path raises questions for classroom practice: how do we plan, give feedback and assess learning? We will connect these questions with **teacher judgement**, privacy and the risk of trusting an answer **too quickly**.
+For teachers, the aim is to build an **activity you can reuse** in your subject. We will connect a clear goal with a visual task and a check of understanding. You can use the prepared materials or your own examples.
 
-## 6. Visual tools for learning with AI
+## 6. Follow along
 
-For teachers, this becomes a practical design task. The aim is a **reusable activity** for your own subject, connecting goals, visual representations and understanding checks. You can use the **prepared materials** or bring your own examples.
+Before we begin, scan the **QR code** to open the EduForum slides. I will give you a moment. You can use the links to follow the examples and return to them later.
 
-## 7. Follow along
+## 7. Who is this slide for?
 
-To follow this path with me, scan the **QR code** and open the presentation and materials. I will give you a moment. You can return to the examples during the **activities**.
+As you follow the slides, these **icons** show who each activity is for: teachers, students, or both. They will help you find the examples most useful to you.
 
-## 8. Who is this slide for?
+## 8. Before we begin…
 
-You will see these **icons** throughout the presentation. They identify activities for **teachers**, **students**, or both.
+To choose the best starting point, let me ask three questions. Please **raise your hand** if your answer is yes.
 
-## 9. Before we begin…
+[click] First, do you have a **ChatGPT, Gemini or Claude account**?
 
-Before we start, **raise your hand** for each question.
+[click] Next, do you already use **generative AI** to study or prepare teaching materials?
 
-[click] First, who has a **ChatGPT account (or Gemini, or Claude)**?
+[click] Finally, are you familiar with **NotebookLM**? Thank you. We will use prepared examples, so you can follow even if these tools are new to you.
 
-[click] Next, who already uses **generative AI** to study or prepare materials?
+## 9. Andrea needs to understand GenAI
 
-[click] Finally, who is familiar with **NotebookLM**? Use these answers to adjust the examples and offer setup help where needed.
+Let us make this concrete with **Andrea**, a computer science student. He can program, but he still confuses some ideas about generative AI. He needs to study a chapter and explain how a language model produces text. We will follow his learning process; **you do not need programming knowledge**.
 
-## 10. Andrea needs to understand GenAI
+## 10. Andrea’s learning task
 
-To make the method concrete, we will follow **Andrea**, a computer science student preparing for an exam about generative AI.
+Andrea needs to understand the chapter and show what he has learned. We will follow **four connected activities**.
 
-He still confuses some key ideas, so we will follow his **learning process**.
+[click] First, he **reads** the chapter and notes what is unclear.
 
-You **do not need programming knowledge** to follow the example.
+[click] Then, he **represents** the ideas in a diagram and explains the links.
 
-## 11. Andrea’s learning task
+[click] Next, he **checks** the diagram and AI suggestions against the chapter, correcting any errors.
 
-To prepare for his exam, Andrea needs to **learn the key ideas** and show that he understands them. This requires four connected activities.
+[click] Finally, he **explains** a new example in his own words, without AI. His diagram, explanation and corrections show us what he understands.
 
-[click] First, he must **read** the chapter, identify the main concepts and note what is unclear.
+## 11. Self-directed learning: making choices
 
-[click] Then he must **represent** these ideas in a diagram, using labelled arrows to show how they connect.
+These activities ask Andrea to make his own learning choices. This is **self-directed learning**: he sets a goal, chooses how to study and reviews his progress. **Teachers and peers** can help, while he remains responsible for his choices.
 
-[click] Next, he **checks** his explanation and the AI’s suggestions against the chapter. If he finds an error, he updates the diagram and explains what he changed and why.
+## 12. Self-assessment: checking progress
 
-[click] Finally, he must **explain** the process in his own words, without AI help. He should use a new example and correct a wrong explanation. These actions give us **evidence of understanding**, beyond a finished activity.
+But how does Andrea know if his choices are working? Through **self-assessment**: he checks his work against clear criteria. For example, he can explain the ideas but struggles with the links, so he revises his map. AI can offer feedback, but **Andrea decides what needs more work**.
 
-## 12. Self-directed learning: making choices
+## 13. A study process in six phases
 
-These four activities require Andrea to make **learning choices**. He decides where to focus his effort and when to ask for support. After checking his explanation, he also needs to judge whether he is ready to move on or should return to a difficult concept. This is why we introduce **self-directed learning**: taking an active role in setting goals, choosing resources and strategies, and reviewing progress. **Teachers** can help him set realistic goals and give feedback on his reasoning. **Peers** can compare approaches with him and ask questions that reveal gaps in understanding. Andrea uses this support to decide his next steps, while keeping responsibility for his own learning.
+We can organise Andrea's study into **six phases**. Each phase helps him choose what to do next.
 
-## 13. Self-assessment: checking progress
+[click] First, he **plans** a goal and his study time.
 
-How does Andrea know whether his chosen path is working? Through **self-assessment**: he compares what he can explain with **clear criteria**.
+[click] To **understand** an idea, he works through an explanation or example.
 
-He can explain the main ideas but still struggles to show how they connect. His next step is to revise his map and explain those connections again.
+[click] He then **connects** it with what he already knows, using a map.
 
-AI can offer feedback; **Andrea judges the evidence**.
+[click] Next, he tries to **recall** it without the chapter, and reviews it again later.
 
-## 14. A study process in six phases
+[click] To **apply** it, he tries a new example.
 
-These six phases describe **Andrea’s actions**: plan, understand, connect, recall, apply and check. They help him choose the support he needs at each point in his study.
+[click] Finally, he **checks** his answer against the source and criteria. He can return to an earlier phase when needed. The ribbon shows the main and secondary phases. **Support** covers setup, sources and sharing.
 
-[click] He starts by **planning** a goal and organising his time.
+## 14. The assigned book
 
-[click] To **understand** a difficult idea, he works through an explanation or example.
+To try this, Andrea needs a **great book**, by a great author. I am joking, of course. This is a **fictional book** made for the workshop, with real explanations and technical references. We will use its chapter to check AI answers and Andrea's understanding.
 
-[click] He then **connects** it to what he already knows, using a map to explain the relationships.
+## 15. Why these tools?
 
-[click] Next, he tries to **recall** the idea without looking at the chapter, and returns to it over time.
+With the chapter ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **NotebookLM** adds a workspace for selected sources. You do not need paid access to all of them. There are four reasons for this choice.
 
-[click] To **apply** it, he uses a new example.
+[click] First, they give us **more control**. We can ask for a simpler explanation or one question at a time, based on our goal.
 
-[click] Finally, he **checks** his explanation against the source and the learning criteria, then decides what needs more work. He can move between these phases as a difficulty emerges. For example, an error during recall may send him back to a passage or a link in his map. The ribbon highlights the **main phase**, with a smaller secondary phase where relevant. **Support** marks setup, sources and sharing.
+[click] Second, we can **connect our study tasks**. We can use the same chapter for explanations, diagrams and practice, checking each result.
 
-## 15. The assigned book
+[click] Third, we practise **skills we can reuse**. Setting goals and checking answers help us in other subjects too.
 
-To try this method, Andrea needs a **great book**, written by a **great author**...
-Joking aside, this is a **fictional book**, created only for this workshop. Its explanations and technical references are real. We will use the chapter to check **AI suggestions and Andrea's understanding**.
+[click] Finally, we may **save money**. One assistant may cover several needs, although free access has limits. We can add a specialist tool when it helps. Let us start with ChatGPT.
 
-## 16. Why these tools?
+## 16. What can ChatGPT do?
 
-Before we introduce the tools, let me explain **why we chose this small set**. ChatGPT, Gemini and Claude are **alternative assistants**: you can choose one for flexible tasks. NotebookLM adds a workspace for working with selected sources. You do not need a paid subscription to all of them.
+With **ChatGPT**, we start from Andrea's need. Does he need to understand an idea, build a map or practise an answer? The tool can prepare material, but Andrea still needs to **explain or revise it himself**. Let us see how to ask.
 
-[click] First, **more control**. We can ask for a simpler explanation, change the level of difficulty, choose a format or request one question at a time. The learning goal guides the request.
+## 17. Formal and informal shortcuts
 
-[click] Second, **a connected workflow**. Andrea can use the same chapter for explanations, diagrams and practice questions, while checking the outputs against the source. This can reduce the need to move between separate tools for each activity.
+One quick way to ask is to use a **shortcut**. Some shortcuts are features in the app. Others are simply words we put in a prompt to describe the task. Let us look at the difference.
 
-[click] Third, **transferable skills**. Defining a goal, providing relevant sources, refining a request and checking an answer are useful across subjects and assistants.
+## 18. Formal actions and informal shortcuts
 
-[click] Fourth, **potential savings**. One assistant may cover several needs that would otherwise require separate subscriptions. Free access has limits, and some specialist tools are also free, so a lower cost is a possibility rather than a guarantee. **Specialist tools still have a place**: dedicated spaced repetition, classroom management or a guided interface may offer a concrete advantage. We add them when that feature helps the learner. Now we will start with ChatGPT and see what Andrea can do with his chapter.
+We can ask for help in **two ways**: choose an app feature or write a request.
 
-## 17. What can ChatGPT do?
+[click] A **formal action**, such as Study, is a feature we select in the app.
 
-With the chapter as our shared source, we begin with **ChatGPT**. First decide **what Andrea needs to do**: understand an idea, organise it or practise recalling it. ChatGPT can prepare materials for these actions. Each response should lead to his own **explanation or revision**.
+[click] The second way is to **describe an activity**. For example: “/quiz: use this chapter to ask me one question at a time and give feedback on my answers.” Here, **/quiz** is a short label; the rest tells the AI what to do. We can also describe any buttons we want.
 
-## 18. Formal and informal shortcuts
+## 19. Study · practise through guided questions
 
-**Shortcuts** are quick ways to ask ChatGPT to carry out a task. **Formal shortcuts** are features built into the app; **informal shortcuts** are words or labels we use in a prompt to describe what we want.
+Here is the first type in practice. Andrea selects **Study** and asks for one question at a time, based on the chapter. A wrong answer leads to a hint and another attempt. Afterwards, he still needs to **explain the idea without AI** and check it against the source.
 
-## 19. Formal actions and informal shortcuts
+## 20. Read aloud · ChatGPT web
 
-There are **two ways** to ask for support: select an app action or describe a task in your prompt.
+Another built-in feature is **Read aloud**. It reads a ChatGPT response so Andrea can listen to the explanation again. It is available outside Study too. Listening gives him another way to review, but he still needs to check what he understands.
 
-[click] A **formal action** is offered by the application, such as Study.
+## 21. 15 shortcuts for the learning pathway
 
-[click] An **informal label** is part of our request: writing /quiz does not select a menu action or install a feature. We selected **15 complementary examples**. Specify the task, source and format, including any buttons or feedback you need. A label alone does not guarantee an **interactive result**.
+Now let us explore the **15 prompt examples**. Each one supports a learning action, such as recall, explanation or planning. You can select a label to see its purpose and open the recording. As we look, think about which activity would help Andrea with his current difficulty.
 
-## 20. Study · practise through guided questions
+## 22. Selected shortcuts · recall and reflection
 
-Here we see a **formal action** in practice. Andrea selects **Study**, then asks for one question at a time, using only the chapter.
+The first group helps Andrea **recall and review**. With /flashcard, he answers before revealing the explanation. With /mistakelog, he keeps track of errors and corrections. Together, they help him choose what to study again.
 
-Watch how a wrong answer leads to a hint and a **revised explanation**.
+## 23. Selected shortcuts · explain and connect
 
-The next step is an **independent check**: explain the ideas without AI, then compare them with the source.
+Once he knows the terms, Andrea needs to **connect the ideas**. He can build a concept map, match definitions or sort examples. Oral practice then asks him to explain those links in his own words. For each activity, he checks his reasoning against the chapter.
 
-## 21. Read aloud · ChatGPT web
+## 24. Selected shortcuts · practice and assessment
 
-**Read aloud** is a general ChatGPT feature, available beyond its study tools. It reads a response aloud so Andrea can **listen to an explanation again**. As we will see, this gives him another way to revisit the material and work through a difficult idea.
+Next, Andrea can **test his understanding**. A quiz or missing-word task checks specific points. A worksheet asks for a written explanation, while a case study uses a new example. In each case, he answers first, then reads the feedback and explains any correction.
 
-## 22. 15 shortcuts for the learning pathway
+## 25. Selected shortcuts · plan and teach
 
-Use these **15 examples** to choose a learning action: recall, explain, practise, reflect or plan. Hover or focus a label to see its purpose, then open the recorded example and its result. As we explore, ask which activity would address **Andrea’s current difficulty** and what he should produce himself.
+These activities also need a **plan**. Andrea can use /studyplan to choose his next steps. Teachers can plan a lesson, adjust the level of support or set up learning stations. Shared criteria can guide peer feedback. Let us now see the examples in more detail.
 
-## 23. Selected shortcuts · recall and reflection
+## 26. /flashcard
 
-Take **/flashcard** as an example. Andrea asks for cards based on the chapter. One card asks: “Does adding a definition to a prompt change the model’s parameters?” He answers **before revealing** the explanation, then rates his recall. This helps him identify what he needs to review.
+We begin with **flashcards** made from the chapter. Andrea answers from memory, reveals the explanation and rates his recall. That rating moves him to the next card. He can download the ten questions and answers as a **CSV file** for later review.
 
-## 24. Selected shortcuts · explain and connect
+## 27. /mistakelog
 
-For example, **/conceptmap** helps Andrea organise the chapter’s ideas. He asks for a map connecting training, inference and context. He then explains one relationship: **training changes parameters**, while adding information to a prompt changes context. Checking each connection against the chapter makes the map useful for learning.
+When a card reveals an error, Andrea can add it to a **mistake log**. He writes the correction and explains why his first answer was wrong. He can then mark the item as understood or keep it for another review.
 
-## 25. Selected shortcuts · practice and assessment
+## 28. /conceptmap
 
-Consider **/quiz**. Andrea asks for questions about the chapter, with feedback explaining each answer.
+Some errors concern the links between ideas. This **concept map** connects training, inference and RAG. The key questions are: when do parameters change, and when is information added to the context? Andrea explains each link, checks the chapter and corrects his answer if needed.
 
-## 26. Selected shortcuts · plan and teach
+## 29. /matchinggame
 
-With **/studyplan**, Andrea turns a broad goal into manageable activities. He asks for a plan to understand training and inference using the chapter. The plan could include reading a passage, drawing a comparison and answering a question from memory. He tracks completion, then checks **what he can explain independently**.
+If the terms are still unclear, Andrea can start with **matching**. Here he pairs concepts with definitions. After each match, he explains the link in a sentence. A correct pair is a useful start; his explanation shows whether he understands it.
 
-## 27. /flashcard
+## 30. /sortinggame
 
-The key action is **recall before reveal**. This deck was generated with a short request and the attached chapter. Andrea answers from memory, reveals the explanation and rates his recall. Watch how the rating moves to the next card. The **CSV download** contains the ten original questions and answers.
+Next, he uses those meanings to **sort examples** into training or inference. The key question stays the same: do the model's parameters change, or does it use information to produce a response? The feedback helps Andrea check and explain his choice.
 
-## 28. /mistakelog
+## 31. /oral
 
-Corrections from these checks are useful material for the next review. The **mistake log** records misconceptions and written corrections. Andrea can mark an item understood or leave it for another review. The important record is **why the original claim was wrong**.
+Andrea also needs to prepare for an **oral exam**. Here he can type or dictate an answer, then reveal the expected explanation. He compares it with his own words and the chapter. He can return to earlier questions and improve his answers.
 
-## 29. /conceptmap
+## 32. /quiz
 
-Open the **training, inference and RAG** branches in turn. Ask Andrea to explain each labelled relationship before reading the chapter explanation. Then use the check questions to test the distinction: where do **parameters change**, and where does information enter the context? After feedback, ask him to justify a corrected answer.
+A **quiz** gives him another quick check. Andrea chooses an answer before reading the feedback. If he makes a mistake, he uses the explanation to revise. The useful question is: why is the corrected answer right?
 
-## 30. /matchinggame
+## 33. /fillintheblanks
 
-If the difficulty is connecting terms with meanings, matching offers a starting point. Here Andrea matches **concepts and definitions**. After each pair, he should explain the connection in a sentence. This gives us more information than a **correct match** alone.
+To check the terms in a sentence, Andrea can try **fill in the blanks**. He enters the missing words, checks them and corrects any errors. He then explains the whole sentence, including why each word fits.
 
-## 31. /sortinggame
+## 34. /worksheet
 
-He can then test that explanation by classifying concrete situations. Here Andrea **classifies examples** as training or inference. The feedback helps him correct a choice. Ask what changes in each case: the model's **parameters** or the information used for the current response.
+For a longer answer, we can use a **worksheet**. Andrea writes his explanation before revealing a model answer. He compares the work with the criteria and gives himself points. The score is a summary; his written answer shows what he understands.
 
-## 32. /oral
+## 35. /caseStudy
 
-Because Andrea is preparing for an exam, **spoken explanation** matters. He can type or **dictate his answer**, then reveal the expected answer. The widget lets him move between questions and revisit earlier answers. This supports **comparison and revision**: he checks his explanation against the chapter and improves it.
+Now Andrea can apply these ideas to a **case study**. He compares training a model, changing a prompt and adding retrieved material. He writes his answer before revealing the explanation. In each case, what changes: the parameters or the context?
 
-## 33. /quiz
+## 36. /studyplan
 
-Let us turn that idea into a first check of understanding. In this **quiz**, Andrea answers first and then reads the feedback. An incorrect choice gives him something specific to revise. I would ask him to explain the **reason for the correction**.
+His answers help Andrea decide **what to study next**. This plan breaks his goal into smaller activities. He can mark his progress and move between steps. After each activity, he checks what he can explain or do on his own.
 
-## 34. /fillintheblanks
+## 37. /lessonplan
 
-To check how those terms work in context, we can remove key words. Andrea completes the **missing terms** and checks his answers. Notice how he can correct an initial mistake. I would then ask him to explain the **whole sentence**, including why the chosen term fits.
+For teachers, the same approach becomes a **15-minute lesson**: four minutes to explain, six to apply and five to assess. Students compare fine-tuning, a prompt definition and a retrieved passage. They explain what changes before seeing the answer, then finish with an explanation on their own.
 
-## 35. /worksheet
+## 38. /differentiate
 
-We can bring an attempt, comparison and self-assessment into one activity. In this **worksheet**, Andrea writes an answer, reveals a model answer and compares the criteria. He assigns his own points. Watch how the **written explanation** and the running total serve different purposes.
+Students may need different levels of help. These **three levels** keep the same learning goal but change the support and difficulty. We start from the learner's needs, then reduce the clues. A new example checks whether the learner can explain the idea independently.
 
-## 36. /caseStudy
+## 39. /peerassessment
 
-A concrete case lets Andrea apply those checked distinctions. Andrea compares three **experiments**: training a model, changing a prompt and adding retrieved material. He writes his reasoning before revealing explanations. The key question is **what changes in each experiment**.
+Students can also help each other check their work. **Peer assessment** starts with shared criteria. Here, a fictional peer gives points and written feedback. The feedback names one strength and one thing to improve, with evidence from the answer.
 
-## 37. /studyplan
+## 40. /learningstations
 
-The result of that attempt should help Andrea choose what to study next. The **study plan** breaks a goal into manageable activities. Andrea marks progress and moves between steps. I would ask what he can now **explain or do** after completing each activity.
+We can bring several activities together in **learning stations**. Each station focuses on training, inference or context. Andrea writes an answer, compares it with the explanation and marks the station complete. He can return to earlier answers and revise them.
 
-## 38. /lessonplan
+## 41. These shortcuts also work in Claude
 
-This **15-minute lesson** gives four minutes to explanation, six to application and five to assessment. In the application stage, compare fine-tuning, a prompt definition and a retrieved passage. Ask learners to explain **what changes** before revealing the key. End with an explanation they can give independently.
+Can we use these prompts in another assistant? In **Claude**, the same chapter and prompts produced five working examples: flashcards, a quiz, oral practice, a mistake log and a concept map. The interface changes, but the task stays the same. The other shortcuts remain untested because the account reached its message limit.
 
-## 39. /differentiate
+## 42. Trying the shortcuts in Gemini
 
-The **Foundation, Explain and Apply** levels offer different amounts of support around the same conceptual goal. Choose a starting point from Andrea’s current difficulty, then revisit the distinction with fewer clues. Ask him to attempt the response before revealing an answer. Check whether he can **explain what changes** in a new example.
+The **Gemini** tests gave mixed results. Each prompt used the same chapter in a new chat. Of the 15 prompts, two gave interactive activities directly in Gemini, five gave working apps to download, four gave material without interactive controls and four failed to generate a result.
 
-## 40. /peerassessment
+For the downloaded apps, I asked Gemini to show the activity in Canvas. The previews stayed blank here, so I tested the downloaded files locally without changing them. Those screenshots are labelled **exported app**.
 
-The same criteria can also guide feedback between learners. **Peer assessment** starts with shared criteria. In this demonstration, a fictional peer assigns points and writes specific feedback. The useful result is a clear **strength and next improvement**, supported by the work.
+The same prompt can give a different result in another assistant. **Test the controls and check the content** before using it with students.
 
-## 41. /learningstations
+## 43. Your turn: try a few shortcuts
 
-A broader activity can divide those checks across several concepts. The **learning stations** separate training, inference and context into short activities. Andrea writes, compares and marks each station complete. Returning to an earlier answer helps him see what he should **revise**.
+Now it is **your turn**. Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. The Free plan is fine. Use our chapter or your own document. Try the activity, check its answers against your source and adjust the request if needed.
 
-## 42. These shortcuts also work in Claude
+## 44. Skills
 
-These **five examples** use the **same prompts and chapter** as the ChatGPT demonstrations. Claude produced working flashcards, a quiz, oral practice, a mistake log and a concept map. The **interface varies**, but the learning request transfers. The screenshots open at full size. Other shortcuts remain unverified because the account reached its message limit.
+We have used separate prompts for individual tasks. What if we want to reuse a whole method? This is where **Agent Skills** can help. Let us look at how they guide a task from start to finish.
 
-## 43. Trying the shortcuts in Gemini
+## 45. Agent Skills: reusable workflows
 
-These examples were tested in **Gemini**, with the workshop chapter attached and a **separate temporary chat** for every original prompt. The interface and output are in English. The quiz and flashcards produced native interactive activities. I tested hints, correct and incorrect answers, a **2 out of 3** score and review in the quiz, and answer reveal and navigation in the flashcards.
+A **skill** is a set of instructions an agent can reuse for a task. Its main file, **SKILL.md**, explains when to use it and what steps to follow. It may also include examples, templates or scripts. The agent loads these files when it needs them.
 
-Five prompts initially returned code rather than a usable activity. I selected **Canvas** and asked Gemini to render the original requirements. The previews stayed blank in this browser, so I downloaded the generated files and tested the **unchanged exports locally**. These screenshots are labelled exported app. They show working fill-in checking, sorting feedback, concept-map branches and peer-assessment controls. The exported lesson also supports three stages, scenario checks and an answer reveal; it is included in the materials. The first concept-map export was incomplete, so Gemini generated a complete replacement.
+## 46. Where skills can run
 
-Across all **15 prompts**, this session produced two native interactive activities, five verified exported apps, four static responses and four generation errors. The full record includes the original prompts, follow-ups, screenshots and exports. These are **informal prompt labels**: a label alone does not guarantee the same interface, and a generated score does not establish understanding. Test the controls and check the content against the source before using an activity.
+Before using a skill, we need to check **where it can run**. These examples were recorded in ChatGPT Work mode. Other agents may support skills but provide different tools. We need to check the setup as well as the skill itself.
 
-## 44. Your turn: try a few shortcuts
+## 47. Skills for studying the same chapter
 
-Take **five minutes** to try different shortcuts with **your own ChatGPT account**; the **Free plan is fine**. Use the GenAI book or another document you want to study. Try /flashcard, /quiz or /oral. Use the activity, **check the answers against your source** and refine the request if needed.
+Here are **three skills** for the same chapter. The first, **Learn**, uses questions and feedback to help Andrea understand.
 
-## 45. Skills
+[click] **The Learning Skill** adds study materials, practice and review.
 
-We have seen individual prompts. To reuse a more structured method, we can turn to **Agent Skills**. The next examples focus on the **workflow** that guides the activity, as well as its final output.
+[click] Finally, **Markdown Mermaid Writing** creates diagrams we can edit. The chapter stays the same; we choose the skill for Andrea's next need and check the result.
 
-## 46. Agent Skills: reusable workflows
+## 48. Learn: explain before receiving feedback
 
-A **skill** gives an agent a reusable method for a specific task. Its core is **SKILL.md**, which explains when to use it and which steps to follow. References, examples and templates add context; optional **scripts** support specific operations. The agent loads the instructions and supporting files as needed.
+Let us start with **Learn**. Andrea thinks a definition in a prompt changes the model's weights. The skill asks him to explain, then uses the chapter to correct the idea: prompts change context; training changes parameters. A question about RAG checks whether he can use this distinction again.
 
-## 47. Where skills can run
+## 49. Build a study kit after recall
 
-Before choosing a skill, check where it can run. These examples were recorded in **ChatGPT Work mode**. Other compatible agents may have different tools or setup. The same package does not guarantee the same **working environment**.
+Next, **The Learning Skill** builds a kit after Andrea tries to recall the ideas. It plans ten minutes today and two five-minute reviews. He retries a card and checks a written answer. The shared chat shows the code; the **HTML download** gives us the interactive kit.
 
-## 48. Skills for studying the same chapter
+## 50. Compare the chapter in an editable diagram
 
-Each skill supports a different **study action**. **Learn** guides understanding through questions and feedback.
+For links between ideas, we can use an **editable diagram**. This example separates training, inference and retrieval. Andrea checks each arrow against the chapter. He then closes the diagram and explains the relationship in his own words.
 
-[click] **The Learning Skill** combines practice, study materials and review.
+## 51. Your turn: try a skill
 
-[click] **Markdown Mermaid Writing** turns relationships into editable diagrams.
+Now take **ten minutes** to try a skill. Choose one of these three or find another, then install and enable it in an agent that supports it. Use our chapter or your own source. Create study material, try it and check the result against the source.
 
-[click] **Flashcard Generator** creates recall questions. Andrea’s chapter stays the same; we choose the support for his **next learning need**, then check the output.
+## 52. Tool
 
-## 49. Learn: explain before receiving feedback
+Skills give us a method we can reuse. Now let us look at **specific study tools**. We will keep asking two questions: what problem does this tool help with, and how will Andrea show what he has learned?
 
-Here, Andrea thinks that adding a definition to a prompt changes the model’s weights. **Learn** asks him to explain his reasoning, then uses the chapter to address the misconception: a prompt changes **context**; training changes **parameters**. A follow-up question about RAG checks whether he can **apply the distinction** to another case.
+## 53. Goblin.tools
 
-## 50. Build a study kit after recall
+Andrea's first problem may be **getting started**. Goblin.tools can help him turn a large task into smaller actions. Let us see how he can use its suggestions to build a plan that fits his goal.
 
-**The Learning Skill** begins with Andrea’s recall attempt, then prepares a study kit for ten minutes today and two five-minute reviews. Watch him retry the card still due, then compare and correct a written answer using **self-assessment**. The shared chat shows the generated code; the **HTML download** provides the interactive kit.
+## 54. Compiler: turn thoughts into actions
 
-## 51. Compare the chapter in an editable diagram
+First, **Compiler** turns Andrea's rough thoughts into suggested actions. Here it gives him four tasks. He checks that they match his learning goal and the time he has. The suggestions give him a starting point; he chooses what to keep.
 
-When the difficulty concerns relationships, an **editable diagram** offers another support. This skill separates training, inference and retrieval. Andrea should check each **arrow** against the chapter, then explain the relationship without reading the diagram.
+## 55. Magic ToDo: break down the task
 
-## 52. Three questions to answer from memory
+A task can still be too large to start. **Magic ToDo** breaks it into smaller steps that Andrea can edit. He adds enough detail to know what to do next. He does not need a separate step for every small action.
 
-To revisit those distinctions later, we can prepare **recall questions**. This skill produces an importable text deck, not an interactive app. Andrea attempts each question first, then checks the **source-based answer**.
+## 56. Estimator: plan a time window
 
-## 53. Your turn: try a skill
+With the steps ready, Andrea needs to plan his **time**. Estimator suggests a rough time window. He compares it with how long the task actually takes, then adjusts his plan. The estimate helps him plan; it is not a promise.
 
-Take **ten minutes** to try a skill. Choose one of the **four reviewed skills** or find a new one, then **install and enable it** in a compatible host. Use the GenAI book or your own source to **create study material**. Try the result, check it against the source and improve the request.
+## 57. Taskmaster: work on one task
 
-## 54. Tool
+Now he is ready to begin. **Taskmaster** focuses on one task and shows a timer. The timer tells Andrea how long he has worked. To check his learning, he still needs to look at what he can explain or produce.
 
-We can now connect these methods with specific **study tools**. For each tool, keep the same questions: which learning difficulty does it address, and what **evidence** should the learner produce?
+## 58. Professor: request an explanation
 
-## 55. Goblin.tools
+While working, Andrea may get stuck on an idea. **Professor** offers an explanation and an example of training and inference. He checks both against the chapter. If it uses an analogy, he also checks where that comparison stops being useful.
 
-Returning to Andrea's learning path, his first difficulty may be **getting started**. Goblin.tools offers ways to organise tasks and text. We will use it to explore planning, while Andrea chooses which **suggestions** are useful.
+## 59. Formalizer: revise the wording
 
-## 56. Compiler: turn thoughts into actions
+Once Andrea has an explanation, **Formalizer** can help make the wording clearer. He compares the rewrite with his draft. Does it keep the same meaning? Does it still show what he is unsure about? Clearer writing should preserve those details.
 
-Before working on the chapter, Andrea needs a manageable starting plan. Compiler turns unstructured thoughts into suggested **actions**. Here it proposes four tasks. Andrea checks whether they preserve his **learning goal** and fit his time.
+## 60. Adjust the level of detail
 
-## 57. Magic ToDo: break down the task
+These examples bring us back to one rule: make the **next action clear**. Reading one paragraph and writing an example is easier to start than a broad goal. Add detail when it helps Andrea move past a real difficulty.
 
-A suggested task may still be too broad. Magic ToDo breaks it into **smaller steps** that Andrea can edit. The useful level of detail is the one that makes his **next action** clear.
+## 61. Andrea’s selected plan
 
-## 58. Estimator: plan a time window
+Andrea now chooses his own plan: **read, ask, reconstruct and apply**. He notes unclear ideas, checks an explanation, rebuilds the diagram and tries a new example. Each step leaves something he can check. Finished tasks show activity; the work itself shows what he understands.
 
-Once the steps are clearer, Andrea can consider **time**. Estimator suggests a rough window. He should compare it with the time he actually needs and **adjust the plan**, rather than treat the estimate as a promise.
+## 62. NotebookLM
 
-## 59. Taskmaster: work on one task
+With a plan ready, Andrea needs a place to **study his sources**. NotebookLM lets him ask questions and create materials from selected documents. We will use it with his chapter and keep checking answers against the original text.
 
-A plan also needs a way to begin working. Taskmaster focuses on **one task** and shows a timer. Time on task records activity; Andrea's explanation or completed work gives different **evidence of learning**.
+## 63. NotebookLM: add and select sources
 
-## 60. Professor: request an explanation
+We begin by **adding the chapter**. Andrea checks the imported text and selects the sources for his question. This keeps the task focused, but the answer can still contain errors. He will need to check it against the chapter.
 
-Planning does not resolve every conceptual difficulty. Professor can offer an **explanation and example** of training versus inference. Andrea checks it against the chapter, including what changes in the parameters and where an **analogy stops**.
+## 64. Find and review new sources
 
-## 61. Formalizer: revise the wording
+If the chapter is not enough, Andrea can **search for more sources**. Before importing a result, he checks who produced it, whether it answers his question and whether it is reliable. Finding a source does not mean he should use it.
 
-After developing an explanation, Andrea may want clearer **wording**. Formalizer rewrites the draft. We should check that it preserves the meaning and his remaining **uncertainty**, rather than making an incomplete explanation sound more certain.
+## 65. Investigate a question with Deep Research
 
-## 62. Adjust the level of detail
+For a wider question, **Deep Research** can prepare a report with sources. Andrea still needs to read those sources and check the claims. This feature requires an adult account, so we also need to check access before planning an activity.
 
-These examples return us to a planning principle: choose a **clear next action**. A task such as reading one paragraph and writing an example is easier to start than a broad goal. Add detail where it removes a **real obstacle**.
+## 66. Ask a focused question
 
-## 63. Andrea’s selected plan
+Let us return to Andrea's main question: **why can an answer change without retraining?** He asks a short, focused question. He then compares the explanation and its references with the chapter. This gives him a manageable answer to check.
 
-Andrea can now select a plan from the suggestions. He chooses **read, ask, reconstruct and apply**. Each block ends with something he can inspect. The completed tasks record activity; their content shows **what he understands**.
+## 67. Open the citation and its source
 
-## 64. NotebookLM
+To check that answer, Andrea opens the **citation** and reads the passage. Here, the words **ordinary inference** matter: they describe when the model's parameters stay fixed. He checks that the passage supports the exact claim in the answer.
 
-With a manageable plan, Andrea needs an environment for **studying the source**. NotebookLM organises questions and materials around selected documents. We will keep returning to the **original passage** as the reference for checking an answer.
+## 68. Set up a Learning Guide
 
-## 65. NotebookLM: add and select sources
+We can also change how the conversation works. With **Learning Guide**, we choose a goal and a response length that leave room for Andrea to answer. The settings should support his own explanation and practice.
 
-That source-based work starts with the **chapter itself**. We upload it, inspect the imported text and select the material available for a question. Choosing a source focuses the task; it does not remove the need to **check the answer**.
+## 69. Check the analogy as well
 
-## 66. Find and review new sources
+An explanation may use an **analogy**, but we need to check that too. The desk example helps explain available context. It does not explain how a model calculates. Andrea should be able to explain the idea without relying on the comparison.
 
-Sometimes a question needs **additional sources**. Search can suggest them, but importing is a separate decision. Inspect relevance and quality before adding a result to the **evidence** available for an answer.
+## 70. Explore a generated Mind Map
 
-## 67. Investigate a question with Deep Research
+This is the map created with **Mind Map**. It connects training, inference, context and RAG. We can zoom in to read each branch. Where do parameters change, and where is information added as input? Andrea checks the links against the chapter, then explains them without the map.
 
-A broader question may need a longer investigation. Deep Research creates a **sourced report**, whose supporting material we still inspect. This feature requires an **adult account**, so access also matters when planning the activity.
+## 71. Answer a quiz before reading feedback
 
-## 68. Ask a focused question
+These six questions were created with **Quiz**. Let us try one before showing the answer. We can choose an option, ask for a hint and read the explanation. Andrea then explains any correction in his own words. This viewer uses the original generated questions and feedback.
 
-For Andrea's immediate difficulty, we return to one **focused question**: why can an answer change without retraining? A short request produces something manageable to check. Andrea compares both the explanation and its **references** with the chapter.
+## 72. Practise recall with flashcards
 
-## 69. Open the citation and its source
+These cards were created with **Flashcards**. Let us answer the first question from memory, then show the answer. We can move through the cards and compare each explanation with the chapter. The viewer uses the exported questions and answers; the CSV is also available to download.
 
-A citation is useful only if we follow it back to the **passage**. Here we check the exact claim about inference. The words **ordinary inference** matter because they state when parameters remain fixed.
+## 73. Save a checked response as a note
 
-## 70. Set up a Learning Guide
+When Andrea finds a useful explanation, he can **save it as a note**. The note keeps the response and its citations, including any errors. He checks it before using it again or turning it into a new source.
 
-The **Learning Guide** settings help us adjust the conversation to Andrea’s needs. Choose a goal and response length that leave room for Andrea to answer. The purpose remains his **own explanation and practice**.
+## 74. Build a study guide from the chapter
 
-## 71. Check the analogy as well
+This study guide was created with **Reports**. We can turn the pages and zoom in to read it. Andrea checks its definitions and examples against the chapter. He then uses the guide to prepare questions and explain the ideas himself.
 
-A shorter explanation may use an **analogy**. The desk example helps with available context, but it does not describe how a model calculates. Andrea should recognise that boundary and explain the idea **without the metaphor**.
+## 75. Listen to an Audio Overview
 
-## 72. Explore a generated Mind Map
+This episode was created with **Audio Overview**. Let us listen to a short part, then pause. How would you explain that idea in your own words? Andrea can use the same approach when studying, checking his explanation against the chapter before he continues.
 
-Expand one **Mind Map** branch and ask Andrea to explain a relationship before reading further. Follow the links between training, inference, context and RAG. Where do weights change, and where is information supplied as input? Check his explanation against the **chapter**, then ask him to reconstruct the relationship without the map.
+## 76. Watch a Video Overview
 
-## 73. Answer a quiz before reading feedback
+This is the video created with **Video Overview**, with its original English audio. It compares training, inference and RAG. Let us pause after an example and check it against the chapter. Andrea then explains the difference himself.
 
-Pause before the **hint or explanation** and let Andrea commit to an answer. After feedback, ask him to explain his correction and check the chapter. The first attempt scores five out of six; the retry covers only the missed question. Use that retry to guide **further practice**, then check with a new example.
+## 77. Compare concepts in an infographic
 
-## 74. Practise recall with flashcards
+This image was created with **Infographic**. It compares training, inference and RAG in one view. We can zoom in to read the details. Andrea checks the labels against the chapter, then explains what changes in each process.
 
-With **flashcards**, Andrea must produce an answer before seeing it. Pause the recording at a question and invite participants to try this themselves. After the reveal, compare the explanation with the chapter. The downloadable **CSV** preserves the questions and answers for reuse; the recorded card controls belong to NotebookLM.
+## 78. Generate and present slides
 
-## 75. Save a checked response as a note
+These nine slides were created with **Slide Deck**. We can move through the PDF to compare training, inference and RAG. What changes in each case? Andrea checks the labels and arrows against the chapter, then answers the final question without the slides.
 
-We may also want to keep a useful explanation in the notebook. A **saved note** preserves the response and citations, including any mistake. Verify it before reusing it or making it a **new source**.
+## 79. Organise chapter concepts in a table
 
-## 76. Build a study guide from the chapter
+This comparison was created with **Data Table**. It shows what changes and what stays fixed in training, inference and RAG. We can show the extra columns to check the chapter evidence and common errors. Those errors are claims to reject, not facts to learn.
 
-Several checked notes can support a more organised **study guide**. Review its definitions, examples and numerical claims against the chapter. The guide should become material for Andrea's own **questions and explanations**.
+## 80. Review access before sharing a notebook
 
-## 77. Listen to an Audio Overview
+Before sharing these materials, we need to check **who can open them**. In this university account, the sharing window shows only the owner and no public-access option. We provide the checked answer as a text download instead. For your own class, test access as a student before the session.
 
-The same material can also be presented through **audio**. This recording shows the Audio Overview and playback controls, with excerpts from the **original episode audio** restored during playback. During study, pause the discussion and explain one **concept in your own words** before continuing.
+## 81. Your turn: create materials for students
 
-## 78. Watch a Video Overview
+Now it is **your turn** to create materials for your students. You have thirty minutes. Choose a topic, suitable sources and any tools you prefer. Match the level to your students, check the results against the sources and test how students will open and use them.
 
-This is the **original Video Overview** generated on 8 November, with its English audio. Pause after an example and compare it with the chapter. The video distinguishes training, ordinary inference and RAG; **checking its claims** remains part of the learning task.
+## 82. Free tools
 
-## 79. Compare concepts in an infographic
+To help you choose tools after today, these tables group them by purpose. We start with **free tools**. Choose the function you need, then check the access conditions. Some free plans still need an account or have limits, so keep a prepared alternative.
 
-A compact **infographic** offers another view of the same concepts. Its labels and relationships need checking against the source. This generation feature requires an **adult account**, which also affects the choice for a group.
+## 83. Free tools for maps and review
 
-## 80. Generate and present slides
+For maps and review, we have more focused options. **Drawing tools** help us explain relationships; **review tools** help us return to questions over time. Choose the action that fits the learning need. We can keep using the same source and checks.
 
-Trace **training, inference and RAG** through the generated deck. Ask participants what changes in each case, then check the labels and arrows against the chapter. The final question should be answered **without the slides**. The PDF beside the video lets participants revisit the generated deck.
+## 84. Paid tools and upgrades
 
-## 81. Organise chapter concepts in a table
+Some tools offer more features through a **paid plan**. Before paying, compare the feature you need with a free option and check the current terms. A paid tool is useful only if the extra feature helps with your task.
 
-When the goal is comparison, a **table** may make the distinctions clearer. Read the headings before the entries. A column of **common misconceptions** contains errors to reject, rather than definitions to learn.
+## 85. Accessibility tools
 
-## 82. Review access before sharing a notebook
+We also need to consider **accessibility**. Reading aloud and dictation can support different stages of learning. Choose the support with the learner. Check the languages available and review dictated text. Read&Write offers a wider set of tools through a licence.
 
-Check **recipient access** before planning a shared activity. In this Unimib recording, the sharing dialog shows only the owner and offers no public-access setting. The checked answer is therefore supplied as a **text download**. For your own activity, test the recipient’s route to the material before the session.
+## 86. Thank you.
 
-## 83. Your turn: create materials for students
+We began with a question: how can AI support **independent thinking**? I hope you leave with one activity to try and a clear way to check what your students learn. Thank you. I would be happy to hear your questions and ideas.
 
-Take **thirty minutes** to create materials for **your students** on a **topic of your choice**, using **any tools you prefer**. Choose suitable sources and adapt the materials to your students’ level. **Test and check** the output against the sources, then verify how students will access and use it.
+## 87. Bibliography
 
-## 84. Free tools
-
-This brings us from the method to a practical choice of **resources**. Use the table to select a function you need. Free access may still involve accounts or quotas, so check conditions and provide a **prepared alternative** where needed.
-
-## 85. Free tools for maps and review
-
-For the map and recall activities, the choice is more specific: **drawing relationships** or **reviewing questions over time**. Pick the action that matches the need. The source and checking method can stay the same across tools.
-
-## 86. Paid tools and upgrades
-
-Some extra functions require a **paid upgrade**. Compare the added function with an available alternative and check current terms. The purchase decision should follow a real **learning need**, rather than the size of the feature list.
-
-## 87. Accessibility tools
-
-These tools support **access**, including reading aloud and dictation. Choose the support with the learner, check the available languages and review dictated text. Read&Write adds a licensed suite. These supports can accompany any stage of the learning process.
-
-## 88. Thank you.
-
-We began by asking how AI can support **independent thinking**. I hope you leave with one activity to try and a clear idea of the **evidence of learning** you want to collect. Thank you; I would be happy to discuss your examples.
-
-## 89. Bibliography
-
-This **reference appendix** is available after the closing slide for questions and further reading. Use the research papers to examine claims about learning outcomes and limits. A successful tool demonstration shows what happened in that example; judging **learning** requires evidence from the learner.
+These **references** are here for questions and further reading. They include research on learning and its limits. The demonstrations show what a tool did in one example. To judge learning, we need evidence from the learner.

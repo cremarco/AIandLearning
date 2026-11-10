@@ -30,6 +30,8 @@ export function checkPublishedRecordings(slides) {
   }
   const privateReference = /\/Users\/|\/var\/folders\/|output\/review\/|https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?/i
   assert(!privateReference.test(JSON.stringify(manifest)), 'Public release metadata must not expose local review paths')
+  // The two decks share a release, but may use different demonstrations.
+  const publishedSlides = [...slides, ...readJson('data/mru/slides.json', [])]
   const records = new Map()
   for (const clip of manifest.clips) {
     const media = clip.media
@@ -50,7 +52,7 @@ export function checkPublishedRecordings(slides) {
     if (clip.materialsPage) {
       assert(fs.existsSync(localFile(clip.materialsPage)), `${clip.key}: supplementary recording needs its materials page`)
     } else {
-      assert(slides.some(slide => slide.media?.src === media.src || slide.commands?.some(command => command.result?.media.src === media.src)), `${clip.key}: recording missing from its slide`)
+      assert(publishedSlides.some(slide => slide.media?.src === media.src || slide.commands?.some(command => command.result?.media.src === media.src)), `${clip.key}: recording missing from both decks`)
     }
     assert(!records.has(media.src), `${clip.key}: duplicate released video`)
     records.set(media.src, media)

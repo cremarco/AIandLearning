@@ -271,14 +271,15 @@ export function checkData() {
   const skillDemos = read('data/demos/skill-demos.json')
   const skillClips = read('public/materials/skills/provenance.json')
   const skillIds = slides.flatMap(slide => slide.skillIds || [])
-  assert.equal(skillIds.length, 4, 'The four selected chapter workflows must be available in the deck')
+  assert.deepEqual(skillIds, ['learn', 'the-learning-skill', 'markdown-mermaid-writing'], 'EduForum includes the three selected chapter workflows')
   assert.equal(new Set(skillIds).size, skillIds.length, 'Each selected skill must appear once in the catalogue')
   for (const id of skillIds) assert(skillResearch.skills.some(skill => skill.id === id), `${id}: selected skill is missing from the research catalogue`)
   for (const id of skillIds) checkStudyFocus(skillResearch.skills.find(skill => skill.id === id).studyPhases, id)
-  assert.deepEqual([...skillIds].sort(), skillDemos.map(demo => demo.key).sort(), 'Each selected skill needs its own chapter demonstration')
+  const selectedSkillDemos = skillDemos.filter(demo => skillIds.includes(demo.key))
+  assert.deepEqual([...skillIds].sort(), selectedSkillDemos.map(demo => demo.key).sort(), 'Each selected skill needs its own chapter demonstration')
   assert.deepEqual(skillClips.clips.map(clip => clip.key), skillDemos.map(demo => demo.key))
   assert.equal(skillClips.sourceBook.sha256, createHash('sha256').update(fs.readFileSync(path.join(root, 'public', skillClips.sourceBook.path))).digest('hex'), 'Recordings must identify the exact workshop book')
-  for (const demo of skillDemos) {
+  for (const demo of selectedSkillDemos) {
     const clip = skillClips.clips.find(item => item.key === demo.key)
     const slide = slides.find(item => item.id === demo.slideId)
     if (checkReleasedMedia(slide?.media, publishedRecordings)) {
@@ -307,28 +308,39 @@ export function checkData() {
   for (const skill of skillResearch.skills) {
     assert.equal(sources[skill.sourceId]?.url, skill.sourceUrl, `${skill.name}: cite its publisher’s reviewed instructions`)
     assert.equal(skill.reviewStatus, 'source-reviewed')
-    assert.equal(skill.executionStatus, skillIds.includes(skill.id) ? 'executed' : 'not-executed', `${skill.name}: preserve the actual execution scope`)
+    assert.equal(skill.executionStatus, skillDemos.some(demo => demo.key === skill.id && demo.status === 'executed') ? 'executed' : 'not-executed', `${skill.name}: preserve the actual execution scope`)
     assert(skill.requirements && skill.license && skill.installCommand && skill.caveat, `${skill.name}: preserve requirements and limits`)
     assert(guide.includes(`id="${skill.id}"`), `${skill.name}: accessible guide entry missing`)
   }
-  const qr = read('public/images/qr/eduforum-github-pages.json')
-  assert.equal(qr.decodedPayload, 'https://cremarco.github.io/AIandLearning/')
+  const qr = read('public/images/qr/eduforum-direct.json')
+  assert.equal(qr.decodedPayload, 'https://cremarco.github.io/AIandLearning/eduforum/')
   assert.equal(slides.find(slide => slide.id === 'S50QR').links[0].url, qr.decodedPayload)
   assert.equal(slides[slides.findIndex(slide => slide.id === 'S50QR') + 1]?.id, 'S50LEGEND')
   assert.equal(slides[slides.findIndex(slide => slide.id === 'S50LEGEND') + 1]?.id, 'S50CHECKIN')
   assert.equal(slides[slides.findIndex(slide => slide.id === 'S51') - 1]?.id, 'S50CHECKIN')
   const notebookDemos = read('data/demos/notebook-demos.json')
+  const notebookOutputs = read('data/content/notebook-outputs.json')
+  const outputSlides = slides.filter(slide => slide.notebookOutput)
+  assert.equal(outputSlides.length, 9, 'Show all nine NotebookLM Studio outputs')
+  for (const slide of outputSlides) {
+    const output = notebookOutputs[slide.notebookOutput]
+    assert(output?.feature && output.src, `${slide.id}: name the feature next to its output`)
+    assert.equal(output.src, (slide.media.result?.url || slide.media.src).replace(/^\//, ''), `${slide.id}: show its original generated output`)
+    assert.equal(output.sourceSha256, createHash('sha256').update(fs.readFileSync(path.join(root, 'public', output.src))).digest('hex'), `${slide.id}: preserve the original output`)
+    for (const page of output.pages || []) assert(fs.existsSync(path.join(root, 'public', page)), `${slide.id}: missing PDF page preview`)
+  }
   const notebookClips = read('public/materials/notebook/provenance.json').clips
   assert.deepEqual(notebookClips.map(clip => clip.key), notebookDemos.map(demo => demo.key), 'Every NotebookLM demonstration needs its recorded clip')
   for (const demo of notebookDemos) {
     const slide = slides.find(item => item.id === demo.slideId)
     const clip = notebookClips.find(item => item.key === demo.key)
+    const expectedKind = slide?.notebookOutput ? 'notebook-output' : 'tool-demo'
     if (checkNativeVideoExport(slide?.media)) {
-      assert.equal(slide.kind, 'tool-demo')
+      assert.equal(slide.kind, expectedKind)
       continue
     }
     if (checkReleasedMedia(slide?.media, publishedRecordings)) {
-      assert.equal(slide.kind, 'tool-demo')
+      assert.equal(slide.kind, expectedKind)
       continue
     }
     assert(['executed', 'opened'].includes(demo.status), `${demo.key}: finish recording before publishing`)

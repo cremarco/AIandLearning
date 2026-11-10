@@ -14,6 +14,7 @@
 .slidev-layout .kind-section-divider .workshop-heading h1 { max-width:980px; font-size:88px; line-height:1.08; }
 .slidev-layout .deck-slide .workshop-lead { flex-shrink:0; font-size:24px; color:var(--deck-muted); line-height:1.32; max-width:1060px; }
 .workshop-stage { display:flex; flex:1; min-height:0; gap:var(--deck-column-gap); align-items:center; }
+.kind-notebook-output .workshop-stage { align-items:stretch; }
 .workshop-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:var(--deck-group-gap); }
 .slidev-layout .deck-slide.type-workshop:has(.kind-shortcut-cloud) { padding:36px 44px; }
 .kind-shortcut-cloud { gap:0; }

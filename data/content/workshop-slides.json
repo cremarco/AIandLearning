@@ -12,14 +12,14 @@
     "sources": [],
     "media": {
       "type": "image",
-      "src": "images/qr/eduforum-github-pages.png",
-      "alt": "QR code linking to https://cremarco.github.io/AIandLearning/",
+      "src": "images/qr/eduforum-direct.png",
+      "alt": "QR code linking to https://cremarco.github.io/AIandLearning/eduforum/",
       "caption": ""
     },
     "links": [
       {
-        "label": "cremarco.github.io/AIandLearning/",
-        "url": "https://cremarco.github.io/AIandLearning/"
+        "label": "cremarco.github.io/AIandLearning/eduforum/",
+        "url": "https://cremarco.github.io/AIandLearning/eduforum/"
       }
     ]
   },
@@ -1251,7 +1251,7 @@
       ]
     },
     "activityTimer": {
-      "minutes": 5,
+      "minutes": 10,
       "id": "shortcut-practice"
     }
   },
@@ -1344,20 +1344,18 @@
     "section": "study",
     "stage": "Reusable Agent Skills",
     "title": "Skills for studying the same chapter",
-    "message": "Four reusable workflows, tested with Andrea’s assigned book.",
+    "message": "Three reusable workflows, tested with Andrea’s assigned book.",
     "body": [],
     "audience": "both",
     "sources": [
       "SKILL_LEARN",
       "SKILL_LEARNING",
-      "SKILL_MERMAID",
-      "SKILL_FLASHCARD_GENERATOR"
+      "SKILL_MERMAID"
     ],
     "skillIds": [
       "learn",
       "the-learning-skill",
-      "markdown-mermaid-writing",
-      "flashcard-generator"
+      "markdown-mermaid-writing"
     ],
     "decision": "Choose a support for the next learning action, then check its output.",
     "studyPhases": {
@@ -1366,7 +1364,7 @@
         "check"
       ]
     },
-    "clicks": 3
+    "clicks": 2
   },
   {
     "id": "S53SKILLLEARN",
@@ -1448,30 +1446,6 @@
     "videoLayout": "prompt"
   },
   {
-    "id": "S53SKILLFLASHCARDS",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
-    "tool": "chatgpt",
-    "title": "Three questions to answer from memory",
-    "message": "The chapter becomes an importable text deck.",
-    "body": [],
-    "audience": "both",
-    "sources": [
-      "BOOK_CHAPTER",
-      "SKILL_FLASHCARD_GENERATOR",
-      "SKILL_DEMO_FLASHCARD_GENERATOR"
-    ],
-    "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, generate exactly three flashcards for Andrea. Test: training versus inference, a new definition in the prompt, and RAG versus parameter updates. Make each question stand alone and require an answer from memory. Include the chapter section in each answer. Keep each answer under 30 words. Output an importable .txt file, one Question | Answer pair per line. Answer in English.",
-    "promptLabel": "Recorded prompt",
-    "decision": "Attempt each answer first; the text file is a deck, not an interactive app.",
-    "studyPhases": {
-      "primary": "recall"
-    },
-    "videoLayout": "prompt"
-  },
-  {
     "id": "S53TRYSKILLS",
     "type": "workshop",
     "kind": "activity",
@@ -1486,7 +1460,7 @@
     "steps": [
       {
         "title": "Choose and install a skill",
-        "text": "Use one of the four reviewed skills, or find a new one. Install it in a compatible host."
+        "text": "Use one of the three reviewed skills, or find a new one. Install it in a compatible host."
       },
       {
         "title": "Create study material",
@@ -1945,11 +1919,11 @@
   {
     "id": "S66",
     "type": "workshop",
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "Explore a generated Mind Map",
-    "message": "Expand the chapter’s concepts and explain their relationships",
+    "message": "",
     "body": [],
     "sources": [
       "TOOL_NOTEBOOK_MAP",
@@ -1971,38 +1945,36 @@
         "text": "Use the map for orientation, then explain the connection and check the chapter."
       }
     ],
-    "decision": "A branch is an orientation aid; Andrea still needs to explain the connection.",
     "studyPhases": {
       "primary": "connect",
       "secondary": [
         "understand"
       ]
-    }
+    },
+    "notebookOutput": "mind-map"
   },
   {
     "id": "S67",
     "type": "workshop",
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "Answer a quiz before reading feedback",
-    "message": "Attempt a question, choose an answer and inspect the explanation",
-    "body": [
-      "Answer before opening the hint. Read the explanation, then retry the missed question."
-    ],
+    "message": "",
+    "body": [],
     "sources": [
       "TOOL_NOTEBOOK_QUIZ",
       "EDU_RETRIEVAL"
     ],
     "audience": "both",
     "tool": "notebook",
-    "decision": "Use feedback to revise an explanation, then check it against the chapter.",
     "studyPhases": {
       "primary": "check",
       "secondary": [
         "recall"
       ]
-    }
+    },
+    "notebookOutput": "quiz"
   },
   {
     "id": "S67CARDS",
@@ -2014,14 +1986,14 @@
     "sources": [
       "TOOL_NOTEBOOK_QUIZ"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Practise recall with flashcards",
-    "message": "Try an answer, reveal the card and record your own judgement",
-    "decision": "Recognising the revealed answer is different from recalling it unaided.",
+    "message": "",
     "studyPhases": {
       "primary": "recall"
-    }
+    },
+    "notebookOutput": "flashcards"
   },
   {
     "id": "S67NOTES",
@@ -2052,17 +2024,17 @@
     "sources": [
       "TOOL_NOTEBOOK_STUDIO"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Build a study guide from the chapter",
-    "message": "Choose a report format, then review the generated guide",
-    "decision": "Check definitions and numerical claims before reusing the study guide.",
+    "message": "",
     "studyPhases": {
       "primary": "connect",
       "secondary": [
         "understand"
       ]
-    }
+    },
+    "notebookOutput": "reports"
   },
   {
     "id": "S67AUDIO",
@@ -2074,14 +2046,14 @@
     "sources": [
       "TOOL_NOTEBOOK_AUDIO"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Listen to an Audio Overview",
-    "message": "Set the focus, play the discussion and inspect playback controls",
-    "decision": "Pause the overview and explain one concept back in your own words.",
+    "message": "",
     "studyPhases": {
       "primary": "understand"
-    }
+    },
+    "notebookOutput": "audio"
   },
   {
     "id": "S67VIDEO",
@@ -2093,14 +2065,14 @@
     "sources": [
       "TOOL_NOTEBOOK_VIDEO"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Watch a Video Overview",
-    "message": "Turn a selected chapter topic into a short visual explanation",
-    "decision": "Verify examples and numerical claims against the original chapter.",
+    "message": "",
     "studyPhases": {
       "primary": "understand"
-    }
+    },
+    "notebookOutput": "video"
   },
   {
     "id": "S67INFO",
@@ -2112,17 +2084,17 @@
     "sources": [
       "TOOL_NOTEBOOK_INFO"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Compare concepts in an infographic",
-    "message": "Choose a visual format and inspect the generated comparison",
-    "decision": "Verify every label and relationship. Infographic generation requires an adult account.",
+    "message": "",
     "studyPhases": {
       "primary": "connect",
       "secondary": [
         "understand"
       ]
-    }
+    },
+    "notebookOutput": "infographic"
   },
   {
     "id": "S67SLIDES",
@@ -2134,17 +2106,17 @@
     "sources": [
       "TOOL_NOTEBOOK_SLIDES"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Generate and present slides",
-    "message": "Recorded: a deck was generated and presented; revision controls were inspected.",
-    "decision": "Adult accounts only. Revisions ignore sources and use deck quota; check every change.",
+    "message": "",
     "studyPhases": {
       "primary": "connect",
       "secondary": [
         "understand"
       ]
-    }
+    },
+    "notebookOutput": "slides"
   },
   {
     "id": "S67TABLES",
@@ -2156,14 +2128,14 @@
     "sources": [
       "TOOL_NOTEBOOK_STUDIO"
     ],
-    "kind": "tool-demo",
+    "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
     "title": "Organise chapter concepts in a table",
-    "message": "Compare what changes, what stays fixed and the chapter evidence",
-    "decision": "Check column meaning: a ‘common misconception’ is an error to reject.",
+    "message": "",
     "studyPhases": {
       "primary": "connect"
-    }
+    },
+    "notebookOutput": "table"
   },
   {
     "id": "S67SHARE",
