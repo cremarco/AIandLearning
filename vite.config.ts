@@ -31,7 +31,7 @@ function publicAssets() {
     apply: 'build' as const,
     configResolved(config: { publicDir: string; root: string; build: { outDir: string } }) {
       publicDirectory = config.publicDir
-      outputDirectory = path.resolve(config.root, config.build.outDir)
+      outputDirectory = path.resolve(config.root, process.env.EDUFORUM_PUBLIC_OUT_DIR || config.build.outDir)
     },
     async writeBundle() {
       // MRU reuses the main site's public files rather than copying videos and images.
@@ -52,8 +52,8 @@ export default {
   build: { copyPublicDir: false },
   experimental: {
     renderBuiltUrl(filename: string, { type, hostType, hostId }: { type: string; hostType: string; hostId: string }) {
-      if (!isMru || type !== 'public') return
-      const sharedBase = process.env.VITE_SHARED_ASSET_BASE || '../'
+      const sharedBase = process.env.VITE_SHARED_ASSET_BASE
+      if (!sharedBase || type !== 'public') return
       // Relative CSS URLs resolve from the stylesheet's directory, not the page.
       if (sharedBase.startsWith('.') && hostType === 'css') {
         const stylesheet = hostId.startsWith('assets/') ? hostId : `assets/${hostId}`

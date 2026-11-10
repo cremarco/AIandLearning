@@ -35,7 +35,13 @@ Speaker notes have no word-count limit. Use as much detail as the presenter need
 
 `mru.md` and `data/mru/slides.json` are an independent copy of the slide order, notes and displayed content. Edit these files directly for MRU; `data/mru/highlights.json` holds its text emphasis. `pnpm generate` only updates the original presentation.
 
-`pnpm build` publishes the original at `/` and the MRU copy at `/mru/` (on GitHub Pages: `https://cremarco.github.io/EduForum/mru/`). Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the main site's directories.
+`pnpm build` publishes a presentation selector at `/`, the EduForum deck at `/eduforum/` and the MRU copy at `/mru/`. On GitHub Pages:
+
+- Home: https://cremarco.github.io/AIandLearning/
+- EduForum: https://cremarco.github.io/AIandLearning/eduforum/
+- MRU: https://cremarco.github.io/AIandLearning/mru/
+
+Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the site's root directories.
 
 The presentation has 88 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 

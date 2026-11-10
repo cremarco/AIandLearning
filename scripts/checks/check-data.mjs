@@ -312,7 +312,7 @@ export function checkData() {
     assert(guide.includes(`id="${skill.id}"`), `${skill.name}: accessible guide entry missing`)
   }
   const qr = read('public/images/qr/eduforum-github-pages.json')
-  assert.equal(qr.decodedPayload, 'https://cremarco.github.io/EduForum/')
+  assert.equal(qr.decodedPayload, 'https://cremarco.github.io/AIandLearning/')
   assert.equal(slides.find(slide => slide.id === 'S50QR').links[0].url, qr.decodedPayload)
   assert.equal(slides[slides.findIndex(slide => slide.id === 'S50QR') + 1]?.id, 'S50LEGEND')
   assert.equal(slides[slides.findIndex(slide => slide.id === 'S50LEGEND') + 1]?.id, 'S50CHECKIN')
