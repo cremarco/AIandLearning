@@ -46,24 +46,6 @@ title: "A visual path for learning with AI"
 
 ---
 layout: default
-routeAlias: s48
-title: "From curiosity to classroom practice"
-hide: true
----
-
-<DeckSlide id="S48" />
-
----
-layout: default
-routeAlias: s50
-title: "Visual tools for learning with AI"
-hide: true
----
-
-<DeckSlide id="S50" />
-
----
-layout: default
 routeAlias: s50qr
 title: "Follow along"
 ---

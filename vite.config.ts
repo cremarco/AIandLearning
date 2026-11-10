@@ -67,6 +67,7 @@ export default {
     alias: {
       '#deck/slides': path.join(projectRoot, isMru ? 'data/mru/slides.json' : 'data/generated/slides-runtime.json'),
       '#deck/highlights': path.join(projectRoot, isMru ? 'data/mru/highlights.json' : 'data/content/highlights.json'),
+      '#deck/uk': path.join(projectRoot, isMru ? 'data/mru/uk.json' : 'data/content/empty-translations.json'),
     },
   },
 }

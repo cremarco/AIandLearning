@@ -6,6 +6,7 @@ import { getShortcutVideo, loadShortcutTranscript, type ShortcutVideo } from '..
 import CommandTag from '../shared/CommandTag.vue'
 import PromptBlock from '../shared/PromptBlock.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
+import { t } from '../../utils/language'
 
 const id = useId()
 const dialog = ref<HTMLDialogElement>()
@@ -89,8 +90,8 @@ defineExpose({ open })
   <dialog :id="id" ref="dialog" class="modal shortcut-video-dialog" :aria-labelledby="`${id}-title`" @close="stop" @click.stop @keydown.stop @keyup.stop>
     <div class="modal-box shortcut-video-box" :style="selected ? { width: `min(96vw, ${selected.width + 48}px)` } : undefined">
       <header class="shortcut-video-header">
-        <h2 :id="`${id}-title`"><CommandTag v-if="selected" :text="selected.command" /> · recorded test</h2>
-        <form method="dialog"><button class="btn btn-ghost btn-sm" type="submit" autofocus aria-label="Close video">Close</button></form>
+        <h2 :id="`${id}-title`"><CommandTag v-if="selected" :text="selected.command" /> · {{ t('Recorded test') }}</h2>
+        <form method="dialog"><button class="btn btn-ghost btn-sm" type="submit" autofocus :aria-label="t('Close video')">{{ t('Close') }}</button></form>
       </header>
       <template v-if="selected">
         <video :key="selected.command" ref="video" controls playsinline preload="none" :width="selected.width" :height="selected.height" :poster="assetUrl(selected.poster)" :aria-label="selected.alt">
@@ -99,21 +100,21 @@ defineExpose({ open })
         </video>
         <RecordingResultLinks links-only class="shortcut-video-results" :result="selected.result" />
         <details :key="selected.command" class="collapse collapse-arrow shortcut-video-prompt" @toggle="onTranscriptToggle">
-          <summary class="collapse-title">Tested prompt and transcript</summary>
+          <summary class="collapse-title">{{ t('Tested prompt and transcript') }}</summary>
           <div class="collapse-content">
             <PromptBlock :text="selected.prompt" label="Tested prompt" />
-            <p v-if="transcriptLoading" role="status">Loading transcript…</p>
+            <p v-if="transcriptLoading" role="status">{{ t('Loading transcript…') }}</p>
             <div v-else-if="transcriptError" class="flex flex-wrap items-baseline gap-x-4 gap-y-2 sm:gap-x-5" role="status">
-              <p class="basis-full">The transcript could not be loaded.</p>
-              <button class="btn btn-ghost btn-sm" type="button" @click="loadTranscript">Retry transcript</button>
-              <a v-if="selected.transcriptFile" class="link" :href="assetUrl(selected.transcriptFile)" target="_blank" rel="noopener">Open transcript file</a>
+              <p class="basis-full">{{ t('The transcript could not be loaded.') }}</p>
+              <button class="btn btn-ghost btn-sm" type="button" @click="loadTranscript">{{ t('Retry transcript') }}</button>
+              <a v-if="selected.transcriptFile" class="link" :href="assetUrl(selected.transcriptFile)" target="_blank" rel="noopener">{{ t('Open transcript file') }}</a>
             </div>
             <p v-else class="shortcut-video-transcript">{{ transcript }}</p>
           </div>
         </details>
       </template>
     </div>
-    <form method="dialog" class="modal-backdrop"><button aria-label="Close video backdrop" type="submit">Close</button></form>
+    <form method="dialog" class="modal-backdrop"><button :aria-label="t('Close video')" type="submit">{{ t('Close') }}</button></form>
   </dialog>
 </template>
 

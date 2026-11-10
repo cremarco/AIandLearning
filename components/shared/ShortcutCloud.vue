@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import { slides } from '../../utils/deck'
 import shortcutDescriptions from '../../data/catalogues/shortcut-descriptions.json'
 import { useSlideMotion } from '../../composables/useSlideMotion'
+import { t } from '../../utils/language'
 
 const props = defineProps<{
   items: { command: string; retained: boolean }[]
@@ -156,7 +157,7 @@ const words = computed(() => {
     <div v-if="tooltip" class="shortcut-tooltip tooltip tooltip-open" :class="tooltip.below ? 'tooltip-bottom' : 'tooltip-top'"
       :style="{ left: `${tooltip.left}px`, top: `${tooltip.top}px` }" @pointerenter="cancelClose" @pointerleave="leaveShortcut">
       <div :id="tooltipId" class="tooltip-content" role="tooltip">
-        <strong>{{ tooltip.command }}</strong><span>{{ tooltip.description }}</span><span v-if="detailSlides.has(tooltip.command)" class="shortcut-tooltip-action">Click or press Enter to open the slide.</span>
+        <strong>{{ tooltip.command }}</strong><span>{{ t(tooltip.description) }}</span><span v-if="detailSlides.has(tooltip.command)" class="shortcut-tooltip-action">{{ t('Click or press Enter to open the slide.') }}</span>
       </div>
     </div>
     <ul v-if="isPrint" class="sr-only" aria-label="All tested shortcut labels">

@@ -3,6 +3,7 @@ import { computed, onScopeDispose, ref, watch } from 'vue'
 import { assetUrl as asset } from '../../utils/assets'
 import type { BookPreview } from '../../utils/deck'
 import { useSlideMotion } from '../../composables/useSlideMotion'
+import { t } from '../../utils/language'
 
 const props = defineProps<{ book: BookPreview; slideNumber: number }>()
 const { reduced, isStatic, running: motionAllowed } = useSlideMotion(() => props.slideNumber)
@@ -180,10 +181,10 @@ function replay() {
         <div class="book-binding" />
       </div>
     </div>
-    <span v-if="isStatic || finished" class="badge badge-outline book-fiction-stamp absolute top-10 inset-x-0 z-10 mx-auto h-auto rounded-sm px-4 py-2 font-mono text-2xl font-black uppercase tracking-widest">Fictional book</span>
+    <span v-if="isStatic || finished" class="badge badge-outline book-fiction-stamp absolute top-10 inset-x-0 z-10 mx-auto h-auto rounded-sm px-4 py-2 font-mono text-2xl font-black uppercase tracking-widest">{{ t('Fictional book') }}</span>
     <div v-if="!isStatic" class="book-controls" @click.stop>
       <button class="btn btn-sm text-sm" type="button" :disabled="!ready || finished" :aria-pressed="paused" @click="paused = !paused">{{ paused ? 'Resume' : 'Pause' }}</button>
-      <button class="btn btn-sm text-sm" type="button" :disabled="!ready" @click="replay">Replay book</button>
+      <button class="btn btn-sm text-sm" type="button" :disabled="!ready" @click="replay">{{ t('Replay book') }}</button>
     </div>
     <p class="sr-only" role="status" aria-live="polite">{{ status }}</p>
   </div>

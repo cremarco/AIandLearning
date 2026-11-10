@@ -12,9 +12,11 @@ import SlideAudience from './shared/SlideAudience.vue'
 import StudyPhaseRibbon from './shared/StudyPhaseRibbon.vue'
 import CoverBackground from './media/CoverBackground.vue'
 import WorkshopSlide from './slides/WorkshopSlide.vue'
+import MruLanguageSelector from './shared/MruLanguageSelector.vue'
+import { supportsLanguageSwitch, t, localizeContent, slideCountText } from '../utils/language'
 
 const props = defineProps<{ id: string }>()
-provide(EMPHASIS_TERMS_KEY, computed(() => (highlights as Record<string, EmphasisTerm[]>)[props.id] || []))
+provide(EMPHASIS_TERMS_KEY, computed(() => localizeContent((highlights as Record<string, EmphasisTerm[]>)[props.id] || [])))
 const s = computed(() => getSlide(props.id))
 const selectedStudyPhases = ref<StudyFocus>()
 watch(() => props.id, () => { selectedStudyPhases.value = undefined })
@@ -33,8 +35,8 @@ const bentoCards = computed(() => {
 const slideProgress = computed(() => ({
   value: s.value?.number || 1,
   max: presentationSlideCount,
-  label: 'Progress through the presentation',
-  text: `Slide ${s.value?.number} of ${presentationSlideCount}`,
+  label: t('Progress through the presentation'),
+  text: slideCountText(s.value?.number || 1, presentationSlideCount),
 }))
 </script>
 
@@ -47,11 +49,12 @@ const slideProgress = computed(() => ({
     </span>
     <template v-if="s.type === 'cover'">
       <CoverBackground />
+      <MruLanguageSelector v-if="supportsLanguageSwitch" />
       <img class="cover-university-logo" :src="image('universities/milano-bicocca.png')" alt="Università degli Studi di Milano-Bicocca" />
       <div class="cover-copy">
-        <h1 class="cover-title">Beyond<br /><span>prompting</span></h1>
+        <h1 class="cover-title">{{ t('Beyond') }}<br /><span>{{ t('prompting') }}</span></h1>
         <p class="cover-subtitle"><EmphasisText :text="s.message" /></p>
-        <p class="cover-author">Marco Cremaschi<br /><span>University of Milano-Bicocca · Whattadata</span><br /><a class="link link-hover cover-email" href="mailto:marco.cremaschi@unimib.it">marco.cremaschi@unimib.it</a></p>
+        <p class="cover-author">Marco Cremaschi<br /><span>{{ t('University of Milano-Bicocca · Whattadata') }}</span><br /><a class="link link-hover cover-email" href="mailto:marco.cremaschi@unimib.it">marco.cremaschi@unimib.it</a></p>
       </div>
     </template>
 
@@ -112,7 +115,7 @@ const slideProgress = computed(() => ({
       <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
       <SourceLine :ids="sourceIds" />
     </template>
-    <span v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="slide-page" :aria-label="`Slide ${s.number} of ${presentationSlideCount}`">{{ s.number }} / {{ presentationSlideCount }}</span>
+    <span v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="slide-page" :aria-label="slideCountText(s.number, presentationSlideCount)">{{ s.number }} / {{ presentationSlideCount }}</span>
     <progress v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
   </main>
 </template>

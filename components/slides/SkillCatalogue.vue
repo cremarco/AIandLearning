@@ -5,13 +5,14 @@ import { useSelectionMotion } from '../../composables/useSelectionMotion'
 import research from '../../data/catalogues/skills-research.json'
 import { assetUrl } from '../../utils/assets'
 import type { StudyFocus } from '../../utils/deck'
+import { localizeContent, t } from '../../utils/language'
 
 const props = defineProps<{ ids: string[]; clickNavigation?: boolean }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const nav = useNav()
 const context = nav.currentRoute.value.name === 'print' ? undefined : useSlideContext()
 const localIndex = ref(0)
-const skills = computed(() => props.ids.map(id => research.skills.find(skill => skill.id === id)).filter(Boolean))
+const skills = computed(() => props.ids.map(id => research.skills.find(skill => skill.id === id)).filter(Boolean).map(skill => localizeContent(skill)))
 const index = computed(() => props.clickNavigation && context
   ? Math.min(context.$clicks.value, skills.value.length - 1)
   : localIndex.value)
@@ -27,7 +28,7 @@ useSelectionMotion(detail, () => selected.value?.id)
 
 <template>
   <div class="skill-catalogue">
-    <nav aria-label="Select a documented skill">
+    <nav :aria-label="t('Select a documented skill')">
       <ul class="menu menu-vertical skill-menu">
         <li v-for="(skill, i) in skills" :key="skill!.id">
           <button type="button" :class="{ 'menu-active': index === i }" :aria-pressed="index === i" @keydown.stop @click.stop="selectSkill(i)">{{ skill!.name }}</button>
@@ -42,11 +43,11 @@ useSelectionMotion(detail, () => selected.value?.id)
     <section v-if="selected" ref="detail" class="skill-detail" :data-skill="selected.id" aria-live="polite">
       <h2>{{ selected.summary }}</h2>
       <p class="skill-capabilities">{{ selected.capabilities || selected.summary }}</p>
-      <div class="skill-expected"><h3>{{ selected.executionStatus === 'executed' ? 'Observed in the chapter test' : 'Expected deliverable' }}</h3><p>{{ selected.resultExcerpt || selected.expected }}</p></div>
+      <div class="skill-expected"><h3>{{ t(selected.executionStatus === 'executed' ? 'Observed in the chapter test' : 'Expected deliverable') }}</h3><p>{{ selected.resultExcerpt || selected.expected }}</p></div>
       <p class="skill-caveat">{{ selected.caveat }}</p>
       <div class="skill-links">
-        <a class="link" :href="selected.sourceUrl" target="_blank" rel="noopener">Publisher’s skill</a>
-        <a class="link" :href="assetUrl(`materials/skills-guide.html#${selected.id}`)" target="_blank" rel="noopener">Install and requirements</a>
+        <a class="link" :href="selected.sourceUrl" target="_blank" rel="noopener">{{ t('Publisher’s skill') }}</a>
+        <a class="link" :href="assetUrl(`materials/skills-guide.html#${selected.id}`)" target="_blank" rel="noopener">{{ t('Install and requirements') }}</a>
       </div>
     </section>
   </div>

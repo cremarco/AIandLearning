@@ -2,13 +2,14 @@
 import { computed } from 'vue'
 import { assetUrl } from '../../utils/assets'
 import type { Audience } from '../../utils/deck'
+import { t } from '../../utils/language'
 
 const props = defineProps<{ audience: Audience, inline?: boolean }>()
-const label = computed(() => ({
+const label = computed(() => t(({
   student: 'For students',
   teacher: 'For teachers',
   both: 'For students and teachers',
-})[props.audience])
+})[props.audience]))
 </script>
 
 <template>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { imageUrl } from '../../utils/assets'
 import { useSlideMotion } from '../../composables/useSlideMotion'
+import { language, t } from '../../utils/language'
 
 const props = defineProps<{ title: string; message: string; slideNumber: number }>()
 const { running: active } = useSlideMotion(() => props.slideNumber)
@@ -8,14 +9,14 @@ const logo = imageUrl('tools/chatgpt-logo.svg')
 </script>
 
 <template>
-  <section class="chatgpt-intro" :class="{ 'is-active': active }" lang="en">
+  <section class="chatgpt-intro" :class="{ 'is-active': active }" :lang="language">
     <div class="chatgpt-logo-stage">
       <img class="chatgpt-logo" :src="logo" alt="ChatGPT logo, by OpenAI" width="300" height="300" />
     </div>
     <div class="chatgpt-intro-copy">
       <h1>{{ title }}</h1>
       <p class="chatgpt-intro-message">{{ message }}</p>
-      <p class="chatgpt-intro-preview">Maps · Explanations · Revision · Practice</p>
+      <p class="chatgpt-intro-preview">{{ t('Maps · Explanations · Revision · Practice') }}</p>
     </div>
   </section>
 </template>

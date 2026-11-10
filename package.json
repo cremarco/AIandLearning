@@ -11,7 +11,7 @@
     "build": "node scripts/delivery/build-site.mjs",
     "export": "node scripts/delivery/export-deck.mjs",
     "generate": "node scripts/content/generate-formula.mjs && node scripts/content/integrate-workshop.mjs && node scripts/content/generate-slides.mjs && node scripts/content/generate-companions.mjs",
-    "check": "node scripts/checks/check-structure.mjs && node scripts/checks/check-data.mjs && node scripts/checks/audit-assets.mjs && node scripts/checks/check-links.mjs && node tests/demo-genai/math.test.mjs && node --experimental-vm-modules --test tests/media-playback.test.mjs",
+    "check": "node scripts/checks/check-structure.mjs && node scripts/checks/check-data.mjs && node scripts/checks/audit-assets.mjs && node scripts/checks/check-links.mjs && node tests/demo-genai/math.test.mjs && node --experimental-vm-modules --test tests/media-playback.test.mjs tests/mru-language.test.mjs",
     "videos:verify": "node scripts/checks/check-recordings.mjs",
     "check:browser": "node scripts/checks/verify-deck.mjs && node scripts/checks/check-motion.mjs",
     "check:all": "pnpm check && pnpm check:browser",

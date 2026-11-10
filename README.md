@@ -35,6 +35,8 @@ Speaker notes have no word-count limit. Use as much detail as the presenter need
 
 `mru.md` and `data/mru/slides.json` are an independent copy of the slide order and displayed content. MRU has no speaker notes, and its production build excludes them. Edit these files directly for MRU; `data/mru/highlights.json` holds its text emphasis. `pnpm generate` only updates the original presentation.
 
+MRU opens with flat English and Ukrainian flag buttons; the Ukrainian flag includes a small heart. `data/mru/uk.json` translates the slide text and controls. The choice persists for MRU and can be shared with `?lang=en` or `?lang=uk`. Recorded prompts, native command names, screenshots, videos and downloads retain their original language. Hidden event slides and timed practice slides are excluded from MRU; EduForum retains its original content and speaker notes.
+
 `pnpm build` publishes a presentation selector at `/`, the EduForum deck at `/eduforum/` and the MRU copy at `/mru/`. On GitHub Pages:
 
 - Home: https://cremarco.github.io/AIandLearning/

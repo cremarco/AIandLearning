@@ -7,6 +7,7 @@ import { assetUrl } from '../../utils/assets'
 import { getShortcutVideo } from '../../utils/shortcut-videos'
 import PromptBlock from '../shared/PromptBlock.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
+import { t } from '../../utils/language'
 
 const props = defineProps<{ slide: Slide }>()
 const clip = computed(() => getShortcutVideo(props.slide.title))
@@ -73,8 +74,8 @@ useSlideVideo(video)
   <div class="shortcut-detail" :class="{ 'shortcut-detail-focus': focused }">
     <section class="shortcut-detail-request" aria-label="Recorded prompt and output format">
       <div v-if="focused" class="shortcut-focus-toolbar flex flex-wrap items-center gap-3">
-        <button class="btn btn-sm" type="button" aria-haspopup="dialog" @click.stop="showPrompt" @keydown.stop>Recorded prompt</button>
-        <button class="btn btn-sm" type="button" @click.stop="fullScreen" @keydown.stop>Full screen</button>
+        <button class="btn btn-sm" type="button" aria-haspopup="dialog" @click.stop="showPrompt" @keydown.stop>{{ t('Recorded prompt') }}</button>
+        <button class="btn btn-sm" type="button" @click.stop="fullScreen" @keydown.stop>{{ t('Full screen') }}</button>
       </div>
       <PromptBlock v-else-if="slide.prompt" class="shortcut-detail-prompt" :text="slide.prompt" :label="slide.promptLabel || 'Recorded prompt'" />
       <div class="shortcut-detail-context">
@@ -86,7 +87,7 @@ useSlideVideo(video)
     </section>
 
     <section class="shortcut-detail-output" :aria-label="slide.resultLabel || 'Recorded output'">
-      <h2 v-if="!clip">{{ slide.resultLabel || 'Recorded output' }}</h2>
+      <h2 v-if="!clip">{{ t(slide.resultLabel || 'Recorded output') }}</h2>
       <figure v-if="clip" class="shortcut-detail-recording">
         <video :key="clip.sha256 || clip.src" ref="video" controls playsinline preload="none" :width="clip.width" :height="clip.height" :poster="assetUrl(clip.poster)" :aria-label="clip.alt" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
           <source :src="assetUrl(clip.src) + (focused ? `?v=${clip.sha256.slice(0, 12)}` : '')" type="video/mp4" />
@@ -95,7 +96,7 @@ useSlideVideo(video)
         <img class="shortcut-detail-print-poster" :src="assetUrl(clip.poster)" :alt="clip.alt" />
       </figure>
       <footer v-if="clip" class="shortcut-detail-caption"><RecordingResultLinks links-only :result="clip.result" /></footer>
-      <div v-else class="chat chat-start shortcut-detail-static">
+      <div v-else class="chat chat-start shortcut-detail-static" lang="en">
         <div class="chat-bubble w-full max-w-full bg-base-200 text-base-content">
           <p v-for="(block,index) in staticResultBlocks" :key="index" class="shortcut-detail-excerpt"><strong v-if="block.label">{{ block.label + ' ' }}</strong>{{ block.text }}</p>
         </div>
@@ -105,8 +106,8 @@ useSlideVideo(video)
       <dialog ref="promptDialog" class="modal" :aria-labelledby="promptId" @click.stop @keydown.stop>
         <div class="modal-box w-11/12 max-w-3xl">
           <header class="mb-5 flex items-center justify-between gap-4">
-            <h2 :id="promptId" class="text-2xl font-bold">{{ slide.title }} · recorded prompt</h2>
-            <form method="dialog"><button class="btn btn-sm" type="submit" autofocus>Close</button></form>
+            <h2 :id="promptId" class="text-2xl font-bold">{{ slide.title }} · {{ t('Recorded prompt') }}</h2>
+            <form method="dialog"><button class="btn btn-sm" type="submit" autofocus>{{ t('Close') }}</button></form>
           </header>
           <PromptBlock v-if="slide.prompt" :text="slide.prompt" :label="slide.promptLabel || 'Recorded prompt'" />
           <p v-for="text in slide.body" :key="text" class="mt-4">{{ text }}</p>
@@ -114,7 +115,7 @@ useSlideVideo(video)
             <a v-for="link in slide.links" :key="link.url" class="link" :href="assetUrl(link.url)" target="_blank" rel="noopener">{{ link.label }}</a>
           </div>
         </div>
-        <form method="dialog" class="modal-backdrop"><button type="submit">Close recorded prompt</button></form>
+        <form method="dialog" class="modal-backdrop"><button type="submit">{{ t('Close recorded prompt') }}</button></form>
       </dialog>
     </Teleport>
   </div>

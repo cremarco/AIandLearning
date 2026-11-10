@@ -3,6 +3,7 @@ import type { ToolTable } from '../../utils/deck'
 import { brandsForLabel } from '../../utils/tool-brands'
 import { assetUrl } from '../../utils/assets'
 import ToolLogos from './ToolLogos.vue'
+import { t } from '../../utils/language'
 
 defineProps<{ table: ToolTable; label: string }>()
 </script>
@@ -18,7 +19,7 @@ defineProps<{ table: ToolTable; label: string }>()
           <th scope="row">
             <span class="tool-resource-name flex items-center gap-2">
               <ToolLogos :ids="brandsForLabel(row.tool)" compact />
-              <a class="link" :href="assetUrl(row.url)" target="_blank" rel="noopener">{{ row.tool }}</a>
+              <a class="link" :href="assetUrl(row.url)" target="_blank" rel="noopener">{{ t(row.tool) }}</a>
             </span>
           </th>
           <td>{{ row.purpose }}</td>

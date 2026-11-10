@@ -27,6 +27,7 @@ import { brandsForLabel, brandsForSlide } from '../../utils/tool-brands'
 import { assetUrl as asset } from '../../utils/assets'
 import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
 import type { Slide, StudyFocus } from '../../utils/deck'
+import { t } from '../../utils/language'
 const props = defineProps<{ slide: Slide }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const s = computed(() => props.slide)
@@ -119,9 +120,9 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           <AudioResultPlayer v-if="audioResult" :result="audioResult" />
           <figcaption v-if="s.media.caption || s.media.source || s.media.result">
             <span v-if="s.media.type !== 'video'">{{ s.media.caption }}</span>
-            <a v-if="s.tool === 'notebook' && s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>Open notebook</a>
+            <a v-if="s.tool === 'notebook' && s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>{{ t('Open notebook') }}</a>
             <template v-else>
-              <a v-if="s.media.source && !s.media.result" class="link" :href="s.media.source" target="_blank" rel="noopener">Source</a>
+              <a v-if="s.media.source && !s.media.result" class="link" :href="s.media.source" target="_blank" rel="noopener">{{ t('Source') }}</a>
               <RecordingResultLinks compact :links-only="s.media.type === 'video'" :result="s.media.result" />
             </template>
             <button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button>

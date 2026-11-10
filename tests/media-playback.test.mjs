@@ -99,6 +99,7 @@ async function dialogHarness(loader) {
     vue: { ...vue, useId: () => 'test-dialog' },
     '../../composables/useSlideVideo': { useSlideVideo: (_video, close) => { leave = close } },
     '../../utils/assets': assets,
+    '../../utils/language': { t: text => text },
     '../../utils/shortcut-videos': { getShortcutVideo: command => clips.find(c => c.command === command), loadShortcutTranscript: loader },
     '../shared/CommandTag.vue': { default: {} },
     '../shared/PromptBlock.vue': { default: {} },

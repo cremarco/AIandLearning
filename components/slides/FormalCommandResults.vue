@@ -6,6 +6,7 @@ import { assetUrl } from '../../utils/assets'
 import CommandTag from '../shared/CommandTag.vue'
 import EmphasisText from '../shared/EmphasisText.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
+import { t } from '../../utils/language'
 
 const props = defineProps<{ commands: PromptCommand[] }>()
 const selectedIndex = ref(0)
@@ -21,7 +22,7 @@ watch(selectedIndex, pauseVideo)
   <div class="formal-command-results" :class="[selected?.command === 'Study' && !studyVideo ? 'formal-study-chat' : 'formal-split', { 'formal-video': result?.media.type === 'video' }]">
     <section v-if="selected?.command === 'Study' && result && !studyVideo" class="formal-study-conversation" :data-command="selected.command" :data-result-status="result.status" aria-label="Recorded Study conversation" aria-live="polite">
       <div class="chat chat-end">
-        <div class="chat-header">You · Prompt after selecting Study</div>
+        <div class="chat-header">{{ t('You · Prompt after selecting Study') }}</div>
         <div class="chat-bubble max-w-[850px] bg-base-200 text-base-content"><CommandTag text="/Study" class="mr-2" /><EmphasisText :text="result.instruction" /></div>
       </div>
       <div class="chat chat-start">
@@ -41,7 +42,7 @@ watch(selectedIndex, pauseVideo)
             </button>
           </li>
         </ul>
-        <p class="formal-instruction-label">Prompt</p>
+        <p class="formal-instruction-label">{{ t('Prompt') }}</p>
         <CommandTag v-if="selected" :text="selected.command" class="mt-2" />
         <p class="formal-instruction">{{ result?.instruction }}</p>
       </nav>
@@ -58,8 +59,8 @@ watch(selectedIndex, pauseVideo)
         <img v-else class="formal-result-image" :src="assetUrl(result.media.src)" :alt="result.media.alt" />
         <footer class="formal-recording-caption">
           <div class="formal-result-links">
-            <a v-if="selected.command !== 'Study' && result.media.type !== 'video'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>Open original capture</a>
-            <a v-if="result.media.type === 'video' && result.media.source && !result.media.result" class="link" :href="result.media.source" target="_blank" rel="noopener" @click.stop @keydown.stop>Original conversation</a>
+            <a v-if="selected.command !== 'Study' && result.media.type !== 'video'" class="link" :href="assetUrl(result.media.src)" target="_blank" rel="noopener" @click.stop @keydown.stop>{{ t('Open original capture') }}</a>
+            <a v-if="result.media.type === 'video' && result.media.source && !result.media.result" class="link" :href="result.media.source" target="_blank" rel="noopener" @click.stop @keydown.stop>{{ t('Original conversation') }}</a>
           </div>
           <RecordingResultLinks links-only :result="result.media.result" />
         </footer>

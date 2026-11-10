@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useSlideVideo } from '../../composables/useSlideVideo'
 import { assetUrl } from '../../utils/assets'
 import type { VideoResult } from '../../utils/deck'
+import { t } from '../../utils/language'
 
 defineProps<{ result: VideoResult }>()
 const audio = ref<HTMLAudioElement>()
@@ -12,8 +13,8 @@ useSlideVideo(audio)
 <template>
   <div class="audio-result-player">
     <div class="audio-result-heading">
-      <p>Full Audio Overview</p>
-      <a class="link" :href="assetUrl(result.url)" download @click.stop @pointerdown.stop @keydown.stop @keyup.stop>Download audio</a>
+      <p>{{ t('Full Audio Overview') }}</p>
+      <a class="link" :href="assetUrl(result.url)" download @click.stop @pointerdown.stop @keydown.stop @keyup.stop>{{ t('Download audio') }}</a>
     </div>
     <audio ref="audio" controls preload="metadata" aria-label="Full NotebookLM Audio Overview"
       @click.stop @pointerdown.stop @keydown.stop @keyup.stop>

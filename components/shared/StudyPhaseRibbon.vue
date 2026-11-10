@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import type { StudyFocus } from '../../utils/deck'
+import { t } from '../../utils/language'
 
 defineProps<StudyFocus>()
 </script>
 
 <template>
-  <aside class="study-phase-ribbon" :data-phase="primary" :aria-label="`Main study phase: ${primary}${secondary?.length ? `; secondary: ${secondary[0]}` : ''}`">
+  <aside class="study-phase-ribbon" :data-phase="primary" :aria-label="`${t('Main study phase')}: ${t(primary)}${secondary?.length ? `; ${t(secondary[0])}` : ''}`">
     <div class="badge badge-primary study-phase-band">
-      <span class="study-phase-primary">{{ primary }}</span>
-      <span v-if="secondary?.length" class="study-phase-secondary">{{ secondary[0] }}</span>
+      <span class="study-phase-primary">{{ t(primary) }}</span>
+      <span v-if="secondary?.length" class="study-phase-secondary">{{ t(secondary[0]) }}</span>
     </div>
   </aside>
 </template>

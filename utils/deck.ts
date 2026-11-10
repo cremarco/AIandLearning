@@ -1,4 +1,6 @@
 import slideData from '#deck/slides'
+import { computed } from 'vue'
+import { language, localizeContent } from './language'
 
 export type Audience = 'student' | 'teacher' | 'both'
 export type StudyPhase = 'plan' | 'understand' | 'connect' | 'recall' | 'apply' | 'check'
@@ -124,5 +126,7 @@ export type Slide = {
 export const slides = slideData as Slide[]
 const thanksIndex = slides.findIndex(slide => slide.kind === 'thanks')
 export const presentationSlideCount = thanksIndex < 0 ? slides.length : thanksIndex + 1
-const slidesById = new Map(slides.map(slide => [slide.id, slide]))
-export const getSlide = (id: string) => slidesById.get(id)
+const slidesById = computed(() => new Map(slides.map(slide => [slide.id,
+  language.value === 'uk' ? { ...localizeContent(slide), lang: 'uk' } : slide,
+])))
+export const getSlide = (id: string) => slidesById.value.get(id)

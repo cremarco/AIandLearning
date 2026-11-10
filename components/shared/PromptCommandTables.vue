@@ -4,6 +4,7 @@ import type { CommandCategory, PromptCommand } from '../../utils/deck'
 import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
 import CommandTag from './CommandTag.vue'
 import PromptVideoDialog from '../media/PromptVideoDialog.vue'
+import { language, t } from '../../utils/language'
 const player = ref<InstanceType<typeof PromptVideoDialog>>()
 const props = withDefaults(defineProps<{ commands: PromptCommand[]; category?: CommandCategory }>(), { category: 'informal' })
 const labels = computed(() => props.category === 'formal-web'
@@ -18,10 +19,10 @@ const columns = computed(() => {
 </script>
 
 <template>
-  <div class="command-tables" lang="en">
+  <div class="command-tables" :lang="language">
     <div v-for="(rows, index) in columns" :key="index" class="overflow-x-auto">
       <table class="table command-table" :aria-label="`${labels.table}, part ${index + 1}`">
-        <thead><tr><th scope="col">{{ labels.column }}</th><th scope="col">{{ labels.description }}</th></tr></thead>
+        <thead><tr><th scope="col">{{ t(labels.column) }}</th><th scope="col">{{ t(labels.description) }}</th></tr></thead>
         <tbody>
           <tr v-for="row in rows" :key="row.command">
             <th scope="row">

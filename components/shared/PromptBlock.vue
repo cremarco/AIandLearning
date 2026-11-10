@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { splitCommandText } from '../../utils/command-text'
 import CommandTag from './CommandTag.vue'
+import { language, t } from '../../utils/language'
 
 const props = withDefaults(defineProps<{ text: string; label?: string }>(), { label: 'Prompt to copy' })
 const parts = computed(() => splitCommandText(props.text))
@@ -9,8 +10,8 @@ const parts = computed(() => splitCommandText(props.text))
 
 <template>
   <div class="prompt-block">
-    <span class="prompt-label">{{ label }}</span>
-    <div class="chat chat-end prompt-chat">
+    <span class="prompt-label">{{ t(label) }}<template v-if="language === 'uk'"> · EN</template></span>
+    <div class="chat chat-end prompt-chat" lang="en">
       <div class="chat-bubble max-w-full bg-base-200 text-base-content"><template v-for="(part, index) in parts" :key="index"><CommandTag v-if="part.command" :text="part.text" /><template v-else>{{ part.text }}</template></template></div>
     </div>
   </div>
