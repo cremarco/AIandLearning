@@ -593,18 +593,6 @@ Across all **15 prompts**, this session produced two native interactive activiti
 
 ---
 layout: default
-routeAlias: s53tryshortcuts
-title: "Your turn: try a few shortcuts"
----
-
-<DeckSlide id="S53TRYSHORTCUTS" />
-
-<!--
-Take **five minutes** to try different shortcuts with **your own ChatGPT account**; the **Free plan is fine**. Use the GenAI book or another document you want to study. Try /flashcard, /quiz or /oral. Use the activity, **check the answers against your source** and refine the request if needed.
--->
-
----
-layout: default
 routeAlias: s53skillssection
 title: "Skills"
 ---
@@ -704,18 +692,6 @@ title: "Three questions to answer from memory"
 
 <!--
 To revisit those distinctions later, we can prepare **recall questions**. This skill produces an importable text deck, not an interactive app. Andrea attempts each question first, then checks the **source-based answer**.
--->
-
----
-layout: default
-routeAlias: s53tryskills
-title: "Your turn: try a skill"
----
-
-<DeckSlide id="S53TRYSKILLS" />
-
-<!--
-Take **ten minutes** to try a skill. Choose one of the **four reviewed skills** or find a new one, then **install and enable it** in a compatible host. Use the GenAI book or your own source to **create study material**. Try the result, check it against the source and improve the request.
 -->
 
 ---
@@ -1064,18 +1040,6 @@ title: "Review access before sharing a notebook"
 
 <!--
 Check **recipient access** before planning a shared activity. In this Unimib recording, the sharing dialog shows only the owner and offers no public-access setting. The checked answer is therefore supplied as a **text download**. For your own activity, test the recipient’s route to the material before the session.
--->
-
----
-layout: default
-routeAlias: s67trynotebook
-title: "Your turn: create materials for students"
----
-
-<DeckSlide id="S67TRYNOTEBOOK" />
-
-<!--
-Take **thirty minutes** to create materials for **your students** on a **topic of your choice**, using **any tools you prefer**. Choose suitable sources and adapt the materials to your students’ level. **Test and check** the output against the sources, then verify how students will access and use it.
 -->
 
 ---
