@@ -44,7 +44,7 @@ jobs:
       - name: Check content and local assets
         run: pnpm check
 
-      - name: Build main and MRU presentations
+      - name: Build EduForum and MRU presentations
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: pnpm build
@@ -64,3 +64,6 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # The first publish after a repository rename resynchronizes shared media.
+          timeout: 1800000
