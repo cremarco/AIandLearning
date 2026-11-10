@@ -2,8 +2,8 @@ import { useNav } from '@slidev/client'
 import { onScopeDispose, watch, type Ref } from 'vue'
 import { useDocumentVisibility } from './useDocumentVisibility'
 
-/** Recordings stop when their slide or browser tab is left. */
-export function useSlideVideo(video: Ref<HTMLVideoElement | undefined>, onLeave?: () => void) {
+/** Audio and video stop when their slide or browser tab is left. */
+export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefined>, onLeave?: () => void) {
   const nav = useNav()
   const visible = useDocumentVisibility()
   const pause = () => {

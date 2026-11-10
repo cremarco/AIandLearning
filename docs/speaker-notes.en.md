@@ -369,7 +369,7 @@ Several checked notes can support a more organised **study guide**. Review its d
 
 ## 77. Listen to an Audio Overview
 
-The same material can also be presented through **audio**. This silent recording shows the Audio Overview and playback controls. During study, pause the discussion and explain one **concept in your own words** before continuing.
+The same material can also be presented through **audio**. This recording shows the Audio Overview and playback controls, with excerpts from the **original episode audio** restored during playback. During study, pause the discussion and explain one **concept in your own words** before continuing.
 
 ## 78. Watch a Video Overview
 

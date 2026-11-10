@@ -14,6 +14,7 @@ import PromptVideoDialog from '../media/PromptVideoDialog.vue'
 import SkillCatalogue from './SkillCatalogue.vue'
 import DownloadIcon from '../shared/DownloadIcon.vue'
 import BrowserVideo from '../media/BrowserVideo.vue'
+import AudioResultPlayer from '../media/AudioResultPlayer.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
 import ShortcutCloud from '../shared/ShortcutCloud.vue'
 import ShortcutDetail from './ShortcutDetail.vue'
@@ -31,12 +32,18 @@ const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>(
 const s = computed(() => props.slide)
 const nav = useNav()
 const revealOnClick = computed(() => !!s.value.clicks && !nav.isPrintMode.value && nav.currentRoute.value.name !== 'print')
-const toolChoiceContext = computed(() => (s.value.body[0] || '')
-  .split(/(ChatGPT|Gemini|Claude|NotebookLM)/g)
-  .filter(Boolean)
+const toolChoiceContext = computed(() => s.value.body
   .map(text => ({ text, brands: brandsForLabel(text) })))
 const hasVideo = computed(() => s.value.media?.type === 'video'
   || s.value.commands?.some(command => command.result?.media.type === 'video'))
+const audioResult = computed(() => s.value.media?.result?.mediaType?.startsWith('audio/') ? s.value.media.result : undefined)
+function pauseOtherMedia(event: Event) {
+  const current = event.target as HTMLMediaElement
+  const figure = event.currentTarget as HTMLElement
+  figure.querySelectorAll<HTMLMediaElement>('video,audio').forEach(media => {
+    if (media !== current) media.pause()
+  })
+}
 const headingCommand = computed(() => {
   const command = s.value.commandCategory === 'formal-web' && s.value.commands?.length === 1
     ? s.value.commands[0].command : ''
@@ -64,9 +71,9 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <h1><svg v-if="s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title)" class="command-example-dot" role="img" aria-label="Example explained in the speaker notes" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
-    <p v-if="s.kind === 'tool-choice'" class="tool-choice-context">
-      <template v-for="(part, index) in toolChoiceContext" :key="index"><span v-if="part.brands.length" class="tool-choice-name"><ToolLogos :ids="part.brands" compact aria-hidden="true" /><EmphasisText :text="part.text" /></span><template v-else>{{ part.text }}</template></template>
-    </p>
+    <ul v-if="s.kind === 'tool-choice'" class="tool-choice-context" aria-label="Selected tools">
+      <li v-for="part in toolChoiceContext" :key="part.text" class="tool-choice-name"><ToolLogos :ids="part.brands" compact aria-hidden="true" /><span>{{ part.text }}</span></li>
+    </ul>
     <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
     <div v-if="!['section-divider', 'tool-divider'].includes(s.kind)" class="workshop-stage">
       <ChatGPTIntro v-if="s.kind === 'chatgpt-intro'" :title="s.title" :message="s.message" :slide-number="s.number" />
@@ -96,7 +103,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
         <LucaReaction ref="lucaReaction" :character="s.character" :slide-number="s.number" />
       </template>
       <template v-else>
-        <figure v-if="s.media" class="workshop-media">
+        <figure v-if="s.media" class="workshop-media" :class="{ 'has-audio-result': !!audioResult }" @play.capture="pauseOtherMedia">
           <AnimatedBook v-if="s.book" :book="s.book" :slide-number="s.number" />
           <BrowserVideo v-else-if="s.media.type==='video' && s.media.browserFrame" :media="s.media" :show-result="false" />
           <video v-else-if="s.media.type==='video'" ref="video" playsinline controls preload="none" :poster="asset(s.media.poster)" :aria-label="s.media.alt" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
@@ -109,6 +116,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           </picture>
           <img v-else :src="asset(s.media.src)" :alt="s.media.alt" :style="s.media.fit ? {objectFit:s.media.fit} : undefined" />
           <img v-if="s.media.type==='video' && !s.media.browserFrame" class="video-print-poster" :src="asset(s.media.poster)" :alt="s.media.alt" />
+          <AudioResultPlayer v-if="audioResult" :result="audioResult" />
           <figcaption v-if="s.media.caption || s.media.source || s.media.result">
             <span v-if="s.media.type !== 'video'">{{ s.media.caption }}</span>
             <a v-if="s.tool === 'notebook' && s.media.source" class="link" :href="s.media.source" target="_blank" rel="noopener" @click.stop @pointerdown.stop @keydown.stop @keyup.stop>Open notebook</a>
@@ -160,7 +168,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 .workshop-heading h1 { min-width:0; }
 .command-example-dot { display:inline-block; width:8px; height:8px; margin-right:10px; vertical-align:middle; color:var(--deck-important); }
 .comparison-heading { display:flex; align-items:center; gap:10px; }
-.tool-choice-name { display:inline-flex; align-items:center; gap:8px; vertical-align:middle; white-space:nowrap; }
+.tool-choice-name { display:inline-flex; align-items:center; gap:10px; white-space:nowrap; }
 .comparison-icon { display:block; flex:0 0 32px; width:32px; height:32px; color:var(--deck-cyan); background:currentColor; mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
 .workshop-video-open { margin-left:12px; vertical-align:middle; }
 @media print { .workshop-video-open { display:none; } }

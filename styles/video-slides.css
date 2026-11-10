@@ -45,6 +45,7 @@
   padding:0;
 }
 .has-video .workshop-stage > .workshop-copy { display:none; }
+.has-video .workshop-media.has-audio-result { grid-template-rows:minmax(0,1fr) auto 32px; gap:12px; }
 .has-video .tool-demo-prompt { grid-area:3 / 1; align-self:start; }
 .has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) { font-size:18px; }
 .has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) .prompt-label { margin-bottom:10px; font-size:16px; }

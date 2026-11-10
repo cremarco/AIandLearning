@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "notebook-audio-restoration",
+  "sourceVideo": {
+    "path": "materials/video-refresh/2026-11-07/notebook-audio/video.mp4",
+    "sha256": "a1f42017065f31360a322202f419033b8dc3cb022280178bc5db02843e31d9bb",
+    "bytes": 1848831
+  },
+  "sourceAudio": {
+    "path": "materials/video-refresh/2026-11-07/notebook-audio/exports/how-generative-ai-predicts-next-tokens.m4a",
+    "sha256": "c2b6f705df1a3f35af1e21e7e08f4f08eaa21ae0e568e192d948fb2f8e9e5660",
+    "bytes": 38513322
+  },
+  "segments": [
+    {
+      "videoStart": 12.421416667,
+      "videoEnd": 17.783,
+      "audioStart": 12.5
+    },
+    {
+      "videoStart": 23.977,
+      "videoEnd": 28.404,
+      "audioStart": 17.861583333
+    }
+  ],
+  "synchronization": "Normal-speed excerpts aligned to whole-second native player times; fractional source positions are estimated.",
+  "originalProvenance": "materials/video-refresh/2026-11-07/provenance/notebook-audio.json",
+  "verification": {
+    "videoPacketsUnchanged": true,
+    "activeRmsDb": [
+      -27.406738223270995,
+      -22.98564016535884
+    ],
+    "pauseRmsDb": [
+      -160,
+      -160,
+      -160
+    ]
+  },
+  "files": {
+    "video": {
+      "path": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/video.mp4",
+      "sha256": "3d22ab942e6e91a972a5bbf752a0334ffd9e16042db915fdc9f9ed2fffeb8e49",
+      "bytes": 2132368
+    },
+    "transcript": {
+      "path": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/transcript.txt",
+      "sha256": "b708e42a207a4e72c986905175922b930bcda4e2486c51678844c02c59eb367a",
+      "bytes": 2400
+    }
+  }
+}

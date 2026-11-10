@@ -1003,7 +1003,7 @@ title: "Listen to an Audio Overview"
 <DeckSlide id="S67AUDIO" />
 
 <!--
-The same material can also be presented through **audio**. This silent recording shows the Audio Overview and playback controls. During study, pause the discussion and explain one **concept in your own words** before continuing.
+The same material can also be presented through **audio**. This recording shows the Audio Overview and playback controls, with excerpts from the **original episode audio** restored during playback. During study, pause the discussion and explain one **concept in your own words** before continuing.
 -->
 
 ---

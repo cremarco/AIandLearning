@@ -458,15 +458,15 @@
   },
   "S67AUDIO": {
     "type": "video",
-    "src": "materials/video-refresh/2026-11-07/notebook-audio/video.mp4",
+    "src": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/video.mp4",
     "poster": "materials/video-refresh/2026-11-07/notebook-audio/poster.jpg",
     "captions": "materials/video-refresh/2026-11-07/notebook-audio/captions.en.vtt",
-    "transcriptFile": "materials/video-refresh/2026-11-07/notebook-audio/transcript.txt",
+    "transcriptFile": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/transcript.txt",
     "captionsDefault": false,
     "browserFrame": true,
     "alt": "NotebookLM — Listen to an Audio Overview: recorded demonstration and use.",
     "caption": "NotebookLM · 34.6 s",
-    "transcript": "NotebookLM — \n\nREQUEST\nFocus the Audio Overview on training versus ordinary inference, how context can change without weight updates, and how RAG supplies passages. Keep the discussion based on the uploaded book and avoid claiming that probability guarantees truth. Use English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.205 Upload the workshop book as the source. (3× speed)\n00:00:00.530 The workshop book is being indexed. (3× speed)\n00:00:01.598 Focus on the complete request. (3× speed)\n00:00:01.974 Write the source-grounded request. (3× speed)\n00:00:04.555 Read the complete request.\n00:00:06.661 Send the question with the selected book. (3× speed)\n00:00:06.930 Generate the answer from the selected source. (4× speed)\n00:00:07.517 Open the generated Audio Overview and inspect its player.\n00:00:07.714 Show the finished Audio Overview\n00:00:10.595 Inspect the original episode title, duration and controls.\n00:00:10.810 Open the original audio episode\n00:00:12.421 Watch a later 1× player excerpt, then pause.\n00:00:17.783 Pause the episode\n00:00:23.600 Resume the native player, then pause again.\n00:00:23.977 Resume the episode\n00:00:28.404 Pause the episode after resuming\n00:00:29.470 Inspect the native playback speeds\n00:00:31.654 Keep the native player at normal speed.\n00:00:32.502 Keep normal playback speed\n00:00:33.292 Inspect the native export controls.\n00:00:33.392 Inspect the original audio export\n\nOBSERVED RESULT\nNew English Unimib notebook and exact approved PDF, complete255-character focus request, generated original1196.640363s AudioOverview, actual native player progress12→17s, pause, resume17→22s, pause and1.0x controls. This is a silent native screen capture of selected control excerpts. Genuine nativeDownload M4A bytes/provenance are retained separately for independent playback; no full continuous listening or recorded voice track is claimed.\n\n",
+    "transcript": "NotebookLM —\n\nREQUEST\nFocus the Audio Overview on training versus ordinary inference, how context can change without weight updates, and how RAG supplies passages. Keep the discussion based on the uploaded book and avoid claiming that probability guarantees truth. Use English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.205 Upload the workshop book as the source. (3× speed)\n00:00:00.530 The workshop book is being indexed. (3× speed)\n00:00:01.598 Focus on the complete request. (3× speed)\n00:00:01.974 Write the source-grounded request. (3× speed)\n00:00:04.555 Read the complete request.\n00:00:06.661 Send the question with the selected book. (3× speed)\n00:00:06.930 Generate the answer from the selected source. (4× speed)\n00:00:07.517 Open the generated Audio Overview and inspect its player.\n00:00:07.714 Show the finished Audio Overview\n00:00:10.595 Inspect the original episode title, duration and controls.\n00:00:10.810 Open the original audio episode\n00:00:12.421 Watch a later 1× player excerpt, then pause.\n00:00:17.783 Pause the episode\n00:00:23.600 Resume the native player, then pause again.\n00:00:23.977 Resume the episode\n00:00:28.404 Pause the episode after resuming\n00:00:29.470 Inspect the native playback speeds\n00:00:31.654 Keep the native player at normal speed.\n00:00:32.502 Keep normal playback speed\n00:00:33.292 Inspect the native export controls.\n00:00:33.392 Inspect the original audio export\n\nOBSERVED RESULT\nNew English Unimib notebook and exact approved PDF, complete255-character focus request, generated original1196.640363s AudioOverview, actual native player progress12→17s, pause, resume17→22s, pause and1.0x controls. The original screen capture was silent. This version restores excerpts from the genuine downloaded M4A during the two playback intervals, with silence during setup and pauses. The original video frames and full M4A are unchanged. Source audio starts at 12.500 s, continuing at 17.862 s in the second interval. Fractional alignment is estimated from the on-screen whole-second player times; this is not a live system-audio capture or a full continuous listening session.\n",
     "prompt": "Focus the Audio Overview on training versus ordinary inference, how context can change without weight updates, and how RAG supplies passages. Keep the discussion based on the uploaded book and avoid claiming that probability guarantees truth. Use English.",
     "result": {
       "kind": "file",
@@ -482,14 +482,14 @@
       "sourceMethod": "native-download",
       "supplemental": []
     },
-    "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-audio.json",
+    "provenance": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/provenance.json",
     "durationSeconds": 34.633333,
     "width": 1440,
     "height": 900,
     "fps": 60,
-    "sha256": "a1f42017065f31360a322202f419033b8dc3cb022280178bc5db02843e31d9bb",
-    "recordingMode": "accepted-native-refresh",
-    "refreshReleaseId": "2026-11-07",
+    "sha256": "3d22ab942e6e91a972a5bbf752a0334ffd9e16042db915fdc9f9ed2fffeb8e49",
+    "recordingMode": "native-capture-restored-audio",
+    "refreshReleaseId": "2026-11-10-notebook-audio-restored",
     "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
   },
   "S67INFO": {
