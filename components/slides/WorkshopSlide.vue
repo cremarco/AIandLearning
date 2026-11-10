@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useNav } from '@slidev/client'
 import { useSlideVideo } from '../../composables/useSlideVideo'
 import LucaReaction from '../media/LucaReaction.vue'
 import EmphasisText from '../shared/EmphasisText.vue'
@@ -28,6 +29,8 @@ import type { Slide, StudyFocus } from '../../utils/deck'
 const props = defineProps<{ slide: Slide }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const s = computed(() => props.slide)
+const nav = useNav()
+const revealOnClick = computed(() => !!s.value.clicks && !nav.isPrintMode.value && nav.currentRoute.value.name !== 'print')
 const toolChoiceContext = computed(() => (s.value.body[0] || '')
   .split(/(ChatGPT|Gemini|Claude|NotebookLM)/g)
   .filter(Boolean)
@@ -70,21 +73,21 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <ShortcutCloud v-else-if="s.kind === 'shortcut-cloud'" :items="s.shortcutLabels || []" :slide-number="s.number" />
       <ShortcutDetail v-else-if="s.kind === 'shortcut-detail'" :slide="s" />
       <ul v-else-if="s.kind === 'audience-questions'" class="list audience-questions" :aria-label="s.title">
-        <li v-for="(question, index) in s.body" :key="question" class="list-row">
+        <li v-for="(question, index) in s.body" :key="question" v-click="revealOnClick ? index + 1 : false" class="list-row deck-click-reveal">
           <span class="audience-question-symbol" aria-hidden="true">
-            <svg v-if="index === 0" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg v-if="index === 1" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 11v5a3 3 0 0 1-3 3H8l-5 3V6a3 3 0 0 1 3-3h6" />
               <path d="m18 2 1.3 3.7L23 7l-3.7 1.3L18 12l-1.3-3.7L13 7l3.7-1.3Z" />
               <path d="M7 12h4m-4 3h8" />
             </svg>
-            <ToolLogos v-else :ids="index === 1 ? ['chatgpt'] : ['notebook']" />
+            <ToolLogos v-else :ids="index === 0 ? ['chatgpt'] : ['notebook']" />
           </span>
           <p class="audience-question-text">{{ question }}</p>
         </li>
       </ul>
       <ScreenshotResults v-else-if="s.screenshots?.length" :items="s.screenshots" />
       <FormalCommandResults v-else-if="s.commandCategory === 'formal-web' && s.commands?.some(command => command.result)" :commands="s.commands || []" />
-      <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" @study-phase-change="emit('studyPhaseChange', $event)" />
+      <SkillCatalogue v-else-if="s.skillIds?.length" :ids="s.skillIds" :click-navigation="revealOnClick" @study-phase-change="emit('studyPhaseChange', $event)" />
       <ToolResourceTable v-else-if="s.toolTable" :table="s.toolTable" :label="s.title" />
       <BibliographyGrid v-else-if="s.kind === 'bibliography' || s.kind === 'web-resources'" :references="s.references || []" :spacious="s.kind === 'web-resources'" />
       <PromptCommandTables v-else-if="s.kind === 'prompt-commands'" :commands="s.commands || []" :category="s.commandCategory" />
@@ -119,7 +122,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
         <div class="workshop-copy">
           <PromptBlock v-if="s.prompt && s.kind !== 'tool-demo'" class="workshop-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
           <div v-if="s.comparison?.length" class="comparison" :class="{three:s.comparison.length===3}">
-            <section v-for="(item,i) in s.comparison" :key="i">
+            <section v-for="(item,i) in s.comparison" :key="i" v-click="revealOnClick ? i + 1 : false" class="deck-click-reveal">
               <SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline />
               <h2 class="comparison-heading">
                 <span v-if="item.icon" class="comparison-icon" aria-hidden="true" :style="{ maskImage: `url(${asset(item.icon)})` }" />
@@ -130,7 +133,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
             </section>
           </div>
           <ol v-if="s.steps?.length" class="procedure-list">
-            <li v-for="(step,i) in s.steps" :key="i"><span class="step-number">{{ i+1 }}</span><div><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div></li>
+            <li v-for="(step,i) in s.steps" :key="i" v-click="revealOnClick ? i + 1 : false" class="deck-click-reveal"><span class="step-number">{{ i+1 }}</span><div><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div></li>
           </ol>
           <ActivityTimer v-if="s.activityTimer" :minutes="s.activityTimer.minutes" :timer-id="s.activityTimer.id" />
           <div v-if="s.body?.length && s.kind !== 'tool-choice'" class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div>

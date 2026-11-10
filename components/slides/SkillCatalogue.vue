@@ -1,15 +1,25 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useNav, useSlideContext } from '@slidev/client'
 import { useSelectionMotion } from '../../composables/useSelectionMotion'
 import research from '../../data/catalogues/skills-research.json'
 import { assetUrl } from '../../utils/assets'
 import type { StudyFocus } from '../../utils/deck'
 
-const props = defineProps<{ ids: string[] }>()
+const props = defineProps<{ ids: string[]; clickNavigation?: boolean }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
-const index = ref(0)
+const nav = useNav()
+const context = nav.currentRoute.value.name === 'print' ? undefined : useSlideContext()
+const localIndex = ref(0)
 const skills = computed(() => props.ids.map(id => research.skills.find(skill => skill.id === id)).filter(Boolean))
+const index = computed(() => props.clickNavigation && context
+  ? Math.min(context.$clicks.value, skills.value.length - 1)
+  : localIndex.value)
 const selected = computed(() => skills.value[index.value] || skills.value[0])
+function selectSkill(next: number) {
+  if (props.clickNavigation && context) void nav.go(context.$page.value, next)
+  else localIndex.value = next
+}
 watch(selected, skill => emit('studyPhaseChange', skill?.studyPhases as StudyFocus | undefined), { immediate: true })
 const detail = ref<HTMLElement>()
 useSelectionMotion(detail, () => selected.value?.id)
@@ -20,7 +30,7 @@ useSelectionMotion(detail, () => selected.value?.id)
     <nav aria-label="Select a documented skill">
       <ul class="menu menu-vertical skill-menu">
         <li v-for="(skill, i) in skills" :key="skill!.id">
-          <button type="button" :class="{ 'menu-active': index === i }" :aria-pressed="index === i" @keydown.stop @click.stop="index = i">{{ skill!.name }}</button>
+          <button type="button" :class="{ 'menu-active': index === i }" :aria-pressed="index === i" @keydown.stop @click.stop="selectSkill(i)">{{ skill!.name }}</button>
         </li>
       </ul>
       <div v-if="selected" class="skill-host">

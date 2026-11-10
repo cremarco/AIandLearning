@@ -32,25 +32,37 @@ To follow this path with me, scan the **QR code** and open the presentation and 
 
 ## 8. Who is this slide for?
 
-You will see these **icons** throughout the presentation. They identify activities for **teachers**, **students**, or both. The ribbon shows the **learning phase** each example supports. Use these cues to ask: who is this activity for, and what should it help them do? The same tool can support several phases.
+You will see these **icons** throughout the presentation. They identify activities for **teachers**, **students**, or both.
 
 ## 9. Before we begin…
 
-Before we start, **raise your hand** for each question. First, who already uses **generative AI** to study or prepare materials? Next, who has a **ChatGPT account (or Gemini, or Claude)**? Finally, who is familiar with **NotebookLM**? Use these answers to adjust the examples and offer setup help where needed.
+Before we start, **raise your hand** for each question.
+
+[click] First, who has a **ChatGPT account (or Gemini, or Claude)**?
+
+[click] Next, who already uses **generative AI** to study or prepare materials?
+
+[click] Finally, who is familiar with **NotebookLM**? Use these answers to adjust the examples and offer setup help where needed.
 
 ## 10. Andrea needs to understand GenAI
 
-To make the method concrete, we will follow **Andrea**, a computer science student preparing for an exam about generative AI. He still confuses some key ideas, so we will follow his **learning process**. You do not need programming knowledge to follow the example.
+To make the method concrete, we will follow **Andrea**, a computer science student preparing for an exam about generative AI.
+
+He still confuses some key ideas, so we will follow his **learning process**.
+
+You **do not need programming knowledge** to follow the example.
 
 ## 11. Andrea’s learning task
 
 To prepare for his exam, Andrea needs to **learn the key ideas** and show that he understands them. This requires four connected activities.
 
-First, he must **read** the chapter, identify the main concepts and note what is unclear. Then he must **represent** these ideas in a diagram, using labelled arrows to show how they connect.
+[click] First, he must **read** the chapter, identify the main concepts and note what is unclear.
 
-Next, he **checks** his explanation and the AI’s suggestions against the chapter. If he finds an error, he updates the diagram and explains what he changed and why.
+[click] Then he must **represent** these ideas in a diagram, using labelled arrows to show how they connect.
 
-Finally, he must **explain** the process in his own words, without AI help. He should use a new example and correct a wrong explanation. These actions give us **evidence of understanding**, beyond a finished activity.
+[click] Next, he **checks** his explanation and the AI’s suggestions against the chapter. If he finds an error, he updates the diagram and explains what he changed and why.
+
+[click] Finally, he must **explain** the process in his own words, without AI help. He should use a new example and correct a wrong explanation. These actions give us **evidence of understanding**, beyond a finished activity.
 
 ## 12. Self-directed learning: making choices
 
@@ -60,7 +72,7 @@ These four activities require Andrea to make **learning choices**. He decides wh
 
 How does Andrea know whether his chosen path is working? Through **self-assessment**: he compares what he can explain with **clear criteria**.
 
-He can define a token but still confuses training and inference. His next step is to revise that link in his map and explain it again.
+He can explain the main ideas but still struggles to show how they connect. His next step is to revise his map and explain those connections again.
 
 AI can offer feedback; **Andrea judges the evidence**.
 
@@ -68,11 +80,17 @@ AI can offer feedback; **Andrea judges the evidence**.
 
 These six phases describe **Andrea’s actions**: plan, understand, connect, recall, apply and check. They help him choose the support he needs at each point in his study.
 
-He starts by **planning** a goal and organising his time. To **understand** a difficult idea, he works through an explanation or example. He then **connects** it to what he already knows, using a map to explain the relationships.
+[click] He starts by **planning** a goal and organising his time.
 
-Next, he tries to **recall** the idea without looking at the chapter, and returns to it over time. To **apply** it, he uses a new example. Finally, he **checks** his explanation against the source and the learning criteria, then decides what needs more work.
+[click] To **understand** a difficult idea, he works through an explanation or example.
 
-He can move between these phases as a difficulty emerges. For example, an error during recall may send him back to a passage or a link in his map. The ribbon highlights the **main phase**, with a smaller secondary phase where relevant. **Support** marks setup, sources and sharing.
+[click] He then **connects** it to what he already knows, using a map to explain the relationships.
+
+[click] Next, he tries to **recall** the idea without looking at the chapter, and returns to it over time.
+
+[click] To **apply** it, he uses a new example.
+
+[click] Finally, he **checks** his explanation against the source and the learning criteria, then decides what needs more work. He can move between these phases as a difficulty emerges. For example, an error during recall may send him back to a passage or a link in his map. The ribbon highlights the **main phase**, with a smaller secondary phase where relevant. **Support** marks setup, sources and sharing.
 
 ## 15. The assigned book
 
@@ -83,15 +101,13 @@ Joking aside, this is a **fictional book**, created only for this workshop. Its 
 
 Before we introduce the tools, let me explain **why we chose this small set**. ChatGPT, Gemini and Claude are **alternative assistants**: you can choose one for flexible tasks. NotebookLM adds a workspace for working with selected sources. You do not need a paid subscription to all of them.
 
-First, **more control**. We can ask for a simpler explanation, change the level of difficulty, choose a format or request one question at a time. The learning goal guides the request.
+[click] First, **more control**. We can ask for a simpler explanation, change the level of difficulty, choose a format or request one question at a time. The learning goal guides the request.
 
-Second, **a connected workflow**. Andrea can use the same chapter for explanations, diagrams and practice questions, while checking the outputs against the source. This can reduce the need to move between separate tools for each activity.
+[click] Second, **a connected workflow**. Andrea can use the same chapter for explanations, diagrams and practice questions, while checking the outputs against the source. This can reduce the need to move between separate tools for each activity.
 
-Third, **transferable skills**. Defining a goal, providing relevant sources, refining a request and checking an answer are useful across subjects and assistants.
+[click] Third, **transferable skills**. Defining a goal, providing relevant sources, refining a request and checking an answer are useful across subjects and assistants.
 
-Fourth, **potential savings**. One assistant may cover several needs that would otherwise require separate subscriptions. Free access has limits, and some specialist tools are also free, so a lower cost is a possibility rather than a guarantee.
-
-**Specialist tools still have a place**: dedicated spaced repetition, classroom management or a guided interface may offer a concrete advantage. We add them when that feature helps the learner. Now we will start with ChatGPT and see what Andrea can do with his chapter.
+[click] Fourth, **potential savings**. One assistant may cover several needs that would otherwise require separate subscriptions. Free access has limits, and some specialist tools are also free, so a lower cost is a possibility rather than a guarantee. **Specialist tools still have a place**: dedicated spaced repetition, classroom management or a guided interface may offer a concrete advantage. We add them when that feature helps the learner. Now we will start with ChatGPT and see what Andrea can do with his chapter.
 
 ## 17. What can ChatGPT do?
 
@@ -103,7 +119,11 @@ With the chapter as our shared source, we begin with **ChatGPT**. First decide *
 
 ## 19. Formal actions and informal shortcuts
 
-A **formal action** is offered by the application, such as Study. An **informal label** is part of our request: writing /quiz does not select a menu action or install a feature. We selected **15 complementary examples**. Specify the task, source and format, including any buttons or feedback you need. A label alone does not guarantee an **interactive result**.
+There are **two ways** to ask for support: select an app action or describe a task in your prompt.
+
+[click] A **formal action** is offered by the application, such as Study.
+
+[click] An **informal label** is part of our request: writing /quiz does not select a menu action or install a feature. We selected **15 complementary examples**. Specify the task, source and format, including any buttons or feedback you need. A label alone does not guarantee an **interactive result**.
 
 ## 20. Study · practise through guided questions
 
@@ -227,7 +247,13 @@ Before choosing a skill, check where it can run. These examples were recorded in
 
 ## 48. Skills for studying the same chapter
 
-Each skill supports a different **study action**. **Learn** guides understanding through questions and feedback. **The Learning Skill** combines practice, study materials and review. **Markdown Mermaid Writing** turns relationships into editable diagrams. **Flashcard Generator** creates recall questions. Andrea’s chapter stays the same; we choose the support for his **next learning need**, then check the output.
+Each skill supports a different **study action**. **Learn** guides understanding through questions and feedback.
+
+[click] **The Learning Skill** combines practice, study materials and review.
+
+[click] **Markdown Mermaid Writing** turns relationships into editable diagrams.
+
+[click] **Flashcard Generator** creates recall questions. Andrea’s chapter stays the same; we choose the support for his **next learning need**, then check the output.
 
 ## 49. Learn: explain before receiving feedback
 

@@ -83,6 +83,7 @@ export type Slide = {
   number: number
   type: 'cover' | 'profile' | 'company' | 'brief' | 'workshop'
   kind: string
+  clicks?: number
   title: string
   message: string
   body: string[]

@@ -151,6 +151,9 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .source-line { position: absolute; left: var(--deck-inset-inline); right: 174px; bottom: 27px; color: var(--deck-muted); font-size: var(--deck-text-caption); line-height: 1.4; letter-spacing: 0; }
 .slide-page { position: absolute; z-index:4; right: calc(var(--deck-inset-inline) - 7px); bottom: 23px; padding: 3px 7px; border-radius: 6px; background: var(--deck-paper); color: var(--deck-muted); font-size: 16px; line-height: 1.4; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .slide-progress { position:absolute; inset:auto 0 0; z-index:3; pointer-events:none; }
+/* Reveal the matching presenter paragraph with each native Slidev click. */
+.slidev-note-with-clicks > p:has(.slidev-note-click-mark-next),
+.slidev-note-with-clicks > p:has(.slidev-note-click-mark-future) { display:none; }
 @media (prefers-reduced-motion: reduce) {
   .deck-slide * { animation:none!important; transition-property:color,background-color,border-color,opacity!important; transition-duration:100ms!important; transition-delay:0s!important; scroll-behavior:auto!important; }
   .slidev-vclick-target,.slidev-page,.slidev-layout { animation:none!important; transition:none!important; }

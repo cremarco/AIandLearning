@@ -7,9 +7,7 @@
     "stage": "Presentation and materials",
     "title": "Follow along",
     "message": "Scan the QR code to open the presentation.",
-    "body": [
-      "Keep the slides and workshop materials at hand."
-    ],
+    "body": [],
     "audience": "both",
     "sources": [],
     "media": {
@@ -51,6 +49,7 @@
   },
   {
     "id": "S50CHECKIN",
+    "clicks": 3,
     "type": "workshop",
     "kind": "audience-questions",
     "section": "opening",
@@ -58,8 +57,8 @@
     "title": "Before we begin…",
     "message": "Three quick questions. A show of hands is enough.",
     "body": [
-      "Do you already use GenAI to study or prepare teaching materials?",
       "Do you have a ChatGPT account (or Gemini, or Claude)?",
+      "Do you already use GenAI to study or prepare teaching materials?",
       "Are you familiar with NotebookLM?"
     ],
     "sources": [],
@@ -85,6 +84,7 @@
   },
   {
     "id": "S52",
+    "clicks": 4,
     "type": "workshop",
     "kind": "scenario",
     "section": "scenario",
@@ -173,7 +173,7 @@
       }
     ],
     "resultLabel": "Andrea’s example",
-    "result": "“I can explain what a token is, but I still confuse training and inference. I will revise that link in my map and explain it again.”",
+    "result": "“I can explain the main ideas, but I still struggle to show how they connect. I will revise my map and explain those connections again.”",
     "decision": "AI can offer feedback; the learner checks the evidence and decides what to improve."
   },
   {
@@ -213,7 +213,8 @@
         "text": "Compare your performance with criteria, identify gaps and decide what to study next."
       }
     ],
-    "decision": "Checking guides your next step. SUPPORT marks setup, sources and sharing."
+    "decision": "Checking guides your next step. SUPPORT marks setup, sources and sharing.",
+    "clicks": 6
   },
   {
     "id": "S53",
@@ -225,7 +226,6 @@
     "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
     "body": [
       "Topic: Language Models and Basic Architecture.",
-      "A fictional book created for this workshop, with accurate content and real technical sources.",
       "The book is available as a PDF."
     ],
     "sources": [],
@@ -275,7 +275,8 @@
         "text": "Cover several needs before paying for additional tools."
       }
     ],
-    "decision": ""
+    "decision": "",
+    "clicks": 4
   },
   {
     "type": "workshop",
@@ -347,7 +348,8 @@
     "decision": "A prompt label guides the response; it does not guarantee an interactive result.",
     "studyPhases": {
       "primary": "support"
-    }
+    },
+    "clicks": 2
   },
   {
     "type": "workshop",
@@ -1360,7 +1362,8 @@
       "secondary": [
         "check"
       ]
-    }
+    },
+    "clicks": 3
   },
   {
     "id": "S53SKILLLEARN",

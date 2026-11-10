@@ -23,6 +23,17 @@
 .audience-questions { width:100%; margin:0; padding:0; border-bottom:1px solid var(--deck-line); }
 .audience-questions .list-row { grid-template-columns:64px minmax(0,1fr); align-items:center; gap:28px; padding:28px 0; border-top:1px solid var(--deck-line); border-radius:0; }
 .audience-questions .list-row::after { display:none; }
+.deck-click-reveal.slidev-vclick-target {
+  clip-path:inset(0);
+  transition:clip-path 360ms var(--deck-motion-ease), opacity var(--deck-motion-change) var(--deck-motion-ease);
+}
+.deck-click-reveal.slidev-vclick-hidden { clip-path:inset(0 100% 0 0); visibility:hidden; }
+@media (prefers-reduced-motion:reduce) {
+  .deck-click-reveal.slidev-vclick-target { clip-path:none; transition:none!important; }
+}
+@media print {
+  .deck-click-reveal.slidev-vclick-hidden { clip-path:none; opacity:1!important; visibility:visible; }
+}
 .audience-question-symbol { display:flex; align-items:center; justify-content:center; color:var(--deck-cyan); }
 .slidev-layout .kind-audience-questions .audience-question-text { margin:0; max-width:1020px; font-size:32px; line-height:1.25; font-weight:600; text-wrap:balance; }
 .has-character .workshop-stage { gap:48px; }
