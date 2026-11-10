@@ -29,7 +29,11 @@ Open http://localhost:3047/. Arrow keys navigate. The Slidev toolbar provides pr
 
 Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, full reader data, lean runtime indexes, speaker notes and companion materials. Do not hand-edit `data/generated/`, `slides.md`, the generated notes or companion HTML/text files.
 
-Speaker notes have no word-count limit. Use as much detail as the presenter needs.
+Write speaker notes as concise scripts in simple English, ready to say aloud. Use natural transitions and preserve the `[click]` markers.
+
+### NotebookLM outputs
+
+EduForum presents seven Studio outputs directly, with the generating feature named beside each result. Quiz and Flashcards keep their recorded demonstrations. `data/content/notebook-outputs.json` identifies the original files and supplies the local output viewers. The recordings remain available to MRU. PDF previews preserve the original pages; rebuild the previews and extracted content with `python3 scripts/content/prepare-notebook-outputs.py` (requires Poppler, cwebp and ffmpeg), then run `pnpm generate`.
 
 ### MRU copy
 

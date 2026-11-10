@@ -11,6 +11,7 @@ export type NotebookOutput = {
   feature: string
   type: 'audio' | 'video' | 'pdf' | 'image' | 'quiz' | 'flashcards' | 'table'
   src: string
+  preview?: string
   prompt: string
   description?: string
   sourceSha256: string

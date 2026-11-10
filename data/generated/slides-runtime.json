@@ -3187,12 +3187,14 @@
   {
     "id": "S67",
     "type": "workshop",
-    "kind": "notebook-output",
+    "kind": "tool-demo",
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "Answer a quiz before reading feedback",
-    "message": "",
-    "body": [],
+    "message": "Attempt a question, choose an answer and inspect the explanation",
+    "body": [
+      "Answer before opening the hint. Read the explanation, then retry the missed question."
+    ],
     "sources": [
       "TOOL_NOTEBOOK_QUIZ",
       "EDU_RETRIEVAL"
@@ -3205,7 +3207,7 @@
         "recall"
       ]
     },
-    "notebookOutput": "quiz",
+    "decision": "Use feedback to revise an explanation, then check it against the chapter.",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/notebook-quiz/video.mp4",
@@ -3255,14 +3257,14 @@
     "sources": [
       "TOOL_NOTEBOOK_QUIZ"
     ],
-    "kind": "notebook-output",
+    "kind": "tool-demo",
     "stage": "NotebookLM · recorded examples",
     "title": "Practise recall with flashcards",
-    "message": "",
+    "message": "Try an answer, reveal the card and record your own judgement",
     "studyPhases": {
       "primary": "recall"
     },
-    "notebookOutput": "flashcards",
+    "decision": "Recognising the revealed answer is different from recalling it unaided.",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/notebook-flashcards/video.mp4",

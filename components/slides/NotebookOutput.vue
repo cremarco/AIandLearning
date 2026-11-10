@@ -22,8 +22,9 @@ useSlideVideo(video)
 const question = computed(() => output.value.questions?.[index.value])
 const card = computed(() => output.value.cards?.[index.value])
 const count = computed(() => output.value.pages?.length || output.value.cards?.length || output.value.questions?.length || 1)
-const image = computed(() => output.value.pages?.[index.value] || output.value.src)
-const downloadLabel = computed(() => ({ pdf: 'Open PDF', image: 'Open image', quiz: 'Open questions and solutions', flashcards: 'Download cards (CSV)', table: 'Download table (CSV)', audio: 'Download audio', video: 'Download video' }[output.value.type]))
+const image = computed(() => output.value.preview || output.value.pages?.[index.value] || output.value.src)
+const downloadable = computed(() => ['audio','video','flashcards','table'].includes(output.value.type) || output.value.src.endsWith('.csv'))
+const downloadLabel = computed(() => output.value.preview && output.value.src.endsWith('.csv') ? 'Download table (CSV)' : ({ pdf: 'Open PDF', image: 'Open image', quiz: 'Open questions and solutions', flashcards: 'Download cards (CSV)', table: 'Download table (CSV)', audio: 'Download audio', video: 'Download video' }[output.value.type]))
 const localViewer = computed(() => ['quiz', 'flashcards', 'table'].includes(output.value.type))
 const imageViewer = computed(() => ['pdf', 'image'].includes(output.value.type))
 function resetItem() {
@@ -36,9 +37,8 @@ function resetItem() {
 watch(() => props.outputId, () => { index.value = 0; mediaError.value = false; showEvidence.value = false; resetItem() })
 watch(index, () => { resetItem(); if (questionContent.value) questionContent.value.scrollTop = 0 })
 watch(revealed, async shown => {
-  if (!shown) return
   await nextTick()
-  if (questionContent.value) questionContent.value.scrollTop = questionContent.value.scrollHeight
+  if (questionContent.value) questionContent.value.scrollTop = shown ? questionContent.value.scrollHeight : 0
 })
 function move(offset: number) { index.value = Math.max(0, Math.min(count.value - 1, index.value + offset)) }
 function onKey(event: KeyboardEvent) {
@@ -64,7 +64,8 @@ function onKey(event: KeyboardEvent) {
       </div>
       <p v-if="localViewer" class="nb-format">Local viewer · original NotebookLM content</p>
       <p v-else-if="outputId === 'mind-map'" class="nb-format">Complete static map · zoom to read the branches</p>
-      <a class="link" :href="assetUrl(output.src)" :download="['audio','video','flashcards','table'].includes(output.type) ? '' : undefined" :target="['audio','video','flashcards','table'].includes(output.type) ? undefined : '_blank'" rel="noopener">{{ downloadLabel }}</a>
+      <p v-else-if="outputId === 'table' && output.preview" class="nb-format">Screenshot of the generated table</p>
+      <a class="link" :href="assetUrl(output.src)" :download="downloadable ? '' : undefined" :target="downloadable ? undefined : '_blank'" rel="noopener">{{ downloadLabel }}</a>
     </aside>
 
     <div class="nb-viewer" :class="`nb-${output.type}`">
@@ -87,6 +88,7 @@ function onKey(event: KeyboardEvent) {
           <source :src="assetUrl(output.src)" type="video/mp4" />
           <track v-if="output.captions" kind="captions" srclang="en" label="English" :src="assetUrl(output.captions)" />
         </video>
+        <img class="nb-print-poster" :src="assetUrl(output.poster)" alt="Generated NotebookLM Video Overview" />
         <p v-if="mediaError" role="alert">Video could not load. Try the download link.</p>
       </div>
 
@@ -103,7 +105,7 @@ function onKey(event: KeyboardEvent) {
             <strong>{{ String.fromCharCode(65 + i) }}.</strong><span>{{ option }}</span>
           </button>
         </div>
-        <p v-if="hintVisible && !revealed" class="nb-hint" role="status">{{ question.hint }}</p>
+        <p v-if="hintVisible" class="nb-hint" role="status">{{ question.hint }}</p>
         <section v-if="revealed" class="nb-feedback" aria-live="polite">
           <h4>Correct answer: {{ String.fromCharCode(65 + question.correctIndex) }}</h4>
           <p>{{ question.explanations[question.correctIndex] }}</p>
@@ -155,6 +157,7 @@ function onKey(event: KeyboardEvent) {
 .notebook-output .nb-audio-content p { font-size:22px; }
 .nb-audio-content audio { width:100%; height:54px; }
 .nb-video-content video { width:100%; max-height:100%; min-height:0; object-fit:contain; background:var(--deck-surface); }
+.nb-print-poster { display:none; }
 .nb-card-content { display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:28px; border-top:1px solid var(--deck-line); }
 .notebook-output .nb-card-content h3 { font-size:30px; line-height:1.25; }
 .notebook-output :is(.nb-card-content,.nb-quiz-content,.nb-audio-content) h3 { text-transform:none; letter-spacing:-.01em; }
@@ -177,6 +180,7 @@ function onKey(event: KeyboardEvent) {
 .nb-viewer :focus-visible,.nb-sidebar :focus-visible { outline:2px solid var(--deck-emphasis); outline-offset:4px; }
 @media print {
   .nb-controls,audio,video { display:none; }
+  .nb-print-poster { display:block; width:100%; object-fit:contain; }
   .nb-image-scroll img { width:100%!important; height:100%!important; object-fit:contain; }
   .nb-image-scroll,.nb-card-content,.nb-quiz-content,.nb-table-scroll { overflow:hidden; }
 }

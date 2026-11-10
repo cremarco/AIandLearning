@@ -258,7 +258,7 @@
   },
   "table": {
     "feature": "Data Table",
-    "type": "table",
+    "type": "image",
     "src": "materials/video-refresh/2026-11-07/notebook-tables/exports/comparison-table.csv",
     "prompt": "Build an English data table from the uploaded book with three rows: training or fine-tuning, ordinary inference, and document retrieval (RAG). Columns: what changes, what stays fixed, chapter evidence, and misconception to avoid. Treat misconceptions as errors to reject.",
     "sourceSha256": "6363673782d1f73ad3712d08dcde59e1c6f4101e62ac207e8b444c6bb64461d7",
@@ -295,6 +295,17 @@
         "Reject: Believing that performing RAG or retrieving external documents retrains or updates the underlying model weights.",
         "1"
       ]
-    ]
+    ],
+    "preview": "materials/notebook-outputs/table/screenshot.png",
+    "screenshotSource": {
+      "video": "materials/video-refresh/2026-11-07/notebook-tables/video.mp4",
+      "seconds": 33.6,
+      "crop": {
+        "x": 24,
+        "y": 84,
+        "width": 1392,
+        "height": 546
+      }
+    }
   }
 }

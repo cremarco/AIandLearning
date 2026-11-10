@@ -240,7 +240,10 @@ function outputMarkup(output) {
   if (output.type === 'audio') content = `<audio controls preload="none" src="${url}"></audio>`
   if (output.type === 'video') content = `<video controls preload="none" poster="${h(relative(output.poster))}" src="${url}"><track kind="captions" srclang="en" label="English" src="${h(relative(output.captions))}"></video>`
   if (output.type === 'pdf') content = output.pages.map((page, i) => `<figure><img loading="lazy" src="${h(relative(page))}" alt="${h(output.feature)} page ${i + 1}"><figcaption>Page ${i + 1} of ${output.pages.length}</figcaption></figure>`).join('')
-  if (output.type === 'image') content = `<a class="link" href="${url}"><img loading="lazy" src="${url}" alt="${h(output.feature)} generated from the chapter"></a>`
+  if (output.type === 'image') {
+    const imageUrl = h(relative(output.preview || output.src))
+    content = `<a class="link" href="${imageUrl}"><img loading="lazy" src="${imageUrl}" alt="${h(output.feature)} generated from the chapter"></a>`
+  }
   if (output.type === 'flashcards') content = output.cards.map(card => `<details><summary>${h(card.question)}</summary><p>${h(card.answer)}</p></details>`).join('')
   if (output.type === 'quiz') content = output.questions.map(q => `<section><h3>${h(q.question)}</h3><ol type="A">${q.options.map(option => `<li>${h(option)}</li>`).join('')}</ol><details><summary>Show answer</summary><p>Correct answer: ${String.fromCharCode(65 + q.correctIndex)}</p><p>${h(q.explanations[q.correctIndex])}</p></details></section>`).join('')
   if (output.type === 'table') content = `<div class="overflow-x-auto"><table class="table"><thead><tr>${output.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${output.rows.map(row => `<tr>${row.map(cell => `<td>${h(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`

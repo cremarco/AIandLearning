@@ -2086,76 +2086,71 @@ Theoretical and practical technical report; not an efficacy trial of AI-generate
 
 SLIDE S67 — Answer a quiz before reading feedback
 Page 71 / 86
+Attempt a question, choose an answer and inspect the explanation
 Study phase: CHECK · Secondary: RECALL
+Answer before opening the hint. Read the explanation, then retry the missed question.
+Use feedback to revise an explanation, then check it against the chapter.
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
-Created with NotebookLM: Quiz
-Original output: materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf
-A user inputs a explicit definition into a prompt (such as "In this story, X means Y"), and the model uses this definition in its immediate response. Does this interaction indicate that the model's parameters have changed?
-Yes, because autoregressive language models continuously optimize their pretrained weights after every processed message.
-Yes, any new detail successfully reflected in a generated response confirms that the model's parameters were updated during inference.
-No, because parameter updates can only occur when Retrieval-Augmented Generation (RAG) is explicitly enabled.
-No, inserting information into a prompt changes only the context available to that specific inference step, leaving model parameters fixed.
-Hint: Distinguish between temporary information passed in an input context during inference and permanent structural updates to model weights.
-Correct answer: D
-Pretraining and fine-tuning are separate training stages; standard inference processes user inputs without altering model weights.
-This confuses temporary context processing during inference with parameter optimization during training or fine-tuning.
-Retrieval-augmented generation supplies external documents into the context window, which also leaves model parameters completely unchanged.
-Inference runs computations using pre-existing parameters, so providing new information in a user prompt only alters the active context window rather than updating model weights.
-Why is it incorrect to assume that a word like "generative" will always correspond to exactly one token across language models?
-Token segmentation depends on the specific tokenizer used and exact string details, including capitalization and preceding spaces.
-Tokenization algorithms split text strictly by individual characters, so multi-letter words always yield multiple tokens.
-Language models automatically re-segment words into tokens at every decoder layer based on positional encodings.
-Vocabulary IDs are assigned alphabetically, forcing words with more than five letters to split into two tokens.
-Hint: Consider how text processing tools split text strings into numerical indices before vector representations are constructed.
-Correct answer: A
-Tokens, words, and characters are distinct units; tokenization rules vary by tokenizer implementation and depend strictly on input string formatting.
-Tokenizers often map whole words or subword chunks to single tokens rather than breaking every word down into individual characters.
-Tokenization is a discrete preprocessing step performed prior to initial vector embedding lookups, not an operation inside decoder layers.
-Vocabulary identification numbers are index lookup values rather than character-length measurements or alphabetical rankings.
-What is the key functional difference between a numerical token ID and its initial embedding vector?
-A token ID measures the semantic closeness of words, whereas the embedding vector merely records positional sequence order.
-A token ID is computed by the softmax layer, while the embedding is produced by causal attention masks.
-A token ID changes dynamically depending on context, whereas the initial embedding remains identical across different sentences.
-A token ID is an arbitrary lookup index in a vocabulary, whereas an initial embedding is a learned numerical vector retrieved by that ID.
-Hint: Recall how initial lookup tables map discrete index values into multi-dimensional numerical vector spaces.
-Correct answer: D
-Nearby token IDs do not imply similar meanings, and positional information is provided by separate positional encodings or mechanisms like RoPE.
-Token IDs exist prior to model inference, while softmax operates at the output stage to convert logits into probabilities.
-The initial embedding retrieved by a token ID is fixed for that token ID; it becomes a contextual representation only after passing through decoder layers.
-Token IDs represent discrete indices without built-in semantic distance, while embeddings provide continuous vector representations that enter the model's neural transformations.
-A language model generates a candidate next token with a calculated probability of 80%. How should this percentage be correctly interpreted?
-It indicates that 80% of the decoder blocks in the network voted in favor of choosing this specific token.
-It represents the normalized statistical continuation likelihood over the model's vocabulary given the context, not a measure of factual truth.
-It confirms an 80% statistical probability that the outputted statement is factually accurate.
-It guarantees that 80% of pretraining documents contained this exact full sentence.
-Hint: Reflect on what the output softmax calculation mathematically measures when predicting sequence continuations.
-Correct answer: B
-The percentage is calculated via a softmax function over vocabulary logits at the final output layer, not by counting votes across network layers.
-Softmax probabilities reflect next-token likelihood distributions based on context and parameters; high probability does not guarantee factual accuracy.
-High continuation probability predicts expected word sequences according to learned patterns, not factual correctness.
-Probabilities are calculated dynamically step-by-step over the vocabulary based on current logits, not calculated as direct training set frequency counts.
-If the temperature parameter T is increased while keeping the context and output logits fixed, how does the resulting output probability distribution change?
-The distribution concentrates heavily on the top logit, reducing the probability mass assigned to secondary alternatives.
-The total sum of all probabilities over the vocabulary expands beyond 1.0.
-The distribution becomes more uniform across alternatives, while keeping the original ranking order of the logits unchanged.
-The logit scores are recalculated, changing which token holds the highest rank in the vocabulary.
-Hint: Think about how dividing logits by a larger temperature value affects the relative differences between exponentials in the softmax formula.
-Correct answer: C
-Concentrating probability onto the top alternative occurs when lowering temperature, whereas raising temperature flattens the distribution.
-Softmax normalizes logit exponent values so that the sum across the entire vocabulary always equals 1.0 regardless of temperature.
-Higher temperature scales down relative logit differences in the exponent, spreading probability mass more evenly across options without altering which logit is highest.
-Temperature applies an ideal transformation to fixed logits during softmax calculation; it does not retrain the model or reorder logit rankings.
-When a system uses Retrieval-Augmented Generation (RAG) to incorporate an external document into a query, what is happening technically within the system?
-The tokenizer vocabulary is updated to permanently add new vocabulary IDs found in the document.
-The system uses the retrieved passage to execute a fast fine-tuning step that updates the model's weights.
-The model's causal attention mask is disabled to allow direct insertion of missing factual information into output logits.
-Selected external text passages are inserted into the prompt context for the fixed model to use during inference.
-Hint: Focus on the structural distinction between altering the available input context and modifying fixed model parameters.
-Correct answer: D
-Tokenizers possess fixed vocabularies established prior to model deployment; RAG does not rewrite tokenizer vocabulary tables.
-Retrieving documents alters the contextual input for an inference step but does not update or fine-tune neural network parameters.
-Causal attention masking remains active during generation to enforce step-by-step autoregressive context constraints.
-RAG retrieves relevant external text and appends it to the context window supplied to the model, leaving parameter weights untouched.
+NotebookLM — Answer a quiz before reading feedback: recorded demonstration and use.
+NotebookLM · 94.1 s
+NotebookLM —
+
+REQUEST
+Create a compact quiz from the uploaded book on context versus parameters, tokens versus words, and probability versus truth. Use six questions if the native controls allow it. Include hints and explanatory feedback. Answer in English.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.222 Upload the workshop book as the source. (3× speed)
+00:00:00.582 The workshop book is being indexed. (3× speed)
+00:00:00.825 Widen the quiz request. (3× speed)
+00:00:01.145 Write the source-grounded request. (3× speed)
+00:00:03.533 Read the complete request.
+00:00:05.639 Send the question with the selected book. (3× speed)
+00:00:05.908 Generate the answer from the selected source. (4× speed)
+00:00:05.928 Answer a quiz question and inspect the feedback.
+00:00:05.930 Choose native quiz settings (3× speed)
+00:00:09.480 Read the complete quiz request
+00:00:11.768 Read and scroll the native quiz configuration. (3× speed)
+00:00:13.491 Generate the configured native quiz. (4× speed)
+00:00:13.652 Read the question and ask for a hint.
+00:00:16.432 Ask for a source-based hint
+00:00:19.809 Read the native question and inspect the feedback.
+00:00:19.976 Try the continuous-weight-update answer
+00:00:24.342 Read the feedback, then continue to the next question.
+00:00:28.456 Try the next question
+00:00:31.477 Read the native question and inspect the feedback.
+00:00:31.797 Choose the tokenizer-based answer
+00:00:37.746 Continue to the next question
+00:00:40.578 Read the native question and inspect the feedback.
+00:00:40.984 Choose the lookup-index and embedding explanation
+00:00:47.025 Continue with another application
+00:00:50.094 Read the native question and inspect the feedback.
+00:00:50.506 Choose continuation likelihood rather than truth
+00:00:55.831 Try another source-based scenario
+00:00:58.388 Read the native question and inspect the feedback.
+00:00:58.788 Choose the flatter distribution
+00:01:04.035 Continue to the final question
+00:01:06.975 Read the native question and inspect the feedback.
+00:01:07.481 Choose the retrieval-augmented context explanation
+00:01:12.987 Review the result and return to the missed question.
+00:01:13.123 View the completed quiz result
+00:01:16.833 Retake the missed question after reading the explanation.
+00:01:17.333 Choose a new attempt
+00:01:19.938 Retake only the missed question
+00:01:23.734 Correct the missed context-versus-parameters answer
+00:01:30.282 Check the result of the missed-question retry
+NATIVE APPS ACTIVATION MARKERS
+Some markers identify the measured centre of a native iframe control activated through the documented locator. Exact delivered pointer coordinates are not exposed; these are not CDP pointer traces. The source retains its actual hit tests and input-request clocks.
+
+
+OBSERVED RESULT
+
+
+
+Quiz and solutions (PDF, static): /materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf
+Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.
 [TOOL_NOTEBOOK_QUIZ] Google. (2026). Generate Flashcards or Quizzes in Gemini Notebook.
 https://support.google.com/gemininotebook/answer/16958963?hl=en
 Generated questions and explanations need checking; learner self-checks differ from teacher collection and analysis.
@@ -2165,46 +2160,55 @@ Experiments with science texts and specific study conditions. Does not show that
 
 SLIDE S67CARDS — Practise recall with flashcards
 Page 72 / 86
+Try an answer, reveal the card and record your own judgement
 Study phase: RECALL
+Recognising the revealed answer is different from recalling it unaided.
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
-Created with NotebookLM: Flashcards
-Original output: materials/video-refresh/2026-11-07/notebook-flashcards/exports/flashcards.csv
-How does ordinary inference differ from model training in terms of parameter modification?
-Training updates the model's numerical parameters based on prediction errors, whereas ordinary inference executes calculations using existing, fixed parameters without altering them. (Section 1.2)
-How does inserting a custom definition into a prompt context affect underlying model weights?
-It does not alter model weights; prompt definitions only provide temporary information available to the current inference calculation. (Section 1.2)
-What structural component changes during training or fine-tuning compared to sending a new prompt message?
-Training or fine-tuning changes the model's internal parameters, whereas a new prompt message changes only the context information available for that inference run. (Section 1.2)
-How does Retrieval-Augmented Generation (RAG) supply updated information without retraining the model?
-RAG searches external document collections and appends retrieved passages into the input context, allowing a model with fixed parameters to answer based on new data. (Section 1.7)
-What is the primary difference between the pretraining process and standard inference execution?
-Pretraining uses optimization algorithms to adjust parameters and minimize prediction errors across training examples, while inference computes an output distribution for a given context using static parameters. (Section 1.2)
-Why does adding a document to a prompt context fail to prove that a model has learned permanent new knowledge?
-Providing a document in context only alters the active inference input; it does not update or retrain the model's underlying parameters. (Section 1.2)
-How does supplying a new factual claim via RAG differ from instilling that claim through fine-tuning?
-RAG supplies the factual claim as external text inside the context window of a fixed model, whereas fine-tuning modifies the model's internal parameters through training updates. (Section 1.2 & Section 1.7)
-Why does altering the context from a real-world task to a fictional scenario change the generated response without erasing model knowledge?
-Changing context modifies the input sequence and resulting conditional probabilities during inference, without altering the stored parameters of the model. (Section 1.7)
-What is the operational difference between parameter memory and external RAG retrieval?
-Parameter memory consists of internal learned numerical values stored in the model, whereas RAG dynamically fetches text passages from an external repository to include in the context window. (Section 1.2 & Section 1.7)
-Why are future isolated user sessions unaffected when a user provides new definitions during a single chat session?
-Chat messages only modify the temporary conversation context for current inference runs and do not trigger parameter updates in the underlying model. (Section 1.2)
-How does instruction tuning differ from standard prompt context modification?
-Instruction tuning updates the model's parameters using human demonstrations or preferences, whereas prompt modification only changes the input string supplied during inference. (Section 1.2)
-What methodology allows researchers to isolate the exact effect of context variations on output distributions?
-Keeping the model parameters fixed while systematically varying the input text and settings across inference runs. (Section 1.2)
-How does a document retrieval failure in a RAG pipeline differ from a model hallucination?
-A retrieval failure occurs when the external search mechanism selects irrelevant or missing text passages, whereas a hallucination occurs when model calculations generate unsupported or inaccurate output. (Section 1.7)
-What role do fixed parameters play during a Retrieval-Augmented Generation (RAG) step?
-The fixed parameters process the combined prompt context—including the original query and the retrieved external passages—to calculate output token probabilities. (Section 1.2 & Section 1.7)
-Why does citing an external reference in a generated text response not prove that the underlying model parameters were updated?
-Citations are often generated because external documents were retrieved and inserted into the active context window, not because the model's weight parameters were modified. (Section 1.7)
-What sequential path represents the flow of information in a Retrieval-Augmented Generation (RAG) process?
-A user question triggers document retrieval, retrieved passages are combined with the question into a context prompt, and a fixed model uses that context to generate an answer. (Section 1.2 & Section 1.7)
-Why doesn't generating a fluent continuation update a model's stored weights?
-Continuation generation is strictly forward inference using existing parameters; parameter updates require an explicit optimization training step driven by prediction errors. (Section 1.2)
-What state do parameters hold prior to undergoing pretraining optimization?
-Parameters begin as initial numerical values that do not yet represent structured or readable encyclopedic knowledge until optimized against learning signals. (Section 1.2)
+NotebookLM — Practise recall with flashcards: recorded demonstration and use.
+NotebookLM · 49.1 s
+NotebookLM —
+
+REQUEST
+Create concise flashcards from the uploaded book on training versus inference, context versus parameters, tokenization and RAG. Include questions that require an explanation before revealing the answer. Answer in English.
+
+METHOD
+Native browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.
+
+00:00:00.000 Start a new empty notebook. (3× speed)
+00:00:00.205 Upload the workshop book as the source. (3× speed)
+00:00:00.490 The workshop book is being indexed. (3× speed)
+00:00:00.701 Widen the flashcard request. (3× speed)
+00:00:01.024 Write the source-grounded request. (3× speed)
+00:00:03.480 Read the complete request.
+00:00:05.585 Send the question with the selected book. (3× speed)
+00:00:05.848 Generate the answer from the selected source. (4× speed)
+00:00:05.869 The first app is still loading; inspect the native Flashcards configuration. (3× speed)
+00:00:06.588 Configure flashcards with the actual Studio Flashcards tool. (3× speed)
+00:00:06.891 Choose fewer text-only cards from the selected book. (3× speed)
+00:00:09.330 Read the complete flashcard topic.
+00:00:11.602 Generate native flashcards from the selected book. (3× speed)
+00:00:11.809 Generate the source-grounded native flashcard deck. (4× speed)
+00:00:11.854 Recall the difference between training and inference.
+00:00:14.281 Reveal training versus inference
+00:00:18.399 Mark a difficult answer, then try another example.
+00:00:18.656 Mark the first answer for practice
+00:00:21.661 Reveal what a definition changes
+00:00:25.932 Mark the second answer as understood
+00:00:29.211 Compare training with a new prompt
+00:00:33.434 Mark the third answer as understood
+00:00:35.878 Return to the difficult card and try it again.
+00:00:36.098 Return to the earlier question
+00:00:41.732 Check the difficult answer again
+00:00:46.024 Mark the answer after another attempt
+NATIVE APPS ACTIVATION MARKERS
+Some markers identify the measured centre of a native iframe control activated through the documented locator. Exact delivered pointer coordinates are not exposed; these are not CDP pointer traces. The source retains its actual hit tests and input-request clocks.
+
+
+OBSERVED RESULT
+
+
+
+Flashcards (CSV): /materials/video-refresh/2026-11-07/notebook-flashcards/exports/flashcards.csv
 [TOOL_NOTEBOOK_QUIZ] Google. (2026). Generate Flashcards or Quizzes in Gemini Notebook.
 https://support.google.com/gemininotebook/answer/16958963?hl=en
 Generated questions and explanations need checking; learner self-checks differ from teacher collection and analysis.

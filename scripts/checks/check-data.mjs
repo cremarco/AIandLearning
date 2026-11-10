@@ -321,12 +321,17 @@ export function checkData() {
   const notebookDemos = read('data/demos/notebook-demos.json')
   const notebookOutputs = read('data/content/notebook-outputs.json')
   const outputSlides = slides.filter(slide => slide.notebookOutput)
-  assert.equal(outputSlides.length, 9, 'Show all nine NotebookLM Studio outputs')
+  assert.equal(outputSlides.length, 7, 'Show seven NotebookLM Studio outputs directly')
+  for (const id of ['S67', 'S67CARDS']) {
+    const slide = slides.find(slide => slide.id === id)
+    assert(!slide.notebookOutput && slide.kind === 'tool-demo' && slide.media?.type === 'video', `${id}: retain the recorded Quiz or Flashcards demonstration`)
+  }
   for (const slide of outputSlides) {
     const output = notebookOutputs[slide.notebookOutput]
     assert(output?.feature && output.src, `${slide.id}: name the feature next to its output`)
     assert.equal(output.src, (slide.media.result?.url || slide.media.src).replace(/^\//, ''), `${slide.id}: show its original generated output`)
     assert.equal(output.sourceSha256, createHash('sha256').update(fs.readFileSync(path.join(root, 'public', output.src))).digest('hex'), `${slide.id}: preserve the original output`)
+    if (output.preview) assert(fs.existsSync(path.join(root, 'public', output.preview)), `${slide.id}: missing output screenshot`)
     for (const page of output.pages || []) assert(fs.existsSync(path.join(root, 'public', page)), `${slide.id}: missing PDF page preview`)
   }
   const notebookClips = read('public/materials/notebook/provenance.json').clips

@@ -1,6 +1,6 @@
 # Speaker notes · Beyond prompting
 
-English notes for rehearsal, with no word-count limit. Bold text marks the key words. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.
+Concise spoken scripts in simple English for rehearsal. Bold text marks the key words; [click] markers follow the slide reveals. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.
 
 ## 1. Beyond prompting
 
@@ -330,11 +330,11 @@ This is the map created with **Mind Map**. It connects training, inference, cont
 
 ## 71. Answer a quiz before reading feedback
 
-These six questions were created with **Quiz**. Let us try one before showing the answer. We can choose an option, ask for a hint and read the explanation. Andrea then explains any correction in his own words. This viewer uses the original generated questions and feedback.
+This recording shows **Quiz** in NotebookLM. Andrea answers before opening the hint or feedback. His first attempt scores five out of six; he then retries the missed question. The next step is to explain the correction and check his understanding with a new example.
 
 ## 72. Practise recall with flashcards
 
-These cards were created with **Flashcards**. Let us answer the first question from memory, then show the answer. We can move through the cards and compare each explanation with the chapter. The viewer uses the exported questions and answers; the CSV is also available to download.
+This recording shows **Flashcards** in NotebookLM. Let us pause at a question and try answering from memory before the card is revealed. Andrea then compares his answer with the chapter. The CSV download lets us reuse the generated questions and answers.
 
 ## 73. Save a checked response as a note
 
@@ -362,7 +362,7 @@ These nine slides were created with **Slide Deck**. We can move through the PDF 
 
 ## 79. Organise chapter concepts in a table
 
-This comparison was created with **Data Table**. It shows what changes and what stays fixed in training, inference and RAG. We can show the extra columns to check the chapter evidence and common errors. Those errors are claims to reject, not facts to learn.
+This screenshot shows the comparison created with **Data Table**. We can zoom in to read what changes and what stays fixed in training, inference and RAG. The other columns show chapter evidence and errors to reject. The full table is also available as a CSV download.
 
 ## 80. Review access before sharing a notebook
 

@@ -4,6 +4,16 @@ layout: default
 title: "Beyond prompting"
 author: Marco Cremaschi
 info: "Visual tools for self-directed learning with artificial intelligence"
+favicon: /favicon.ico
+seoMeta:
+  ogTitle: "Beyond prompting · EduForum"
+  ogDescription: "Visual tools for self-directed learning with artificial intelligence"
+  ogImage: https://cremarco.github.io/AIandLearning/social-preview.png
+  ogUrl: https://cremarco.github.io/AIandLearning/eduforum/
+  twitterCard: summary_large_image
+  twitterTitle: "Beyond prompting · EduForum"
+  twitterDescription: "Visual tools for self-directed learning with artificial intelligence"
+  twitterImage: https://cremarco.github.io/AIandLearning/social-preview.png
 canvasWidth: 1280
 aspectRatio: 16/9
 colorSchema: dark
@@ -915,7 +925,7 @@ title: "Answer a quiz before reading feedback"
 <DeckSlide id="S67" />
 
 <!--
-These six questions were created with **Quiz**. Let us try one before showing the answer. We can choose an option, ask for a hint and read the explanation. Andrea then explains any correction in his own words. This viewer uses the original generated questions and feedback.
+This recording shows **Quiz** in NotebookLM. Andrea answers before opening the hint or feedback. His first attempt scores five out of six; he then retries the missed question. The next step is to explain the correction and check his understanding with a new example.
 -->
 
 ---
@@ -927,7 +937,7 @@ title: "Practise recall with flashcards"
 <DeckSlide id="S67CARDS" />
 
 <!--
-These cards were created with **Flashcards**. Let us answer the first question from memory, then show the answer. We can move through the cards and compare each explanation with the chapter. The viewer uses the exported questions and answers; the CSV is also available to download.
+This recording shows **Flashcards** in NotebookLM. Let us pause at a question and try answering from memory before the card is revealed. Andrea then compares his answer with the chapter. The CSV download lets us reuse the generated questions and answers.
 -->
 
 ---
@@ -1011,7 +1021,7 @@ title: "Organise chapter concepts in a table"
 <DeckSlide id="S67TABLES" />
 
 <!--
-This comparison was created with **Data Table**. It shows what changes and what stays fixed in training, inference and RAG. We can show the extra columns to check the chapter evidence and common errors. Those errors are claims to reject, not facts to learn.
+This screenshot shows the comparison created with **Data Table**. We can zoom in to read what changes and what stays fixed in training, inference and RAG. The other columns show chapter evidence and errors to reject. The full table is also available as a CSV download.
 -->
 
 ---

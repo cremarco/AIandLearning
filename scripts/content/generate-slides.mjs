@@ -12,6 +12,16 @@ layout: default
 title: ${yaml(slides[0].title)}
 author: Marco Cremaschi
 info: ${yaml(slides[0].message)}
+favicon: /favicon.ico
+seoMeta:
+  ogTitle: "Beyond prompting · EduForum"
+  ogDescription: ${yaml(slides[0].message)}
+  ogImage: https://cremarco.github.io/AIandLearning/social-preview.png
+  ogUrl: https://cremarco.github.io/AIandLearning/eduforum/
+  twitterCard: summary_large_image
+  twitterTitle: "Beyond prompting · EduForum"
+  twitterDescription: ${yaml(slides[0].message)}
+  twitterImage: https://cremarco.github.io/AIandLearning/social-preview.png
 canvasWidth: 1280
 aspectRatio: 16/9
 colorSchema: dark
@@ -48,7 +58,7 @@ const slideBlocks = slides.map((slide, index) => {
 
 writeFileSync(path.join(root, 'slides.md'), `${headmatter}\n${slideBlocks.join('\n')}`)
 const readingCopy = ['# Speaker notes · Beyond prompting',
-  'English notes for rehearsal, with no word-count limit. Bold text marks the key words. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.',
+  'Concise spoken scripts in simple English for rehearsal. Bold text marks the key words; [click] markers follow the slide reveals. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.',
   ...slides.map(slide => `## ${slide.number}. ${slide.title}\n\n${speakerNotes[slide.id]}`),
 ].join('\n\n')
 writeFileSync(path.join(root, 'docs/speaker-notes.en.md'), `${readingCopy}\n`)

@@ -4,6 +4,16 @@ layout: default
 title: "Beyond prompting"
 author: Marco Cremaschi
 info: "Visual tools for self-directed learning with artificial intelligence"
+favicon: /favicon.ico
+seoMeta:
+  ogTitle: "Beyond prompting · MRU"
+  ogDescription: "Visual tools for self-directed learning with artificial intelligence"
+  ogImage: https://cremarco.github.io/AIandLearning/social-preview.png
+  ogUrl: https://cremarco.github.io/AIandLearning/mru/
+  twitterCard: summary_large_image
+  twitterTitle: "Beyond prompting · MRU"
+  twitterDescription: "Visual tools for self-directed learning with artificial intelligence"
+  twitterImage: https://cremarco.github.io/AIandLearning/social-preview.png
 canvasWidth: 1280
 aspectRatio: 16/9
 colorSchema: dark
