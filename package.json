@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "slidev --port 3047",
-    "build": "slidev build --base ./ --router-mode hash",
+    "build": "node scripts/delivery/build-site.mjs",
     "export": "node scripts/delivery/export-deck.mjs",
     "generate": "node scripts/content/generate-formula.mjs && node scripts/content/integrate-workshop.mjs && node scripts/content/generate-slides.mjs && node scripts/content/generate-companions.mjs",
     "check": "node scripts/checks/check-structure.mjs && node scripts/checks/check-data.mjs && node scripts/checks/audit-assets.mjs && node scripts/checks/check-links.mjs && node tests/demo-genai/math.test.mjs && node --experimental-vm-modules --test tests/media-playback.test.mjs",

@@ -44,10 +44,10 @@ jobs:
       - name: Check content and local assets
         run: pnpm check
 
-      - name: Build Slidev
+      - name: Build main and MRU presentations
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-        run: pnpm exec slidev build --base "${PAGES_BASE_PATH}/" --router-mode hash
+        run: pnpm build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

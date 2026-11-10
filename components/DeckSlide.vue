@@ -2,7 +2,7 @@
 import { computed, provide, ref, watch } from 'vue'
 import { getSlide, presentationSlideCount, type StudyFocus } from '../utils/deck'
 import { assetUrl, imageUrl as image } from '../utils/assets'
-import highlights from '../data/content/highlights.json'
+import highlights from '#deck/highlights'
 import { EMPHASIS_TERMS_KEY, type EmphasisTerm } from '../utils/emphasis'
 import EmphasisText from './shared/EmphasisText.vue'
 import BentoCard from './shared/BentoCard.vue'

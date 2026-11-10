@@ -1,4 +1,4 @@
-import slideData from '../data/generated/slides-runtime.json'
+import slideData from '#deck/slides'
 
 export type Audience = 'student' | 'teacher' | 'both'
 export type StudyPhase = 'plan' | 'understand' | 'connect' | 'recall' | 'apply' | 'check'

@@ -31,6 +31,12 @@ Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, ful
 
 Speaker notes have no word-count limit. Use as much detail as the presenter needs.
 
+### MRU copy
+
+`mru.md` and `data/mru/slides.json` are an independent copy of the slide order, notes and displayed content. Edit these files directly for MRU; `data/mru/highlights.json` holds its text emphasis. `pnpm generate` only updates the original presentation.
+
+`pnpm build` publishes the original at `/` and the MRU copy at `/mru/` (on GitHub Pages: `https://cremarco.github.io/EduForum/mru/`). Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the main site's directories.
+
 The presentation has 88 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
 ## Check and build
