@@ -51,8 +51,15 @@ export default {
   plugins: [applicationTailwind, publicAssets()],
   build: { copyPublicDir: false },
   experimental: {
-    renderBuiltUrl(filename: string, { type }: { type: string }) {
-      if (isMru && type === 'public') return `${process.env.VITE_SHARED_ASSET_BASE || '../'}${filename}`
+    renderBuiltUrl(filename: string, { type, hostType, hostId }: { type: string; hostType: string; hostId: string }) {
+      if (!isMru || type !== 'public') return
+      const sharedBase = process.env.VITE_SHARED_ASSET_BASE || '../'
+      // Relative CSS URLs resolve from the stylesheet's directory, not the page.
+      if (sharedBase.startsWith('.') && hostType === 'css') {
+        const stylesheet = hostId.startsWith('assets/') ? hostId : `assets/${hostId}`
+        return path.posix.relative(path.posix.dirname(stylesheet), `${sharedBase}${filename}`)
+      }
+      return `${sharedBase}${filename}`
     },
   },
   resolve: {
