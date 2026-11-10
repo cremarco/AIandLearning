@@ -64,6 +64,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # The first publish after a repository rename resynchronizes shared media.
-          timeout: 1800000
