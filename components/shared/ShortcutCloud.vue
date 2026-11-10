@@ -138,7 +138,7 @@ const words = computed(() => {
     <div v-if="!isStatic" class="shortcut-controls">
       <button class="btn btn-sm" type="button" :aria-controls="cloudId" :aria-pressed="paused" @click.stop="paused = !paused">{{ paused ? 'Resume motion' : 'Pause motion' }}</button>
     </div>
-    <svg :id="cloudId" viewBox="0 0 1192 648" preserveAspectRatio="xMidYMid meet" :aria-hidden="isPrint || undefined" role="group" aria-label="Explore shortcut descriptions" @click.self.stop="closeTooltip">
+    <svg :id="cloudId" viewBox="0 0 1192 648" preserveAspectRatio="xMidYMid meet" :aria-hidden="isPrint || undefined" role="group" :aria-label="t('Explore shortcut descriptions')" @click.self.stop="closeTooltip">
       <g class="shortcut-field">
         <g v-for="word in words" :key="word.command" :transform="`translate(${word.x} ${word.y}) rotate(${word.angle})`">
           <g class="shortcut-reveal" :style="{ '--enter-delay': `${word.enterDelay}ms` }">
@@ -160,7 +160,7 @@ const words = computed(() => {
         <strong>{{ tooltip.command }}</strong><span>{{ t(tooltip.description) }}</span><span v-if="detailSlides.has(tooltip.command)" class="shortcut-tooltip-action">{{ t('Click or press Enter to open the slide.') }}</span>
       </div>
     </div>
-    <ul v-if="isPrint" class="sr-only" aria-label="All tested shortcut labels">
+    <ul v-if="isPrint" class="sr-only" :aria-label="t('All tested shortcut labels')">
       <li v-for="item in items" :key="item.command">{{ item.command }}: {{ descriptions[item.command] }}</li>
     </ul>
   </div>

@@ -32,7 +32,8 @@ export function setPresentationLanguage(next: PresentationLanguage) {
 // Keep identifiers, native commands, recorded prompts and quoted outputs intact.
 const originalFields = new Set([
   'id', 'type', 'kind', 'section', 'tool', 'audience', 'sources', 'skillIds',
-  'command', 'primary', 'secondary', 'lang', 'status', 'executionStatus', 'reviewStatus',
+  'command', 'commandCategory', 'videoLayout', 'fit', 'format', 'key',
+  'primary', 'secondary', 'lang', 'status', 'executionStatus', 'reviewStatus',
   'url', 'src', 'poster', 'captions', 'transcript', 'transcriptFile', 'sha256',
   'provenance', 'source', 'icon', 'mediaType', 'prompt', 'instruction', 'instructionExcerpt', 'citation',
 ])

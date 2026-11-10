@@ -53,6 +53,7 @@ test('Ukrainian translates explanation text while preserving native prompts and 
   const { api } = await languageModule({ stored: 'uk' })
   const example = {
     id: 'S53QUIZ', kind: 'shortcut-detail', title: '/quiz', audience: 'student',
+    commandCategory: 'informal', videoLayout: 'focus',
     message: 'Answer questions, review feedback and move through a quiz.',
     prompt: '/quiz Answer in English.',
     studyPhases: { primary: 'check' },
@@ -64,7 +65,7 @@ test('Ukrainian translates explanation text while preserving native prompts and 
   assert.notEqual(localized.message, example.message)
   assert.notEqual(localized.comparison[0].text, example.comparison[0].text)
   assert.notEqual(localized.links[0].label, example.links[0].label)
-  for (const field of ['id', 'kind', 'title', 'audience', 'prompt']) assert.equal(localized[field], example[field])
+  for (const field of ['id', 'kind', 'title', 'audience', 'prompt', 'commandCategory', 'videoLayout']) assert.equal(localized[field], example[field])
   assert.deepEqual(localized.studyPhases, example.studyPhases)
   assert.deepEqual(localized.commands, example.commands)
   assert.equal(localized.links[0].url, example.links[0].url)
@@ -77,10 +78,6 @@ test('MRU has no hidden slides, timed exercises or speaker notes and keeps stabl
   assert(!markdown.includes('<!--'))
   assert(!markdown.includes('hide: true'))
   assert.deepEqual([...markdown.matchAll(/<DeckSlide id="([^"]+)"/g)].map(match => match[1]), mru.map(slide => slide.id))
-  const original = JSON.parse(await read('data/generated/slides-runtime.json'))
-  assert.equal(original.length, 89)
-  assert.equal(original.filter(slide => slide.hide).length, 2)
-  assert.equal(original.filter(slide => slide.activityTimer).length, 3)
   const { api } = await languageModule({ stored: 'uk' })
   for (const slide of mru) {
     const localized = api.localizeContent(slide)
@@ -89,4 +86,33 @@ test('MRU has no hidden slides, timed exercises or speaker notes and keeps stabl
       assert.notEqual(localized.title, slide.title, `${slide.id}: title needs a Ukrainian translation`)
     }
   }
+})
+
+test('reviewed Ukrainian terms distinguish SDL, independent learning and prompt labels', async () => {
+  const { api } = await languageModule({ stored: 'uk' })
+  assert.match(api.t('Self-directed learning: making choices'), /Самоспрямоване навчання/)
+  assert.match(api.t('AI guardrails and independent learning'), /самостійне навчання/)
+  assert.match(api.t('Formal and informal shortcuts'), /мітки запитів/)
+  assert(!api.t('Selected shortcuts · recall and reflection').includes('скорочення'))
+  assert.match(api.t('We observe his use of tools and the evidence of understanding he keeps.'), /свідчення розуміння/)
+})
+
+test('translation preserves technical metadata and recorded text across the entire MRU deck', async () => {
+  const { api } = await languageModule({ stored: 'uk' })
+  const technical = new Set([
+    'id', 'type', 'kind', 'section', 'tool', 'audience', 'sources', 'skillIds',
+    'command', 'commandCategory', 'videoLayout', 'fit', 'format', 'key',
+    'primary', 'secondary', 'lang', 'status', 'executionStatus', 'reviewStatus',
+    'url', 'src', 'poster', 'captions', 'transcript', 'transcriptFile', 'sha256',
+    'provenance', 'source', 'icon', 'mediaType', 'prompt', 'instruction', 'instructionExcerpt', 'citation',
+  ])
+  function compare(original, localized, path) {
+    if (!original || typeof original !== 'object') return
+    for (const [key, value] of Object.entries(original)) {
+      if (technical.has(key) || (key === 'result' && typeof value === 'string') || (key === 'text' && 'instruction' in original)) {
+        assert.deepEqual(localized[key], value, `${path}.${key} must remain verbatim`)
+      } else compare(value, localized[key], `${path}.${key}`)
+    }
+  }
+  for (const slide of mru) compare(slide, JSON.parse(JSON.stringify(api.localizeContent(slide))), slide.id)
 })

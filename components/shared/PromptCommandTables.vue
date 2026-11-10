@@ -21,13 +21,13 @@ const columns = computed(() => {
 <template>
   <div class="command-tables" :lang="language">
     <div v-for="(rows, index) in columns" :key="index" class="overflow-x-auto">
-      <table class="table command-table" :aria-label="`${labels.table}, part ${index + 1}`">
+      <table class="table command-table" :aria-label="`${t(labels.table)}, ${t('part')} ${index + 1}`">
         <thead><tr><th scope="col">{{ t(labels.column) }}</th><th scope="col">{{ t(labels.description) }}</th></tr></thead>
         <tbody>
           <tr v-for="row in rows" :key="row.command">
             <th scope="row">
-              <button v-if="getShortcutVideo(row.command)" class="btn btn-link command-video-trigger" type="button" :aria-label="`Play ${row.command} video`" @click.stop="player?.open(row.command)">
-                <svg v-if="category === 'informal' && explainedShortcuts.has(row.command)" class="command-example-dot" role="img" aria-label="Example explained in the speaker notes" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg>
+              <button v-if="getShortcutVideo(row.command)" class="btn btn-link command-video-trigger" type="button" :aria-label="`${t('Play video')}: ${row.command}`" @click.stop="player?.open(row.command)">
+                <svg v-if="category === 'informal' && explainedShortcuts.has(row.command)" class="command-example-dot" role="img" :aria-label="t('Example explained in the speaker notes')" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg>
                 <CommandTag :text="row.command" /><svg aria-hidden="true" class="command-video-icon" viewBox="0 0 16 16"><path d="M5 3.5 12 8l-7 4.5Z" fill="currentColor" /></svg>
               </button>
               <CommandTag v-else :text="row.command" />

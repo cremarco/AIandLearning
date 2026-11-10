@@ -69,7 +69,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
     </div>
     <header v-if="!['chatgpt-intro', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
       <ToolLogos :ids="brandsForSlide(s)" />
-      <h1><svg v-if="s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title)" class="command-example-dot" role="img" aria-label="Example explained in the speaker notes" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
+      <h1><svg v-if="s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title)" class="command-example-dot" role="img" :aria-label="t('Example explained in the speaker notes')" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
     <ul v-if="s.kind === 'tool-choice'" class="tool-choice-context" aria-label="Selected tools">
