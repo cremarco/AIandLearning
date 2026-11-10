@@ -116,3 +116,20 @@ test('translation preserves technical metadata and recorded text across the enti
   }
   for (const slide of mru) compare(slide, JSON.parse(JSON.stringify(api.localizeContent(slide))), slide.id)
 })
+
+test('authored scenario examples are translated while recorded result text remains original', async () => {
+  const { api } = await languageModule({ stored: 'uk' })
+  const authored = mru.filter(slide => typeof slide.result === 'string' && slide.kind !== 'shortcut-detail')
+  assert.equal(authored.length, 3)
+  for (const slide of authored) assert.notEqual(api.t(slide.result), slide.result, `${slide.id}: authored example needs translation`)
+  for (const slide of mru.filter(slide => slide.kind === 'shortcut-detail')) assert.equal(api.t(slide.result), slide.result)
+  assert.notEqual(api.t('Result of this step'), 'Result of this step')
+  for (const slide of mru) {
+    const localized = api.localizeContent(slide)
+    if (slide.book) assert.notEqual(localized.book.portraitAlt, slide.book.portraitAlt)
+    if (slide.character) {
+      for (const key of ['happyAlt', 'worriedAlt']) assert.notEqual(localized.character[key], slide.character[key])
+      assert(localized.character.worriedAlt.includes('Foundations of Generative Artificial Intelligence'))
+    }
+  }
+})

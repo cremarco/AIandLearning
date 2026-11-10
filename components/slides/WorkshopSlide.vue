@@ -146,7 +146,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           </ol>
           <ActivityTimer v-if="s.activityTimer" :minutes="s.activityTimer.minutes" :timer-id="s.activityTimer.id" />
           <div v-if="s.body?.length && s.kind !== 'tool-choice'" class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div>
-          <div v-if="s.result" class="workshop-result"><h2>{{ s.resultLabel || 'Result of this step' }}</h2><p><EmphasisText :text="s.result" /></p></div>
+          <div v-if="s.result" class="workshop-result"><h2>{{ t(s.resultLabel || 'Result of this step') }}</h2><p><EmphasisText :text="s.result" /></p></div>
           <div v-if="s.links?.length" class="workshop-links">
             <a v-for="l in s.links" :key="l.url" class="btn gap-3" :class="s.kind === 'book' && l.download ? 'btn-primary btn-xl' : s.kind === 'access' ? 'text-3xl' : 'text-xl'"
               :href="asset(l.url)" :download="l.download ? '' : undefined" :target="l.download ? undefined : '_blank'" rel="noopener">
