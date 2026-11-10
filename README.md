@@ -33,7 +33,7 @@ Speaker notes have no word-count limit. Use as much detail as the presenter need
 
 ### MRU copy
 
-`mru.md` and `data/mru/slides.json` are an independent copy of the slide order, notes and displayed content. Edit these files directly for MRU; `data/mru/highlights.json` holds its text emphasis. `pnpm generate` only updates the original presentation.
+`mru.md` and `data/mru/slides.json` are an independent copy of the slide order and displayed content. MRU has no speaker notes, and its production build excludes them. Edit these files directly for MRU; `data/mru/highlights.json` holds its text emphasis. `pnpm generate` only updates the original presentation.
 
 `pnpm build` publishes a presentation selector at `/`, the EduForum deck at `/eduforum/` and the MRU copy at `/mru/`. On GitHub Pages:
 

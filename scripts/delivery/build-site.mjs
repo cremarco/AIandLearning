@@ -8,8 +8,8 @@ const base = process.env.PAGES_BASE_PATH === undefined
   ? './'
   : `${process.env.PAGES_BASE_PATH.replace(/\/$/, '')}/`
 
-function build(entry, outDir, siteBase, env = {}) {
-  const result = spawnSync(process.execPath, [cli, 'build', entry, '--out', outDir, '--base', siteBase, '--router-mode', 'hash'], {
+function build(entry, outDir, siteBase, env = {}, extraArgs = []) {
+  const result = spawnSync(process.execPath, [cli, 'build', entry, '--out', outDir, '--base', siteBase, '--router-mode', 'hash', ...extraArgs], {
     cwd: projectRoot,
     env: { ...process.env, EDUFORUM_DECK: '', EDUFORUM_PUBLIC_OUT_DIR: '', VITE_SHARED_ASSET_BASE: '', ...env },
     stdio: 'inherit',
@@ -26,5 +26,5 @@ build('slides.md', 'dist/eduforum', base === './' ? './' : `${base}eduforum/`, {
 build('mru.md', 'dist/mru', base === './' ? './' : `${base}mru/`, {
   EDUFORUM_DECK: 'mru',
   VITE_SHARED_ASSET_BASE: base === './' ? '../' : base,
-})
+}, ['--without-notes'])
 copyFileSync(path.join(projectRoot, 'pages/index.html'), path.join(projectRoot, 'dist/index.html'))
