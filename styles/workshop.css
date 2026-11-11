@@ -71,6 +71,10 @@
 .kind-study-phases .procedure-list li:nth-child(5) { --study-phase-accent:var(--color-orange-300); }
 .kind-study-phases .procedure-list li:nth-child(6) { --study-phase-accent:var(--color-rose-300); }
 .slidev-layout .kind-study-phases .procedure-list :is(.step-number,h2) { color:var(--study-phase-accent); }
+/* Five checkpoints share the existing grid; the final choice spans the route. */
+.slide-S52ROUTE .procedure-list li:last-child { grid-column:1 / -1; }
+.slide-S53RISKS .comparison { gap:20px 40px; }
+.slide-S53RISKS .comparison section:last-child { grid-column:1 / -1; }
 .slidev-layout .slide-S97 .tool-resource-table tbody :is(th,td) { padding-block:6px; }
 .has-mixed-content:not(.has-media) .workshop-copy { display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:start; }
 .has-mixed-content .comparison { grid-template-columns:minmax(0,1fr); gap:16px; }

@@ -31,7 +31,7 @@ preload: false
 <DeckSlide id="S01" />
 
 <!--
-Welcome. Today we will follow one **learning path** and see how AI can help. Our main question is simple: how can we use these tools while keeping **independent thinking** at the centre?
+Welcome to this **90-minute practical workshop**. We will explore how AI can support **self-directed learning**, with visual guidance, source checks and teacher support. Keep one classroom activity in mind as we follow Andrea’s learning path.
 -->
 
 ---
@@ -67,7 +67,7 @@ title: "From curiosity to classroom practice"
 <DeckSlide id="S48" />
 
 <!--
-Today we will bring these ideas into **classroom practice**. We will use learning maps and short activities to explore goals, feedback and self-assessment. The aim is to give you ideas you can adapt to your own students.
+Today we will work on **responsible AI use in school education**. By **visual psychological guidance**, I mean maps, checkpoints and reflective questions that help learners choose their next step. We will connect goals, planning, feedback and self-assessment with emotional awareness and teacher support. You will adapt an activity and choose a safeguard for your setting.
 -->
 
 ---
@@ -136,7 +136,7 @@ clicks: 1
 <DeckSlide id="S51" />
 
 <!--
-Let us make this concrete with **Andrea**, a computer science student. He can program, but he still confuses some ideas about generative AI. He needs to study a chapter and explain how a language model produces text. We will follow his learning process; **you do not need programming knowledge**.
+Let us make this concrete with **Andrea**, a fictional university computer science student. He can program, but still confuses some ideas about generative AI. He needs to study a chapter and explain how a language model produces text. As we follow him, think about how you would adapt the support to your students’ age and subject. **You do not need programming knowledge**.
 -->
 
 ---
@@ -186,6 +186,18 @@ But how does Andrea know if his choices are working? Through **self-assessment**
 
 ---
 layout: default
+routeAlias: s52design
+title: "Why the learning design matters"
+---
+
+<DeckSlide id="S52DESIGN" />
+
+<!--
+Why do we keep asking for an **independent explanation**? In one high-school maths experiment, students using an unguarded AI assistant did better during practice, but worse later when working without it. That finding comes from one specific setting. The self-assessment review also gives us a design principle: learners need clear criteria, feedback and a chance to revise. These sources inform our workshop choices. Our demonstrations show tool behaviour; they do not measure learning gains.
+-->
+
+---
+layout: default
 routeAlias: s52phases
 title: "A study process in six phases"
 clicks: 6
@@ -207,6 +219,30 @@ We can organise Andrea's study into **six phases**. Each phase helps him choose 
 [click] To **apply** it, he tries a new example.
 
 [click] Finally, he **checks** his answer against the source and criteria. He can return to an earlier phase when needed. The ribbon shows the main and secondary phases. **Support** covers setup, sources and sharing.
+-->
+
+---
+layout: default
+routeAlias: s52route
+title: "My learning route"
+---
+
+<DeckSlide id="S52ROUTE" />
+
+<!--
+Here is the learning route in **Andrea’s own words**. His goal is to explain training, inference and RAG. He knows some terms, but still confuses context with parameters. He chooses a source and a map, then closes the chat and explains a new example. The evidence helps him choose whether to revise, try again or ask for a hint. These checkpoints make his decisions visible. We can adapt them to another subject while keeping the learner responsible for the next step.
+-->
+
+---
+layout: default
+routeAlias: s52feelings
+title: "Feelings, confidence and the next step"
+---
+
+<DeckSlide id="S52FEELINGS" />
+
+<!--
+A learning route also needs space for **feelings and confidence**. If Andrea feels overwhelmed, one smaller action or a hint may help him start. If he is unsure, he can name the exact difficulty and check the chapter. If he feels very confident, an independent explanation helps him check that confidence. The teacher can help him identify the difficulty and agree on one next step. The check-in can stay private. Which support would you suggest for Andrea, and why?
 -->
 
 ---
@@ -388,7 +424,7 @@ title: "/mistakelog"
 <DeckSlide id="S53DETAILMISTAKELOG" />
 
 <!--
-When a card reveals an error, Andrea can add it to a **mistake log**. He writes the correction and explains why his first answer was wrong. He can then mark the item as understood or keep it for another review.
+When a card reveals an error, Andrea can add it to a **mistake log**. He writes the correction and explains why his first answer was wrong. He can then mark the item as understood or keep it for another review. A short reflective question makes the next step clear: what will I do differently next time?
 -->
 
 ---
@@ -400,7 +436,7 @@ title: "/conceptmap"
 <DeckSlide id="S53DETAILCONCEPTMAP" />
 
 <!--
-Some errors concern the links between ideas. This **concept map** connects training, inference and RAG. The key questions are: when do parameters change, and when is information added to the context? Andrea explains each link, checks the chapter and corrects his answer if needed.
+Some errors concern the links between ideas. This **concept map** connects training, inference and RAG. The key questions are: when do parameters change, and when is information added to the context? Andrea explains each link, checks the chapter and corrects his answer if needed. His explanation helps the teacher choose a question or hint for the next attempt.
 -->
 
 ---
@@ -577,6 +613,18 @@ The same prompt can give a different result in another assistant. **Test the con
 
 ---
 layout: default
+routeAlias: s53risks
+title: "Five risks, five classroom checks"
+---
+
+<DeckSlide id="S53RISKS" />
+
+<!--
+Before you try an activity, choose one **risk and safeguard**. For a possible hallucination, open the source and check the exact claim. For bias, examine assumptions and missing perspectives. For overconfidence, ask for an explanation with the answer closed. Use public or fictional examples to protect student privacy. To reduce over-reliance, keep an initial attempt, give limited help and finish with an independent check. The teacher reviews the content, access and safeguards. During the next exercise, apply at least one of these checks.
+-->
+
+---
+layout: default
 routeAlias: s53tryshortcuts
 title: "Your turn: try a few shortcuts"
 ---
@@ -584,7 +632,7 @@ title: "Your turn: try a few shortcuts"
 <DeckSlide id="S53TRYSHORTCUTS" />
 
 <!--
-Now it is **your turn**. Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. The Free plan is fine. Use our chapter or your own document. Try the activity, check its answers against your source and adjust the request if needed.
+Now it is **your turn**. Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. Use our chapter or a public document from your subject. Choose a learning goal and apply one **classroom check** from the previous slide. Try the activity as a learner, compare its answers with the source and refine the request. What would your students need to explain independently?
 -->
 
 ---
@@ -685,7 +733,7 @@ title: "Your turn: try a skill"
 <DeckSlide id="S53TRYSKILLS" />
 
 <!--
-Now take **ten minutes** to try a skill. Choose one of these three or find another, then install and enable it in an agent that supports it. Use our chapter or your own source. Create study material, try it and check the result against the source.
+Now take **ten minutes** to try a skill. Choose one of these three or find another, then install and enable it in a compatible host. Use our chapter or a public source from your subject. Create and test study material, then check it against the source. Identify one decision the learner should make and one point where teacher feedback would help.
 -->
 
 ---
@@ -709,7 +757,7 @@ title: "Goblin.tools"
 <DeckSlide id="S58TOOLGOBLIN" />
 
 <!--
-Andrea's first problem may be **getting started**. Goblin.tools can help him turn a large task into smaller actions. Let us see how he can use its suggestions to build a plan that fits his goal.
+Andrea’s first problem may be **getting started**. Goblin.tools can help him turn a large task into smaller actions. Let us see how he can use its suggestions to build a plan that fits his goal. If he feels overwhelmed, the teacher can help him choose one manageable action and review how it went.
 -->
 
 ---
@@ -889,7 +937,7 @@ title: "Set up a Learning Guide"
 <DeckSlide id="S64SETTINGS" />
 
 <!--
-We can also change how the conversation works. With **Learning Guide**, we choose a goal and a response length that leave room for Andrea to answer. The settings should support his own explanation and practice.
+We can also change how the conversation works. With **Learning Guide**, we choose a goal and a response length that leave room for Andrea to answer. The teacher can set a clear criterion and decide when a hint or independent attempt is appropriate. Andrea uses the feedback to choose what to practise next.
 -->
 
 ---
@@ -1033,7 +1081,7 @@ title: "Review access before sharing a notebook"
 <DeckSlide id="S67SHARE" />
 
 <!--
-Before sharing these materials, we need to check **who can open them**. In this university account, the sharing window shows only the owner and no public-access option. We provide the checked answer as a text download instead. For your own class, test access as a student before the session.
+Before sharing these materials, we need to check **who can open them**. In this university account, the sharing window shows only the owner and no public-access option. We provide the checked answer as a text download instead. For work at home, test access as a student before setting the task. Keep identifiable student information out of shared materials.
 -->
 
 ---
@@ -1045,7 +1093,7 @@ title: "Your turn: create materials for students"
 <DeckSlide id="S67TRYNOTEBOOK" />
 
 <!--
-Now it is **your turn** to create materials for your students. You have thirty minutes. Choose a topic, suitable sources and any tools you prefer. Match the level to your students, check the results against the sources and test how students will open and use them.
+Now it is **your turn** to create materials for your students. You have thirty minutes. Choose a classroom topic, your students’ level and suitable sources. Include a visual support and one **reflective question**. Decide when the learner uses AI, when the teacher helps and how the learner will show understanding independently. Check the content, privacy and access before sharing.
 -->
 
 ---
@@ -1098,6 +1146,18 @@ We also need to consider **accessibility**. Reading aloud and dictation can supp
 
 ---
 layout: default
+routeAlias: s102transfer
+title: "What will you take into your classroom?"
+---
+
+<DeckSlide id="S102TRANSFER" />
+
+<!--
+Before we finish, take **three minutes** to complete four choices for one activity: a goal, a visual support, a safeguard and an independent check. Use the material you created today or adapt Andrea’s route to your subject. Think about when students will use it, at home, in class or both. Write one line for each choice. Finally, name one thing you will review after the first trial.
+-->
+
+---
+layout: default
 routeAlias: s103
 title: "Thank you."
 ---
@@ -1105,7 +1165,7 @@ title: "Thank you."
 <DeckSlide id="S103" />
 
 <!--
-We began with a question: how can AI support **independent thinking**? I hope you leave with one activity to try and a clear way to check what your students learn. Thank you. I would be happy to hear your questions and ideas.
+We began by asking how AI can support **independent learning**. I hope you leave with an activity, a visual guide and a safeguard to try with your students. Keep asking what they can explain independently and what support they need next. Thank you. I would be happy to hear your questions and ideas.
 -->
 
 ---
