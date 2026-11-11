@@ -55,7 +55,7 @@ MRU opens with flat English and Ukrainian flag buttons; the Ukrainian flag inclu
 
 Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the site's root directories.
 
-The EduForum presentation has 91 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
+The EduForum presentation has 90 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
 ## Check and build
 

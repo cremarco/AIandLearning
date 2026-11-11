@@ -346,7 +346,7 @@
     "section": "scenario",
     "stage": "Tool choice · rationale",
     "title": "Why these tools?",
-    "message": "",
+    "message": "Compared with dedicated tools for specific learning tasks.",
     "body": [
       "ChatGPT",
       "Gemini",
@@ -522,73 +522,6 @@
       "secondary": [
         "check"
       ]
-    }
-  },
-  {
-    "type": "workshop",
-    "section": "chatgpt",
-    "audience": "both",
-    "lang": "en",
-    "body": [],
-    "id": "S53FORMALREADALOUD",
-    "kind": "prompt-commands",
-    "commandCategory": "formal-web",
-    "stage": "ChatGPT · formal web actions",
-    "title": "Read aloud · ChatGPT web",
-    "message": "Listen, stop and replay, then explain the idea yourself",
-    "sources": [
-      "CHATGPT_WEB_COMMANDS",
-      "CHATGPT_FORMAL_RUN",
-      "CHATGPT_MENU_AUDIT"
-    ],
-    "commands": [
-      {
-        "command": "Read aloud",
-        "description": "Listen to the latest response",
-        "result": {
-          "label": "Read aloud in action",
-          "instruction": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
-          "caption": "Silent recording · PDF → prompt → playback → stop and replay",
-          "status": "executed",
-          "media": {
-            "type": "video",
-            "src": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/video.mp4",
-            "poster": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/poster.jpg",
-            "captions": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/captions.en.vtt",
-            "transcriptFile": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/transcript.txt",
-            "captionsDefault": false,
-            "browserFrame": true,
-            "alt": "ChatGPT — Read aloud · ChatGPT web: recorded demonstration and use.",
-            "caption": "ChatGPT · 17.2 s",
-            "transcript": "ChatGPT — \n\nREQUEST\nUsing only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.464 Choose the workshop book from the computer. (3× speed)\n00:00:00.725 The workshop book is attached. (3× speed)\n00:00:00.938 Write the request using the attached book. (3× speed)\n00:00:01.091 Write the listening-friendly explanation request. (3× speed)\n00:00:02.893 Read the complete request.\n00:00:05.347 Send the book and the request. (3× speed)\n00:00:05.704 Generate a brief explanation from the attached chapter. (4× speed)\n00:00:05.891 Read the short explanation and its chapter reference.\n00:00:09.793 Use the native Read Aloud controls (selected excerpt).\n00:00:09.871 Start native Read Aloud\n00:00:15.588 Natural completion is observed later.\n\nOBSERVED RESULT\n\n\n",
-            "prompt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
-            "result": {
-              "kind": "chatgpt-share",
-              "url": "https://chatgpt.com/share/6af08527-0b44-83ed-a53d-957cdad63a6e",
-              "label": "Open shared result",
-              "interactiveVerified": false,
-              "recipientVerified": true,
-              "ownerIndependent": true,
-              "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
-              "supplemental": []
-            },
-            "provenance": "materials/video-refresh/2026-11-07/provenance/chatgpt-formal-web-read-aloud.json",
-            "durationSeconds": 17.183333,
-            "width": 1440,
-            "height": 900,
-            "fps": 60,
-            "sha256": "a63b9cfad74ade4632df4180d6c57b601991f0cc5651f8a17c4464cbeec3895d",
-            "recordingMode": "accepted-native-refresh",
-            "refreshReleaseId": "2026-11-07"
-          },
-          "inputCapture": "materials/chatgpt-formal/web-read-aloud-prompt.jpg",
-          "instructionExcerpt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening."
-        }
-      }
-    ],
-    "decision": "",
-    "studyPhases": {
-      "primary": "understand"
     }
   },
   {

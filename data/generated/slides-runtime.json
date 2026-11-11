@@ -532,7 +532,7 @@
     "section": "scenario",
     "stage": "Tool choice · rationale",
     "title": "Why these tools?",
-    "message": "",
+    "message": "Compared with dedicated tools for specific learning tasks.",
     "body": [
       "ChatGPT",
       "Gemini",
@@ -724,74 +724,6 @@
     "links": []
   },
   {
-    "type": "workshop",
-    "section": "chatgpt",
-    "audience": "both",
-    "lang": "en",
-    "body": [],
-    "id": "S53FORMALREADALOUD",
-    "kind": "prompt-commands",
-    "commandCategory": "formal-web",
-    "stage": "ChatGPT · formal web actions",
-    "title": "Read aloud · ChatGPT web",
-    "message": "Listen, stop and replay, then explain the idea yourself",
-    "sources": [
-      "CHATGPT_WEB_COMMANDS",
-      "CHATGPT_FORMAL_RUN",
-      "CHATGPT_MENU_AUDIT"
-    ],
-    "commands": [
-      {
-        "command": "Read aloud",
-        "description": "Listen to the latest response",
-        "result": {
-          "label": "Read aloud in action",
-          "instruction": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
-          "caption": "Silent recording · PDF → prompt → playback → stop and replay",
-          "status": "executed",
-          "media": {
-            "type": "video",
-            "src": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/video.mp4",
-            "poster": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/poster.jpg",
-            "captions": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/captions.en.vtt",
-            "transcriptFile": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/transcript.txt",
-            "captionsDefault": false,
-            "browserFrame": true,
-            "alt": "ChatGPT — Read aloud · ChatGPT web: recorded demonstration and use.",
-            "caption": "ChatGPT · 17.2 s",
-            "prompt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
-            "result": {
-              "kind": "chatgpt-share",
-              "url": "https://chatgpt.com/share/6af08527-0b44-83ed-a53d-957cdad63a6e",
-              "label": "Open shared result",
-              "interactiveVerified": false,
-              "recipientVerified": true,
-              "ownerIndependent": true,
-              "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
-              "supplemental": []
-            },
-            "provenance": "materials/video-refresh/2026-11-07/provenance/chatgpt-formal-web-read-aloud.json",
-            "durationSeconds": 17.183333,
-            "width": 1440,
-            "height": 900,
-            "fps": 60,
-            "sha256": "a63b9cfad74ade4632df4180d6c57b601991f0cc5651f8a17c4464cbeec3895d",
-            "recordingMode": "accepted-native-refresh",
-            "refreshReleaseId": "2026-11-07"
-          },
-          "inputCapture": "materials/chatgpt-formal/web-read-aloud-prompt.jpg",
-          "instructionExcerpt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening."
-        }
-      }
-    ],
-    "decision": "",
-    "studyPhases": {
-      "primary": "understand"
-    },
-    "number": 23,
-    "links": []
-  },
-  {
     "id": "S53SHORTCUTCLOUD",
     "type": "workshop",
     "kind": "shortcut-cloud",
@@ -873,7 +805,7 @@
         "retained": true
       }
     ],
-    "number": 24,
+    "number": 23,
     "links": []
   },
   {
@@ -908,7 +840,7 @@
         "check"
       ]
     },
-    "number": 25,
+    "number": 24,
     "links": []
   },
   {
@@ -952,7 +884,7 @@
         "understand"
       ]
     },
-    "number": 26,
+    "number": 25,
     "links": []
   },
   {
@@ -995,7 +927,7 @@
         "check"
       ]
     },
-    "number": 27,
+    "number": 26,
     "links": []
   },
   {
@@ -1043,7 +975,7 @@
         "check"
       ]
     },
-    "number": 28,
+    "number": 27,
     "links": []
   },
   {
@@ -1102,7 +1034,7 @@
       "recordingMode": "reviewed-native-short-prompt-retake",
       "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
     },
-    "number": 29
+    "number": 28
   },
   {
     "id": "S53DETAILMISTAKELOG",
@@ -1159,7 +1091,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 30
+    "number": 29
   },
   {
     "id": "S53DETAILCONCEPTMAP",
@@ -1213,7 +1145,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 31
+    "number": 30
   },
   {
     "id": "S53DETAILMATCHINGGAME",
@@ -1270,7 +1202,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 32
+    "number": 31
   },
   {
     "id": "S53DETAILSORTINGGAME",
@@ -1327,7 +1259,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 33
+    "number": 32
   },
   {
     "id": "S53DETAILORAL",
@@ -1386,7 +1318,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 34
+    "number": 33
   },
   {
     "id": "S53DETAILQUIZ",
@@ -1443,7 +1375,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 35
+    "number": 34
   },
   {
     "id": "S53DETAILFILLINTHEBLANKS",
@@ -1497,7 +1429,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 36
+    "number": 35
   },
   {
     "id": "S53DETAILWORKSHEET",
@@ -1554,7 +1486,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 37
+    "number": 36
   },
   {
     "id": "S53DETAILCASESTUDY",
@@ -1611,7 +1543,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 38
+    "number": 37
   },
   {
     "id": "S53DETAILSTUDYPLAN",
@@ -1665,7 +1597,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 39
+    "number": 38
   },
   {
     "id": "S53DETAILLESSONPLAN",
@@ -1719,7 +1651,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 40
+    "number": 39
   },
   {
     "id": "S53DETAILDIFFERENTIATE",
@@ -1773,7 +1705,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 41
+    "number": 40
   },
   {
     "id": "S53DETAILPEERASSESSMENT",
@@ -1827,7 +1759,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 42
+    "number": 41
   },
   {
     "id": "S53DETAILLEARNINGSTATIONS",
@@ -1884,7 +1816,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 43
+    "number": 42
   },
   {
     "id": "S53CLAUDE",
@@ -1959,7 +1891,7 @@
         "check"
       ]
     },
-    "number": 44,
+    "number": 43,
     "links": []
   },
   {
@@ -2044,7 +1976,7 @@
         "check"
       ]
     },
-    "number": 45,
+    "number": 44,
     "links": []
   },
   {
@@ -2084,7 +2016,7 @@
       }
     ],
     "decision": "The teacher reviews content, access and safeguards. Which risk matters most in your activity?",
-    "number": 46,
+    "number": 45,
     "links": []
   },
   {
@@ -2128,7 +2060,7 @@
       "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 47,
+    "number": 46,
     "links": []
   },
   {
@@ -2150,7 +2082,7 @@
       "src": "images/sections/skills-title-v1.webp",
       "alt": "A reusable kit of reading, guided practice and self-assessment cards, organised with a resource folder above an open textbook."
     },
-    "number": 48,
+    "number": 47,
     "links": []
   },
   {
@@ -2184,7 +2116,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 49,
+    "number": 48,
     "links": []
   },
   {
@@ -2220,7 +2152,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 50
+    "number": 49
   },
   {
     "id": "S53SKILLSTUDY",
@@ -2250,7 +2182,7 @@
       ]
     },
     "clicks": 2,
-    "number": 51,
+    "number": 50,
     "links": []
   },
   {
@@ -2309,7 +2241,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 52,
+    "number": 51,
     "links": []
   },
   {
@@ -2384,7 +2316,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 53,
+    "number": 52,
     "links": []
   },
   {
@@ -2454,7 +2386,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 54,
+    "number": 53,
     "links": []
   },
   {
@@ -2504,7 +2436,7 @@
       "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 55
+    "number": 54
   },
   {
     "id": "S53TOOLSSECTION",
@@ -2525,7 +2457,7 @@
       "src": "images/sections/tool-title-v1.webp",
       "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
     },
-    "number": 56,
+    "number": 55,
     "links": []
   },
   {
@@ -2544,7 +2476,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 57,
+    "number": 56,
     "links": []
   },
   {
@@ -2576,7 +2508,7 @@
       "source": "https://goblin.tools/Compiler",
       "browserFrame": true
     },
-    "number": 58,
+    "number": 57,
     "links": []
   },
   {
@@ -2608,7 +2540,7 @@
       "source": "https://goblin.tools/ToDo",
       "browserFrame": true
     },
-    "number": 59,
+    "number": 58,
     "links": []
   },
   {
@@ -2640,7 +2572,7 @@
       "source": "https://goblin.tools/Estimator",
       "browserFrame": true
     },
-    "number": 60,
+    "number": 59,
     "links": []
   },
   {
@@ -2672,7 +2604,7 @@
       "source": "https://goblin.tools/Taskmaster",
       "browserFrame": true
     },
-    "number": 61,
+    "number": 60,
     "links": []
   },
   {
@@ -2704,7 +2636,7 @@
       "source": "https://goblin.tools/Professor",
       "browserFrame": true
     },
-    "number": 62,
+    "number": 61,
     "links": []
   },
   {
@@ -2736,7 +2668,7 @@
       "source": "https://goblin.tools/Formalizer",
       "browserFrame": true
     },
-    "number": 63,
+    "number": 62,
     "links": []
   },
   {
@@ -2777,7 +2709,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 64,
+    "number": 63,
     "links": []
   },
   {
@@ -2814,7 +2746,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 65,
+    "number": 64,
     "links": []
   },
   {
@@ -2836,7 +2768,7 @@
         "connect"
       ]
     },
-    "number": 66,
+    "number": 65,
     "links": []
   },
   {
@@ -2908,7 +2840,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 67,
+    "number": 66,
     "links": []
   },
   {
@@ -2964,7 +2896,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 68,
+    "number": 67,
     "links": []
   },
   {
@@ -3024,7 +2956,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 69,
+    "number": 68,
     "links": []
   },
   {
@@ -3085,7 +3017,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 70,
+    "number": 69,
     "links": []
   },
   {
@@ -3161,7 +3093,7 @@
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 71
+    "number": 70
   },
   {
     "id": "S64SETTINGS",
@@ -3216,7 +3148,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 72,
+    "number": 71,
     "links": []
   },
   {
@@ -3252,7 +3184,7 @@
         "connect"
       ]
     },
-    "number": 73,
+    "number": 72,
     "links": []
   },
   {
@@ -3327,7 +3259,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 74,
+    "number": 73,
     "links": []
   },
   {
@@ -3390,7 +3322,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 75,
+    "number": 74,
     "links": []
   },
   {
@@ -3446,7 +3378,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 76,
+    "number": 75,
     "links": []
   },
   {
@@ -3502,7 +3434,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 77,
+    "number": 76,
     "links": []
   },
   {
@@ -3562,7 +3494,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 78,
+    "number": 77,
     "links": []
   },
   {
@@ -3618,7 +3550,7 @@
       "refreshReleaseId": "2026-11-10-notebook-audio-restored",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 79,
+    "number": 78,
     "links": []
   },
   {
@@ -3654,7 +3586,7 @@
       "recordingMode": "native-video-export",
       "provenance": "materials/notebook/video-overview-2026-11-08/provenance.json"
     },
-    "number": 80,
+    "number": 79,
     "links": []
   },
   {
@@ -3713,7 +3645,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 81,
+    "number": 80,
     "links": []
   },
   {
@@ -3772,7 +3704,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 82,
+    "number": 81,
     "links": []
   },
   {
@@ -3828,7 +3760,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 83,
+    "number": 82,
     "links": []
   },
   {
@@ -3884,7 +3816,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 84,
+    "number": 83,
     "links": []
   },
   {
@@ -3930,7 +3862,7 @@
       "alt": "A smiling blonde professor with dark glasses types furiously on her laptop.",
       "fit": "contain"
     },
-    "number": 85,
+    "number": 84,
     "links": []
   },
   {
@@ -4006,7 +3938,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 86,
+    "number": 85,
     "links": []
   },
   {
@@ -4069,7 +4001,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 87,
+    "number": 86,
     "links": []
   },
   {
@@ -4153,7 +4085,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 88,
+    "number": 87,
     "links": []
   },
   {
@@ -4202,7 +4134,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 89,
+    "number": 88,
     "links": []
   },
   {
@@ -4239,7 +4171,7 @@
       "id": "classroom-transfer"
     },
     "decision": "Write one line for each choice. What will you adapt after your first classroom trial?",
-    "number": 90,
+    "number": 89,
     "links": []
   },
   {
@@ -4266,7 +4198,7 @@
       "alt": "Andrea smiles, gives a thumbs-up with one hand and holds a sheet marked 30 e lode in the other.",
       "type": "image"
     },
-    "number": 91
+    "number": 90
   },
   {
     "id": "S99",
@@ -4388,7 +4320,7 @@
         "shortTitle": "Cognitive accessibility guidance"
       }
     ],
-    "number": 92,
+    "number": 91,
     "links": []
   }
 ]

@@ -532,7 +532,7 @@
     "section": "scenario",
     "stage": "Tool choice · rationale",
     "title": "Why these tools?",
-    "message": "",
+    "message": "Compared with dedicated tools for specific learning tasks.",
     "body": [
       "ChatGPT",
       "Gemini",
@@ -725,75 +725,6 @@
     "links": []
   },
   {
-    "type": "workshop",
-    "section": "chatgpt",
-    "audience": "both",
-    "lang": "en",
-    "body": [],
-    "id": "S53FORMALREADALOUD",
-    "kind": "prompt-commands",
-    "commandCategory": "formal-web",
-    "stage": "ChatGPT · formal web actions",
-    "title": "Read aloud · ChatGPT web",
-    "message": "Listen, stop and replay, then explain the idea yourself",
-    "sources": [
-      "CHATGPT_WEB_COMMANDS",
-      "CHATGPT_FORMAL_RUN",
-      "CHATGPT_MENU_AUDIT"
-    ],
-    "commands": [
-      {
-        "command": "Read aloud",
-        "description": "Listen to the latest response",
-        "result": {
-          "label": "Read aloud in action",
-          "instruction": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
-          "caption": "Silent recording · PDF → prompt → playback → stop and replay",
-          "status": "executed",
-          "media": {
-            "type": "video",
-            "src": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/video.mp4",
-            "poster": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/poster.jpg",
-            "captions": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/captions.en.vtt",
-            "transcriptFile": "materials/video-refresh/2026-11-07/chatgpt-formal-web-read-aloud/transcript.txt",
-            "captionsDefault": false,
-            "browserFrame": true,
-            "alt": "ChatGPT — Read aloud · ChatGPT web: recorded demonstration and use.",
-            "caption": "ChatGPT · 17.2 s",
-            "transcript": "ChatGPT — \n\nREQUEST\nUsing only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT chat. (3× speed)\n00:00:00.464 Choose the workshop book from the computer. (3× speed)\n00:00:00.725 The workshop book is attached. (3× speed)\n00:00:00.938 Write the request using the attached book. (3× speed)\n00:00:01.091 Write the listening-friendly explanation request. (3× speed)\n00:00:02.893 Read the complete request.\n00:00:05.347 Send the book and the request. (3× speed)\n00:00:05.704 Generate a brief explanation from the attached chapter. (4× speed)\n00:00:05.891 Read the short explanation and its chapter reference.\n00:00:09.793 Use the native Read Aloud controls (selected excerpt).\n00:00:09.871 Start native Read Aloud\n00:00:15.588 Natural completion is observed later.\n\nOBSERVED RESULT\n\n\n",
-            "prompt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening.",
-            "result": {
-              "kind": "chatgpt-share",
-              "url": "https://chatgpt.com/share/6af08527-0b44-83ed-a53d-957cdad63a6e",
-              "label": "Open shared result",
-              "interactiveVerified": false,
-              "recipientVerified": true,
-              "ownerIndependent": true,
-              "qualification": "Readable shared conversation; live shared interactivity is not claimed.",
-              "supplemental": []
-            },
-            "provenance": "materials/video-refresh/2026-11-07/provenance/chatgpt-formal-web-read-aloud.json",
-            "durationSeconds": 17.183333,
-            "width": 1440,
-            "height": 900,
-            "fps": 60,
-            "sha256": "a63b9cfad74ade4632df4180d6c57b601991f0cc5651f8a17c4464cbeec3895d",
-            "recordingMode": "accepted-native-refresh",
-            "refreshReleaseId": "2026-11-07"
-          },
-          "inputCapture": "materials/chatgpt-formal/web-read-aloud-prompt.jpg",
-          "instructionExcerpt": "Using only the attached chapter, explain training, inference and context in 50 words or fewer. Include a short example of adding a definition to a prompt. Use simple English suitable for listening."
-        }
-      }
-    ],
-    "decision": "",
-    "studyPhases": {
-      "primary": "understand"
-    },
-    "number": 23,
-    "links": []
-  },
-  {
     "id": "S53SHORTCUTCLOUD",
     "type": "workshop",
     "kind": "shortcut-cloud",
@@ -875,7 +806,7 @@
         "retained": true
       }
     ],
-    "number": 24,
+    "number": 23,
     "links": []
   },
   {
@@ -910,7 +841,7 @@
         "check"
       ]
     },
-    "number": 25,
+    "number": 24,
     "links": []
   },
   {
@@ -954,7 +885,7 @@
         "understand"
       ]
     },
-    "number": 26,
+    "number": 25,
     "links": []
   },
   {
@@ -997,7 +928,7 @@
         "check"
       ]
     },
-    "number": 27,
+    "number": 26,
     "links": []
   },
   {
@@ -1045,7 +976,7 @@
         "check"
       ]
     },
-    "number": 28,
+    "number": 27,
     "links": []
   },
   {
@@ -1105,7 +1036,7 @@
       "recordingMode": "reviewed-native-short-prompt-retake",
       "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
     },
-    "number": 29
+    "number": 28
   },
   {
     "id": "S53DETAILMISTAKELOG",
@@ -1163,7 +1094,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 30
+    "number": 29
   },
   {
     "id": "S53DETAILCONCEPTMAP",
@@ -1218,7 +1149,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 31
+    "number": 30
   },
   {
     "id": "S53DETAILMATCHINGGAME",
@@ -1276,7 +1207,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 32
+    "number": 31
   },
   {
     "id": "S53DETAILSORTINGGAME",
@@ -1334,7 +1265,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 33
+    "number": 32
   },
   {
     "id": "S53DETAILORAL",
@@ -1394,7 +1325,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 34
+    "number": 33
   },
   {
     "id": "S53DETAILQUIZ",
@@ -1452,7 +1383,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 35
+    "number": 34
   },
   {
     "id": "S53DETAILFILLINTHEBLANKS",
@@ -1507,7 +1438,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 36
+    "number": 35
   },
   {
     "id": "S53DETAILWORKSHEET",
@@ -1565,7 +1496,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 37
+    "number": 36
   },
   {
     "id": "S53DETAILCASESTUDY",
@@ -1623,7 +1554,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 38
+    "number": 37
   },
   {
     "id": "S53DETAILSTUDYPLAN",
@@ -1678,7 +1609,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 39
+    "number": 38
   },
   {
     "id": "S53DETAILLESSONPLAN",
@@ -1733,7 +1664,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 40
+    "number": 39
   },
   {
     "id": "S53DETAILDIFFERENTIATE",
@@ -1788,7 +1719,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 41
+    "number": 40
   },
   {
     "id": "S53DETAILPEERASSESSMENT",
@@ -1843,7 +1774,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 42
+    "number": 41
   },
   {
     "id": "S53DETAILLEARNINGSTATIONS",
@@ -1901,7 +1832,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 43
+    "number": 42
   },
   {
     "id": "S53CLAUDE",
@@ -1976,7 +1907,7 @@
         "check"
       ]
     },
-    "number": 44,
+    "number": 43,
     "links": []
   },
   {
@@ -2061,7 +1992,7 @@
         "check"
       ]
     },
-    "number": 45,
+    "number": 44,
     "links": []
   },
   {
@@ -2101,7 +2032,7 @@
       }
     ],
     "decision": "The teacher reviews content, access and safeguards. Which risk matters most in your activity?",
-    "number": 46,
+    "number": 45,
     "links": []
   },
   {
@@ -2145,7 +2076,7 @@
       "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 47,
+    "number": 46,
     "links": []
   },
   {
@@ -2167,7 +2098,7 @@
       "src": "images/sections/skills-title-v1.webp",
       "alt": "A reusable kit of reading, guided practice and self-assessment cards, organised with a resource folder above an open textbook."
     },
-    "number": 48,
+    "number": 47,
     "links": []
   },
   {
@@ -2201,7 +2132,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 49,
+    "number": 48,
     "links": []
   },
   {
@@ -2237,7 +2168,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 50
+    "number": 49
   },
   {
     "id": "S53SKILLSTUDY",
@@ -2267,7 +2198,7 @@
       ]
     },
     "clicks": 2,
-    "number": 51,
+    "number": 50,
     "links": []
   },
   {
@@ -2327,7 +2258,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 52,
+    "number": 51,
     "links": []
   },
   {
@@ -2403,7 +2334,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 53,
+    "number": 52,
     "links": []
   },
   {
@@ -2474,7 +2405,7 @@
       "recordingMode": "accepted-native-refresh",
       "refreshReleaseId": "2026-11-07"
     },
-    "number": 54,
+    "number": 53,
     "links": []
   },
   {
@@ -2524,7 +2455,7 @@
       "alt": "Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.",
       "fit": "contain"
     },
-    "number": 55
+    "number": 54
   },
   {
     "id": "S53TOOLSSECTION",
@@ -2545,7 +2476,7 @@
       "src": "images/sections/tool-title-v1.webp",
       "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
     },
-    "number": 56,
+    "number": 55,
     "links": []
   },
   {
@@ -2564,7 +2495,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 57,
+    "number": 56,
     "links": []
   },
   {
@@ -2597,7 +2528,7 @@
       "transcript": "Compiler — real execution, recorded 5 November 2026\n\nINPUT\nI have 30 minutes to study the GenAI chapter. I need to read the section about training and inference, write a short comparison, and explain it aloud without looking. I keep jumping between these things and do not know where to start.\n\nACTUAL RESULT\nStudy the GenAI chapter\nRead the section about training and inference\nWrite a short comparison\nExplain the comparison aloud without looking\n\n00:00:00.000 Describe the study goal in your own words.\n00:00:04.000 Compiler extracts actions from the unstructured note.\n00:00:06.000 Actual result: four suggested study tasks.\n00:00:10.000 Review the list: keep the learning goal and remove overlap.",
       "browserFrame": true
     },
-    "number": 58,
+    "number": 57,
     "links": []
   },
   {
@@ -2630,7 +2561,7 @@
       "transcript": "Magic ToDo — real execution, recorded 5 November 2026\n\nINPUT\nRead the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nLocate the training and inference section in the document.\nCarefully read and understand the content of both sections.\nIdentify key similarities and differences between training and inference.\nSummarize these points into a concise three-line comparison.\n\n00:00:00.000 Start with one concrete task from the chapter.\n00:00:04.000 Use the magic-wand button to break the task down.\n00:00:06.000 Actual result: 4 smaller steps.\n00:00:10.000 Choose the steps that help; revise generic or repeated advice.",
       "browserFrame": true
     },
-    "number": 59,
+    "number": 58,
     "links": []
   },
   {
@@ -2663,7 +2594,7 @@
       "transcript": "Estimator — real execution, recorded 5 November 2026\n\nINPUT\nRead two pages about training and inference, write a three-line comparison, and explain it aloud once.\n\nACTUAL RESULT\n10-20 minutes\n\n00:00:00.000 Describe the activity and its expected output.\n00:00:04.000 Ask Estimator for a rough time window.\n00:00:06.000 Actual result: 10-20 minutes.\n00:00:10.000 Record the real time, then adjust the next study session.",
       "browserFrame": true
     },
-    "number": 60,
+    "number": 59,
     "links": []
   },
   {
@@ -2696,7 +2627,7 @@
       "transcript": "Taskmaster — real execution, recorded 5 November 2026\n\nINPUT\nAndrea · full-page demo — Read the training and inference section and write a three-line comparison.\n\nACTUAL RESULT\nTaskmaster estimated 40 minutes for this list item. Play started the timer; Pause stopped it at 39:57 after a recorded 3-second session. The task was not marked complete.\n\n00:00:00.000 Open the study list and choose one current task.\n00:00:03.000 Press Play and work with one item in view.\n00:00:07.000 Pause the timer. This demonstration records three seconds.\n00:00:10.000 Elapsed time shows activity; check understanding separately.",
       "browserFrame": true
     },
-    "number": 61,
+    "number": 60,
     "links": []
   },
   {
@@ -2729,7 +2660,7 @@
       "transcript": "Professor — real execution, recorded 5 November 2026\n\nINPUT\nTraining versus inference in a language model. Explain the difference briefly and give one short example.\n\nACTUAL RESULT\nEXPLANATION\nTraining a language model means teaching it by showing lots of text so it learns patterns and how words fit together. Inference is when the model uses what it learned to generate or predict text based on new input.\n\nExample: Training is like studying grammar and vocabulary. Inference is like writing a sentence using what you’ve learned.\n\nEXAMPLE FIELD\nTraining: Teaching the model to understand language by showing it millions of sentences and adjusting its internal settings.\nExample: Feeding a model thousands of news articles to help it learn grammar and facts.\n\nInference: Using the trained model to generate or understand text without changing its settings.\nExample: Asking the model to write a summary of today's news after it has already been trained.\n\n00:00:00.000 Ask a focused question about training and inference.\n00:00:04.000 Professor generates an explanation and an example.\n00:00:07.000 Read the actual explanation; an analogy still needs checking.\n00:00:11.000 Return to the chapter: which parameters change, and when?",
       "browserFrame": true
     },
-    "number": 62,
+    "number": 61,
     "links": []
   },
   {
@@ -2762,7 +2693,7 @@
       "transcript": "Formalizer — real execution, recorded 5 November 2026\n\nINPUT\nTraining is when the model changes its settings from examples. Inference is when it uses those settings to answer. I still need to check what happens to the context.\n\nACTUAL RESULT\nTraining refers to the process by which the model adjusts its parameters based on provided examples. Inference involves applying those parameters to generate responses. I still need to review how the context is managed.\n\n00:00:00.000 Start with a draft that includes an unresolved question.\n00:00:04.000 Choose More professional, then Convert.\n00:00:06.000 Read the actual rewrite and compare its meaning.\n00:00:10.000 The uncertainty about context remains. Check the science too.",
       "browserFrame": true
     },
-    "number": 63,
+    "number": 62,
     "links": []
   },
   {
@@ -2803,7 +2734,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 64,
+    "number": 63,
     "links": []
   },
   {
@@ -2840,7 +2771,7 @@
     "studyPhases": {
       "primary": "plan"
     },
-    "number": 65,
+    "number": 64,
     "links": []
   },
   {
@@ -2862,7 +2793,7 @@
         "connect"
       ]
     },
-    "number": 66,
+    "number": 65,
     "links": []
   },
   {
@@ -2935,7 +2866,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 67,
+    "number": 66,
     "links": []
   },
   {
@@ -2992,7 +2923,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 68,
+    "number": 67,
     "links": []
   },
   {
@@ -3053,7 +2984,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 69,
+    "number": 68,
     "links": []
   },
   {
@@ -3115,7 +3046,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 70,
+    "number": 69,
     "links": []
   },
   {
@@ -3192,7 +3123,7 @@
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 71
+    "number": 70
   },
   {
     "id": "S64SETTINGS",
@@ -3248,7 +3179,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 72,
+    "number": 71,
     "links": []
   },
   {
@@ -3284,7 +3215,7 @@
         "connect"
       ]
     },
-    "number": 73,
+    "number": 72,
     "links": []
   },
   {
@@ -3360,7 +3291,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 74,
+    "number": 73,
     "links": []
   },
   {
@@ -3424,7 +3355,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 75,
+    "number": 74,
     "links": []
   },
   {
@@ -3481,7 +3412,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 76,
+    "number": 75,
     "links": []
   },
   {
@@ -3538,7 +3469,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 77,
+    "number": 76,
     "links": []
   },
   {
@@ -3599,7 +3530,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 78,
+    "number": 77,
     "links": []
   },
   {
@@ -3656,7 +3587,7 @@
       "refreshReleaseId": "2026-11-10-notebook-audio-restored",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 79,
+    "number": 78,
     "links": []
   },
   {
@@ -3693,7 +3624,7 @@
       "provenance": "materials/notebook/video-overview-2026-11-08/provenance.json",
       "transcript": "Welcome to today's explainer. We are jumping right into what is easily one of the most fascinating, and honestly most misunderstood, topics in tech right now. How generative AI systems actually process and retain information. Look, we all interact with these tools every single day, but there's a ton of confusion about what's actually happening under the hood. Does the AI learn from every conversation we have with it? Does it secretly keep a giant memory bank of facts? Well, today we're going beyond the prompt to decode the reality of how AI really learns. Here's our roadmap for the explainer today. First, models versus complete applications. Second, training updates the parameters. Third, inference with fixed models. Fourth, retrieval-augmented generation, or RAG, and finally, reliability and limitations. Okay, let's kick things off with a question that gets right to the heart of a massive misconception. If you type in this chapter, X means Y into a prompt. Does the model permanently learn that fact? Does it update its internal weights? Take a second to really think about your answer. You know, a lot of people just assume that because the AI uses that new info in its very next reply, its brain must have been permanently rewired. But as we're going to see, the reality of how these systems hold on to information is totally different from human memory. Before we get into the heavy mechanics, we need to establish a baseline vocabulary. What exactly is the engine driving all of this? At its core, a generative language model is an auto-regressive system. Now, all that fancy term means is that it assigns probabilities to token sequences. It looks at the context it already has and calculates which token, well, which word, part of a word, or even punctuation mark, might logically come next. That is literally it. Repeating that specific calculation over and over again is what builds out a response. It's a probability engine, folks. Not a conscious fact-checker. Models versus complete applications. So there is a hard, absolute boundary we have to draw between the core model itself and the software wrapped around it. The core model simply calculates token probabilities based on context. That's the engine. But the complete application, like the slick chat interfaces we use daily, that adds system instructions, web search capabilities, file retrieval, filters, and managed memory. The fluent human-sounding writing? That comes from the core model. But pulling up a PDF or browsing the web, that entirely belongs to the surrounding application. Training updates the parameters. This definitive line is absolutely crucial when we look at different ways we intervene with the AI. If you want to permanently change the model's core numerical values, you have to actually train or fine-tune it. Just adding a new message in the context window or uploading an external document only changes the information available for that one specific calculation. It does not, in any way, update the permanent weights of the model. So what does actual training look like? It's a highly mechanical, computationally heavy flow. First, massive amounts of text examples are fed into the system. The system tries to predict the next tokens, compares them to the actual text, and calculates its prediction error. Next, these intense optimization algorithms execute physical numerical updates to the parameter values to reduce that aggregate error. The end result is a permanently changed model. The text just supplies the learning signal. The mathematical optimization does the actual rewiring. It's serious heavy lifting, and it's completely separate from you just typing a prompt into a chat box. Inference with fixed models. Now contrast all that heavy lifting with ordinary inference. When you send a prompt, the model is completely frozen. Its parameters do not change. It takes your input, runs calculations based purely on that prompt and its frozen parameters, and creates a probability distribution for the next token. Finally, an output is selected. Keeping the model fixed while changing your input is really just exploring the effective context. You aren't teaching the AI anything permanent. You're just giving it different starting conditions for its math. Let's actually ground this math in reality with a recorded run from a real model, Qwen 2.5. Given the context, the capital of Italy is. The model calculates continuation probabilities. As you can see, the token for Rome gets the highest probability at 44.86%. Located gets 10.35% and so on. Notice that these values are continuation probabilities, not absolute truth scores. The model doesn't know Rome is the capital in the way you or I do. It merely calculated that Rome is the most probable next token based entirely on its fixed parameters and the context you gave it. Retrieval Augmented Generation, or RAG. So if a fixed model can't learn new facts on the fly, how in the world do we get it to answer questions about a brand new document, or today's news? Well, we use RAG. Think of it as an open book test for the AI. You ask a question, and a separate search component goes out and retrieves relevant passages from an external database, like a PDF you just uploaded. Those passages are stuffed right into the context window alongside your question and handed over to the fixed model to read. The model then generates an answer based purely on that newly provided temporary context. Let's make this crystal clear. RAG searches external documents and makes those passages available to the generation context. Crucially, it does not change the model's parameters or weights. Uploading a PDF just updates the available information for that one conversation, not the AI's permanent brain. And remember the limits here. The retrieval part can fail. It can grab completely irrelevant data. Or the model might just misinterpret the material you supplied it entirely. Reliability and Limitations. It is incredibly important to remember what we've unpacked today when you're evaluating AI outputs. A model can easily produce plausible but totally incorrect text, what we call hallucinations. There isn't just one single cause for this. And lowering the model's temperature or creativity settings isn't a magic fix. Think back to that Qwen model predicting Rome. Even when it produces a highly confident token probability, it is still just predicting the next word based on frozen parameters. An 80% probability for a token absolutely does not mean the claim has an 80% chance of being factually true. I want to leave you with this final really important thought from our source material. A link is not automatic proof. If the text does not contain the answer, the student should recognize that limit and seek another appropriate source. Because generative AI is ultimately a probability engine, running fixed parameters on the context it's given. Human verification remains absolutely essential. Fluent writing simply doesn't equal factual accuracy. So the next time you use an AI tool, ask yourself this. Are you trusting the machine's frozen math or the context you actually provided? Thanks so much for joining me for this explainer."
     },
-    "number": 80,
+    "number": 79,
     "links": []
   },
   {
@@ -3753,7 +3684,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 81,
+    "number": 80,
     "links": []
   },
   {
@@ -3813,7 +3744,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 82,
+    "number": 81,
     "links": []
   },
   {
@@ -3870,7 +3801,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 83,
+    "number": 82,
     "links": []
   },
   {
@@ -3927,7 +3858,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 84,
+    "number": 83,
     "links": []
   },
   {
@@ -3973,7 +3904,7 @@
       "alt": "A smiling blonde professor with dark glasses types furiously on her laptop.",
       "fit": "contain"
     },
-    "number": 85,
+    "number": 84,
     "links": []
   },
   {
@@ -4049,7 +3980,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 86,
+    "number": 85,
     "links": []
   },
   {
@@ -4112,7 +4043,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 87,
+    "number": 86,
     "links": []
   },
   {
@@ -4196,7 +4127,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 88,
+    "number": 87,
     "links": []
   },
   {
@@ -4245,7 +4176,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 89,
+    "number": 88,
     "links": []
   },
   {
@@ -4282,7 +4213,7 @@
       "id": "classroom-transfer"
     },
     "decision": "Write one line for each choice. What will you adapt after your first classroom trial?",
-    "number": 90,
+    "number": 89,
     "links": []
   },
   {
@@ -4309,7 +4240,7 @@
       "alt": "Andrea smiles, gives a thumbs-up with one hand and holds a sheet marked 30 e lode in the other.",
       "type": "image"
     },
-    "number": 91
+    "number": 90
   },
   {
     "id": "S99",
@@ -4431,7 +4362,7 @@
         "shortTitle": "Cognitive accessibility guidance"
       }
     ],
-    "number": 92,
+    "number": 91,
     "links": []
   }
 ]

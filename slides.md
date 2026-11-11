@@ -345,7 +345,7 @@ clicks: 4
 <!--
 With the textbook ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **NotebookLM** adds a workspace for selected sources. You do not need paid access to all of them.
 
-There are four reasons for this choice.
+These four points compare this approach with dedicated tools for specific learning tasks.
 
 [click] First, they give us **more control**. We can ask for a simpler explanation or one question at a time, based on our goal.
 
@@ -429,22 +429,6 @@ Afterwards, he still needs to **explain the idea without AI** and check it again
 
 ---
 layout: default
-routeAlias: s53formalreadaloud
-title: "Read aloud · ChatGPT web"
----
-
-<DeckSlide id="S53FORMALREADALOUD" />
-
-<!--
-Another built-in feature is **Read aloud**.
-
-It reads a ChatGPT response so Andrea can listen to the explanation again. It is available outside Study too.
-
-Listening gives him another way to review, but he still needs to check what he understands.
--->
-
----
-layout: default
 routeAlias: s53shortcutcloud
 title: "15 shortcuts for the learning pathway"
 ---
@@ -520,7 +504,9 @@ These activities also need a **plan**.
 
 Andrea can use /studyplan to choose his next steps. Teachers can plan a lesson, adjust the level of support or set up learning stations.
 
-Shared criteria can guide peer feedback. Let us now see the examples in more detail.
+Shared criteria can guide peer feedback.
+
+Now we will see some specific example from each groups.
 -->
 
 ---

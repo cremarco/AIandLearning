@@ -74,11 +74,12 @@ export function checkData() {
   assert(toolChoiceIndex > bookIndex, 'Explain the tool choice after introducing the assigned book')
   assert.equal(slides[toolChoiceIndex + 1]?.id, 'S53GPT', 'Introduce ChatGPT possibilities immediately after the tool-choice rationale')
   assert(!slides.some(slide => slide.id === 'S53TOOLCHATGPT'), 'Keep the removed ChatGPT title divider out of the sequence')
-  assert.deepEqual(slides.slice(toolChoiceIndex + 2, toolChoiceIndex + 6).map(slide => slide.id), ['S53SHORTCUTS', 'S53TYPES', 'S53FORMALWEB', 'S53FORMALREADALOUD'], 'Introduce formal and informal shortcuts before the distinction and the separate web-action slides')
+  assert.deepEqual(slides.slice(toolChoiceIndex + 2, toolChoiceIndex + 5).map(slide => slide.id), ['S53SHORTCUTS', 'S53TYPES', 'S53FORMALWEB'], 'Introduce formal and informal shortcuts before the distinction and the Study action')
   const formalWeb = slides.filter(slide => slide.commandCategory === 'formal-web')
   assert(!slides.some(slide => slide.id === 'S53FORMALAPP'), 'The removed desktop command slide must stay out of the sequence')
   assert(formalWeb.every(slide => slide.commands.length === 1), 'Each formal web action needs its own slide')
-  assert.deepEqual(formalWeb.map(slide => slide.commands[0].command), ['Study', 'Read aloud'])
+  assert.deepEqual(formalWeb.map(slide => slide.commands[0].command), ['Study'])
+  assert(!slides.some(slide => slide.id === 'S53FORMALREADALOUD'), 'Keep the removed Read aloud slide out of EduForum')
   assert(formalWeb.every(slide => !slide.commands[0].command.startsWith('/')), 'Web menu action labels must not be turned into invented slash codes')
   const formalRecord = read('public/materials/chatgpt-formal/provenance.json')
   for (const row of formalWeb.flatMap(slide => slide.commands)) {
@@ -106,14 +107,6 @@ export function checkData() {
         assert(recorded.video.capture.responseComplete && recorded.video.capture.userMessageCount === 8, 'Study: preserve the PDF setup, study request and six learner replies')
         assert(recorded.video.normalUseSeconds >= 75, 'Study: show several readable exchanges at normal speed')
         assert(recorded.video.capture.phases.filter(phase => /^(read-|answer-)/.test(phase.name)).every(phase => phase.speed === 1), 'Study: only accelerate prompt entry and generation')
-      }
-      if (row.command === 'Read aloud') {
-        assert.deepEqual([recorded.video.width, recorded.video.height, recorded.video.fps], [1440, 900, 60], 'Read aloud: match the other browser videos')
-        assert(recorded.video.temporaryChat && recorded.video.interfaceLanguage === 'en', 'Read aloud: use a fresh English temporary chat')
-        assert(recorded.video.capture?.nativeReadAloudSelected && recorded.video.capture.manualStopExecuted && recorded.video.capture.feedbackPlaybackStarted, 'Read aloud: demonstrate the native action, stopping, replaying and reading the latest feedback')
-        assert(recorded.video.capture.responseComplete && recorded.video.capture.userMessageCount === 3, 'Read aloud: preserve the PDF, prompt and learner explanation')
-        assert(recorded.video.normalUseSeconds >= 40, 'Read aloud: leave time to follow the playback and learner actions')
-        assert(recorded.video.capture.phases.filter(phase => /^(read-|playback-|answer-)/.test(phase.name)).every(phase => phase.speed === 1), 'Read aloud: keep playback and learner actions at normal speed')
       }
     }
     const status = recorded.status.startsWith('opened') ? 'opened' : recorded.status === 'executed' ? 'executed' : 'not-executed'
@@ -388,7 +381,7 @@ export function checkData() {
     }
   }
   const selectedVideoCount = retained.filter(run => shortcutVideos.some(clip => clip.command === run.command)).length
-  console.log(`Content checks passed: ${slides.length} ordered slides with English presenter notes, separate Study and Read aloud actions, ${retained.length} selected shortcuts (${selectedVideoCount} videos and ${retained.length - selectedVideoCount} fresh interaction checks), references and QR.`)
+  console.log(`Content checks passed: ${slides.length} ordered slides with English presenter notes, the Study action, ${retained.length} selected shortcuts (${selectedVideoCount} videos and ${retained.length - selectedVideoCount} fresh interaction checks), references and QR.`)
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) checkData()
