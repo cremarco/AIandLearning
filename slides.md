@@ -185,7 +185,7 @@ I am joking, of course.
 
 This is a **fictional book** made for the workshop, with real explanations and technical references.
 
-I will use this book, but you can use what do you prefer during the patical part.
+I will use this book, but you can use any source you prefer during the practical activities.
 -->
 
 ---
@@ -506,7 +506,7 @@ Andrea can use /studyplan to choose his next steps. Teachers can plan a lesson, 
 
 Shared criteria can guide peer feedback.
 
-Now we will see some specific example from each groups.
+Now we will look at one example from each group.
 -->
 
 ---
@@ -812,7 +812,7 @@ title: "Five risks, five classroom checks"
 <DeckSlide id="S53RISKS" />
 
 <!--
-Before you try an activity, choose one **risk and safeguard**.
+These are five **risks and safeguards** to keep in mind when using AI with students.
 
 For a possible hallucination, open the source and check the exact claim.
 
@@ -824,7 +824,7 @@ Use public or fictional examples to protect student privacy.
 
 To reduce over-reliance, keep an initial attempt, give limited help and finish with an independent check.
 
-The teacher reviews the content, access and safeguards. During the next exercise, apply at least one of these checks.
+The teacher reviews the content, access and safeguards.
 -->
 
 ---
@@ -838,13 +838,11 @@ title: "Your turn: try a few shortcuts"
 <!--
 Now it is **your turn**.
 
-Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. Use our textbook or a public document from your subject.
+Use our textbook or a document of your choice. Try one or more shortcuts in ChatGPT, such as **/flashcard, /conceptmap, /quiz or /studyplan**.
 
-Choose a learning goal and apply one **classroom check** from the previous slide.
+Use the activity and explore how it works. If you have time, try another shortcut.
 
-Try the activity as a learner, compare its answers with the source and refine the request.
-
-What would your students need to explain independently?
+You have **ten minutes**.
 -->
 
 ---
@@ -874,9 +872,9 @@ title: "Agent Skills: reusable workflows"
 <!--
 A **skill** is a set of instructions an agent can reuse for a task.
 
-Its main file, **SKILL.md**, explains when to use it and what steps to follow.
+These instructions are written in **text files** that tell the agent how to behave.
 
-It may also include examples, templates or scripts.
+A skill may also include examples, templates or scripts.
 
 The agent loads these files when it needs them.
 -->
@@ -928,9 +926,7 @@ Let us start with **Learn**.
 
 Andrea thinks a definition in a prompt changes the model's weights.
 
-The skill asks him to explain, then uses the textbook to correct the idea: prompts change context; training changes parameters.
-
-A question about RAG checks whether he can use this distinction again.
+The skill asks him to explain, then uses the textbook to correct the idea.
 -->
 
 ---
@@ -978,9 +974,9 @@ title: "Your turn: try a skill"
 <DeckSlide id="S53TRYSKILLS" />
 
 <!--
-Now take **ten minutes** to try a skill.
+Now take **twenty minutes** to try a skill.
 
-Choose one of these three or find another, then install and enable it in a compatible host.
+Choose one of these three or find another, then install and enable it.
 
 Use our textbook or a public source from your subject.
 
@@ -992,7 +988,7 @@ Identify one decision the learner should make and one point where teacher feedba
 ---
 layout: default
 routeAlias: s53toolssection
-title: "Tool"
+title: "Tools"
 ---
 
 <DeckSlide id="S53TOOLSSECTION" />
@@ -1019,6 +1015,22 @@ Andrea’s first problem may be **getting started**.
 Goblin.tools can help him turn a large task into smaller actions. Let us see how he can use its suggestions to build a plan that fits his goal.
 
 If he feels overwhelmed, the teacher can help him choose one manageable action and review how it went.
+-->
+
+---
+layout: default
+routeAlias: s58overview
+title: "Goblin.tools: support for studying"
+---
+
+<DeckSlide id="S58OVERVIEW" />
+
+<!--
+These **eight tools** offer different kinds of support for studying and communication.
+
+Today I will focus on the three marked with an **orange dot**: Magic ToDo for smaller steps, Estimator for time planning and Professor for explanations.
+
+Andrea reviews the suggestions and decides what to use.
 -->
 
 ---
@@ -1127,40 +1139,6 @@ Clearer writing should preserve those details.
 
 ---
 layout: default
-routeAlias: s59
-title: "Adjust the level of detail"
----
-
-<DeckSlide id="S59" />
-
-<!--
-These examples bring us back to one rule: make the **next action clear**.
-
-Reading one paragraph and writing an example is easier to start than a broad goal.
-
-Add detail when it helps Andrea move past a real difficulty.
--->
-
----
-layout: default
-routeAlias: s60
-title: "Andrea’s selected plan"
----
-
-<DeckSlide id="S60" />
-
-<!--
-Andrea now chooses his own plan: **read, ask, reconstruct and apply**.
-
-He notes unclear ideas, checks an explanation, rebuilds the diagram and tries a new example.
-
-Each step leaves something he can check.
-
-Finished tasks show activity; the work itself shows what he understands.
--->
-
----
-layout: default
 routeAlias: s61toolnotebook
 title: "NotebookLM"
 ---
@@ -1168,11 +1146,11 @@ title: "NotebookLM"
 <DeckSlide id="S61TOOLNOTEBOOK" />
 
 <!--
-With a plan ready, Andrea needs a place to **study his sources**.
+NotebookLM is an **AI tool from Google**, designed to support **learning and understanding**.
 
-NotebookLM lets him ask questions and create materials from selected documents.
+It helps you study the **sources you choose**: you can ask questions, connect ideas and create study materials.
 
-We will use it with his textbook and keep checking answers against the original text.
+We will use it with **Andrea’s textbook** and keep checking its answers against the original text.
 -->
 
 ---
@@ -1207,22 +1185,6 @@ If the textbook is not enough, Andrea can **search for more sources**.
 Before importing a result, he checks who produced it, whether it answers his question and whether it is reliable.
 
 Finding a source does not mean he should use it.
--->
-
----
-layout: default
-routeAlias: s61deep
-title: "Investigate a question with Deep Research"
----
-
-<DeckSlide id="S61DEEP" />
-
-<!--
-For a wider question, **Deep Research** can prepare a report with sources.
-
-Andrea still needs to read those sources and check the claims.
-
-This feature requires an adult account, so we also need to check access before planning an activity.
 -->
 
 ---
@@ -1270,7 +1232,11 @@ title: "Set up a Learning Guide"
 <!--
 We can also change how the conversation works.
 
-With **Learning Guide**, we choose a goal and a response length that leave room for Andrea to answer.
+**Learning Guide** is a chat mode in NotebookLM for studying your sources.
+
+It asks **open-ended questions**, breaks problems into smaller steps and adapts its explanations to the learner.
+
+We select this mode and adjust the **response length** to leave room for Andrea to think and answer.
 
 The teacher can set a clear criterion and decide when a hint or independent attempt is appropriate.
 
@@ -1279,18 +1245,18 @@ Andrea uses the feedback to choose what to practise next.
 
 ---
 layout: default
-routeAlias: s65
-title: "Check the analogy as well"
+routeAlias: s64studio
+title: "NotebookLM Studio: what you can create"
 ---
 
-<DeckSlide id="S65" />
+<DeckSlide id="S64STUDIO" />
 
 <!--
-An explanation may use an **analogy**, but we need to check that too.
+The **Studio** panel brings together the formats NotebookLM can generate from selected sources.
 
-The desk example helps explain available context. It does not explain how a model calculates.
+We can create **audio, video, maps, study materials and visual summaries**.
 
-Andrea should be able to explain the idea without relying on the comparison.
+Choose the format that fits the learning goal. Let us look at a few examples.
 -->
 
 ---
@@ -1304,7 +1270,7 @@ title: "Explore a generated Mind Map"
 <!--
 This is the map created with **Mind Map**.
 
-It connects training, inference, context and RAG. We can zoom in to read each branch.
+It connects the main concepts. We can zoom in to read each branch.
 
 Where do parameters change, and where is information added as input?
 
@@ -1349,22 +1315,6 @@ The CSV download lets us reuse the generated questions and answers.
 
 ---
 layout: default
-routeAlias: s67notes
-title: "Save a checked response as a note"
----
-
-<DeckSlide id="S67NOTES" />
-
-<!--
-When Andrea finds a useful explanation, he can **save it as a note**.
-
-The note keeps the response and its citations, including any errors.
-
-He checks it before using it again or turning it into a new source.
--->
-
----
-layout: default
 routeAlias: s67reports
 title: "Build a study guide from the textbook"
 ---
@@ -1372,7 +1322,11 @@ title: "Build a study guide from the textbook"
 <DeckSlide id="S67REPORTS" />
 
 <!--
-This study guide was created with **Reports**.
+**Reports** turns the sources in a notebook into **structured written documents**.
+
+You can choose a format, such as a study guide, a briefing or a set of frequently asked questions, or describe a custom document.
+
+Here we created a **study guide for revision** from Andrea’s textbook.
 
 We can turn the pages and zoom in to read it.
 
@@ -1390,13 +1344,13 @@ title: "Listen to an Audio Overview"
 <DeckSlide id="S67AUDIO" />
 
 <!--
-This episode was created with **Audio Overview**.
+**Audio Overview** creates a podcast-style conversation between **two AI-generated hosts**, based on the selected sources.
 
-Let us listen to a short part, then pause.
+Their questions and examples can help Andrea **follow the reasoning and connect ideas**.
 
-How would you explain that idea in your own words?
+Let us listen, then pause: how would you explain the idea in your own words?
 
-Andrea can use the same approach when studying, checking his explanation against the textbook before he continues.
+Andrea checks his explanation against the textbook.
 -->
 
 ---
@@ -1408,13 +1362,13 @@ title: "Watch a Video Overview"
 <DeckSlide id="S67VIDEO" />
 
 <!--
-This is the video created with **Video Overview**, with its original English audio.
+**Video Overview** creates a **narrated video with visuals**, based on the selected sources.
 
-It compares training, inference and RAG.
+Combining voice and images can help Andrea **follow a process or understand an abstract idea**.
 
-Let us pause after an example and check it against the textbook.
+Let us watch, then pause: how would you explain the idea in your own words?
 
-Andrea then explains the difference himself.
+Andrea checks his explanation against the textbook.
 -->
 
 ---
@@ -1451,44 +1405,6 @@ We can move through the PDF to compare training, inference and RAG.
 What changes in each case?
 
 Andrea checks the labels and arrows against the textbook, then answers the final question without the slides.
--->
-
----
-layout: default
-routeAlias: s67tables
-title: "Organise textbook concepts in a table"
----
-
-<DeckSlide id="S67TABLES" />
-
-<!--
-This screenshot shows the comparison created with **Data Table**.
-
-We can zoom in to read what changes and what stays fixed in training, inference and RAG.
-
-The other columns show textbook evidence and errors to reject.
-
-The full table is also available as a CSV download.
--->
-
----
-layout: default
-routeAlias: s67share
-title: "Review access before sharing a notebook"
----
-
-<DeckSlide id="S67SHARE" />
-
-<!--
-Before sharing these materials, we need to check **who can open them**.
-
-In this university account, the sharing window shows only the owner and no public-access option.
-
-We provide the checked answer as a text download instead.
-
-For work at home, test access as a student before setting the task.
-
-Keep identifiable student information out of shared materials.
 -->
 
 ---

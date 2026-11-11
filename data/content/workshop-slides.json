@@ -1304,22 +1304,19 @@
     "steps": [
       {
         "title": "Choose a document",
-        "text": "Use the GenAI book or another document you want to study."
+        "text": "Use our textbook or a document of your choice."
       },
       {
-        "title": "Try different shortcuts",
-        "text": "Start with /flashcard, /quiz or /oral. Ask ChatGPT to use only your document."
+        "title": "Try a shortcut",
+        "text": "For example: /flashcard, /conceptmap, /quiz or /studyplan."
       },
       {
-        "title": "Use and check the result",
-        "text": "Try the activity, compare its answers with the source and refine your request."
+        "title": "Use the activity",
+        "text": "Explore the result. Try another shortcut if you have time."
       }
     ],
     "studyPhases": {
-      "primary": "apply",
-      "secondary": [
-        "check"
-      ]
+      "primary": "apply"
     },
     "activityTimer": {
       "minutes": 10,
@@ -1523,7 +1520,7 @@
     "section": "study",
     "stage": "Audience · skill practice",
     "title": "Your turn: try a skill",
-    "message": "10 minutes · Use the GenAI book or a source from your subject.",
+    "message": "20 minutes · Use the GenAI book or a source from your subject.",
     "body": [],
     "sources": [],
     "audience": "both",
@@ -1549,7 +1546,7 @@
       }
     ],
     "activityTimer": {
-      "minutes": 10,
+      "minutes": 20,
       "id": "skill-practice"
     },
     "studyPhases": {
@@ -1565,7 +1562,7 @@
     "kind": "section-divider",
     "section": "study",
     "stage": "Study tools",
-    "title": "Tool",
+    "title": "Tools",
     "message": "",
     "body": [],
     "sources": [],
@@ -1591,6 +1588,63 @@
     "studyPhases": {
       "primary": "plan"
     }
+  },
+  {
+    "id": "S58OVERVIEW",
+    "type": "workshop",
+    "kind": "tool-overview",
+    "section": "study",
+    "stage": "Goblin Tools · overview",
+    "tool": "goblin",
+    "title": "Goblin.tools: support for studying",
+    "message": "Tools for planning, understanding and communication.",
+    "body": [],
+    "sources": [
+      "TOOL_GOBLIN_OVERVIEW"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "comparison": [
+      {
+        "label": "Magic ToDo",
+        "text": "Break a large task into smaller steps.",
+        "explainedInWorkshop": true
+      },
+      {
+        "label": "Estimator",
+        "text": "Suggest a rough time estimate for an activity.",
+        "explainedInWorkshop": true
+      },
+      {
+        "label": "Professor",
+        "text": "Explain a topic with examples.",
+        "explainedInWorkshop": true
+      },
+      {
+        "label": "Compiler",
+        "text": "Turn unstructured thoughts into a task list."
+      },
+      {
+        "label": "Taskmaster",
+        "text": "Focus on one task at a time."
+      },
+      {
+        "label": "Formalizer",
+        "text": "Rewrite text in a different tone."
+      },
+      {
+        "label": "Judge",
+        "text": "Suggest how a text’s emotional tone may be read."
+      },
+      {
+        "label": "Consultant",
+        "text": "Explore options to help make a decision."
+      }
+    ],
+    "decision": "Orange dots mark the examples we will discuss."
   },
   {
     "id": "S58COMPILER",
@@ -1628,7 +1682,8 @@
     "decision": "Keep the useful steps; adjust detail where Andrea is stuck.",
     "studyPhases": {
       "primary": "plan"
-    }
+    },
+    "explainedInWorkshop": true
   },
   {
     "id": "S58ESTIMATOR",
@@ -1647,7 +1702,8 @@
     "decision": "Compare the suggested time window with the time Andrea actually needs.",
     "studyPhases": {
       "primary": "plan"
-    }
+    },
+    "explainedInWorkshop": true
   },
   {
     "id": "S58TASKMASTER",
@@ -1685,7 +1741,8 @@
     "decision": "Check parameter updates and the limits of the analogy against the assigned textbook.",
     "studyPhases": {
       "primary": "understand"
-    }
+    },
+    "explainedInWorkshop": true
   },
   {
     "id": "S58FORMALIZER",
@@ -1704,80 +1761,6 @@
     "decision": "Check that the distinction and the student’s remaining uncertainty survive the rewrite.",
     "studyPhases": {
       "primary": "connect"
-    }
-  },
-  {
-    "id": "S59",
-    "type": "workshop",
-    "kind": "compare",
-    "section": "study",
-    "stage": "Learner · plan",
-    "title": "Adjust the level of detail",
-    "message": "Extra steps help when they clarify the next action",
-    "body": [],
-    "sources": [
-      "TOOL_GOBLIN_UI"
-    ],
-    "audience": "both",
-    "tool": "goblin",
-    "comparison": [
-      {
-        "label": "Too broad",
-        "text": "“Understand the architecture” does not specify where to start."
-      },
-      {
-        "label": "Actionable",
-        "text": "“Read the token paragraph and write a two-line example”."
-      }
-    ],
-    "steps": [
-      {
-        "title": "Adjust the breakdown",
-        "text": "Add detail to the step that is blocking progress."
-      },
-      {
-        "title": "Review the suggestion",
-        "text": "Remove repetition and tasks outside the assignment."
-      }
-    ],
-    "decision": "Adjust granularity to the perceived difficulty; it is not a diagnostic measure.",
-    "studyPhases": {
-      "primary": "plan"
-    }
-  },
-  {
-    "id": "S60",
-    "type": "workshop",
-    "kind": "procedure",
-    "section": "study",
-    "stage": "Learner · plan",
-    "title": "Andrea’s selected plan",
-    "message": "Every block ends with something he can check",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "tool": "goblin",
-    "steps": [
-      {
-        "title": "Read and annotate",
-        "text": "Record three terms and one uncertain relationship."
-      },
-      {
-        "title": "Ask and verify",
-        "text": "Check one explanation against the textbook."
-      },
-      {
-        "title": "Reconstruct",
-        "text": "Revise the diagram and explain it with the chat closed."
-      },
-      {
-        "title": "Apply",
-        "text": "Apply one concept to a new example and justify the answer."
-      }
-    ],
-    "decision": "Checked boxes record activity; the content of the products provides evidence of understanding.",
-    "studyPhases": {
-      "primary": "plan"
     }
   },
   {
@@ -1852,29 +1835,6 @@
     "decision": "Review a source before adding it to the evidence for an answer.",
     "studyPhases": {
       "primary": "support"
-    }
-  },
-  {
-    "id": "S61DEEP",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "study",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Investigate a question with Deep Research",
-    "message": "Read the sourced report and inspect the material behind it",
-    "body": [],
-    "sources": [
-      "TOOL_NOTEBOOK_SOURCES",
-      "TOOL_NOTEBOOK_DEEP"
-    ],
-    "audience": "both",
-    "tool": "notebook",
-    "decision": "Check cited sources before treating the report as evidence. Deep Research requires an adult account.",
-    "studyPhases": {
-      "primary": "understand",
-      "secondary": [
-        "connect"
-      ]
     }
   },
   {
@@ -1954,37 +1914,33 @@
     }
   },
   {
-    "id": "S65",
+    "id": "S64STUDIO",
     "type": "workshop",
-    "kind": "compare",
+    "kind": "studio-overview",
     "section": "study",
-    "stage": "Learner · understand",
-    "title": "Check the analogy as well",
-    "message": "A metaphor helps when its boundary remains visible",
+    "stage": "NotebookLM · Studio overview",
+    "tool": "notebook",
+    "title": "NotebookLM Studio: what you can create",
+    "message": "Choose the format that fits your learning goal.",
     "body": [
-      "Back to the source: during ordinary inference, context enters the calculation and parameters are not updated."
+      "Audio Overview · Video Overview",
+      "Mind Map · Reports",
+      "Flashcards · Quiz",
+      "Infographic · Slide Deck · Data Table"
     ],
     "sources": [
-      "BOOK_CHAPTER"
+      "TOOL_NOTEBOOK_STUDIO"
     ],
     "audience": "both",
-    "tool": "notebook",
-    "comparison": [
-      {
-        "label": "A useful analogy",
-        "text": "Context is like material available on a desk during a task."
-      },
-      {
-        "label": "A boundary to state",
-        "text": "The model does not read as a person does; the analogy does not describe its internal calculation."
-      }
-    ],
-    "decision": "Andrea should be able to express the concept without the metaphor.",
+    "lang": "en",
     "studyPhases": {
-      "primary": "understand",
-      "secondary": [
-        "connect"
-      ]
+      "primary": "support"
+    },
+    "media": {
+      "src": "images/tools/notebook-studio.png",
+      "alt": "NotebookLM Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
+      "fit": "contain",
+      "provenance": "images/tools/notebook-studio.provenance.json"
     }
   },
   {
@@ -2067,25 +2023,6 @@
       "primary": "recall"
     },
     "decision": "Recognising the revealed answer is different from recalling it unaided."
-  },
-  {
-    "id": "S67NOTES",
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "tool": "notebook",
-    "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
-    ],
-    "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Save a checked response as a note",
-    "message": "Keep the useful explanation and its citations together",
-    "decision": "A saved response retains its wording; verify it before making it a new source.",
-    "studyPhases": {
-      "primary": "connect"
-    }
   },
   {
     "id": "S67REPORTS",
@@ -2190,44 +2127,6 @@
       ]
     },
     "notebookOutput": "slides"
-  },
-  {
-    "id": "S67TABLES",
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "tool": "notebook",
-    "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
-    ],
-    "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Organise textbook concepts in a table",
-    "message": "",
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "notebookOutput": "table"
-  },
-  {
-    "id": "S67SHARE",
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "tool": "notebook",
-    "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
-    ],
-    "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Review access before sharing a notebook",
-    "message": "Inspect the sharing dialog and the available link types",
-    "decision": "A chat-view link changes the view; recipients still need appropriate access.",
-    "studyPhases": {
-      "primary": "support"
-    }
   },
   {
     "id": "S67TRYNOTEBOOK",

@@ -63,7 +63,7 @@ export function checkData() {
   assert(slides.filter(slide => ['bibliography', 'web-resources'].includes(slide.kind)).every(slide => slide.number > slides[closingIndex].number), 'References belong after Thank you')
   assert(slides.find(slide => slide.id === 'S97ACCESS')?.toolTable.rows.length >= 3, 'Keep accessibility tools in their own table')
   assert(!slides.some(slide => slide.toolTable?.rows.some(row => row.tool === 'Transformers.js + Qwen')), 'Keep the removed runtime row out of the tool tables')
-  const postNotebook = slides.slice(slides.findIndex(slide => slide.id === 'S67SHARE') + 1)
+  const postNotebook = slides.slice(slides.findLastIndex(slide => slide.tool === 'notebook') + 1)
   for (const tool of new Set(postNotebook.map(slide => slide.tool).filter(Boolean))) {
     assert(postNotebook.filter(slide => slide.tool === tool).length <= 2, `${tool}: after NotebookLM, keep at most two slides per tool`)
   }
@@ -317,7 +317,7 @@ export function checkData() {
   const notebookDemos = read('data/demos/notebook-demos.json')
   const notebookOutputs = read('data/content/notebook-outputs.json')
   const outputSlides = slides.filter(slide => slide.notebookOutput)
-  assert.equal(outputSlides.length, 7, 'Show seven NotebookLM Studio outputs directly')
+  assert.equal(outputSlides.length, 6, 'Show six NotebookLM Studio outputs directly')
   for (const id of ['S67', 'S67CARDS']) {
     const slide = slides.find(slide => slide.id === id)
     assert(!slide.notebookOutput && slide.kind === 'tool-demo' && slide.media?.type === 'video', `${id}: retain the recorded Quiz or Flashcards demonstration`)
@@ -332,7 +332,8 @@ export function checkData() {
   }
   const notebookClips = read('public/materials/notebook/provenance.json').clips
   assert.deepEqual(notebookClips.map(clip => clip.key), notebookDemos.map(demo => demo.key), 'Every NotebookLM demonstration needs its recorded clip')
-  for (const demo of notebookDemos) {
+  // Keep recordings of removed slides archived without requiring them in this deck.
+  for (const demo of notebookDemos.filter(demo => !['S61DEEP', 'S67NOTES', 'S67TABLES', 'S67SHARE'].includes(demo.slideId))) {
     const slide = slides.find(item => item.id === demo.slideId)
     const clip = notebookClips.find(item => item.key === demo.key)
     const expectedKind = slide?.notebookOutput ? 'notebook-output' : 'tool-demo'

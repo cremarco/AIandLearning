@@ -4,11 +4,14 @@ import json, csv, re, subprocess, pathlib, hashlib
 root=pathlib.Path(__file__).resolve().parents[2]
 slides=json.loads((root/'data/generated/slides.json').read_text())
 ids={'S66':('mind-map','Mind Map','image'),'S67':('quiz','Quiz','quiz'),'S67CARDS':('flashcards','Flashcards','flashcards'),'S67REPORTS':('reports','Reports','pdf'),'S67AUDIO':('audio','Audio Overview','audio'),'S67VIDEO':('video','Video Overview','video'),'S67INFO':('infographic','Infographic','image'),'S67SLIDES':('slides','Slide Deck','pdf'),'S67TABLES':('table','Data Table','table')}
-outputs={}
+# Preserve original output metadata when its slide has been removed.
+outputs=json.loads((root/'data/content/notebook-outputs.json').read_text())
 target=root/'public/materials/notebook-outputs'
 target.mkdir(exist_ok=True)
 for id,(key,feature,kind) in ids.items():
- s=next(s for s in slides if s['id']==id); m=s['media']; r=m.get('result') or {}; src=r.get('url',m['src']).lstrip('/')
+ s=next((s for s in slides if s['id']==id),None)
+ if s is None: continue
+ m=s['media']; r=m.get('result') or {}; src=r.get('url',m['src']).lstrip('/')
  o={'feature':feature,'type':kind,'src':src,'prompt':m.get('prompt') or s.get('prompt',''),'sourceSha256':hashlib.sha256((root/'public'/src).read_bytes()).hexdigest()}
  if kind=='pdf':
   folder=target/key; folder.mkdir(exist_ok=True)

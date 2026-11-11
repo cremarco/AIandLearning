@@ -70,7 +70,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
     </div>
     <header v-if="!['chatgpt-intro', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" class="workshop-heading flex items-center gap-4">
       <ToolLogos :ids="brandsForSlide(s)" />
-      <h1><svg v-if="s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title)" class="command-example-dot" role="img" :aria-label="t('Example explained in the speaker notes')" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
+      <h1><svg v-if="s.explainedInWorkshop || (s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title))" class="command-example-dot" role="img" :aria-label="t('Example explained in the speaker notes')" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
     <ul v-if="s.kind === 'tool-choice'" class="tool-choice-context" aria-label="Selected tools">
@@ -136,6 +136,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
             <section v-for="(item,i) in s.comparison" :key="i" v-click="revealOnClick ? i + 1 : false" class="deck-click-reveal">
               <SlideAudience v-if="s.kind === 'audience-legend'" :audience="item.audience || 'both'" inline />
               <h2 class="comparison-heading">
+                <svg v-if="item.explainedInWorkshop" class="command-example-dot" role="img" :aria-label="t('Example explained in the speaker notes')" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg>
                 <span v-if="item.icon" class="comparison-icon" aria-hidden="true" :style="{ maskImage: `url(${asset(item.icon)})` }" />
                 <ToolLogos :ids="brandsForLabel(item.label)" compact />
                 <EmphasisText :text="item.label" />
@@ -176,6 +177,11 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 .workshop-heading h1 { min-width:0; }
 .command-example-dot { display:inline-block; width:8px; height:8px; margin-right:10px; vertical-align:middle; color:var(--deck-important); }
 .comparison-heading { display:flex; align-items:center; gap:10px; }
+.comparison-heading .command-example-dot { flex:none; margin:0; }
+.kind-tool-overview .comparison { grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 40px; }
+.kind-tool-overview .comparison section { gap:10px; }
+.slidev-layout .kind-tool-overview .comparison h2 { font-size:28px; }
+.slidev-layout .kind-tool-overview .comparison p { font-size:22px; line-height:1.3; color:var(--deck-muted); }
 .tool-choice-name { display:inline-flex; align-items:center; gap:10px; white-space:nowrap; }
 .comparison-icon { display:block; flex:0 0 32px; width:32px; height:32px; color:var(--deck-cyan); background:currentColor; mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
 .workshop-video-open { margin-left:12px; vertical-align:middle; }

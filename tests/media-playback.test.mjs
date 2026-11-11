@@ -117,7 +117,8 @@ class TestMedia extends EventTarget {
 }
 
 async function playbackHarnesses() {
-  const listeners = new Set(), messages = [], scopes = []
+  const listeners = new Set(), messages = [], scopes = [], frames = new Map()
+  let frameId = 0
   const source = await read('composables/useSlideVideo.ts')
   async function create(role, page = 1, media = new TestMedia()) {
     const currentSlideNo = vue.ref(1), isPrintMode = vue.ref(false), visible = vue.ref(true)
@@ -142,6 +143,9 @@ async function playbackHarnesses() {
           }
         },
       },
+    }, {
+      requestAnimationFrame(callback) { frames.set(++frameId, callback); return frameId },
+      cancelAnimationFrame(id) { frames.delete(id) },
     })
     const scope = vue.effectScope()
     scope.run(() => api.useSlideVideo(video))
@@ -150,8 +154,78 @@ async function playbackHarnesses() {
     await settle()
     return { media, video, currentSlideNo, isPrintMode, visible, issue, scope }
   }
-  return { create, messages, listeners, close: () => scopes.forEach(scope => scope.stop()) }
+  return {
+    create, messages, listeners, frames,
+    async paint() { const callbacks = [...frames.values()]; frames.clear(); callbacks.forEach(callback => callback()); await settle() },
+    close: () => scopes.forEach(scope => scope.stop()),
+  }
 }
+
+class FrameMedia extends TestMedia {
+  constructor() {
+    super()
+    Object.assign(this, { tagName: 'VIDEO', seeking: false, played: { length: 1 }, frameRefreshes: 0 })
+    let time = 12
+    Object.defineProperty(this, 'currentTime', {
+      get: () => time,
+      set: value => {
+        time = value
+        this.frameRefreshes++
+        queueMicrotask(() => { this.emit('timeupdate'); this.emit('seeked') })
+      },
+    })
+  }
+}
+
+test('returning to a tab redraws its paused frame without Play, reload or remote seek commands', async () => {
+  const h = await playbackHarnesses()
+  try {
+    const media = new FrameMedia(), presenter = await h.create('presenter', 1, media)
+    await media.play()
+    presenter.visible.value = false
+    await settle()
+    assert.equal(media.paused, true)
+    const messages = h.messages.length
+    presenter.visible.value = true
+    await settle()
+    assert.equal(media.frameRefreshes, 0, 'Wait until the visible tab can paint')
+    await h.paint()
+    assert.equal(media.frameRefreshes, 1)
+    assert.equal(media.currentTime, 12)
+    assert.equal(media.paused, true)
+    assert.equal(media.plays, 1, 'Frame recovery must not call Play')
+    assert.equal(media.loads, 0, 'Frame recovery must not reload the source')
+    assert.equal(h.messages.length, messages, 'A local repaint must not seek the audience player')
+  } finally { h.close() }
+})
+
+test('frame recovery leaves unplayed posters alone and cancels when navigating away', async () => {
+  const h = await playbackHarnesses()
+  try {
+    const media = new FrameMedia(), presenter = await h.create('presenter', 1, media)
+    media.currentTime = 0
+    media.played.length = 0
+    await settle()
+    const refreshes = media.frameRefreshes
+    presenter.visible.value = false
+    await settle()
+    presenter.visible.value = true
+    await settle()
+    await h.paint()
+    assert.equal(media.frameRefreshes, refreshes)
+    media.played.length = 1
+    presenter.visible.value = false
+    await settle()
+    presenter.visible.value = true
+    await settle()
+    assert.equal(h.frames.size, 1)
+    presenter.currentSlideNo.value = 2
+    await settle()
+    assert.equal(h.frames.size, 0)
+    await h.paint()
+    assert.equal(media.frameRefreshes, refreshes)
+  } finally { h.close() }
+})
 
 test('presenter Play, Pause, seeking and speed reach the audience with audio only there', async () => {
   const h = await playbackHarnesses()

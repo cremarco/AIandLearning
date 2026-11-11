@@ -2034,22 +2034,19 @@
     "steps": [
       {
         "title": "Choose a document",
-        "text": "Use the GenAI book or another document you want to study."
+        "text": "Use our textbook or a document of your choice."
       },
       {
-        "title": "Try different shortcuts",
-        "text": "Start with /flashcard, /quiz or /oral. Ask ChatGPT to use only your document."
+        "title": "Try a shortcut",
+        "text": "For example: /flashcard, /conceptmap, /quiz or /studyplan."
       },
       {
-        "title": "Use and check the result",
-        "text": "Try the activity, compare its answers with the source and refine your request."
+        "title": "Use the activity",
+        "text": "Explore the result. Try another shortcut if you have time."
       }
     ],
     "studyPhases": {
-      "primary": "apply",
-      "secondary": [
-        "check"
-      ]
+      "primary": "apply"
     },
     "activityTimer": {
       "minutes": 10,
@@ -2396,7 +2393,7 @@
     "section": "study",
     "stage": "Audience · skill practice",
     "title": "Your turn: try a skill",
-    "message": "10 minutes · Use the GenAI book or a source from your subject.",
+    "message": "20 minutes · Use the GenAI book or a source from your subject.",
     "body": [],
     "sources": [],
     "audience": "both",
@@ -2422,7 +2419,7 @@
       }
     ],
     "activityTimer": {
-      "minutes": 10,
+      "minutes": 20,
       "id": "skill-practice"
     },
     "studyPhases": {
@@ -2444,7 +2441,7 @@
     "kind": "section-divider",
     "section": "study",
     "stage": "Study tools",
-    "title": "Tool",
+    "title": "Tools",
     "message": "",
     "body": [],
     "sources": [],
@@ -2480,6 +2477,65 @@
     "links": []
   },
   {
+    "id": "S58OVERVIEW",
+    "type": "workshop",
+    "kind": "tool-overview",
+    "section": "study",
+    "stage": "Goblin Tools · overview",
+    "tool": "goblin",
+    "title": "Goblin.tools: support for studying",
+    "message": "Tools for planning, understanding and communication.",
+    "body": [],
+    "sources": [
+      "TOOL_GOBLIN_OVERVIEW"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "comparison": [
+      {
+        "label": "Magic ToDo",
+        "text": "Break a large task into smaller steps.",
+        "explainedInWorkshop": true
+      },
+      {
+        "label": "Estimator",
+        "text": "Suggest a rough time estimate for an activity.",
+        "explainedInWorkshop": true
+      },
+      {
+        "label": "Professor",
+        "text": "Explain a topic with examples.",
+        "explainedInWorkshop": true
+      },
+      {
+        "label": "Compiler",
+        "text": "Turn unstructured thoughts into a task list."
+      },
+      {
+        "label": "Taskmaster",
+        "text": "Focus on one task at a time."
+      },
+      {
+        "label": "Formalizer",
+        "text": "Rewrite text in a different tone."
+      },
+      {
+        "label": "Judge",
+        "text": "Suggest how a text’s emotional tone may be read."
+      },
+      {
+        "label": "Consultant",
+        "text": "Explore options to help make a decision."
+      }
+    ],
+    "decision": "Orange dots mark the examples we will discuss.",
+    "number": 57,
+    "links": []
+  },
+  {
     "id": "S58COMPILER",
     "type": "workshop",
     "kind": "tool-demo",
@@ -2508,7 +2564,7 @@
       "source": "https://goblin.tools/Compiler",
       "browserFrame": true
     },
-    "number": 57,
+    "number": 58,
     "links": []
   },
   {
@@ -2529,6 +2585,7 @@
     "studyPhases": {
       "primary": "plan"
     },
+    "explainedInWorkshop": true,
     "media": {
       "type": "video",
       "src": "materials/goblin/magic-todo.mp4",
@@ -2540,7 +2597,7 @@
       "source": "https://goblin.tools/ToDo",
       "browserFrame": true
     },
-    "number": 58,
+    "number": 59,
     "links": []
   },
   {
@@ -2561,6 +2618,7 @@
     "studyPhases": {
       "primary": "plan"
     },
+    "explainedInWorkshop": true,
     "media": {
       "type": "video",
       "src": "materials/goblin/estimator.mp4",
@@ -2572,7 +2630,7 @@
       "source": "https://goblin.tools/Estimator",
       "browserFrame": true
     },
-    "number": 59,
+    "number": 60,
     "links": []
   },
   {
@@ -2604,7 +2662,7 @@
       "source": "https://goblin.tools/Taskmaster",
       "browserFrame": true
     },
-    "number": 60,
+    "number": 61,
     "links": []
   },
   {
@@ -2625,6 +2683,7 @@
     "studyPhases": {
       "primary": "understand"
     },
+    "explainedInWorkshop": true,
     "media": {
       "type": "video",
       "src": "materials/goblin/professor.mp4",
@@ -2636,7 +2695,7 @@
       "source": "https://goblin.tools/Professor",
       "browserFrame": true
     },
-    "number": 61,
+    "number": 62,
     "links": []
   },
   {
@@ -2668,85 +2727,7 @@
       "source": "https://goblin.tools/Formalizer",
       "browserFrame": true
     },
-    "number": 62,
-    "links": []
-  },
-  {
-    "id": "S59",
-    "type": "workshop",
-    "kind": "compare",
-    "section": "study",
-    "stage": "Learner · plan",
-    "title": "Adjust the level of detail",
-    "message": "Extra steps help when they clarify the next action",
-    "body": [],
-    "sources": [
-      "TOOL_GOBLIN_UI"
-    ],
-    "audience": "both",
-    "tool": "goblin",
-    "comparison": [
-      {
-        "label": "Too broad",
-        "text": "“Understand the architecture” does not specify where to start."
-      },
-      {
-        "label": "Actionable",
-        "text": "“Read the token paragraph and write a two-line example”."
-      }
-    ],
-    "steps": [
-      {
-        "title": "Adjust the breakdown",
-        "text": "Add detail to the step that is blocking progress."
-      },
-      {
-        "title": "Review the suggestion",
-        "text": "Remove repetition and tasks outside the assignment."
-      }
-    ],
-    "decision": "Adjust granularity to the perceived difficulty; it is not a diagnostic measure.",
-    "studyPhases": {
-      "primary": "plan"
-    },
     "number": 63,
-    "links": []
-  },
-  {
-    "id": "S60",
-    "type": "workshop",
-    "kind": "procedure",
-    "section": "study",
-    "stage": "Learner · plan",
-    "title": "Andrea’s selected plan",
-    "message": "Every block ends with something he can check",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "tool": "goblin",
-    "steps": [
-      {
-        "title": "Read and annotate",
-        "text": "Record three terms and one uncertain relationship."
-      },
-      {
-        "title": "Ask and verify",
-        "text": "Check one explanation against the textbook."
-      },
-      {
-        "title": "Reconstruct",
-        "text": "Revise the diagram and explain it with the chat closed."
-      },
-      {
-        "title": "Apply",
-        "text": "Apply one concept to a new example and justify the answer."
-      }
-    ],
-    "decision": "Checked boxes record activity; the content of the products provides evidence of understanding.",
-    "studyPhases": {
-      "primary": "plan"
-    },
-    "number": 64,
     "links": []
   },
   {
@@ -2768,7 +2749,7 @@
         "connect"
       ]
     },
-    "number": 65,
+    "number": 64,
     "links": []
   },
   {
@@ -2840,7 +2821,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 66,
+    "number": 65,
     "links": []
   },
   {
@@ -2896,67 +2877,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 67,
-    "links": []
-  },
-  {
-    "id": "S61DEEP",
-    "type": "workshop",
-    "kind": "tool-demo",
-    "section": "study",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Investigate a question with Deep Research",
-    "message": "Read the sourced report and inspect the material behind it",
-    "body": [],
-    "sources": [
-      "TOOL_NOTEBOOK_SOURCES",
-      "TOOL_NOTEBOOK_DEEP"
-    ],
-    "audience": "both",
-    "tool": "notebook",
-    "decision": "Check cited sources before treating the report as evidence. Deep Research requires an adult account.",
-    "studyPhases": {
-      "primary": "understand",
-      "secondary": [
-        "connect"
-      ]
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/notebook-deep-research/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/notebook-deep-research/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/notebook-deep-research/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-deep-research/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "NotebookLM — Investigate a question with Deep Research: recorded demonstration and use.",
-      "caption": "NotebookLM · 65.7 s",
-      "prompt": "Find reliable primary sources that distinguish tokenization, document retrieval (RAG), and language-model training. Prefer official documentation or original research. I will inspect the source relevance before importing anything. Investigate how these three operations change inputs, retrieved material or numerical parameters. Produce a sourced report and identify any uncertainty.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/notebook-deep-research/exports/report-unimib.txt",
-        "label": "Open result (text)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "text/plain; charset=utf-8",
-        "download": true,
-        "sha256": "82e08e1d0c1146fc71908d3def039c7eab3c255d8b761cea0f7c6d7d3a1a8e14",
-        "bytes": 24298,
-        "sourceMethod": "observed-ui-text-export",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-deep-research.json",
-      "durationSeconds": 65.65,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "6413b954fab0480f9933528c8577e9c5509aac5a8183e9c5c685d1a8a6127842",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07",
-      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
-    },
-    "number": 68,
+    "number": 66,
     "links": []
   },
   {
@@ -3017,7 +2938,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 69,
+    "number": 67,
     "links": []
   },
   {
@@ -3093,7 +3014,7 @@
         "url": "./images/tools/notebook-citation.jpg"
       }
     ],
-    "number": 70
+    "number": 68
   },
   {
     "id": "S64SETTINGS",
@@ -3148,43 +3069,39 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 71,
+    "number": 69,
     "links": []
   },
   {
-    "id": "S65",
+    "id": "S64STUDIO",
     "type": "workshop",
-    "kind": "compare",
+    "kind": "studio-overview",
     "section": "study",
-    "stage": "Learner · understand",
-    "title": "Check the analogy as well",
-    "message": "A metaphor helps when its boundary remains visible",
+    "stage": "NotebookLM · Studio overview",
+    "tool": "notebook",
+    "title": "NotebookLM Studio: what you can create",
+    "message": "Choose the format that fits your learning goal.",
     "body": [
-      "Back to the source: during ordinary inference, context enters the calculation and parameters are not updated."
+      "Audio Overview · Video Overview",
+      "Mind Map · Reports",
+      "Flashcards · Quiz",
+      "Infographic · Slide Deck · Data Table"
     ],
     "sources": [
-      "BOOK_CHAPTER"
+      "TOOL_NOTEBOOK_STUDIO"
     ],
     "audience": "both",
-    "tool": "notebook",
-    "comparison": [
-      {
-        "label": "A useful analogy",
-        "text": "Context is like material available on a desk during a task."
-      },
-      {
-        "label": "A boundary to state",
-        "text": "The model does not read as a person does; the analogy does not describe its internal calculation."
-      }
-    ],
-    "decision": "Andrea should be able to express the concept without the metaphor.",
+    "lang": "en",
     "studyPhases": {
-      "primary": "understand",
-      "secondary": [
-        "connect"
-      ]
+      "primary": "support"
     },
-    "number": 72,
+    "media": {
+      "src": "images/tools/notebook-studio.png",
+      "alt": "NotebookLM Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
+      "fit": "contain",
+      "provenance": "images/tools/notebook-studio.provenance.json"
+    },
+    "number": 70,
     "links": []
   },
   {
@@ -3259,7 +3176,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 73,
+    "number": 71,
     "links": []
   },
   {
@@ -3322,7 +3239,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 74,
+    "number": 72,
     "links": []
   },
   {
@@ -3378,63 +3295,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 75,
-    "links": []
-  },
-  {
-    "id": "S67NOTES",
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "tool": "notebook",
-    "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
-    ],
-    "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Save a checked response as a note",
-    "message": "Keep the useful explanation and its citations together",
-    "decision": "A saved response retains its wording; verify it before making it a new source.",
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/notebook-notes/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/notebook-notes/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/notebook-notes/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-notes/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "NotebookLM — Save a checked response as a note: recorded demonstration and use.",
-      "caption": "NotebookLM · 30.6 s",
-      "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/notebook-notes/exports/answer-unimib.txt",
-        "label": "Open result (text)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "text/plain; charset=utf-8",
-        "download": true,
-        "sha256": "9b1c6e6aabd2a88093ef4e50c8705da512fc6558b68695e42e447df84433fb92",
-        "bytes": 1297,
-        "sourceMethod": "native-ui-copy",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-notes.json",
-      "durationSeconds": 30.633008,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "d6368cf0fbc42cbc161dfed6adb5053d12dd744d7ce2df6827be84d572094513",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07",
-      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
-    },
-    "number": 76,
+    "number": 73,
     "links": []
   },
   {
@@ -3494,7 +3355,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 77,
+    "number": 74,
     "links": []
   },
   {
@@ -3550,7 +3411,7 @@
       "refreshReleaseId": "2026-11-10-notebook-audio-restored",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 78,
+    "number": 75,
     "links": []
   },
   {
@@ -3586,7 +3447,7 @@
       "recordingMode": "native-video-export",
       "provenance": "materials/notebook/video-overview-2026-11-08/provenance.json"
     },
-    "number": 79,
+    "number": 76,
     "links": []
   },
   {
@@ -3645,7 +3506,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 80,
+    "number": 77,
     "links": []
   },
   {
@@ -3704,119 +3565,7 @@
       "refreshReleaseId": "2026-11-07",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
     },
-    "number": 81,
-    "links": []
-  },
-  {
-    "id": "S67TABLES",
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "tool": "notebook",
-    "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
-    ],
-    "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Organise textbook concepts in a table",
-    "message": "",
-    "studyPhases": {
-      "primary": "connect"
-    },
-    "notebookOutput": "table",
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/notebook-tables/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/notebook-tables/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/notebook-tables/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-tables/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "NotebookLM — Organise textbook concepts in a table: recorded demonstration and use.",
-      "caption": "NotebookLM · 54.6 s",
-      "prompt": "Build an English data table from the uploaded book with three rows: training or fine-tuning, ordinary inference, and document retrieval (RAG). Columns: what changes, what stays fixed, chapter evidence, and misconception to avoid. Treat misconceptions as errors to reject.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/notebook-tables/exports/comparison-table.csv",
-        "label": "Open result (CSV)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "text/csv; charset=utf-8",
-        "download": true,
-        "sha256": "6363673782d1f73ad3712d08dcde59e1c6f4101e62ac207e8b444c6bb64461d7",
-        "bytes": 1468,
-        "sourceMethod": "native-download",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-tables.json",
-      "durationSeconds": 54.65,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "3cc9b0cbbcf5e8d5bc30c27cb7bcfefddfb7a7523766bd38bd9aad5381b59fbb",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07",
-      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
-    },
-    "number": 82,
-    "links": []
-  },
-  {
-    "id": "S67SHARE",
-    "type": "workshop",
-    "section": "study",
-    "body": [],
-    "audience": "both",
-    "tool": "notebook",
-    "sources": [
-      "TOOL_NOTEBOOK_STUDIO"
-    ],
-    "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
-    "title": "Review access before sharing a notebook",
-    "message": "Inspect the sharing dialog and the available link types",
-    "decision": "A chat-view link changes the view; recipients still need appropriate access.",
-    "studyPhases": {
-      "primary": "support"
-    },
-    "media": {
-      "type": "video",
-      "src": "materials/video-refresh/2026-11-07/notebook-sharing/video.mp4",
-      "poster": "materials/video-refresh/2026-11-07/notebook-sharing/poster.jpg",
-      "captions": "materials/video-refresh/2026-11-07/notebook-sharing/captions.en.vtt",
-      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-sharing/transcript.txt",
-      "captionsDefault": false,
-      "browserFrame": true,
-      "alt": "NotebookLM — Review access before sharing a notebook: recorded demonstration and use.",
-      "caption": "NotebookLM · 27.2 s",
-      "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
-      "result": {
-        "kind": "file",
-        "url": "/materials/video-refresh/2026-11-07/notebook-sharing/exports/checked-parameters-and-context-answer.txt",
-        "label": "Open result (text)",
-        "interactiveVerified": false,
-        "recipientVerified": true,
-        "ownerIndependent": true,
-        "mediaType": "text/plain; charset=utf-8",
-        "download": true,
-        "sha256": "7a2acae2f96499b71ae285128fa54362b4a154648c04b27bde7c156fe8d497a3",
-        "bytes": 1301,
-        "sourceMethod": "native-ui-copy",
-        "supplemental": []
-      },
-      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-sharing.json",
-      "durationSeconds": 27.233333,
-      "width": 1440,
-      "height": 900,
-      "fps": 60,
-      "sha256": "17c069abb9fae81abf1fc7b78aa039d541391f60a8b0b8bd7bd26400c5971955",
-      "recordingMode": "accepted-native-refresh",
-      "refreshReleaseId": "2026-11-07",
-      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
-    },
-    "number": 83,
+    "number": 78,
     "links": []
   },
   {
@@ -3855,14 +3604,7 @@
         "check"
       ]
     },
-    "media": {
-      "type": "image",
-      "src": "images/activities/professor-frantic-typing-v1.gif",
-      "poster": "images/activities/professor-typing-still-v1.png",
-      "alt": "A smiling blonde professor with dark glasses types furiously on her laptop.",
-      "fit": "contain"
-    },
-    "number": 84,
+    "number": 79,
     "links": []
   },
   {
@@ -3938,7 +3680,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 85,
+    "number": 80,
     "links": []
   },
   {
@@ -4001,7 +3743,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 86,
+    "number": 81,
     "links": []
   },
   {
@@ -4085,7 +3827,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 87,
+    "number": 82,
     "links": []
   },
   {
@@ -4134,7 +3876,7 @@
     "studyPhases": {
       "primary": "support"
     },
-    "number": 88,
+    "number": 83,
     "links": []
   },
   {
@@ -4171,7 +3913,7 @@
       "id": "classroom-transfer"
     },
     "decision": "Write one line for each choice. What will you adapt after your first classroom trial?",
-    "number": 89,
+    "number": 84,
     "links": []
   },
   {
@@ -4198,7 +3940,7 @@
       "alt": "Andrea smiles, gives a thumbs-up with one hand and holds a sheet marked 30 e lode in the other.",
       "type": "image"
     },
-    "number": 90
+    "number": 85
   },
   {
     "id": "S99",
@@ -4320,7 +4062,7 @@
         "shortTitle": "Cognitive accessibility guidance"
       }
     ],
-    "number": 91,
+    "number": 86,
     "links": []
   }
 ]

@@ -39,7 +39,7 @@ Write speaker notes as concise scripts in simple English, ready to say aloud. Us
 
 ### NotebookLM outputs
 
-EduForum presents seven Studio outputs directly, with the generating feature named beside each result. Quiz and Flashcards keep their recorded demonstrations. `data/content/notebook-outputs.json` identifies the original files and supplies the local output viewers. The recordings remain available to MRU. PDF previews preserve the original pages; rebuild the previews and extracted content with `python3 scripts/content/prepare-notebook-outputs.py` (requires Poppler, cwebp and ffmpeg), then run `pnpm generate`.
+EduForum presents six Studio outputs directly, with the generating feature named beside each result. Quiz and Flashcards keep their recorded demonstrations. `data/content/notebook-outputs.json` identifies the original files and supplies the local output viewers. The recordings remain available to MRU. PDF previews preserve the original pages; rebuild the previews and extracted content with `python3 scripts/content/prepare-notebook-outputs.py` (requires Poppler, cwebp and ffmpeg), then run `pnpm generate`.
 
 ### MRU copy
 
@@ -55,7 +55,7 @@ MRU opens with flat English and Ukrainian flag buttons; the Ukrainian flag inclu
 
 Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the site's root directories.
 
-The EduForum presentation has 90 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
+The EduForum presentation has 85 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
 
 ## Check and build
 

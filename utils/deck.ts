@@ -86,6 +86,7 @@ export type Slide = {
   type: 'cover' | 'profile' | 'company' | 'brief' | 'workshop'
   kind: string
   clicks?: number
+  explainedInWorkshop?: boolean
   title: string
   message: string
   body: string[]
@@ -113,7 +114,7 @@ export type Slide = {
   promptLabel?: string
   promptStyle?: 'terminal' | 'chat'
   videoLayout?: 'focus' | 'prompt'
-  comparison?: { label: string; text: string; audience?: Audience; icon?: string }[]
+  comparison?: { label: string; text: string; audience?: Audience; icon?: string; explainedInWorkshop?: boolean }[]
   steps?: { title: string; text: string }[]
   stepsLayout?: 'flow'
   activityTimer?: { minutes: number; id: string }

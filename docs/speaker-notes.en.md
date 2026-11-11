@@ -83,7 +83,7 @@ I am joking, of course.
 
 This is a **fictional book** made for the workshop, with real explanations and technical references.
 
-I will use this book, but you can use what do you prefer during the patical part.
+I will use this book, but you can use any source you prefer during the practical activities.
 
 ## 11. Andrea’s learning task
 
@@ -264,7 +264,7 @@ Andrea can use /studyplan to choose his next steps. Teachers can plan a lesson, 
 
 Shared criteria can guide peer feedback.
 
-Now we will see some specific example from each groups.
+Now we will look at one example from each group.
 
 ## 28. /flashcard
 
@@ -426,7 +426,7 @@ The same prompt can give a different result in another assistant. **Test the con
 
 ## 45. Five risks, five classroom checks
 
-Before you try an activity, choose one **risk and safeguard**.
+These are five **risks and safeguards** to keep in mind when using AI with students.
 
 For a possible hallucination, open the source and check the exact claim.
 
@@ -438,19 +438,17 @@ Use public or fictional examples to protect student privacy.
 
 To reduce over-reliance, keep an initial attempt, give limited help and finish with an independent check.
 
-The teacher reviews the content, access and safeguards. During the next exercise, apply at least one of these checks.
+The teacher reviews the content, access and safeguards.
 
 ## 46. Your turn: try a few shortcuts
 
 Now it is **your turn**.
 
-Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. Use our textbook or a public document from your subject.
+Use our textbook or a document of your choice. Try one or more shortcuts in ChatGPT, such as **/flashcard, /conceptmap, /quiz or /studyplan**.
 
-Choose a learning goal and apply one **classroom check** from the previous slide.
+Use the activity and explore how it works. If you have time, try another shortcut.
 
-Try the activity as a learner, compare its answers with the source and refine the request.
-
-What would your students need to explain independently?
+You have **ten minutes**.
 
 ## 47. Skills
 
@@ -464,9 +462,9 @@ This is where **Agent Skills** can help. Let us look at how they guide a task fr
 
 A **skill** is a set of instructions an agent can reuse for a task.
 
-Its main file, **SKILL.md**, explains when to use it and what steps to follow.
+These instructions are written in **text files** that tell the agent how to behave.
 
-It may also include examples, templates or scripts.
+A skill may also include examples, templates or scripts.
 
 The agent loads these files when it needs them.
 
@@ -493,9 +491,7 @@ Let us start with **Learn**.
 
 Andrea thinks a definition in a prompt changes the model's weights.
 
-The skill asks him to explain, then uses the textbook to correct the idea: prompts change context; training changes parameters.
-
-A question about RAG checks whether he can use this distinction again.
+The skill asks him to explain, then uses the textbook to correct the idea.
 
 ## 52. Build a study kit after recall
 
@@ -519,9 +515,9 @@ He then closes the diagram and explains the relationship in his own words.
 
 ## 54. Your turn: try a skill
 
-Now take **ten minutes** to try a skill.
+Now take **twenty minutes** to try a skill.
 
-Choose one of these three or find another, then install and enable it in a compatible host.
+Choose one of these three or find another, then install and enable it.
 
 Use our textbook or a public source from your subject.
 
@@ -529,7 +525,7 @@ Create and test study material, then check it against the source.
 
 Identify one decision the learner should make and one point where teacher feedback would help.
 
-## 55. Tool
+## 55. Tools
 
 Skills give us a method we can reuse.
 
@@ -545,7 +541,15 @@ Goblin.tools can help him turn a large task into smaller actions. Let us see how
 
 If he feels overwhelmed, the teacher can help him choose one manageable action and review how it went.
 
-## 57. Compiler: turn thoughts into actions
+## 57. Goblin.tools: support for studying
+
+These **eight tools** offer different kinds of support for studying and communication.
+
+Today I will focus on the three marked with an **orange dot**: Magic ToDo for smaller steps, Estimator for time planning and Professor for explanations.
+
+Andrea reviews the suggestions and decides what to use.
+
+## 58. Compiler: turn thoughts into actions
 
 First, **Compiler** turns Andrea's rough thoughts into suggested actions.
 
@@ -555,7 +559,7 @@ He checks that they match his learning goal and the time he has.
 
 The suggestions give him a starting point; he chooses what to keep.
 
-## 58. Magic ToDo: break down the task
+## 59. Magic ToDo: break down the task
 
 A task can still be too large to start.
 
@@ -563,7 +567,7 @@ A task can still be too large to start.
 
 He adds enough detail to know what to do next. He does not need a separate step for every small action.
 
-## 59. Estimator: plan a time window
+## 60. Estimator: plan a time window
 
 With the steps ready, Andrea needs to plan his **time**.
 
@@ -573,7 +577,7 @@ He compares it with how long the task actually takes, then adjusts his plan.
 
 The estimate helps him plan; it is not a promise.
 
-## 60. Taskmaster: work on one task
+## 61. Taskmaster: work on one task
 
 Now he is ready to begin.
 
@@ -583,7 +587,7 @@ The timer tells Andrea how long he has worked.
 
 To check his learning, he still needs to look at what he can explain or produce.
 
-## 61. Professor: request an explanation
+## 62. Professor: request an explanation
 
 While working, Andrea may get stuck on an idea.
 
@@ -593,7 +597,7 @@ He checks both against the textbook.
 
 If it uses an analogy, he also checks where that comparison stops being useful.
 
-## 62. Formalizer: revise the wording
+## 63. Formalizer: revise the wording
 
 Once Andrea has an explanation, **Formalizer** can help make the wording clearer.
 
@@ -601,33 +605,15 @@ He compares the rewrite with his draft. Does it keep the same meaning? Does it s
 
 Clearer writing should preserve those details.
 
-## 63. Adjust the level of detail
+## 64. NotebookLM
 
-These examples bring us back to one rule: make the **next action clear**.
+NotebookLM is an **AI tool from Google**, designed to support **learning and understanding**.
 
-Reading one paragraph and writing an example is easier to start than a broad goal.
+It helps you study the **sources you choose**: you can ask questions, connect ideas and create study materials.
 
-Add detail when it helps Andrea move past a real difficulty.
+We will use it with **Andrea’s textbook** and keep checking its answers against the original text.
 
-## 64. Andrea’s selected plan
-
-Andrea now chooses his own plan: **read, ask, reconstruct and apply**.
-
-He notes unclear ideas, checks an explanation, rebuilds the diagram and tries a new example.
-
-Each step leaves something he can check.
-
-Finished tasks show activity; the work itself shows what he understands.
-
-## 65. NotebookLM
-
-With a plan ready, Andrea needs a place to **study his sources**.
-
-NotebookLM lets him ask questions and create materials from selected documents.
-
-We will use it with his textbook and keep checking answers against the original text.
-
-## 66. NotebookLM: add and select sources
+## 65. NotebookLM: add and select sources
 
 We begin by **adding the textbook**.
 
@@ -637,7 +623,7 @@ This keeps the task focused, but the answer can still contain errors.
 
 He will need to check it against the textbook.
 
-## 67. Find and review new sources
+## 66. Find and review new sources
 
 If the textbook is not enough, Andrea can **search for more sources**.
 
@@ -645,15 +631,7 @@ Before importing a result, he checks who produced it, whether it answers his que
 
 Finding a source does not mean he should use it.
 
-## 68. Investigate a question with Deep Research
-
-For a wider question, **Deep Research** can prepare a report with sources.
-
-Andrea still needs to read those sources and check the claims.
-
-This feature requires an adult account, so we also need to check access before planning an activity.
-
-## 69. Ask a focused question
+## 67. Ask a focused question
 
 Let us return to Andrea's main question: **why can an answer change without retraining?**
 
@@ -663,7 +641,7 @@ He then compares the explanation and its references with the textbook.
 
 This gives him a manageable answer to check.
 
-## 70. Open the citation and its source
+## 68. Open the citation and its source
 
 To check that answer, Andrea opens the **citation** and reads the passage.
 
@@ -671,35 +649,39 @@ Here, the words **ordinary inference** matter: they describe when the model's pa
 
 He checks that the passage supports the exact claim in the answer.
 
-## 71. Set up a Learning Guide
+## 69. Set up a Learning Guide
 
 We can also change how the conversation works.
 
-With **Learning Guide**, we choose a goal and a response length that leave room for Andrea to answer.
+**Learning Guide** is a chat mode in NotebookLM for studying your sources.
+
+It asks **open-ended questions**, breaks problems into smaller steps and adapts its explanations to the learner.
+
+We select this mode and adjust the **response length** to leave room for Andrea to think and answer.
 
 The teacher can set a clear criterion and decide when a hint or independent attempt is appropriate.
 
 Andrea uses the feedback to choose what to practise next.
 
-## 72. Check the analogy as well
+## 70. NotebookLM Studio: what you can create
 
-An explanation may use an **analogy**, but we need to check that too.
+The **Studio** panel brings together the formats NotebookLM can generate from selected sources.
 
-The desk example helps explain available context. It does not explain how a model calculates.
+We can create **audio, video, maps, study materials and visual summaries**.
 
-Andrea should be able to explain the idea without relying on the comparison.
+Choose the format that fits the learning goal. Let us look at a few examples.
 
-## 73. Explore a generated Mind Map
+## 71. Explore a generated Mind Map
 
 This is the map created with **Mind Map**.
 
-It connects training, inference, context and RAG. We can zoom in to read each branch.
+It connects the main concepts. We can zoom in to read each branch.
 
 Where do parameters change, and where is information added as input?
 
 Andrea checks the links against the textbook, then explains them without the map.
 
-## 74. Answer a quiz before reading feedback
+## 72. Answer a quiz before reading feedback
 
 This recording shows **Quiz** in NotebookLM.
 
@@ -709,7 +691,7 @@ His first attempt scores five out of six; he then retries the missed question.
 
 The next step is to explain the correction and check his understanding with a new example.
 
-## 75. Practise recall with flashcards
+## 73. Practise recall with flashcards
 
 This recording shows **Flashcards** in NotebookLM.
 
@@ -719,17 +701,13 @@ Andrea then compares his answer with the textbook.
 
 The CSV download lets us reuse the generated questions and answers.
 
-## 76. Save a checked response as a note
+## 74. Build a study guide from the textbook
 
-When Andrea finds a useful explanation, he can **save it as a note**.
+**Reports** turns the sources in a notebook into **structured written documents**.
 
-The note keeps the response and its citations, including any errors.
+You can choose a format, such as a study guide, a briefing or a set of frequently asked questions, or describe a custom document.
 
-He checks it before using it again or turning it into a new source.
-
-## 77. Build a study guide from the textbook
-
-This study guide was created with **Reports**.
+Here we created a **study guide for revision** from Andrea’s textbook.
 
 We can turn the pages and zoom in to read it.
 
@@ -737,27 +715,27 @@ Andrea checks its definitions and examples against the textbook.
 
 He then uses the guide to prepare questions and explain the ideas himself.
 
-## 78. Listen to an Audio Overview
+## 75. Listen to an Audio Overview
 
-This episode was created with **Audio Overview**.
+**Audio Overview** creates a podcast-style conversation between **two AI-generated hosts**, based on the selected sources.
 
-Let us listen to a short part, then pause.
+Their questions and examples can help Andrea **follow the reasoning and connect ideas**.
 
-How would you explain that idea in your own words?
+Let us listen, then pause: how would you explain the idea in your own words?
 
-Andrea can use the same approach when studying, checking his explanation against the textbook before he continues.
+Andrea checks his explanation against the textbook.
 
-## 79. Watch a Video Overview
+## 76. Watch a Video Overview
 
-This is the video created with **Video Overview**, with its original English audio.
+**Video Overview** creates a **narrated video with visuals**, based on the selected sources.
 
-It compares training, inference and RAG.
+Combining voice and images can help Andrea **follow a process or understand an abstract idea**.
 
-Let us pause after an example and check it against the textbook.
+Let us watch, then pause: how would you explain the idea in your own words?
 
-Andrea then explains the difference himself.
+Andrea checks his explanation against the textbook.
 
-## 80. Compare concepts in an infographic
+## 77. Compare concepts in an infographic
 
 This image was created with **Infographic**.
 
@@ -767,7 +745,7 @@ We can zoom in to read the details.
 
 Andrea checks the labels against the textbook, then explains what changes in each process.
 
-## 81. Generate and present slides
+## 78. Generate and present slides
 
 These nine slides were created with **Slide Deck**.
 
@@ -777,29 +755,7 @@ What changes in each case?
 
 Andrea checks the labels and arrows against the textbook, then answers the final question without the slides.
 
-## 82. Organise textbook concepts in a table
-
-This screenshot shows the comparison created with **Data Table**.
-
-We can zoom in to read what changes and what stays fixed in training, inference and RAG.
-
-The other columns show textbook evidence and errors to reject.
-
-The full table is also available as a CSV download.
-
-## 83. Review access before sharing a notebook
-
-Before sharing these materials, we need to check **who can open them**.
-
-In this university account, the sharing window shows only the owner and no public-access option.
-
-We provide the checked answer as a text download instead.
-
-For work at home, test access as a student before setting the task.
-
-Keep identifiable student information out of shared materials.
-
-## 84. Your turn: create materials for students
+## 79. Your turn: create materials for students
 
 Now it is **your turn** to create materials for your students.
 
@@ -813,7 +769,7 @@ Decide when the learner uses AI, when the teacher helps and how the learner will
 
 Check the content, privacy and access before sharing.
 
-## 85. Free tools
+## 80. Free tools
 
 To help you choose tools after today, these tables group them by purpose.
 
@@ -823,7 +779,7 @@ Choose the function you need, then check the access conditions.
 
 Some free plans still need an account or have limits, so keep a prepared alternative.
 
-## 86. Free tools for maps and review
+## 81. Free tools for maps and review
 
 For maps and review, we have more focused options.
 
@@ -833,7 +789,7 @@ Choose the action that fits the learning need.
 
 We can keep using the same source and checks.
 
-## 87. Paid tools and upgrades
+## 82. Paid tools and upgrades
 
 Some tools offer more features through a **paid plan**.
 
@@ -841,7 +797,7 @@ Before paying, compare the feature you need with a free option and check the cur
 
 A paid tool is useful only if the extra feature helps with your task.
 
-## 88. Accessibility tools
+## 83. Accessibility tools
 
 We also need to consider **accessibility**.
 
@@ -853,7 +809,7 @@ Check the languages available and review dictated text.
 
 Read&Write offers a wider set of tools through a licence.
 
-## 89. What will you take into your classroom?
+## 84. What will you take into your classroom?
 
 Before we finish, take **three minutes** to complete four choices for one activity: a goal, a visual support, a safeguard and an independent check.
 
@@ -865,7 +821,7 @@ Write one line for each choice.
 
 Finally, name one thing you will review after the first trial.
 
-## 90. Thank you.
+## 85. Thank you.
 
 We began by asking how AI can support **independent learning**.
 
@@ -875,7 +831,7 @@ Keep asking what they can explain independently and what support they need next.
 
 Thank you. I would be happy to hear your questions and ideas.
 
-## 91. Bibliography
+## 86. Bibliography
 
 These **references** are here for questions and further reading.
 

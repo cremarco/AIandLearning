@@ -20,6 +20,29 @@ export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefin
   let playPending = false
   let blocked = false
   let metadataRequested = false
+  let repaintFrame: number | undefined
+  let repaintSeek: { media: T; time: number } | undefined
+
+  function cancelRepaint() {
+    if (repaintFrame !== undefined) cancelAnimationFrame(repaintFrame)
+    repaintFrame = undefined
+    repaintSeek = undefined
+  }
+
+  function restorePausedFrame() {
+    const media = video.value
+    if (!media || media.tagName !== 'VIDEO' || !active.value || !visible.value) return
+    cancelRepaint()
+    repaintFrame = requestAnimationFrame(() => {
+      repaintFrame = undefined
+      if (video.value !== media || !active.value || !visible.value || !media.paused
+        || media.readyState < 2 || media.seeking || (!media.currentTime && !media.played.length)) return
+      // Background tabs can lose their decoded video surface. Seek to the same
+      // position after the tab is painted again, without playing or reloading it.
+      repaintSeek = { media, time: media.currentTime }
+      media.currentTime = media.currentTime
+    })
+  }
 
   function publish(seek = false) {
     const media = video.value
@@ -52,7 +75,7 @@ export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefin
     const elapsed = message.paused ? 0 : Math.max(0, Date.now() - message.sentAt) / 1000 * message.rate
     const time = Math.min(Number.isFinite(media.duration) ? media.duration : Infinity, message.time + elapsed)
     media.playbackRate = message.rate
-    if (message.seek || Math.abs(media.currentTime - time) > 0.75) media.currentTime = time
+    if (Math.abs(media.currentTime - time) > (message.seek ? 0.01 : 0.75)) media.currentTime = time
     if (message.paused) {
       if (blocked) report(false)
     } else if (media.paused && !playPending) {
@@ -66,6 +89,7 @@ export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefin
   }
 
   const pause = () => {
+    cancelRepaint()
     video.value?.pause()
     if (blocked) report(false)
     pending = undefined
@@ -93,17 +117,25 @@ export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefin
     const mediaSource = source()
     // Preloaded slides and the Next preview never participate in playback.
     media.muted = role.value !== 'slide'
-    const onControl = () => publish(true)
+    const onControl = (event: Event) => {
+      if (event.type === 'seeked' && repaintSeek?.media === media) {
+        const restoring = media.paused && Math.abs(media.currentTime - repaintSeek.time) < 0.001
+        repaintSeek = undefined
+        if (restoring) return
+      }
+      publish(true)
+    }
     const onTime = () => {
-      if (Date.now() - lastUpdate < 1000) return
+      if (media.paused || Date.now() - lastUpdate < 1000) return
       lastUpdate = Date.now()
       publish()
     }
     const onVolume = () => { if (role.value !== 'slide') media.muted = true }
     const onMetadata = () => { if (pending) apply(pending) }
     const onPlay = () => {
+      repaintSeek = undefined
       if (!active.value) { media.pause(); return }
-      onControl()
+      publish(true)
     }
     for (const event of ['pause', 'seeked', 'ratechange']) media.addEventListener(event, onControl)
     media.addEventListener('play', onPlay)
@@ -111,6 +143,7 @@ export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefin
     media.addEventListener('volumechange', onVolume)
     media.addEventListener('loadedmetadata', onMetadata)
     cleanup(() => {
+      cancelRepaint()
       for (const event of ['pause', 'seeked', 'ratechange']) media.removeEventListener(event, onControl)
       media.removeEventListener('play', onPlay)
       media.removeEventListener('timeupdate', onTime)
@@ -123,7 +156,10 @@ export function useSlideVideo<T extends HTMLMediaElement>(video: Ref<T | undefin
   }, { flush: 'post', immediate: true })
 
   watch([active, visible], () => {
-    if (active.value && visible.value && video.value && role.value === 'slide') send?.({ ...key(), type: 'ready' })
+    if (active.value && visible.value && video.value) {
+      restorePausedFrame()
+      if (role.value === 'slide') send?.({ ...key(), type: 'ready' })
+    }
   })
   watch([nav.currentSlideNo, nav.isPrintMode], pause)
   watch(visible, shown => { if (!shown) pause() })
