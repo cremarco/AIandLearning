@@ -75,7 +75,7 @@
     "message": "One student’s learning process, from assignment to assessment",
     "body": [
       "Andrea is a second-year computer science student: he can program, but still confuses key concepts of generative models.",
-      "He must study a chapter and explain how a language model generates text.",
+      "He must study a textbook and explain how a language model generates text.",
       "We observe his use of tools and the evidence of understanding he keeps."
     ],
     "sources": [],
@@ -88,11 +88,11 @@
     "kind": "book",
     "section": "scenario",
     "stage": "Scenario · material",
-    "title": "The assigned book",
+    "title": "The assigned textbook",
     "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
     "body": [
       "Topic: Language Models and Basic Architecture.",
-      "The book is available as a PDF."
+      "The textbook is available as a PDF."
     ],
     "sources": [],
     "audience": "both",
@@ -113,14 +113,14 @@
     "section": "scenario",
     "stage": "Scenario",
     "title": "Andrea’s learning task",
-    "message": "To understand the chapter and show what he has learned, Andrea must:",
+    "message": "To understand the textbook and show what he has learned, Andrea must:",
     "body": [],
     "sources": [],
     "audience": "both",
     "steps": [
       {
         "title": "Read",
-        "text": "Study the chapter. Identify the key ideas and what is still unclear."
+        "text": "Study the textbook. Identify the key ideas and what is still unclear."
       },
       {
         "title": "Represent",
@@ -128,7 +128,7 @@
       },
       {
         "title": "Check",
-        "text": "Compare the diagram and AI suggestions with the chapter. Correct errors."
+        "text": "Compare the diagram and AI suggestions with the textbook. Correct errors."
       },
       {
         "title": "Explain",
@@ -167,7 +167,7 @@
     ],
     "stepsLayout": "flow",
     "resultLabel": "Andrea’s example",
-    "result": "“I need to distinguish training from inference. I will use the chapter and a concept map, then check whether I can explain the difference.”",
+    "result": "“I need to distinguish training from inference. I will use the textbook and a concept map, then check whether I can explain the difference.”",
     "decision": "Andrea takes responsibility for his choices, with support from teachers and peers."
   },
   {
@@ -328,7 +328,7 @@
       },
       {
         "label": "“I am unsure.”",
-        "text": "Name the exact point of uncertainty. Compare the explanation with the chapter."
+        "text": "Name the exact point of uncertainty. Compare the explanation with the textbook."
       },
       {
         "label": "“I feel very confident.”",
@@ -1255,7 +1255,7 @@
         "src": "materials/gemini-shortcuts/screenshots/quiz.jpg",
         "width": 1280,
         "height": 720,
-        "alt": "Gemini native quiz in English showing a selected answer, chapter-grounded feedback and navigation.",
+        "alt": "Gemini native quiz in English showing a selected answer, textbook-grounded feedback and navigation.",
         "caption": "Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.",
         "format": "Native Gemini widget",
         "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English."
@@ -1305,7 +1305,7 @@
         "src": "materials/gemini-shortcuts/screenshots/peerassessment.jpg",
         "width": 1280,
         "height": 720,
-        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, chapter evidence and written feedback.",
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, textbook evidence and written feedback.",
         "caption": "Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.",
         "format": "Gemini Canvas export · local browser",
         "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English."
@@ -1481,7 +1481,7 @@
     "kind": "skill-catalogue",
     "section": "study",
     "stage": "Reusable Agent Skills",
-    "title": "Skills for studying the same chapter",
+    "title": "Skills for studying the same textbook",
     "message": "Three reusable workflows, tested with Andrea’s assigned book.",
     "body": [],
     "audience": "both",
@@ -1509,7 +1509,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
+    "stage": "Agent Skills · recorded textbook test",
     "tool": "chatgpt",
     "title": "Learn: explain before receiving feedback",
     "studyPhases": {
@@ -1536,10 +1536,10 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
+    "stage": "Agent Skills · recorded textbook test",
     "tool": "chatgpt",
     "title": "Build a study kit after recall",
-    "message": "The same chapter becomes practice materials and two short reviews.",
+    "message": "The same textbook becomes practice materials and two short reviews.",
     "body": [],
     "audience": "both",
     "sources": [
@@ -1564,9 +1564,9 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
+    "stage": "Agent Skills · recorded textbook test",
     "tool": "chatgpt",
-    "title": "Compare the chapter in an editable diagram",
+    "title": "Compare the textbook in an editable diagram",
     "message": "Training, ordinary inference and RAG retain distinct flows.",
     "body": [],
     "audience": "both",
@@ -1577,7 +1577,7 @@
     ],
     "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
     "promptLabel": "Recorded prompt",
-    "decision": "Check each arrow against the chapter, then explain the diagram independently.",
+    "decision": "Check each arrow against the textbook, then explain the diagram independently.",
     "studyPhases": {
       "primary": "connect"
     },
@@ -1749,7 +1749,7 @@
     "sources": [
       "TOOL_GOBLIN_PROFESSOR"
     ],
-    "decision": "Check parameter updates and the limits of the analogy against the assigned chapter.",
+    "decision": "Check parameter updates and the limits of the analogy against the assigned textbook.",
     "studyPhases": {
       "primary": "understand"
     }
@@ -1831,7 +1831,7 @@
       },
       {
         "title": "Ask and verify",
-        "text": "Check one explanation against the chapter."
+        "text": "Check one explanation against the textbook."
       },
       {
         "title": "Reconstruct",
@@ -1874,7 +1874,7 @@
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "NotebookLM: add and select sources",
-    "message": "Import the chapter and decide which material each question may use",
+    "message": "Import the textbook and decide which material each question may use",
     "body": [],
     "sources": [
       "TOOL_NOTEBOOK_SOURCES",
@@ -1884,7 +1884,7 @@
     "tool": "notebook",
     "steps": [
       {
-        "title": "Upload the chapter",
+        "title": "Upload the textbook",
         "text": "Add the original Fondamenti_GenAI_Cremaschi.pdf through the file chooser."
       },
       {
@@ -1893,7 +1893,7 @@
       },
       {
         "title": "Select the material",
-        "text": "Use source checkboxes to keep a question focused on the chapter PDF."
+        "text": "Use source checkboxes to keep a question focused on the textbook PDF."
       }
     ],
     "result": "A study environment with the assigned material as its reference.",
@@ -1951,7 +1951,7 @@
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "Ask a focused question",
-    "message": "Request a short explanation with references to the chapter",
+    "message": "Request a short explanation with references to the textbook",
     "body": [
       "The need is to understand why an answer can change without retraining."
     ],
@@ -2080,7 +2080,7 @@
       },
       {
         "title": "Explain a relationship",
-        "text": "Use the map for orientation, then explain the connection and check the chapter."
+        "text": "Use the map for orientation, then explain the connection and check the textbook."
       }
     ],
     "studyPhases": {
@@ -2114,7 +2114,7 @@
         "recall"
       ]
     },
-    "decision": "Use feedback to revise an explanation, then check it against the chapter."
+    "decision": "Use feedback to revise an explanation, then check it against the textbook."
   },
   {
     "id": "S67CARDS",
@@ -2166,7 +2166,7 @@
     ],
     "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
-    "title": "Build a study guide from the chapter",
+    "title": "Build a study guide from the textbook",
     "message": "",
     "studyPhases": {
       "primary": "connect",
@@ -2270,7 +2270,7 @@
     ],
     "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
-    "title": "Organise chapter concepts in a table",
+    "title": "Organise textbook concepts in a table",
     "message": "",
     "studyPhases": {
       "primary": "connect"

@@ -217,7 +217,7 @@
     "message": "One student’s learning process, from assignment to assessment",
     "body": [
       "Andrea is a second-year computer science student: he can program, but still confuses key concepts of generative models.",
-      "He must study a chapter and explain how a language model generates text.",
+      "He must study a textbook and explain how a language model generates text.",
       "We observe his use of tools and the evidence of understanding he keeps."
     ],
     "sources": [],
@@ -239,11 +239,11 @@
     "kind": "book",
     "section": "scenario",
     "stage": "Scenario · material",
-    "title": "The assigned book",
+    "title": "The assigned textbook",
     "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
     "body": [
       "Topic: Language Models and Basic Architecture.",
-      "The book is available as a PDF."
+      "The textbook is available as a PDF."
     ],
     "sources": [],
     "audience": "both",
@@ -285,14 +285,14 @@
     "section": "scenario",
     "stage": "Scenario",
     "title": "Andrea’s learning task",
-    "message": "To understand the chapter and show what he has learned, Andrea must:",
+    "message": "To understand the textbook and show what he has learned, Andrea must:",
     "body": [],
     "sources": [],
     "audience": "both",
     "steps": [
       {
         "title": "Read",
-        "text": "Study the chapter. Identify the key ideas and what is still unclear."
+        "text": "Study the textbook. Identify the key ideas and what is still unclear."
       },
       {
         "title": "Represent",
@@ -300,7 +300,7 @@
       },
       {
         "title": "Check",
-        "text": "Compare the diagram and AI suggestions with the chapter. Correct errors."
+        "text": "Compare the diagram and AI suggestions with the textbook. Correct errors."
       },
       {
         "title": "Explain",
@@ -341,7 +341,7 @@
     ],
     "stepsLayout": "flow",
     "resultLabel": "Andrea’s example",
-    "result": "“I need to distinguish training from inference. I will use the chapter and a concept map, then check whether I can explain the difference.”",
+    "result": "“I need to distinguish training from inference. I will use the textbook and a concept map, then check whether I can explain the difference.”",
     "decision": "Andrea takes responsibility for his choices, with support from teachers and peers.",
     "number": 12,
     "links": []
@@ -512,7 +512,7 @@
       },
       {
         "label": "“I am unsure.”",
-        "text": "Name the exact point of uncertainty. Compare the explanation with the chapter."
+        "text": "Name the exact point of uncertainty. Compare the explanation with the textbook."
       },
       {
         "label": "“I feel very confident.”",
@@ -1999,7 +1999,7 @@
         "src": "materials/gemini-shortcuts/screenshots/quiz.jpg",
         "width": 1280,
         "height": 720,
-        "alt": "Gemini native quiz in English showing a selected answer, chapter-grounded feedback and navigation.",
+        "alt": "Gemini native quiz in English showing a selected answer, textbook-grounded feedback and navigation.",
         "caption": "Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.",
         "format": "Native Gemini widget",
         "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English."
@@ -2049,7 +2049,7 @@
         "src": "materials/gemini-shortcuts/screenshots/peerassessment.jpg",
         "width": 1280,
         "height": 720,
-        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, chapter evidence and written feedback.",
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, textbook evidence and written feedback.",
         "caption": "Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.",
         "format": "Gemini Canvas export · local browser",
         "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English."
@@ -2245,7 +2245,7 @@
     "kind": "skill-catalogue",
     "section": "study",
     "stage": "Reusable Agent Skills",
-    "title": "Skills for studying the same chapter",
+    "title": "Skills for studying the same textbook",
     "message": "Three reusable workflows, tested with Andrea’s assigned book.",
     "body": [],
     "audience": "both",
@@ -2275,7 +2275,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
+    "stage": "Agent Skills · recorded textbook test",
     "tool": "chatgpt",
     "title": "Learn: explain before receiving feedback",
     "studyPhases": {
@@ -2335,10 +2335,10 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
+    "stage": "Agent Skills · recorded textbook test",
     "tool": "chatgpt",
     "title": "Build a study kit after recall",
-    "message": "The same chapter becomes practice materials and two short reviews.",
+    "message": "The same textbook becomes practice materials and two short reviews.",
     "body": [],
     "audience": "both",
     "sources": [
@@ -2411,9 +2411,9 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "Agent Skills · recorded chapter test",
+    "stage": "Agent Skills · recorded textbook test",
     "tool": "chatgpt",
-    "title": "Compare the chapter in an editable diagram",
+    "title": "Compare the textbook in an editable diagram",
     "message": "Training, ordinary inference and RAG retain distinct flows.",
     "body": [],
     "audience": "both",
@@ -2424,7 +2424,7 @@
     ],
     "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
     "promptLabel": "Recorded prompt",
-    "decision": "Check each arrow against the chapter, then explain the diagram independently.",
+    "decision": "Check each arrow against the textbook, then explain the diagram independently.",
     "studyPhases": {
       "primary": "connect"
     },
@@ -2437,7 +2437,7 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/skills-markdown-mermaid-writing/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "ChatGPT — Compare the chapter in an editable diagram: recorded demonstration and use.",
+      "alt": "ChatGPT — Compare the textbook in an editable diagram: recorded demonstration and use.",
       "caption": "ChatGPT · 69.2 s",
       "transcript": "ChatGPT — \n\nREQUEST\nUsing only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty ChatGPT Work chat. (3× speed)\n00:00:00.385 Choose the workshop book from the computer. (3× speed)\n00:00:01.201 The workshop book is attached. (3× speed)\n00:00:01.411 Write the request using the attached book. (3× speed)\n00:00:05.908 Select the installed markdown mermaid writing skill. (3× speed)\n00:00:06.680 Read the complete request and selected skill.\n00:00:08.781 Send the book and the skill request. (3× speed)\n00:00:09.211 ChatGPT prepares the skill response. (4× speed)\n00:00:09.671 Inspect the generated training, inference and RAG diagram.\n00:00:18.913 Edit a label in the native Mermaid source.\n00:00:26.678 Change the inference label while keeping the diagram structure.\n00:00:27.688 Change the inference label and check the preview.\n00:00:37.627 Copy the editable source and keep the matching exported image.\n00:00:42.449 Check the edited diagram and the visible text alternative.\n00:00:50.056 Create a link to the completed conversation.\n00:00:54.433 Inspect the edited Mermaid diagram.\n00:00:59.159 Expand the native Mermaid diagram\n00:01:00.257 Open the editable Mermaid source\n00:01:03.882 Return to the preview of the edited diagram\n\nOBSERVED RESULT\n\n\n\nNATIVE WORK RESULT PROVENANCE\nActual completed assistant wrapper, ChatGPT said heading and exact rendered-text SHA-256 are bound to a recorded native PNG. UI search/render keys are not canonical backend response IDs.\nActual owner URL: https://chatgpt.com/c/6af092fa-e624-83eb-9d0f-0d2d0186873f\nRendered assistant text SHA-256: be88c0ad013d001268fcfcd81029a8a4ee86e655680943bb07ca82d23f11e581\n",
       "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
@@ -2713,7 +2713,7 @@
     "sources": [
       "TOOL_GOBLIN_PROFESSOR"
     ],
-    "decision": "Check parameter updates and the limits of the analogy against the assigned chapter.",
+    "decision": "Check parameter updates and the limits of the analogy against the assigned textbook.",
     "studyPhases": {
       "primary": "understand"
     },
@@ -2825,7 +2825,7 @@
       },
       {
         "title": "Ask and verify",
-        "text": "Check one explanation against the chapter."
+        "text": "Check one explanation against the textbook."
       },
       {
         "title": "Reconstruct",
@@ -2872,7 +2872,7 @@
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "NotebookLM: add and select sources",
-    "message": "Import the chapter and decide which material each question may use",
+    "message": "Import the textbook and decide which material each question may use",
     "body": [],
     "sources": [
       "TOOL_NOTEBOOK_SOURCES",
@@ -2882,7 +2882,7 @@
     "tool": "notebook",
     "steps": [
       {
-        "title": "Upload the chapter",
+        "title": "Upload the textbook",
         "text": "Add the original Fondamenti_GenAI_Cremaschi.pdf through the file chooser."
       },
       {
@@ -2891,7 +2891,7 @@
       },
       {
         "title": "Select the material",
-        "text": "Use source checkboxes to keep a question focused on the chapter PDF."
+        "text": "Use source checkboxes to keep a question focused on the textbook PDF."
       }
     ],
     "result": "A study environment with the assigned material as its reference.",
@@ -3063,7 +3063,7 @@
     "section": "study",
     "stage": "NotebookLM · recorded examples",
     "title": "Ask a focused question",
-    "message": "Request a short explanation with references to the chapter",
+    "message": "Request a short explanation with references to the textbook",
     "body": [
       "The need is to understand why an answer can change without retraining."
     ],
@@ -3313,7 +3313,7 @@
       },
       {
         "title": "Explain a relationship",
-        "text": "Use the map for orientation, then explain the connection and check the chapter."
+        "text": "Use the map for orientation, then explain the connection and check the textbook."
       }
     ],
     "studyPhases": {
@@ -3386,7 +3386,7 @@
         "recall"
       ]
     },
-    "decision": "Use feedback to revise an explanation, then check it against the chapter.",
+    "decision": "Use feedback to revise an explanation, then check it against the textbook.",
     "media": {
       "type": "video",
       "src": "materials/video-refresh/2026-11-07/notebook-quiz/video.mp4",
@@ -3553,7 +3553,7 @@
     ],
     "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
-    "title": "Build a study guide from the chapter",
+    "title": "Build a study guide from the textbook",
     "message": "",
     "studyPhases": {
       "primary": "connect",
@@ -3570,7 +3570,7 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-reports/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Build a study guide from the chapter: recorded demonstration and use.",
+      "alt": "NotebookLM — Build a study guide from the textbook: recorded demonstration and use.",
       "caption": "NotebookLM · 52.9 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate a concise study guide from the uploaded book focused on training, ordinary inference, context, tokenization and RAG. Include a comparison table, three short-answer questions and a separate answer key. Cite the chapter and keep probability distinct from factual truth. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.196 Upload the workshop book as the source. (3× speed)\n00:00:00.507 The workshop book is being indexed. (3× speed)\n00:00:01.587 Widen the study-guide request. (3× speed)\n00:00:01.940 Write the source-grounded request. (3× speed)\n00:00:05.043 Read the complete request.\n00:00:07.147 Send the question with the selected book. (3× speed)\n00:00:07.424 Generate the answer from the selected source. (4× speed)\n00:00:08.019 Read the completed study guide.\n00:00:08.165 Open the native study guide\n00:00:11.163 Open the study guide at full reading width.\n00:00:11.317 Open the original study guide in a full-width tab\n00:00:14.412 Open the original generated study guide.\n00:00:16.798 Scroll to Compare the three processes and their primary objectives.\n00:00:16.985 Compare the three processes and their primary objectives.\n00:00:19.756 Scroll to Compare parameter states, input signals and mechanisms.\n00:00:20.100 Compare parameter states, input signals and mechanisms.\n00:00:23.164 Scroll to Compare the resulting outputs and knowledge sources.\n00:00:23.473 Compare the resulting outputs and knowledge sources.\n00:00:26.238 Scroll to Read Question 1 on token IDs, embeddings and contextual representations.\n00:00:26.549 Read Question 1 on token IDs, embeddings and contextual representations.\n00:00:29.913 Scroll to Read Question 2 on context, RAG and fixed parameters.\n00:00:30.228 Read Question 2 on context, RAG and fixed parameters.\n00:00:33.600 Scroll to Read Question 3 on probability, temperature and factual truth.\n00:00:33.904 Read Question 3 on probability, temperature and factual truth.\n00:00:39.060 Scroll to Compare Answer 1 with the tokenization and representation references.\n00:00:39.382 Compare Answer 1 with the tokenization and representation references.\n00:00:43.445 Scroll to Check Answer 2: context and RAG leave model parameters unchanged.\n00:00:43.799 Check Answer 2: context and RAG leave model parameters unchanged.\n00:00:47.863 Scroll to Check Answer 3: token probability is not a factual-truth probability.\n00:00:48.207 Check Answer 3: token probability is not a factual-truth probability.\n\nOBSERVED RESULT\nActual new UnimibEnglish study guide created from authorizedPDF; original parent230nativeframes plus genuine reader2 native103frames. Complete request, original report title, comparison rows, each full question1/2/3 before answers, then complete Answer1/2/3 with actual chapter references. Hidden-heading failed readerwindows2/3 explicitly excluded; no result supplied by visualreader. Original PDF exported later offvideo via NotebookLM ExporttoDocs/nativeGoogleDocsPDF; not part of recorded click sequence.\n\n",
       "prompt": "Create a concise study guide from the uploaded book focused on training, ordinary inference, context, tokenization and RAG. Include a comparison table, three short-answer questions and a separate answer key. Cite the chapter and keep probability distinct from factual truth. Answer in English.",
@@ -3828,7 +3828,7 @@
     ],
     "kind": "notebook-output",
     "stage": "NotebookLM · recorded examples",
-    "title": "Organise chapter concepts in a table",
+    "title": "Organise textbook concepts in a table",
     "message": "",
     "studyPhases": {
       "primary": "connect"
@@ -3842,7 +3842,7 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-tables/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Organise chapter concepts in a table: recorded demonstration and use.",
+      "alt": "NotebookLM — Organise textbook concepts in a table: recorded demonstration and use.",
       "caption": "NotebookLM · 54.6 s",
       "transcript": "NotebookLM — \n\nREQUEST\nBuild an English data table from the uploaded book with three rows: training or fine-tuning, ordinary inference, and document retrieval (RAG). Columns: what changes, what stays fixed, chapter evidence, and misconception to avoid. Treat misconceptions as errors to reject.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.207 Upload the workshop book as the source. (3× speed)\n00:00:00.587 The workshop book is being indexed. (3× speed)\n00:00:01.701 Widen the table specification. (3× speed)\n00:00:02.015 Write the source-grounded request. (3× speed)\n00:00:04.734 Read the complete request.\n00:00:06.845 Send the question with the selected book. (3× speed)\n00:00:07.123 Generate the answer from the selected source. (4× speed)\n00:00:07.731 Configure a native data table from the uploaded book. (3× speed)\n00:00:09.140 Generate a native comparison table from the book. (4× speed)\n00:00:09.425 Describe the table columns and the three processes. (3× speed)\n00:00:12.804 Read the complete table specification.\n00:00:15.732 Generate the source-based Data Table. (4× speed)\n00:00:15.995 Inspect the native comparison table and its evidence.\n00:00:17.596 Open the generated Data Table\n00:00:20.703 Open the generated Studio data table and check its columns.\n00:00:20.747 Open the generated Studio data table\n00:00:22.292 The first table lacks row labels; regenerate it with an explicit Process column.\n00:00:24.128 Return to Studio table creation\n00:00:24.626 Specify the missing process labels and explicit rejected misconceptions. (3× speed)\n00:00:25.617 Specify the explicit Process column and rejected errors. (3× speed)\n00:00:27.693 Read the complete corrected table specification.\n00:00:29.954 Generate the corrected native Studio Data Table. (3× speed)\n00:00:30.224 Generate the source-grounded comparison with explicit row labels. (4× speed)\n00:00:30.731 Inspect the revised table with explicit process labels.\n00:00:31.056 Open the revised comparison table\n00:00:31.732 Expand the native comparison table\n00:00:33.291 Training changes learned parameters; an unstated fixed element stays marked Not in source.\n00:00:36.262 Ordinary inference uses fixed parameters while the available input changes.\n00:00:39.152 RAG supplies external passages as context; reject claims that retrieval retrains the model.\n00:00:42.278 Inspect the native Data Table export\n00:00:45.007 Export the generated comparison to its original Google Sheets file.\n00:00:45.314 Export the revised table to Google Sheets\n00:00:48.015 Open the newly exported original spreadsheet.\n00:00:48.352 Open the exported Google Sheets result\n00:00:51.102 Check the original source and corrected table request.\n00:00:51.390 Inspect the corrected table source and request\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Build an English data table from the uploaded book with three rows: training or fine-tuning, ordinary inference, and document retrieval (RAG). Columns: what changes, what stays fixed, chapter evidence, and misconception to avoid. Treat misconceptions as errors to reject.",

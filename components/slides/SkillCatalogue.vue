@@ -43,7 +43,7 @@ useSelectionMotion(detail, () => selected.value?.id)
     <section v-if="selected" ref="detail" class="skill-detail" :data-skill="selected.id" aria-live="polite">
       <h2>{{ selected.summary }}</h2>
       <p class="skill-capabilities">{{ selected.capabilities || selected.summary }}</p>
-      <div class="skill-expected"><h3>{{ t(selected.executionStatus === 'executed' ? 'Observed in the chapter test' : 'Expected deliverable') }}</h3><p>{{ selected.resultExcerpt || selected.expected }}</p></div>
+      <div class="skill-expected"><h3>{{ t(selected.executionStatus === 'executed' ? 'Observed in the textbook test' : 'Expected deliverable') }}</h3><p>{{ selected.resultExcerpt || selected.expected }}</p></div>
       <p class="skill-caveat">{{ selected.caveat }}</p>
       <div class="skill-links">
         <a class="link" :href="selected.sourceUrl" target="_blank" rel="noopener">{{ t('Publisher’s skill') }}</a>

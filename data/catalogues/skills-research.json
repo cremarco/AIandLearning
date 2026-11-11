@@ -7,7 +7,7 @@
     "Use install counts and repository stars only as dated discovery signals, not evidence of efficacy.",
     "Read the latest arXiv versions rather than relying on older search snippets.",
     "Distinguish proposed classroom uses from measured agent benchmarks and recorded ChatGPT outputs.",
-    "Import four version-pinned publisher packages through the ChatGPT web Skill library, attach the original workshop chapter, inspect the results and record real browser actions. Keep unexecuted catalogue examples labelled separately."
+    "Import four version-pinned publisher packages through the ChatGPT web Skill library, attach the original workshop textbook, inspect the results and record real browser actions. Keep unexecuted catalogue examples labelled separately."
   ],
   "skills": [
     {
@@ -306,7 +306,7 @@
       "summary": "Guide one step of Andrea’s understanding.",
       "capabilities": "Guides learning through diagnostic questions, explanations and targeted feedback. Checks understanding before moving on and asks the learner to apply the idea to a new case.",
       "prompt": "I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.",
-      "expected": "Asked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.",
+      "expected": "Asked one diagnostic question, corrected the context/weights misconception with textbook references, and posed a RAG transfer question.",
       "caveat": "Allow the learner to change pace or stop; the publisher’s pressure-handling rules need context.",
       "repo": "maaarcooo/agent-skills",
       "sourceUrl": "https://github.com/maaarcooo/agent-skills/blob/main/chatgpt-skills/learn/SKILL.md",
@@ -322,7 +322,7 @@
         "url": "https://github.com/maaarcooo/agent-skills",
         "snapshot": "2026-11-05"
       },
-      "observed": "Asked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.",
+      "observed": "Asked one diagnostic question, corrected the context/weights misconception with textbook references, and posed a RAG transfer question.",
       "demoSlideId": "S53SKILLLEARN",
       "conversationUrl": "https://chatgpt.com/c/6aecb2f1-a814-83eb-8415-315a1d31e2ee",
       "sourceCommit": "1566547ffb9834424810869c973082085b9fd83d",
@@ -344,7 +344,7 @@
       "origin": "community",
       "platform": "Tested in ChatGPT web · Work mode",
       "requirements": "Python for generators; a browser/PDF backend for the cheatsheet.",
-      "summary": "Plan, practise and retain the chapter.",
+      "summary": "Plan, practise and retain the textbook.",
       "capabilities": "Combines retrieval practice with study planning. Creates notes, flashcards, quizzes and review sessions, bringing them together in a reusable study kit.",
       "prompt": "I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.",
       "expected": "Three flashcards with due-only review, a written quiz assessed against explicit criteria, a comparison sheet and two five-minute reviews.",
@@ -377,7 +377,7 @@
           "sha256": "bcf07e1d0a4ced1782dfab6109d09211bcd992688e1f2847adab6862c37b94c8",
           "originalSha256": "f0d45b4545dc6a08112693c9a26941d9beda6302344c73d782a405549bea718b",
           "adaptations": [
-            "Source hyperlink points to the distributed workshop chapter instead of the recording account’s file library; content, controls and styling unchanged.",
+            "Source hyperlink points to the distributed workshop textbook instead of the recording account’s file library; content, controls and styling unchanged.",
             "Original MIT template copyright and permission notice included in a non-rendered HTML comment."
           ]
         },
@@ -387,12 +387,12 @@
           "sha256": "4a434e91265b615d16fcdfe9c4c607cd13ceb6cb01c45fae05f24ad5bbc86469",
           "originalSha256": "668093efcddf617267b9b278e4d5a83aedb6e1b69223d4cfaa5fb4ac0b669ded",
           "adaptations": [
-            "Source hyperlink points to the distributed workshop chapter instead of the recording account’s file library; content, controls and styling unchanged.",
+            "Source hyperlink points to the distributed workshop textbook instead of the recording account’s file library; content, controls and styling unchanged.",
             "Original MIT template copyright and permission notice included in a non-rendered HTML comment."
           ]
         },
         {
-          "label": "Reviewed chapter practice · manual self-assessment",
+          "label": "Reviewed textbook practice · manual self-assessment",
           "url": "materials/skills/outputs/chapter-quiz-reviewed.html",
           "role": "post-recording workshop adaptation"
         }
@@ -411,7 +411,7 @@
       "origin": "community",
       "platform": "Tested in ChatGPT web · Work mode",
       "requirements": "A Mermaid renderer for diagrams; Node/Chromium only for local export.",
-      "summary": "Represent chapter relationships as editable text.",
+      "summary": "Represent textbook relationships as editable text.",
       "capabilities": "Organises explanations in Markdown and turns relationships into Mermaid diagrams. Keeps the diagram editable as text and provides a written alternative.",
       "prompt": "Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.",
       "expected": "Produced a rendered eight-node Mermaid flowchart, accessible title and description, text alternative and section references. The code editor opens.",
@@ -527,5 +527,5 @@
       "deltaPercentagePoints": 0.3
     }
   ],
-  "limitations": "The four demonstrations test outputs and controls on one chapter with one model and account. They do not establish learning gains or compare skill efficacy. Benchmark aggregates do not rank these packages or measure student learning."
+  "limitations": "The four demonstrations test outputs and controls on one textbook with one model and account. They do not establish learning gains or compare skill efficacy. Benchmark aggregates do not rank these packages or measure student learning."
 }

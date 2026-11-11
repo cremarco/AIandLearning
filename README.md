@@ -1,6 +1,6 @@
 # Beyond prompting
 
-Slidev presentation by Marco Cremaschi for the November 2026 workshops in Lithuania. The presentation follows Andrea, a fictional student, from an assigned GenAI chapter to independent explanation and assessment.
+Slidev presentation by Marco Cremaschi for the November 2026 workshops in Lithuania. The presentation follows Andrea, a fictional student, from an assigned GenAI textbook to independent explanation and assessment.
 
 ## Run
 
@@ -31,7 +31,7 @@ If the browser blocks remote playback, both windows show a message. Click **Enab
 | `data/catalogues/` | Tools and skill descriptions |
 | `data/references/` | Bibliography and sources |
 | `components/`, `composables/`, `utils/`, `styles/` | Vue interface, behavior and theme |
-| `booklet-genai/` | Canonical chapter and reading edition |
+| `booklet-genai/` | Canonical textbook and reading edition |
 
 Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, full reader data, lean runtime indexes, speaker notes and companion materials. Do not hand-edit `data/generated/`, `slides.md`, the generated notes or companion HTML/text files.
 
@@ -79,10 +79,10 @@ The capture, review and release workflow is documented in [docs/recordings.md](d
 
 ## Materials and model lab
 
-- `public/materials/kit.html`: chapter, prompts, activities, assessment and guides.
+- `public/materials/kit.html`: textbook, prompts, activities, assessment and guides.
 - `public/materials/skills-guide.html`: skill demonstrations and requirements.
 - `public/materials/teacher-tools.html`: teacher demonstrations and results.
-- `public/materials/booklet-genai/`: the chapter PDF and equivalent HTML.
+- `public/materials/booklet-genai/`: the textbook PDF and equivalent HTML.
 - `public/materials/demo-genai/`: canonical real-model application.
 
 The lab runs actual Qwen inference through bundled Transformers.js and ONNX Runtime. Use `pnpm demo:dev`; prepare its pinned model with `node public/materials/demo-genai/prepare-model.mjs`. Downloaded weights stay in one ignored directory and are excluded from normal builds and portable ZIPs. Set `INCLUDE_MODEL_WEIGHTS=1` when intentionally building a complete offline website. See the [lab README](public/materials/demo-genai/README.md).

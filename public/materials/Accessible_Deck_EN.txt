@@ -92,27 +92,27 @@ SLIDE S51 — Andrea needs to understand GenAI
 Page 9 / 91
 One student’s learning process, from assignment to assessment
 Andrea is a second-year computer science student: he can program, but still confuses key concepts of generative models.
-He must study a chapter and explain how a language model generates text.
+He must study a textbook and explain how a language model generates text.
 We observe his use of tools and the evidence of understanding he keeps.
 You are following the learning method; you do not need to learn programming.
 
-SLIDE S53 — The assigned book
+SLIDE S53 — The assigned textbook
 Page 10 / 91
 Marco Cremaschi · Foundations of Generative Artificial Intelligence
 Topic: Language Models and Basic Architecture.
-The book is available as a PDF.
+The textbook is available as a PDF.
 Download PDF: ./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf
 Cover of Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material.
 
 SLIDE S52 — Andrea’s learning task
 Page 11 / 91
-To understand the chapter and show what he has learned, Andrea must:
+To understand the textbook and show what he has learned, Andrea must:
 1. Read
-Study the chapter. Identify the key ideas and what is still unclear.
+Study the textbook. Identify the key ideas and what is still unclear.
 2. Represent
 Build a diagram with labelled links between the concepts.
 3. Check
-Compare the diagram and AI suggestions with the chapter. Correct errors.
+Compare the diagram and AI suggestions with the textbook. Correct errors.
 4. Explain
 Use his own words to explain a new example, without AI help.
 Evidence: a checked diagram, an independent explanation and a justified correction.
@@ -126,7 +126,7 @@ What do I need to learn, and what do I want to achieve?
 Which resources, people and strategies will help me learn?
 3. Review progress
 What can I explain now, and what needs more work? Self-assessment helps here.
-Andrea’s example: “I need to distinguish training from inference. I will use the chapter and a concept map, then check whether I can explain the difference.”
+Andrea’s example: “I need to distinguish training from inference. I will use the textbook and a concept map, then check whether I can explain the difference.”
 Andrea takes responsibility for his choices, with support from teachers and peers.
 [EDU_SELF_DIRECTED] National Library of Medicine. (n.d.). Self-Directed Learning as Topic (MeSH D000073819). Definition attributed to Knowles (1975), Self-directed learning: A guide for learners and teachers. New York: Association Press.
 https://www.ncbi.nlm.nih.gov/mesh/2023167
@@ -206,7 +206,7 @@ A short check-in helps Andrea choose the support he needs.
 “I feel overwhelmed.”
 Choose one small action. Ask for a hint, an example or teacher support.
 “I am unsure.”
-Name the exact point of uncertainty. Compare the explanation with the chapter.
+Name the exact point of uncertainty. Compare the explanation with the textbook.
 “I feel very confident.”
 Close the answer. Explain the idea and try a new example.
 Andrea’s next step: Choose one support and explain why it fits the current difficulty.
@@ -1237,7 +1237,7 @@ Quiz and flashcards in Gemini · Canvas apps regenerated, exported and tested lo
 Study phase: RECALL · Secondary: CHECK
 /quiz · Gemini
 Native Gemini widget
-Gemini native quiz in English showing a selected answer, chapter-grounded feedback and navigation.
+Gemini native quiz in English showing a selected answer, textbook-grounded feedback and navigation.
 Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.
 Original prompt: /quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.
 Screenshot: materials/gemini-shortcuts/screenshots/quiz.jpg
@@ -1267,7 +1267,7 @@ Original prompt: /conceptmap Using only the attached book, create a compact inte
 Screenshot: materials/gemini-shortcuts/screenshots/conceptmap.jpg
 /peerassessment · exported app
 Gemini Canvas export · local browser
-Unmodified Gemini Canvas export opened locally in English, showing a selected score, chapter evidence and written feedback.
+Unmodified Gemini Canvas export opened locally in English, showing a selected score, textbook evidence and written feedback.
 Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.
 Original prompt: /peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.
 Screenshot: materials/gemini-shortcuts/screenshots/peerassessment.jpg
@@ -1343,7 +1343,7 @@ Video tutorial: plugins and skills: https://learn.chatgpt.com/training/walkthrou
 https://help.openai.com/en/articles/20001066-skills-in-chatgpt
 Availability is limited to eligible accounts and workspace settings; installation and syncing differ by surface.
 
-SLIDE S53SKILLSTUDY — Skills for studying the same chapter
+SLIDE S53SKILLSTUDY — Skills for studying the same textbook
 Page 51 / 91
 Three reusable workflows, tested with Andrea’s assigned book.
 Study phase: UNDERSTAND · Secondary: CHECK
@@ -1354,7 +1354,7 @@ Guide one step of Andrea’s understanding.
 Guides learning through diagnostic questions, explanations and targeted feedback. Checks understanding before moving on and asks the learner to apply the idea to a new case.
 Study phase: UNDERSTAND · Secondary: CHECK
 Tested request: I am Andrea, a second-year computer science student studying the attached workshop book, Foundations of Generative Artificial Intelligence. Help me understand training, ordinary inference and RAG using only §§1.2 and 1.7. I keep thinking that adding a definition to a prompt updates the weights. Start with one diagnostic question and wait for my answer. Keep each turn under 100 words and cite the chapter section. Answer in English.
-Observed result: Asked one diagnostic question, corrected the context/weights misconception with chapter references, and posed a RAG transfer question.
+Observed result: Asked one diagnostic question, corrected the context/weights misconception with textbook references, and posed a RAG transfer question.
 Allow the learner to change pace or stop; the publisher’s pressure-handling rules need context.
 Requirements: Instruction-only tutoring; visuals depend on host tools.
 Terminal installation for coding agents: npx skills add https://github.com/maaarcooo/agent-skills/tree/main/chatgpt-skills/learn
@@ -1362,7 +1362,7 @@ https://github.com/maaarcooo/agent-skills/blob/main/chatgpt-skills/learn/SKILL.m
 the-learning-skill
 Todd Ward · community
 Tested in ChatGPT web · Work mode
-Plan, practise and retain the chapter.
+Plan, practise and retain the textbook.
 Combines retrieval practice with study planning. Creates notes, flashcards, quizzes and review sessions, bringing them together in a reusable study kit.
 Study phase: RECALL · Secondary: PLAN
 Tested request: I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.
@@ -1374,7 +1374,7 @@ https://github.com/toddward/the-learning-skill/blob/main/the-learning-skill/SKIL
 markdown-mermaid-writing
 K-Dense / Clayton Young · community
 Tested in ChatGPT web · Work mode
-Represent chapter relationships as editable text.
+Represent textbook relationships as editable text.
 Organises explanations in Markdown and turns relationships into Mermaid diagrams. Keeps the diagram editable as text and provides a written alternative.
 Study phase: CONNECT
 Tested request: Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.
@@ -1464,7 +1464,7 @@ One task demonstration using GPT-6.1 Sol Light in Work mode. Andrea’s messages
 
 SLIDE S53SKILLLEARNING — Build a study kit after recall
 Page 53 / 91
-The same chapter becomes practice materials and two short reviews.
+The same textbook becomes practice materials and two short reviews.
 Study phase: RECALL · Secondary: PLAN
 Recorded prompt: I am Andrea, studying the attached workshop book, Foundations of Generative Artificial Intelligence. Use only §§1.2 and 1.7 to help me distinguish training, ordinary inference and RAG. My goal is to explain what changes without assistance. I have 10 minutes today and two 5-minute reviews this week. Start one short recall question and wait for my answer. Keep replies under 100 words. After the practice, make a compact source-linked study kit. Answer in English.
 Compare your explanation with the model answer, then assess it against the criteria.
@@ -1552,13 +1552,13 @@ Post-recording workshop adaptation; not a publisher skill output, automated sema
 https://chatgpt.com/c/6aecb38f-3c04-83ed-b26e-e8d199a1ea0e
 One task demonstration using GPT-6.1 Sol Light in Work mode. Andrea’s messages are authored teaching inputs, not a student study. Conversation access may require the recording account.
 
-SLIDE S53SKILLMERMAID — Compare the chapter in an editable diagram
+SLIDE S53SKILLMERMAID — Compare the textbook in an editable diagram
 Page 54 / 91
 Training, ordinary inference and RAG retain distinct flows.
 Study phase: CONNECT
 Recorded prompt: Using only §§1.2 and 1.7 of the attached workshop book, make a compact Mermaid flowchart that Andrea can edit. Compare training, ordinary inference and RAG, with labelled arrows showing what changes and what stays fixed. Include an accessible title and description, a short text alternative and chapter-section references. Limit the diagram to 10 nodes. Answer in English.
-Check each arrow against the chapter, then explain the diagram independently.
-ChatGPT — Compare the chapter in an editable diagram: recorded demonstration and use.
+Check each arrow against the textbook, then explain the diagram independently.
+ChatGPT — Compare the textbook in an editable diagram: recorded demonstration and use.
 ChatGPT · 69.2 s
 ChatGPT —
 
@@ -1735,7 +1735,7 @@ SLIDE S58PROFESSOR — Professor: request an explanation
 Page 62 / 91
 Ask for a short explanation and example of training versus inference.
 Study phase: UNDERSTAND
-Check parameter updates and the limits of the analogy against the assigned chapter.
+Check parameter updates and the limits of the analogy against the assigned textbook.
 Real Goblin Tools Professor execution for Andrea’s GenAI study task.
 Real execution · 17 s
 Professor — real execution, recorded 5 November 2026
@@ -1811,7 +1811,7 @@ Study phase: PLAN
 1. Read and annotate
 Record three terms and one uncertain relationship.
 2. Ask and verify
-Check one explanation against the chapter.
+Check one explanation against the textbook.
 3. Reconstruct
 Revise the diagram and explain it with the chat closed.
 4. Apply
@@ -1824,14 +1824,14 @@ Study phase: UNDERSTAND · Secondary: CONNECT
 
 SLIDE S61 — NotebookLM: add and select sources
 Page 67 / 91
-Import the chapter and decide which material each question may use
+Import the textbook and decide which material each question may use
 Study phase: SUPPORT
-1. Upload the chapter
+1. Upload the textbook
 Add the original Fondamenti_GenAI_Cremaschi.pdf through the file chooser.
 2. Inspect the source
 Check the imported title and generated summary against the original.
 3. Select the material
-Use source checkboxes to keep a question focused on the chapter PDF.
+Use source checkboxes to keep a question focused on the textbook PDF.
 Result: A study environment with the assigned material as its reference.
 Check the imported text before relying on a generated answer.
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
@@ -1976,7 +1976,7 @@ Feature access depends on age, account, country and quotas. A research report is
 
 SLIDE S62 — Ask a focused question
 Page 70 / 91
-Request a short explanation with references to the chapter
+Request a short explanation with references to the textbook
 Study phase: UNDERSTAND
 The need is to understand why an answer can change without retraining.
 Recorded prompt: Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.
@@ -2146,7 +2146,7 @@ Focus the Mind Map on training, inference, context and document retrieval.
 2. Expand the map
 Open the larger viewer and expand its branches.
 3. Explain a relationship
-Use the map for orientation, then explain the connection and check the chapter.
+Use the map for orientation, then explain the connection and check the textbook.
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
 Created with NotebookLM: Mind Map
 Original output: materials/video-refresh/2026-11-07/notebook-mind-map/exports/mind-map.png
@@ -2162,7 +2162,7 @@ Page 75 / 91
 Attempt a question, choose an answer and inspect the explanation
 Study phase: CHECK · Secondary: RECALL
 Answer before opening the hint. Read the explanation, then retry the missed question.
-Use feedback to revise an explanation, then check it against the chapter.
+Use feedback to revise an explanation, then check it against the textbook.
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
 NotebookLM — Answer a quiz before reading feedback: recorded demonstration and use.
 NotebookLM · 94.1 s
@@ -2330,7 +2330,7 @@ Open result (text): /materials/video-refresh/2026-11-07/notebook-notes/exports/a
 https://support.google.com/gemininotebook/answer/16206563?hl=en
 Availability and limits depend on the account. Original execution scope is recorded in materials/notebook/provenance.json; opened controls are distinguished from completed actions.
 
-SLIDE S67REPORTS — Build a study guide from the chapter
+SLIDE S67REPORTS — Build a study guide from the textbook
 Page 78 / 91
 Study phase: CONNECT · Secondary: UNDERSTAND
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
@@ -2380,15 +2380,15 @@ Original output: materials/video-refresh/2026-11-07/notebook-slides/exports/Beyo
 https://support.google.com/gemininotebook/answer/16757456?hl=en
 Adult accounts only. Revisions do not use notebook sources and count against slide-deck limits. The recorded workshop run inspected revision controls but did not generate a revision.
 
-SLIDE S67TABLES — Organise chapter concepts in a table
+SLIDE S67TABLES — Organise textbook concepts in a table
 Page 83 / 91
 Study phase: CONNECT
 Open notebook: https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec
 Created with NotebookLM: Data Table
 Original output: materials/video-refresh/2026-11-07/notebook-tables/exports/comparison-table.csv
-Process: Training or fine-tuning · What changes: The model's parameters. · What stays fixed: Not in source · Chapter evidence: Table 1 in Chapter 01 (section 1.2) states that 'Training or fine-tuning' changes 'The model’s parameters.' Section 1.2 also notes 'Training a new version changes the model itself.' · Error to reject: Reject: Claiming that training leaves model parameters untouched, or confusing training with simply supplying context in prompt/inference. · Source: 1
-Process: Ordinary inference · What changes: Information available to the current inference. · What stays fixed: The model (its parameters remain fixed). · Chapter evidence: Table 1 in Chapter 01 (section 1.2) lists 'A new message in the context' as changing 'Information available to the current inference.' Section 1.2 states 'Keeping the model fixed while changing the input studies the effect of context.' Figure 1 also shows inference uses an 'Input + fixed model'. · Error to reject: Reject: Claiming that sending a prompt or running ordinary inference updates the model's weights/parameters. · Source: 1
-Process: Document retrieval (RAG) · What changes: External passages supplied as context. · What stays fixed: Model parameters / the available model. · Chapter evidence: Table 1 in Chapter 01 (section 1.2) states 'Document retrieval' changes 'External passages supplied as context.' Figure 1 confirms RAG uses 'Context + fixed model'. Section 1.7 notes 'Model parameters and the consulted collection are distinct components.' · Error to reject: Reject: Believing that performing RAG or retrieving external documents retrains or updates the underlying model weights. · Source: 1
+Process: Training or fine-tuning · What changes: The model's parameters. · What stays fixed: Not in source · Textbook evidence: Table 1 in the textbook (section 1.2) states that 'Training or fine-tuning' changes 'The model’s parameters.' Section 1.2 also notes 'Training a new version changes the model itself.' · Error to reject: Reject: Claiming that training leaves model parameters untouched, or confusing training with simply supplying context in prompt/inference. · Source: 1
+Process: Ordinary inference · What changes: Information available to the current inference. · What stays fixed: The model (its parameters remain fixed). · Textbook evidence: Table 1 in the textbook (section 1.2) lists 'A new message in the context' as changing 'Information available to the current inference.' Section 1.2 states 'Keeping the model fixed while changing the input studies the effect of context.' Figure 1 also shows inference uses an 'Input + fixed model'. · Error to reject: Reject: Claiming that sending a prompt or running ordinary inference updates the model's weights/parameters. · Source: 1
+Process: Document retrieval (RAG) · What changes: External passages supplied as context. · What stays fixed: Model parameters / the available model. · Textbook evidence: Table 1 in the textbook (section 1.2) states 'Document retrieval' changes 'External passages supplied as context.' Figure 1 confirms RAG uses 'Context + fixed model'. Section 1.7 notes 'Model parameters and the consulted collection are distinct components.' · Error to reject: Reject: Believing that performing RAG or retrieving external documents retrains or updates the underlying model weights. · Source: 1
 [TOOL_NOTEBOOK_STUDIO] Google. (2026). Create a notebook in Gemini Notebook.
 https://support.google.com/gemininotebook/answer/16206563?hl=en
 Availability and limits depend on the account. Original execution scope is recorded in materials/notebook/provenance.json; opened controls are distinguished from completed actions.

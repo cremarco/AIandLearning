@@ -71,7 +71,7 @@ function onKey(event: KeyboardEvent) {
     <div class="nb-viewer" :class="`nb-${output.type}`">
       <div v-if="imageViewer" class="nb-image-scroll" :class="{ 'is-zoomed': zoomed }" tabindex="0" :aria-label="`${output.feature}, ${output.type === 'pdf' ? `page ${index + 1}` : 'image'}`">
         <p v-if="imageError" role="alert">This preview could not load. Use the original file link.</p>
-        <img v-else :key="image" :src="assetUrl(image)" :alt="`${output.feature} generated from Andrea’s chapter${output.type === 'pdf' ? `, page ${index + 1}` : ''}`" @error="imageError = true" />
+        <img v-else :key="image" :src="assetUrl(image)" :alt="`${output.feature} generated from Andrea’s textbook${output.type === 'pdf' ? `, page ${index + 1}` : ''}`" @error="imageError = true" />
       </div>
 
       <div v-else-if="output.type === 'audio'" class="nb-audio-content">

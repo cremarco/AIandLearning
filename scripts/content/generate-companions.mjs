@@ -242,7 +242,7 @@ function outputMarkup(output) {
   if (output.type === 'pdf') content = output.pages.map((page, i) => `<figure><img loading="lazy" src="${h(relative(page))}" alt="${h(output.feature)} page ${i + 1}"><figcaption>Page ${i + 1} of ${output.pages.length}</figcaption></figure>`).join('')
   if (output.type === 'image') {
     const imageUrl = h(relative(output.preview || output.src))
-    content = `<a class="link" href="${imageUrl}"><img loading="lazy" src="${imageUrl}" alt="${h(output.feature)} generated from the chapter"></a>`
+    content = `<a class="link" href="${imageUrl}"><img loading="lazy" src="${imageUrl}" alt="${h(output.feature)} generated from the textbook"></a>`
   }
   if (output.type === 'flashcards') content = output.cards.map(card => `<details><summary>${h(card.question)}</summary><p>${h(card.answer)}</p></details>`).join('')
   if (output.type === 'quiz') content = output.questions.map(q => `<section><h3>${h(q.question)}</h3><ol type="A">${q.options.map(option => `<li>${h(option)}</li>`).join('')}</ol><details><summary>Show answer</summary><p>Correct answer: ${String.fromCharCode(65 + q.correctIndex)}</p><p>${h(q.explanations[q.correctIndex])}</p></details></section>`).join('')
@@ -303,7 +303,7 @@ writePage('kit.html', 'Workshop materials', [
   '<p>Andrea is a fictional teaching case. The textbook is fictional; its technical references and the cited research are real.</p>',
   controls,
   '</header><main id="content"><h2>Study and understand</h2><ul>',
-  '<li><a class="link link-primary" href="booklet-genai/Fondamenti_GenAI_Cremaschi.pdf">Textbook chapter PDF</a> · <a class="link link-primary" href="booklet-genai/lettura.html">Chapter reading HTML</a></li>',
+  '<li><a class="link link-primary" href="booklet-genai/Fondamenti_GenAI_Cremaschi.pdf">Textbook PDF</a> · <a class="link link-primary" href="booklet-genai/lettura.html">Textbook reading HTML</a></li>',
   '<li><a class="link link-primary" href="demo-genai/index.html">Real-model application</a></li>',
   ...(notebookUrl ? [`<li><a class="link link-primary" href="${h(notebookUrl)}" target="_blank" rel="noopener">NotebookLM: Foundations of Generative Artificial Intelligence · EduForum</a></li>`] : []),
   '<li><a class="link link-primary" href="Prompt_Bank_EN.txt">Prompts and requests</a></li>',
@@ -314,7 +314,7 @@ writePage('kit.html', 'Workshop materials', [
   '<li><a class="link link-primary" href="verifica.html">Assessment, expected answers and rubric</a></li>',
   '</ul><h2>References</h2><ul><li><a class="link link-primary" href="source_index.csv">Source index</a></li><li><a class="link link-primary" href="references.bib" download>Verified bibliography (BibTeX / BibLaTeX)</a></li></ul>',
   '<h2>Access support</h2>',
-  '<p>Open the HTML chapter in Edge for Read Aloud. Adjust text size and spacing to suit the reader. System dictation offers an alternative to typing; review its transcript. Choose and check supports with the person using them.</p>',
+  '<p>Open the HTML textbook in Edge for Read Aloud. Adjust text size and spacing to suit the reader. System dictation offers an alternative to typing; review its transcript. Choose and check supports with the person using them.</p>',
   '<p>The main path uses free features. Account requirements and usage limits may change. The final slide catalogues distinguish premium alternatives and trials.</p>',
   '</main>',
 ])
@@ -351,9 +351,9 @@ const teacherClips = [...teacherRecordings.clips].sort((a, b) => teacherOrder.in
 writePage('teacher-tools.html', 'MagicSchool and Formative · recorded demonstrations', [
   '<header><h1>MagicSchool and Formative</h1>',
   `<p>${teacherClips.length} real browser recordings: planning, assessment design, response review and feedback.</p>`,
-  '<p>The workshop chapter and all learner responses are teaching examples. No real students were assessed or contacted. Formative was recorded in an automatically enabled Paid Teacher trial; this recording does not establish availability of every feature on the free plan.</p>',
+  '<p>The workshop textbook and all learner responses are teaching examples. No real students were assessed or contacted. Formative was recorded in an automatically enabled Paid Teacher trial; this recording does not establish availability of every feature on the free plan.</p>',
   controls,
-  links({ links: [{ label: 'Workshop materials', url: 'kit.html' }, { label: 'Original workshop chapter', url: 'booklet-genai/lettura.html' }] }),
+  links({ links: [{ label: 'Workshop materials', url: 'kit.html' }, { label: 'Original workshop textbook', url: 'booklet-genai/lettura.html' }] }),
   '</header><main id="content">',
   ...teacherClips.map(clip => {
     const media = { ...clip, alt: `${clip.service}: ${clip.name}`, caption: `${clip.recordedOn} · ${Math.round(clip.durationSeconds)} s · silent recording with optional English captions` }

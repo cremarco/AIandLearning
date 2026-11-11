@@ -71,11 +71,11 @@ Thank you. We will use prepared examples, so you can follow even if these tools 
 
 Let us make this concrete with **Andrea**, a fictional university computer science student. He can program, but still confuses some ideas about generative AI.
 
-He needs to study a chapter and explain how a language model produces text.
+He needs to study a textbook and explain how a language model produces text.
 
 As we follow him, think about how you would adapt the support to your students’ age and subject.
 
-## 10. The assigned book
+## 10. The assigned textbook
 
 To try this, Andrea needs a **great book**, by a great author.
 
@@ -87,15 +87,15 @@ I will use this book, but you can use what do you prefer during the patical part
 
 ## 11. Andrea’s learning task
 
-Andrea needs to understand the chapter and show what he has learned.
+Andrea needs to understand the textbook and show what he has learned.
 
 We will follow **four connected activities**.
 
-[click] First, he **reads** the chapter and notes what is unclear.
+[click] First, he **reads** the textbook and notes what is unclear.
 
 [click] Then, he **represents** the ideas in a diagram and explains the links.
 
-[click] Next, he **checks** the diagram and AI suggestions against the chapter, correcting any errors.
+[click] Next, he **checks** the diagram and AI suggestions against the textbook, correcting any errors.
 
 [click] Finally, he **explains** a new example in his own words, without AI.\
 His diagram, explanation and corrections show us what he understands.
@@ -128,7 +128,7 @@ The self-assessment review also gives us a design principle: learners need clear
 
 These sources inform our workshop choices.
 
-Our demonstrations show tool behaviour; they do not measure learning gains.
+These examples show how the tools work in practical learning activities.
 
 ## 15. A study process in six phases
 
@@ -142,7 +142,7 @@ Each phase helps him choose what to do next.
 
 [click] He then **connects** it with what he already knows, using a map.
 
-[click] Next, he tries to **recall** it without the chapter, and reviews it again later.
+[click] Next, he tries to **recall** it without the textbook, and reviews it again later.
 
 [click] To **apply** it, he tries a new example.
 
@@ -166,7 +166,7 @@ A learning route also needs space for **feelings and confidence**.
 
 If Andrea feels overwhelmed, one smaller action or a hint may help him start.
 
-If he is unsure, he can name the exact difficulty and check the chapter.
+If he is unsure, he can name the exact difficulty and check the textbook.
 
 If he feels very confident, an independent explanation helps him check that confidence.
 
@@ -176,13 +176,13 @@ Which support would you suggest for Andrea, and why?
 
 ## 18. Why these tools?
 
-With the chapter ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **NotebookLM** adds a workspace for selected sources. You do not need paid access to all of them.
+With the textbook ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **NotebookLM** adds a workspace for selected sources. You do not need paid access to all of them.
 
 There are four reasons for this choice.
 
 [click] First, they give us **more control**. We can ask for a simpler explanation or one question at a time, based on our goal.
 
-[click] Second, we can **connect our study tasks**. We can use the same chapter for explanations, diagrams and practice, checking each result.
+[click] Second, we can **connect our study tasks**. We can use the same textbook for explanations, diagrams and practice, checking each result.
 
 [click] Third, we practise **skills we can reuse**. Setting goals and checking answers help us in other subjects too.
 
@@ -214,13 +214,13 @@ We can ask for help in **two ways**: choose an app feature or write a request.
 
 [click] A **formal action**, such as Study, is a feature we select in the app.
 
-[click] The second way is to **describe an activity**. For example: “/quiz: use this chapter to ask me one question at a time and give feedback on my answers.”\
+[click] The second way is to **describe an activity**. For example: “/quiz: use this textbook to ask me one question at a time and give feedback on my answers.”\
 Here, **/quiz** is a short label; the rest tells the AI what to do.\
 We can also describe any buttons we want.
 
 ## 22. Study · practise through guided questions
 
-Here is the first type in practice. Andrea selects **Study** and asks for one question at a time, based on the chapter.
+Here is the first type in practice. Andrea selects **Study** and asks for one question at a time, based on the textbook.
 
 A wrong answer leads to a hint and another attempt.
 
@@ -256,7 +256,7 @@ Once he knows the terms, Andrea needs to **connect the ideas**.
 
 He can build a concept map, match definitions or sort examples. Oral practice then asks him to explain those links in his own words.
 
-For each activity, he checks his reasoning against the chapter.
+For each activity, he checks his reasoning against the textbook.
 
 ## 27. Selected shortcuts · practice and assessment
 
@@ -276,7 +276,7 @@ Shared criteria can guide peer feedback. Let us now see the examples in more det
 
 ## 29. /flashcard
 
-We begin with **flashcards** made from the chapter.
+We begin with **flashcards** made from the textbook.
 
 Andrea answers from memory, reveals the explanation and rates his recall. That rating moves him to the next card.
 
@@ -296,7 +296,7 @@ Some errors concern the links between ideas. This **concept map** connects train
 
 The key questions are: when do parameters change, and when is information added to the context?
 
-Andrea explains each link, checks the chapter and corrects his answer if needed.
+Andrea explains each link, checks the textbook and corrects his answer if needed.
 
 His explanation helps the teacher choose a question or hint for the next attempt.
 
@@ -324,7 +324,7 @@ Andrea also needs to prepare for an **oral exam**.
 
 Here he can type or dictate an answer, then reveal the expected explanation.
 
-He compares it with his own words and the chapter.
+He compares it with his own words and the textbook.
 
 He can return to earlier questions and improve his answers.
 
@@ -416,7 +416,7 @@ He can return to earlier answers and revise them.
 
 Can we use these prompts in another assistant?
 
-In **Claude**, the same chapter and prompts produced five working examples: flashcards, a quiz, oral practice, a mistake log and a concept map.
+In **Claude**, the same textbook and prompts produced five working examples: flashcards, a quiz, oral practice, a mistake log and a concept map.
 
 The interface changes, but the task stays the same.
 
@@ -424,7 +424,7 @@ The other shortcuts remain untested because the account reached its message limi
 
 ## 45. Trying the shortcuts in Gemini
 
-The **Gemini** tests gave mixed results. Each prompt used the same chapter in a new chat.
+The **Gemini** tests gave mixed results. Each prompt used the same textbook in a new chat.
 
 Of the 15 prompts, two gave interactive activities directly in Gemini, five gave working apps to download, four gave material without interactive controls and four failed to generate a result.
 
@@ -452,7 +452,7 @@ The teacher reviews the content, access and safeguards. During the next exercise
 
 Now it is **your turn**.
 
-Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. Use our chapter or a public document from your subject.
+Take ten minutes to try /flashcard, /quiz or /oral in your ChatGPT account. Use our textbook or a public document from your subject.
 
 Choose a learning goal and apply one **classroom check** from the previous slide.
 
@@ -486,14 +486,14 @@ These examples were recorded in ChatGPT Work mode. Other agents may support skil
 
 We need to check the setup as well as the skill itself.
 
-## 51. Skills for studying the same chapter
+## 51. Skills for studying the same textbook
 
-Here are **three skills** for the same chapter. The first, **Learn**, uses questions and feedback to help Andrea understand.
+Here are **three skills** for the same textbook. The first, **Learn**, uses questions and feedback to help Andrea understand.
 
 [click] **The Learning Skill** adds study materials, practice and review.
 
 [click] Finally, **Markdown Mermaid Writing** creates diagrams we can edit.\
-The chapter stays the same; we choose the skill for Andrea's next need and check the result.
+The textbook stays the same; we choose the skill for Andrea's next need and check the result.
 
 ## 52. Learn: explain before receiving feedback
 
@@ -501,7 +501,7 @@ Let us start with **Learn**.
 
 Andrea thinks a definition in a prompt changes the model's weights.
 
-The skill asks him to explain, then uses the chapter to correct the idea: prompts change context; training changes parameters.
+The skill asks him to explain, then uses the textbook to correct the idea: prompts change context; training changes parameters.
 
 A question about RAG checks whether he can use this distinction again.
 
@@ -515,13 +515,13 @@ He retries a card and checks a written answer.
 
 The shared chat shows the code; the **HTML download** gives us the interactive kit.
 
-## 54. Compare the chapter in an editable diagram
+## 54. Compare the textbook in an editable diagram
 
 For links between ideas, we can use an **editable diagram**.
 
 This example separates training, inference and retrieval.
 
-Andrea checks each arrow against the chapter.
+Andrea checks each arrow against the textbook.
 
 He then closes the diagram and explains the relationship in his own words.
 
@@ -531,7 +531,7 @@ Now take **ten minutes** to try a skill.
 
 Choose one of these three or find another, then install and enable it in a compatible host.
 
-Use our chapter or a public source from your subject.
+Use our textbook or a public source from your subject.
 
 Create and test study material, then check it against the source.
 
@@ -597,7 +597,7 @@ While working, Andrea may get stuck on an idea.
 
 **Professor** offers an explanation and an example of training and inference.
 
-He checks both against the chapter.
+He checks both against the textbook.
 
 If it uses an analogy, he also checks where that comparison stops being useful.
 
@@ -633,21 +633,21 @@ With a plan ready, Andrea needs a place to **study his sources**.
 
 NotebookLM lets him ask questions and create materials from selected documents.
 
-We will use it with his chapter and keep checking answers against the original text.
+We will use it with his textbook and keep checking answers against the original text.
 
 ## 67. NotebookLM: add and select sources
 
-We begin by **adding the chapter**.
+We begin by **adding the textbook**.
 
 Andrea checks the imported text and selects the sources for his question.
 
 This keeps the task focused, but the answer can still contain errors.
 
-He will need to check it against the chapter.
+He will need to check it against the textbook.
 
 ## 68. Find and review new sources
 
-If the chapter is not enough, Andrea can **search for more sources**.
+If the textbook is not enough, Andrea can **search for more sources**.
 
 Before importing a result, he checks who produced it, whether it answers his question and whether it is reliable.
 
@@ -667,7 +667,7 @@ Let us return to Andrea's main question: **why can an answer change without retr
 
 He asks a short, focused question.
 
-He then compares the explanation and its references with the chapter.
+He then compares the explanation and its references with the textbook.
 
 This gives him a manageable answer to check.
 
@@ -705,7 +705,7 @@ It connects training, inference, context and RAG. We can zoom in to read each br
 
 Where do parameters change, and where is information added as input?
 
-Andrea checks the links against the chapter, then explains them without the map.
+Andrea checks the links against the textbook, then explains them without the map.
 
 ## 75. Answer a quiz before reading feedback
 
@@ -723,7 +723,7 @@ This recording shows **Flashcards** in NotebookLM.
 
 Let us pause at a question and try answering from memory before the card is revealed.
 
-Andrea then compares his answer with the chapter.
+Andrea then compares his answer with the textbook.
 
 The CSV download lets us reuse the generated questions and answers.
 
@@ -735,13 +735,13 @@ The note keeps the response and its citations, including any errors.
 
 He checks it before using it again or turning it into a new source.
 
-## 78. Build a study guide from the chapter
+## 78. Build a study guide from the textbook
 
 This study guide was created with **Reports**.
 
 We can turn the pages and zoom in to read it.
 
-Andrea checks its definitions and examples against the chapter.
+Andrea checks its definitions and examples against the textbook.
 
 He then uses the guide to prepare questions and explain the ideas himself.
 
@@ -753,7 +753,7 @@ Let us listen to a short part, then pause.
 
 How would you explain that idea in your own words?
 
-Andrea can use the same approach when studying, checking his explanation against the chapter before he continues.
+Andrea can use the same approach when studying, checking his explanation against the textbook before he continues.
 
 ## 80. Watch a Video Overview
 
@@ -761,7 +761,7 @@ This is the video created with **Video Overview**, with its original English aud
 
 It compares training, inference and RAG.
 
-Let us pause after an example and check it against the chapter.
+Let us pause after an example and check it against the textbook.
 
 Andrea then explains the difference himself.
 
@@ -773,7 +773,7 @@ It compares training, inference and RAG in one view.
 
 We can zoom in to read the details.
 
-Andrea checks the labels against the chapter, then explains what changes in each process.
+Andrea checks the labels against the textbook, then explains what changes in each process.
 
 ## 82. Generate and present slides
 
@@ -783,15 +783,15 @@ We can move through the PDF to compare training, inference and RAG.
 
 What changes in each case?
 
-Andrea checks the labels and arrows against the chapter, then answers the final question without the slides.
+Andrea checks the labels and arrows against the textbook, then answers the final question without the slides.
 
-## 83. Organise chapter concepts in a table
+## 83. Organise textbook concepts in a table
 
 This screenshot shows the comparison created with **Data Table**.
 
 We can zoom in to read what changes and what stays fixed in training, inference and RAG.
 
-The other columns show chapter evidence and errors to reject.
+The other columns show textbook evidence and errors to reject.
 
 The full table is also available as a CSV download.
 
