@@ -172,8 +172,6 @@ If he feels very confident, an independent explanation helps him check that conf
 
 The teacher can help him identify the difficulty and agree on one next step. The check-in can stay private.
 
-Which support would you suggest for Andrea, and why?
-
 ## 18. Why these tools?
 
 With the textbook ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **NotebookLM** adds a workspace for selected sources. You do not need paid access to all of them.
