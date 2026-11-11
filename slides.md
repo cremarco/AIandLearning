@@ -1,7 +1,7 @@
 ---
 theme: apple-basic
 layout: default
-title: "Beyond prompting"
+title: "From Curiosity to Classroom Practice: Responsible Artificial Intelligence and Visual Psychological Guidance for Self-Directed Learning"
 author: Marco Cremaschi
 info: "Visual tools for self-directed learning with artificial intelligence"
 favicon: /favicon.ico

@@ -2,7 +2,7 @@
 
 Concise spoken scripts in simple English for rehearsal. Bold text marks the key words; [click] markers follow the slide reveals. Edit `data/content/speaker-notes.json`, then run `pnpm generate` to update this copy and Slidev presenter mode.
 
-## 1. Beyond prompting
+## 1. From Curiosity to Classroom Practice: Responsible Artificial Intelligence and Visual Psychological Guidance for Self-Directed Learning
 
 Welcome to this **90-minute practical workshop**.
 

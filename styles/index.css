@@ -102,6 +102,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .cover-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 24px; width: 58%; max-width: 700px; flex: 1; }
 .slidev-layout .deck-slide .cover-title { max-width: 700px; font-size: 84px; line-height: .99; letter-spacing: -.04em; font-weight: 740; border: 0; }
 .slidev-layout .deck-slide .cover-title span { color: var(--deck-cyan); }
+.cover-copy.cover-copy-long { width:100%; max-width:1040px; gap:20px; padding-top:90px; }
+.slidev-layout .deck-slide .cover-copy-long .cover-title { max-width:1040px; font-size:48px; line-height:1.1; letter-spacing:-.025em; text-wrap:balance; }
 .cover-subtitle { max-width: 600px; font-size: 27px; line-height: 1.28; color: var(--color-stone-200); }
 .cover-author { font-size: 20px; line-height: 1.35; font-weight: 650; }
 .cover-author span { color: var(--deck-muted); font-size: 17px; font-weight: 500; }

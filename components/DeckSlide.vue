@@ -60,8 +60,9 @@ const slideProgress = computed(() => ({
         <image class="cover-organisation-wordmark" :href="assetUrl(s.coverOrganisationLogo.src)" width="300" height="166" :clip-path="`url(#${s.id}-organisation-text)`" aria-hidden="true" />
       </svg>
       <img v-if="s.coverEventLogo" class="cover-event-logo" :src="assetUrl(s.coverEventLogo.src)" :alt="s.coverEventLogo.alt" width="615" height="410" />
-      <div class="cover-copy">
-        <h1 class="cover-title">{{ t('Beyond') }}<br /><span>{{ t('prompting') }}</span></h1>
+      <div class="cover-copy" :class="{ 'cover-copy-long': s.title.length > 50 }">
+        <h1 v-if="s.title.length > 50" class="cover-title">{{ s.title }}</h1>
+        <h1 v-else class="cover-title">{{ t('Beyond') }}<br /><span>{{ t('prompting') }}</span></h1>
         <p class="cover-subtitle"><EmphasisText :text="s.message" /></p>
         <p class="cover-author">Marco Cremaschi<br /><span>{{ t('University of Milano-Bicocca · Whattadata') }}</span><br /><a class="link link-hover cover-email" href="mailto:marco.cremaschi@unimib.it">marco.cremaschi@unimib.it</a></p>
       </div>
