@@ -1,17 +1,37 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, shallowRef, useId, watch } from 'vue'
+import { useNav, useSlideContext } from '@slidev/client'
+import { computed, nextTick, onScopeDispose, ref, shallowRef, useId, watch } from 'vue'
 import { useSlideVideo } from '../../composables/useSlideVideo'
 import { assetUrl } from '../../utils/assets'
 import { getShortcutVideo, loadShortcutTranscript, type ShortcutVideo } from '../../utils/shortcut-videos'
 import CommandTag from '../shared/CommandTag.vue'
 import PromptBlock from '../shared/PromptBlock.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
+import MediaPlaybackStatus from './MediaPlaybackStatus.vue'
 import { t } from '../../utils/language'
+import { connectPresenterMedia } from '../../utils/presenter-media'
 
 const id = useId()
 const dialog = ref<HTMLDialogElement>()
 const video = ref<HTMLVideoElement>()
 const selected = shallowRef<ShortcutVideo>()
+const nav = useNav()
+const context = nav.currentRoute.value.name === 'print' ? undefined : useSlideContext()
+const active = () => context?.$page.value === nav.currentSlideNo.value && !nav.isPrintMode.value
+const connection = context && ['slide', 'presenter'].includes(context.$renderContext.value)
+  ? connectPresenterMedia(message => {
+    if (message.type !== 'dialog' || message.source !== 'shortcut-dialog' || !active()
+      || message.page !== context.$page.value || context.$renderContext.value !== 'slide') return
+    if (message.command) void open(message.command, false)
+    else close()
+  }) : undefined
+onScopeDispose(() => connection?.close())
+
+function syncDialog(command: string | null) {
+  if (active() && context?.$renderContext.value === 'presenter') {
+    connection?.send({ type: 'dialog', source: 'shortcut-dialog', page: context.$page.value, command })
+  }
+}
 const transcriptText = ref('')
 const transcriptLoading = ref(false)
 const transcriptError = ref(false)
@@ -25,6 +45,7 @@ const transcript = computed(() => {
 })
 
 function stop() {
+  if (selected.value) syncDialog(null)
   video.value?.pause()
   transcriptRequest?.abort()
   transcriptRequest = undefined
@@ -69,7 +90,8 @@ function onTranscriptToggle(event: Event) {
   if ((event.currentTarget as HTMLDetailsElement).open) void loadTranscript()
 }
 
-async function open(command: string) {
+async function open(command: string, broadcast = true) {
+  if (context && (!active() || !['slide', 'presenter'].includes(context.$renderContext.value))) return
   const clip = getShortcutVideo(command)
   if (!clip) return
   if (selected.value !== clip) {
@@ -80,7 +102,10 @@ async function open(command: string) {
   await nextTick()
   if (selected.value !== clip) return
   if (dialog.value && !dialog.value.open) dialog.value.showModal()
-  video.value?.play().catch(() => {})
+  if (broadcast) {
+    syncDialog(command)
+    video.value?.play().catch(() => {})
+  }
 }
 
 defineExpose({ open })
@@ -93,6 +118,7 @@ defineExpose({ open })
         <h2 :id="`${id}-title`"><CommandTag v-if="selected" :text="selected.command" /> · {{ t('Recorded test') }}</h2>
         <form method="dialog"><button class="btn btn-ghost btn-sm" type="submit" autofocus :aria-label="t('Close video')">{{ t('Close') }}</button></form>
       </header>
+      <MediaPlaybackStatus inline />
       <template v-if="selected">
         <video :key="selected.command" ref="video" controls playsinline preload="none" :width="selected.width" :height="selected.height" :poster="assetUrl(selected.poster)" :aria-label="selected.alt">
           <source :src="assetUrl(selected.src)" type="video/mp4" />

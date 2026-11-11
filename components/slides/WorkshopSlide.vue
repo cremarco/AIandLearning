@@ -143,7 +143,12 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
               <p><EmphasisText :text="item.text" /></p>
             </section>
           </div>
-          <ol v-if="s.steps?.length" class="procedure-list">
+          <ol v-if="s.stepsLayout === 'flow' && s.steps?.length" class="steps steps-horizontal learning-task-flow" :aria-label="s.title">
+            <li v-for="(step,i) in s.steps" :key="step.title" v-click="revealOnClick ? i + 1 : false" class="step deck-click-reveal" :data-content="i + 1">
+              <div class="learning-task-copy"><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div>
+            </li>
+          </ol>
+          <ol v-else-if="s.steps?.length" class="procedure-list">
             <li v-for="(step,i) in s.steps" :key="i" v-click="revealOnClick ? i + 1 : false" class="deck-click-reveal"><span class="step-number">{{ i+1 }}</span><div><h2><EmphasisText :text="step.title" /></h2><p><EmphasisText :text="step.text" /></p></div></li>
           </ol>
           <ActivityTimer v-if="s.activityTimer" :minutes="s.activityTimer.minutes" :timer-id="s.activityTimer.id" />
@@ -174,5 +179,13 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
 .tool-choice-name { display:inline-flex; align-items:center; gap:10px; white-space:nowrap; }
 .comparison-icon { display:block; flex:0 0 32px; width:32px; height:32px; color:var(--deck-cyan); background:currentColor; mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
 .workshop-video-open { margin-left:12px; vertical-align:middle; }
+.learning-task-flow.steps { width:100%; margin:0; padding:0; overflow:visible; }
+.learning-task-flow.steps .step { min-width:0; grid-template-rows:64px 1fr; align-items:start; row-gap:28px; }
+.learning-task-flow.steps .step::before { height:2px; border:0; background:var(--deck-cyan); align-self:center; }
+.learning-task-flow.steps .step::after { width:64px; height:64px; border:2px solid var(--deck-cyan); background:var(--deck-paper); color:var(--deck-cyan); font-size:28px; font-weight:700; }
+.learning-task-flow .deck-click-reveal.slidev-vclick-target { clip-path:none; }
+.learning-task-copy { min-width:0; padding-inline:18px; text-align:center; }
+.slidev-layout .learning-task-copy h2 { font-size:30px; line-height:1.15; }
+.slidev-layout .learning-task-copy p { margin-top:16px; font-size:22px; line-height:1.38; color:var(--deck-muted); }
 @media print { .workshop-video-open { display:none; } }
 </style>

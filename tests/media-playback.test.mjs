@@ -11,9 +11,9 @@ const clips = [clip('/quiz'), clip('/flashcard')]
 const assets = { assetUrl: path => `/deck/${path.replace(/^\//, '')}` }
 const read = path => readFile(new URL(`../${path}`, import.meta.url), 'utf8')
 
-async function evaluate(source, dependencies, globals = {}) {
-  const context = createContext({ console, AbortController, DOMException, ...globals })
-  const module = new SourceTextModule(stripTypeScriptTypes(source, { mode: 'strip' }), { context })
+async function evaluate(source, dependencies, globals = {}, env = {}) {
+  const context = createContext({ console, AbortController, DOMException, URL, ...globals })
+  const module = new SourceTextModule(stripTypeScriptTypes(source, { mode: 'strip' }), { context, initializeImportMeta(meta) { meta.env = env } })
   await module.link(specifier => {
     const values = dependencies[specifier]
     assert.ok(values, `Unexpected dependency: ${specifier}`)
@@ -71,9 +71,10 @@ test('the playback lifecycle pauses on navigation, hidden pages and disposal', a
   const currentSlideNo = vue.ref(1), isPrintMode = vue.ref(false), visible = vue.ref(true)
   let pauses = 0, departures = 0
   const api = await evaluate(await read('composables/useSlideVideo.ts'), {
-    '@slidev/client': { useNav: () => ({ currentSlideNo, isPrintMode }) },
+    '@slidev/client': { useNav: () => ({ currentSlideNo, isPrintMode, currentRoute: vue.ref({ name: 'print' }) }), useSlideContext: () => undefined },
     vue,
     './useDocumentVisibility': { useDocumentVisibility: () => visible },
+    '../utils/presenter-media': { connectPresenterMedia() {}, mediaPlaybackIssue: vue.shallowRef() },
   })
   const scope = vue.effectScope()
   scope.run(() => api.useSlideVideo(vue.ref({ pause: () => pauses++ }), () => departures++))
@@ -91,27 +92,256 @@ test('the playback lifecycle pauses on navigation, hidden pages and disposal', a
   assert.equal(departures, 4)
 })
 
-async function dialogHarness(loader) {
+const settle = async () => { await vue.nextTick(); await new Promise(resolve => setImmediate(resolve)); await vue.nextTick() }
+
+class TestMedia extends EventTarget {
+  constructor(source = 'https://deck.test/demo.mp4') {
+    super()
+    Object.assign(this, { src: source, currentTime: 0, paused: true, muted: false, playbackRate: 1, duration: 120, readyState: 4, loads: 0, plays: 0, denyPlay: false })
+  }
+  querySelector() { return { src: this.src } }
+  emit(type) { this.dispatchEvent(new Event(type)) }
+  load() { this.loads++ }
+  play() {
+    this.plays++
+    if (this.denyPlay) return Promise.reject(new DOMException('User activation required', 'NotAllowedError'))
+    this.paused = false
+    this.emit('play')
+    return Promise.resolve()
+  }
+  pause() {
+    if (this.paused) return
+    this.paused = true
+    this.emit('pause')
+  }
+}
+
+async function playbackHarnesses() {
+  const listeners = new Set(), messages = [], scopes = []
+  const source = await read('composables/useSlideVideo.ts')
+  async function create(role, page = 1, media = new TestMedia()) {
+    const currentSlideNo = vue.ref(1), isPrintMode = vue.ref(false), visible = vue.ref(true)
+    const issue = vue.shallowRef(), video = vue.shallowRef()
+    const api = await evaluate(source, {
+      vue,
+      '@slidev/client': {
+        useNav: () => ({ currentSlideNo, isPrintMode, currentRoute: vue.ref({ name: role === 'presenter' ? 'presenter' : 'play' }) }),
+        useSlideContext: () => ({ $page: vue.ref(page), $renderContext: vue.ref(role) }),
+      },
+      './useDocumentVisibility': { useDocumentVisibility: () => visible },
+      '../utils/presenter-media': {
+        mediaPlaybackIssue: issue,
+        connectPresenterMedia(receive) {
+          listeners.add(receive)
+          return {
+            send(message) {
+              messages.push({ role, ...message })
+              for (const listener of listeners) if (listener !== receive) queueMicrotask(() => { if (listeners.has(listener)) listener(message) })
+            },
+            close() { listeners.delete(receive) },
+          }
+        },
+      },
+    })
+    const scope = vue.effectScope()
+    scope.run(() => api.useSlideVideo(video))
+    scopes.push(scope)
+    video.value = media
+    await settle()
+    return { media, video, currentSlideNo, isPrintMode, visible, issue, scope }
+  }
+  return { create, messages, listeners, close: () => scopes.forEach(scope => scope.stop()) }
+}
+
+test('presenter Play, Pause, seeking and speed reach the audience with audio only there', async () => {
+  const h = await playbackHarnesses()
+  try {
+    const presenter = await h.create('presenter'), audience = await h.create('slide')
+    const next = await h.create('previewNext'), preloaded = await h.create('slide', 2)
+    assert.equal(presenter.media.muted, true)
+    assert.equal(audience.media.muted, false)
+    presenter.media.currentTime = 12
+    presenter.media.playbackRate = 1.5
+    await presenter.media.play()
+    await settle()
+    assert.equal(audience.media.paused, false)
+    assert.ok(Math.abs(audience.media.currentTime - 12) < 0.1)
+    assert.equal(audience.media.playbackRate, 1.5)
+    assert.equal(next.media.paused, true)
+    assert.equal(preloaded.media.paused, true)
+    presenter.media.currentTime = 42
+    presenter.media.emit('seeked')
+    await settle()
+    assert.ok(Math.abs(audience.media.currentTime - 42) < 0.1)
+    presenter.media.pause()
+    await settle()
+    assert.equal(audience.media.paused, true)
+    assert.equal(h.messages.filter(m => m.role === 'slide' && m.type === 'playback').length, 0, 'Audience changes cannot echo back into the presenter')
+    presenter.media.muted = false
+    presenter.media.emit('volumechange')
+    assert.equal(presenter.media.muted, true)
+    await next.media.play()
+    assert.equal(next.media.paused, true, 'Preview playback is disabled')
+  } finally { h.close() }
+  assert.equal(h.listeners.size, 0)
+})
+
+test('a late audience catches up and pending commands wait for metadata without restarting loads', async () => {
+  const h = await playbackHarnesses()
+  try {
+    const presenter = await h.create('presenter')
+    presenter.media.currentTime = 25
+    await presenter.media.play()
+    const media = new TestMedia()
+    media.readyState = 0
+    const audience = await h.create('slide', 1, media)
+    assert.equal(media.loads, 1)
+    presenter.media.emit('seeked')
+    await settle()
+    assert.equal(media.loads, 1)
+    media.readyState = 4
+    media.emit('loadedmetadata')
+    await settle()
+    assert.equal(media.paused, false)
+    assert.ok(Math.abs(media.currentTime - 25) < 0.1)
+    audience.currentSlideNo.value = 2
+    await settle()
+    presenter.media.currentTime = 60
+    presenter.media.emit('seeked')
+    await settle()
+    assert.equal(media.paused, true)
+    assert.ok(media.currentTime < 26, 'Media on a departed slide ignores late commands')
+  } finally { h.close() }
+})
+
+test('browser playback rejection is visible in both windows and can be retried', async () => {
+  const h = await playbackHarnesses()
+  try {
+    const presenter = await h.create('presenter'), audience = await h.create('slide')
+    audience.media.denyPlay = true
+    await presenter.media.play()
+    await settle()
+    assert.ok(audience.issue.value?.retry)
+    assert.ok(presenter.issue.value)
+    audience.media.denyPlay = false
+    audience.issue.value.retry()
+    await settle()
+    assert.equal(audience.media.paused, false)
+    assert.equal(audience.issue.value, undefined)
+    assert.equal(presenter.issue.value, undefined)
+    presenter.currentSlideNo.value = audience.currentSlideNo.value = 2
+    await settle()
+    assert.equal(presenter.media.paused, true)
+    assert.equal(audience.media.paused, true)
+  } finally { h.close() }
+})
+
+test('native media keyboard controls do not navigate slides or leave presenter mode', async () => {
+  let focused = 'video', advances = 0, presenterChanges = 0
+  class Element { matches(selector) { return selector.split(/,\s*/).includes(focused) } }
+  const api = await evaluate(await read('setup/shortcuts.ts'), {
+    '@slidev/types': { defineShortcutsSetup: setup => setup },
+    '@slidev/client': { useNav: () => ({ isPresenter: vue.ref(true), exitPresenter() { presenterChanges++ } }) },
+  }, { document: { activeElement: new Element() }, HTMLElement: Element })
+  const base = ['next_space', 'prev_space', 'next', 'prev'].map(name => ({ name, key: name, fn() { advances++ } }))
+  const shortcuts = api.default(undefined, base)
+  for (const shortcut of shortcuts) shortcut.fn()
+  assert.equal(advances, 0)
+  assert.equal(presenterChanges, 0)
+  focused = 'button'
+  shortcuts[0].fn()
+  assert.equal(advances, 0)
+  focused = 'body'
+  shortcuts[0].fn()
+  assert.equal(advances, 1)
+})
+
+test('media transport shares one channel per deck and isolates EduForum from MRU', async () => {
+  const channels = new Set()
+  class Channel {
+    constructor(name) { this.name = name; channels.add(this) }
+    postMessage(data) { for (const peer of channels) if (peer !== this && peer.name === this.name) peer.onmessage?.({ data }) }
+    close() { channels.delete(this) }
+  }
+  const source = await read('utils/presenter-media.ts')
+  const create = (base, href) => evaluate(source, { vue }, { BroadcastChannel: Channel, window: { location: { href } } }, { BASE_URL: base })
+  const presenter = await create('./', 'https://deck.test/eduforum/#/presenter/1')
+  const audience = await create('./', 'https://deck.test/eduforum/#/1')
+  const mru = await create('./', 'https://deck.test/mru/#/1')
+  const received = [], wrongDeck = []
+  const a = presenter.connectPresenterMedia(() => {})
+  const b = audience.connectPresenterMedia(message => received.push(message))
+  const c = audience.connectPresenterMedia(() => {})
+  const d = mru.connectPresenterMedia(message => wrongDeck.push(message))
+  assert.equal(channels.size, 3, 'A deck shares its channel across mounted players')
+  a.send({ type: 'ready', page: 1, source: 'demo.mp4' })
+  assert.equal(received.length, 1)
+  assert.equal(wrongDeck.length, 0)
+  b.close()
+  assert.equal(channels.size, 3)
+  c.close()
+  assert.equal(channels.size, 2)
+  a.close(); d.close()
+  assert.equal(channels.size, 0)
+})
+
+async function dialogHarness(loader, role = 'print') {
   const { descriptor } = parse(await read('components/media/PromptVideoDialog.vue'))
   const compiled = compileScript(descriptor, { id: 'video-dialog-test' })
-  let leave
+  let leave, receive
+  const messages = []
   const api = await evaluate(compiled.content, {
     vue: { ...vue, useId: () => 'test-dialog' },
+    '@slidev/client': {
+      useNav: () => ({ currentSlideNo: vue.ref(1), isPrintMode: vue.ref(false), currentRoute: vue.ref({ name: role }) }),
+      useSlideContext: () => ({ $page: vue.ref(1), $renderContext: vue.ref(role) }),
+    },
     '../../composables/useSlideVideo': { useSlideVideo: (_video, close) => { leave = close } },
     '../../utils/assets': assets,
     '../../utils/language': { t: text => text },
     '../../utils/shortcut-videos': { getShortcutVideo: command => clips.find(c => c.command === command), loadShortcutTranscript: loader },
+    '../../utils/presenter-media': { connectPresenterMedia(callback) { receive = callback; return { send: message => messages.push(message), close() {} } } },
     '../shared/CommandTag.vue': { default: {} },
     '../shared/PromptBlock.vue': { default: {} },
     '../shared/RecordingResultLinks.vue': { default: {} },
+    './MediaPlaybackStatus.vue': { default: {} },
   })
   const scope = vue.effectScope()
   const state = scope.run(() => api.default.setup({}, { expose() {} }))
   let plays = 0, pauses = 0
   state.video.value = { pause() { pauses++ }, play() { plays++; return Promise.resolve() } }
   state.dialog.value = { open: false, showModal() { this.open = true }, close() { this.open = false } }
-  return { state, scope, leave: () => leave(), plays: () => plays, pauses: () => pauses }
+  return { state, scope, leave: () => leave(), plays: () => plays, pauses: () => pauses, messages, receive: message => receive?.(message) }
 }
+
+test('shortcut dialogs open and close in the audience without independently autoplaying or fetching transcripts', async () => {
+  const presenter = await dialogHarness(async () => assert.fail('Transcript should remain lazy'), 'presenter')
+  const audience = await dialogHarness(async () => assert.fail('Transcript should remain lazy'), 'slide')
+  try {
+    await presenter.state.open('/quiz')
+    assert.equal(presenter.messages.length, 1)
+    audience.receive(presenter.messages[0])
+    await settle()
+    assert.equal(audience.state.dialog.value.open, true)
+    assert.equal(audience.state.selected.value.command, '/quiz')
+    assert.equal(audience.plays(), 0, 'Playback follows the presenter media command after the dialog is rendered')
+    audience.receive({ ...presenter.messages[0], page: 2, command: '/flashcard' })
+    assert.equal(audience.state.selected.value.command, '/quiz')
+    presenter.state.close()
+    audience.receive(presenter.messages.at(-1))
+    assert.equal(audience.state.dialog.value.open, false)
+    assert.equal(audience.state.selected.value, undefined)
+    assert.equal(audience.messages.length, 0, 'Remote dialog actions do not echo back')
+  } finally { presenter.scope.stop(); audience.scope.stop() }
+})
+
+test('the Next preview cannot open a shortcut dialog', async () => {
+  const preview = await dialogHarness(async () => '', 'previewNext')
+  await preview.state.open('/quiz')
+  assert.equal(preview.state.dialog.value.open, false)
+  assert.equal(preview.plays(), 0)
+  preview.scope.stop()
+})
 
 test('opening a dialog plays the selected clip, but fetch waits for transcript expansion', async () => {
   let requests = 0

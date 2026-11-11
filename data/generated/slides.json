@@ -234,251 +234,6 @@
     "links": []
   },
   {
-    "id": "S52",
-    "clicks": 4,
-    "type": "workshop",
-    "kind": "scenario",
-    "section": "scenario",
-    "stage": "Scenario",
-    "title": "Andrea’s learning task",
-    "message": "To understand the chapter and show what he has learned, Andrea must:",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "steps": [
-      {
-        "title": "Read",
-        "text": "Study the chapter. Identify the key ideas and what is still unclear."
-      },
-      {
-        "title": "Represent",
-        "text": "Build a diagram with labelled links between the concepts."
-      },
-      {
-        "title": "Check",
-        "text": "Compare the diagram and AI suggestions with the chapter. Correct errors."
-      },
-      {
-        "title": "Explain",
-        "text": "Use his own words to explain a new example, without AI help."
-      }
-    ],
-    "decision": "Evidence: a checked diagram, an independent explanation and a justified correction.",
-    "number": 10,
-    "links": []
-  },
-  {
-    "id": "S52SDL",
-    "type": "workshop",
-    "kind": "concept",
-    "section": "scenario",
-    "stage": "Learning method · self-directed learning",
-    "title": "Self-directed learning: making choices",
-    "message": "Andrea takes an active role: he identifies his learning needs, chooses a path and reviews his progress.",
-    "body": [],
-    "audience": "both",
-    "sources": [
-      "EDU_SELF_DIRECTED"
-    ],
-    "comparison": [
-      {
-        "label": "1. Identify a goal",
-        "text": "What do I need to learn, and what do I want to achieve?"
-      },
-      {
-        "label": "2. Choose a path",
-        "text": "Which resources, people and strategies will help me learn?"
-      },
-      {
-        "label": "3. Review progress",
-        "text": "What can I explain now, and what needs more work? Self-assessment helps here."
-      }
-    ],
-    "resultLabel": "Andrea’s example",
-    "result": "“I need to distinguish training from inference. I will use the chapter and a concept map, then check whether I can explain the difference.”",
-    "decision": "Andrea takes responsibility for his choices, with support from teachers and peers.",
-    "number": 11,
-    "links": []
-  },
-  {
-    "id": "S52SA",
-    "type": "workshop",
-    "kind": "concept",
-    "section": "scenario",
-    "stage": "Learning method · self-assessment",
-    "title": "Self-assessment: checking progress",
-    "message": "Andrea judges his progress against clear criteria, then uses that judgement to improve his work.",
-    "body": [],
-    "audience": "both",
-    "sources": [
-      "EDU_SELF_ASSESSMENT"
-    ],
-    "comparison": [
-      {
-        "label": "1. Check the criteria",
-        "text": "What should I be able to explain or do?"
-      },
-      {
-        "label": "2. Look for evidence",
-        "text": "What can I demonstrate? Where do I still struggle?"
-      },
-      {
-        "label": "3. Choose a next step",
-        "text": "What will I revise, practise or check again?"
-      }
-    ],
-    "resultLabel": "Andrea’s example",
-    "result": "“I can explain the main ideas, but I still struggle to show how they connect. I will revise my map and explain those connections again.”",
-    "decision": "AI can offer feedback; the learner checks the evidence and decides what to improve.",
-    "number": 12,
-    "links": []
-  },
-  {
-    "id": "S52DESIGN",
-    "type": "workshop",
-    "kind": "concept",
-    "section": "scenario",
-    "stage": "Learning method · evidence",
-    "title": "Why the learning design matters",
-    "message": "Research informs how we design support and check understanding.",
-    "body": [],
-    "sources": [
-      "EDU_BASTANI",
-      "EDU_SELF_ASSESSMENT"
-    ],
-    "audience": "both",
-    "comparison": [
-      {
-        "label": "AI-assisted practice",
-        "text": "In one high-school maths experiment, unguarded AI improved practice scores but reduced later unaided performance."
-      },
-      {
-        "label": "Self-assessment and revision",
-        "text": "Learners use criteria and feedback to identify gaps and revise their work."
-      }
-    ],
-    "resultLabel": "Our workshop design",
-    "result": "Check an independent explanation, use clear criteria and allow another attempt.",
-    "decision": "Consider the study context when transferring these findings to another subject or age group.",
-    "number": 13,
-    "links": []
-  },
-  {
-    "id": "S52PHASES",
-    "type": "workshop",
-    "kind": "study-phases",
-    "section": "scenario",
-    "stage": "Learning method · six phases",
-    "title": "A study process in six phases",
-    "message": "",
-    "body": [],
-    "sources": [],
-    "audience": "both",
-    "steps": [
-      {
-        "title": "PLAN",
-        "text": "Set your goal, identify your starting point and organise tasks and time."
-      },
-      {
-        "title": "UNDERSTAND",
-        "text": "Clarify difficult ideas through explanations, examples and questions."
-      },
-      {
-        "title": "CONNECT",
-        "text": "Explain ideas in your own words and organise relationships between concepts."
-      },
-      {
-        "title": "RECALL",
-        "text": "Retrieve what you know without looking, then revisit it over time."
-      },
-      {
-        "title": "APPLY",
-        "text": "Use what you have learned to solve problems and handle new situations."
-      },
-      {
-        "title": "CHECK",
-        "text": "Compare your performance with criteria, identify gaps and decide what to study next."
-      }
-    ],
-    "decision": "Checking guides your next step. SUPPORT marks setup, sources and sharing.",
-    "clicks": 6,
-    "number": 14,
-    "links": []
-  },
-  {
-    "id": "S52ROUTE",
-    "type": "workshop",
-    "kind": "procedure",
-    "section": "scenario",
-    "stage": "Andrea · visual learning route",
-    "title": "My learning route",
-    "message": "Andrea chooses his next step and keeps evidence of understanding.",
-    "body": [],
-    "sources": [
-      "EDU_SELF_DIRECTED",
-      "EDU_SELF_ASSESSMENT"
-    ],
-    "audience": "both",
-    "steps": [
-      {
-        "title": "My goal",
-        "text": "Explain training, inference and RAG in my own words."
-      },
-      {
-        "title": "My starting point",
-        "text": "I know the terms, but still confuse context with parameters."
-      },
-      {
-        "title": "My next action",
-        "text": "Read sections 1.2 and 1.7, then build a map and check its links."
-      },
-      {
-        "title": "My evidence",
-        "text": "With the chat closed, explain a new example in my own words."
-      },
-      {
-        "title": "My next decision",
-        "text": "Revise one link, try another example or ask for a hint."
-      }
-    ],
-    "decision": "At each checkpoint: how am I feeling, how confident am I, and what evidence supports that confidence?",
-    "number": 15,
-    "links": []
-  },
-  {
-    "id": "S52FEELINGS",
-    "type": "workshop",
-    "kind": "concept",
-    "section": "scenario",
-    "stage": "Learning method · feelings and confidence",
-    "title": "Feelings, confidence and the next step",
-    "message": "A short check-in helps Andrea choose the support he needs.",
-    "body": [],
-    "sources": [
-      "EDU_SRL"
-    ],
-    "audience": "both",
-    "comparison": [
-      {
-        "label": "“I feel overwhelmed.”",
-        "text": "Choose one small action. Ask for a hint, an example or teacher support."
-      },
-      {
-        "label": "“I am unsure.”",
-        "text": "Name the exact point of uncertainty. Compare the explanation with the chapter."
-      },
-      {
-        "label": "“I feel very confident.”",
-        "text": "Close the answer. Explain the idea and try a new example."
-      }
-    ],
-    "resultLabel": "Andrea’s next step",
-    "result": "Choose one support and explain why it fits the current difficulty.",
-    "decision": "The check-in can stay private. Feelings guide support; evidence guides judgements of understanding.",
-    "number": 16,
-    "links": []
-  },
-  {
     "id": "S53",
     "type": "workshop",
     "kind": "book",
@@ -520,7 +275,255 @@
       "author": "Marco Cremaschi",
       "portraitAlt": "A frontal black-and-white portrait of Marco Cremaschi against a black background, wearing a black mock turtleneck and thin round glasses, with a loosely curled hand supporting his chin."
     },
-    "number": 17
+    "number": 10
+  },
+  {
+    "id": "S52",
+    "clicks": 4,
+    "type": "workshop",
+    "kind": "scenario",
+    "section": "scenario",
+    "stage": "Scenario",
+    "title": "Andrea’s learning task",
+    "message": "To understand the chapter and show what he has learned, Andrea must:",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "steps": [
+      {
+        "title": "Read",
+        "text": "Study the chapter. Identify the key ideas and what is still unclear."
+      },
+      {
+        "title": "Represent",
+        "text": "Build a diagram with labelled links between the concepts."
+      },
+      {
+        "title": "Check",
+        "text": "Compare the diagram and AI suggestions with the chapter. Correct errors."
+      },
+      {
+        "title": "Explain",
+        "text": "Use his own words to explain a new example, without AI help."
+      }
+    ],
+    "decision": "Evidence: a checked diagram, an independent explanation and a justified correction.",
+    "stepsLayout": "flow",
+    "number": 11,
+    "links": []
+  },
+  {
+    "id": "S52SDL",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · self-directed learning",
+    "title": "Self-directed learning: making choices",
+    "message": "Andrea takes an active role: he identifies his learning needs, chooses a path and reviews his progress.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "EDU_SELF_DIRECTED"
+    ],
+    "steps": [
+      {
+        "title": "Identify a goal",
+        "text": "What do I need to learn, and what do I want to achieve?"
+      },
+      {
+        "title": "Choose a path",
+        "text": "Which resources, people and strategies will help me learn?"
+      },
+      {
+        "title": "Review progress",
+        "text": "What can I explain now, and what needs more work? Self-assessment helps here."
+      }
+    ],
+    "stepsLayout": "flow",
+    "resultLabel": "Andrea’s example",
+    "result": "“I need to distinguish training from inference. I will use the chapter and a concept map, then check whether I can explain the difference.”",
+    "decision": "Andrea takes responsibility for his choices, with support from teachers and peers.",
+    "number": 12,
+    "links": []
+  },
+  {
+    "id": "S52SA",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · self-assessment",
+    "title": "Self-assessment: checking progress",
+    "message": "Andrea judges his progress against clear criteria, then uses that judgement to improve his work.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "EDU_SELF_ASSESSMENT"
+    ],
+    "steps": [
+      {
+        "title": "Check the criteria",
+        "text": "What should I be able to explain or do?"
+      },
+      {
+        "title": "Look for evidence",
+        "text": "What can I demonstrate? Where do I still struggle?"
+      },
+      {
+        "title": "Choose a next step",
+        "text": "What will I revise, practise or check again?"
+      }
+    ],
+    "stepsLayout": "flow",
+    "resultLabel": "Andrea’s example",
+    "result": "“I can explain the main ideas, but I still struggle to show how they connect. I will revise my map and explain those connections again.”",
+    "decision": "AI can offer feedback; the learner checks the evidence and decides what to improve.",
+    "number": 13,
+    "links": []
+  },
+  {
+    "id": "S52DESIGN",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · evidence",
+    "title": "Why the learning design matters",
+    "message": "Research informs how we design support and check understanding.",
+    "body": [],
+    "sources": [
+      "EDU_BASTANI",
+      "EDU_SELF_ASSESSMENT"
+    ],
+    "audience": "both",
+    "comparison": [
+      {
+        "label": "AI-assisted practice",
+        "text": "In one high-school maths experiment, unguarded AI improved practice scores but reduced later unaided performance."
+      },
+      {
+        "label": "Self-assessment and revision",
+        "text": "Learners use criteria and feedback to identify gaps and revise their work."
+      }
+    ],
+    "resultLabel": "Our workshop design",
+    "result": "Check an independent explanation, use clear criteria and allow another attempt.",
+    "decision": "Consider the study context when transferring these findings to another subject or age group.",
+    "number": 14,
+    "links": []
+  },
+  {
+    "id": "S52PHASES",
+    "type": "workshop",
+    "kind": "study-phases",
+    "section": "scenario",
+    "stage": "Learning method · six phases",
+    "title": "A study process in six phases",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "steps": [
+      {
+        "title": "PLAN",
+        "text": "Set your goal, identify your starting point and organise tasks and time."
+      },
+      {
+        "title": "UNDERSTAND",
+        "text": "Clarify difficult ideas through explanations, examples and questions."
+      },
+      {
+        "title": "CONNECT",
+        "text": "Explain ideas in your own words and organise relationships between concepts."
+      },
+      {
+        "title": "RECALL",
+        "text": "Retrieve what you know without looking, then revisit it over time."
+      },
+      {
+        "title": "APPLY",
+        "text": "Use what you have learned to solve problems and handle new situations."
+      },
+      {
+        "title": "CHECK",
+        "text": "Compare your performance with criteria, identify gaps and decide what to study next."
+      }
+    ],
+    "decision": "Checking guides your next step. SUPPORT marks setup, sources and sharing.",
+    "clicks": 6,
+    "number": 15,
+    "links": []
+  },
+  {
+    "id": "S52ROUTE",
+    "type": "workshop",
+    "kind": "procedure",
+    "section": "scenario",
+    "stage": "Andrea · visual learning route",
+    "title": "My learning route",
+    "message": "Andrea chooses his next step and keeps evidence of understanding.",
+    "body": [],
+    "sources": [
+      "EDU_SELF_DIRECTED",
+      "EDU_SELF_ASSESSMENT"
+    ],
+    "audience": "both",
+    "steps": [
+      {
+        "title": "My goal",
+        "text": "Explain training, inference and RAG in my own words."
+      },
+      {
+        "title": "My starting point",
+        "text": "I know the terms, but still confuse context with parameters."
+      },
+      {
+        "title": "My next action",
+        "text": "Read sections 1.2 and 1.7, then build a map and check its links."
+      },
+      {
+        "title": "My evidence",
+        "text": "With the chat closed, explain a new example in my own words."
+      },
+      {
+        "title": "My next decision",
+        "text": "Revise one link, try another example or ask for a hint."
+      }
+    ],
+    "decision": "At each checkpoint: how am I feeling, how confident am I, and what evidence supports that confidence?",
+    "number": 16,
+    "links": []
+  },
+  {
+    "id": "S52FEELINGS",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · feelings and confidence",
+    "title": "Feelings, confidence and the next step",
+    "message": "A short check-in helps Andrea choose the support he needs.",
+    "body": [],
+    "sources": [
+      "EDU_SRL"
+    ],
+    "audience": "both",
+    "comparison": [
+      {
+        "label": "“I feel overwhelmed.”",
+        "text": "Choose one small action. Ask for a hint, an example or teacher support."
+      },
+      {
+        "label": "“I am unsure.”",
+        "text": "Name the exact point of uncertainty. Compare the explanation with the chapter."
+      },
+      {
+        "label": "“I feel very confident.”",
+        "text": "Close the answer. Explain the idea and try a new example."
+      }
+    ],
+    "resultLabel": "Andrea’s next step",
+    "result": "Choose one support and explain why it fits the current difficulty.",
+    "decision": "The check-in can stay private. Feelings guide support; evidence guides judgements of understanding.",
+    "number": 17,
+    "links": []
   },
   {
     "id": "S53WHYTOOLS",

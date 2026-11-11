@@ -14,9 +14,11 @@ function filesIn(directory) {
 const sourceFiles = ['components', 'composables', 'utils', 'setup', 'scripts', 'tests', 'booklet-genai/scripts']
   .flatMap(directory => filesIn(projectPath(directory)))
   .filter(file => /\.(vue|ts|mjs)$/.test(file))
-sourceFiles.push(projectPath('vite.config.ts'))
+sourceFiles.push(projectPath('vite.config.ts'), projectPath('global-top.vue'))
 const unresolved = []
 const referenced = new Set()
+// Slidev discovers this global layer by its filename.
+referenced.add(projectPath('global-top.vue'))
 for (const file of sourceFiles) {
   const text = fs.readFileSync(file, 'utf8')
   const imports = [

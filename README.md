@@ -14,6 +14,12 @@ pnpm dev
 
 Open http://localhost:3047/. Arrow keys navigate. The Slidev toolbar provides presenter mode, an overview and keyboard controls.
 
+### Videos from presenter mode
+
+Keep the audience presentation and `/presenter` open in separate windows of the same browser and deck. Use the native video or audio controls in the presenter's **Current** slide: Play, Pause, seeking and playback speed are sent to the audience window. Shortcut video dialogs also open and close there. The presenter preview is muted; sound comes from the audience window. **Next**, overview and print previews remain static.
+
+If the browser blocks remote playback, both windows show a message. Click **Enable playback** in the audience window once, then continue controlling the videos from the presenter. Keep the audience window visible on the projector: media pause when their slide or browser tab is hidden. Synchronization works between same-origin windows on the same device, including the static build; EduForum and MRU use separate channels.
+
 ## Edit
 
 | Source | Responsibility |

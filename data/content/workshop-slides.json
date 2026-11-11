@@ -83,6 +83,29 @@
     "decision": "You are following the learning method; you do not need to learn programming."
   },
   {
+    "id": "S53",
+    "type": "workshop",
+    "kind": "book",
+    "section": "scenario",
+    "stage": "Scenario · material",
+    "title": "The assigned book",
+    "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
+    "body": [
+      "Topic: Language Models and Basic Architecture.",
+      "The book is available as a PDF."
+    ],
+    "sources": [],
+    "audience": "both",
+    "links": [
+      {
+        "label": "Download PDF",
+        "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+        "download": true
+      }
+    ],
+    "decision": ""
+  },
+  {
     "id": "S52",
     "clicks": 4,
     "type": "workshop",
@@ -112,7 +135,8 @@
         "text": "Use his own words to explain a new example, without AI help."
       }
     ],
-    "decision": "Evidence: a checked diagram, an independent explanation and a justified correction."
+    "decision": "Evidence: a checked diagram, an independent explanation and a justified correction.",
+    "stepsLayout": "flow"
   },
   {
     "id": "S52SDL",
@@ -127,20 +151,21 @@
     "sources": [
       "EDU_SELF_DIRECTED"
     ],
-    "comparison": [
+    "steps": [
       {
-        "label": "1. Identify a goal",
+        "title": "Identify a goal",
         "text": "What do I need to learn, and what do I want to achieve?"
       },
       {
-        "label": "2. Choose a path",
+        "title": "Choose a path",
         "text": "Which resources, people and strategies will help me learn?"
       },
       {
-        "label": "3. Review progress",
+        "title": "Review progress",
         "text": "What can I explain now, and what needs more work? Self-assessment helps here."
       }
     ],
+    "stepsLayout": "flow",
     "resultLabel": "Andrea’s example",
     "result": "“I need to distinguish training from inference. I will use the chapter and a concept map, then check whether I can explain the difference.”",
     "decision": "Andrea takes responsibility for his choices, with support from teachers and peers."
@@ -158,20 +183,21 @@
     "sources": [
       "EDU_SELF_ASSESSMENT"
     ],
-    "comparison": [
+    "steps": [
       {
-        "label": "1. Check the criteria",
+        "title": "Check the criteria",
         "text": "What should I be able to explain or do?"
       },
       {
-        "label": "2. Look for evidence",
+        "title": "Look for evidence",
         "text": "What can I demonstrate? Where do I still struggle?"
       },
       {
-        "label": "3. Choose a next step",
+        "title": "Choose a next step",
         "text": "What will I revise, practise or check again?"
       }
     ],
+    "stepsLayout": "flow",
     "resultLabel": "Andrea’s example",
     "result": "“I can explain the main ideas, but I still struggle to show how they connect. I will revise my map and explain those connections again.”",
     "decision": "AI can offer feedback; the learner checks the evidence and decides what to improve."
@@ -312,29 +338,6 @@
     "resultLabel": "Andrea’s next step",
     "result": "Choose one support and explain why it fits the current difficulty.",
     "decision": "The check-in can stay private. Feelings guide support; evidence guides judgements of understanding."
-  },
-  {
-    "id": "S53",
-    "type": "workshop",
-    "kind": "book",
-    "section": "scenario",
-    "stage": "Scenario · material",
-    "title": "The assigned book",
-    "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
-    "body": [
-      "Topic: Language Models and Basic Architecture.",
-      "The book is available as a PDF."
-    ],
-    "sources": [],
-    "audience": "both",
-    "links": [
-      {
-        "label": "Download PDF",
-        "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
-        "download": true
-      }
-    ],
-    "decision": ""
   },
   {
     "id": "S53WHYTOOLS",

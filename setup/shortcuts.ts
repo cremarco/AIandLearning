@@ -4,19 +4,19 @@ import { useNav } from '@slidev/client'
 function hasFocusedControl() {
   if (typeof document === 'undefined') return false
   const active = document.activeElement
-  return active instanceof HTMLElement && (active.matches('button, a, input, textarea, select') || active.isContentEditable)
+  return active instanceof HTMLElement && (active.matches('button, a, input, textarea, select, audio, video') || active.isContentEditable)
 }
 
 export default defineShortcutsSetup((_nav, base) => {
   const nav = useNav()
-  // Slidev owns navigation. Only guard Space so activating a
-  // focused control cannot also advance or rewind the presentation.
+  // Native media controls own their keyboard shortcuts while focused.
+  // Space on other controls must not also advance the presentation.
   const shortcuts = base.map(shortcut => {
-    if (shortcut.name !== 'next_space' && shortcut.name !== 'prev_space') return shortcut
     return {
       ...shortcut,
       fn: () => {
-        if (hasFocusedControl()) return
+        if (typeof document !== 'undefined' && document.activeElement?.matches('audio, video')) return
+        if ((shortcut.name === 'next_space' || shortcut.name === 'prev_space') && hasFocusedControl()) return
         return shortcut.fn?.()
       },
     }

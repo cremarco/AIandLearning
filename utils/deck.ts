@@ -115,6 +115,7 @@ export type Slide = {
   videoLayout?: 'focus' | 'prompt'
   comparison?: { label: string; text: string; audience?: Audience; icon?: string }[]
   steps?: { title: string; text: string }[]
+  stepsLayout?: 'flow'
   activityTimer?: { minutes: number; id: string }
   result?: string
   resultLabel?: string
