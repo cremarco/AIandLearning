@@ -109,11 +109,10 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .slidev-layout .deck-slide .cover-date { position:absolute; z-index:1; left:var(--deck-inset-inline); bottom:64px; font-size:20px; line-height:1.4; color:var(--deck-muted); }
 .cover-practice-note.card { position:absolute; z-index:1; right:var(--deck-inset-inline); bottom:64px; width:420px; border:1px solid var(--deck-line); border-radius:12px; background:var(--deck-surface); color:var(--deck-ink); box-shadow:none; }
 .cover-practice-note .card-body { gap:8px; padding:20px 24px; }
-.cover-background[data-motion="playing"] ~ .cover-practice-note { animation:cover-practice-arrival 780ms var(--deck-motion-ease) 180ms backwards; }
-@keyframes cover-practice-arrival {
-  0% { transform:translateX(14px); border-color:var(--deck-cyan); }
-  45% { border-color:var(--deck-cyan); }
-  100% { transform:translateX(0); border-color:var(--deck-line); }
+.cover-background[data-motion="playing"] ~ .cover-practice-note { animation:cover-practice-pulse 3.8s ease-in-out infinite; }
+@keyframes cover-practice-pulse {
+  0%, 100% { border-color:var(--deck-line); }
+  50% { border-color:var(--deck-cyan); }
 }
 @media (prefers-reduced-motion:reduce), print {
   .cover-background[data-motion="playing"] ~ .cover-practice-note { animation:none; }
