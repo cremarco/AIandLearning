@@ -21,7 +21,8 @@
         "label": "cremarco.github.io/AIandLearning/eduforum/",
         "url": "https://cremarco.github.io/AIandLearning/eduforum/"
       }
-    ]
+    ],
+    "decision": "The slides will remain available after the workshop."
   },
   {
     "id": "S50LEGEND",
@@ -59,7 +60,7 @@
     "body": [
       "Do you have a ChatGPT account (or Gemini, or Claude)?",
       "Do you already use GenAI to study or prepare teaching materials?",
-      "Are you familiar with NotebookLM?"
+      "Are you familiar with Gemini Notebook (formerly NotebookLM)?"
     ],
     "sources": [],
     "audience": "both",
@@ -351,7 +352,7 @@
       "ChatGPT",
       "Gemini",
       "Claude",
-      "NotebookLM"
+      "Gemini Notebook"
     ],
     "sources": [],
     "audience": "both",
@@ -1768,9 +1769,9 @@
     "type": "workshop",
     "kind": "tool-divider",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "tool": "notebook",
-    "title": "NotebookLM",
+    "title": "Gemini Notebook",
     "message": "",
     "body": [],
     "sources": [],
@@ -1788,8 +1789,8 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
-    "title": "NotebookLM: add and select sources",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Gemini Notebook: add and select sources",
     "message": "Import the textbook and decide which material each question may use",
     "body": [],
     "sources": [
@@ -1829,7 +1830,7 @@
       "TOOL_NOTEBOOK_SOURCES"
     ],
     "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Find and review new sources",
     "message": "Search, inspect the results, then choose what to import",
     "decision": "Review a source before adding it to the evidence for an answer.",
@@ -1842,7 +1843,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Ask a focused question",
     "message": "Request a short explanation with references to the textbook",
     "body": [
@@ -1866,7 +1867,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Open the citation and its source",
     "message": "Compare the generated claim with the original passage",
     "body": [],
@@ -1905,7 +1906,7 @@
       "TOOL_NOTEBOOK"
     ],
     "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Set up a Learning Guide",
     "message": "Choose the conversation goal and response length",
     "decision": "Use the guide to support Andrea’s own explanation and attempts.",
@@ -1918,9 +1919,9 @@
     "type": "workshop",
     "kind": "studio-overview",
     "section": "study",
-    "stage": "NotebookLM · Studio overview",
+    "stage": "Gemini Notebook · Studio overview",
     "tool": "notebook",
-    "title": "NotebookLM Studio: what you can create",
+    "title": "Gemini Notebook Studio: what you can create",
     "message": "Choose the format that fits your learning goal.",
     "body": [
       "Audio Overview · Video Overview",
@@ -1938,7 +1939,7 @@
     },
     "media": {
       "src": "images/tools/notebook-studio.png",
-      "alt": "NotebookLM Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
+      "alt": "Gemini Notebook Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
       "fit": "contain",
       "provenance": "images/tools/notebook-studio.provenance.json"
     }
@@ -1948,7 +1949,7 @@
     "type": "workshop",
     "kind": "notebook-output",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Explore a generated Mind Map",
     "message": "",
     "body": [],
@@ -1985,7 +1986,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Answer a quiz before reading feedback",
     "message": "Attempt a question, choose an answer and inspect the explanation",
     "body": [
@@ -2016,7 +2017,7 @@
       "TOOL_NOTEBOOK_QUIZ"
     ],
     "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Practise recall with flashcards",
     "message": "Try an answer, reveal the card and record your own judgement",
     "studyPhases": {
@@ -2035,7 +2036,7 @@
       "TOOL_NOTEBOOK_STUDIO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Build a study guide from the textbook",
     "message": "",
     "studyPhases": {
@@ -2057,7 +2058,7 @@
       "TOOL_NOTEBOOK_AUDIO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Listen to an Audio Overview",
     "message": "",
     "studyPhases": {
@@ -2076,7 +2077,7 @@
       "TOOL_NOTEBOOK_VIDEO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Watch a Video Overview",
     "message": "",
     "studyPhases": {
@@ -2095,7 +2096,7 @@
       "TOOL_NOTEBOOK_INFO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Compare concepts in an infographic",
     "message": "",
     "studyPhases": {
@@ -2117,7 +2118,7 @@
       "TOOL_NOTEBOOK_SLIDES"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Generate and present slides",
     "message": "",
     "studyPhases": {

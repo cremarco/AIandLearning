@@ -15,6 +15,19 @@
     "output": "",
     "guardrails": [],
     "audience": "both",
+    "coverNotice": {
+      "title": "Practical activities",
+      "text": "If you’d like to try the tools during the workshop, please have your laptop ready."
+    },
+    "coverEventLogo": {
+      "src": "images/events/eduforum.png",
+      "alt": "EDU FORUM"
+    },
+    "coverOrganisationLogo": {
+      "src": "images/events/rcl.png",
+      "alt": "RCL — Research Council of Lithuania"
+    },
+    "coverDate": "11 November 2026",
     "links": []
   },
   {
@@ -159,6 +172,7 @@
         "url": "https://cremarco.github.io/AIandLearning/eduforum/"
       }
     ],
+    "decision": "The slides will remain available after the workshop.",
     "number": 6
   },
   {
@@ -199,7 +213,7 @@
     "body": [
       "Do you have a ChatGPT account (or Gemini, or Claude)?",
       "Do you already use GenAI to study or prepare teaching materials?",
-      "Are you familiar with NotebookLM?"
+      "Are you familiar with Gemini Notebook (formerly NotebookLM)?"
     ],
     "sources": [],
     "audience": "both",
@@ -537,7 +551,7 @@
       "ChatGPT",
       "Gemini",
       "Claude",
-      "NotebookLM"
+      "Gemini Notebook"
     ],
     "sources": [],
     "audience": "both",
@@ -2760,9 +2774,9 @@
     "type": "workshop",
     "kind": "tool-divider",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "tool": "notebook",
-    "title": "NotebookLM",
+    "title": "Gemini Notebook",
     "message": "",
     "body": [],
     "sources": [],
@@ -2782,8 +2796,8 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
-    "title": "NotebookLM: add and select sources",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Gemini Notebook: add and select sources",
     "message": "Import the textbook and decide which material each question may use",
     "body": [],
     "sources": [
@@ -2819,8 +2833,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-sources/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — NotebookLM: add and select sources: recorded demonstration and use.",
-      "caption": "NotebookLM · 24.4 s",
+      "alt": "Gemini Notebook — Gemini Notebook: add and select sources: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 24.4 s",
       "transcript": "NotebookLM — NotebookLM\n\nREQUEST\nUsing only the uploaded book, explain what stays fixed during ordinary inference. Answer in English in two short sentences.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.200 Upload the workshop book as the source. (3× speed)\n00:00:01.169 Upload the workshop book. (3× speed)\n00:00:02.196 Show how source selection controls the question scope.\n00:00:02.315 Deselect the book to show the source scope\n00:00:03.634 Select the book as the sole source\n00:00:06.148 Widen the question and result. (3× speed)\n00:00:06.505 Write the source-grounded request. (3× speed)\n00:00:07.986 Read the complete request.\n00:00:10.094 Send the question with the selected book. (3× speed)\n00:00:10.443 Generate the answer from the selected source. (4× speed)\n00:00:10.987 Read the answer before checking the original source.\n00:00:14.672 Check the cited statement in the original chapter.\n00:00:22.141 Export the checked source-grounded answer.\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Using only the uploaded book, explain what stays fixed during ordinary inference. Answer in English in two short sentences.",
       "result": {
@@ -2861,7 +2875,7 @@
       "TOOL_NOTEBOOK_SOURCES"
     ],
     "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Find and review new sources",
     "message": "Search, inspect the results, then choose what to import",
     "decision": "Review a source before adding it to the evidence for an answer.",
@@ -2876,8 +2890,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-research/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Find and review new sources: recorded demonstration and use.",
-      "caption": "NotebookLM · 36.0 s",
+      "alt": "Gemini Notebook — Find and review new sources: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 36.0 s",
       "transcript": "NotebookLM — NotebookLM\n\nREQUEST\nFind reliable primary sources that distinguish tokenization, document retrieval (RAG), and language-model training. Prefer official documentation or original research. I will inspect the source relevance before importing anything.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.208 Upload the workshop book as the source. (3× speed)\n00:00:01.204 Upload the workshop book. (3× speed)\n00:00:02.208 Search for additional primary sources. (3× speed)\n00:00:02.540 Write the complete source-discovery request. (3× speed)\n00:00:05.035 Read the complete research request.\n00:00:07.139 Start Fast Research. (3× speed)\n00:00:07.235 Fast Research discovers candidate sources. (4× speed)\n00:00:07.911 Review the discovered sources before importing anything.\n00:00:08.015 Inspect the source titles and relevance\n00:00:11.112 Inspect the primary tokenizer documentation.\n00:00:12.022 Inspect the published documentation and its legacy v0.10.0 notice.\n00:00:15.222 Inspect the primary tokenizer documentation.\n00:00:15.969 Deselect the suggested source batch\n00:00:17.018 Select the reviewed primary documentation\n00:00:18.314 Import only the selected documentation\n00:00:21.279 Widen the source comparison. (3× speed)\n00:00:21.582 Write the source-grounded request. (3× speed)\n00:00:23.833 Read the complete request.\n00:00:25.945 Send the question with the selected book. (3× speed)\n00:00:26.254 Generate the answer from the selected source. (4× speed)\n00:00:26.836 Read both source-grounded points and their citation numbers.\n00:00:34.179 Export the checked result.\n\nOBSERVED RESULT\n\n\n\nNATIVE ORIGINAL-SOURCE READING INSERTS\n3.2s reading https://huggingface.co/docs/tokenizers/python/latest/index.html after the recorded trigger action (Open the Hugging Face tokenizer documentation). Actual original capture: 2026-11-08T11:45:38.837313+00:00; SHA-256 b94fd4f0340d749e728e8e7ec6f2408cb44781a595ed0ac05fe3ddd84d87a4fa. Later native pixels are an explicit editorial insert, not backdated source frames.\n",
       "prompt": "Find reliable primary sources that distinguish tokenization, document retrieval (RAG), and language-model training. Prefer official documentation or original research. I will inspect the source relevance before importing anything.",
       "result": {
@@ -2912,7 +2926,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Ask a focused question",
     "message": "Request a short explanation with references to the textbook",
     "body": [
@@ -2938,8 +2952,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-chat/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Ask a focused question: recorded demonstration and use.",
-      "caption": "NotebookLM · 58.4 s",
+      "alt": "Gemini Notebook — Ask a focused question: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 58.4 s",
       "transcript": "NotebookLM — NotebookLM\n\nREQUEST\nUsing only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.219 Upload the workshop book as the source. (3× speed)\n00:00:00.551 The workshop book is being indexed. (3× speed)\n00:00:01.664 Widen the question and answer. (3× speed)\n00:00:01.995 Write the source-grounded request. (3× speed)\n00:00:04.577 Read the complete request.\n00:00:06.684 Send the question with the selected book. (3× speed)\n00:00:06.968 Generate the answer from the selected source. (4× speed)\n00:00:07.559 Read the source-grounded answer before checking its citation.\n00:00:16.300 Write the source-grounded request. (3× speed)\n00:00:17.573 Read the complete request.\n00:00:19.684 Send the question with the selected book. (3× speed)\n00:00:19.946 Generate the answer from the selected source. (4× speed)\n00:00:20.562 Read the source-grounded answer before checking its citation.\n00:00:23.882 Check the answer against the original book.\n00:00:26.708 The cited passage distinguishes context from parameter updates.\n00:00:30.388 Export the checked result.\n00:00:32.830 Compare retrieval with parameter updates. (3× speed)\n00:00:32.864 Write the source-grounded request. (3× speed)\n00:00:35.304 Read the complete request.\n00:00:37.409 Send the question with the selected book. (3× speed)\n00:00:37.726 Generate the answer from the selected source. (4× speed)\n00:00:38.295 Read the source-grounded answer before checking its citation.\n00:00:44.534 Verify the RAG explanation in the original chapter.\n00:00:44.922 Check the RAG citation\n00:00:51.415 Read the retrieval passage\n00:00:55.693 Export the checked result.\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
       "result": {
@@ -2974,7 +2988,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Open the citation and its source",
     "message": "Compare the generated claim with the original passage",
     "body": [],
@@ -3009,8 +3023,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-citations/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Open the citation and its source: recorded demonstration and use.",
-      "caption": "NotebookLM · 45.9 s",
+      "alt": "Gemini Notebook — Open the citation and its source: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 45.9 s",
       "transcript": "NotebookLM — NotebookLM\n\nREQUEST\nUsing only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.204 Upload the workshop book as the source. (3× speed)\n00:00:00.527 The workshop book is being indexed. (3× speed)\n00:00:01.668 Widen the question and answer. (3× speed)\n00:00:01.943 Write the source-grounded request. (3× speed)\n00:00:04.580 Read the complete request.\n00:00:06.685 Send the question with the selected book. (3× speed)\n00:00:06.978 Generate the answer from the selected source. (4× speed)\n00:00:07.547 Read the source-grounded answer before checking its citation.\n00:00:14.946 Open the first citation and read the supporting passage.\n00:00:20.878 Compare a second claim with its cited passage.\n00:00:29.281 Export the checked result.\n00:00:31.850 Check two claims against the original book.\n00:00:32.047 Read the source-grounded answer before checking its citation.\n00:00:35.161 Read the source supporting the first claim.\n00:00:35.339 Check the first citation\n00:00:41.692 Compare a second claim with its supporting passage.\n00:00:41.747 Check the second citation\n\nOBSERVED RESULT\nA new English-interface Unimib notebook contains only the workshop book. The complete249-character request produces three concise distinctions between learned parameters and ordinary-inference context plus the actual definition-in-a-prompt example. Both full answer views are read; two distinct book citations and supporting passages are actually opened. A later same-notebook continuation records the two citation clicks with actual nativeCDP points/hit tests and preserves each3.2s popup/source reading hold. The original1201-byte native copied answer remains unchanged and independently readable as the staged result.\n\n",
       "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
       "result": {
@@ -3056,7 +3070,7 @@
       "TOOL_NOTEBOOK"
     ],
     "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Set up a Learning Guide",
     "message": "Choose the conversation goal and response length",
     "decision": "Use the guide to support Andrea’s own explanation and attempts.",
@@ -3071,8 +3085,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-customize/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Set up a Learning Guide: recorded demonstration and use.",
-      "caption": "NotebookLM · 36.7 s",
+      "alt": "Gemini Notebook — Set up a Learning Guide: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 36.7 s",
       "transcript": "NotebookLM — NotebookLM\n\nREQUEST\nUsing only the uploaded chapter, help Andrea explain why adding a new definition to a prompt changes the context without updating learned parameters. Ask one short question at a time, wait for an answer, and offer a hint before the answer. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.196 Upload the workshop book as the source. (3× speed)\n00:00:00.529 The workshop book is being indexed. (3× speed)\n00:00:01.639 Configure a short learning-guide conversation. (3× speed)\n00:00:03.743 Choose Learning Guide and a concise response length. (3× speed)\n00:00:05.076 Widen the learning-guide conversation. (3× speed)\n00:00:05.470 Write the source-grounded request. (3× speed)\n00:00:08.139 Read the complete request.\n00:00:10.264 Send the question with the selected book. (3× speed)\n00:00:10.528 Generate the answer from the selected source. (4× speed)\n00:00:11.162 Read the guide’s question and hint.\n00:00:14.160 Try an explanation and use the guide’s feedback.\n00:00:19.580 The guide responds to the learner’s explanation. (4× speed)\n00:00:20.207 Read the correction and the next hint.\n00:00:23.163 Try an explanation and use the guide’s feedback.\n00:00:30.831 The guide responds to the learner’s explanation. (4× speed)\n00:00:31.441 Read feedback on the revised explanation.\n00:00:34.525 Copy the guide’s final feedback.\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Using only the uploaded chapter, help Andrea explain why adding a new definition to a prompt changes the context without updating learned parameters. Ask one short question at a time, wait for an answer, and offer a hint before the answer. Answer in English.",
       "result": {
@@ -3107,9 +3121,9 @@
     "type": "workshop",
     "kind": "studio-overview",
     "section": "study",
-    "stage": "NotebookLM · Studio overview",
+    "stage": "Gemini Notebook · Studio overview",
     "tool": "notebook",
-    "title": "NotebookLM Studio: what you can create",
+    "title": "Gemini Notebook Studio: what you can create",
     "message": "Choose the format that fits your learning goal.",
     "body": [
       "Audio Overview · Video Overview",
@@ -3127,7 +3141,7 @@
     },
     "media": {
       "src": "images/tools/notebook-studio.png",
-      "alt": "NotebookLM Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
+      "alt": "Gemini Notebook Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
       "fit": "contain",
       "provenance": "images/tools/notebook-studio.provenance.json"
     },
@@ -3139,7 +3153,7 @@
     "type": "workshop",
     "kind": "notebook-output",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Explore a generated Mind Map",
     "message": "",
     "body": [],
@@ -3178,8 +3192,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-mind-map/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Explore a generated Mind Map: recorded demonstration and use.",
-      "caption": "NotebookLM · 95.3 s",
+      "alt": "Gemini Notebook — Explore a generated Mind Map: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 95.3 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate a mind map from the uploaded book focused on training, ordinary inference, context, and retrieval (RAG). Preserve the distinction between changed inputs and changed model parameters. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.209 Upload the workshop book as the source. (3× speed)\n00:00:00.461 The workshop book is being indexed. (3× speed)\n00:00:00.933 Widen the mind-map request. (3× speed)\n00:00:01.295 Write the source-grounded request. (3× speed)\n00:00:03.516 Read the complete request.\n00:00:05.625 Send the question with the selected book. (3× speed)\n00:00:05.899 Generate the answer from the selected source. (4× speed)\n00:00:05.912 Expand the original interactive map.\n00:00:05.914 Create a native concept map from the book (3× speed)\n00:00:08.049 Read the complete map request\n00:00:10.417 Generate the native map\n00:00:10.652 Generate the configured native mind map. (4× speed)\n00:00:10.792 Verify the native result before review\n00:00:10.972 Open the generated model interventions mind map\n00:00:13.181 Open this generated map in a new tab\n00:00:14.769 Fit and read the original native mind map.\n00:00:17.042 Return to the four main branches\n00:00:19.947 Expand the complete generated mind map\n00:00:23.235 Explore training: optimisation updates model parameters.\n00:00:23.897 Collapse Ordinary Inference (§1.2) to focus training\n00:00:25.576 Collapse Context and Prompt Variations (§1.2 to focus training\n00:00:27.167 Collapse Retrieval-Augmented Generation RAG (§1.2 to focus training\n00:00:29.044 Zoom out to keep every map label in view\n00:00:33.932 Read how training changes model parameters.\n00:00:41.318 Open ordinary inference and keep its complete branch in view.\n00:00:41.900 Toggle Training and Fine-Tuning (§1.2)\n00:00:43.499 Toggle Ordinary Inference (§1.2)\n00:00:45.085 Zoom out to keep every map label in view\n00:00:48.195 Read ordinary inference with fixed model parameters.\n00:00:55.033 Open context and prompt variations.\n00:00:55.702 Toggle Ordinary Inference (§1.2)\n00:00:57.468 Toggle Context and Prompt Variations (§1.2\n00:00:59.023 Zoom out to keep every map label in view\n00:01:03.712 Read how prompt definitions change context without updating weights.\n00:01:10.433 Open retrieval-augmented generation.\n00:01:11.385 Toggle Context and Prompt Variations (§1.2\n00:01:12.994 Toggle Retrieval-Augmented Generation RAG (§1.2\n00:01:14.709 Zoom out to keep every map label in view\n00:01:19.479 Read how retrieved passages supply context to a fixed model.\n00:01:26.516 Return to the complete source-cited mind map.\n00:01:27.138 Return to the four main concepts\n00:01:28.857 Restore the complete source-cited map\n00:01:31.381 Review the complete mind map and its original source references.\nNATIVE APPS ACTIVATION MARKERS\nSome markers identify the measured centre of a native iframe control activated through the documented locator. Exact delivered pointer coordinates are not exposed; these are not CDP pointer traces. The source retains its actual hit tests and input-request clocks.\n\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Create a mind map from the uploaded book focused on training, ordinary inference, context, and retrieval (RAG). Preserve the distinction between changed inputs and changed model parameters. Answer in English.",
       "result": {
@@ -3215,7 +3229,7 @@
     "type": "workshop",
     "kind": "tool-demo",
     "section": "study",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Answer a quiz before reading feedback",
     "message": "Attempt a question, choose an answer and inspect the explanation",
     "body": [
@@ -3242,8 +3256,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-quiz/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Answer a quiz before reading feedback: recorded demonstration and use.",
-      "caption": "NotebookLM · 94.1 s",
+      "alt": "Gemini Notebook — Answer a quiz before reading feedback: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 94.1 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate a compact quiz from the uploaded book on context versus parameters, tokens versus words, and probability versus truth. Use six questions if the native controls allow it. Include hints and explanatory feedback. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.222 Upload the workshop book as the source. (3× speed)\n00:00:00.582 The workshop book is being indexed. (3× speed)\n00:00:00.825 Widen the quiz request. (3× speed)\n00:00:01.145 Write the source-grounded request. (3× speed)\n00:00:03.533 Read the complete request.\n00:00:05.639 Send the question with the selected book. (3× speed)\n00:00:05.908 Generate the answer from the selected source. (4× speed)\n00:00:05.928 Answer a quiz question and inspect the feedback.\n00:00:05.930 Choose native quiz settings (3× speed)\n00:00:09.480 Read the complete quiz request\n00:00:11.768 Read and scroll the native quiz configuration. (3× speed)\n00:00:13.491 Generate the configured native quiz. (4× speed)\n00:00:13.652 Read the question and ask for a hint.\n00:00:16.432 Ask for a source-based hint\n00:00:19.809 Read the native question and inspect the feedback.\n00:00:19.976 Try the continuous-weight-update answer\n00:00:24.342 Read the feedback, then continue to the next question.\n00:00:28.456 Try the next question\n00:00:31.477 Read the native question and inspect the feedback.\n00:00:31.797 Choose the tokenizer-based answer\n00:00:37.746 Continue to the next question\n00:00:40.578 Read the native question and inspect the feedback.\n00:00:40.984 Choose the lookup-index and embedding explanation\n00:00:47.025 Continue with another application\n00:00:50.094 Read the native question and inspect the feedback.\n00:00:50.506 Choose continuation likelihood rather than truth\n00:00:55.831 Try another source-based scenario\n00:00:58.388 Read the native question and inspect the feedback.\n00:00:58.788 Choose the flatter distribution\n00:01:04.035 Continue to the final question\n00:01:06.975 Read the native question and inspect the feedback.\n00:01:07.481 Choose the retrieval-augmented context explanation\n00:01:12.987 Review the result and return to the missed question.\n00:01:13.123 View the completed quiz result\n00:01:16.833 Retake the missed question after reading the explanation.\n00:01:17.333 Choose a new attempt\n00:01:19.938 Retake only the missed question\n00:01:23.734 Correct the missed context-versus-parameters answer\n00:01:30.282 Check the result of the missed-question retry\nNATIVE APPS ACTIVATION MARKERS\nSome markers identify the measured centre of a native iframe control activated through the documented locator. Exact delivered pointer coordinates are not exposed; these are not CDP pointer traces. The source retains its actual hit tests and input-request clocks.\n\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Create a compact quiz from the uploaded book on context versus parameters, tokens versus words, and probability versus truth. Use six questions if the native controls allow it. Include hints and explanatory feedback. Answer in English.",
       "result": {
@@ -3285,7 +3299,7 @@
       "TOOL_NOTEBOOK_QUIZ"
     ],
     "kind": "tool-demo",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Practise recall with flashcards",
     "message": "Try an answer, reveal the card and record your own judgement",
     "studyPhases": {
@@ -3300,8 +3314,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-flashcards/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Practise recall with flashcards: recorded demonstration and use.",
-      "caption": "NotebookLM · 49.1 s",
+      "alt": "Gemini Notebook — Practise recall with flashcards: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 49.1 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate concise flashcards from the uploaded book on training versus inference, context versus parameters, tokenization and RAG. Include questions that require an explanation before revealing the answer. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.205 Upload the workshop book as the source. (3× speed)\n00:00:00.490 The workshop book is being indexed. (3× speed)\n00:00:00.701 Widen the flashcard request. (3× speed)\n00:00:01.024 Write the source-grounded request. (3× speed)\n00:00:03.480 Read the complete request.\n00:00:05.585 Send the question with the selected book. (3× speed)\n00:00:05.848 Generate the answer from the selected source. (4× speed)\n00:00:05.869 The first app is still loading; inspect the native Flashcards configuration. (3× speed)\n00:00:06.588 Configure flashcards with the actual Studio Flashcards tool. (3× speed)\n00:00:06.891 Choose fewer text-only cards from the selected book. (3× speed)\n00:00:09.330 Read the complete flashcard topic.\n00:00:11.602 Generate native flashcards from the selected book. (3× speed)\n00:00:11.809 Generate the source-grounded native flashcard deck. (4× speed)\n00:00:11.854 Recall the difference between training and inference.\n00:00:14.281 Reveal training versus inference\n00:00:18.399 Mark a difficult answer, then try another example.\n00:00:18.656 Mark the first answer for practice\n00:00:21.661 Reveal what a definition changes\n00:00:25.932 Mark the second answer as understood\n00:00:29.211 Compare training with a new prompt\n00:00:33.434 Mark the third answer as understood\n00:00:35.878 Return to the difficult card and try it again.\n00:00:36.098 Return to the earlier question\n00:00:41.732 Check the difficult answer again\n00:00:46.024 Mark the answer after another attempt\nNATIVE APPS ACTIVATION MARKERS\nSome markers identify the measured centre of a native iframe control activated through the documented locator. Exact delivered pointer coordinates are not exposed; these are not CDP pointer traces. The source retains its actual hit tests and input-request clocks.\n\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Create concise flashcards from the uploaded book on training versus inference, context versus parameters, tokenization and RAG. Include questions that require an explanation before revealing the answer. Answer in English.",
       "result": {
@@ -3342,7 +3356,7 @@
       "TOOL_NOTEBOOK_STUDIO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Build a study guide from the textbook",
     "message": "",
     "studyPhases": {
@@ -3360,8 +3374,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-reports/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Build a study guide from the textbook: recorded demonstration and use.",
-      "caption": "NotebookLM · 52.9 s",
+      "alt": "Gemini Notebook — Build a study guide from the textbook: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 52.9 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate a concise study guide from the uploaded book focused on training, ordinary inference, context, tokenization and RAG. Include a comparison table, three short-answer questions and a separate answer key. Cite the chapter and keep probability distinct from factual truth. Answer in English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.196 Upload the workshop book as the source. (3× speed)\n00:00:00.507 The workshop book is being indexed. (3× speed)\n00:00:01.587 Widen the study-guide request. (3× speed)\n00:00:01.940 Write the source-grounded request. (3× speed)\n00:00:05.043 Read the complete request.\n00:00:07.147 Send the question with the selected book. (3× speed)\n00:00:07.424 Generate the answer from the selected source. (4× speed)\n00:00:08.019 Read the completed study guide.\n00:00:08.165 Open the native study guide\n00:00:11.163 Open the study guide at full reading width.\n00:00:11.317 Open the original study guide in a full-width tab\n00:00:14.412 Open the original generated study guide.\n00:00:16.798 Scroll to Compare the three processes and their primary objectives.\n00:00:16.985 Compare the three processes and their primary objectives.\n00:00:19.756 Scroll to Compare parameter states, input signals and mechanisms.\n00:00:20.100 Compare parameter states, input signals and mechanisms.\n00:00:23.164 Scroll to Compare the resulting outputs and knowledge sources.\n00:00:23.473 Compare the resulting outputs and knowledge sources.\n00:00:26.238 Scroll to Read Question 1 on token IDs, embeddings and contextual representations.\n00:00:26.549 Read Question 1 on token IDs, embeddings and contextual representations.\n00:00:29.913 Scroll to Read Question 2 on context, RAG and fixed parameters.\n00:00:30.228 Read Question 2 on context, RAG and fixed parameters.\n00:00:33.600 Scroll to Read Question 3 on probability, temperature and factual truth.\n00:00:33.904 Read Question 3 on probability, temperature and factual truth.\n00:00:39.060 Scroll to Compare Answer 1 with the tokenization and representation references.\n00:00:39.382 Compare Answer 1 with the tokenization and representation references.\n00:00:43.445 Scroll to Check Answer 2: context and RAG leave model parameters unchanged.\n00:00:43.799 Check Answer 2: context and RAG leave model parameters unchanged.\n00:00:47.863 Scroll to Check Answer 3: token probability is not a factual-truth probability.\n00:00:48.207 Check Answer 3: token probability is not a factual-truth probability.\n\nOBSERVED RESULT\nActual new UnimibEnglish study guide created from authorizedPDF; original parent230nativeframes plus genuine reader2 native103frames. Complete request, original report title, comparison rows, each full question1/2/3 before answers, then complete Answer1/2/3 with actual chapter references. Hidden-heading failed readerwindows2/3 explicitly excluded; no result supplied by visualreader. Original PDF exported later offvideo via NotebookLM ExporttoDocs/nativeGoogleDocsPDF; not part of recorded click sequence.\n\n",
       "prompt": "Create a concise study guide from the uploaded book focused on training, ordinary inference, context, tokenization and RAG. Include a comparison table, three short-answer questions and a separate answer key. Cite the chapter and keep probability distinct from factual truth. Answer in English.",
       "result": {
@@ -3403,7 +3417,7 @@
       "TOOL_NOTEBOOK_AUDIO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Listen to an Audio Overview",
     "message": "",
     "studyPhases": {
@@ -3418,8 +3432,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Listen to an Audio Overview: recorded demonstration and use.",
-      "caption": "NotebookLM · 34.6 s",
+      "alt": "Gemini Notebook — Listen to an Audio Overview: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 34.6 s",
       "transcript": "NotebookLM —\n\nREQUEST\nFocus the Audio Overview on training versus ordinary inference, how context can change without weight updates, and how RAG supplies passages. Keep the discussion based on the uploaded book and avoid claiming that probability guarantees truth. Use English.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.205 Upload the workshop book as the source. (3× speed)\n00:00:00.530 The workshop book is being indexed. (3× speed)\n00:00:01.598 Focus on the complete request. (3× speed)\n00:00:01.974 Write the source-grounded request. (3× speed)\n00:00:04.555 Read the complete request.\n00:00:06.661 Send the question with the selected book. (3× speed)\n00:00:06.930 Generate the answer from the selected source. (4× speed)\n00:00:07.517 Open the generated Audio Overview and inspect its player.\n00:00:07.714 Show the finished Audio Overview\n00:00:10.595 Inspect the original episode title, duration and controls.\n00:00:10.810 Open the original audio episode\n00:00:12.421 Watch a later 1× player excerpt, then pause.\n00:00:17.783 Pause the episode\n00:00:23.600 Resume the native player, then pause again.\n00:00:23.977 Resume the episode\n00:00:28.404 Pause the episode after resuming\n00:00:29.470 Inspect the native playback speeds\n00:00:31.654 Keep the native player at normal speed.\n00:00:32.502 Keep normal playback speed\n00:00:33.292 Inspect the native export controls.\n00:00:33.392 Inspect the original audio export\n\nOBSERVED RESULT\nNew English Unimib notebook and exact approved PDF, complete255-character focus request, generated original1196.640363s AudioOverview, actual native player progress12→17s, pause, resume17→22s, pause and1.0x controls. The original screen capture was silent. This version restores excerpts from the genuine downloaded M4A during the two playback intervals, with silence during setup and pauses. The original video frames and full M4A are unchanged. Source audio starts at 12.500 s, continuing at 17.862 s in the second interval. Fractional alignment is estimated from the on-screen whole-second player times; this is not a live system-audio capture or a full continuous listening session.\n",
       "prompt": "Focus the Audio Overview on training versus ordinary inference, how context can change without weight updates, and how RAG supplies passages. Keep the discussion based on the uploaded book and avoid claiming that probability guarantees truth. Use English.",
       "result": {
@@ -3460,7 +3474,7 @@
       "TOOL_NOTEBOOK_VIDEO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Watch a Video Overview",
     "message": "",
     "studyPhases": {
@@ -3474,7 +3488,7 @@
       "captions": "materials/notebook/video-overview-2026-11-08/captions.en.vtt",
       "transcriptFile": "materials/notebook/video-overview-2026-11-08/transcript.txt",
       "captionsDefault": false,
-      "alt": "Original English NotebookLM Video Overview: Training vs. Inference & RAG, generated 8 November 2026.",
+      "alt": "Original English Gemini Notebook Video Overview: Training vs. Inference & RAG, generated 8 November 2026.",
       "caption": "8 Nov 2026 · 6:56 · original audio",
       "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec",
       "durationSeconds": 416.867846,
@@ -3497,7 +3511,7 @@
       "TOOL_NOTEBOOK_INFO"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Compare concepts in an infographic",
     "message": "",
     "studyPhases": {
@@ -3515,8 +3529,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-infographic/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Compare concepts in an infographic: recorded demonstration and use.",
-      "caption": "NotebookLM · 33.1 s",
+      "alt": "Gemini Notebook — Compare concepts in an infographic: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 33.1 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate an English infographic comparing training, ordinary inference and RAG from the uploaded book. Show what changes, what stays fixed and one misconception to avoid for each process.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.210 Upload the workshop book as the source. (3× speed)\n00:00:00.561 The workshop book is being indexed. (3× speed)\n00:00:01.637 Widen the infographic request. (3× speed)\n00:00:01.943 Write the source-grounded request. (3× speed)\n00:00:03.974 Read the complete request.\n00:00:06.081 Send the question with the selected book. (3× speed)\n00:00:06.374 Generate the answer from the selected source. (4× speed)\n00:00:06.990 Compare what changes in training, inference and RAG.\n00:00:09.399 Compare the changing context with the fixed model parameters.\n00:00:18.831 Check the prompt and source behind the generated comparison.\n00:00:19.700 Inspect the infographic prompt and source\n00:00:26.832 Compare all three processes and the misconceptions to reject.\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Create an English infographic comparing training, ordinary inference and RAG from the uploaded book. Show what changes, what stays fixed and one misconception to avoid for each process.",
       "result": {
@@ -3557,7 +3571,7 @@
       "TOOL_NOTEBOOK_SLIDES"
     ],
     "kind": "notebook-output",
-    "stage": "NotebookLM · recorded examples",
+    "stage": "Gemini Notebook · recorded examples",
     "title": "Generate and present slides",
     "message": "",
     "studyPhases": {
@@ -3575,8 +3589,8 @@
       "transcriptFile": "materials/video-refresh/2026-11-07/notebook-slides/transcript.txt",
       "captionsDefault": false,
       "browserFrame": true,
-      "alt": "NotebookLM — Generate and present slides: recorded demonstration and use.",
-      "caption": "NotebookLM · 88.1 s",
+      "alt": "Gemini Notebook — Generate and present slides: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 88.1 s",
       "transcript": "NotebookLM — \n\nREQUEST\nCreate a short English slide deck from the uploaded book on training, ordinary inference, context and RAG. Distinguish parameter changes from changes to the input. End with a question the learner must explain independently.\n\nMETHOD\nNative browser pixels. Setup and input 3×; generation 4×; use and feedback normal speed. Only explicitly annotated idle ranges shortened. Two-second hold on the complete native prompt. Recorded click positions receive a brief ring.\n\n00:00:00.000 Start a new empty notebook. (3× speed)\n00:00:00.210 Upload the workshop book as the source. (3× speed)\n00:00:00.507 The workshop book is being indexed. (3× speed)\n00:00:18.904 Widen the slide-deck request. (3× speed)\n00:00:19.193 Write the source-grounded request. (3× speed)\n00:00:21.454 Read the complete request.\n00:00:23.563 Send the question with the selected book. (3× speed)\n00:00:23.830 Generate the answer from the selected source. (4× speed)\n00:00:24.322 Review the short English presenter deck. (3× speed)\n00:00:26.035 Generate the proposed outline from the selected book. (4× speed)\n00:00:26.630 Open Studio and inspect the generated nine-slide outline. (3× speed)\n00:00:27.743 Review the outline before generating the deck. (3× speed)\n00:00:29.089 Generate the English slide deck from the approved outline. (4× speed)\n00:00:29.728 Open the generated English slide deck from the uploaded book. (3× speed)\n00:00:30.715 Present the generated deck and navigate through examples.\n00:00:30.837 Start the native slideshow\n00:00:33.664 Widen the native deck reader for full-slide readability.\n00:00:33.877 Expand the native slide reader\n00:00:35.408 Advance with the actual native slideshow Right arrow key.\n00:00:37.183 A new definition changes the input context; it does not update the learned parameters.\n00:00:41.010 Compare structural parameter updates with input-level context changes.\n00:00:44.961 Trace training from examples and prediction error to parameter updates.\n00:00:49.863 Trace ordinary inference through a fixed model to next-token probabilities.\n00:00:56.851 Inspect what the context window holds for this generation.\n00:01:00.777 Follow retrieved passages into the context, while the model stays fixed.\n00:01:05.753 Compare the inputs, actions and changes across training, inference and RAG.\n00:01:12.178 Explain independently why the connected manual database uses RAG rather than fine-tuning.\n00:01:18.530 Export the original generated deck for use without the author session.\n00:01:18.906 Inspect native deck export options\n00:01:21.940 Download the original generated slide deck as PDF\n00:01:23.274 Check the generation prompt and the original uploaded source.\n00:01:23.685 Inspect the deck prompt and source\n00:01:25.220 The deck is grounded in the uploaded book; inspect its actual prompt and source.\n\nOBSERVED RESULT\n\n\n",
       "prompt": "Create a short English slide deck from the uploaded book on training, ordinary inference, context and RAG. Distinguish parameter changes from changes to the input. End with a question the learner must explain independently.",
       "result": {

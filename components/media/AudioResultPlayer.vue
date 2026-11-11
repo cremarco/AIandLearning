@@ -16,7 +16,7 @@ useSlideVideo(audio)
       <p>{{ t('Full Audio Overview') }}</p>
       <a class="link" :href="assetUrl(result.url)" download @click.stop @pointerdown.stop @keydown.stop @keyup.stop>{{ t('Download audio') }}</a>
     </div>
-    <audio ref="audio" controls preload="metadata" aria-label="Full NotebookLM Audio Overview"
+    <audio ref="audio" controls preload="metadata" aria-label="Full Gemini Notebook Audio Overview"
       @click.stop @pointerdown.stop @keydown.stop @keyup.stop>
       <source :src="assetUrl(result.url)" :type="result.mediaType" />
     </audio>

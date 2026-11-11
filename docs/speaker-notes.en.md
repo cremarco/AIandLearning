@@ -64,7 +64,7 @@ Please **raise your hand** if your answer is yes.
 
 [click] Next, do you already use **generative AI** to study or prepare teaching materials?
 
-[click] Finally, are you familiar with **NotebookLM**?\
+[click] Finally, are you familiar with **Gemini Notebook (formerly NotebookLM)**?\
 Thank you. We will use prepared examples, so you can follow even if these tools are new to you.
 
 ## 9. Andrea needs to understand GenAI
@@ -174,7 +174,7 @@ The teacher can help him identify the difficulty and agree on one next step. The
 
 ## 18. Why these tools?
 
-With the textbook ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **NotebookLM** adds a workspace for selected sources. You do not need paid access to all of them.
+With the textbook ready, why choose these tools? **ChatGPT, Gemini and Claude** are alternatives; you can choose one. **Gemini Notebook** adds a workspace for selected sources. You do not need paid access to all of them.
 
 These four points compare this approach with dedicated tools for specific learning tasks.
 
@@ -605,15 +605,15 @@ He compares the rewrite with his draft. Does it keep the same meaning? Does it s
 
 Clearer writing should preserve those details.
 
-## 64. NotebookLM
+## 64. Gemini Notebook
 
-NotebookLM is an **AI tool from Google**, designed to support **learning and understanding**.
+Gemini Notebook is an **AI tool from Google**, designed to support **learning and understanding**.
 
 It helps you study the **sources you choose**: you can ask questions, connect ideas and create study materials.
 
 We will use it with **Andrea’s textbook** and keep checking its answers against the original text.
 
-## 65. NotebookLM: add and select sources
+## 65. Gemini Notebook: add and select sources
 
 We begin by **adding the textbook**.
 
@@ -653,7 +653,7 @@ He checks that the passage supports the exact claim in the answer.
 
 We can also change how the conversation works.
 
-**Learning Guide** is a chat mode in NotebookLM for studying your sources.
+**Learning Guide** is a chat mode in Gemini Notebook for studying your sources.
 
 It asks **open-ended questions**, breaks problems into smaller steps and adapts its explanations to the learner.
 
@@ -663,9 +663,9 @@ The teacher can set a clear criterion and decide when a hint or independent atte
 
 Andrea uses the feedback to choose what to practise next.
 
-## 70. NotebookLM Studio: what you can create
+## 70. Gemini Notebook Studio: what you can create
 
-The **Studio** panel brings together the formats NotebookLM can generate from selected sources.
+The **Studio** panel brings together the formats Gemini Notebook can generate from selected sources.
 
 We can create **audio, video, maps, study materials and visual summaries**.
 
@@ -683,7 +683,7 @@ Andrea checks the links against the textbook, then explains them without the map
 
 ## 72. Answer a quiz before reading feedback
 
-This recording shows **Quiz** in NotebookLM.
+This recording shows **Quiz** in Gemini Notebook.
 
 Andrea answers before opening the hint or feedback.
 
@@ -693,7 +693,7 @@ The next step is to explain the correction and check his understanding with a ne
 
 ## 73. Practise recall with flashcards
 
-This recording shows **Flashcards** in NotebookLM.
+This recording shows **Flashcards** in Gemini Notebook.
 
 Let us pause at a question and try answering from memory before the card is revealed.
 

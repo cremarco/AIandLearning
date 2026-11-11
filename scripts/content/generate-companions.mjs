@@ -56,6 +56,8 @@ function references(slide) {
 function textContent(slide) {
   return [
     slide.message,
+    slide.coverDate || '',
+    ...(slide.coverNotice ? [slide.coverNotice.title, slide.coverNotice.text] : []),
     studyFocus(slide.studyPhases),
     slide.activityTimer ? `${slide.activityTimer.minutes}-minute practice` : '',
     ...slide.body,
@@ -87,7 +89,7 @@ const introduction = [
   'Marco Cremaschi · November 2026',
   `${presentationSlideCount} presentation slides, followed by ${slides.length - presentationSlideCount} reference appendices. Participants observe the method; Andrea is a fictional student in a teaching scenario.`,
   'Public materials in English.',
-  notebookUrl ? `NotebookLM workshop notebook: ${notebookUrl}` : '',
+  notebookUrl ? `Gemini Notebook workshop notebook: ${notebookUrl}` : '',
   '',
 ]
 write('Accessible_Deck_EN.txt', [
@@ -227,7 +229,7 @@ function resultMarkup(result) {
 
 function outputText(output) {
   return [
-    `Created with NotebookLM: ${output.feature}`, `Original output: ${output.src}`,
+    `Created with Gemini Notebook: ${output.feature}`, `Original output: ${output.src}`,
     ...(output.cards || []).flatMap(card => [card.question, card.answer]),
     ...(output.questions || []).flatMap(q => [q.question, ...q.options, `Hint: ${q.hint}`, `Correct answer: ${String.fromCharCode(65 + q.correctIndex)}`, ...q.explanations]),
     ...(output.rows || []).map(row => row.map((cell, i) => `${output.headers[i]}: ${cell}`).join(' · ')),
@@ -247,7 +249,7 @@ function outputMarkup(output) {
   if (output.type === 'flashcards') content = output.cards.map(card => `<details><summary>${h(card.question)}</summary><p>${h(card.answer)}</p></details>`).join('')
   if (output.type === 'quiz') content = output.questions.map(q => `<section><h3>${h(q.question)}</h3><ol type="A">${q.options.map(option => `<li>${h(option)}</li>`).join('')}</ol><details><summary>Show answer</summary><p>Correct answer: ${String.fromCharCode(65 + q.correctIndex)}</p><p>${h(q.explanations[q.correctIndex])}</p></details></section>`).join('')
   if (output.type === 'table') content = `<div class="overflow-x-auto"><table class="table"><thead><tr>${output.headers.map(header => `<th scope="col">${h(header)}</th>`).join('')}</tr></thead><tbody>${output.rows.map(row => `<tr>${row.map(cell => `<td>${h(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
-  return `<section class="notebook-output"><h3>${h(output.feature)}</h3><p>Created in NotebookLM${['quiz', 'flashcards', 'table'].includes(output.type) ? ' · local viewer with original content' : ''}</p>${content}<p><a class="link" href="${url}">Open original output</a></p></section>`
+  return `<section class="notebook-output"><h3>${h(output.feature)}</h3><p>Created in Gemini Notebook${['quiz', 'flashcards', 'table'].includes(output.type) ? ' · local viewer with original content' : ''}</p>${content}<p><a class="link" href="${url}">Open original output</a></p></section>`
 }
 
 function mediaMarkup(media) {
@@ -277,6 +279,8 @@ function transcriptMarkup(media) {
 function inner(slide) {
   return [
     `<p>${h(slide.message)}</p>`,
+    slide.coverDate ? `<p>${h(slide.coverDate)}</p>` : '',
+    slide.coverNotice ? `<aside class="card card-border my-4" role="note"><div class="card-body"><h3 class="card-title">${h(slide.coverNotice.title)}</h3><p>${h(slide.coverNotice.text)}</p></div></aside>` : '',
     slide.studyPhases ? `<p class="meta">${h(studyFocus(slide.studyPhases))}</p>` : '',
     slide.activityTimer ? `<p class="meta">${slide.activityTimer.minutes}-minute practice</p>` : '',
     commandTable(slide),
@@ -305,7 +309,7 @@ writePage('kit.html', 'Workshop materials', [
   '</header><main id="content"><h2>Study and understand</h2><ul>',
   '<li><a class="link link-primary" href="booklet-genai/Fondamenti_GenAI_Cremaschi.pdf">Textbook PDF</a> · <a class="link link-primary" href="booklet-genai/lettura.html">Textbook reading HTML</a></li>',
   '<li><a class="link link-primary" href="demo-genai/index.html">Real-model application</a></li>',
-  ...(notebookUrl ? [`<li><a class="link link-primary" href="${h(notebookUrl)}" target="_blank" rel="noopener">NotebookLM: Foundations of Generative Artificial Intelligence · EduForum</a></li>`] : []),
+  ...(notebookUrl ? [`<li><a class="link link-primary" href="${h(notebookUrl)}" target="_blank" rel="noopener">Gemini Notebook: Foundations of Generative Artificial Intelligence · EduForum</a></li>`] : []),
   '<li><a class="link link-primary" href="Prompt_Bank_EN.txt">Prompts and requests</a></li>',
   '<li><a class="link link-primary" href="skills-guide.html">Agent Skills: annotated catalogue and installation guide</a></li>',
   '<li><a class="link link-primary" href="teacher-tools.html">MagicSchool and Formative: recorded demonstrations</a></li>',

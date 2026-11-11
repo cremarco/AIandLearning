@@ -56,13 +56,13 @@ function onKey(event: KeyboardEvent) {
     <aside class="nb-sidebar">
       <div>
         <h2>{{ output.feature }}</h2>
-        <p class="nb-origin">Created in NotebookLM</p>
+        <p class="nb-origin">Created in Gemini Notebook</p>
       </div>
       <div class="nb-request">
         <h3>{{ output.prompt ? 'Prompt' : 'About this output' }}</h3>
         <p>{{ output.prompt || output.description }}</p>
       </div>
-      <p v-if="localViewer" class="nb-format">Local viewer · original NotebookLM content</p>
+      <p v-if="localViewer" class="nb-format">Local viewer · original Gemini Notebook content</p>
       <p v-else-if="outputId === 'mind-map'" class="nb-format">Complete static map · zoom to read the branches</p>
       <p v-else-if="outputId === 'table' && output.preview" class="nb-format">Screenshot of the generated table</p>
       <a class="link" :href="assetUrl(output.src)" :download="downloadable ? '' : undefined" :target="downloadable ? undefined : '_blank'" rel="noopener">{{ downloadLabel }}</a>
@@ -77,18 +77,18 @@ function onKey(event: KeyboardEvent) {
       <div v-else-if="output.type === 'audio'" class="nb-audio-content">
         <h3>How generative AI predicts next tokens</h3>
         <p>Listen to the generated episode.</p>
-        <audio ref="audio" controls preload="metadata" aria-label="Generated NotebookLM Audio Overview" @error="mediaError = true">
+        <audio ref="audio" controls preload="metadata" aria-label="Generated Gemini Notebook Audio Overview" @error="mediaError = true">
           <source :src="assetUrl(output.src)" type="audio/mp4" />
         </audio>
         <p v-if="mediaError" role="alert">Audio could not load. Try the download link.</p>
       </div>
 
       <div v-else-if="output.type === 'video'" class="nb-video-content">
-        <video ref="video" controls playsinline preload="none" :poster="assetUrl(output.poster)" aria-label="Generated NotebookLM Video Overview" @error="mediaError = true">
+        <video ref="video" controls playsinline preload="none" :poster="assetUrl(output.poster)" aria-label="Generated Gemini Notebook Video Overview" @error="mediaError = true">
           <source :src="assetUrl(output.src)" type="video/mp4" />
           <track v-if="output.captions" kind="captions" srclang="en" label="English" :src="assetUrl(output.captions)" />
         </video>
-        <img class="nb-print-poster" :src="assetUrl(output.poster)" alt="Generated NotebookLM Video Overview" />
+        <img class="nb-print-poster" :src="assetUrl(output.poster)" alt="Generated Gemini Notebook Video Overview" />
         <p v-if="mediaError" role="alert">Video could not load. Try the download link.</p>
       </div>
 

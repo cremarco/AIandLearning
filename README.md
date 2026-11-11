@@ -37,7 +37,7 @@ Run `pnpm generate` after editing the sources. It rebuilds the Slidev entry, ful
 
 Write speaker notes as concise scripts in simple English, ready to say aloud. Use natural transitions and preserve the `[click]` markers.
 
-### NotebookLM outputs
+### Gemini Notebook outputs
 
 EduForum presents six Studio outputs directly, with the generating feature named beside each result. Quiz and Flashcards keep their recorded demonstrations. `data/content/notebook-outputs.json` identifies the original files and supplies the local output viewers. The recordings remain available to MRU. PDF previews preserve the original pages; rebuild the previews and extracted content with `python3 scripts/content/prepare-notebook-outputs.py` (requires Poppler, cwebp and ffmpeg), then run `pnpm generate`.
 
@@ -55,7 +55,7 @@ MRU opens with flat English and Ukrainian flag buttons; the Ukrainian flag inclu
 
 Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the site's root directories.
 
-The EduForum presentation has 85 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After NotebookLM, each tool has at most two slides.
+The EduForum presentation has 85 numbered slides through Thank you, followed by an unnumbered bibliography appendix. Accessibility tools have their own table. After Gemini Notebook, each tool has at most two slides.
 
 ## Check and build
 
@@ -73,7 +73,7 @@ Browser checks (`pnpm check:browser`) and PDF export require compatible Playwrig
 
 Forty reviewed recordings use 1440 × 900 delivery frames at 60 fps. Setup runs at 3×, generation at 4×, and meaningful use retains normal speed. Each player has English captions and an adjacent result link. Labels identify static PNG/PDF/CSV results, shared widgets and downloadable files. The Learning Skill shared chat shows readable code; its original HTML kit is provided separately.
 
-`data/demos/video-release.json` points to the current immutable release manifest under `public/materials/video-refresh/`. The manifest identifies every delivered file by size and SHA-256 hash. The current release preserves the previous NotebookLM Video Overview and the eight demonstrations excluded from the refresh. An available recording does not imply that its service is free or that it improves learning.
+`data/demos/video-release.json` points to the current immutable release manifest under `public/materials/video-refresh/`. The manifest identifies every delivered file by size and SHA-256 hash. The current release preserves the previous Gemini Notebook Video Overview and the eight demonstrations excluded from the refresh. An available recording does not imply that its service is free or that it improves learning.
 
 The capture, review and release workflow is documented in [docs/recordings.md](docs/recordings.md). Obsolete capture/render scripts, historical recordings and older review files have been archived outside the project with verified recovery manifests. Rebuildable caches, old builds, booklet previews and temporary PDF experiments have been removed. Archive recovery pointers are described in that document.
 

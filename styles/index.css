@@ -95,6 +95,10 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .bento-grid.three > .bento-card--illustrated:first-child .bento-card__body { font-size: 24px; }
 .slidev-layout .type-brief .takeaway { margin-top: 0; padding: 0; border: 0; border-radius: 0; background: none; color: var(--deck-muted); font-size: 20px; line-height: 1.3; }
 .cover-university-logo { position:absolute; z-index:1; top:48px; left:64px; width:auto; height:88px; object-fit:contain; }
+.cover-organisation-logo { position:absolute; z-index:1; top:30px; right:calc(var(--deck-inset-inline) + 212px); width:224px; height:auto; overflow:visible; }
+.cover-organisation-wordmark { filter:brightness(0) invert(1); }
+/* Original clear space keeps the visible mark aligned with the cover insets. */
+.cover-event-logo { position:absolute; z-index:1; top:25px; right:calc(var(--deck-inset-inline) - 34px); width:204px; height:136px; object-fit:contain; }
 .cover-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 24px; width: 58%; max-width: 700px; flex: 1; }
 .slidev-layout .deck-slide .cover-title { max-width: 700px; font-size: 84px; line-height: .99; letter-spacing: -.04em; font-weight: 740; border: 0; }
 .slidev-layout .deck-slide .cover-title span { color: var(--deck-cyan); }
@@ -102,6 +106,20 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .cover-author { font-size: 20px; line-height: 1.35; font-weight: 650; }
 .cover-author span { color: var(--deck-muted); font-size: 17px; font-weight: 500; }
 .cover-email { display: inline-block; margin-top: 6px; color: var(--deck-cyan); font-size: 17px; font-weight: 500; }
+.slidev-layout .deck-slide .cover-date { position:absolute; z-index:1; left:var(--deck-inset-inline); bottom:64px; font-size:20px; line-height:1.4; color:var(--deck-muted); }
+.cover-practice-note.card { position:absolute; z-index:1; right:var(--deck-inset-inline); bottom:64px; width:420px; border:1px solid var(--deck-line); border-radius:12px; background:var(--deck-surface); color:var(--deck-ink); box-shadow:none; }
+.cover-practice-note .card-body { gap:8px; padding:20px 24px; }
+.cover-background[data-motion="playing"] ~ .cover-practice-note { animation:cover-practice-arrival 780ms var(--deck-motion-ease) 180ms backwards; }
+@keyframes cover-practice-arrival {
+  0% { transform:translateX(14px); border-color:var(--deck-cyan); }
+  45% { border-color:var(--deck-cyan); }
+  100% { transform:translateX(0); border-color:var(--deck-line); }
+}
+@media (prefers-reduced-motion:reduce), print {
+  .cover-background[data-motion="playing"] ~ .cover-practice-note { animation:none; }
+}
+.slidev-layout .deck-slide .cover-practice-note .card-title { font-size:22px; line-height:1.2; font-weight:650; letter-spacing:-.01em; color:var(--deck-cyan); }
+.slidev-layout .deck-slide .cover-practice-note p { font-size:20px; line-height:1.4; color:var(--deck-muted); }
 .slidev-layout .deck-slide .thank-you-title { font-size:96px; line-height:1; font-weight:740; letter-spacing:-.04em; }
 .thank-you-copy { gap:28px; }
 .profile-grid { display: grid; grid-template-columns: 1fr; min-height: 0; flex: 1; align-items: center; }

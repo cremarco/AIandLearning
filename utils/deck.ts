@@ -89,6 +89,10 @@ export type Slide = {
   explainedInWorkshop?: boolean
   title: string
   message: string
+  coverNotice?: { title: string; text: string }
+  coverDate?: string
+  coverEventLogo?: { src: string; alt: string }
+  coverOrganisationLogo?: { src: string; alt: string }
   body: string[]
   sources: string[]
   audience: Audience
