@@ -10,6 +10,8 @@ The editable sources are separate from presentation runtime data and published m
 
 `data/generated/slides.json` retains complete reader content. `slides-runtime.json` and `shortcut-videos.json` omit inline transcripts. The Vue application imports only these lean indexes; the video dialog loads a transcript file when the reader opens its disclosure. The indexes are generated together so they cannot drift.
 
+`data/mru/` and `data/druskininkai/` hold independent presentation copies. The `EDUFORUM_DECK` setting selects their slide and emphasis indexes through Vite aliases. Druskininkai also keeps independent speaker notes; `generate-slides.mjs druskininkai` rebuilds its Markdown and rehearsal copy without recopying EduForum. The site builder publishes all three routes and copies shared public assets once.
+
 `components/DeckSlide.vue` and `PrintDeck.vue` share slide rendering. `components/slides/` contains content layouts, `components/shared/` reusable content and result links, and `components/media/` players and visual media. `RecordingResultLinks.vue` renders the same typed primary result and optional downloads across players. `assetUrl` resolves local material URLs for both development and relative-base builds.
 
 `useSlideVideo` stops playback on navigation, hidden tabs and disposal. Dialog players also cancel outstanding transcript requests and ignore late responses after closing or switching clips. A shared document-visibility listener avoids one listener per slide.

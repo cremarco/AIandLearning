@@ -91,6 +91,8 @@ export type Slide = {
   message: string
   coverNotice?: { title: string; text: string }
   coverDate?: string
+  coverLocation?: string
+  coverLogos?: boolean
   coverEventLogo?: { src: string; alt: string }
   coverOrganisationLogo?: { src: string; alt: string }
   body: string[]

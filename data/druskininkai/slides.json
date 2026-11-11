@@ -1,0 +1,3043 @@
+[
+  {
+    "id": "S01",
+    "number": 1,
+    "type": "cover",
+    "kind": "cover",
+    "section": "opening",
+    "title": "Beyond prompting",
+    "message": "Visual tools for self-directed learning with artificial intelligence",
+    "body": [],
+    "sources": [
+      "BIO01",
+      "BIO02"
+    ],
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "coverDate": "13 November 2026",
+    "links": [],
+    "coverLogos": false,
+    "coverLocation": "Druskininkai, Lithuania"
+  },
+  {
+    "id": "S02",
+    "number": 2,
+    "type": "profile",
+    "kind": "presenter",
+    "section": "opening",
+    "title": "Marco Cremaschi",
+    "message": "Tenure-track Assistant Professor",
+    "body": [
+      "University of Milano-Bicocca",
+      "Semantic AI and knowledge graphs",
+      "Digital mental health",
+      "Applied data systems"
+    ],
+    "sources": [
+      "BIO03",
+      "BIO01"
+    ],
+    "output": "",
+    "guardrails": [],
+    "audience": "both",
+    "links": []
+  },
+  {
+    "id": "S50",
+    "number": 3,
+    "type": "brief",
+    "kind": "event-brief",
+    "section": "opening",
+    "title": "Visual tools for learning with AI",
+    "cardBackground": "events/teachers-workshop-bento-andrea-v3.webp",
+    "message": "13 November 2026 · Teacher workshop · Druskininkai, Lithuania · 13:30–14:20",
+    "body": [],
+    "cards": [
+      {
+        "title": "Who is it for?",
+        "body": "Teachers across disciplines who want students to use AI while taking responsibility for their learning."
+      },
+      {
+        "title": "What will we explore?",
+        "body": "Explore a visual path: goal, initial knowledge, next steps, source checks and reflection. See concept maps and self-assessment applied to a subject."
+      },
+      {
+        "title": "What will you take away?",
+        "body": "Examples of visual guidance and responsible AI use, with attention to uncertainty, frustration and critical thinking."
+      }
+    ],
+    "takeaway": "Prepared examples show how the tools can support learning across subjects.",
+    "sources": [
+      "PROGRAM03"
+    ],
+    "output": "",
+    "guardrails": [],
+    "audience": "teacher",
+    "links": []
+  },
+  {
+    "id": "S50QR",
+    "type": "workshop",
+    "kind": "access",
+    "section": "opening",
+    "stage": "Presentation and materials",
+    "title": "Follow along",
+    "message": "Scan the QR code to open the presentation.",
+    "body": [],
+    "audience": "both",
+    "sources": [],
+    "media": {
+      "type": "image",
+      "src": "images/qr/druskininkai-direct.png",
+      "alt": "QR code linking to https://cremarco.github.io/AIandLearning/druskininkai/",
+      "caption": ""
+    },
+    "links": [
+      {
+        "label": "cremarco.github.io/AIandLearning/druskininkai/",
+        "url": "https://cremarco.github.io/AIandLearning/druskininkai/"
+      }
+    ],
+    "decision": "The slides will remain available after the workshop.",
+    "number": 4
+  },
+  {
+    "id": "S50LEGEND",
+    "type": "workshop",
+    "kind": "audience-legend",
+    "section": "opening",
+    "stage": "Icon legend",
+    "title": "Who is this slide for?",
+    "message": "Audience icons show who each slide is for; on tool slides, find them beside the slide number.",
+    "body": [],
+    "audience": "both",
+    "sources": [],
+    "comparison": [
+      {
+        "audience": "teacher",
+        "label": "For teachers",
+        "text": "Teaching choices, activity design and assessment."
+      },
+      {
+        "audience": "both",
+        "label": "For students and teachers",
+        "text": "Concepts, examples and study methods to share with students."
+      }
+    ],
+    "number": 5,
+    "links": []
+  },
+  {
+    "id": "S50CHECKIN",
+    "clicks": 3,
+    "type": "workshop",
+    "kind": "audience-questions",
+    "section": "opening",
+    "stage": "Audience · starting point",
+    "title": "Before we begin…",
+    "message": "Three quick questions. A show of hands is enough.",
+    "body": [
+      "Do you have a ChatGPT account (or Gemini, or Claude)?",
+      "Do you already use GenAI to study or prepare teaching materials?",
+      "Are you familiar with Gemini Notebook (formerly NotebookLM)?"
+    ],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "number": 6,
+    "links": []
+  },
+  {
+    "id": "S51",
+    "type": "workshop",
+    "kind": "scenario",
+    "section": "scenario",
+    "stage": "Scenario",
+    "title": "Andrea needs to understand GenAI",
+    "message": "One student’s learning process, from assignment to assessment",
+    "body": [
+      "Andrea is a second-year computer science student: he can program, but still confuses key concepts of generative models.",
+      "He must study a textbook and explain how a language model generates text.",
+      "We observe his use of tools and the evidence of understanding he keeps."
+    ],
+    "sources": [],
+    "audience": "both",
+    "decision": "You are following the learning method; you do not need to learn programming.",
+    "clicks": 1,
+    "character": {
+      "happy": "images/luca/luca-happy-v2.webp",
+      "worried": "images/luca/luca-worried-heavy-book-v3.webp",
+      "happyAlt": "Andrea smiles confidently, with empty hands resting together at his waist.",
+      "worriedAlt": "Andrea looks worried as he struggles to support an enormous, very thick textbook with both hands. Its cover reads Foundations of Generative Artificial Intelligence, by Marco Cremaschi."
+    },
+    "number": 7,
+    "links": []
+  },
+  {
+    "id": "S53",
+    "type": "workshop",
+    "kind": "book",
+    "section": "scenario",
+    "stage": "Scenario · material",
+    "title": "The assigned textbook",
+    "message": "Marco Cremaschi · Foundations of Generative Artificial Intelligence",
+    "body": [
+      "Topic: Language Models and Basic Architecture.",
+      "The textbook is available as a PDF."
+    ],
+    "sources": [],
+    "audience": "both",
+    "links": [
+      {
+        "label": "Download PDF",
+        "url": "./materials/booklet-genai/Fondamenti_GenAI_Cremaschi.pdf",
+        "download": true
+      }
+    ],
+    "decision": "",
+    "media": {
+      "src": "images/book/pages/page-01.webp",
+      "alt": "Cover of Foundations of Generative Artificial Intelligence, Marco Cremaschi. Language Models and Basic Architecture. Fictional book, original teaching material."
+    },
+    "book": {
+      "cover": "images/book/pages/page-01.webp",
+      "sheets": [
+        {
+          "front": "images/book/pages/page-02.webp",
+          "back": "images/book/pages/page-03.webp"
+        },
+        {
+          "front": "images/book/pages/page-04.webp",
+          "back": "images/book/pages/page-05.webp"
+        }
+      ],
+      "portrait": "images/book/marco-jobs-v2.webp",
+      "author": "Marco Cremaschi",
+      "portraitAlt": "A frontal black-and-white portrait of Marco Cremaschi against a black background, wearing a black mock turtleneck and thin round glasses, with a loosely curled hand supporting his chin."
+    },
+    "number": 8
+  },
+  {
+    "id": "S52",
+    "clicks": 4,
+    "type": "workshop",
+    "kind": "scenario",
+    "section": "scenario",
+    "stage": "Scenario",
+    "title": "Andrea’s learning task",
+    "message": "To understand the textbook and show what he has learned, Andrea must:",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "steps": [
+      {
+        "title": "Read",
+        "text": "Study the textbook. Identify the key ideas and what is still unclear."
+      },
+      {
+        "title": "Represent",
+        "text": "Build a diagram with labelled links between the concepts."
+      },
+      {
+        "title": "Check",
+        "text": "Compare the diagram and AI suggestions with the textbook. Correct errors."
+      },
+      {
+        "title": "Explain",
+        "text": "Use his own words to explain a new example, without AI help."
+      }
+    ],
+    "decision": "Evidence: a checked diagram, an independent explanation and a justified correction.",
+    "stepsLayout": "flow",
+    "number": 9,
+    "links": []
+  },
+  {
+    "id": "S52SDL",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · self-directed learning",
+    "title": "Self-directed learning: making choices",
+    "message": "Andrea takes an active role: he identifies his learning needs, chooses a path and reviews his progress.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "EDU_SELF_DIRECTED"
+    ],
+    "steps": [
+      {
+        "title": "Identify a goal",
+        "text": "What do I need to learn, and what do I want to achieve?"
+      },
+      {
+        "title": "Choose a path",
+        "text": "Which resources, people and strategies will help me learn?"
+      },
+      {
+        "title": "Review progress",
+        "text": "What can I explain now, and what needs more work? Self-assessment helps here."
+      }
+    ],
+    "stepsLayout": "flow",
+    "resultLabel": "Andrea’s example",
+    "result": "“I need to distinguish training from inference. I will use the textbook and a concept map, then check whether I can explain the difference.”",
+    "decision": "Andrea takes responsibility for his choices, with support from teachers and peers.",
+    "number": 10,
+    "links": []
+  },
+  {
+    "id": "S52SA",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · self-assessment",
+    "title": "Self-assessment: checking progress",
+    "message": "Andrea judges his progress against clear criteria, then uses that judgement to improve his work.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "EDU_SELF_ASSESSMENT"
+    ],
+    "steps": [
+      {
+        "title": "Check the criteria",
+        "text": "What should I be able to explain or do?"
+      },
+      {
+        "title": "Look for evidence",
+        "text": "What can I demonstrate? Where do I still struggle?"
+      },
+      {
+        "title": "Choose a next step",
+        "text": "What will I revise, practise or check again?"
+      }
+    ],
+    "stepsLayout": "flow",
+    "resultLabel": "Andrea’s example",
+    "result": "“I can explain the main ideas, but I still struggle to show how they connect. I will revise my map and explain those connections again.”",
+    "decision": "AI can offer feedback; the learner checks the evidence and decides what to improve.",
+    "number": 11,
+    "links": []
+  },
+  {
+    "id": "S52DESIGN",
+    "type": "workshop",
+    "kind": "concept",
+    "section": "scenario",
+    "stage": "Learning method · evidence",
+    "title": "Why the learning design matters",
+    "message": "Research informs how we design support and check understanding.",
+    "body": [],
+    "sources": [
+      "EDU_BASTANI",
+      "EDU_SELF_ASSESSMENT"
+    ],
+    "audience": "both",
+    "comparison": [
+      {
+        "label": "AI-assisted practice",
+        "text": "In one high-school maths experiment, unguarded AI improved practice scores but reduced later unaided performance."
+      },
+      {
+        "label": "Self-assessment and revision",
+        "text": "Learners use criteria and feedback to identify gaps and revise their work."
+      }
+    ],
+    "resultLabel": "Our workshop design",
+    "result": "Check an independent explanation, use clear criteria and allow another attempt.",
+    "decision": "Consider the study context when transferring these findings to another subject or age group.",
+    "number": 12,
+    "links": []
+  },
+  {
+    "id": "S52PHASES",
+    "type": "workshop",
+    "kind": "study-phases",
+    "section": "scenario",
+    "stage": "Learning method · six phases",
+    "title": "A study process in six phases",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "steps": [
+      {
+        "title": "PLAN",
+        "text": "Set your goal, identify your starting point and organise tasks and time."
+      },
+      {
+        "title": "UNDERSTAND",
+        "text": "Clarify difficult ideas through explanations, examples and questions."
+      },
+      {
+        "title": "CONNECT",
+        "text": "Explain ideas in your own words and organise relationships between concepts."
+      },
+      {
+        "title": "RECALL",
+        "text": "Retrieve what you know without looking, then revisit it over time."
+      },
+      {
+        "title": "APPLY",
+        "text": "Use what you have learned to solve problems and handle new situations."
+      },
+      {
+        "title": "CHECK",
+        "text": "Compare your performance with criteria, identify gaps and decide what to study next."
+      }
+    ],
+    "decision": "Checking guides your next step. SUPPORT marks setup, sources and sharing.",
+    "clicks": 6,
+    "number": 13,
+    "links": []
+  },
+  {
+    "id": "S53WHYTOOLS",
+    "type": "workshop",
+    "kind": "tool-choice",
+    "section": "scenario",
+    "stage": "Tool choice · rationale",
+    "title": "Why these tools?",
+    "message": "Compared with dedicated tools for specific learning tasks.",
+    "body": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "Gemini Notebook"
+    ],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "comparison": [
+      {
+        "label": "More control",
+        "icon": "icons/heroicons/adjustments-horizontal.svg",
+        "text": "Adapt explanations, questions and outputs to your learning goal."
+      },
+      {
+        "label": "A connected workflow",
+        "icon": "icons/heroicons/link.svg",
+        "text": "Use the same materials across different study activities."
+      },
+      {
+        "label": "Transferable skills",
+        "icon": "icons/heroicons/arrows-right-left.svg",
+        "text": "Reuse the method across subjects and AI assistants."
+      },
+      {
+        "label": "Potential savings",
+        "icon": "icons/heroicons/banknotes.svg",
+        "text": "Cover several needs before paying for additional tools."
+      }
+    ],
+    "decision": "",
+    "clicks": 4,
+    "number": 14,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "body": [
+      "Maps · Explanations · Revision · Practice"
+    ],
+    "sources": [
+      "CHATGPT_CATALOGUE"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "id": "S53GPT",
+    "kind": "chatgpt-intro",
+    "stage": "ChatGPT · possibilities for learning",
+    "title": "What can ChatGPT do?",
+    "message": "Turn a topic into materials for understanding, practice and revision.",
+    "studyPhases": {
+      "primary": "understand",
+      "secondary": [
+        "connect"
+      ]
+    },
+    "number": 15,
+    "links": []
+  },
+  {
+    "id": "S53SHORTCUTS",
+    "type": "workshop",
+    "kind": "section-divider",
+    "section": "chatgpt",
+    "stage": "ChatGPT · shortcuts",
+    "title": "Shortcuts",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "media": {
+      "src": "images/sections/shortcuts-title-v1.webp",
+      "alt": "An open textbook gives rise to flashcards, a quiz, a concept map, a summary and a prompt card."
+    },
+    "number": 16,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "audience": "both",
+    "lang": "en",
+    "body": [],
+    "id": "S53TYPES",
+    "kind": "concept",
+    "stage": "ChatGPT · using shortcuts",
+    "title": "How shortcuts work",
+    "message": "Use a short label to introduce the task you want the AI to help with.",
+    "sources": [
+      "CHATGPT_PROMPTING",
+      "CHATGPT_WIDGET_TESTS",
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "comparison": [
+      {
+        "label": "Name the activity",
+        "text": "Start with a shortcut such as /quiz, /flashcard or /conceptmap."
+      },
+      {
+        "label": "Describe what you need",
+        "text": "Specify your source, learning goal and output format. Add any questions, feedback or interactive controls you want."
+      }
+    ],
+    "decision": "A shortcut guides the response. Check the generated result against your source.",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "clicks": 2,
+    "number": 17,
+    "links": []
+  },
+  {
+    "id": "S53SHORTCUTCLOUD",
+    "type": "workshop",
+    "kind": "shortcut-cloud",
+    "section": "study",
+    "stage": "ChatGPT · shortcut overview",
+    "title": "15 shortcuts for the learning pathway",
+    "message": "Recall, explain, practise, reflect, plan and teach.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS",
+      "CHATGPT_PROMPTING",
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "tool": "chatgpt",
+    "decision": "15 complementary examples selected from 71 verified labels · similar and secondary variants omitted.",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "shortcutLabels": [
+      {
+        "command": "/quiz",
+        "retained": true
+      },
+      {
+        "command": "/matchinggame",
+        "retained": true
+      },
+      {
+        "command": "/fillintheblanks",
+        "retained": true
+      },
+      {
+        "command": "/flashcard",
+        "retained": true
+      },
+      {
+        "command": "/sortinggame",
+        "retained": true
+      },
+      {
+        "command": "/oral",
+        "retained": true
+      },
+      {
+        "command": "/studyplan",
+        "retained": true
+      },
+      {
+        "command": "/conceptmap",
+        "retained": true
+      },
+      {
+        "command": "/mistakelog",
+        "retained": true
+      },
+      {
+        "command": "/lessonplan",
+        "retained": true
+      },
+      {
+        "command": "/caseStudy",
+        "retained": true
+      },
+      {
+        "command": "/differentiate",
+        "retained": true
+      },
+      {
+        "command": "/peerassessment",
+        "retained": true
+      },
+      {
+        "command": "/worksheet",
+        "retained": true
+      },
+      {
+        "command": "/learningstations",
+        "retained": true
+      }
+    ],
+    "number": 18,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS",
+      "CHATGPT_PROMPTING"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "id": "S53CMD1",
+    "kind": "prompt-commands",
+    "stage": "ChatGPT · selected learning activities · 1/4",
+    "title": "Selected shortcuts · recall and reflection",
+    "message": "Recall first and revisit misconceptions",
+    "commands": [
+      {
+        "command": "/flashcard",
+        "description": "Flip cards and assess recall"
+      },
+      {
+        "command": "/mistakelog",
+        "description": "Review misconceptions and track corrections"
+      }
+    ],
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 19,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS",
+      "CHATGPT_WIDGET_RECHECK",
+      "CHATGPT_PROMPTING"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "id": "S53CMD2",
+    "kind": "prompt-commands",
+    "stage": "ChatGPT · selected learning activities · 2/4",
+    "title": "Selected shortcuts · explain and connect",
+    "message": "Organise relationships, classify examples and explain your reasoning",
+    "commands": [
+      {
+        "command": "/conceptmap",
+        "description": "Label relationships and check understanding"
+      },
+      {
+        "command": "/matchinggame",
+        "description": "Match concepts with their definitions"
+      },
+      {
+        "command": "/sortinggame",
+        "description": "Classify examples and check categories"
+      },
+      {
+        "command": "/oral",
+        "description": "Explain aloud, write a summary and compare expected answers"
+      }
+    ],
+    "studyPhases": {
+      "primary": "connect",
+      "secondary": [
+        "understand"
+      ]
+    },
+    "number": 20,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS",
+      "CHATGPT_PROMPTING"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "id": "S53CMD3",
+    "kind": "prompt-commands",
+    "stage": "ChatGPT · selected learning activities · 3/4",
+    "title": "Selected shortcuts · practice and assessment",
+    "message": "Answer before checking feedback, model answers or criteria",
+    "commands": [
+      {
+        "command": "/quiz",
+        "description": "Choose answers, read feedback and advance"
+      },
+      {
+        "command": "/fillintheblanks",
+        "description": "Enter missing terms and check answers"
+      },
+      {
+        "command": "/worksheet",
+        "description": "Write explanations; reveal model answers and self-score"
+      },
+      {
+        "command": "/caseStudy",
+        "description": "Apply concepts to a case, then reveal explanations"
+      }
+    ],
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 21,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "chatgpt",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS",
+      "CHATGPT_WIDGET_RECHECK",
+      "CHATGPT_PROMPTING"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "id": "S53CMD4",
+    "kind": "prompt-commands",
+    "stage": "ChatGPT · selected learning activities · 4/4",
+    "title": "Selected shortcuts · plan and teach",
+    "message": "Plan learning, adapt activities and review work with shared criteria",
+    "commands": [
+      {
+        "command": "/studyplan",
+        "description": "Break a learning goal into tracked activities"
+      },
+      {
+        "command": "/lessonplan",
+        "description": "Connect objectives, lesson activities and answer keys"
+      },
+      {
+        "command": "/differentiate",
+        "description": "Offer tasks at different support and difficulty levels"
+      },
+      {
+        "command": "/peerassessment",
+        "description": "Select criterion scores and review the total"
+      },
+      {
+        "command": "/learningstations",
+        "description": "Organise stations and track completion"
+      }
+    ],
+    "studyPhases": {
+      "primary": "plan",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 22,
+    "links": []
+  },
+  {
+    "id": "S53DETAILFLASHCARD",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/flashcard",
+    "message": "Practise recall with questions and answers on flip cards.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/flashcard Help me study the attached chapter.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Ten native flashcards",
+    "result": "ChatGPT · 38.5 s",
+    "decision": "Scores reflect self-ratings. Cross-chat recall and daily scheduling were not tested.",
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/video.mp4",
+      "poster": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — ten native flashcards generated with a short prompt, with answer reveal and recall ratings.",
+      "caption": "ChatGPT · 38.5 s",
+      "prompt": "/flashcard Help me study the attached chapter.",
+      "result": {
+        "kind": "file",
+        "url": "materials/video-refresh/2026-11-09-flashcard-short-prompt/widget-flashcard/flashcards.csv",
+        "label": "Download flashcards (CSV)",
+        "download": true,
+        "mediaType": "text/csv",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Original ten-card CSV exported through ChatGPT’s native Download control. Interactive controls are demonstrated in the video; the downloadable CSV is a static export.",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-09-flashcard-short-prompt/provenance.json",
+      "durationSeconds": 38.55,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "a2e46b15838d37fdf2e12899aea910e24d361d1eb6d45ad96b49b3efe76537fd",
+      "recordingMode": "reviewed-native-short-prompt-retake",
+      "refreshReleaseId": "2026-11-09-flashcard-short-prompt"
+    },
+    "number": 23,
+    "links": []
+  },
+  {
+    "id": "S53DETAILMISTAKELOG",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/mistakelog",
+    "message": "Record misconceptions, review corrections and track progress.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 99.8 s",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "plan"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-mistakelog/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-mistakelog/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-mistakelog/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-mistakelog/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /mistakelog: recorded demonstration and use.",
+      "caption": "ChatGPT · 99.8 s",
+      "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7f23-2568-83eb-b08b-3e449f031776",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-mistakelog.json",
+      "durationSeconds": 99.75,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "97c6414614bbd8057db334ddc0681d1fb40fd575f976372933c18ad653861954",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 24,
+    "links": []
+  },
+  {
+    "id": "S53DETAILCONCEPTMAP",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/conceptmap",
+    "message": "Connect concepts with labelled relationships.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+    "promptLabel": "Prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 83.8 s",
+    "studyPhases": {
+      "primary": "connect"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-conceptmap/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-conceptmap/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-conceptmap/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-conceptmap/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /conceptmap: recorded demonstration and use.",
+      "caption": "ChatGPT · 83.8 s",
+      "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef808d-4418-83eb-9fda-9024fb1f0014",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-conceptmap.json",
+      "durationSeconds": 83.85,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "4405f48a71efd34d50a0dec54d4fc2cf0b7eaf4545ee76c3d4f30e6d9530717f",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 25,
+    "links": []
+  },
+  {
+    "id": "S53DETAILMATCHINGGAME",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/matchinggame",
+    "message": "Match concepts with their definitions.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 56.6 s",
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "connect"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-matchinggame/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-matchinggame/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-matchinggame/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-matchinggame/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /matchinggame: recorded demonstration and use.",
+      "caption": "ChatGPT · 56.6 s",
+      "prompt": "/matchinggame Using only the attached chapter, build an interactive three-pair matching game linking training, inference and context to their definitions. Include feedback and progress. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7b82-1844-83eb-a687-82fdd516bd7d",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-matchinggame.json",
+      "durationSeconds": 56.566667,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "fbcc4032c639913fa5bac680cc51a05fe227a02ca97067f12302f6c6fc139162",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 26,
+    "links": []
+  },
+  {
+    "id": "S53DETAILSORTINGGAME",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/sortinggame",
+    "message": "Classify examples into categories and check the result.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 42.2 s",
+    "studyPhases": {
+      "primary": "connect",
+      "secondary": [
+        "apply"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-sortinggame/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-sortinggame/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-sortinggame/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-sortinggame/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /sortinggame: recorded demonstration and use.",
+      "caption": "ChatGPT · 42.2 s",
+      "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7d06-4dac-83ed-af86-32e343b91c9a",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-sortinggame.json",
+      "durationSeconds": 42.233333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "8cc70bb0631f89b06f6684137595105b39a694bbbc1cf5d2400e6728738734df",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 27,
+    "links": []
+  },
+  {
+    "id": "S53DETAILORAL",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/oral",
+    "message": "Practise explaining answers and receive follow-up feedback in chat.*",
+    "body": [
+      "* You can also dictate your answer."
+    ],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 57.9 s",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "apply"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-oral/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-oral/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-oral/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-oral/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /oral: recorded demonstration and use.",
+      "caption": "ChatGPT · 57.9 s",
+      "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7fcd-b9b4-83ed-8e85-f2c32ea2d388",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-oral.json",
+      "durationSeconds": 57.9,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "724959e775922a7e8966d9440acc5bb68e0944af5506b420f5b52819f0e0878f",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 28,
+    "links": []
+  },
+  {
+    "id": "S53DETAILQUIZ",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/quiz",
+    "message": "Answer questions, review feedback and move through a quiz.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 98.1 s",
+    "videoLayout": "focus",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "recall"
+      ]
+    },
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-quiz/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-quiz/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-quiz/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-quiz/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /quiz: recorded demonstration and use.",
+      "caption": "ChatGPT · 98.1 s",
+      "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7ac2-c51c-83eb-bbce-92e9f2459a9c",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-quiz.json",
+      "durationSeconds": 98.133333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "d1a6c7b91929f3a6eada311bd6f6d5162cd86d027904336929714492509c6220",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 29,
+    "links": []
+  },
+  {
+    "id": "S53DETAILFILLINTHEBLANKS",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/fillintheblanks",
+    "message": "Complete missing terms and check your answers.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 49.6 s",
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-fillintheblanks/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-fillintheblanks/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-fillintheblanks/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-fillintheblanks/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /fillintheblanks: recorded demonstration and use.",
+      "caption": "ChatGPT · 49.6 s",
+      "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7bcc-53cc-83ed-a596-930a4499007b",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-fillintheblanks.json",
+      "durationSeconds": 49.6,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "5f8fd65729cc4fb3cb170816683c95a18d39ec6b2bdef4a168fb923913594108",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 30,
+    "links": []
+  },
+  {
+    "id": "S53DETAILWORKSHEET",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/worksheet",
+    "message": "Practise with answer fields and model answers to reveal.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 111.5 s",
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-worksheet/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-worksheet/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-worksheet/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-worksheet/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /worksheet: recorded demonstration and use.",
+      "caption": "ChatGPT · 111.5 s",
+      "prompt": "/worksheet Using only the attached chapter, create an interactive three-exercise worksheet about training, inference and context. Include written-answer fields, model-answer reveals, 0/1/2 self-scores and a total. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef8f1c-4440-83eb-95d8-12cfcaeb7c0d",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-worksheet.json",
+      "durationSeconds": 111.55,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "7a23642ad3085c3262446343879487171e2677e99b305b6aabc8c733573c9ddb",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 31,
+    "links": []
+  },
+  {
+    "id": "S53DETAILCASESTUDY",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/caseStudy",
+    "message": "Analyse a concrete case, then compare with suggested answers.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 87.9 s",
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "check"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-casestudy/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-casestudy/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-casestudy/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-casestudy/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /caseStudy: recorded demonstration and use.",
+      "caption": "ChatGPT · 87.9 s",
+      "prompt": "/caseStudy Using only the attached chapter, create an interactive case study where Andrea changes training, prompts and retrieved context. Include three written decisions, revealable explanations and progress. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef8036-7894-83ed-8626-1e53b502a631",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-casestudy.json",
+      "durationSeconds": 87.866667,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "493b1cc649844a9669c68e4811de2902255140dd75cb505b82356e5cd8de200d",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 32,
+    "links": []
+  },
+  {
+    "id": "S53DETAILSTUDYPLAN",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/studyplan",
+    "message": "Break a learning goal into activities and track completion.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 50.0 s",
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-studyplan/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-studyplan/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-studyplan/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-studyplan/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /studyplan: recorded demonstration and use.",
+      "caption": "ChatGPT · 50.0 s",
+      "prompt": "/studyplan Using only the attached chapter, create an interactive three-step study plan on training, inference and context. Include checkable activities, completion progress and reset. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef7ddc-700c-83ed-ae0a-325ad2224d12",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-studyplan.json",
+      "durationSeconds": 49.95,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "96c79f6dc1f1bf8c22634ee8bae1d17ed7aae27cd519d41f0252c70d04e5da61",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 33,
+    "links": []
+  },
+  {
+    "id": "S53DETAILLESSONPLAN",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/lessonplan",
+    "message": "Outline learning goals, activities and checks for a lesson.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+    "promptLabel": "Prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 98.6 s",
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-lessonplan/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-lessonplan/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-lessonplan/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-lessonplan/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /lessonplan: recorded demonstration and use.",
+      "caption": "ChatGPT · 98.6 s",
+      "prompt": "/lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef81cc-9870-83ed-9885-2c0a3910092b",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-lessonplan.json",
+      "durationSeconds": 98.583333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b6d0559b8b86ebfc44248b1672f2d012fed4f794fc7d21b94cb41d9e9faa3935",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 34,
+    "links": []
+  },
+  {
+    "id": "S53DETAILDIFFERENTIATE",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/differentiate",
+    "message": "Adapt an activity's supports and difficulty to learning needs.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_RECHECK"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.",
+    "promptLabel": "Prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 120.5 s",
+    "studyPhases": {
+      "primary": "plan"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-differentiate/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-differentiate/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-differentiate/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-differentiate/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /differentiate: recorded demonstration and use.",
+      "caption": "ChatGPT · 120.5 s",
+      "prompt": "/differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef875c-e1a0-83eb-ae81-333ee7f3f409",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-differentiate.json",
+      "durationSeconds": 120.45,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "e6f16b3df80ecf4331b927da1f06492b33dbb47a3da82fbe91c287fa61e0a30a",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 35,
+    "links": []
+  },
+  {
+    "id": "S53DETAILPEERASSESSMENT",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/peerassessment",
+    "message": "Review a peer's work using shared criteria and scores.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 71.3 s",
+    "studyPhases": {
+      "primary": "check"
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-peerassessment/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-peerassessment/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-peerassessment/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-peerassessment/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /peerassessment: recorded demonstration and use.",
+      "caption": "ChatGPT · 71.3 s",
+      "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef8983-e614-83eb-ad80-9d45598b094a",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-peerassessment.json",
+      "durationSeconds": 71.3,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "6213988add546c35a70aa8a2a97b27b416792492374130b5310d40e76c1cb6d7",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 36,
+    "links": []
+  },
+  {
+    "id": "S53DETAILLEARNINGSTATIONS",
+    "type": "workshop",
+    "kind": "shortcut-detail",
+    "section": "chatgpt",
+    "stage": "ChatGPT · individual shortcut",
+    "title": "/learningstations",
+    "message": "Organise activities into stations and track completion.",
+    "body": [],
+    "sources": [
+      "CHATGPT_WIDGET_TESTS"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "prompt": "/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.",
+    "promptLabel": "Recorded prompt",
+    "resultLabel": "Recorded interactive output",
+    "result": "ChatGPT · 108.2 s",
+    "studyPhases": {
+      "primary": "apply",
+      "secondary": [
+        "plan"
+      ]
+    },
+    "videoLayout": "focus",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/widget-learningstations/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/widget-learningstations/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/widget-learningstations/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/widget-learningstations/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "ChatGPT — /learningstations: recorded demonstration and use.",
+      "caption": "ChatGPT · 108.2 s",
+      "prompt": "/learningstations Using only the attached chapter, create an interactive three-station activity on training, inference and context. Include station tabs, written responses, expected-answer reveals and completion progress. Answer in English.",
+      "result": {
+        "kind": "chatgpt-share",
+        "url": "https://chatgpt.com/share/6aef8f1f-b2d8-83eb-a43c-3fb8e0af2396",
+        "label": "Open shared result",
+        "interactiveVerified": true,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/widget-learningstations.json",
+      "durationSeconds": 108.183333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "dbd49fd9cfe296cc0d204981dae2426204b75b14c0a61f2d27e45af5b831df3f",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07"
+    },
+    "number": 37,
+    "links": []
+  },
+  {
+    "id": "S53CLAUDE",
+    "type": "workshop",
+    "kind": "screenshot-results",
+    "section": "chatgpt",
+    "stage": "The same requests in Claude",
+    "tool": "claude",
+    "title": "These shortcuts also work in Claude",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "screenshots": [
+      {
+        "label": "/flashcard",
+        "src": "materials/claude-shortcuts/flashcard.png",
+        "alt": "Claude flashcard widget in English, showing the revealed answer that adding a prompt definition changes context rather than model parameters, with Back and Next buttons.",
+        "caption": "12 cards · answer reveal and navigation",
+        "format": "Native flashcard widget",
+        "prompt": "/flashcard Help me study the attached chapter.",
+        "width": 737,
+        "height": 550
+      },
+      {
+        "label": "/quiz",
+        "src": "materials/claude-shortcuts/quiz.png",
+        "alt": "Claude quiz widget in English with a question about tokens, four selectable answers, a Show hint control, three progress steps and a Next button.",
+        "caption": "3 questions · hints, feedback and retry",
+        "format": "Native quiz widget",
+        "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English.",
+        "width": 737,
+        "height": 582
+      },
+      {
+        "label": "/oral",
+        "src": "materials/claude-shortcuts/oral.png",
+        "alt": "Claude oral-practice Artifact in English showing a training-versus-inference question, a typed demonstration answer, Reveal expected answer, Back and Next controls.",
+        "caption": "10 questions · written answer and reveal",
+        "format": "Interactive Artifact",
+        "prompt": "/oral Using only the attached chapter, create an interactive oral-exam practice widget about training versus inference. Show one question at a time, an answer field, expected-answer reveal and next/back. Answer in English.",
+        "width": 668,
+        "height": 600
+      },
+      {
+        "label": "/mistakelog",
+        "src": "materials/claude-shortcuts/mistakelog.png",
+        "width": 730,
+        "height": 537,
+        "alt": "Native Claude HTML preview of a mistake-log card with a written rewrite field, Reveal correction, selectable quick-check answers, and Got it, Review again and Retry card buttons.",
+        "caption": "Interactive mistake log with correction reveal, checks and review controls",
+        "format": "Interactive HTML preview",
+        "prompt": "/mistakelog Using only the attached chapter, build an interactive mistake log for three misconceptions about training, inference and context. Include corrections, review controls and progress. Answer in English."
+      },
+      {
+        "label": "/conceptmap",
+        "src": "materials/claude-shortcuts/conceptmap.png",
+        "width": 737,
+        "height": 464,
+        "alt": "Native Claude concept-map visualization in English with selectable Training, Inference and RAG branches. The selected Inference branch shows fixed parameters, changing context and a labelled flow from input to output.",
+        "caption": "Selectable branches and three check questions with feedback and retry",
+        "format": "Interactive in-chat visualization",
+        "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English."
+      }
+    ],
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 38,
+    "links": []
+  },
+  {
+    "id": "S53GEMINI",
+    "type": "workshop",
+    "kind": "screenshot-results",
+    "section": "chatgpt",
+    "stage": "The same requests in Gemini",
+    "title": "Trying the shortcuts in Gemini",
+    "message": "Quiz and flashcards in Gemini · Canvas apps regenerated, exported and tested locally.",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "screenshots": [
+      {
+        "label": "/quiz · Gemini",
+        "src": "materials/gemini-shortcuts/screenshots/quiz.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Gemini native quiz in English showing a selected answer, textbook-grounded feedback and navigation.",
+        "caption": "Native quiz: hint, correct and incorrect answers, explanatory feedback, 2/3 score and review verified.",
+        "format": "Native Gemini widget",
+        "prompt": "/quiz Using only the attached book, create an interactive quiz with three questions about tokens, context and model parameters. Show a hint and explanatory feedback for each question, let me advance one question at a time, display my final score and let me retry. Answer in English."
+      },
+      {
+        "label": "/flashcard · Gemini",
+        "src": "materials/gemini-shortcuts/screenshots/flashcard.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Gemini native 25-card deck in English with a revealed answer, navigation and learning tracking.",
+        "caption": "Native 25-card set after retry: answer flip, Next and Previous verified.",
+        "format": "Native Gemini widget",
+        "prompt": "/flashcard Help me study the attached chapter."
+      },
+      {
+        "label": "/fillintheblanks · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/fillintheblanks.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing checked fill-in answers and explanations.",
+        "caption": "Regenerated in Canvas. Unmodified exported HTML verified locally: wrong answer, 2/3 then 3/3, explanations and progress.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/fillintheblanks Using only the attached chapter, create an interactive three-item fill-in-the-blanks widget on training, inference and context. Include hints, checking and explanations. Answer in English."
+      },
+      {
+        "label": "/sortinggame · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/sortinggame.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing the 3/3 classification result and explanations.",
+        "caption": "Regenerated in Canvas. Unmodified exported HTML verified locally: three classifications, 3/3 score and explanatory feedback.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/sortinggame Using only the attached chapter, build an interactive three-item sorting widget. Classify parameter updates, fixed-model calculations and adding prompt context as training or inference. Include checking and explanations. Answer in English."
+      },
+      {
+        "label": "/conceptmap · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/conceptmap.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, with the RAG branch selected and labelled relationships.",
+        "caption": "Regenerated in Canvas; the first export was incomplete. Complete unmodified replacement verified locally: Training and RAG branches, three checked answers and feedback.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English."
+      },
+      {
+        "label": "/peerassessment · exported app",
+        "src": "materials/gemini-shortcuts/screenshots/peerassessment.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Unmodified Gemini Canvas export opened locally in English, showing a selected score, textbook evidence and written feedback.",
+        "caption": "Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.",
+        "format": "Gemini Canvas export · local browser",
+        "prompt": "/peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English."
+      }
+    ],
+    "studyPhases": {
+      "primary": "recall",
+      "secondary": [
+        "check"
+      ]
+    },
+    "number": 39,
+    "links": []
+  },
+  {
+    "id": "S53TOOLSSECTION",
+    "type": "workshop",
+    "kind": "section-divider",
+    "section": "study",
+    "stage": "Study tools",
+    "title": "Tools",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "media": {
+      "src": "images/sections/tool-title-v1.webp",
+      "alt": "An open textbook with a concept-map tablet, flashcards, a study checklist, a timer and a pencil."
+    },
+    "number": 40,
+    "links": []
+  },
+  {
+    "id": "S61TOOLNOTEBOOK",
+    "type": "workshop",
+    "kind": "tool-divider",
+    "section": "study",
+    "stage": "Gemini Notebook · recorded examples",
+    "tool": "notebook",
+    "title": "Gemini Notebook",
+    "message": "",
+    "body": [],
+    "sources": [],
+    "audience": "both",
+    "lang": "en",
+    "studyPhases": {
+      "primary": "understand",
+      "secondary": [
+        "connect"
+      ]
+    },
+    "number": 41,
+    "links": []
+  },
+  {
+    "id": "S61",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Gemini Notebook: add and select sources",
+    "message": "Import the textbook and decide which material each question may use",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK_SOURCES",
+      "TOOL_NOTEBOOK_PRICE"
+    ],
+    "audience": "both",
+    "tool": "notebook",
+    "steps": [
+      {
+        "title": "Upload the textbook",
+        "text": "Add the original Fondamenti_GenAI_Cremaschi.pdf through the file chooser."
+      },
+      {
+        "title": "Inspect the source",
+        "text": "Check the imported title and generated summary against the original."
+      },
+      {
+        "title": "Select the material",
+        "text": "Use source checkboxes to keep a question focused on the textbook PDF."
+      }
+    ],
+    "result": "A study environment with the assigned material as its reference.",
+    "decision": "Check the imported text before relying on a generated answer.",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-sources/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-sources/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-sources/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-sources/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Gemini Notebook: add and select sources: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 24.4 s",
+      "prompt": "Using only the uploaded book, explain what stays fixed during ordinary inference. Answer in English in two short sentences.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-sources/exports/answer-unimib.txt",
+        "label": "Open result (text)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "text/plain; charset=utf-8",
+        "download": true,
+        "sha256": "c66e32059617eb74f065976786fe6f587b5cfab03051be514e57a832d2799475",
+        "bytes": 404,
+        "sourceMethod": "native-ui-copy",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-sources.json",
+      "durationSeconds": 24.4,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "a8ceb24285bd2f603667c3f2cb22d44c59e0eba05e6e1042df2782d5c83c4050",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 42,
+    "links": []
+  },
+  {
+    "id": "S61RESEARCH",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_SOURCES"
+    ],
+    "kind": "tool-demo",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Find and review new sources",
+    "message": "Search, inspect the results, then choose what to import",
+    "decision": "Review a source before adding it to the evidence for an answer.",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-research/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-research/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-research/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-research/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Find and review new sources: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 36.0 s",
+      "prompt": "Find reliable primary sources that distinguish tokenization, document retrieval (RAG), and language-model training. Prefer official documentation or original research. I will inspect the source relevance before importing anything.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-research/exports/answer-unimib.txt",
+        "label": "Open result (text)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "text/plain; charset=utf-8",
+        "download": true,
+        "sha256": "28aa30c64b36fd37a91bb096099cbf74cde46937e234867d51e6d5db249c6c04",
+        "bytes": 1202,
+        "sourceMethod": "native-ui-copy",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-research.json",
+      "durationSeconds": 35.966667,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "d6ef44f7d64e037c6ebfbbf04911cc595ada81887144cc564fe6c132c87a2c60",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 43,
+    "links": []
+  },
+  {
+    "id": "S62",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Ask a focused question",
+    "message": "Request a short explanation with references to the textbook",
+    "body": [
+      "The need is to understand why an answer can change without retraining."
+    ],
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "audience": "both",
+    "tool": "notebook",
+    "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
+    "decision": "Read the answer, then check whether each reference supports its claim.",
+    "studyPhases": {
+      "primary": "understand"
+    },
+    "promptLabel": "Recorded prompt",
+    "videoLayout": "prompt",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-chat/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-chat/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-chat/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-chat/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Ask a focused question: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 58.4 s",
+      "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-chat/exports/answer-unimib.txt",
+        "label": "Open result (text)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "text/plain; charset=utf-8",
+        "download": true,
+        "sha256": "1bedb481ced6b9e1e3eac89029c6661b72505e966d7f2d256266b7eaad60aeac",
+        "bytes": 1073,
+        "sourceMethod": "native-ui-copy",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-chat.json",
+      "durationSeconds": 58.383008,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "bbbedbdc2c0c9ef7557dff1271dd8c2f271afff11d12807633dde1f59142d9ad",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 44,
+    "links": []
+  },
+  {
+    "id": "S63",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Open the citation and its source",
+    "message": "Compare the generated claim with the original passage",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "audience": "both",
+    "tool": "notebook",
+    "steps": [
+      {
+        "title": "Open the reference",
+        "text": "Select citation 4 beside the statement about ordinary inference."
+      },
+      {
+        "title": "Read the source",
+        "text": "Compare the answer with the original paragraph in the source viewer."
+      },
+      {
+        "title": "Check the condition",
+        "text": "Preserve the distinction between inference and training."
+      }
+    ],
+    "decision": "Preserve the condition ‘during ordinary inference’ when reusing the explanation.",
+    "studyPhases": {
+      "primary": "understand"
+    },
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-citations/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-citations/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-citations/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-citations/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Open the citation and its source: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 45.9 s",
+      "prompt": "Using only the uploaded chapter, explain the difference between learned parameters and context during ordinary inference. Use three short points and cite the chapter. Then give one example involving a definition added to a prompt. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-citations/exports/answer-unimib.txt",
+        "label": "Open result (text)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "text/plain; charset=utf-8",
+        "download": true,
+        "sha256": "49442ec0e1f42da86bdc3f3860d046fbc34e000b59ba2d0fb9f7e130012787f2",
+        "bytes": 1201,
+        "sourceMethod": "native-ui-copy",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-citations.json",
+      "durationSeconds": 45.883333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "7187d83f706bb3917521cc96e99348b73678e2f5c139c1e999af23f6da277869",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "links": [
+      {
+        "label": "Earlier PDF citation capture",
+        "url": "./images/tools/notebook-citation.jpg"
+      }
+    ],
+    "number": 45
+  },
+  {
+    "id": "S64SETTINGS",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK"
+    ],
+    "kind": "tool-demo",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Set up a Learning Guide",
+    "message": "Choose the conversation goal and response length",
+    "decision": "Use the guide to support Andrea’s own explanation and attempts.",
+    "studyPhases": {
+      "primary": "understand"
+    },
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-customize/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-customize/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-customize/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-customize/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Set up a Learning Guide: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 36.7 s",
+      "prompt": "Using only the uploaded chapter, help Andrea explain why adding a new definition to a prompt changes the context without updating learned parameters. Ask one short question at a time, wait for an answer, and offer a hint before the answer. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-customize/exports/answer-unimib.txt",
+        "label": "Open result (text)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "text/plain; charset=utf-8",
+        "download": true,
+        "sha256": "2f04230b05e7d999c7cd854d65095b0bc502c9943a7c9129c19a24cb78bf8dad",
+        "bytes": 625,
+        "sourceMethod": "native-ui-copy",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-customize.json",
+      "durationSeconds": 36.716667,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "3f74bfbc5080523ea03b5f34b5a181b3ff4c6078862f3c418149b3e626aa310e",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 46,
+    "links": []
+  },
+  {
+    "id": "S64STUDIO",
+    "type": "workshop",
+    "kind": "studio-overview",
+    "section": "study",
+    "stage": "Gemini Notebook · Studio overview",
+    "tool": "notebook",
+    "title": "Gemini Notebook Studio: what you can create",
+    "message": "Choose the format that fits your learning goal.",
+    "body": [
+      "Audio Overview · Video Overview",
+      "Mind Map · Reports",
+      "Flashcards · Quiz",
+      "Infographic · Slide Deck · Data Table"
+    ],
+    "sources": [
+      "TOOL_NOTEBOOK_STUDIO"
+    ],
+    "audience": "both",
+    "lang": "en",
+    "studyPhases": {
+      "primary": "support"
+    },
+    "media": {
+      "src": "images/tools/notebook-studio.png",
+      "alt": "Gemini Notebook Studio panel showing nine generation options: Audio Overview, Video Overview, Mind Map, Reports, Flashcards, Quiz, Infographic, Slide Deck and Data Table.",
+      "fit": "contain",
+      "provenance": "images/tools/notebook-studio.provenance.json"
+    },
+    "number": 47,
+    "links": []
+  },
+  {
+    "id": "S66",
+    "type": "workshop",
+    "kind": "notebook-output",
+    "section": "study",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Explore a generated Mind Map",
+    "message": "",
+    "body": [],
+    "sources": [
+      "TOOL_NOTEBOOK_MAP",
+      "EDU_MAPS"
+    ],
+    "audience": "both",
+    "tool": "notebook",
+    "steps": [
+      {
+        "title": "Set a topic",
+        "text": "Focus the Mind Map on training, inference, context and document retrieval."
+      },
+      {
+        "title": "Expand the map",
+        "text": "Open the larger viewer and expand its branches."
+      },
+      {
+        "title": "Explain a relationship",
+        "text": "Use the map for orientation, then explain the connection and check the textbook."
+      }
+    ],
+    "studyPhases": {
+      "primary": "connect",
+      "secondary": [
+        "understand"
+      ]
+    },
+    "notebookOutput": "mind-map",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-mind-map/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-mind-map/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-mind-map/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-mind-map/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Explore a generated Mind Map: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 95.3 s",
+      "prompt": "Create a mind map from the uploaded book focused on training, ordinary inference, context, and retrieval (RAG). Preserve the distinction between changed inputs and changed model parameters. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-mind-map/exports/mind-map.png",
+        "label": "Mind map (PNG, static)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Complete static screenshot of the native map; not an interactive map or a claimed native Download export.",
+        "mediaType": "image/png",
+        "download": true,
+        "sha256": "87fd167be2edb177a85558ba382964ba4fb191bdcd5257f1c23a184e4bce3f16",
+        "bytes": 275140,
+        "sourceMethod": "observed-ui-native-screenshot",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-mind-map.json",
+      "durationSeconds": 95.3,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "7a768fe87ebeec9f3bae869513afbc591cb302ba546ba60ebe6ae7f1ca7c5c38",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 48,
+    "links": []
+  },
+  {
+    "id": "S67",
+    "type": "workshop",
+    "kind": "tool-demo",
+    "section": "study",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Answer a quiz before reading feedback",
+    "message": "Attempt a question, choose an answer and inspect the explanation",
+    "body": [
+      "Answer before opening the hint. Read the explanation, then retry the missed question."
+    ],
+    "sources": [
+      "TOOL_NOTEBOOK_QUIZ",
+      "EDU_RETRIEVAL"
+    ],
+    "audience": "both",
+    "tool": "notebook",
+    "studyPhases": {
+      "primary": "check",
+      "secondary": [
+        "recall"
+      ]
+    },
+    "decision": "Use feedback to revise an explanation, then check it against the textbook.",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-quiz/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-quiz/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-quiz/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-quiz/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Answer a quiz before reading feedback: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 94.1 s",
+      "prompt": "Create a compact quiz from the uploaded book on context versus parameters, tokens versus words, and probability versus truth. Use six questions if the native controls allow it. Include hints and explanatory feedback. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-quiz/exports/quiz-and-solutions.pdf",
+        "label": "Quiz and solutions (PDF, static)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.",
+        "mediaType": "application/pdf",
+        "download": true,
+        "sha256": "73fd6c1e81809025ad2568bab70ed66b1d68cbf5dd4406b9353f66341e0c9c39",
+        "bytes": 110398,
+        "sourceMethod": "observed-ui-derived-pdf",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-quiz.json",
+      "durationSeconds": 94.1,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b85ef7493bc6b392cc99bdd4b2a4bee793dd98746588d5b44f11de145e1e01da",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 49,
+    "links": []
+  },
+  {
+    "id": "S67CARDS",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_QUIZ"
+    ],
+    "kind": "tool-demo",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Practise recall with flashcards",
+    "message": "Try an answer, reveal the card and record your own judgement",
+    "studyPhases": {
+      "primary": "recall"
+    },
+    "decision": "Recognising the revealed answer is different from recalling it unaided.",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-flashcards/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-flashcards/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-flashcards/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-flashcards/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Practise recall with flashcards: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 49.1 s",
+      "prompt": "Create concise flashcards from the uploaded book on training versus inference, context versus parameters, tokenization and RAG. Include questions that require an explanation before revealing the answer. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-flashcards/exports/flashcards.csv",
+        "label": "Flashcards (CSV)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "text/csv; charset=utf-8",
+        "download": true,
+        "sha256": "4c398a23c2bdc20426d6dd393c59320dd229ae2d1d997d457f854b7e51dc5998",
+        "bytes": 5159,
+        "sourceMethod": "user-performed-native-download",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-flashcards.json",
+      "durationSeconds": 49.133333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "fa2cf4f325a4d21198f4b0d186cbbbf620591a761701167febbc7c6fe8aeb800",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 50,
+    "links": []
+  },
+  {
+    "id": "S67REPORTS",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_STUDIO"
+    ],
+    "kind": "notebook-output",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Build a study guide from the textbook",
+    "message": "",
+    "studyPhases": {
+      "primary": "connect",
+      "secondary": [
+        "understand"
+      ]
+    },
+    "notebookOutput": "reports",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-reports/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-reports/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-reports/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-reports/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Build a study guide from the textbook: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 52.9 s",
+      "prompt": "Create a concise study guide from the uploaded book focused on training, ordinary inference, context, tokenization and RAG. Include a comparison table, three short-answer questions and a separate answer key. Cite the chapter and keep probability distinct from factual truth. Answer in English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-reports/exports/study-guide-readable-derived.pdf",
+        "label": "Study guide (PDF, static)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "qualification": "Readable static PDF derived faithfully from the observed native interface; not a native PDF download or an interactive activity.",
+        "mediaType": "application/pdf",
+        "download": true,
+        "sha256": "f5e1afdb7c5906b5f738b54eba58a921ddfa31e1ddf3bd41ecb09e8e0b610cd9",
+        "bytes": 253657,
+        "sourceMethod": "observed-ui-derived-pdf",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-reports.json",
+      "durationSeconds": 52.883008,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "41b1760a2d7c890c3d2fad960a505bf9a08e940d59b4c33f7fad181dd4cb1a17",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 51,
+    "links": []
+  },
+  {
+    "id": "S67AUDIO",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_AUDIO"
+    ],
+    "kind": "notebook-output",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Listen to an Audio Overview",
+    "message": "",
+    "studyPhases": {
+      "primary": "understand"
+    },
+    "notebookOutput": "audio",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-audio/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-audio/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Listen to an Audio Overview: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 34.6 s",
+      "prompt": "Focus the Audio Overview on training versus ordinary inference, how context can change without weight updates, and how RAG supplies passages. Keep the discussion based on the uploaded book and avoid claiming that probability guarantees truth. Use English.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-audio/exports/how-generative-ai-predicts-next-tokens.m4a",
+        "label": "Open result (audio)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "audio/mp4",
+        "download": true,
+        "sha256": "c2b6f705df1a3f35af1e21e7e08f4f08eaa21ae0e568e192d948fb2f8e9e5660",
+        "bytes": 38513322,
+        "sourceMethod": "native-download",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-10-notebook-audio-restored/notebook-audio/provenance.json",
+      "durationSeconds": 34.633333,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "3d22ab942e6e91a972a5bbf752a0334ffd9e16042db915fdc9f9ed2fffeb8e49",
+      "recordingMode": "native-capture-restored-audio",
+      "refreshReleaseId": "2026-11-10-notebook-audio-restored",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 52,
+    "links": []
+  },
+  {
+    "id": "S67VIDEO",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_VIDEO"
+    ],
+    "kind": "notebook-output",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Watch a Video Overview",
+    "message": "",
+    "studyPhases": {
+      "primary": "understand"
+    },
+    "notebookOutput": "video",
+    "media": {
+      "type": "video",
+      "src": "materials/notebook/video-overview-2026-11-08/overview.mp4",
+      "poster": "materials/notebook/video-overview-2026-11-08/poster.jpg",
+      "captions": "materials/notebook/video-overview-2026-11-08/captions.en.vtt",
+      "transcriptFile": "materials/notebook/video-overview-2026-11-08/transcript.txt",
+      "captionsDefault": false,
+      "alt": "Original English Gemini Notebook Video Overview: Training vs. Inference & RAG, generated 8 November 2026.",
+      "caption": "8 Nov 2026 · 6:56 · original audio",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec",
+      "durationSeconds": 416.867846,
+      "sha256": "cf78bafa2b23aec48abbc1c9ce38e920cd21fb0b1a5ef1d054630fc26d94c0b6",
+      "recordingMode": "native-video-export",
+      "provenance": "materials/notebook/video-overview-2026-11-08/provenance.json"
+    },
+    "number": 53,
+    "links": []
+  },
+  {
+    "id": "S67INFO",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_INFO"
+    ],
+    "kind": "notebook-output",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Compare concepts in an infographic",
+    "message": "",
+    "studyPhases": {
+      "primary": "connect",
+      "secondary": [
+        "understand"
+      ]
+    },
+    "notebookOutput": "infographic",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-infographic/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-infographic/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-infographic/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-infographic/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Compare concepts in an infographic: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 33.1 s",
+      "prompt": "Create an English infographic comparing training, ordinary inference and RAG from the uploaded book. Show what changes, what stays fixed and one misconception to avoid for each process.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-infographic/exports/generative-ai-mechanics-comparison.png",
+        "label": "Open result (PNG)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "image/png",
+        "download": true,
+        "sha256": "a43c28f63d2a3b5c1ff57a6c5fca138973843c0c00c95cc32da9f759e502503d",
+        "bytes": 4186815,
+        "sourceMethod": "native-download",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-infographic.json",
+      "durationSeconds": 33.1,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b4f9e19371b95fb95efc6b74628db2a2cd2e5c45ba0b0250ddf659c686de9cbf",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 54,
+    "links": []
+  },
+  {
+    "id": "S67SLIDES",
+    "type": "workshop",
+    "section": "study",
+    "body": [],
+    "audience": "both",
+    "tool": "notebook",
+    "sources": [
+      "TOOL_NOTEBOOK_SLIDES"
+    ],
+    "kind": "notebook-output",
+    "stage": "Gemini Notebook · recorded examples",
+    "title": "Generate and present slides",
+    "message": "",
+    "studyPhases": {
+      "primary": "connect",
+      "secondary": [
+        "understand"
+      ]
+    },
+    "notebookOutput": "slides",
+    "media": {
+      "type": "video",
+      "src": "materials/video-refresh/2026-11-07/notebook-slides/video.mp4",
+      "poster": "materials/video-refresh/2026-11-07/notebook-slides/poster.jpg",
+      "captions": "materials/video-refresh/2026-11-07/notebook-slides/captions.en.vtt",
+      "transcriptFile": "materials/video-refresh/2026-11-07/notebook-slides/transcript.txt",
+      "captionsDefault": false,
+      "browserFrame": true,
+      "alt": "Gemini Notebook — Generate and present slides: recorded demonstration and use.",
+      "caption": "Gemini Notebook · 88.1 s",
+      "prompt": "Create a short English slide deck from the uploaded book on training, ordinary inference, context and RAG. Distinguish parameter changes from changes to the input. End with a question the learner must explain independently.",
+      "result": {
+        "kind": "file",
+        "url": "/materials/video-refresh/2026-11-07/notebook-slides/exports/Beyond_the_Prompt.pdf",
+        "label": "Open result (PDF)",
+        "interactiveVerified": false,
+        "recipientVerified": true,
+        "ownerIndependent": true,
+        "mediaType": "application/pdf",
+        "download": true,
+        "sha256": "2b27f62936a410e5ecb8f790cea69b5ea63cc45f144ac172571f2efa24a34f22",
+        "bytes": 7063814,
+        "sourceMethod": "native-download",
+        "supplemental": []
+      },
+      "provenance": "materials/video-refresh/2026-11-07/provenance/notebook-slides.json",
+      "durationSeconds": 88.083008,
+      "width": 1440,
+      "height": 900,
+      "fps": 60,
+      "sha256": "b5908881ba8a1f79c4a335b0f2e5ab500813812c48b39622568a0d60f40774c4",
+      "recordingMode": "accepted-native-refresh",
+      "refreshReleaseId": "2026-11-07",
+      "source": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+    },
+    "number": 55,
+    "links": []
+  },
+  {
+    "id": "S97",
+    "type": "workshop",
+    "kind": "tool-table",
+    "section": "resources",
+    "stage": "Resources · free tools",
+    "title": "Free tools",
+    "message": "Choose the function you need; free plans may require an account or have usage limits.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "TOOL_NOTEBOOK_PRICE",
+      "TOOL_NAPKIN",
+      "TOOL_DESMOS",
+      "TOOL_MAGIC_PRICE",
+      "TOOL_FORMATIVE",
+      "TOOL_FORMS"
+    ],
+    "toolTable": {
+      "headers": [
+        "Tool",
+        "Use",
+        "Access and limits"
+      ],
+      "rows": [
+        {
+          "tool": "Gemini Notebook",
+          "purpose": "Study sources and check citations",
+          "access": "Account + quotas; some generation features are adult-only.",
+          "url": "https://notebook.google.com/notebook/ec7327d7-7a50-4712-82bd-4b5298ebf7ec"
+        },
+        {
+          "tool": "Napkin",
+          "purpose": "Turn checked text into visuals",
+          "access": "Free credits; branded PNG/PDF export.",
+          "url": "https://www.napkin.ai/pricing.html"
+        },
+        {
+          "tool": "Desmos",
+          "purpose": "Explore expressions and graphs",
+          "access": "Free use; account to save graphs.",
+          "url": "https://www.desmos.com/calculator"
+        },
+        {
+          "tool": "MagicSchool",
+          "purpose": "Draft questions and criteria",
+          "access": "Free tier; account and usage limits.",
+          "url": "https://www.magicschool.ai/pricing"
+        },
+        {
+          "tool": "Formative",
+          "purpose": "Collect answers and give feedback",
+          "access": "Free Teacher account.",
+          "url": "https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me"
+        },
+        {
+          "tool": "Google Forms",
+          "purpose": "Build quizzes and collect answers",
+          "access": "Google account; review explanations.",
+          "url": "https://support.google.com/docs/answer/7032287?hl=en"
+        }
+      ]
+    },
+    "studyPhases": {
+      "primary": "support"
+    },
+    "number": 56,
+    "links": []
+  },
+  {
+    "type": "workshop",
+    "section": "resources",
+    "body": [],
+    "audience": "both",
+    "id": "S97STUDY",
+    "kind": "tool-table",
+    "stage": "Resources · free tools",
+    "title": "Free tools for maps and review",
+    "message": "Choose a drawing surface or a review routine for the same book.",
+    "sources": [
+      "TOOL_DRAWIO",
+      "TOOL_EXCALIDRAW",
+      "TOOL_ANKI",
+      "TOOL_ANKIWEB",
+      "TOOL_KNOWT",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "toolTable": {
+      "headers": [
+        "Tool",
+        "Use",
+        "Access and limits"
+      ],
+      "rows": [
+        {
+          "tool": "draw.io",
+          "purpose": "Build labelled flows and diagrams",
+          "access": "Free editor; no account required.",
+          "url": "https://app.diagrams.net/"
+        },
+        {
+          "tool": "Excalidraw",
+          "purpose": "Sketch and explain relationships",
+          "access": "Free local canvas; save an editable copy.",
+          "url": "https://excalidraw.com/"
+        },
+        {
+          "tool": "Anki / AnkiWeb",
+          "purpose": "Review checked cards over time",
+          "access": "Desktop + web free; web account. Official iOS app paid.",
+          "url": "https://apps.ankiweb.net/"
+        },
+        {
+          "tool": "Knowt",
+          "purpose": "Flashcards and spaced practice",
+          "access": "Free study modes; account. AI usage limits.",
+          "url": "https://knowt.com/"
+        },
+        {
+          "tool": "MindMeister Basic",
+          "purpose": "Organise concepts in mind maps",
+          "access": "Account; 3 maps/person, including shared maps.",
+          "url": "https://www.mindmeister.com/"
+        }
+      ]
+    },
+    "studyPhases": {
+      "primary": "support"
+    },
+    "number": 57,
+    "links": []
+  },
+  {
+    "id": "S97P",
+    "type": "workshop",
+    "kind": "tool-table",
+    "section": "resources",
+    "stage": "Resources · paid tools",
+    "title": "Paid tools and upgrades",
+    "message": "Optional upgrades: compare the added function with the available free alternative.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "TOOL_NOTEBOOK_PRICE",
+      "TOOL_NAPKIN",
+      "TOOL_MINDMEISTER",
+      "TOOL_REMNOTE",
+      "TOOL_WOLFRAM_PRICE",
+      "TOOL_MAGIC_PRICE",
+      "TOOL_FORMATIVE",
+      "TOOL_WAYGROUND",
+      "TOOL_MINDMEISTER_LIMIT"
+    ],
+    "toolTable": {
+      "headers": [
+        "Tool / plan",
+        "What it adds",
+        "Free alternative / conditions"
+      ],
+      "rows": [
+        {
+          "tool": "Notebook paid tiers",
+          "purpose": "Higher usage and extra features",
+          "access": "Standard remains free.",
+          "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+        },
+        {
+          "tool": "Napkin Plus / Pro",
+          "purpose": "More credits and export formats",
+          "access": "Free PNG/PDF with branding.",
+          "url": "https://www.napkin.ai/pricing.html"
+        },
+        {
+          "tool": "MindMeister Personal / Pro",
+          "purpose": "Unlimited maps; more exports",
+          "access": "Basic: 3 maps/person, including shared maps.",
+          "url": "https://www.mindmeister.com/pricing"
+        },
+        {
+          "tool": "RemNote Pro / AI",
+          "purpose": "Advanced PDF and AI study tools",
+          "access": "Free notes and flashcards.",
+          "url": "https://www.remnote.com/pricing"
+        },
+        {
+          "tool": "Wolfram|Alpha Pro",
+          "purpose": "Step-by-step solutions",
+          "access": "Basic excludes worked solutions.",
+          "url": "https://www.wolframalpha.com/pro/pricing/"
+        },
+        {
+          "tool": "MagicSchool Plus",
+          "purpose": "More generation and management",
+          "access": "Free tier available.",
+          "url": "https://www.magicschool.ai/pricing"
+        },
+        {
+          "tool": "Formative paid plans",
+          "purpose": "Rubrics, audio/video responses and AI feedback",
+          "access": "Free Teacher for response collection.",
+          "url": "https://help.formative.com/en/articles/6827953-what-formative-plan-is-best-for-me"
+        },
+        {
+          "tool": "Wayground paid plans",
+          "purpose": "Extra quiz and report features",
+          "access": "Starter limits vary by region.",
+          "url": "https://help.wayground.com/support/solutions/articles/158000404038-wayground-starter-basic-plan"
+        }
+      ]
+    },
+    "studyPhases": {
+      "primary": "support"
+    },
+    "number": 58,
+    "links": []
+  },
+  {
+    "id": "S97ACCESS",
+    "type": "workshop",
+    "kind": "tool-table",
+    "section": "resources",
+    "stage": "Resources · accessibility",
+    "title": "Accessibility tools",
+    "message": "Choose reading and writing support with the person who will use it.",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "ACC_EDGE",
+      "ACC_MAC",
+      "ACC_WINDOWS",
+      "TOOL_READWRITE"
+    ],
+    "toolTable": {
+      "headers": [
+        "Tool",
+        "Support",
+        "Access and limits"
+      ],
+      "rows": [
+        {
+          "tool": "Edge",
+          "purpose": "Read aloud and adapt reading",
+          "access": "Browser and page support vary.",
+          "url": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge"
+        },
+        {
+          "tool": "macOS / Windows",
+          "purpose": "Dictate text, then review it",
+          "access": "Microphone and language settings apply.",
+          "url": "https://support.microsoft.com/en-us/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc"
+        },
+        {
+          "tool": "Read&Write",
+          "purpose": "Reading and writing support suite",
+          "access": "Licence; teacher eligibility varies.",
+          "url": "https://www.everway.com/products/read-and-write-education/pricing/"
+        }
+      ]
+    },
+    "studyPhases": {
+      "primary": "support"
+    },
+    "number": 59,
+    "links": []
+  },
+  {
+    "id": "S103",
+    "type": "workshop",
+    "kind": "thanks",
+    "section": "closing",
+    "stage": "Thank you",
+    "title": "Thank you.",
+    "message": "Marco Cremaschi",
+    "body": [
+      "University of Milano-Bicocca · Whattadata"
+    ],
+    "sources": [],
+    "audience": "both",
+    "links": [
+      {
+        "label": "marco.cremaschi@unimib.it",
+        "url": "mailto:marco.cremaschi@unimib.it"
+      }
+    ],
+    "media": {
+      "src": "images/andrea/andrea-thumbs-up-30-e-lode-v1.webp",
+      "alt": "Andrea smiles, gives a thumbs-up with one hand and holds a sheet marked 30 e lode in the other.",
+      "type": "image"
+    },
+    "number": 60
+  },
+  {
+    "id": "S99",
+    "type": "workshop",
+    "kind": "bibliography",
+    "section": "resources",
+    "stage": "Bibliography",
+    "title": "Bibliography",
+    "message": "",
+    "body": [],
+    "audience": "both",
+    "sources": [
+      "EDU_BASTANI",
+      "EDU_DENG",
+      "EDU_KESTIN",
+      "EDU_HUANG",
+      "EDU_RETRIEVAL",
+      "EDU_SRL",
+      "EDU_MAPS",
+      "EDU_UNESCO",
+      "ACC_CAST",
+      "ACC_COGA",
+      "ACC_AID",
+      "EDU_SELF_ASSESSMENT",
+      "EDU_SELF_DIRECTED"
+    ],
+    "references": [
+      {
+        "label": "Andrade (2019)",
+        "citation": "Andrade, H. L. (2019). A critical review of research on student self-assessment. Frontiers in Education, 4, 87.",
+        "url": "https://doi.org/10.3389/feduc.2019.00087",
+        "display": "Formative student self-assessment",
+        "shortTitle": "Formative student self-assessment",
+        "group": "Learning & assessment"
+      },
+      {
+        "label": "Karpicke & Blunt (2011)",
+        "citation": "Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772–775. https://doi.org/10.1126/science.1199327",
+        "url": "https://doi.org/10.1126/science.1199327",
+        "group": "Learning & assessment",
+        "shortTitle": "Retrieval practice and concept maps"
+      },
+      {
+        "label": "NLM (n.d.)",
+        "citation": "National Library of Medicine. (n.d.). Self-Directed Learning as Topic (MeSH D000073819). Definition attributed to Knowles (1975), Self-directed learning: A guide for learners and teachers. New York: Association Press.",
+        "url": "https://www.ncbi.nlm.nih.gov/mesh/2023167",
+        "display": "Self-directed learning · MeSH definition",
+        "shortTitle": "Self-directed learning · MeSH definition",
+        "group": "Learning & assessment"
+      },
+      {
+        "label": "Novak & Cañas (2008)",
+        "citation": "Novak, J. D., & Cañas, A. J. (2008). The theory underlying concept maps and how to construct and use them. (Technical Report IHMC CmapTools 2006-01, Rev. 01-2008). Florida Institute for Human and Machine Cognition. https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf",
+        "url": "https://cmap.ihmc.us/publications/researchpapers/theoryunderlyingconceptmaps.pdf",
+        "group": "Learning & assessment",
+        "shortTitle": "How to construct concept maps"
+      },
+      {
+        "label": "Panadero (2017)",
+        "citation": "Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. Frontiers in Psychology, 8, Article 422. https://doi.org/10.3389/fpsyg.2017.00422",
+        "url": "https://doi.org/10.3389/fpsyg.2017.00422",
+        "group": "Learning & assessment",
+        "shortTitle": "Models of self-regulated learning"
+      },
+      {
+        "label": "Bastani et al. (2025)",
+        "citation": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), Article e2422633122. https://doi.org/10.1073/pnas.2422633122",
+        "url": "https://doi.org/10.1073/pnas.2422633122",
+        "group": "AI & education",
+        "shortTitle": "AI guardrails and independent learning"
+      },
+      {
+        "label": "Deng et al. (2025)",
+        "citation": "Deng, R., Jiang, M., Yu, X., Lu, Y., & Liu, S. (2025). Does ChatGPT enhance student learning? A systematic review and meta-analysis of experimental studies. Computers & Education, 227, Article 105224. https://doi.org/10.1016/j.compedu.2024.105224",
+        "url": "https://doi.org/10.1016/j.compedu.2024.105224",
+        "group": "AI & education",
+        "shortTitle": "ChatGPT: review of experimental studies"
+      },
+      {
+        "label": "Huang et al. (2026)",
+        "citation": "Huang, B., Xie, L., Liu, Y., Liu, X., Tang, H., Feng, X., Qiao, C., Guo, Q., Wu, C., & Bao, L. (2026). From answer machine to collaborative partner: Impact of structured generative AI training on scientific problem solving in STEM education. International Journal of STEM Education, 13(1), Article 62. https://doi.org/10.1186/s40594-026-00652-9",
+        "url": "https://doi.org/10.1186/s40594-026-00652-9",
+        "group": "AI & education",
+        "shortTitle": "Structured AI use in STEM"
+      },
+      {
+        "label": "Kestin et al. (2025)",
+        "citation": "Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15(1), Article 17458. https://doi.org/10.1038/s41598-025-97652-6",
+        "url": "https://doi.org/10.1038/s41598-025-97652-6",
+        "group": "AI & education",
+        "shortTitle": "AI tutoring vs active learning"
+      },
+      {
+        "label": "Miao et al. (2024)",
+        "citation": "Miao, F., Shiohira, K., & Lao, N. (2024). AI competency framework for students. UNESCO. https://doi.org/10.54675/jkjb9835",
+        "url": "https://doi.org/10.54675/jkjb9835",
+        "group": "AI & education",
+        "shortTitle": "AI competency framework for students"
+      },
+      {
+        "label": "AID (n.d.)",
+        "citation": "Associazione Italiana Dislessia (n.d.). Gli strumenti compensativi [Compensatory tools]. https://www.aiditalia.org/gli-strumenti-compensativi",
+        "url": "https://www.aiditalia.org/gli-strumenti-compensativi",
+        "group": "Accessibility",
+        "shortTitle": "Compensatory tools"
+      },
+      {
+        "label": "CAST (2024)",
+        "citation": "CAST (2024). CAST Universal Design for Learning Guidelines version 3.0. https://udlguidelines.cast.org/",
+        "url": "https://udlguidelines.cast.org/",
+        "group": "Accessibility",
+        "shortTitle": "Universal Design for Learning 3.0"
+      },
+      {
+        "label": "W3C (2021)",
+        "citation": "World Wide Web Consortium (2021). Making content usable for people with cognitive and learning disabilities. (W3C Working Group Note, 29 April 2021). https://www.w3.org/TR/2021/NOTE-coga-usable-20210429/",
+        "url": "https://www.w3.org/TR/2021/NOTE-coga-usable-20210429/",
+        "group": "Accessibility",
+        "shortTitle": "Cognitive accessibility guidance"
+      }
+    ],
+    "number": 61,
+    "links": []
+  }
+]

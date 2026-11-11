@@ -47,11 +47,18 @@ EduForum presents six Studio outputs directly, with the generating feature named
 
 MRU opens with flat English and Ukrainian flag buttons; the Ukrainian flag includes a small heart. `data/mru/uk.json` translates the slide text and controls. The choice persists for MRU and can be shared with `?lang=en` or `?lang=uk`. Recorded prompts, native command names, screenshots, videos and downloads retain their original language. Hidden event slides and timed practice slides are excluded from MRU; EduForum retains its original content and speaker notes.
 
-`pnpm build` publishes a presentation selector at `/`, the EduForum deck at `/eduforum/` and the MRU copy at `/mru/`. On GitHub Pages:
+`pnpm build` publishes a presentation selector at `/`, the EduForum deck at `/eduforum/`, the MRU copy at `/mru/` and Druskininkai at `/druskininkai/`. On GitHub Pages:
 
 - Home: https://cremarco.github.io/AIandLearning/
 - EduForum: https://cremarco.github.io/AIandLearning/eduforum/
 - MRU: https://cremarco.github.io/AIandLearning/mru/
+- Druskininkai: https://cremarco.github.io/AIandLearning/druskininkai/
+
+### Druskininkai copy
+
+`data/druskininkai/slides.json`, `speaker-notes.json` and `highlights.json` are an independent copy for 13 November 2026. The cover uses **Beyond prompting**, has no logos or practical-activity notice, and shows the new date. Whattadata, My learning route, Feelings and confidence, the 11 November event, Goblin.tools, Agent Skills, the formal Study action, Five risks and four audience exercises are excluded. The 13 November event is active, and the remaining prompt labels are introduced simply as shortcuts. The deck has 60 numbered slides through Thank you, followed by the bibliography.
+
+Edit the Druskininkai JSON files directly, then run `pnpm generate` to rebuild `druskininkai.md` and `docs/speaker-notes.druskininkai.en.md`. Generation preserves the independent content. Use `pnpm dev:druskininkai` to open it locally on port 3048. All presentations share the existing components and public assets; the Druskininkai QR points to its own GitHub Pages route.
 
 Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the site's root directories.
 

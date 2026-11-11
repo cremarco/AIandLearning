@@ -4,6 +4,8 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const isMru = process.env.EDUFORUM_DECK === 'mru'
+const isDruskininkai = process.env.EDUFORUM_DECK === 'druskininkai'
+const isSharedDeck = isMru || isDruskininkai
 const projectRoot = fileURLToPath(new URL('.', import.meta.url))
 
 // Slidev's own CSS uses UnoCSS @apply directives. Tailwind owns the
@@ -34,8 +36,8 @@ function publicAssets() {
       outputDirectory = path.resolve(config.root, process.env.EDUFORUM_PUBLIC_OUT_DIR || config.build.outDir)
     },
     async writeBundle() {
-      // MRU reuses the main site's public files rather than copying videos and images.
-      if (isMru) return
+      // Additional decks reuse the main site's public files.
+      if (isSharedDeck) return
       const models = path.join(publicDirectory, 'materials/demo-genai/models')
       await cp(publicDirectory, outputDirectory, {
         recursive: true,
@@ -65,8 +67,8 @@ export default {
   resolve: {
     dedupe: ['vue', 'vue-router'],
     alias: {
-      '#deck/slides': path.join(projectRoot, isMru ? 'data/mru/slides.json' : 'data/generated/slides-runtime.json'),
-      '#deck/highlights': path.join(projectRoot, isMru ? 'data/mru/highlights.json' : 'data/content/highlights.json'),
+      '#deck/slides': path.join(projectRoot, isMru ? 'data/mru/slides.json' : isDruskininkai ? 'data/druskininkai/slides.json' : 'data/generated/slides-runtime.json'),
+      '#deck/highlights': path.join(projectRoot, isMru ? 'data/mru/highlights.json' : isDruskininkai ? 'data/druskininkai/highlights.json' : 'data/content/highlights.json'),
       '#deck/uk': path.join(projectRoot, isMru ? 'data/mru/uk.json' : 'data/content/empty-translations.json'),
     },
   },

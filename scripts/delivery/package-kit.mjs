@@ -15,7 +15,7 @@ const epoch = new Date(process.env.SOURCE_DATE_EPOCH
   ? Number(process.env.SOURCE_DATE_EPOCH) * 1000 : '2026-11-02T00:00:00Z')
 const rootFiles = [
   'README.md', 'package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml',
-  'vite.config.ts', 'slides.md', 'mru.md', 'pages/index.html',
+  'vite.config.ts', 'slides.md', 'mru.md', 'druskininkai.md', 'pages/index.html',
   'docs/workshop-brief.md',
 ]
 const trees = ['data', 'components', 'composables', 'utils', 'assets', 'styles', 'setup', 'scripts', 'docs', 'tests', 'public', 'dist',

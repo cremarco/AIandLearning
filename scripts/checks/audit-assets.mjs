@@ -19,7 +19,7 @@ async function filesIn(directory) {
 // Scan authoring inputs, not generated HTML or historical provenance: otherwise
 // an obsolete output or generation record can make an unused image look active.
 const sourceFiles = (await Promise.all(
-  ['components', 'composables', 'data/content', 'data/catalogues', 'data/demos', 'data/mru', 'setup', 'styles', 'utils'].map(name => filesIn(path.join(root, name))),
+  ['components', 'composables', 'data/content', 'data/catalogues', 'data/demos', 'data/mru', 'data/druskininkai', 'setup', 'styles', 'utils'].map(name => filesIn(path.join(root, name))),
 )).flat().filter(file => sourceExtension.test(file))
 const sources = await Promise.all(sourceFiles.map(async file => ({
   file: path.relative(root, file), text: await fs.readFile(file, 'utf8'),

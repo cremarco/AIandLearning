@@ -27,4 +27,8 @@ build('mru.md', 'dist/mru', base === './' ? './' : `${base}mru/`, {
   EDUFORUM_DECK: 'mru',
   VITE_SHARED_ASSET_BASE: base === './' ? '../' : base,
 }, ['--without-notes'])
+build('druskininkai.md', 'dist/druskininkai', base === './' ? './' : `${base}druskininkai/`, {
+  EDUFORUM_DECK: 'druskininkai',
+  VITE_SHARED_ASSET_BASE: base === './' ? '../' : base,
+})
 copyFileSync(path.join(projectRoot, 'pages/index.html'), path.join(projectRoot, 'dist/index.html'))

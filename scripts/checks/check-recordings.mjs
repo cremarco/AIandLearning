@@ -30,8 +30,8 @@ export function checkPublishedRecordings(slides) {
   }
   const privateReference = /\/Users\/|\/var\/folders\/|output\/review\/|https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?/i
   assert(!privateReference.test(JSON.stringify(manifest)), 'Public release metadata must not expose local review paths')
-  // The two decks share a release, but may use different demonstrations.
-  const publishedSlides = [...slides, ...readJson('data/mru/slides.json', [])]
+  // The decks share a release, but may use different demonstrations.
+  const publishedSlides = [...slides, ...readJson('data/mru/slides.json', []), ...readJson('data/druskininkai/slides.json', [])]
   const records = new Map()
   for (const clip of manifest.clips) {
     const media = clip.media
