@@ -163,7 +163,7 @@ clicks: 1
 <DeckSlide id="S51" />
 
 <!--
-Let us make this concrete with **Andrea**, a fictional university computer science student. He can program, but still confuses some ideas about generative AI.
+Let us make this concrete with **Andrea**, a university computer science student. He can program, but still confuses some ideas about generative AI.
 
 He needs to study a textbook and explain how a language model produces text.
 
@@ -179,7 +179,7 @@ title: "The assigned textbook"
 <DeckSlide id="S53" />
 
 <!--
-To try this, Andrea needs a **great book**, by a great author.
+To try this, Andrea needs a **great book**.
 
 I am joking, of course.
 

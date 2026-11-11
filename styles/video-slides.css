@@ -48,12 +48,13 @@
 .has-video .workshop-media.has-audio-result { grid-template-rows:minmax(0,1fr) auto 32px; gap:12px; }
 .has-video .tool-demo-prompt { grid-area:3 / 1; align-self:start; }
 .has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) { font-size:18px; }
-.has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) .prompt-label { margin-bottom:10px; font-size:16px; }
+.has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) .prompt-header { margin-bottom:10px; }
+.has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) .prompt-label { font-size:16px; }
 .has-video :is(.tool-demo-prompt,.shortcut-detail-prompt) .chat-bubble { padding:12px 16px; line-height:1.35; }
 .has-video .shortcut-detail-request { gap:24px; }
 .has-video .shortcut-detail-context { gap:12px; }
 .slidev-layout .has-video .shortcut-detail-format { font-size:18px; line-height:1.35; }
-.has-video .formal-video .formal-instruction-label { margin-top:0; }
+.has-video .formal-video .formal-prompt-heading { margin-top:0; }
 
 /* Keep the source image intact. Browser addresses remain available as Source
    links; the slide uses one quiet frame around every recording. */

@@ -62,7 +62,11 @@ nav li { break-inside: avoid; }
 .command-result { margin-block: 30px; padding-top: 20px; border-top: 1px solid var(--line); }
 .command-response { white-space: pre-line; }
 .prompt-block { min-width:0; margin-block:20px; }
-.prompt-block > .meta { margin-bottom:8px; }
+.prompt-header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 16px; margin-bottom:8px; }
+.prompt-header .meta { margin:0; }
+.prompt-copy { flex-shrink:0; }
+.prompt-copy-error { flex-basis:100%; font-size:.8em; }
+@media print { .prompt-copy,.prompt-copy-error { display:none; } }
 .prompt-chat { padding-block:0; }
 .prompt-chat .chat-bubble { max-width:100%; padding:1em 1.2em; background:var(--color-base-200); font-size:inherit; line-height:1.4; white-space:pre-wrap; overflow-wrap:anywhere; user-select:text; }
 .prompt-command { color:var(--accent); font-family:ui-monospace,monospace; font-weight:650; }

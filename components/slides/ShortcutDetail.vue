@@ -126,7 +126,8 @@ useSlideVideo(video)
 .shortcut-detail:has(.shortcut-detail-static) { grid-template-columns:336px minmax(0,1fr); gap:32px; }
 .shortcut-detail-request { display:flex; flex-direction:column; justify-content:space-between; gap:16px; min-width:0; min-height:0; }
 .shortcut-detail-prompt { font-size:var(--deck-text-prompt); }
-.shortcut-detail-prompt :deep(.prompt-label) { font-size:var(--deck-text-label); margin-bottom:12px; }
+.shortcut-detail-prompt :deep(.prompt-header) { margin-bottom:12px; }
+.shortcut-detail-prompt :deep(.prompt-label) { font-size:var(--deck-text-label); }
 .shortcut-detail-prompt :deep(.chat-bubble) { padding:16px 24px; line-height:1.45; }
 .shortcut-detail-context { display:flex; flex-direction:column; gap:16px; padding-bottom:2px; }
 .slidev-layout .shortcut-detail .shortcut-detail-format { margin:0; font-size:18px; line-height:1.4; color:var(--deck-muted); }

@@ -4,6 +4,7 @@ import { useSlideVideo } from '../../composables/useSlideVideo'
 import type { PromptCommand } from '../../utils/deck'
 import { assetUrl } from '../../utils/assets'
 import CommandTag from '../shared/CommandTag.vue'
+import CopyPromptButton from '../shared/CopyPromptButton.vue'
 import EmphasisText from '../shared/EmphasisText.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
 import { t } from '../../utils/language'
@@ -22,7 +23,7 @@ watch(selectedIndex, pauseVideo)
   <div class="formal-command-results" :class="[selected?.command === 'Study' && !studyVideo ? 'formal-study-chat' : 'formal-split', { 'formal-video': result?.media.type === 'video' }]">
     <section v-if="selected?.command === 'Study' && result && !studyVideo" class="formal-study-conversation" :data-command="selected.command" :data-result-status="result.status" aria-label="Recorded Study conversation" aria-live="polite">
       <div class="chat chat-end">
-        <div class="chat-header">{{ t('You · Prompt after selecting Study') }}</div>
+        <div class="chat-header flex flex-wrap items-center gap-3 sm:gap-3"><span>{{ t('You · Prompt after selecting Study') }}</span><CopyPromptButton :text="result.instruction" /></div>
         <div class="chat-bubble max-w-[850px] bg-base-200 text-base-content"><CommandTag text="/Study" class="mr-2" /><EmphasisText :text="result.instruction" /></div>
       </div>
       <div class="chat chat-start">
@@ -42,7 +43,10 @@ watch(selectedIndex, pauseVideo)
             </button>
           </li>
         </ul>
-        <p class="formal-instruction-label">{{ t('Prompt') }}</p>
+        <div class="formal-prompt-heading flex flex-wrap items-center justify-between gap-2 sm:gap-2">
+          <p class="formal-instruction-label">{{ t('Prompt') }}</p>
+          <CopyPromptButton v-if="result?.instruction" :text="result.instruction" />
+        </div>
         <CommandTag v-if="selected" :text="selected.command" class="mt-2" />
         <p class="formal-instruction">{{ result?.instruction }}</p>
       </nav>
@@ -77,7 +81,8 @@ watch(selectedIndex, pauseVideo)
 .slidev-layout .formal-command-menu li { margin:0; padding:0; }
 .slidev-layout .formal-command-menu button { min-height:28px; padding:2px 12px; border-radius:5px; line-height:1.1; color:var(--deck-ink); }
 .slidev-layout .formal-command-menu button.menu-active { color:var(--deck-cyan); background:var(--deck-surface); font-weight:700; }
-.slidev-layout .formal-instruction-label { margin-top:20px; font-size:16px; color:var(--deck-muted); }
+.formal-prompt-heading { margin-top:20px; }
+.slidev-layout .formal-instruction-label { font-size:16px; color:var(--deck-muted); }
 .slidev-layout .formal-instruction { margin-top:7px; font-size:18px; line-height:1.3; }
 .formal-study-conversation { width:100%; display:flex; flex-direction:column; gap:12px; }
 .formal-study-conversation .chat { padding-block:0; row-gap:6px; }

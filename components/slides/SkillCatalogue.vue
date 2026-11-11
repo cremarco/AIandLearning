@@ -3,7 +3,6 @@ import { computed, ref, watch } from 'vue'
 import { useNav, useSlideContext } from '@slidev/client'
 import { useSelectionMotion } from '../../composables/useSelectionMotion'
 import research from '../../data/catalogues/skills-research.json'
-import { assetUrl } from '../../utils/assets'
 import type { StudyFocus } from '../../utils/deck'
 import { localizeContent, t } from '../../utils/language'
 
@@ -47,7 +46,6 @@ useSelectionMotion(detail, () => selected.value?.id)
       <p class="skill-caveat">{{ selected.caveat }}</p>
       <div class="skill-links">
         <a class="link" :href="selected.sourceUrl" target="_blank" rel="noopener">{{ t('Publisher’s skill') }}</a>
-        <a class="link" :href="assetUrl(`materials/skills-guide.html#${selected.id}`)" target="_blank" rel="noopener">{{ t('Install and requirements') }}</a>
       </div>
     </section>
   </div>

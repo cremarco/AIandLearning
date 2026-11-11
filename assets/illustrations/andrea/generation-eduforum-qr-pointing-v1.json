@@ -1,0 +1,30 @@
+{
+  "mode": "built-in image_gen",
+  "created": "2026-11-11",
+  "slideId": "S53TRYSKILLS",
+  "purpose": "A different Andrea pose: holds the EduForum QR to one side and points at it during the skill-practice activity.",
+  "file": "../../../public/images/andrea/andrea-eduforum-qr-pointing-v1.webp",
+  "original": "originals/andrea-eduforum-qr-pointing-v1.png",
+  "source": "/Users/marco/.codex/generated_images/01a1cac4-12ea-7462-ae9d-51b68c626bbf/exec-723dd96b-a9f5-46f4-8801-17927ecc2db5.png",
+  "transparentBackground": true,
+  "references": [
+    {
+      "role": "character identity, style and previous pose reference",
+      "file": "../../../public/images/andrea/andrea-eduforum-qr-v1.webp"
+    },
+    {
+      "role": "exact functional QR artwork",
+      "file": "../../../public/images/qr/eduforum-direct.png"
+    }
+  ],
+  "prompt": "Use case: illustration-story.\nAsset type: square transparent character illustration for the \"Your turn: try a skill\" slide in an educational presentation.\nInput images: Image 1 is the character identity, clothing, illustration style and previous pose reference. Image 2 is the exact functional QR artwork to reproduce on a white placard.\nPrimary request: create a NEW DISTINCT POSE of the same Andrea showing the same EduForum QR. Instead of holding a sign centered in front of his torso with both hands as in image 1, Andrea stands on the viewer's RIGHT, torso turned slightly toward the viewer's LEFT, and presents a large square white QR placard to the viewer's LEFT beside his chest. One hand supports the placard from underneath; his other arm bends into a friendly pointing gesture, index finger directed toward the sign's outer upper-right white margin WITHOUT covering any QR module or its quiet zone. He looks at the viewer with a friendly small smile, head subtly tilted toward the sign.\nSubject: recognisably the same young adult Andrea: thick curly chestnut-brown hair, brown eyes, warm light skin, small facial moles, dark teal zip hoodie and off-white T-shirt.\nStyle/medium: match image 1's refined dark ink outlines, detailed sculpted hair, natural facial anatomy, polished graphic-novel/anime-influenced illustration, warm skin shading, layered cel shading and fabric folds.\nComposition/framing: compact square cutout, modest transparent margins, waist-up, complete hair, natural hands and entire sign inside frame. The large square sign is lower-left, Andrea's face is upper-right. The sign must face the viewer PERFECTLY STRAIGHT, sides horizontal and vertical, NO perspective warp or rotation. Make QR code about 45% of image width for legibility on a slide; preserve the entire pattern from image 2 exactly with a clean white quiet zone. Black and white QR modules crisp, flat and high contrast, no texture, no reflections and no shadows across the QR. Pose should feel natural and visually different from image 1.\nScene/backdrop: genuinely transparent alpha background; opaque character and white placard.\nConstraints: preserve Andrea's identity and style. Exactly reproduce the supplied functional QR, which encodes https://cremarco.github.io/AIandLearning/eduforum/. No text, laptop, book, additional people, decorative symbols, watermark or logos. Do not invent a different QR pattern.",
+  "runtimeEncoding": {
+    "encoder": "cwebp",
+    "settings": "-lossless -m 6 -exact"
+  },
+  "qr": {
+    "url": "https://cremarco.github.io/AIandLearning/eduforum/",
+    "decodedPayload": "https://cremarco.github.io/AIandLearning/eduforum/",
+    "verifiedWith": "macOS Vision VNDetectBarcodesRequest"
+  }
+}

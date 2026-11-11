@@ -300,13 +300,11 @@ export function checkData() {
     assert.equal(slide.media.transcript, fs.readFileSync(path.join(root, 'public/materials/skills', `${demo.key}-transcript.txt`), 'utf8'))
     for (const file of demo.artifacts || []) assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root, 'public', file.url))).digest('hex'), file.sha256, `${demo.key}: generated output differs from its recorded version`)
   }
-  const guide = fs.readFileSync(path.join(root, 'public/materials/skills-guide.html'), 'utf8')
   for (const skill of skillResearch.skills) {
     assert.equal(sources[skill.sourceId]?.url, skill.sourceUrl, `${skill.name}: cite its publisher’s reviewed instructions`)
     assert.equal(skill.reviewStatus, 'source-reviewed')
     assert.equal(skill.executionStatus, skillDemos.some(demo => demo.key === skill.id && demo.status === 'executed') ? 'executed' : 'not-executed', `${skill.name}: preserve the actual execution scope`)
     assert(skill.requirements && skill.license && skill.installCommand && skill.caveat, `${skill.name}: preserve requirements and limits`)
-    assert(guide.includes(`id="${skill.id}"`), `${skill.name}: accessible guide entry missing`)
   }
   const qr = read('public/images/qr/eduforum-direct.json')
   assert.equal(qr.decodedPayload, 'https://cremarco.github.io/AIandLearning/eduforum/')

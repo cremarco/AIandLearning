@@ -545,7 +545,7 @@ SLIDE S53DETAILCONCEPTMAP — /conceptmap
 Page 30 / 85
 Connect concepts with labelled relationships.
 Study phase: CONNECT
-Retested prompt · 7 Nov 2026: /conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.
+Prompt: /conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.
 Recorded interactive output: ChatGPT · 83.8 s
 ChatGPT — /conceptmap: recorded demonstration and use.
 ChatGPT · 83.8 s
@@ -943,7 +943,7 @@ SLIDE S53DETAILLESSONPLAN — /lessonplan
 Page 39 / 85
 Outline learning goals, activities and checks for a lesson.
 Study phase: PLAN
-Retested prompt · 7 Nov 2026: /lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.
+Prompt: /lessonplan Using only the attached book, create a compact interactive 15-minute university lesson on training, ordinary inference and context. Show three stages: Explain (4 min), Apply (6 min), Assess (5 min). In Apply, include exactly three scenarios: fine-tuning a model, adding a definition to a prompt, and retrieving a passage with RAG. Let the learner choose what changes in each scenario and use a Check answers button with explanatory feedback. Include a Reveal answers / Hide answers control for the answer key and one independent explanation check. Keep the controls in a compact interactive widget. Answer in English.
 Recorded interactive output: ChatGPT · 98.6 s
 ChatGPT — /lessonplan: recorded demonstration and use.
 ChatGPT · 98.6 s
@@ -990,7 +990,7 @@ SLIDE S53DETAILDIFFERENTIATE — /differentiate
 Page 40 / 85
 Adapt an activity's supports and difficulty to learning needs.
 Study phase: PLAN
-Retested prompt · 7 Nov 2026: /differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.
+Prompt: /differentiate Using only the attached book, create a compact interactive three-level review of training, ordinary inference and context for university students. Provide selectable levels: Foundation, Explain and Apply. Foundation has three fill-in items about parameters, fixed weights and context. Explain asks why using a definition from a prompt does not prove retraining. Apply compares fine-tuning, adding a prompt definition and RAG. Include learner answer fields, a Check answers control where answers can be checked, Reveal answers / Hide answers, and completion progress. Keep one level visible at a time. Use a compact native interactive widget. Answer in English.
 Recorded interactive output: ChatGPT · 120.5 s
 ChatGPT — /differentiate: recorded demonstration and use.
 ChatGPT · 120.5 s
@@ -1186,9 +1186,6 @@ Native Claude concept-map visualization in English with selectable Training, Inf
 Selectable branches and three check questions with feedback and retry
 Original prompt: /conceptmap Using only the attached book, create a compact interactive concept map comparing training, ordinary inference and RAG for university students. Show exactly three selectable branches: Training, Inference and RAG. Selecting a branch must reveal its labelled relationships and a chapter-grounded explanation. Include three short check questions, one per branch, with answer choices, a Check answers button, explanatory feedback and a Retry control. Keep parameter updates separate from context changes. Use a compact native interactive widget, not an image. Answer in English.
 Screenshot: materials/claude-shortcuts/conceptmap.png
-[CLAUDE_SHORTCUT_TESTS] Cremaschi, M. (2026, November 9). Five original workshop prompts with verified interactive outputs in Claude web using the workshop chapter. Native screenshots and observed interactions.
-./materials/claude-shortcuts/provenance.json
-Five verified interactive examples on one Free account using Sonnet 5.5 Medium. Ten shortcuts remain unverified due to the 5-hour message limit. Two outputs were generated before surrounding responses paused. Conversations may require the recording account. No learning outcomes are measured.
 
 SLIDE S53GEMINI — Trying the shortcuts in Gemini
 Page 44 / 85
@@ -1230,9 +1227,6 @@ Unmodified Gemini Canvas export opened locally in English, showing a selected sc
 Regenerated in Canvas after errors. Unmodified exported HTML verified locally: 0/1/2 selections update total to 0/1/2 out of 12; evidence reveal and written feedback work.
 Original prompt: /peerassessment Using only the attached chapter, build an interactive peer-assessment rubric for training, inference and context. Include 0/1/2 scores, feedback fields, expected evidence and a total. Answer in English.
 Screenshot: materials/gemini-shortcuts/screenshots/peerassessment.jpg
-[GEMINI_SHORTCUT_TESTS] Cremaschi, M. (2026, November 9). Fifteen workshop shortcut prompts tested in separate Gemini temporary chats with the workshop chapter. English screenshots and unmodified Canvas exports.
-./materials/gemini-shortcuts/provenance.json
-One Workspace account using Thinking. Two native interactive outputs, five exported apps tested locally after Canvas rendering follow-ups, four static responses and four generation errors. Canvas previews stayed blank in the capture browser; local export screenshots are explicitly labelled. No learning outcomes measured.
 
 SLIDE S53RISKS — Five risks, five classroom checks
 Page 45 / 85
@@ -1266,7 +1260,7 @@ Use our textbook or a document of your choice.
 For example: /flashcard, /conceptmap, /quiz or /studyplan.
 3. Use the activity
 Explore the result. Try another shortcut if you have time.
-Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.
+Andrea holds a QR code linking to the EduForum slides on GitHub Pages: https://cremarco.github.io/AIandLearning/eduforum/.
 
 SLIDE S53SKILLSSECTION — Skills
 Page 47 / 85
@@ -1580,8 +1574,7 @@ Use one of the three reviewed skills, or find a new one. Install it in a compati
 Try the skill with your source: make flashcards, a diagram or a study kit.
 3. Test and improve
 Use the material, check it against the source and refine your request.
-Skills and installation guide: ./materials/skills-guide.html
-Andrea concentrates on his laptop, with a thick copy of Foundations of Generative Artificial Intelligence by Marco Cremaschi standing beside it.
+Andrea holds a QR placard beside him and points to it. Scan to open the EduForum slides on GitHub Pages: https://cremarco.github.io/AIandLearning/eduforum/.
 
 SLIDE S53TOOLSSECTION — Tools
 Page 55 / 85

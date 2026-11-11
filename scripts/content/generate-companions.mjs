@@ -23,6 +23,7 @@ for (const [source, name] of [
   ['node_modules/daisyui/LICENSE', 'daisyui.LICENSE'],
   ['styles/reading-ui.css', 'theme.css'],
   ['styles/browser-video.css', 'browser-video.css'],
+  ['utils/copy-text.mjs', 'copy-text.js'],
 ]) {
   fs.copyFileSync(path.join(root, source), path.join(uiDirectory, name))
 }
@@ -120,7 +121,7 @@ write('source_index.csv', [
 ])
 
 // Remove retired outputs as well, so regeneration cannot leave stale materials.
-const retiredFiles = new Set(['lettura.html', 'facilitator-guide-it.txt', 'Accessible_Deck_IT.txt', 'Prompt_Bank_IT.txt', 'map-initial.excalidraw', 'map-revised.excalidraw'])
+const retiredFiles = new Set(['skills-guide.html', 'lettura.html', 'facilitator-guide-it.txt', 'Accessible_Deck_IT.txt', 'Prompt_Bank_IT.txt', 'map-initial.excalidraw', 'map-revised.excalidraw'])
 for (const name of fs.readdirSync(destination)) {
   if (name.startsWith('Presenter_Notes') || retiredFiles.has(name)) {
     fs.rmSync(path.join(destination, name))
@@ -146,7 +147,7 @@ function head(title, language = 'en') {
     '<link rel="stylesheet" href="ui/theme.css">',
     '<link rel="stylesheet" href="ui/browser-video.css">',
     '<link rel="stylesheet" href="ui/reader.css">',
-    '<script src="ui/reader.js" defer></script>',
+    '<script type="module" src="ui/reader.js"></script>',
     '</head><body><a class="btn skip" href="#content">Skip to content</a>',
   ].join('')
 }
@@ -182,11 +183,12 @@ function commandTable(slide) {
 }
 
 function promptMarkup(text, label = 'Prompt to copy', prefix = '>', style = 'chat') {
+  const header = `<div class="prompt-header"><p class="meta">${h(label)}</p><button class="btn btn-sm prompt-copy" type="button" data-copy-prompt aria-live="polite">Copy prompt</button><span class="prompt-copy-error" data-copy-feedback role="status" hidden>Could not copy. Select and copy the prompt manually.</span></div>`
   if (style === 'chat') {
     const content = h(text).replace(/^(\/[a-z][a-z0-9_-]*)(?=\s)/i, '<span class="prompt-command">$1</span>')
-    return `<div class="prompt-block"><p class="meta">${h(label)}</p><div class="chat chat-end prompt-chat"><div class="chat-bubble">${content}</div></div></div>`
+    return `<div class="prompt-block">${header}<div class="chat chat-end prompt-chat"><div class="chat-bubble">${content}</div></div></div>`
   }
-  return `<div class="prompt-block"><p class="meta">${h(label)}</p><div class="mockup-code prompt-terminal"><pre data-prefix="${h(prefix)}"><code>${h(text)}</code></pre></div></div>`
+  return `<div class="prompt-block">${header}<div class="mockup-code prompt-terminal"><pre data-prefix="${h(prefix)}"><code>${h(text)}</code></pre></div></div>`
 }
 
 function skillMarkup(skill, installation = false) {
@@ -204,7 +206,7 @@ function skillMarkup(skill, installation = false) {
     `<p>${h(skill.caveat)}</p>`,
     skill.executionStatus === 'executed' && media ? `<p>Recorded in ChatGPT web, Work mode, using the original workshop book.</p>${mediaMarkup(media)}${transcriptMarkup(media)}` : '',
     skill.webInstall ? `<p><strong>Web installation used:</strong> ${h(skill.webInstall)}</p>` : '',
-    skill.sourceCommit ? `<p><strong>Tested package revision:</strong> <a class="link link-primary" href="https://github.com/${h(skill.repo)}/commit/${h(skill.sourceCommit)}">${h(skill.sourceCommit.slice(0, 12))}</a>. Full test records: <a class="link link-primary" href="skills/provenance.json">recording provenance</a>.</p>` : '',
+    skill.sourceCommit ? `<p><strong>Tested package revision:</strong> <a class="link link-primary" href="https://github.com/${h(skill.repo)}/commit/${h(skill.sourceCommit)}">${h(skill.sourceCommit.slice(0, 12))}</a></p>` : '',
     ...(!media?.result ? (skill.artifacts || []) : []).map(file => `<p><a class="link link-primary" href="${h(relative(file.url))}">${h(file.label)}</a></p>`),
     `<p><strong>Requirements:</strong> ${h(skill.requirements)} <strong>License:</strong> ${h(skill.license)}.</p>`,
     installation ? promptMarkup(skill.installCommand, 'Terminal installation · coding agents, not a ChatGPT message', '$', 'terminal') : '',
@@ -311,7 +313,6 @@ writePage('kit.html', 'Workshop materials', [
   '<li><a class="link link-primary" href="demo-genai/index.html">Real-model application</a></li>',
   ...(notebookUrl ? [`<li><a class="link link-primary" href="${h(notebookUrl)}" target="_blank" rel="noopener">Gemini Notebook: Foundations of Generative Artificial Intelligence · EduForum</a></li>`] : []),
   '<li><a class="link link-primary" href="Prompt_Bank_EN.txt">Prompts and requests</a></li>',
-  '<li><a class="link link-primary" href="skills-guide.html">Agent Skills: annotated catalogue and installation guide</a></li>',
   '<li><a class="link link-primary" href="teacher-tools.html">MagicSchool and Formative: recorded demonstrations</a></li>',
   '<li><a class="link link-primary" href="activities.html">Participant activity sheets</a></li>',
   '<li><a class="link link-primary" href="formula-desmos.txt">Desmos expressions and numerical example</a></li>',
@@ -321,33 +322,6 @@ writePage('kit.html', 'Workshop materials', [
   '<p>Open the HTML textbook in Edge for Read Aloud. Adjust text size and spacing to suit the reader. System dictation offers an alternative to typing; review its transcript. Choose and check supports with the person using them.</p>',
   '<p>The main path uses free features. Account requirements and usage limits may change. The final slide catalogues distinguish premium alternatives and trials.</p>',
   '</main>',
-])
-
-writePage('skills-guide.html', 'Agent Skills · research and teaching catalogue', [
-  '<header><h1>Agent Skills for study, research and teaching</h1>',
-  `<p class="meta">${skillResearch.skills.length} skills · ${skillResearch.skills.filter(skill => skill.executionStatus === 'executed').length} tested on the workshop book · sources checked ${h(skillResearch.verified)}</p>`,
-  `<p>${h(skillResearch.scope)}</p>`, controls,
-  '<p><a class="link link-primary" href="kit.html">Workshop materials</a></p>',
-  '<nav aria-label="Skill index"><ul>',
-  ...skillResearch.skills.map(skill => `<li><a class="link link-primary" href="#${h(skill.id)}">${h(skill.name)} · ${h(skill.publisher)}</a></li>`),
-  '</ul></nav></header><main id="content">',
-  '<section class="slide"><h2>What is a skill?</h2><p>An Agent Skill is a folder with a SKILL.md file containing metadata and workflow instructions, plus optional references, scripts and assets. A product command invokes a feature; an informal shortcut labels a request. Skills require a host that can discover them and supply the necessary tools.</p>',
-  '<p><a class="link link-primary" href="https://agentskills.io/specification">Agent Skills specification</a> · <a class="link link-primary" href="https://developers.openai.com/plugins/concepts/skills">OpenAI skill and plugin concepts</a></p></section>',
-  '<section class="slide"><h2>Installation depends on the host</h2><p>In the recorded account, ChatGPT web offered Plugins → Skills → Add skill → Upload from computer. The four reviewed packages were uploaded and selected in Work mode. Availability depends on the account and workspace. The terminal commands below are for compatible coding agents; they are not ChatGPT slash commands.</p>',
-  '<p>For coding agents, review the publisher’s files, dependencies and license before installing. The Skills CLI asks which skills and agents to install for; installation is project-scoped by default. Installing the instructions does not install their Python, Node or external service dependencies. A portable format does not guarantee identical behaviour across hosts.</p>',
-  '<p>The old openai/skills repository is deprecated; use current OpenAI plugin documentation and openai/plugins examples.</p>',
-  '<p><a class="link link-primary" href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt">Skills in ChatGPT</a> · <a class="link link-primary" href="https://github.com/vercel-labs/skills">Skills CLI documentation</a> · <a class="link link-primary" href="https://github.com/openai/skills">Retired OpenAI catalogue notice</a> · <a class="link link-primary" href="https://github.com/openai/plugins">Current OpenAI examples</a></p></section>',
-  ...skillResearch.skills.map(skill => `<section class="slide">${skillMarkup(skill, true)}</section>`),
-  '<section class="slide" id="evidence"><h2>Evidence of effectiveness</h2>',
-  '<p>SkillsBench v4 evaluates 87 tasks across 8 domains under matched conditions for 18 model–harness configurations. Average pass rate rises from 33.9% to 50.5%, an increase of 16.6 percentage points. Focused bundles performed better than larger, exhaustive ones. <a class="link link-primary" href="https://arxiv.org/abs/2602.12670v4">Li et al. · SkillsBench v4</a>.</p>',
-  '<p>SWE-Skills-Bench v2 evaluates 98 software-engineering skills across four agent–model configurations. It finds no statistically significant effect for 92 skills; the average pass ratio changes from 76.6% to 76.9% (+0.3 percentage points). <a class="link link-primary" href="https://arxiv.org/abs/2603.15401v2">Han et al. · SWE-Skills-Bench v2</a>.</p>',
-  `<p>${h(skillResearch.limitations)} Both are preprints. Older search snippets report earlier versions with different task counts and results; the figures above are pinned to the linked versions.</p>`,
-  '<p>A separate analysis of 307 selected failure cases describes how excessive procedure and templates can cause errors or wasted effort. This is a failure taxonomy, not a population-wide failure rate. <a class="link link-primary" href="https://arxiv.org/abs/2608.11888v1">Dong et al. · Agent Skills Can Be Harmful</a>.</p></section>',
-  '<section class="slide"><h2>How to choose</h2><p>The following is a practical inference from the sources, not a measured ranking of these packages: prefer a narrow recurring task with a clear input, output and check. For one representative task, compare factual errors, missing requirements, file usability and effort with and without the skill. For teaching, also assess what the learner can explain without assistance.</p>',
-  '<h3>Research method</h3><ol>', ...skillResearch.method.map(text => `<li>${h(text)}</li>`),
-  '</ol><h3>Sources</h3>',
-  ...Object.entries(sources).filter(([id]) => id.startsWith('SKILL_')).map(([, source]) => `<p><a class="link link-primary" href="${h(relative(source.url))}">${h(source.citation)}</a> ${h(source.limitations)}</p>`),
-  '</section></main><footer><a class="link link-primary" href="#">Back to top</a></footer>',
 ])
 
 const teacherOrder = ['magicschool-rubric', 'magicschool-questions', 'magicschool-lesson', 'formative-assessment', 'formative-responses', 'formative-feedback']
@@ -366,7 +340,6 @@ writePage('teacher-tools.html', 'MagicSchool and Formative · recorded demonstra
   '<section class="slide"><h2>Recorded outputs</h2>',
   links({ links: [
     { label: 'Generated lesson plan · text', url: 'teacher-tools/magicschool-lesson-output.txt' },
-    { label: 'Recording provenance', url: 'teacher-tools/provenance.json' },
   ] }),
   '</section></main>',
 ])

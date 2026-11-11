@@ -80,7 +80,6 @@ The capture, review and release workflow is documented in [docs/recordings.md](d
 ## Materials and model lab
 
 - `public/materials/kit.html`: textbook, prompts, activities, assessment and guides.
-- `public/materials/skills-guide.html`: skill demonstrations and requirements.
 - `public/materials/teacher-tools.html`: teacher demonstrations and results.
 - `public/materials/booklet-genai/`: the textbook PDF and equivalent HTML.
 - `public/materials/demo-genai/`: canonical real-model application.

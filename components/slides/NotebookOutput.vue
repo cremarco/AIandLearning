@@ -3,6 +3,7 @@ import { computed, nextTick, ref, watch } from 'vue'
 import { useSlideVideo } from '../../composables/useSlideVideo'
 import { assetUrl } from '../../utils/assets'
 import { notebookOutputs } from '../../utils/notebook-outputs'
+import CopyPromptButton from '../shared/CopyPromptButton.vue'
 
 const props = defineProps<{ outputId: string }>()
 const output = computed(() => notebookOutputs[props.outputId])
@@ -59,7 +60,10 @@ function onKey(event: KeyboardEvent) {
         <p class="nb-origin">Created in Gemini Notebook</p>
       </div>
       <div class="nb-request">
-        <h3>{{ output.prompt ? 'Prompt' : 'About this output' }}</h3>
+        <div class="nb-request-heading flex flex-wrap items-center justify-between gap-2 sm:gap-2">
+          <h3>{{ output.prompt ? 'Prompt' : 'About this output' }}</h3>
+          <CopyPromptButton v-if="output.prompt" :text="output.prompt" />
+        </div>
         <p>{{ output.prompt || output.description }}</p>
       </div>
       <p v-if="localViewer" class="nb-format">Local viewer · original Gemini Notebook content</p>
@@ -140,7 +144,8 @@ function onKey(event: KeyboardEvent) {
 .nb-sidebar { display:flex; flex-direction:column; gap:24px; min-width:0; align-self:center; }
 .notebook-output .nb-sidebar h2 { font-size:32px; line-height:1.1; }
 .notebook-output .nb-origin { margin-top:8px; font-size:18px; color:var(--deck-muted); }
-.notebook-output .nb-request h3 { font-size:18px; margin-bottom:8px; }
+.nb-request-heading { margin-bottom:8px; }
+.notebook-output .nb-request h3 { font-size:18px; margin:0; }
 .notebook-output .nb-request p { font-size:19px; line-height:1.4; }
 .notebook-output .nb-format { font-size:16px; line-height:1.35; color:var(--deck-muted); }
 .nb-sidebar .link { color:var(--deck-link); font-size:18px; text-underline-offset:4px; }

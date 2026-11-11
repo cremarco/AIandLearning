@@ -69,7 +69,7 @@ Thank you. We will use prepared examples, so you can follow even if these tools 
 
 ## 9. Andrea needs to understand GenAI
 
-Let us make this concrete with **Andrea**, a fictional university computer science student. He can program, but still confuses some ideas about generative AI.
+Let us make this concrete with **Andrea**, a university computer science student. He can program, but still confuses some ideas about generative AI.
 
 He needs to study a textbook and explain how a language model produces text.
 
@@ -77,7 +77,7 @@ As we follow him, think about how you would adapt the support to your studentsâ€
 
 ## 10. The assigned textbook
 
-To try this, Andrea needs a **great book**, by a great author.
+To try this, Andrea needs a **great book**.
 
 I am joking, of course.
 
