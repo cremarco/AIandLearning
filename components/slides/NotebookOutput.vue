@@ -4,9 +4,11 @@ import { useSlideVideo } from '../../composables/useSlideVideo'
 import { assetUrl } from '../../utils/assets'
 import { notebookOutputs } from '../../utils/notebook-outputs'
 import CopyPromptButton from '../shared/CopyPromptButton.vue'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t, language, localizeContent } = useSlideLanguage()
 
 const props = defineProps<{ outputId: string }>()
-const output = computed(() => notebookOutputs[props.outputId])
+const output = computed(() => localizeContent(notebookOutputs[props.outputId]))
 const index = ref(0)
 const revealed = ref(false)
 const selected = ref<number>()
@@ -53,87 +55,87 @@ function onKey(event: KeyboardEvent) {
 </script>
 
 <template>
-  <section v-if="output" class="notebook-output" :aria-label="`${output.feature} generated output`" @click.stop @pointerdown.stop @keydown.stop="onKey" @keyup.stop>
+  <section v-if="output" class="notebook-output" :aria-label="`${output.feature} ${t('generated output')}`" @click.stop @pointerdown.stop @keydown.stop="onKey" @keyup.stop>
     <aside class="nb-sidebar">
       <div>
         <h2>{{ output.feature }}</h2>
-        <p class="nb-origin">Created in Gemini Notebook</p>
+        <p class="nb-origin">{{ t("Created in Gemini Notebook") }}</p>
       </div>
       <div class="nb-request">
         <div class="nb-request-heading flex flex-wrap items-center justify-between gap-2 sm:gap-2">
-          <h3>{{ output.prompt ? 'Prompt' : 'About this output' }}</h3>
+          <h3>{{ t(output.prompt ? 'Prompt' : 'About this output') }}<template v-if="output.prompt && language === 'lt'"> · EN</template></h3>
           <CopyPromptButton v-if="output.prompt" :text="output.prompt" />
         </div>
-        <p>{{ output.prompt || output.description }}</p>
+        <p :lang="output.prompt ? 'en' : language">{{ output.prompt || output.description }}</p>
       </div>
-      <p v-if="localViewer" class="nb-format">Local viewer · original Gemini Notebook content</p>
-      <p v-else-if="outputId === 'mind-map'" class="nb-format">Complete static map · zoom to read the branches</p>
-      <p v-else-if="outputId === 'table' && output.preview" class="nb-format">Screenshot of the generated table</p>
-      <a class="link" :href="assetUrl(output.src)" :download="downloadable ? '' : undefined" :target="downloadable ? undefined : '_blank'" rel="noopener">{{ downloadLabel }}</a>
+      <p v-if="localViewer" class="nb-format">{{ t("Local viewer · original Gemini Notebook content") }}</p>
+      <p v-else-if="outputId === 'mind-map'" class="nb-format">{{ t("Complete static map · zoom to read the branches") }}</p>
+      <p v-else-if="outputId === 'table' && output.preview" class="nb-format">{{ t("Screenshot of the generated table") }}</p>
+      <a class="link" :href="assetUrl(output.src)" :download="downloadable ? '' : undefined" :target="downloadable ? undefined : '_blank'" rel="noopener">{{ t(downloadLabel) }}</a>
     </aside>
 
     <div class="nb-viewer" :class="`nb-${output.type}`">
-      <div v-if="imageViewer" class="nb-image-scroll" :class="{ 'is-zoomed': zoomed }" tabindex="0" :aria-label="`${output.feature}, ${output.type === 'pdf' ? `page ${index + 1}` : 'image'}`">
-        <p v-if="imageError" role="alert">This preview could not load. Use the original file link.</p>
-        <img v-else :key="image" :src="assetUrl(image)" :alt="`${output.feature} generated from Andrea’s textbook${output.type === 'pdf' ? `, page ${index + 1}` : ''}`" @error="imageError = true" />
+      <div v-if="imageViewer" class="nb-image-scroll" :class="{ 'is-zoomed': zoomed }" tabindex="0" :aria-label="`${output.feature}, ${output.type === 'pdf' ? `${t('page')} ${index + 1}` : t('image')}`">
+        <p v-if="imageError" role="alert">{{ t("This preview could not load. Use the original file link.") }}</p>
+        <img v-else :key="image" :src="assetUrl(image)" :alt="`${output.feature} ${t('generated from Andrea’s textbook')}${output.type === 'pdf' ? `, ${t('page')} ${index + 1}` : ''}`" @error="imageError = true" />
       </div>
 
       <div v-else-if="output.type === 'audio'" class="nb-audio-content">
-        <h3>How generative AI predicts next tokens</h3>
-        <p>Listen to the generated episode.</p>
-        <audio ref="audio" controls preload="metadata" aria-label="Generated Gemini Notebook Audio Overview" @error="mediaError = true">
+        <h3>{{ t("How generative AI predicts next tokens") }}</h3>
+        <p>{{ t("Listen to the generated episode.") }}</p>
+        <audio ref="audio" controls preload="metadata" :aria-label="t('Generated Gemini Notebook Audio Overview')" @error="mediaError = true">
           <source :src="assetUrl(output.src)" type="audio/mp4" />
         </audio>
-        <p v-if="mediaError" role="alert">Audio could not load. Try the download link.</p>
+        <p v-if="mediaError" role="alert">{{ t("Audio could not load. Try the download link.") }}</p>
       </div>
 
       <div v-else-if="output.type === 'video'" class="nb-video-content">
-        <video ref="video" controls playsinline preload="none" :poster="assetUrl(output.poster)" aria-label="Generated Gemini Notebook Video Overview" @error="mediaError = true">
+        <video ref="video" controls playsinline preload="none" :poster="assetUrl(output.poster)" :aria-label="t('Generated Gemini Notebook Video Overview')" @error="mediaError = true">
           <source :src="assetUrl(output.src)" type="video/mp4" />
           <track v-if="output.captions" kind="captions" srclang="en" label="English" :src="assetUrl(output.captions)" />
         </video>
-        <img class="nb-print-poster" :src="assetUrl(output.poster)" alt="Generated Gemini Notebook Video Overview" />
-        <p v-if="mediaError" role="alert">Video could not load. Try the download link.</p>
+        <img class="nb-print-poster" :src="assetUrl(output.poster)" :alt="t('Generated Gemini Notebook Video Overview')" />
+        <p v-if="mediaError" role="alert">{{ t("Video could not load. Try the download link.") }}</p>
       </div>
 
       <div v-else-if="output.type === 'flashcards' && card" class="nb-card-content" aria-live="polite">
         <h3>{{ card.question }}</h3>
         <p v-if="revealed" class="nb-card-answer">{{ card.answer }}</p>
-        <p v-else class="nb-card-instruction">Answer from memory, then show the answer.</p>
+        <p v-else class="nb-card-instruction">{{ t("Answer from memory, then show the answer.") }}</p>
       </div>
 
       <div v-else-if="output.type === 'quiz' && question" ref="questionContent" class="nb-quiz-content">
         <h3>{{ question.question }}</h3>
-        <div class="nb-options" role="group" aria-label="Answer choices">
+        <div class="nb-options" role="group" :aria-label="t('Answer choices')">
           <button v-for="(option, i) in question.options" :key="i" class="btn nb-option" type="button" :aria-pressed="selected === i" :data-selected="selected === i" :data-correct="revealed && i === question.correctIndex" @click="selected = i; revealed = false">
             <strong>{{ String.fromCharCode(65 + i) }}.</strong><span>{{ option }}</span>
           </button>
         </div>
         <p v-if="hintVisible" class="nb-hint" role="status">{{ question.hint }}</p>
         <section v-if="revealed" class="nb-feedback" aria-live="polite">
-          <h4>Correct answer: {{ String.fromCharCode(65 + question.correctIndex) }}</h4>
+          <h4>{{ t('Correct answer:') }} {{ String.fromCharCode(65 + question.correctIndex) }}</h4>
           <p>{{ question.explanations[question.correctIndex] }}</p>
-          <p v-if="selected !== undefined && selected !== question.correctIndex"><strong>Your choice: {{ String.fromCharCode(65 + selected) }}.</strong> {{ question.explanations[selected] }}</p>
+          <p v-if="selected !== undefined && selected !== question.correctIndex"><strong>{{ t('Your choice:') }} {{ String.fromCharCode(65 + selected) }}.</strong> {{ question.explanations[selected] }}</p>
         </section>
       </div>
 
-      <div v-else-if="output.type === 'table'" class="nb-table-scroll" tabindex="0" aria-label="Generated comparison table">
+      <div v-else-if="output.type === 'table'" class="nb-table-scroll" tabindex="0" :aria-label="t('Generated comparison table')">
         <table class="table">
           <thead><tr><th v-for="(header, i) in output.headers?.slice(0, showEvidence ? undefined : 3)" :key="i" scope="col">{{ header }}</th></tr></thead>
           <tbody><tr v-for="(row, i) in output.rows" :key="i"><template v-for="(cell, col) in row.slice(0, showEvidence ? undefined : 3)" :key="col"><th v-if="col === 0" scope="row">{{ cell }}</th><td v-else>{{ cell }}</td></template></tr></tbody>
         </table>
       </div>
 
-      <nav v-if="count > 1 || imageViewer || localViewer" class="nb-controls flex flex-wrap items-center" :aria-label="`${output.feature} controls`">
+      <nav v-if="count > 1 || imageViewer || localViewer" class="nb-controls flex flex-wrap items-center" :aria-label="`${output.feature} ${t('controls')}`">
         <template v-if="count > 1">
-          <button class="btn btn-sm" type="button" :disabled="index === 0" @click="move(-1)">Previous</button>
-          <span class="nb-position" role="status">{{ output.type === 'pdf' ? 'Page' : output.type === 'quiz' ? 'Question' : 'Card' }} {{ index + 1 }} of {{ count }}</span>
-          <button class="btn btn-sm" type="button" :disabled="index === count - 1" @click="move(1)">Next</button>
+          <button class="btn btn-sm" type="button" :disabled="index === 0" @click="move(-1)">{{ t("Previous") }}</button>
+          <span class="nb-position" role="status">{{ t(output.type === 'pdf' ? 'Page' : output.type === 'quiz' ? 'Question' : 'Card') }} {{ index + 1 }} {{ t('of') }} {{ count }}</span>
+          <button class="btn btn-sm" type="button" :disabled="index === count - 1" @click="move(1)">{{ t("Next") }}</button>
         </template>
-        <button v-if="imageViewer" class="btn btn-sm" type="button" :aria-pressed="zoomed" @click="zoomed = !zoomed">{{ zoomed ? 'Fit output' : 'Zoom in' }}</button>
-        <button v-if="output.type === 'flashcards' || output.type === 'quiz'" class="btn btn-sm" type="button" :aria-expanded="revealed" @click="revealed = !revealed">{{ revealed ? 'Hide answer' : 'Show answer' }}</button>
-        <button v-if="output.type === 'quiz'" class="btn btn-sm" type="button" :aria-expanded="hintVisible" @click="hintVisible = !hintVisible">{{ hintVisible ? 'Hide hint' : 'Show hint' }}</button>
-        <button v-if="output.type === 'table'" class="btn btn-sm" type="button" :aria-expanded="showEvidence" @click="showEvidence = !showEvidence">{{ showEvidence ? 'Show key columns' : 'Show evidence and errors' }}</button>
+        <button v-if="imageViewer" class="btn btn-sm" type="button" :aria-pressed="zoomed" @click="zoomed = !zoomed">{{ t(zoomed ? 'Fit output' : 'Zoom in') }}</button>
+        <button v-if="output.type === 'flashcards' || output.type === 'quiz'" class="btn btn-sm" type="button" :aria-expanded="revealed" @click="revealed = !revealed">{{ t(revealed ? 'Hide answer' : 'Show answer') }}</button>
+        <button v-if="output.type === 'quiz'" class="btn btn-sm" type="button" :aria-expanded="hintVisible" @click="hintVisible = !hintVisible">{{ t(hintVisible ? 'Hide hint' : 'Show hint') }}</button>
+        <button v-if="output.type === 'table'" class="btn btn-sm" type="button" :aria-expanded="showEvidence" @click="showEvidence = !showEvidence">{{ t(showEvidence ? 'Show key columns' : 'Show evidence and errors') }}</button>
       </nav>
     </div>
   </section>

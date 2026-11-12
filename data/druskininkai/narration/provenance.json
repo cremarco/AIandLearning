@@ -1,0 +1,72 @@
+{
+  "sourceProject": "CVeDI 2026:2027",
+  "sdk": "@elevenlabs/elevenlabs-js@2.74.0",
+  "scripts": [
+    {
+      "source": "progetti/slide/scripts/build/lesson-audio.mjs",
+      "target": "scripts/audio/lesson-audio.mjs",
+      "sourceSha256": "bef5fa89d59163e6801bdaeab5f6f73c63baa48314183e598a70a3f3f6c1f895"
+    },
+    {
+      "source": "progetti/slide/scripts/build/audio-delivery.mjs",
+      "target": "scripts/audio/audio-delivery.mjs",
+      "sourceSha256": "70c47417474ee97931fc092ed21cb2af05f6dc386f38f13f04382f294fbd6cd2"
+    },
+    {
+      "source": "progetti/slide/scripts/elevenlabs-voices.mjs",
+      "target": "scripts/elevenlabs-voices.mjs",
+      "sourceSha256": "20ec4158d5ad827a83820c46bfcab44120c398eef6feb81746b620d98fdd2654"
+    }
+  ],
+  "settings": {
+    "source": "progetti/slide/assets/booklet/lezione-griglie/audio-settings.json",
+    "sourceSha256": "36dd202cec97830e0045d7519301a10f9b708dfb828b7430b99b954d9fb57a32",
+    "changedFields": {
+      "languageCode": {
+        "from": "it",
+        "to": "lt"
+      }
+    }
+  },
+  "adaptations": [
+    "Project root resolved from scripts/audio instead of the CVeDI monorepo.",
+    "Lithuanian narration scripts are derived from the Lithuanian speaker notes, removing presenter markup and adding the same neutral delivery and paragraph pauses as CVeDI."
+  ],
+  "captionSources": [
+    {
+      "source": "progetti/slide/composables/useCaptionPreference.ts",
+      "target": "composables/useCaptionPreference.ts",
+      "sourceSha256": "6e1ef962da77876aee14ac6866482f4ca9be1bf9c51c7339112c7ad26dfffb57"
+    },
+    {
+      "source": "progetti/slide/composables/useSpokenCaption.ts",
+      "target": "composables/useSpokenCaption.ts",
+      "sourceSha256": "2762b576b0ca653d1edd044d6c6e08afe6189fdbd0d4cdeb63d85ec782b3fe12"
+    },
+    {
+      "source": "progetti/slide/utils/caption-words.mjs",
+      "target": "utils/caption-words.mjs",
+      "sourceSha256": "413f4bd46961a915b62e40e9355396413e7a77fbf9fd2588efeee05c8501b4e7"
+    },
+    {
+      "source": "progetti/slide/scripts/check/caption-words.test.mjs",
+      "target": "tests/caption-words.test.mjs",
+      "sourceSha256": "6a42c48bc23f5fe2bc746763d56bcd1dda3358f1ef642cdc68b26be69c08a9ef"
+    },
+    {
+      "source": "progetti/slide/scripts/build/whisper-requirements.txt",
+      "target": "scripts/audio/whisper-requirements.txt",
+      "sourceSha256": "9992ded7f4ed792934c2ee6ea142dbb0ea28bca9a90917a1969dd16f0e7122c0"
+    },
+    {
+      "source": "progetti/slide/scripts/build/lesson-captions.py",
+      "target": "scripts/audio/druskininkai-captions.py",
+      "sourceSha256": "df7f63f321df519aaa07ce03e8e867a67d0b28b19f51c1719a7a911fc0bbfd68"
+    },
+    {
+      "source": "progetti/slide/scripts/build/lesson-captions.mjs",
+      "target": "scripts/audio/caption-files.mjs",
+      "sourceSha256": "7b21666ccb017350f02309c037d8ec9eab21514655925c8aa8d27b1cbab8cddd"
+    }
+  ]
+}

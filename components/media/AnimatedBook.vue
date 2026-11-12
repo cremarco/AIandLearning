@@ -3,15 +3,21 @@ import { computed, onScopeDispose, ref, watch } from 'vue'
 import { assetUrl as asset } from '../../utils/assets'
 import type { BookPreview } from '../../utils/deck'
 import { useSlideMotion } from '../../composables/useSlideMotion'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+import { useNarrationPlayback } from '../../utils/narration-playback'
+import { useNarrationAnimation } from '../../composables/useNarrationAnimation'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{ book: BookPreview; slideNumber: number }>()
+const playback = useNarrationPlayback()
+const narrated = computed(() => playback?.enabled.value ?? false)
 const { reduced, isStatic, running: motionAllowed } = useSlideMotion(() => props.slideNumber)
 const ready = ref(false)
 const paused = ref(false)
 const finished = ref(false)
 const motionElement = ref<HTMLElement>()
-const playing = computed(() => ready.value && motionAllowed.value && !paused.value && !finished.value)
+const playing = computed(() => ready.value && motionAllowed.value && !paused.value && !finished.value
+  && (!narrated.value || playback?.playing.value))
 // Repeat the supplied chapter spreads only as fast-turning preview leaves.
 const previewSheets = computed(() => props.book.sheets.length ? [
   ...props.book.sheets,
@@ -20,11 +26,17 @@ const previewSheets = computed(() => props.book.sheets.length ? [
 const frontDepth = (index: number) => 3 + 3 * (previewSheets.value.length - index) / previewSheets.value.length
 const backDepth = (index: number) => 4 + 3 * index / Math.max(1, previewSheets.value.length - 1)
 const status = computed(() => isStatic.value || finished.value
-  ? `Fictional book. The book is closed, showing the author portrait on its back cover: ${props.book.portraitAlt}`
-  : paused.value ? 'Book preview paused.' : 'The cover opens, pages turn slowly at first, then accelerate into a rapid flutter before the book closes to show the author portrait on its back cover.')
+  ? `${t('Fictional book. The book is closed, showing the author portrait on its back cover:')} ${props.book.portraitAlt}`
+  : paused.value || (narrated.value && !playing.value) ? t('Book preview paused.') : t('The cover opens, pages turn slowly at first, then accelerate into a rapid flutter before the book closes to show the author portrait on its back cover.'))
 
 let animations: Animation[] = []
 let generation = 0
+let animationDuration = 0
+useNarrationAnimation({
+  playback, active: computed(() => ready.value && motionAllowed.value),
+  animations: () => animations, duration: () => animationDuration,
+  onProgress: progress => { finished.value = progress >= 1 },
+})
 
 function cancelAnimations() {
   for (const animation of animations) {
@@ -36,7 +48,7 @@ function cancelAnimations() {
 
 function syncPlayback() {
   for (const animation of animations) {
-    if (playing.value) animation.play()
+    if (playing.value && !narrated.value) animation.play()
     else animation.pause()
   }
 }
@@ -69,6 +81,7 @@ watch(motionElement, async (element) => {
   const closeStart = lastTurn + 650
   const closeEnd = closeStart + 1500
   const duration = closeEnd + 900
+  animationDuration = duration
   const at = (milliseconds: number) => milliseconds / duration
   const animate = (target: Element, keyframes: Keyframe[]) => {
     const animation = target.animate(keyframes, { duration, fill: 'both', easing: 'linear' })
@@ -150,7 +163,7 @@ function replay() {
 </script>
 
 <template>
-  <div class="book-preview relative" role="group" aria-label="Opening, browsing and closing the assigned book"
+  <div class="book-preview relative" role="group" :aria-label="t('Opening, browsing and closing the assigned book')"
     :data-state="isStatic || finished ? 'closed-back' : !ready ? 'closed' : playing ? 'playing' : 'paused'">
     <div v-if="isStatic" class="book-scene book-static-back">
       <div class="book-static-page book-author-page">
@@ -182,8 +195,8 @@ function replay() {
       </div>
     </div>
     <span v-if="isStatic || finished" class="badge badge-outline book-fiction-stamp absolute top-10 inset-x-0 z-10 mx-auto h-auto rounded-sm px-4 py-2 font-mono text-2xl font-black uppercase tracking-widest">{{ t('Fictional book') }}</span>
-    <div v-if="!isStatic" class="book-controls" @click.stop>
-      <button class="btn btn-sm text-sm" type="button" :disabled="!ready || finished" :aria-pressed="paused" @click="paused = !paused">{{ paused ? 'Resume' : 'Pause' }}</button>
+    <div v-if="!isStatic && !narrated" class="book-controls" @click.stop>
+      <button class="btn btn-sm text-sm" type="button" :disabled="!ready || finished" :aria-pressed="paused" @click="paused = !paused">{{ t(paused ? 'Resume' : 'Pause') }}</button>
       <button class="btn btn-sm text-sm" type="button" :disabled="!ready" @click="replay">{{ t('Replay book') }}</button>
     </div>
     <p class="sr-only" role="status" aria-live="polite">{{ status }}</p>

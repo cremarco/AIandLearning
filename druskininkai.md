@@ -38,6 +38,20 @@ We will explore how AI can support **self-directed learning**, with visual guida
 
 ---
 layout: default
+routeAlias: s01lt
+title: "Beyond prompting"
+---
+
+<DeckSlide id="S01LT" />
+
+<!--
+Sveiki atvykę į šį **50 minučių susitikimą**. Susitikimo vieta – Druskininkai.
+
+Nagrinėsime, kaip DI gali padėti **savivaldžiam mokymuisi**, pasitelkiant vaizdinį orientavimą, šaltinių tikrinimą ir mokytojo pagalbą.
+-->
+
+---
+layout: default
 routeAlias: s02
 title: "Marco Cremaschi"
 ---
@@ -52,6 +66,20 @@ I also teach visual communication, interface design and programming, including t
 
 ---
 layout: default
+routeAlias: s02lt
+title: "Marco Cremaschi"
+---
+
+<DeckSlide id="S02LT" />
+
+<!--
+Esu Marco Cremaschi, University of Milano-Bicocca docentas. Savo darbe sieju **DI** su praktinėmis problemomis.
+
+Taip pat dėstau vaizdinę komunikaciją, sąsajų projektavimą ir programavimą, įskaitant technologijų naudojimą psichologijos ir psichiatrijos srityse.
+-->
+
+---
+layout: default
 routeAlias: s50
 title: "Visual tools for learning with AI"
 ---
@@ -59,11 +87,27 @@ title: "Visual tools for learning with AI"
 <DeckSlide id="S50" />
 
 <!--
-For teachers, the aim is to explore **visual guidance for learning** across subjects.
+This session is for **teachers across disciplines** who want their students to use AI while taking responsibility for their own learning.
 
-We will see how a clear goal connects with a visual representation and a check of understanding.
+We will follow a student’s learning process: set a goal, work with a source, use a visual representation and check understanding. **Concept maps and self-assessment** will give us concrete examples.
 
-The prepared examples show practical ways to use AI responsibly.
+As we look at the tools, keep your own subject and students in mind. We will consider uncertainty, frustration and critical thinking, and ask what the learner can explain independently. The aim is to take away **practical ideas for responsible AI use** that you can adapt to your teaching.
+-->
+
+---
+layout: default
+routeAlias: s50lt
+title: "Vaizdinės mokymosi su DI priemonės"
+---
+
+<DeckSlide id="S50LT" />
+
+<!--
+Šis susitikimas skirtas **įvairių dalykų mokytojams**, norintiems, kad mokiniai naudotų DI ir prisiimtų atsakomybę už savo mokymąsi.
+
+Stebėsime studento mokymosi procesą: tikslo nustatymą, darbą su šaltiniu, vaizdinį idėjų perteikimą ir supratimo tikrinimą. **Sąvokų žemėlapiai ir įsivertinimas** suteiks konkrečių pavyzdžių.
+
+Nagrinėdami priemones, pagalvokite apie savo mokomąjį dalyką ir mokinius. Aptarsime neapibrėžtumą, nusivylimą ir kritinį mąstymą bei klausime, ką besimokantysis gali paaiškinti savarankiškai. Tikslas – išsinešti **praktinių atsakingo DI naudojimo idėjų**, kurias galėtumėte pritaikyti savo pamokose.
 -->
 
 ---
@@ -84,6 +128,22 @@ You can use the links to follow the examples and return to them later.
 
 ---
 layout: default
+routeAlias: s50qrlt
+title: "Sekite pristatymą"
+---
+
+<DeckSlide id="S50QRLT" />
+
+<!--
+Prieš pradėdami nuskaitykite **QR kodą**, kad atvertumėte skaidres.
+
+Skirsiu tam šiek tiek laiko.
+
+Nuorodomis galėsite sekti pavyzdžius ir vėliau prie jų sugrįžti.
+-->
+
+---
+layout: default
 routeAlias: s50legend
 title: "Who is this slide for?"
 ---
@@ -94,6 +154,20 @@ title: "Who is this slide for?"
 As you follow the slides, these **icons** show who each activity is for: teachers, students, or both.
 
 They will help you find the examples most useful to you.
+-->
+
+---
+layout: default
+routeAlias: s50legendlt
+title: "Kam skirta ši skaidrė?"
+---
+
+<DeckSlide id="S50LEGENDLT" />
+
+<!--
+Skaidrėse šios **piktogramos** parodo, kam skirta veikla: mokytojams, mokiniams ar abiem grupėms.
+
+Jos padės rasti jums naudingiausius pavyzdžius.
 -->
 
 ---
@@ -120,6 +194,28 @@ Thank you. We will use prepared examples, so you can follow even if these tools 
 
 ---
 layout: default
+routeAlias: s50checkinlt
+title: "Prieš pradėdami…"
+clicks: 3
+---
+
+<DeckSlide id="S50CHECKINLT" />
+
+<!--
+Kad pasirinktume tinkamiausią pradžią, užduosiu tris klausimus.
+
+Jeigu atsakymas yra taip, prašau **pakelti ranką**.
+
+[click] Pirmiausia, ar turite **ChatGPT, Gemini arba Claude paskyrą**?
+
+[click] Ar jau naudojate **generatyvinį DI** mokymuisi arba mokymo medžiagai rengti?
+
+[click] Galiausiai, ar pažįstate **Gemini Notebook (anksčiau – NotebookLM)**?\
+Ačiū. Naudosime parengtus pavyzdžius, todėl galėsite sekti pristatymą net jei šios priemonės jums naujos.
+-->
+
+---
+layout: default
 routeAlias: s51
 title: "Andrea needs to understand GenAI"
 clicks: 1
@@ -133,6 +229,23 @@ Let us make this concrete with **Andrea**, a university computer science student
 He needs to study a textbook and explain how a language model produces text.
 
 As we follow him, think about how you would adapt the support to your students’ age and subject.
+-->
+
+---
+layout: default
+routeAlias: s51lt
+title: "Andrea turi suprasti generatyvinį DI"
+clicks: 1
+---
+
+<DeckSlide id="S51LT" />
+
+<!--
+Panagrinėkime konkretų pavyzdį – **Andrea**, universiteto informatikos studentą. Jis moka programuoti, tačiau vis dar painioja kai kurias generatyvinio DI idėjas.
+
+[click] Jam reikia išstudijuoti vadovėlį ir paaiškinti, kaip kalbos modelis kuria tekstą.
+
+Stebėdami jo darbą pagalvokite, kaip pritaikytumėte pagalbą savo mokinių amžiui ir mokomajam dalykui.
 -->
 
 ---
@@ -151,6 +264,24 @@ I am joking, of course.
 This is a **fictional book** made for the workshop, with real explanations and technical references.
 
 I will use this book for the demonstrations. The same approach can be adapted to sources from other subjects.
+-->
+
+---
+layout: default
+routeAlias: s53lt
+title: "Paskirtas vadovėlis"
+---
+
+<DeckSlide id="S53LT" />
+
+<!--
+Šiam bandymui Andrea reikia **puikios knygos**.
+
+Žinoma, juokauju.
+
+Tai seminarui sukurta **išgalvota knyga**, kurioje pateikti tikri paaiškinimai ir techniniai šaltiniai.
+
+Demonstracijoms naudosiu šią knygą. Tą patį metodą galima pritaikyti kitų dalykų šaltiniams.
 -->
 
 ---
@@ -179,6 +310,30 @@ His diagram, explanation and corrections show us what he understands.
 
 ---
 layout: default
+routeAlias: s52lt
+title: "Andrea mokymosi užduotis"
+clicks: 4
+---
+
+<DeckSlide id="S52LT" />
+
+<!--
+Andrea turi suprasti vadovėlį ir parodyti, ką išmoko.
+
+Stebėsime **keturias susijusias veiklas**.
+
+[click] Pirmiausia jis **skaito** vadovėlį ir pasižymi, kas neaišku.
+
+[click] Tada jis **pavaizduoja** idėjas schemoje ir paaiškina jų ryšius.
+
+[click] Toliau jis **tikrina** schemą ir DI pasiūlymus pagal vadovėlį bei ištaiso klaidas.
+
+[click] Galiausiai jis **paaiškina** naują pavyzdį savais žodžiais, be DI.\
+Jo schema, paaiškinimas ir pataisymai parodo, ką jis supranta.
+-->
+
+---
+layout: default
 routeAlias: s52sdl
 title: "Self-directed learning: making choices"
 ---
@@ -191,6 +346,22 @@ These activities ask Andrea to make his own learning choices.
 This is **self-directed learning**: he sets a goal, chooses how to study and reviews his progress.
 
 **Teachers and peers** can help, while he remains responsible for his choices.
+-->
+
+---
+layout: default
+routeAlias: s52sdllt
+title: "Savivaldus mokymasis: sprendimų priėmimas"
+---
+
+<DeckSlide id="S52SDLLT" />
+
+<!--
+Šios veiklos skatina Andrea pačiam priimti mokymosi sprendimus.
+
+Tai **savivaldus mokymasis**: jis nusistato tikslą, pasirenka mokymosi būdą ir peržiūri pažangą.
+
+**Mokytojai ir bendramoksliai** gali padėti, tačiau atsakomybė už pasirinkimus lieka jam.
 -->
 
 ---
@@ -213,22 +384,20 @@ AI can offer feedback, but **Andrea decides what needs more work**.
 
 ---
 layout: default
-routeAlias: s52design
-title: "Why the learning design matters"
+routeAlias: s52salt
+title: "Įsivertinimas: pažangos tikrinimas"
 ---
 
-<DeckSlide id="S52DESIGN" />
+<DeckSlide id="S52SALT" />
 
 <!--
-Why do we keep asking for an **independent explanation**?
+Tačiau kaip Andrea sužino, ar jo pasirinkimai veiksmingi?
 
-In one high-school maths experiment, students using an unguarded AI assistant did better during practice, but worse later when working without it. That finding comes from one specific setting.
+Per **įsivertinimą**: jis tikrina savo darbą pagal aiškius kriterijus.
 
-The self-assessment review also gives us a design principle: learners need clear criteria, feedback and a chance to revise.
+Pavyzdžiui, jis gali paaiškinti idėjas, bet jam sunku atskleisti jų ryšius, todėl jis patobulina savo žemėlapį.
 
-These sources inform our workshop choices.
-
-These examples show how the tools work in practical learning activities.
+DI gali pateikti grįžtamąjį ryšį, tačiau **Andrea nusprendžia, ką dar reikia tobulinti**.
 -->
 
 ---
@@ -262,6 +431,35 @@ The ribbon shows the main and secondary phases. **Support** covers setup, source
 
 ---
 layout: default
+routeAlias: s52phaseslt
+title: "Šešių etapų mokymosi procesas"
+clicks: 6
+---
+
+<DeckSlide id="S52PHASESLT" />
+
+<!--
+Andrea mokymąsi galime suskirstyti į **šešis etapus**.
+
+Kiekvienas etapas padeda pasirinkti, ką daryti toliau.
+
+[click] Pirmiausia jis **planuoja** tikslą ir mokymosi laiką.
+
+[click] Norėdamas **suprasti** idėją, jis nagrinėja paaiškinimą ar pavyzdį.
+
+[click] Tada, naudodamas žemėlapį, jis **susieja** ją su tuo, ką jau žino.
+
+[click] Toliau jis bando **prisiminti** be vadovėlio ir po kurio laiko vėl pakartoja.
+
+[click] Norėdamas **taikyti** žinias, jis nagrinėja naują pavyzdį.
+
+[click] Galiausiai jis **tikrina** savo atsakymą pagal šaltinį ir kriterijus.\
+Prireikus jis gali grįžti į ankstesnį etapą.\
+Juosta rodo pagrindinį ir papildomą etapą. **Pagalba** apima pasirengimą, šaltinius ir dalijimąsi.
+-->
+
+---
+layout: default
 routeAlias: s53whytools
 title: "Why these tools?"
 clicks: 4
@@ -287,6 +485,31 @@ Let us start with ChatGPT.
 
 ---
 layout: default
+routeAlias: s53whytoolslt
+title: "Kodėl šios priemonės?"
+clicks: 4
+---
+
+<DeckSlide id="S53WHYTOOLSLT" />
+
+<!--
+Vadovėlis jau parengtas. Kodėl renkamės šias priemones? **ChatGPT, Gemini ir Claude** yra alternatyvos – galite pasirinkti vieną. **Gemini Notebook** suteikia darbo aplinką pasirinktiems šaltiniams. Mokamos prieigos prie visų jų nereikia.
+
+Šie keturi aspektai leidžia palyginti tokį metodą su atskiroms mokymosi užduotims skirtomis priemonėmis.
+
+[click] Pirma, jos suteikia **daugiau kontrolės**. Pagal savo tikslą galime paprašyti paprastesnio paaiškinimo arba vieno klausimo vienu metu.
+
+[click] Antra, galime **sujungti mokymosi užduotis**. Tą patį vadovėlį galime naudoti paaiškinimams, schemoms ir praktikai, tikrindami kiekvieną rezultatą.
+
+[click] Trečia, laviname **kitur pritaikomus įgūdžius**. Tikslų nustatymas ir atsakymų tikrinimas padeda ir kituose dalykuose.
+
+[click] Galiausiai galime **sutaupyti**. Vienas asistentas gali patenkinti kelis poreikius, nors nemokama prieiga turi ribojimų.\
+Prireikus galime pridėti specializuotą priemonę.\
+Pradėkime nuo ChatGPT.
+-->
+
+---
+layout: default
 routeAlias: s53gpt
 title: "What can ChatGPT do?"
 ---
@@ -305,6 +528,24 @@ Let us see how to ask.
 
 ---
 layout: default
+routeAlias: s53gptlt
+title: "Kuo gali padėti ChatGPT?"
+---
+
+<DeckSlide id="S53GPTLT" />
+
+<!--
+Naudodami **ChatGPT**, pradedame nuo Andrea poreikio.
+
+Ar jam reikia suprasti idėją, sudaryti žemėlapį, ar pasipraktikuoti atsakyti?
+
+Priemonė gali parengti medžiagą, tačiau Andrea vis tiek turi **pats paaiškinti arba patobulinti atsakymą**.
+
+Pažiūrėkime, kaip to paprašyti.
+-->
+
+---
+layout: default
 routeAlias: s53shortcuts
 title: "Shortcuts"
 ---
@@ -317,6 +558,22 @@ One quick way to describe a learning activity is to use a **shortcut**.
 A short label, such as /quiz or /flashcard, introduces the task we want the AI to help with.
 
 Let us see how to write the request.
+-->
+
+---
+layout: default
+routeAlias: s53shortcutslt
+title: "Užklausų trumpiniai"
+---
+
+<DeckSlide id="S53SHORTCUTSLT" />
+
+<!--
+Vienas greitas būdas aprašyti mokymosi veiklą – naudoti **užklausos trumpinį**.
+
+Trumpas žymuo, pavyzdžiui, /quiz arba /flashcard, įvardija užduotį, kuriai norime DI pagalbos.
+
+Pažiūrėkime, kaip parašyti užklausą.
 -->
 
 ---
@@ -340,6 +597,25 @@ Andrea still checks the result against the textbook.
 
 ---
 layout: default
+routeAlias: s53typeslt
+title: "Kaip veikia užklausų trumpiniai"
+clicks: 2
+---
+
+<DeckSlide id="S53TYPESLT" />
+
+<!--
+**Užklausos trumpinys** įvardija norimą veiklą.
+
+[click] Pirmiausia **įvardykite veiklą**. Pavyzdžiui, /quiz prašo klausimų, o /conceptmap – ryšių tarp idėjų.
+
+[click] Tada **aprašykite, ko reikia**: šaltinį, mokymosi tikslą ir rezultato formatą. Taip pat galime paprašyti užuominų, grįžtamojo ryšio ar mygtukų.
+
+Andrea vis tiek tikrina rezultatą pagal vadovėlį.
+-->
+
+---
+layout: default
 routeAlias: s53shortcutcloud
 title: "15 shortcuts for the learning pathway"
 ---
@@ -352,6 +628,22 @@ Now let us explore the **15 prompt examples**. Each one supports a learning acti
 You can select a label to see its purpose and open the recording.
 
 As we look, think about which activity would help Andrea with his current difficulty.
+-->
+
+---
+layout: default
+routeAlias: s53shortcutcloudlt
+title: "15 trumpinių mokymosi kelyje"
+---
+
+<DeckSlide id="S53SHORTCUTCLOUDLT" />
+
+<!--
+Dabar panagrinėkime **15 užklausų pavyzdžių**. Kiekvienas jų padeda atlikti mokymosi veiksmą, pavyzdžiui, prisiminti, paaiškinti ar planuoti.
+
+Galite pasirinkti žymenį, perskaityti jo paskirtį ir atverti įrašą.
+
+Stebėdami pagalvokite, kuri veikla padėtų Andrea įveikti dabartinį sunkumą.
 -->
 
 ---
@@ -372,6 +664,22 @@ Together, they help him choose what to study again.
 
 ---
 layout: default
+routeAlias: s53cmd1lt
+title: "Pasirinkti trumpiniai · prisiminimas ir refleksija"
+---
+
+<DeckSlide id="S53CMD1LT" />
+
+<!--
+Pirmoji grupė padeda Andrea **prisiminti ir pakartoti**.
+
+Naudodamas /flashcard, jis atsako prieš atverdamas paaiškinimą. Naudodamas /mistakelog, jis fiksuoja klaidas ir pataisymus.
+
+Kartu šios veiklos padeda pasirinkti, ką mokytis dar kartą.
+-->
+
+---
+layout: default
 routeAlias: s53cmd2
 title: "Selected shortcuts · explain and connect"
 ---
@@ -388,6 +696,22 @@ For each activity, he checks his reasoning against the textbook.
 
 ---
 layout: default
+routeAlias: s53cmd2lt
+title: "Pasirinkti trumpiniai · paaiškinimas ir ryšiai"
+---
+
+<DeckSlide id="S53CMD2LT" />
+
+<!--
+Išmokęs terminus, Andrea turi **susieti idėjas**.
+
+Jis gali sudaryti sąvokų žemėlapį, susieti apibrėžtis ar klasifikuoti pavyzdžius. Žodinė praktika skatina paaiškinti tuos ryšius savais žodžiais.
+
+Kiekvienoje veikloje jis tikrina savo samprotavimą pagal vadovėlį.
+-->
+
+---
+layout: default
 routeAlias: s53cmd3
 title: "Selected shortcuts · practice and assessment"
 ---
@@ -400,6 +724,22 @@ Next, Andrea can **test his understanding**.
 A quiz or missing-word task checks specific points. A worksheet asks for a written explanation, while a case study uses a new example.
 
 In each case, he answers first, then reads the feedback and explains any correction.
+-->
+
+---
+layout: default
+routeAlias: s53cmd3lt
+title: "Pasirinkti trumpiniai · praktika ir vertinimas"
+---
+
+<DeckSlide id="S53CMD3LT" />
+
+<!--
+Toliau Andrea gali **pasitikrinti supratimą**.
+
+Testas ar trūkstamų žodžių užduotis tikrina konkrečius dalykus. Užduočių lapas prašo rašytinio paaiškinimo, o atvejo analizė pateikia naują pavyzdį.
+
+Kaskart jis pirmiausia atsako, tada perskaito grįžtamąjį ryšį ir paaiškina pataisymą.
 -->
 
 ---
@@ -422,6 +762,24 @@ Now we will look at one example from each group.
 
 ---
 layout: default
+routeAlias: s53cmd4lt
+title: "Pasirinkti trumpiniai · planavimas ir mokymas"
+---
+
+<DeckSlide id="S53CMD4LT" />
+
+<!--
+Šioms veikloms taip pat reikia **plano**.
+
+Andrea gali naudoti /studyplan tolesniems žingsniams pasirinkti. Mokytojai gali planuoti pamoką, pritaikyti pagalbos lygį arba sukurti mokymosi stoteles.
+
+Bendri kriterijai gali padėti teikti grįžtamąjį ryšį vieni kitiems.
+
+Dabar peržiūrėsime po vieną kiekvienos grupės pavyzdį.
+-->
+
+---
+layout: default
 routeAlias: s53detailflashcard
 title: "/flashcard"
 ---
@@ -438,6 +796,22 @@ He can download the ten questions and answers as a **CSV file** for later review
 
 ---
 layout: default
+routeAlias: s53detailflashcardlt
+title: "/flashcard"
+---
+
+<DeckSlide id="S53DETAILFLASHCARDLT" />
+
+<!--
+Pradedame nuo pagal vadovėlį sukurtų **kortelių**.
+
+Andrea atsako iš atminties, atveria paaiškinimą ir įsivertina prisiminimą. Įvertinęs jis pereina prie kitos kortelės.
+
+Dešimt klausimų ir atsakymų jis gali atsisiųsti kaip **CSV failą**, kad vėliau galėtų kartoti.
+-->
+
+---
+layout: default
 routeAlias: s53detailmistakelog
 title: "/mistakelog"
 ---
@@ -450,6 +824,22 @@ When a card reveals an error, Andrea can add it to a **mistake log**.
 He writes the correction and explains why his first answer was wrong. He can then mark the item as understood or keep it for another review.
 
 A short reflective question makes the next step clear: what will I do differently next time?
+-->
+
+---
+layout: default
+routeAlias: s53detailmistakeloglt
+title: "/mistakelog"
+---
+
+<DeckSlide id="S53DETAILMISTAKELOGLT" />
+
+<!--
+Kai kortelė atskleidžia klaidą, Andrea gali ją įrašyti į **klaidų žurnalą**.
+
+Jis užrašo pataisymą ir paaiškina, kodėl pirmas atsakymas buvo klaidingas. Tada gali pažymėti, kad suprato, arba palikti klausimą kitai peržiūrai.
+
+Trumpas refleksijos klausimas padeda pasirinkti kitą žingsnį: ką kitą kartą darysiu kitaip?
 -->
 
 ---
@@ -472,6 +862,24 @@ His explanation helps the teacher choose a question or hint for the next attempt
 
 ---
 layout: default
+routeAlias: s53detailconceptmaplt
+title: "/conceptmap"
+---
+
+<DeckSlide id="S53DETAILCONCEPTMAPLT" />
+
+<!--
+Kai kurios klaidos susijusios su idėjų ryšiais. Šis **sąvokų žemėlapis** sieja modelio mokymą, išvedimą ir RAG.
+
+Pagrindiniai klausimai: kada keičiasi parametrai ir kada informacija įtraukiama į kontekstą?
+
+Andrea paaiškina kiekvieną ryšį, patikrina vadovėlį ir prireikus pataiso atsakymą.
+
+Jo paaiškinimas padeda mokytojui pasirinkti klausimą ar užuominą kitam bandymui.
+-->
+
+---
+layout: default
 routeAlias: s53detailmatchinggame
 title: "/matchinggame"
 ---
@@ -490,6 +898,24 @@ A correct pair is a useful start; his explanation shows whether he understands i
 
 ---
 layout: default
+routeAlias: s53detailmatchinggamelt
+title: "/matchinggame"
+---
+
+<DeckSlide id="S53DETAILMATCHINGGAMELT" />
+
+<!--
+Jei terminai dar neaiškūs, Andrea gali pradėti nuo **porų sudarymo**.
+
+Čia jis susieja sąvokas su jų apibrėžtimis.
+
+Sudėjęs kiekvieną porą, vienu sakiniu paaiškina ryšį.
+
+Teisinga pora yra naudinga pradžia, o paaiškinimas parodo, ar jis supranta.
+-->
+
+---
+layout: default
 routeAlias: s53detailsortinggame
 title: "/sortinggame"
 ---
@@ -502,6 +928,22 @@ Next, he uses those meanings to **sort examples** into training or inference.
 The key question stays the same: do the model's parameters change, or does it use information to produce a response?
 
 The feedback helps Andrea check and explain his choice.
+-->
+
+---
+layout: default
+routeAlias: s53detailsortinggamelt
+title: "/sortinggame"
+---
+
+<DeckSlide id="S53DETAILSORTINGGAMELT" />
+
+<!--
+Toliau jis taiko šias reikšmes **klasifikuodamas pavyzdžius** kaip modelio mokymą arba išvedimą.
+
+Pagrindinis klausimas nesikeičia: ar modelio parametrai keičiasi, ar jis naudoja informaciją atsakymui sukurti?
+
+Grįžtamasis ryšys padeda Andrea patikrinti ir paaiškinti pasirinkimą.
 -->
 
 ---
@@ -524,6 +966,24 @@ He can return to earlier questions and improve his answers.
 
 ---
 layout: default
+routeAlias: s53detailorallt
+title: "/oral"
+---
+
+<DeckSlide id="S53DETAILORALLT" />
+
+<!--
+Andrea taip pat turi pasirengti **egzaminui žodžiu**.
+
+Čia jis gali įrašyti arba padiktuoti atsakymą, tada atverti numatomą paaiškinimą.
+
+Jis palygina jį su savo žodžiais ir vadovėliu.
+
+Gali grįžti prie ankstesnių klausimų ir patobulinti atsakymus.
+-->
+
+---
+layout: default
 routeAlias: s53detailquiz
 title: "/quiz"
 ---
@@ -542,6 +1002,24 @@ The useful question is: why is the corrected answer right?
 
 ---
 layout: default
+routeAlias: s53detailquizlt
+title: "/quiz"
+---
+
+<DeckSlide id="S53DETAILQUIZLT" />
+
+<!--
+**Testas** suteikia dar vieną greitą būdą pasitikrinti.
+
+Andrea pasirenka atsakymą prieš skaitydamas grįžtamąjį ryšį.
+
+Jei suklysta, pasinaudoja paaiškinimu, kad pasitaisytų.
+
+Naudingas klausimas: kodėl pataisytas atsakymas yra teisingas?
+-->
+
+---
+layout: default
 routeAlias: s53detailfillintheblanks
 title: "/fillintheblanks"
 ---
@@ -554,6 +1032,22 @@ To check the terms in a sentence, Andrea can try **fill in the blanks**.
 He enters the missing words, checks them and corrects any errors.
 
 He then explains the whole sentence, including why each word fits.
+-->
+
+---
+layout: default
+routeAlias: s53detailfillintheblankslt
+title: "/fillintheblanks"
+---
+
+<DeckSlide id="S53DETAILFILLINTHEBLANKSLT" />
+
+<!--
+Kad pasitikrintų sakinyje vartojamus terminus, Andrea gali atlikti **trūkstamų žodžių įrašymo užduotį**.
+
+Jis įrašo trūkstamus žodžius, juos patikrina ir ištaiso klaidas.
+
+Tada paaiškina visą sakinį ir kodėl kiekvienas žodis tinka.
 -->
 
 ---
@@ -576,6 +1070,24 @@ The score is a summary; his written answer shows what he understands.
 
 ---
 layout: default
+routeAlias: s53detailworksheetlt
+title: "/worksheet"
+---
+
+<DeckSlide id="S53DETAILWORKSHEETLT" />
+
+<!--
+Ilgesniam atsakymui galime naudoti **užduočių lapą**.
+
+Andrea parašo savo paaiškinimą prieš atverdamas atsakymo pavyzdį.
+
+Jis palygina darbą su kriterijais ir skiria sau balus.
+
+Balas yra santrauka, o rašytinis atsakymas parodo, ką jis supranta.
+-->
+
+---
+layout: default
 routeAlias: s53detailcasestudy
 title: "/caseStudy"
 ---
@@ -590,6 +1102,24 @@ He compares training a model, changing a prompt and adding retrieved material.
 He writes his answer before revealing the explanation.
 
 In each case, what changes: the parameters or the context?
+-->
+
+---
+layout: default
+routeAlias: s53detailcasestudylt
+title: "/caseStudy"
+---
+
+<DeckSlide id="S53DETAILCASESTUDYLT" />
+
+<!--
+Dabar Andrea gali pritaikyti šias idėjas **atvejo analizei**.
+
+Jis palygina modelio mokymą, užklausos pakeitimą ir rastos medžiagos pridėjimą.
+
+Parašo atsakymą prieš atverdamas paaiškinimą.
+
+Kas keičiasi kiekvienu atveju: parametrai ar kontekstas?
 -->
 
 ---
@@ -610,6 +1140,22 @@ After each activity, he checks what he can explain or do on his own.
 
 ---
 layout: default
+routeAlias: s53detailstudyplanlt
+title: "/studyplan"
+---
+
+<DeckSlide id="S53DETAILSTUDYPLANLT" />
+
+<!--
+Atsakymai padeda Andrea nuspręsti, **ko mokytis toliau**.
+
+Šis planas suskaido tikslą į mažesnes veiklas. Jis gali pažymėti pažangą ir pereiti tarp žingsnių.
+
+Po kiekvienos veiklos pasitikrina, ką gali paaiškinti arba atlikti pats.
+-->
+
+---
+layout: default
 routeAlias: s53detaillessonplan
 title: "/lessonplan"
 ---
@@ -622,6 +1168,22 @@ For teachers, the same approach becomes a **15-minute lesson**: four minutes to 
 Students compare fine-tuning, a prompt definition and a retrieved passage.
 
 They explain what changes before seeing the answer, then finish with an explanation on their own.
+-->
+
+---
+layout: default
+routeAlias: s53detaillessonplanlt
+title: "/lessonplan"
+---
+
+<DeckSlide id="S53DETAILLESSONPLANLT" />
+
+<!--
+Mokytojams tas pats metodas tampa **15 minučių pamoka**: keturios minutės paaiškinimui, šešios taikymui ir penkios vertinimui.
+
+Mokiniai palygina papildomą modelio mokymą, užklausoje pateiktą apibrėžtį ir iš šaltinio rastą ištrauką.
+
+Prieš pamatydami atsakymą paaiškina, kas keičiasi, ir pabaigoje savarankiškai pateikia paaiškinimą.
 -->
 
 ---
@@ -644,6 +1206,24 @@ A new example checks whether the learner can explain the idea independently.
 
 ---
 layout: default
+routeAlias: s53detaildifferentiatelt
+title: "/differentiate"
+---
+
+<DeckSlide id="S53DETAILDIFFERENTIATELT" />
+
+<!--
+Mokiniams gali reikėti skirtingo lygio pagalbos.
+
+Šie **trys lygiai** išlaiko tą patį mokymosi tikslą, bet keičia pagalbą ir sudėtingumą.
+
+Pradedame nuo besimokančiojo poreikių, tada mažiname užuominų kiekį.
+
+Naujas pavyzdys padeda patikrinti, ar mokinys gali savarankiškai paaiškinti idėją.
+-->
+
+---
+layout: default
 routeAlias: s53detailpeerassessment
 title: "/peerassessment"
 ---
@@ -658,6 +1238,24 @@ Students can also help each other check their work.
 Here, a fictional peer gives points and written feedback.
 
 The feedback names one strength and one thing to improve, with evidence from the answer.
+-->
+
+---
+layout: default
+routeAlias: s53detailpeerassessmentlt
+title: "/peerassessment"
+---
+
+<DeckSlide id="S53DETAILPEERASSESSMENTLT" />
+
+<!--
+Mokiniai taip pat gali padėti vieni kitiems pasitikrinti darbą.
+
+**Tarpusavio vertinimas** prasideda nuo bendrų kriterijų.
+
+Čia išgalvotas bendramokslis skiria balus ir rašytinį grįžtamąjį ryšį.
+
+Grįžtamasis ryšys, remiantis atsakymo įrodymais, įvardija vieną stiprybę ir vieną tobulintiną dalyką.
 -->
 
 ---
@@ -680,6 +1278,24 @@ He can return to earlier answers and revise them.
 
 ---
 layout: default
+routeAlias: s53detaillearningstationslt
+title: "/learningstations"
+---
+
+<DeckSlide id="S53DETAILLEARNINGSTATIONSLT" />
+
+<!--
+Kelias veiklas galime sujungti į **mokymosi stoteles**.
+
+Kiekviena stotelė skirta modelio mokymui, išvedimui arba kontekstui.
+
+Andrea parašo atsakymą, palygina jį su paaiškinimu ir pažymi stotelę atlikta.
+
+Jis gali grįžti prie ankstesnių atsakymų ir juos patobulinti.
+-->
+
+---
+layout: default
 routeAlias: s53claude
 title: "These shortcuts also work in Claude"
 ---
@@ -692,8 +1308,22 @@ Can we use these prompts in another assistant?
 In **Claude**, the same textbook and prompts produced five working examples: flashcards, a quiz, oral practice, a mistake log and a concept map.
 
 The interface changes, but the task stays the same.
+-->
 
-The other shortcuts remain untested because the account reached its message limit.
+---
+layout: default
+routeAlias: s53claudelt
+title: "Šie trumpiniai veikia ir Claude aplinkoje"
+---
+
+<DeckSlide id="S53CLAUDELT" />
+
+<!--
+Ar šias užklausas galime naudoti su kitu asistentu?
+
+Naudojant **Claude**, tas pats vadovėlis ir užklausos leido gauti penkis veikiančius pavyzdžius: korteles, testą, žodinę praktiką, klaidų žurnalą ir sąvokų žemėlapį.
+
+Sąsaja keičiasi, bet užduotis lieka ta pati.
 -->
 
 ---
@@ -705,13 +1335,23 @@ title: "Trying the shortcuts in Gemini"
 <DeckSlide id="S53GEMINI" />
 
 <!--
-The **Gemini** tests gave mixed results. Each prompt used the same textbook in a new chat.
+**Gemini** gave mixed results. The **exported apps** were tested locally.
 
-Of the 15 prompts, two gave interactive activities directly in Gemini, five gave working apps to download, four gave material without interactive controls and four failed to generate a result.
+Always **check the controls and content** before using an activity with students.
+-->
 
-For the downloaded apps, I asked Gemini to show the activity in Canvas. The previews stayed blank here, so I tested the downloaded files locally without changing them. Those screenshots are labelled **exported app**.
+---
+layout: default
+routeAlias: s53geminilt
+title: "Trumpinių bandymas Gemini aplinkoje"
+---
 
-The same prompt can give a different result in another assistant. **Test the controls and check the content** before using it with students.
+<DeckSlide id="S53GEMINILT" />
+
+<!--
+**Gemini** rezultatai buvo nevienodi. **Eksportuotos programėlės** buvo išbandytos vietoje.
+
+Prieš naudodami veiklą su mokiniais, **patikrinkite valdiklius ir turinį**.
 -->
 
 ---
@@ -732,6 +1372,22 @@ We will keep asking two questions: what problem does this tool help with, and ho
 
 ---
 layout: default
+routeAlias: s53toolssectionlt
+title: "Priemonės"
+---
+
+<DeckSlide id="S53TOOLSSECTIONLT" />
+
+<!--
+Išnagrinėjome **užklausų trumpinius**, skirtus įvairioms mokymosi veikloms.
+
+Dabar pažvelkime į **mokymąsi pagal šaltinius su Gemini Notebook**.
+
+Ir toliau kelsime du klausimus: kokią problemą padeda spręsti ši priemonė ir kaip Andrea parodys, ką išmoko?
+-->
+
+---
+layout: default
 routeAlias: s61toolnotebook
 title: "Gemini Notebook"
 ---
@@ -744,6 +1400,22 @@ Gemini Notebook is an **AI tool from Google**, designed to support **learning an
 It helps you study the **sources you choose**: you can ask questions, connect ideas and create study materials.
 
 We will use it with **Andrea’s textbook** and keep checking its answers against the original text.
+-->
+
+---
+layout: default
+routeAlias: s61toolnotebooklt
+title: "Gemini Notebook"
+---
+
+<DeckSlide id="S61TOOLNOTEBOOKLT" />
+
+<!--
+Gemini Notebook yra **Google DI priemonė**, skirta **mokymuisi ir supratimui**.
+
+Ji padeda nagrinėti **jūsų pasirinktus šaltinius**: galite užduoti klausimus, susieti idėjas ir kurti mokymosi medžiagą.
+
+Naudosime ją su **Andrea vadovėliu** ir tikrinsime atsakymus pagal originalų tekstą.
 -->
 
 ---
@@ -766,6 +1438,24 @@ He will need to check it against the textbook.
 
 ---
 layout: default
+routeAlias: s61lt
+title: "Gemini Notebook: pridėkite ir pasirinkite šaltinius"
+---
+
+<DeckSlide id="S61LT" />
+
+<!--
+Pradedame nuo **vadovėlio pridėjimo**.
+
+Andrea patikrina importuotą tekstą ir pasirenka savo klausimo šaltinius.
+
+Tai padeda apriboti užduotį, tačiau atsakyme vis tiek gali būti klaidų.
+
+Jį reikės patikrinti pagal vadovėlį.
+-->
+
+---
+layout: default
 routeAlias: s61research
 title: "Find and review new sources"
 ---
@@ -778,6 +1468,22 @@ If the textbook is not enough, Andrea can **search for more sources**.
 Before importing a result, he checks who produced it, whether it answers his question and whether it is reliable.
 
 Finding a source does not mean he should use it.
+-->
+
+---
+layout: default
+routeAlias: s61researchlt
+title: "Raskite ir peržiūrėkite naujus šaltinius"
+---
+
+<DeckSlide id="S61RESEARCHLT" />
+
+<!--
+Jei vadovėlio nepakanka, Andrea gali **ieškoti daugiau šaltinių**.
+
+Prieš importuodamas rezultatą, jis patikrina, kas jį sukūrė, ar jis atsako į klausimą ir ar yra patikimas.
+
+Rastas šaltinis nebūtinai turi būti panaudotas.
 -->
 
 ---
@@ -800,6 +1506,24 @@ This gives him a manageable answer to check.
 
 ---
 layout: default
+routeAlias: s62lt
+title: "Užduokite konkretų klausimą"
+---
+
+<DeckSlide id="S62LT" />
+
+<!--
+Grįžkime prie pagrindinio Andrea klausimo: **kodėl atsakymas gali pasikeisti nepermokius modelio?**
+
+Jis užduoda trumpą, konkretų klausimą.
+
+Tada palygina paaiškinimą ir jo nuorodas su vadovėliu.
+
+Taip gauna atsakymą, kurį galima nuosekliai patikrinti.
+-->
+
+---
+layout: default
 routeAlias: s63
 title: "Open the citation and its source"
 ---
@@ -812,6 +1536,22 @@ To check that answer, Andrea opens the **citation** and reads the passage.
 Here, the words **ordinary inference** matter: they describe when the model's parameters stay fixed.
 
 He checks that the passage supports the exact claim in the answer.
+-->
+
+---
+layout: default
+routeAlias: s63lt
+title: "Atverkite citatą ir jos šaltinį"
+---
+
+<DeckSlide id="S63LT" />
+
+<!--
+Norėdamas patikrinti atsakymą, Andrea atveria **citatą** ir perskaito ištrauką.
+
+Čia svarbūs žodžiai **įprastas išvedimas**: jie apibūdina sąlygas, kuriomis modelio parametrai lieka fiksuoti.
+
+Jis tikrina, ar ištrauka pagrindžia tikslų atsakyme pateiktą teiginį.
 -->
 
 ---
@@ -838,6 +1578,28 @@ Andrea uses the feedback to choose what to practise next.
 
 ---
 layout: default
+routeAlias: s64settingslt
+title: "Nustatykite Learning Guide"
+---
+
+<DeckSlide id="S64SETTINGSLT" />
+
+<!--
+Taip pat galime pakeisti pokalbio eigą.
+
+**Learning Guide** yra Gemini Notebook pokalbio režimas, skirtas mokytis pagal savo šaltinius.
+
+Jis užduoda **atvirus klausimus**, suskaido problemas į mažesnius žingsnius ir pritaiko paaiškinimus besimokančiajam.
+
+Pasirenkame šį režimą ir nustatome **atsakymo ilgį**, kad Andrea turėtų erdvės pagalvoti ir atsakyti.
+
+Mokytojas gali nustatyti aiškų kriterijų ir nuspręsti, kada tinkama užuomina, o kada – savarankiškas bandymas.
+
+Andrea remiasi grįžtamuoju ryšiu pasirinkdamas, ką praktikuoti toliau.
+-->
+
+---
+layout: default
 routeAlias: s64studio
 title: "Gemini Notebook Studio: what you can create"
 ---
@@ -850,6 +1612,22 @@ The **Studio** panel brings together the formats Gemini Notebook can generate fr
 We can create **audio, video, maps, study materials and visual summaries**.
 
 Choose the format that fits the learning goal. Let us look at a few examples.
+-->
+
+---
+layout: default
+routeAlias: s64studiolt
+title: "Gemini Notebook Studio: ką galima sukurti"
+---
+
+<DeckSlide id="S64STUDIOLT" />
+
+<!--
+**Studio** skydelyje pateikti formatai, kuriuos Gemini Notebook gali sugeneruoti iš pasirinktų šaltinių.
+
+Galime kurti **garsą, vaizdą, žemėlapius, mokymosi medžiagą ir vaizdines santraukas**.
+
+Pasirinkite mokymosi tikslą atitinkantį formatą. Pažiūrėkime kelis pavyzdžius.
 -->
 
 ---
@@ -872,6 +1650,24 @@ Andrea checks the links against the textbook, then explains them without the map
 
 ---
 layout: default
+routeAlias: s66lt
+title: "Tyrinėkite sugeneruotą Mind Map žemėlapį"
+---
+
+<DeckSlide id="S66LT" />
+
+<!--
+Šis žemėlapis sukurtas naudojant **Mind Map**.
+
+Jis susieja pagrindines sąvokas. Galime padidinti vaizdą ir perskaityti kiekvieną šaką.
+
+Kur keičiasi parametrai, o kur informacija pridedama kaip įvestis?
+
+Andrea patikrina ryšius pagal vadovėlį ir tada juos paaiškina be žemėlapio.
+-->
+
+---
+layout: default
 routeAlias: s67
 title: "Answer a quiz before reading feedback"
 ---
@@ -886,6 +1682,24 @@ Andrea answers before opening the hint or feedback.
 His first attempt scores five out of six; he then retries the missed question.
 
 The next step is to explain the correction and check his understanding with a new example.
+-->
+
+---
+layout: default
+routeAlias: s67lt
+title: "Atsakykite į testo klausimą prieš skaitydami grįžtamąjį ryšį"
+---
+
+<DeckSlide id="S67LT" />
+
+<!--
+Šiame įraše matome Gemini Notebook funkciją **Quiz**.
+
+Andrea atsako prieš atverdamas užuominą ar grįžtamąjį ryšį.
+
+Pirmuoju bandymu jis teisingai atsako į penkis iš šešių klausimų, tada dar kartą bando atsakyti į praleistą klausimą.
+
+Kitas žingsnis – paaiškinti pataisymą ir pasitikrinti supratimą nauju pavyzdžiu.
 -->
 
 ---
@@ -908,24 +1722,20 @@ The CSV download lets us reuse the generated questions and answers.
 
 ---
 layout: default
-routeAlias: s67reports
-title: "Build a study guide from the textbook"
+routeAlias: s67cardslt
+title: "Lavinkite prisiminimą naudodami korteles"
 ---
 
-<DeckSlide id="S67REPORTS" />
+<DeckSlide id="S67CARDSLT" />
 
 <!--
-**Reports** turns the sources in a notebook into **structured written documents**.
+Šiame įraše matome Gemini Notebook funkciją **Flashcards**.
 
-You can choose a format, such as a study guide, a briefing or a set of frequently asked questions, or describe a custom document.
+Sustokime ties klausimu ir pabandykime atsakyti iš atminties prieš atverčiant kortelę.
 
-Here we created a **study guide for revision** from Andrea’s textbook.
+Tada Andrea palygina savo atsakymą su vadovėliu.
 
-We can turn the pages and zoom in to read it.
-
-Andrea checks its definitions and examples against the textbook.
-
-He then uses the guide to prepare questions and explain the ideas himself.
+Atsisiuntę CSV galime vėl naudoti sugeneruotus klausimus ir atsakymus.
 -->
 
 ---
@@ -948,6 +1758,24 @@ Andrea checks his explanation against the textbook.
 
 ---
 layout: default
+routeAlias: s67audiolt
+title: "Klausykitės Audio Overview įrašo"
+---
+
+<DeckSlide id="S67AUDIOLT" />
+
+<!--
+**Audio Overview** sukuria tinklalaidės stiliaus pokalbį tarp **dviejų DI sugeneruotų vedėjų**, pagrįstą pasirinktais šaltiniais.
+
+Jų klausimai ir pavyzdžiai gali padėti Andrea **sekti samprotavimą ir susieti idėjas**.
+
+Pasiklausykime ir sustokime: kaip paaiškintumėte šią idėją savais žodžiais?
+
+Andrea patikrina savo paaiškinimą pagal vadovėlį.
+-->
+
+---
+layout: default
 routeAlias: s67video
 title: "Watch a Video Overview"
 ---
@@ -966,6 +1794,24 @@ Andrea checks his explanation against the textbook.
 
 ---
 layout: default
+routeAlias: s67videolt
+title: "Žiūrėkite Video Overview įrašą"
+---
+
+<DeckSlide id="S67VIDEOLT" />
+
+<!--
+**Video Overview** sukuria pasirinktais šaltiniais pagrįstą **įgarsintą vaizdo įrašą su vaizdine medžiaga**.
+
+Balsas ir vaizdai kartu gali padėti Andrea **sekti procesą arba suprasti abstrakčią idėją**.
+
+Pažiūrėkime ir sustokime: kaip paaiškintumėte šią idėją savais žodžiais?
+
+Andrea patikrina savo paaiškinimą pagal vadovėlį.
+-->
+
+---
+layout: default
 routeAlias: s67info
 title: "Compare concepts in an infographic"
 ---
@@ -973,13 +1819,23 @@ title: "Compare concepts in an infographic"
 <DeckSlide id="S67INFO" />
 
 <!--
-This image was created with **Infographic**.
+**Infographic** turns the selected source into a visual overview. We can zoom in to read the details.
 
-It compares training, inference and RAG in one view.
+Andrea checks the labels and content against the textbook, keeping the book’s terminology unchanged.
+-->
 
-We can zoom in to read the details.
+---
+layout: default
+routeAlias: s67infolt
+title: "Palyginkite sąvokas infografike"
+---
 
-Andrea checks the labels against the textbook, then explains what changes in each process.
+<DeckSlide id="S67INFOLT" />
+
+<!--
+**Infographic** pasirinktą šaltinį paverčia vaizdine santrauka. Galime padidinti vaizdą ir perskaityti detales.
+
+Andrea patikrina žymas ir turinį pagal vadovėlį, išsaugodamas jame vartojamus sąvokų pavadinimus.
 -->
 
 ---
@@ -991,13 +1847,23 @@ title: "Generate and present slides"
 <DeckSlide id="S67SLIDES" />
 
 <!--
-These nine slides were created with **Slide Deck**.
+These slides were created with **Slide Deck**. We can browse the PDF and review the visual explanation.
 
-We can move through the PDF to compare training, inference and RAG.
+Andrea checks the labels and arrows against the textbook, keeping the book’s terminology unchanged. Then he explains the main ideas without the slides.
+-->
 
-What changes in each case?
+---
+layout: default
+routeAlias: s67slideslt
+title: "Kurkite ir pristatykite skaidres"
+---
 
-Andrea checks the labels and arrows against the textbook, then answers the final question without the slides.
+<DeckSlide id="S67SLIDESLT" />
+
+<!--
+Šios skaidrės sukurtos naudojant **Slide Deck**. Galime peržiūrėti PDF ir vaizdinį paaiškinimą.
+
+Andrea patikrina žymas ir rodykles pagal vadovėlį, išsaugodamas jame vartojamus sąvokų pavadinimus. Tada pagrindines mintis paaiškina be skaidrių.
 -->
 
 ---
@@ -1020,6 +1886,24 @@ Some free plans still need an account or have limits, so keep a prepared alterna
 
 ---
 layout: default
+routeAlias: s97lt
+title: "Nemokamos priemonės"
+---
+
+<DeckSlide id="S97LT" />
+
+<!--
+Kad po šio susitikimo būtų lengviau pasirinkti priemones, šiose lentelėse jos sugrupuotos pagal paskirtį.
+
+Pradedame nuo **nemokamų priemonių**.
+
+Pasirinkite reikalingą funkciją ir patikrinkite prieigos sąlygas.
+
+Kai kuriems nemokamiems planams vis tiek reikia paskyros arba taikomi ribojimai, todėl turėkite parengtą alternatyvą.
+-->
+
+---
+layout: default
 routeAlias: s97study
 title: "Free tools for maps and review"
 ---
@@ -1038,6 +1922,24 @@ We can keep using the same source and checks.
 
 ---
 layout: default
+routeAlias: s97studylt
+title: "Nemokamos žemėlapių ir kartojimo priemonės"
+---
+
+<DeckSlide id="S97STUDYLT" />
+
+<!--
+Žemėlapiams ir kartojimui turime daugiau specializuotų pasirinkimų.
+
+**Piešimo priemonės** padeda paaiškinti ryšius, o **kartojimo priemonės** – po kurio laiko grįžti prie klausimų.
+
+Pasirinkite mokymosi poreikį atitinkantį veiksmą.
+
+Galime toliau naudoti tą patį šaltinį ir tikrinimo būdus.
+-->
+
+---
+layout: default
 routeAlias: s97p
 title: "Paid tools and upgrades"
 ---
@@ -1050,6 +1952,22 @@ Some tools offer more features through a **paid plan**.
 Before paying, compare the feature you need with a free option and check the current terms.
 
 A paid tool is useful only if the extra feature helps with your task.
+-->
+
+---
+layout: default
+routeAlias: s97plt
+title: "Mokamos priemonės ir planai"
+---
+
+<DeckSlide id="S97PLT" />
+
+<!--
+Kai kurios priemonės suteikia daugiau funkcijų pasirinkus **mokamą planą**.
+
+Prieš mokėdami palyginkite reikiamą funkciją su nemokama alternatyva ir patikrinkite galiojančias sąlygas.
+
+Mokama priemonė naudinga tik tada, kai papildoma funkcija padeda atlikti jūsų užduotį.
 -->
 
 ---
@@ -1074,6 +1992,26 @@ Read&Write offers a wider set of tools through a licence.
 
 ---
 layout: default
+routeAlias: s97accesslt
+title: "Prieinamumo priemonės"
+---
+
+<DeckSlide id="S97ACCESSLT" />
+
+<!--
+Taip pat turime atsižvelgti į **prieinamumą**.
+
+Skaitymas balsu ir diktavimas gali padėti įvairiuose mokymosi etapuose.
+
+Pagalbos priemonę rinkitės kartu su besimokančiuoju.
+
+Patikrinkite prieinamas kalbas ir peržiūrėkite padiktuotą tekstą.
+
+Read&Write siūlo platesnį priemonių rinkinį, kuriam reikalinga licencija.
+-->
+
+---
+layout: default
 routeAlias: s103
 title: "Thank you."
 ---
@@ -1081,13 +2019,23 @@ title: "Thank you."
 <DeckSlide id="S103" />
 
 <!--
-We began by asking how AI can support **independent learning**.
+Thank you.
 
-I hope you leave with an activity, a visual guide and a safeguard to try with your students.
+I would be happy to hear your questions and ideas.
+-->
 
-Keep asking what they can explain independently and what support they need next.
+---
+layout: default
+routeAlias: s103lt
+title: "Ačiū."
+---
 
-Thank you. I would be happy to hear your questions and ideas.
+<DeckSlide id="S103LT" />
+
+<!--
+Ačiū.
+
+Mielai išklausysiu jūsų klausimus ir idėjas.
 -->
 
 ---
@@ -1106,4 +2054,22 @@ They include research on learning and its limits.
 The demonstrations show what a tool did in one example.
 
 To judge learning, we need evidence from the learner.
+-->
+
+---
+layout: default
+routeAlias: s99lt
+title: "Literatūra"
+---
+
+<DeckSlide id="S99LT" />
+
+<!--
+Šie **šaltiniai** skirti klausimams ir tolesniam skaitymui.
+
+Jie apima mokymosi ir jo ribotumų tyrimus.
+
+Demonstracijos parodo, ką priemonė atliko viename pavyzdyje.
+
+Mokymuisi įvertinti reikia paties besimokančiojo pateiktų įrodymų.
 -->

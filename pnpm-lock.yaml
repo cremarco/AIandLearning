@@ -12,6 +12,9 @@ importers:
 
   .:
     dependencies:
+      '@elevenlabs/elevenlabs-js':
+        specifier: 2.74.0
+        version: 2.74.0
       '@slidev/cli':
         specifier: 52.15.2
         version: 52.15.2(@nuxt/kit@3.21.11)(@oxc-project/types@0.156.0)(@types/markdown-it@14.2.0)(@types/node@22.20.5)(@vue/compiler-sfc@3.5.44)(cac@7.1.0)(esbuild@0.28.2)(markdown-it@14.3.3)(playwright-chromium@1.64.1)(postcss@8.5.32)(rolldown@1.2.16)(rollup@4.66.0)(srvx@1.0.8)
@@ -3429,6 +3432,44 @@ packages:
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
+
+  '@elevenlabs/elevenlabs-js@2.74.0':
+    resolution: {integrity: sha512-gtZyoQJwJJrUCWNIsHbeM2dbSDQmvFRznMetrpJmV8iNpCXNY5Oh+s7Yl1U0Oa6GUWkIDZ8ftCOFTrtXYQ96Vg==}
+    engines: {node: '>=18.0.0'}
+
+  command-exists@1.2.9:
+    resolution: {integrity: sha512-LTQ/SGc+s0Xc0Fu5WaKnR0YiygZkm9eKFvyS+fRsU7/ZWFF8ykFM6Pc9aCVf1+xasOOZpO3BAVgVrKvsqKHV7w==}
+
+  node-fetch@2.7.0:
+    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+
+  whatwg-url@5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+
+  tr46@0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+
+  webidl-conversions@3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+
+  ws@8.22.2:
+    resolution: {integrity: sha512-/rEZ2ejown2N5gxVTHUu9bVVC7ttu0/Tgzf5hbTOixR3Fs7mbbXgn2DbdbcKgJOmpQMtrIUWivtYuVMnp/W/yA==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
 
 snapshots:
 
@@ -7412,3 +7453,30 @@ snapshots:
       yargs-parser: 22.0.0
 
   zwitch@2.0.4: {}
+
+  '@elevenlabs/elevenlabs-js@2.74.0':
+    dependencies:
+      command-exists: 1.2.9
+      node-fetch: 2.7.0
+      ws: 8.22.2
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+
+  command-exists@1.2.9: {}
+
+  node-fetch@2.7.0:
+    dependencies:
+      whatwg-url: 5.0.0
+
+  whatwg-url@5.0.0:
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
+
+  tr46@0.0.3: {}
+
+  webidl-conversions@3.0.1: {}
+
+  ws@8.22.2: {}

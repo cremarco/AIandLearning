@@ -67,9 +67,10 @@ export default {
   resolve: {
     dedupe: ['vue', 'vue-router'],
     alias: {
-      '#deck/slides': path.join(projectRoot, isMru ? 'data/mru/slides.json' : isDruskininkai ? 'data/druskininkai/slides.json' : 'data/generated/slides-runtime.json'),
-      '#deck/highlights': path.join(projectRoot, isMru ? 'data/mru/highlights.json' : isDruskininkai ? 'data/druskininkai/highlights.json' : 'data/content/highlights.json'),
+      '#deck/slides': path.join(projectRoot, isMru ? 'data/mru/slides.json' : isDruskininkai ? 'data/druskininkai/slides-runtime.json' : 'data/generated/slides-runtime.json'),
+      '#deck/highlights': path.join(projectRoot, isMru ? 'data/mru/highlights.json' : isDruskininkai ? 'data/druskininkai/highlights-runtime.json' : 'data/content/highlights.json'),
       '#deck/uk': path.join(projectRoot, isMru ? 'data/mru/uk.json' : 'data/content/empty-translations.json'),
+      '#deck/lt': path.join(projectRoot, isDruskininkai ? 'data/druskininkai/lt.json' : 'data/content/empty-translations.json'),
     },
   },
 }

@@ -3,7 +3,8 @@ import type { ToolTable } from '../../utils/deck'
 import { brandsForLabel } from '../../utils/tool-brands'
 import { assetUrl } from '../../utils/assets'
 import ToolLogos from './ToolLogos.vue'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 defineProps<{ table: ToolTable; label: string }>()
 </script>

@@ -3,6 +3,8 @@ import { useNav, useSlideContext } from '@slidev/client'
 import { computed, ref } from 'vue'
 import { assetUrl as asset } from '../../utils/assets'
 import type { Character } from '../../utils/deck'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{
   slideNumber: number
@@ -28,7 +30,7 @@ defineExpose({ advance })
 
 <template>
   <figure class="luca-reaction" :data-expression="worried ? 'worried' : 'happy'">
-    <button class="btn btn-ghost luca-portrait relative block h-full min-h-0 w-full rounded-field border-transparent! bg-transparent! p-0 shadow-none" type="button" aria-label="Andrea’s reaction to the assignment"
+    <button class="btn btn-ghost luca-portrait relative block h-full min-h-0 w-full rounded-field border-transparent! bg-transparent! p-0 shadow-none" type="button" :aria-label="t('Andrea’s reaction to the assignment')"
       :aria-pressed="worried" :disabled="isStatic" @click.stop="toggleExpression">
       <img :class="{ 'is-current': !worried }" :src="asset(character.happy)" alt="" aria-hidden="true" width="1024" height="1536" />
       <img :class="{ 'is-current': worried }" :src="asset(character.worried)" alt="" aria-hidden="true" width="1024" height="1536" />

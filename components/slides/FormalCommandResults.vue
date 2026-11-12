@@ -7,7 +7,8 @@ import CommandTag from '../shared/CommandTag.vue'
 import CopyPromptButton from '../shared/CopyPromptButton.vue'
 import EmphasisText from '../shared/EmphasisText.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{ commands: PromptCommand[] }>()
 const selectedIndex = ref(0)

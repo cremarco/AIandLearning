@@ -28,7 +28,8 @@ import { brandsForLabel, brandsForSlide } from '../../utils/tool-brands'
 import { assetUrl as asset } from '../../utils/assets'
 import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
 import type { Slide, StudyFocus } from '../../utils/deck'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 const props = defineProps<{ slide: Slide }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()
 const s = computed(() => props.slide)
@@ -73,7 +74,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
       <h1><svg v-if="s.explainedInWorkshop || (s.kind === 'shortcut-detail' && explainedShortcuts.has(s.title))" class="command-example-dot" role="img" :aria-label="t('Example explained in the speaker notes')" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor" /></svg><template v-if="headingCommand"><span class="command-token">{{ headingCommand }}</span>{{ s.title.slice(headingCommand.length) }}</template><EmphasisText v-else :text="s.title" :terms="s.kind === 'section-divider' ? undefined : []" /></h1>
     </header>
     <p v-if="s.message && !['chatgpt-intro', 'shortcut-cloud'].includes(s.kind)" class="workshop-lead"><EmphasisText :text="s.message" /></p>
-    <ul v-if="s.kind === 'tool-choice'" class="tool-choice-context" aria-label="Selected tools">
+    <ul v-if="s.kind === 'tool-choice'" class="tool-choice-context" :aria-label="t('Selected tools')">
       <li v-for="part in toolChoiceContext" :key="part.text" class="tool-choice-name"><ToolLogos :ids="part.brands" compact aria-hidden="true" /><span>{{ part.text }}</span></li>
     </ul>
     <PromptBlock v-if="s.prompt && s.kind === 'tool-demo'" class="tool-demo-prompt" :text="s.prompt" :label="s.promptLabel || 'Prompt to copy'" />
@@ -127,7 +128,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
               <a v-if="s.media.source && !s.media.result" class="link" :href="s.media.source" target="_blank" rel="noopener">{{ t('Source') }}</a>
               <RecordingResultLinks compact :links-only="s.media.type === 'video'" :result="s.media.result" />
             </template>
-            <button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">Open video</button>
+            <button v-if="exampleVideo" class="btn btn-sm workshop-video-open" type="button" @click.stop="promptVideo?.open(exampleVideo.command)">{{ t('Open video') }}</button>
           </figcaption>
         </figure>
         <div class="workshop-copy">
@@ -156,7 +157,7 @@ const exampleVideo = computed(() => s.value.kind === 'shortcut-example'
           <div v-if="s.body?.length && s.kind !== 'tool-choice'" class="workshop-body"><p v-for="(text,i) in s.body" :key="i"><EmphasisText :text="text" /></p></div>
           <div v-if="s.result" class="workshop-result"><h2>{{ t(s.resultLabel || 'Result of this step') }}</h2><p><EmphasisText :text="s.result" /></p></div>
           <div v-if="s.links?.length" class="workshop-links">
-            <a v-for="l in s.links" :key="l.url" class="btn gap-3" :class="s.kind === 'book' && l.download ? 'btn-primary btn-xl' : s.kind === 'access' ? 'text-3xl' : 'text-xl'"
+            <a v-for="l in s.links" :key="l.url" class="btn gap-3" :class="s.kind === 'book' && l.download ? 'btn-primary btn-xl' : s.kind === 'access' ? 'text-2xl h-auto min-h-12 whitespace-normal py-3 [overflow-wrap:anywhere]' : 'text-xl'"
               :href="asset(l.url)" :download="l.download ? '' : undefined" :target="l.download ? undefined : '_blank'" rel="noopener">
               <DownloadIcon v-if="l.download" :slide-number="s.number" />
               {{ l.label }}

@@ -3,7 +3,8 @@ import { ref } from 'vue'
 import { useSlideVideo } from '../../composables/useSlideVideo'
 import { assetUrl } from '../../utils/assets'
 import type { VideoResult } from '../../utils/deck'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 defineProps<{ result: VideoResult }>()
 const audio = ref<HTMLAudioElement>()

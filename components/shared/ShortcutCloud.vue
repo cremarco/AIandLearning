@@ -5,7 +5,8 @@ import { useRouter } from 'vue-router'
 import { slides } from '../../utils/deck'
 import shortcutDescriptions from '../../data/catalogues/shortcut-descriptions.json'
 import { useSlideMotion } from '../../composables/useSlideMotion'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t, language } = useSlideLanguage()
 
 const props = defineProps<{
   items: { command: string; retained: boolean }[]
@@ -14,9 +15,9 @@ const props = defineProps<{
 const { running, isStatic } = useSlideMotion(() => props.slideNumber)
 const nav = useNav()
 const router = useRouter()
-const detailSlides = new Map(slides.filter(slide => slide.kind === 'shortcut-detail').map(slide => [slide.title, slide.id.toLowerCase()]))
+const detailSlides = computed(() => new Map(slides.filter(slide => slide.kind === 'shortcut-detail' && (slide.lang || 'en') === (language.value === 'lt' ? 'lt' : 'en')).map(slide => [slide.title, slide.id.toLowerCase()])))
 function openShortcut(command: string) {
-  const route = detailSlides.get(command)
+  const route = detailSlides.value.get(command)
   if (route) { closeTooltip(); router.push(`/${route}`) }
 }
 const isPrint = computed(() => nav.isPrintMode.value || nav.currentRoute.value.name === 'print')
@@ -136,7 +137,7 @@ const words = computed(() => {
 <template>
   <div ref="cloud" class="shortcut-cloud" :class="{ 'is-playing': animating, 'has-tooltip': !!tooltip }" :data-motion="motionState" @keydown.esc.stop.prevent="closeTooltip">
     <div v-if="!isStatic" class="shortcut-controls">
-      <button class="btn btn-sm" type="button" :aria-controls="cloudId" :aria-pressed="paused" @click.stop="paused = !paused">{{ paused ? 'Resume motion' : 'Pause motion' }}</button>
+      <button class="btn btn-sm" type="button" :aria-controls="cloudId" :aria-pressed="paused" @click.stop="paused = !paused">{{ t(paused ? 'Resume motion' : 'Pause motion') }}</button>
     </div>
     <svg :id="cloudId" viewBox="0 0 1192 648" preserveAspectRatio="xMidYMid meet" :aria-hidden="isPrint || undefined" role="group" :aria-label="t('Explore shortcut descriptions')" @click.self.stop="closeTooltip">
       <g class="shortcut-field">
@@ -161,7 +162,7 @@ const words = computed(() => {
       </div>
     </div>
     <ul v-if="isPrint" class="sr-only" :aria-label="t('All tested shortcut labels')">
-      <li v-for="item in items" :key="item.command">{{ item.command }}: {{ descriptions[item.command] }}</li>
+      <li v-for="item in items" :key="item.command">{{ item.command }}: {{ t(descriptions[item.command]) }}</li>
     </ul>
   </div>
 </template>

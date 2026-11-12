@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { imageUrl } from '../../utils/assets'
 import { useSlideMotion } from '../../composables/useSlideMotion'
-import { language, t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { language, t } = useSlideLanguage()
 
 const props = defineProps<{ title: string; message: string; slideNumber: number }>()
 const { running: active } = useSlideMotion(() => props.slideNumber)

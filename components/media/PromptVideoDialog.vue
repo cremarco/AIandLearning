@@ -8,7 +8,8 @@ import CommandTag from '../shared/CommandTag.vue'
 import PromptBlock from '../shared/PromptBlock.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
 import MediaPlaybackStatus from './MediaPlaybackStatus.vue'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 import { connectPresenterMedia } from '../../utils/presenter-media'
 
 const id = useId()

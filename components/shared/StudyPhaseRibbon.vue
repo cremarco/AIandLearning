@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { StudyFocus } from '../../utils/deck'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 defineProps<StudyFocus>()
 </script>

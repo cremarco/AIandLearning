@@ -5,6 +5,7 @@ import { test } from 'node:test'
 import { createContext, SourceTextModule, SyntheticModule } from 'node:vm'
 import * as vue from 'vue'
 import { compileScript, parse } from 'vue/compiler-sfc'
+import { narrationClickAt } from '../utils/narration-reveals.mjs'
 
 const clip = command => ({ command, prompt: 'Recall the chapter.', src: 'clip.mp4', alt: 'Recorded task', width: 1440, height: 900, durationSeconds: 60, sha256: command, transcriptFile: `materials/${command.slice(1)}.txt` })
 const clips = [clip('/quiz'), clip('/flashcard')]
@@ -94,6 +95,60 @@ test('the playback lifecycle pauses on navigation, hidden pages and disposal', a
 
 const settle = async () => { await vue.nextTick(); await new Promise(resolve => setImmediate(resolve)); await vue.nextTick() }
 
+test('narration controls reveal timing, pause, manual advance and restart only on the active slide', async () => {
+  const currentSlideNo = vue.ref(12), clicks = vue.ref(3), enabled = vue.ref(true), playing = vue.ref(false)
+  const audio = vue.shallowRef({ currentTime: 0 }), frames = new Map(), calls = []
+  let frame = 0
+  const api = await evaluate(await read('composables/useNarrationReveals.ts'), {
+    vue,
+    '@slidev/client': { useNav: () => ({ currentSlideNo, clicks, async go(page, click) { calls.push([page, click]); clicks.value = click } }) },
+    '../utils/narration-reveals.mjs': { narrationClickAt },
+  }, {
+    requestAnimationFrame(callback) { frames.set(++frame, callback); return frame },
+    cancelAnimationFrame(id) { frames.delete(id) },
+  })
+  const scope = vue.effectScope()
+  const controller = scope.run(() => api.useNarrationReveals({ audio, enabled, playing, page: vue.ref(12),
+    reveals: vue.ref([{ click: 1, time: 8.16 }, { click: 2, time: 13.3 }, { click: 3, time: 18.74 }]),
+  }))
+  const tick = async time => {
+    audio.value.currentTime = time
+    const callbacks = [...frames.values()]; frames.clear(); callbacks.forEach(callback => callback())
+    await settle()
+  }
+  try {
+    await controller.syncReveals(true)
+    assert.equal(clicks.value, 0, 'Play from the beginning hides previously revealed content')
+    playing.value = true
+    await tick(8.159); assert.equal(clicks.value, 0)
+    await tick(8.16); assert.equal(clicks.value, 1)
+    playing.value = false
+    await tick(14); assert.equal(clicks.value, 1, 'Pausing cancels the animation clock')
+    audio.value.currentTime = 10
+    clicks.value = 3
+    playing.value = true
+    await tick(10); assert.equal(clicks.value, 3, 'Manual advances remain visible')
+    await controller.syncReveals(true)
+    assert.equal(clicks.value, 1, 'Seeking back restores the corresponding reveal')
+    await tick(13.3); assert.equal(clicks.value, 2)
+    await tick(18.74); assert.equal(clicks.value, 3)
+    audio.value.currentTime = 0
+    await controller.syncReveals(true)
+    assert.equal(clicks.value, 0)
+    const before = calls.length
+    currentSlideNo.value = 13
+    await tick(30)
+    assert.equal(calls.length, before, 'A preloaded or departed slide cannot navigate')
+    enabled.value = false
+    assert.equal(frames.size, 0)
+    currentSlideNo.value = 12
+    await controller.syncReveals(true)
+    assert.equal(calls.length, before, 'Disabled synchronization leaves manual navigation intact')
+    assert(calls.every(([page]) => page === 12))
+  } finally { scope.stop() }
+  assert.equal(frames.size, 0)
+})
+
 class TestMedia extends EventTarget {
   constructor(source = 'https://deck.test/demo.mp4') {
     super()
@@ -115,6 +170,82 @@ class TestMedia extends EventTarget {
     this.emit('pause')
   }
 }
+
+test('narration and demonstration take turns without resetting playback or affecting other slides', async () => {
+  const api = await evaluate(await read('utils/narration-playback.ts'), { vue })
+  const narration = new TestMedia(), podcast = new TestMedia(), video = new TestMedia(), otherSlide = new TestMedia()
+  const slide = { querySelectorAll: () => [narration, podcast, video] }
+  podcast.currentTime = 85
+  await podcast.play(); await video.play(); await otherSlide.play(); await narration.play()
+  api.pauseCompetingMedia(slide, narration)
+  assert.equal(narration.paused, false)
+  assert.equal(podcast.paused, true)
+  assert.equal(video.paused, true)
+  assert.equal(podcast.currentTime, 85, 'Switching to commentary preserves the demonstration position')
+  assert.equal(otherSlide.paused, false, 'Only media inside the current slide participates')
+  narration.currentTime = 12
+  await podcast.play()
+  api.pauseCompetingMedia(slide, podcast)
+  assert.equal(narration.paused, true)
+  assert.equal(narration.currentTime, 12)
+  assert.equal(podcast.paused, false)
+})
+
+test('a narrated illustration follows the audio clock, freezes on pause and rewinds with audio; English animation stays independent', async () => {
+  const frames = new Map(), scopes = []
+  let frame = 0
+  const api = await evaluate(await read('composables/useNarrationAnimation.ts'), { vue }, {
+    requestAnimationFrame(callback) { frames.set(++frame, callback); return frame },
+    cancelAnimationFrame(id) { frames.delete(id) },
+  })
+  async function create(enabled) {
+    const media = new TestMedia(); media.duration = 20
+    const playback = { enabled: vue.ref(enabled), audio: vue.shallowRef(media), playing: vue.ref(false) }
+    const active = vue.ref(true), progress = []
+    const animation = { currentTime: 0, pauses: 0, pause() { this.pauses++ } }
+    const scope = vue.effectScope(); scopes.push(scope)
+    scope.run(() => api.useNarrationAnimation({ playback, active, animations: () => [animation],
+      duration: () => 1000, onProgress: value => progress.push(value),
+    }))
+    await settle()
+    return { media, playback, active, animation, progress, scope }
+  }
+  try {
+    const h = await create(true)
+    assert.equal(h.animation.currentTime, 0, 'The illustration waits for narrated playback')
+    h.playback.playing.value = true
+    await settle()
+    h.media.currentTime = 10
+    const callbacks = [...frames.values()]; frames.clear(); callbacks.forEach(callback => callback())
+    assert.equal(h.animation.currentTime, 500)
+    assert.equal(h.progress.at(-1), .5)
+    h.playback.playing.value = false
+    await settle()
+    assert.equal(frames.size, 0)
+    assert.equal(h.animation.currentTime, 500)
+    h.media.currentTime = 3; h.media.emit('seeked')
+    assert.equal(h.animation.currentTime, 150, 'A paused seek updates the illustration immediately')
+    h.media.currentTime = 20; h.media.emit('ended')
+    assert.equal(h.animation.currentTime, 1000)
+    h.media.currentTime = 0; h.media.emit('seeked')
+    assert.equal(h.animation.currentTime, 0, 'Restart rewinds the book as well as the narration')
+    h.active.value = false
+    h.playback.playing.value = true
+    await settle()
+    assert.equal(frames.size, 0, 'Off-slide illustrations never schedule playback')
+    h.scope.stop()
+    const count = h.animation.pauses
+    h.media.currentTime = 12; h.media.emit('seeked')
+    assert.equal(h.animation.pauses, count, 'Leaving releases audio event listeners')
+    const english = await create(false)
+    english.playback.playing.value = true
+    english.media.currentTime = 10; english.media.emit('timeupdate')
+    await settle()
+    assert.equal(english.animation.pauses, 0)
+    assert.equal(english.animation.currentTime, 0)
+    assert.equal(frames.size, 0)
+  } finally { scopes.forEach(scope => scope.stop()) }
+})
 
 async function playbackHarnesses() {
   const listeners = new Set(), messages = [], scopes = [], frames = new Map()
@@ -372,7 +503,7 @@ async function dialogHarness(loader, role = 'print') {
     },
     '../../composables/useSlideVideo': { useSlideVideo: (_video, close) => { leave = close } },
     '../../utils/assets': assets,
-    '../../utils/language': { t: text => text },
+    '../../utils/slide-language': { useSlideLanguage: () => ({ t: text => text }) },
     '../../utils/shortcut-videos': { getShortcutVideo: command => clips.find(c => c.command === command), loadShortcutTranscript: loader },
     '../../utils/presenter-media': { connectPresenterMedia(callback) { receive = callback; return { send: message => messages.push(message), close() {} } } },
     '../shared/CommandTag.vue': { default: {} },

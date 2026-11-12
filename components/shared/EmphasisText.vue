@@ -2,7 +2,8 @@
 import { computed, inject } from 'vue'
 import { EMPHASIS_TERMS_KEY, splitEmphasis, type EmphasisTerm } from '../../utils/emphasis'
 import { splitCommandText } from '../../utils/command-text'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = withDefaults(defineProps<{ text?: string; terms?: readonly EmphasisTerm[] }>(), { text: '' })
 const inherited = inject(EMPHASIS_TERMS_KEY, computed(() => []))

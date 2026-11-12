@@ -7,6 +7,10 @@
   --video-caption-height:80px;
   padding:48px var(--deck-inset-inline) 80px;
 }
+.deck-slide.has-narration-captions:has(.has-video.kind-shortcut-detail,.has-video.kind-tool-demo:not(.has-full-prompt)) {
+  --narration-caption-left:calc(var(--deck-inset-inline) + var(--video-sidebar-width) + var(--video-column-gap));
+  --narration-caption-right:var(--deck-inset-inline);
+}
 .workshop-content.has-video {
   display:grid;
   grid-template-columns:var(--video-sidebar-width) minmax(0,1fr);
@@ -103,6 +107,9 @@
 /* Complete recorded prompts lead these demos; the video stays alongside them. */
 .workshop-content.has-video.has-full-prompt {
   grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+}
+@media screen {
+  .slidev-layout .deck-slide.type-workshop.has-narration-captions:has(.has-video.has-full-prompt) { padding-bottom:140px; }
 }
 .has-video.has-full-prompt > .workshop-heading { grid-area:1 / 1 / 2 / -1; }
 .has-video.has-full-prompt > .workshop-lead { grid-area:2 / 1 / 3 / -1; }

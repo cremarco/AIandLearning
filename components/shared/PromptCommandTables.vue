@@ -4,7 +4,8 @@ import type { CommandCategory, PromptCommand } from '../../utils/deck'
 import { explainedShortcuts, getShortcutVideo } from '../../utils/shortcut-videos'
 import CommandTag from './CommandTag.vue'
 import PromptVideoDialog from '../media/PromptVideoDialog.vue'
-import { language, t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { language, t } = useSlideLanguage()
 const player = ref<InstanceType<typeof PromptVideoDialog>>()
 const props = withDefaults(defineProps<{ commands: PromptCommand[]; category?: CommandCategory }>(), { category: 'informal' })
 const labels = computed(() => props.category === 'formal-web'

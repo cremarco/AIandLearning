@@ -40,6 +40,6 @@ export function brandsForSlide(slide: Slide): ToolBrandId[] {
   if (slide.kind === 'chatgpt-intro') return []
   if (slide.tool === 'dictation') return ['apple', 'windows']
   if (slide.tool && slide.tool in toolBrands) return [slide.tool as ToolBrandId]
-  if (slide.commands?.length || slide.kind === 'shortcut-example' || slide.id === 'S53TYPES') return ['chatgpt']
+  if (slide.commands?.length || slide.kind === 'shortcut-example' || (slide.sourceId || slide.id) === 'S53TYPES') return ['chatgpt']
   return []
 }

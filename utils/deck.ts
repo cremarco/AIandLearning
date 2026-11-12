@@ -5,6 +5,7 @@ import { language, localizeContent } from './language'
 export type Audience = 'student' | 'teacher' | 'both'
 export type StudyPhase = 'plan' | 'understand' | 'connect' | 'recall' | 'apply' | 'check'
 export type StudyFocus = { primary: StudyPhase | 'support'; secondary?: StudyPhase[] }
+export type NarrationReveal = { click: number; time: number }
 export type SlideCard = { title: string; body?: string; backgroundImage?: string }
 export type CommandResult = {
   label: string
@@ -82,6 +83,7 @@ export type ScreenshotResult = {
 }
 export type Slide = {
   id: string
+  sourceId?: string
   number: number
   type: 'cover' | 'profile' | 'company' | 'brief' | 'workshop'
   kind: string
@@ -105,6 +107,7 @@ export type Slide = {
   cardBackground?: string
   cards?: SlideCard[]
   media?: SlideMedia
+  narrationAudio?: { src: string; lang: string; captions?: string; reveals?: NarrationReveal[] }
   notebookOutput?: string
   screenshots?: ScreenshotResult[]
   book?: BookPreview
@@ -133,7 +136,7 @@ export type Slide = {
 // Shared by interactive and print renderers; resolve a slide without rescanning
 // the catalogue every time a component updates.
 export const slides = slideData as Slide[]
-const thanksIndex = slides.findIndex(slide => slide.kind === 'thanks')
+const thanksIndex = slides.findLastIndex(slide => slide.kind === 'thanks')
 export const presentationSlideCount = thanksIndex < 0 ? slides.length : thanksIndex + 1
 const slidesById = computed(() => new Map(slides.map(slide => [slide.id,
   language.value === 'uk' ? { ...localizeContent(slide), lang: 'uk' } : slide,

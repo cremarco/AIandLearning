@@ -2,7 +2,8 @@
 import { computed, useId } from 'vue'
 import type { VideoResult } from '../../utils/deck'
 import { assetUrl } from '../../utils/assets'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{ result?: VideoResult; compact?: boolean; linksOnly?: boolean }>()
 const qualificationId = `${useId()}-result-qualification`

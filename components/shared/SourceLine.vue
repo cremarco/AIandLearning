@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import sources from '../../data/generated/sources.json'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 type Source = { label?: string; title?: string; url?: string; showInFooter?: boolean }
 const catalogue: Record<string, Source> = sources

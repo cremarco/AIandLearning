@@ -19,6 +19,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
   font-size: var(--deck-text-body); line-height: 1.35; letter-spacing: -.005em; -webkit-font-smoothing: antialiased;
 }
 .slidev-layout .deck-slide :where(h1,h2,h3,p,figure,blockquote) { margin: 0; }
+.slidev-layout .deck-slide.has-narration-captions { padding-bottom:140px; }
+.deck-slide.slide-S51.has-narration-captions { --narration-caption-left:var(--deck-inset-inline); --narration-caption-right:496px; }
 .slidev-layout .deck-slide h1 { max-width: 1120px; font-size: var(--deck-text-heading); line-height: 1.08; font-weight: 720; letter-spacing: -.03em; text-wrap: balance; }
 .slidev-layout .deck-slide h2 { font-size: var(--deck-text-subheading); line-height: 1.15; font-weight: 680; letter-spacing: -.02em; }
 .slidev-layout .deck-slide h3 { font-size: 26px; line-height: 1.15; font-weight: 670; }
@@ -95,6 +97,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .bento-grid.three > .bento-card--illustrated:first-child .bento-card__body { font-size: 24px; }
 .slidev-layout .type-brief .takeaway { margin-top: 0; padding: 0; border: 0; border-radius: 0; background: none; color: var(--deck-muted); font-size: 20px; line-height: 1.3; }
 .cover-university-logo { position:absolute; z-index:1; top:48px; left:64px; width:auto; height:88px; object-fit:contain; }
+.slide-language { position:absolute; z-index:1; right:var(--deck-inset-inline); bottom:50px; font-size:12px; font-weight:650; letter-spacing:.08em; color:var(--deck-muted); }
 .cover-organisation-logo { position:absolute; z-index:1; top:30px; right:calc(var(--deck-inset-inline) + 212px); width:224px; height:auto; overflow:visible; }
 .cover-organisation-wordmark { filter:brightness(0) invert(1); }
 /* Original clear space keeps the visible mark aligned with the cover insets. */
@@ -109,6 +112,7 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 .cover-author span { color: var(--deck-muted); font-size: 17px; font-weight: 500; }
 .cover-email { display: inline-block; margin-top: 6px; color: var(--deck-cyan); font-size: 17px; font-weight: 500; }
 .slidev-layout .deck-slide .cover-date { position:absolute; z-index:1; left:var(--deck-inset-inline); bottom:64px; font-size:20px; line-height:1.4; color:var(--deck-muted); }
+.slidev-layout .deck-slide.has-narration-captions .cover-date { bottom:140px; }
 .cover-practice-note.card { position:absolute; z-index:1; right:var(--deck-inset-inline); bottom:64px; width:420px; border:1px solid var(--deck-line); border-radius:12px; background:var(--deck-surface); color:var(--deck-ink); box-shadow:none; }
 .cover-practice-note .card-body { gap:8px; padding:20px 24px; }
 .cover-background[data-motion="playing"] ~ .cover-practice-note { animation:cover-practice-pulse 3.8s ease-in-out infinite; }
@@ -179,6 +183,8 @@ html, body { font-family: var(--deck-font); background: var(--deck-paper); color
 }
 @media print {
   .slidev-layout .deck-slide { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slidev-layout .deck-slide.has-narration-captions { padding-bottom:var(--deck-inset-bottom); }
+  .slidev-layout .deck-slide.has-narration-captions .cover-date { bottom:64px; }
   .deck-slide * { animation:none!important; transition:none!important; }
 }
 

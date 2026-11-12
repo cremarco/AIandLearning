@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, provide, ref, watch } from 'vue'
+import { useNav } from '@slidev/client'
 import { getSlide, presentationSlideCount, type StudyFocus } from '../utils/deck'
 import { assetUrl, imageUrl as image } from '../utils/assets'
 import highlights from '#deck/highlights'
@@ -13,11 +14,22 @@ import StudyPhaseRibbon from './shared/StudyPhaseRibbon.vue'
 import CoverBackground from './media/CoverBackground.vue'
 import WorkshopSlide from './slides/WorkshopSlide.vue'
 import MruLanguageSelector from './shared/MruLanguageSelector.vue'
-import { supportsLanguageSwitch, t, localizeContent, slideCountText } from '../utils/language'
+import { supportsLanguageSwitch, language } from '../utils/language'
+import { provideSlideLanguage } from '../utils/slide-language'
+import SlideNarrationAudio from './media/SlideNarrationAudio.vue'
+import { pauseCompetingMedia, provideNarrationPlayback } from '../utils/narration-playback'
 
 const props = defineProps<{ id: string }>()
-provide(EMPHASIS_TERMS_KEY, computed(() => localizeContent((highlights as Record<string, EmphasisTerm[]>)[props.id] || [])))
+const { isPrintMode, currentRoute } = useNav()
 const s = computed(() => getSlide(props.id))
+provideNarrationPlayback(computed(() => s.value?.lang === 'lt' && !!s.value?.narrationAudio))
+const reserveCaptionBand = computed(() => !!s.value?.narrationAudio?.captions && !isPrintMode.value && currentRoute.value.name !== 'print')
+function focusMedia(event: Event) {
+  if (s.value?.narrationAudio) pauseCompetingMedia(event.currentTarget as HTMLElement, event.target as HTMLMediaElement)
+}
+const sourceId = computed(() => s.value?.sourceId || props.id)
+const { t, localizeContent, slideCountText, language: slideLanguage } = provideSlideLanguage(computed(() => s.value?.lang === 'lt' ? 'lt' : language.value))
+provide(EMPHASIS_TERMS_KEY, computed(() => localizeContent((highlights as Record<string, EmphasisTerm[]>)[props.id] || [])))
 const selectedStudyPhases = ref<StudyFocus>()
 watch(() => props.id, () => { selectedStudyPhases.value = undefined })
 const studyPhases = computed(() => selectedStudyPhases.value || s.value?.studyPhases)
@@ -41,9 +53,9 @@ const slideProgress = computed(() => ({
 </script>
 
 <template>
-  <main v-if="s" class="deck-slide" :class="[`type-${s.type}`, `slide-${s.id}`, s.tool ? `tool-${s.tool}` : '', { 'has-study-phases': !!studyPhases }]" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined">
+  <main v-if="s" class="deck-slide" :lang="slideLanguage" :class="[`type-${s.type}`, `slide-${sourceId}`, s.tool ? `tool-${s.tool}` : '', { 'has-study-phases': !!studyPhases, 'has-narration-captions': reserveCaptionBand }]" :data-slide-id="s.id" :aria-label="s.kind === 'shortcut-cloud' ? s.title : undefined" @play.capture="focusMedia">
     <StudyPhaseRibbon v-if="studyPhases && s.kind !== 'shortcut-cloud'" v-bind="studyPhases" />
-    <SlideAudience v-if="!['cover', 'profile', 'company'].includes(s.type) && !['S48', 'S49', 'S50QR', 'S99'].includes(s.id) && !['thanks', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" :audience="s.audience" />
+    <SlideAudience v-if="!['cover', 'profile', 'company'].includes(s.type) && !['S48', 'S49', 'S50QR', 'S99'].includes(sourceId) && !['thanks', 'shortcut-cloud', 'tool-divider'].includes(s.kind)" :audience="s.audience" />
     <span v-if="s.todo" class="badge badge-warning absolute left-16 top-4 z-10 h-7 gap-2 text-sm font-medium" role="note">
       <strong>TODO</strong>{{ s.todo }}
     </span>
@@ -76,16 +88,24 @@ const slideProgress = computed(() => ({
     </template>
 
     <template v-else-if="s.kind === 'thanks'">
-      <img v-if="s.media" class="absolute right-16 top-[50px] h-[620px] w-[540px] object-contain" :src="assetUrl(s.media.src)" :alt="s.media.alt" />
-      <div class="cover-copy thank-you-copy">
-        <h1 class="thank-you-title">{{ s.title }}</h1>
-        <p class="cover-author">{{ s.message }}<br /><span>{{ s.body[0] }}</span><br /><a v-for="link in s.links" :key="link.url" class="link link-hover cover-email" :href="link.url">{{ link.label }}</a></p>
+      <div v-if="!s.media" class="hero min-h-0 flex-1">
+        <div class="hero-content block max-w-[920px] p-0 text-center">
+          <h1 class="thank-you-title">{{ s.title }}</h1>
+          <p class="pt-8 text-[32px] leading-[1.35]">{{ s.message }}</p>
+        </div>
       </div>
+      <template v-else>
+        <img class="absolute right-16 top-[50px] h-[620px] w-[540px] object-contain" :src="assetUrl(s.media.src)" :alt="s.media.alt" />
+        <div class="cover-copy thank-you-copy">
+          <h1 class="thank-you-title">{{ s.title }}</h1>
+          <p class="cover-author">{{ s.message }}<br /><span>{{ s.body[0] }}</span><br /><a v-for="link in s.links" :key="link.url" class="link link-hover cover-email" :href="link.url">{{ link.label }}</a></p>
+        </div>
+      </template>
     </template>
 
     <template v-else-if="s.type === 'workshop'">
       <WorkshopSlide :slide="s" @study-phase-change="selectedStudyPhases = $event" />
-      <SourceLine v-if="!['S97', 'S97STUDY', 'S97P', 'S97ACCESS'].includes(s.id) && !['bibliography', 'web-resources', 'shortcut-cloud'].includes(s.kind)" :ids="sourceIds" />
+      <SourceLine v-if="!['S97', 'S97STUDY', 'S97P', 'S97ACCESS'].includes(sourceId) && !['bibliography', 'web-resources', 'shortcut-cloud'].includes(s.kind)" :ids="sourceIds" />
     </template>
 
     <template v-else>
@@ -105,9 +125,9 @@ const slideProgress = computed(() => ({
             <p class="profile-role">{{ s.message }}</p>
             <p class="profile-affiliation">{{ s.body[0] }}</p>
             <div class="profile-universities flex items-center gap-8" role="group" aria-label="Universities">
-              <img class="profile-university-logo profile-university-logo--bicocca" :src="image('universities/milano-bicocca.png')" alt="Universities degli Studi di Milano-Bicocca" width="96" height="96" />
-              <img class="profile-university-logo" :src="image('universities/bergamo.png')" alt="Universities degli Studi di Bergamo" width="96" height="96" />
-              <img class="profile-university-logo profile-university-logo--cattolica" :src="image('universities/cattolica.png')" alt="Universities Cattolica del Sacro Cuore" width="96" height="96" />
+              <img class="profile-university-logo profile-university-logo--bicocca" :src="image('universities/milano-bicocca.png')" alt="Università degli Studi di Milano-Bicocca" width="96" height="96" />
+              <img class="profile-university-logo" :src="image('universities/bergamo.png')" alt="Università degli Studi di Bergamo" width="96" height="96" />
+              <img class="profile-university-logo profile-university-logo--cattolica" :src="image('universities/cattolica.png')" alt="Università Cattolica del Sacro Cuore" width="96" height="96" />
             </div>
             <ul class="profile-research"><li v-for="area in s.body.slice(1)" :key="area"><EmphasisText :text="area" /></li></ul>
           </div>
@@ -132,6 +152,8 @@ const slideProgress = computed(() => ({
       <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
       <SourceLine :ids="sourceIds" />
     </template>
+    <span v-if="s.sourceId" class="slide-language">{{ s.lang?.toUpperCase() }}</span>
+    <SlideNarrationAudio v-if="s.narrationAudio" :key="s.id" :src="s.narrationAudio.src" :captions="s.narrationAudio.captions" :reveals="s.narrationAudio.reveals" />
     <span v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="slide-page" :aria-label="slideCountText(s.number, presentationSlideCount)">{{ s.number }} / {{ presentationSlideCount }}</span>
     <progress v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
   </main>

@@ -11,7 +11,7 @@
     "build": "node scripts/delivery/build-site.mjs",
     "export": "node scripts/delivery/export-deck.mjs",
     "generate": "node scripts/content/generate-formula.mjs && node scripts/content/integrate-workshop.mjs && node scripts/content/generate-slides.mjs && node scripts/content/generate-companions.mjs && node scripts/content/generate-slides.mjs druskininkai",
-    "check": "node scripts/checks/check-structure.mjs && node scripts/checks/check-data.mjs && node scripts/checks/check-druskininkai.mjs && node scripts/checks/audit-assets.mjs && node scripts/checks/check-links.mjs && node tests/demo-genai/math.test.mjs && node --experimental-vm-modules --test tests/media-playback.test.mjs tests/mru-language.test.mjs",
+    "check": "node scripts/checks/check-structure.mjs && node scripts/checks/check-data.mjs && node scripts/checks/check-druskininkai.mjs && node scripts/checks/audit-assets.mjs && node scripts/checks/check-links.mjs && node tests/demo-genai/math.test.mjs && node --experimental-vm-modules --test tests/media-playback.test.mjs tests/mru-language.test.mjs tests/caption-words.test.mjs tests/narration-reveals.test.mjs",
     "videos:verify": "node scripts/checks/check-recordings.mjs",
     "check:browser": "node scripts/checks/verify-deck.mjs && node scripts/checks/check-motion.mjs",
     "check:all": "pnpm check && pnpm check:browser",
@@ -19,9 +19,13 @@
     "kit": "node scripts/delivery/package-kit.mjs --build",
     "demo:dev": "node public/materials/demo-genai/serve.mjs",
     "check:demo": "node tests/demo-genai/math.test.mjs",
-    "dev:druskininkai": "EDUFORUM_DECK=druskininkai slidev druskininkai.md --port 3048"
+    "dev:druskininkai": "EDUFORUM_DECK=druskininkai slidev druskininkai.md --port 3048",
+    "audio:druskininkai": "node --env-file-if-exists=.env.local scripts/audio/druskininkai-audio.mjs",
+    "captions:druskininkai": "node scripts/audio/druskininkai-captions.mjs",
+    "elevenlabs:voices": "node --env-file-if-exists=.env.local scripts/elevenlabs-voices.mjs"
   },
   "dependencies": {
+    "@elevenlabs/elevenlabs-js": "2.74.0",
     "@slidev/cli": "52.15.2",
     "@slidev/theme-apple-basic": "0.25.1",
     "@slidev/types": "52.15.2",

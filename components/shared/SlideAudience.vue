@@ -2,7 +2,8 @@
 import { computed } from 'vue'
 import { assetUrl } from '../../utils/assets'
 import type { Audience } from '../../utils/deck'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{ audience: Audience, inline?: boolean }>()
 const label = computed(() => t(({

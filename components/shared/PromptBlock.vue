@@ -3,7 +3,8 @@ import { computed } from 'vue'
 import { splitCommandText } from '../../utils/command-text'
 import CommandTag from './CommandTag.vue'
 import CopyPromptButton from './CopyPromptButton.vue'
-import { language, t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { language, t } = useSlideLanguage()
 
 const props = withDefaults(defineProps<{ text: string; label?: string }>(), { label: 'Prompt to copy' })
 const parts = computed(() => splitCommandText(props.text))
@@ -12,7 +13,7 @@ const parts = computed(() => splitCommandText(props.text))
 <template>
   <div class="prompt-block">
     <div class="prompt-header flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-      <span class="prompt-label">{{ t(label) }}<template v-if="language === 'uk'"> · EN</template></span>
+      <span class="prompt-label">{{ t(label) }}<template v-if="language === 'uk' || language === 'lt'"> · EN</template></span>
       <CopyPromptButton :text="text" />
     </div>
     <div class="chat chat-end prompt-chat" lang="en">

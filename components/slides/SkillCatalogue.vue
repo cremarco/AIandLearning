@@ -4,7 +4,8 @@ import { useNav, useSlideContext } from '@slidev/client'
 import { useSelectionMotion } from '../../composables/useSelectionMotion'
 import research from '../../data/catalogues/skills-research.json'
 import type { StudyFocus } from '../../utils/deck'
-import { localizeContent, t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { localizeContent, t } = useSlideLanguage()
 
 const props = defineProps<{ ids: string[]; clickNavigation?: boolean }>()
 const emit = defineEmits<{ studyPhaseChange: [focus: StudyFocus | undefined] }>()

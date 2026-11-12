@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { onBeforeUnmount, ref, watch } from 'vue'
 import { copyText } from '../../utils/copy-text.mjs'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{ text: string }>()
 const copied = ref(false)

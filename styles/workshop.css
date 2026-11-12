@@ -15,6 +15,12 @@
 .slidev-layout .deck-slide .workshop-lead { flex-shrink:0; font-size:24px; color:var(--deck-muted); line-height:1.32; max-width:1060px; }
 .workshop-stage { display:flex; flex:1; min-height:0; gap:var(--deck-column-gap); align-items:center; }
 .kind-notebook-output .workshop-stage { align-items:stretch; }
+.slidev-layout .deck-slide.has-narration-captions .notebook-output { grid-template-rows:minmax(0,1fr); }
+.slidev-layout .deck-slide.has-narration-captions .notebook-output .nb-sidebar { min-height:0; max-height:100%; overflow:auto; gap:12px; }
+.slidev-layout .deck-slide.has-narration-captions .notebook-output .nb-origin { font-size:16px; }
+.slidev-layout .deck-slide.has-narration-captions .notebook-output .nb-request p { font-size:18px; line-height:1.35; }
+.workshop-print .notebook-output .nb-sidebar { gap:16px; }
+@media print { .notebook-output .nb-sidebar { gap:16px; } }
 .workshop-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:var(--deck-group-gap); }
 .slidev-layout .deck-slide.type-workshop:has(.kind-shortcut-cloud) { padding:36px 44px; }
 .kind-shortcut-cloud { gap:0; }
@@ -82,7 +88,12 @@
 .has-mixed-content.has-media .workshop-copy { gap:20px; }
 .slidev-layout .has-mixed-content.has-media .workshop-copy :is(h2) { font-size:23px; }
 .slidev-layout .has-mixed-content.has-media .workshop-copy p { font-size:20px; }
-.kind-concept .workshop-copy { gap:24px; }
+.kind-concept .workshop-copy { gap:20px; }
+.kind-concept .learning-task-flow.steps .step { row-gap:24px; }
+.has-narration-captions .kind-concept .workshop-copy { gap:16px; }
+.has-narration-captions .kind-concept .learning-task-flow.steps .step { grid-template-rows:48px 1fr; row-gap:16px; }
+.has-narration-captions .kind-concept .learning-task-flow.steps .step::after { width:48px; height:48px; font-size:24px; }
+.slidev-layout .has-narration-captions .kind-concept .learning-task-copy p { margin-top:12px; }
 .slidev-layout .kind-concept .comparison h2 { font-size:24px; }
 .slidev-layout .kind-concept .comparison p,.slidev-layout .kind-concept .workshop-result p { font-size:22px; line-height:1.35; }
 .slidev-layout .kind-concept .workshop-result h2 { font-size:17px; color:var(--deck-cyan); }
@@ -100,6 +111,7 @@
 .workshop-media img,.workshop-media video { display:block; object-fit:contain; width:100%; max-height:345px; background:var(--media-paper,var(--color-white)); }
 .kind-studio-overview .workshop-media { width:44%; align-items:center; }
 .kind-studio-overview .workshop-media img { max-height:460px; background:transparent; }
+.deck-slide.has-narration-captions .kind-studio-overview .workshop-media img { min-height:0; max-height:min(460px,100%); }
 .slidev-layout .kind-studio-overview .workshop-body p { font-size:26px; line-height:1.4; }
 .slidev-layout .deck-slide .workshop-media figcaption { font-size:var(--deck-text-caption); line-height:1.3; color:var(--deck-muted); }
 .has-media .workshop-copy { gap:16px; }
@@ -113,6 +125,7 @@
 .kind-access .workshop-stage { gap:72px; }
 .kind-access .workshop-media { order:1; width:38%; }
 .kind-access .workshop-media img { max-height:400px; image-rendering:pixelated; }
+.has-narration-captions .kind-access .workshop-media img { max-height:min(400px,100%); }
 .kind-activity.has-media .workshop-stage { gap:40px; }
 .kind-activity.has-media .workshop-media { order:1; width:38%; --media-paper:transparent; }
 .kind-activity.has-media .workshop-media img { max-height:430px; }
@@ -171,6 +184,8 @@
 .kind-book .workshop-media { grid-area:1 / 2 / 4 / 3; width:100%; align-self:center; --media-paper:transparent; --book-page-width:300px; --book-page-height:calc(var(--book-page-width) * 254 / 180); --book-caption-height:40px; --book-caption-size:18px; }
 .slide-S63 .workshop-media img {max-height:325px;}
 .slide-S70 .workshop-media {width:50%;}
+.slidev-layout .deck-slide.slide-S97P[lang="lt"] .tool-resource-table { line-height:1.2; }
+.slidev-layout .deck-slide.slide-S97P[lang="lt"] .tool-resource-table :is(th,td) { padding-top:4px; padding-bottom:4px; }
 /* Paper excerpts always use the first page, without a white image frame. */
 .kind-evidence .workshop-media {order:1;width:31%;align-self:center;gap:8px;}
 .kind-evidence .workshop-media img {width:auto;height:auto;max-width:100%;max-height:365px;align-self:center;background:transparent;border:0;border-radius:0;padding:0;}

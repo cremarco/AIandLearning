@@ -7,7 +7,8 @@ import { assetUrl } from '../../utils/assets'
 import { getShortcutVideo } from '../../utils/shortcut-videos'
 import PromptBlock from '../shared/PromptBlock.vue'
 import RecordingResultLinks from '../shared/RecordingResultLinks.vue'
-import { t } from '../../utils/language'
+import { useSlideLanguage } from '../../utils/slide-language'
+const { t } = useSlideLanguage()
 
 const props = defineProps<{ slide: Slide }>()
 const clip = computed(() => getShortcutVideo(props.slide.title))

@@ -56,9 +56,32 @@ MRU opens with flat English and Ukrainian flag buttons; the Ukrainian flag inclu
 
 ### Druskininkai copy
 
-`data/druskininkai/slides.json`, `speaker-notes.json` and `highlights.json` are an independent copy for 13 November 2026. The cover uses **Beyond prompting**, has no logos or practical-activity notice, and shows the new date. Whattadata, My learning route, Feelings and confidence, the 11 November event, Goblin.tools, Agent Skills, the formal Study action, Five risks and four audience exercises are excluded. The 13 November event is active, and the remaining prompt labels are introduced simply as shortcuts. The deck has 60 numbered slides through Thank you, followed by the bibliography.
+`data/druskininkai/slides.json`, `speaker-notes.json` and `highlights.json` are an independent copy for 13 November 2026. The cover uses **Beyond prompting**, has no logos or practical-activity notice, and shows the new date. Whattadata, My learning route, Feelings and confidence, the 11 November event, Goblin.tools, Agent Skills, the formal Study action, Five risks, Why the learning design matters, the Reports study guide and four audience exercises are excluded. The 13 November event is active, and the remaining prompt labels are introduced simply as shortcuts. Each of the 59 source slides appears first in English and then in Lithuanian: 116 numbered slides through Thank you, followed by the two bibliography slides.
 
-Edit the Druskininkai JSON files directly, then run `pnpm generate` to rebuild `druskininkai.md` and `docs/speaker-notes.druskininkai.en.md`. Generation preserves the independent content. Use `pnpm dev:druskininkai` to open it locally on port 3048. All presentations share the existing components and public assets; the Druskininkai QR points to its own GitHub Pages route.
+Edit the English source JSON and the Lithuanian dictionary `data/druskininkai/lt.json`, then run `pnpm generate` to rebuild the paired runtime indexes, `druskininkai.md` and the English and Lithuanian rehearsal copies in `docs/`. Generation preserves the independent content. Lithuanian routes end in `lt` (for example, `/s50lt`). Text and controls are localized per slide, including simultaneous presenter and print previews. Original recordings, screenshots, downloadable outputs, commands and recorded prompts retain their original language; prompt labels identify English text with `EN`. Presenter notes follow each slide’s language: English in `speaker-notes.json` and Lithuanian in `speaker-notes.lt.json`. Both versions preserve click markers and emphasis. Proper names, institutional names and product/feature names retain their original spelling. Use `pnpm dev:druskininkai` to open it locally on port 3048. All presentations share the existing components and public assets; the Druskininkai QR points to its own GitHub Pages route.
+
+ElevenLabs narration reuses the CVeDI scripts in `scripts/audio/` and the same pinned SDK version, voice Cremarco, `eleven_v4`, stability 0.90, similarity 0.90 and MP3 44.1 kHz / 128 kbps. `data/druskininkai/narration/settings.json` changes only the language to `lt`; `provenance.json` records the imported sources. The speech copy is derived from the Lithuanian notes, removes presenter click and Markdown markers, and adds CVeDI's neutral delivery and paragraph pauses. The presenter notes remain intact. Slide numbers refer to the current bilingual deck: slide 4 is the Lithuanian Marco Cremaschi slide. Every Lithuanian slide from the cover through the “/flashcard” demonstration has narration and word-synchronized captions; authored click reveals follow the aligned speech.
+
+Use an existing `ELEVENLABS_API_KEY` in the environment or the ignored `.env.local` file. No credential is copied from CVeDI or bundled into the website. Preview a selection without API calls, then generate explicitly:
+
+```sh
+pnpm audio:druskininkai --slides 4
+pnpm audio:druskininkai --slides 4 --generate
+```
+
+The scripts save MP3s and receipts with text, settings and SHA-256 hashes in `public/audio/druskininkai/`. Matching recordings are reused; `--regenerate` explicitly requests a new take while preserving earlier files. Successful generation validates the MP3 and updates its captions and slide links. `pnpm generate` also connects recordings whose text and language match the current notes. Each narrated slide has CVeDI-style vertical Play, Pause, Restart and CC controls on its right edge, with localized labels. Playback stops on navigation or when the tab is hidden; previews and printed slides have no player. The build never calls ElevenLabs. `pnpm elevenlabs:voices` lists the account's voices without exposing the API key.
+
+Lithuanian captions reuse CVeDI's local Whisper medium / stable-ts alignment and word highlighting. The exact spoken script, proper names, audio hash and language `lt` are verified together. WebVTT captions and word tracks are published under `public/captions/druskininkai/`; raw alignments and provenance stay in `data/druskininkai/narration/captions/`. CC is enabled by default and remembers the viewer's preference. A reserved band above the footer prevents captions from covering slide content. The site build verifies these files without running inference or downloading models.
+
+On Lithuanian slides with click animations, narration also drives Slidev's native reveals. Generation maps each `[click]` note marker to the next aligned spoken word. Play from the beginning and Restart reset the reveals; playback advances them at those words, including with CC disabled. Pause holds the current state. Manual advances remain available, and seeking backwards restores the corresponding animation state. Synchronization stays on the current slide and is excluded from previews, printing and the English copies. New Lithuanian recordings receive the same timing map automatically.
+
+The Lithuanian book preview also follows the narration clock: opening, page turns and closing span the audio, Pause freezes both, and Restart rewinds both. It uses the audio controls at the right. English book previews keep their independent controls and animation.
+
+Prepare `.venv-captions` with Python 3.11 and `scripts/audio/whisper-requirements.txt`, using the existing local `~/.cache/whisper/medium.pt` checkpoint. Set `CAPTION_PYTHON` to reuse another compatible environment. To align existing recordings without regenerating audio:
+
+```sh
+pnpm captions:druskininkai --slides 4,6
+```
 
 Both presentations share the existing components, styles, catalogues and public assets. Images, videos, fonts and downloadable materials are stored once, in the site's root directories.
 
