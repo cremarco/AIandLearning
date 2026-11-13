@@ -152,7 +152,6 @@ const slideProgress = computed(() => ({
       <p v-if="s.takeaway" class="takeaway"><EmphasisText :text="s.takeaway" /></p>
       <SourceLine :ids="sourceIds" />
     </template>
-    <span v-if="s.sourceId" class="slide-language">{{ s.lang?.toUpperCase() }}</span>
     <SlideNarrationAudio v-if="s.narrationAudio" :key="s.id" :src="s.narrationAudio.src" :captions="s.narrationAudio.captions" :reveals="s.narrationAudio.reveals" />
     <span v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="slide-page" :aria-label="slideCountText(s.number, presentationSlideCount)">{{ s.number }} / {{ presentationSlideCount }}</span>
     <progress v-if="s.kind !== 'shortcut-cloud' && s.number <= presentationSlideCount" class="progress slide-progress h-1 rounded-none" :class="s.type === 'company' ? 'progress-accent' : 'text-base-content/60'" :value="slideProgress.value" :max="slideProgress.max" :aria-label="slideProgress.label" :aria-valuetext="slideProgress.text" />
